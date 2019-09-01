@@ -134,7 +134,6 @@
 		EFD03DD622B3FAEA00DE1874 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD03DD422B3FAEA00DE1874 /* LoadingViewController.xib */; };
 		EFDD387422C26BAF00B66E13 /* MoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDD387322C26BAF00B66E13 /* MoreMenuViewController.swift */; };
 		EFF2FF4222D3BB2D00BED024 /* StaticGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF4122D3BB2C00BED024 /* StaticGridCollectionViewCell.swift */; };
-		EFF2FF4422D3C55500BED024 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFF2FF4322D3C55500BED024 /* GoogleService-Info.plist */; };
 		EFF2FF4622D3C5A200BED024 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF4522D3C5A200BED024 /* FirebaseManager.swift */; };
 		EFF2FF4B22D3CB4E00BED024 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF4A22D3CB4E00BED024 /* BaseImageView.swift */; };
 		EFF2FF4D22D4DB2F00BED024 /* PreviewMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF4C22D4DB2F00BED024 /* PreviewMenuView.swift */; };
@@ -331,7 +330,6 @@
 		EFD03DD422B3FAEA00DE1874 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		EFDD387322C26BAF00B66E13 /* MoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuViewController.swift; sourceTree = "<group>"; };
 		EFF2FF4122D3BB2C00BED024 /* StaticGridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticGridCollectionViewCell.swift; sourceTree = "<group>"; };
-		EFF2FF4322D3C55500BED024 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EFF2FF4522D3C5A200BED024 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		EFF2FF4A22D3CB4E00BED024 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
 		EFF2FF4C22D4DB2F00BED024 /* PreviewMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewMenuView.swift; sourceTree = "<group>"; };
@@ -466,6 +464,29 @@
 			path = Learn;
 			sourceTree = "<group>";
 		};
+		276AFA74231B78A200C9DB3A /* Prod */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Prod;
+			sourceTree = "<group>";
+		};
+		276AFA75231B78AA00C9DB3A /* Staging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Staging;
+			sourceTree = "<group>";
+		};
+		276AFA76231B792600C9DB3A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				276AFA74231B78A200C9DB3A /* Prod */,
+				276AFA75231B78AA00C9DB3A /* Staging */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		276D9165230F9D9100CD61E0 /* Item */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,18 +557,10 @@
 			isa = PBXGroup;
 			children = (
 				EFD03DC922B2D23600DE1874 /* Localization */,
-				EFF2FF4322D3C55500BED024 /* GoogleService-Info.plist */,
 				27954E3622A18472000FC0C6 /* Assets.xcassets */,
 				27954E3822A18472000FC0C6 /* LaunchScreen.storyboard */,
 			);
 			path = Misc;
-			sourceTree = "<group>";
-		};
-		27793A3D22A433F100378FE3 /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Launch;
 			sourceTree = "<group>";
 		};
 		27793A3E22A4345D00378FE3 /* Source */ = {
@@ -666,8 +679,8 @@
 		27954E2E22A18470000FC0C6 /* BattleBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				276AFA76231B792600C9DB3A /* Config */,
 				27793A3E22A4345D00378FE3 /* Source */,
-				27793A3D22A433F100378FE3 /* Launch */,
 				27793A3C22A433E200378FE3 /* Misc */,
 				27954E3B22A18472000FC0C6 /* Info.plist */,
 				279B6C2822CCD56F006735D3 /* README.md */,
@@ -1017,7 +1030,6 @@
 				27954E3A22A18472000FC0C6 /* LaunchScreen.storyboard in Resources */,
 				EFD03DD622B3FAEA00DE1874 /* LoadingViewController.xib in Resources */,
 				27954E3722A18472000FC0C6 /* Assets.xcassets in Resources */,
-				EFF2FF4422D3C55500BED024 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
