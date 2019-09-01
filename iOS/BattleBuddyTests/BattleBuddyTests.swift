@@ -2,7 +2,7 @@
 //  BattleBuddyTests.swift
 //  BattleBuddyTests
 //
-//  Created by Amaral, Michael on 7/10/19.
+//  Created by Mike on 9/1/19.
 //  Copyright © 2019 Veritas. All rights reserved.
 //
 

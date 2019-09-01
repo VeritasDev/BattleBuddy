@@ -32,17 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "27954E3F22A18472000FC0C6"
-               BuildableName = "BattleBuddyTests.xctest"
-               BlueprintName = "BattleBuddyTests"
-               ReferencedContainer = "container:../../../../../../Desktop/dev/BattleBuddy/BattleBuddy.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EFABB9C422D662480075D17D"
+               BlueprintIdentifier = "276AFA7F231B919E00C9DB3A"
                BuildableName = "BattleBuddyTests.xctest"
                BlueprintName = "BattleBuddyTests"
                ReferencedContainer = "container:BattleBuddy.xcodeproj">

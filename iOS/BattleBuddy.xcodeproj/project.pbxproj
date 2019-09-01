@@ -22,6 +22,7 @@
 		2753FE6A22F1B7CC00B20DAD /* CompatibleModStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6922F1B7CC00B20DAD /* CompatibleModStatsCell.swift */; };
 		276AFA79231B7F3B00C9DB3A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA78231B7F3B00C9DB3A /* README.md */; };
 		276AFA7B231B8BA600C9DB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA7A231B8BA600C9DB3A /* GoogleService-Info.plist */; };
+		276AFA83231B919F00C9DB3A /* BattleBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276AFA82231B919F00C9DB3A /* BattleBuddyTests.swift */; };
 		276D91682310056600CD61E0 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D91672310056600CD61E0 /* AsyncOperation.swift */; };
 		276D916A2310081D00CD61E0 /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D91692310081D00CD61E0 /* BaseItem.swift */; };
 		276D916E23100C4D00CD61E0 /* Moddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D916D23100C4D00CD61E0 /* Moddable.swift */; };
@@ -151,6 +152,16 @@
 		EFFB10C522F1FC3600EE6B6F /* WebKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB10C422F1FC3600EE6B6F /* WebKitUtils.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		276AFA85231B919F00C9DB3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27954E2422A18470000FC0C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27954E2B22A18470000FC0C6;
+			remoteInfo = BattleBuddy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		27D210472316AFF2005A538F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -193,6 +204,9 @@
 		276AFA73231AD93E00C9DB3A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		276AFA78231B7F3B00C9DB3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		276AFA7A231B8BA600C9DB3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		276AFA80231B919E00C9DB3A /* BattleBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		276AFA82231B919F00C9DB3A /* BattleBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleBuddyTests.swift; sourceTree = "<group>"; };
+		276AFA84231B919F00C9DB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276D91672310056600CD61E0 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		276D91692310081D00CD61E0 /* BaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseItem.swift; sourceTree = "<group>"; };
 		276D916D23100C4D00CD61E0 /* Moddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moddable.swift; sourceTree = "<group>"; };
@@ -349,6 +363,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		276AFA7D231B919E00C9DB3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27954E2922A18470000FC0C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,6 +510,15 @@
 				276AFA75231B78AA00C9DB3A /* Staging */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		276AFA81231B919F00C9DB3A /* BattleBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				276AFA82231B919F00C9DB3A /* BattleBuddyTests.swift */,
+				276AFA84231B919F00C9DB3A /* Info.plist */,
+			);
+			path = BattleBuddyTests;
 			sourceTree = "<group>";
 		};
 		276D9165230F9D9100CD61E0 /* Item */ = {
@@ -667,6 +697,7 @@
 			children = (
 				279B6C2822CCD56F006735D3 /* README.md */,
 				27954E2E22A18470000FC0C6 /* BattleBuddy */,
+				276AFA81231B919F00C9DB3A /* BattleBuddyTests */,
 				27954E2D22A18470000FC0C6 /* Products */,
 				7ABE6FD9D08AFA0FE132AA0B /* Pods */,
 				16562AA740BE87B8AB0FCB7E /* Frameworks */,
@@ -677,6 +708,7 @@
 			isa = PBXGroup;
 			children = (
 				27954E2C22A18470000FC0C6 /* BattleBuddy.app */,
+				276AFA80231B919E00C9DB3A /* BattleBuddyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -948,6 +980,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		276AFA7F231B919E00C9DB3A /* BattleBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276AFA87231B919F00C9DB3A /* Build configuration list for PBXNativeTarget "BattleBuddyTests" */;
+			buildPhases = (
+				276AFA7C231B919E00C9DB3A /* Sources */,
+				276AFA7D231B919E00C9DB3A /* Frameworks */,
+				276AFA7E231B919E00C9DB3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				276AFA86231B919F00C9DB3A /* PBXTargetDependency */,
+			);
+			name = BattleBuddyTests;
+			productName = BattleBuddyTests;
+			productReference = 276AFA80231B919E00C9DB3A /* BattleBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		27954E2B22A18470000FC0C6 /* BattleBuddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27954E4922A18472000FC0C6 /* Build configuration list for PBXNativeTarget "BattleBuddy" */;
@@ -975,10 +1025,14 @@
 		27954E2422A18470000FC0C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Veritas;
 				TargetAttributes = {
+					276AFA7F231B919E00C9DB3A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 27954E2B22A18470000FC0C6;
+					};
 					27954E2B22A18470000FC0C6 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
@@ -1021,11 +1075,19 @@
 			projectRoot = "";
 			targets = (
 				27954E2B22A18470000FC0C6 /* BattleBuddy */,
+				276AFA7F231B919E00C9DB3A /* BattleBuddyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		276AFA7E231B919E00C9DB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27954E2A22A18470000FC0C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1098,6 +1160,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		276AFA7C231B919E00C9DB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276AFA83231B919F00C9DB3A /* BattleBuddyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27954E2822A18470000FC0C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1239,6 +1309,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		276AFA86231B919F00C9DB3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27954E2B22A18470000FC0C6 /* BattleBuddy */;
+			targetProxy = 276AFA85231B919F00C9DB3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		27954E3822A18472000FC0C6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1293,6 +1371,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		276AFA88231B919F00C9DB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BattleBuddyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.veritas.BattleBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleBuddy.app/BattleBuddy";
+			};
+			name = Debug;
+		};
+		276AFA89231B919F00C9DB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BattleBuddyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.veritas.BattleBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleBuddy.app/BattleBuddy";
+			};
+			name = Release;
+		};
 		27954E4722A18472000FC0C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1580,6 +1698,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		276AFA87231B919F00C9DB3A /* Build configuration list for PBXNativeTarget "BattleBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276AFA88231B919F00C9DB3A /* Debug */,
+				276AFA89231B919F00C9DB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27954E2722A18470000FC0C6 /* Build configuration list for PBXProject "BattleBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
