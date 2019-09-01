@@ -12,7 +12,7 @@ Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas
 - [ ] Setup Github Actions
 - [ ] Firebase Staging Instance
 - [ ] Changelog
-- [ ] Figure out when Nikita will gib wipe
+- [x] Figure out when Nikita will gib wipe
 - [ ] Initial documentation
 
 ## Contributing Guidelines
@@ -25,7 +25,7 @@ Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas
 ## <u>Backend v1.0</u>
 
 - [ ] Remote functions deployed
-- [ ] Fold server
+- [x] Fold server
 - [ ] item update/syncing (every 60 mins)
 - [ ] Total user count cache (every 5 mins?)
 - [ ] Total ads watched cache (every 5 mins?)
