@@ -1,0 +1,15 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+  
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Pod Install
+      run: pod install
+    - name: Clean & Test
+      run: xcodebuild clean test -workspace iOS/BattleBuddy.xcworkspace -scheme BattleBuddy CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
