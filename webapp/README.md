@@ -1,7 +1,4 @@
 #  Battle Buddy Progressive Web App
-### The Unofficial [Escape from Tarkov](http://www.escapefromtarkov.com) Reference App
-
-Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas), with loads of help from his and the greater EFT Community!
 
 ***THIS REPO IS CURRENTLY A WORK IN PROGRESS! I WILL BE ADDED MUCH MORE DOCUMENTATION AFTER THE INITIAL RELEASE!***
     

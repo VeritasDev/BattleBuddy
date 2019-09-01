@@ -3,7 +3,7 @@
 
 Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas), with loads of help from his and the greater EFT Community!
 
-***THIS REPO IS CURRENTLY A WORK IN PROGRESS! I WILL BE ADDED MUCH MORE DOCUMENTATION AFTER THE INITIAL RELEASE!***
+***THIS REPO IS CURRENTLY A WORK IN PROGRESS! I WILL BE ADDING MUCH MORE DOCUMENTATION AFTER THE INITIAL RELEASE!***
 
 ## Project / Repo TODO:
 

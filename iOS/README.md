@@ -1,10 +1,13 @@
 #  Battle Buddy iOS App
 
 ***THIS REPO IS CURRENTLY A WORK IN PROGRESS! I WILL BE ADDED MUCH MORE DOCUMENTATION AFTER THE INITIAL RELEASE!***
-    
+
 ## <u>Roadmap</u>
 
 - [ ] Release iOS v1.0 ***in progress***
+
+# Architecture
+- [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
 
 ## <u>iOS v1.0</u>
 
