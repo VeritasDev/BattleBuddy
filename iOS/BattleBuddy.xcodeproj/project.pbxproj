@@ -46,7 +46,6 @@
 		27954E3022A18470000FC0C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27954E2F22A18470000FC0C6 /* AppDelegate.swift */; };
 		27954E3722A18472000FC0C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27954E3622A18472000FC0C6 /* Assets.xcassets */; };
 		27954E3A22A18472000FC0C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27954E3822A18472000FC0C6 /* LaunchScreen.storyboard */; };
-		279B6C2922CCD56F006735D3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 279B6C2822CCD56F006735D3 /* README.md */; };
 		279B6C2E22CD4C15006735D3 /* ItemPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B6C2D22CD4C15006735D3 /* ItemPreviewCell.swift */; };
 		27A263BD22CF852B0089830C /* BaseStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A263BC22CF852B0089830C /* BaseStackView.swift */; };
 		27A263C122CF93F30089830C /* FrameUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A263C022CF93F30089830C /* FrameUtils.swift */; };
@@ -1032,7 +1031,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				276AFA79231B7F3B00C9DB3A /* README.md in Resources */,
-				279B6C2922CCD56F006735D3 /* README.md in Resources */,
 				EFD03DCA22B2D25C00DE1874 /* Localizable.strings in Resources */,
 				27954E3A22A18472000FC0C6 /* LaunchScreen.storyboard in Resources */,
 				EFD03DD622B3FAEA00DE1874 /* LoadingViewController.xib in Resources */,

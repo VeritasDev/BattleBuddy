@@ -8,6 +8,7 @@ Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas
 ## Project / Repo TODO:
 
 - [ ] Setup Github Actions
+- [ ] Firebase Staging Instance
 - [ ] Changelog
 - [ ] Figure out when Nikita will gib wipe
 - [ ] Initial documentation
