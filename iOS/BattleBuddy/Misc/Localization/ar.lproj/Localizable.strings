@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "نعم";
+"no" = "لا";
+"ok" = "حسناً";
+"done" = "تم";
+"soon" = "قريباً";
+"coming_soon" = "متوفر قريباً";
+"unknown" = "غير معروف";
+"type" = "النوع";
+"continue" = "استمرار";
+"veritas" = "فيريتاس";
+"required" = "مطلوب";
+
+// MARK: - Filter/sort/compare
+"compare" = "قارن";
+"name" = "اسم";
+"save" = "حفظ";
+"recommended" = "المٌنصح به";
+"similar" = "مماثل";
+"all" = "الكل";
+"compare_with" = "قارن بـ";
+
+// MARK: - More / Attributions
+"about" = "Battle Buddy عن";
+"dev_by" = "Veritas تم التطوير من قبل";
+"dev_support" = "هل توٌد دعم المطور؟";
+"watch_ad" = "مشاهدة اعلان";
+"enable_banner_ads" = "تفعيل اعلانات البانر";
+"view_on_github" = "اعرض في قِت هب";
+"rate_this_app" = "قيم باتل بَدي";
+"attributions" = "صفات";
+"check_out_team" = "تعرف على الفريق";
+"team" = "الفريق";
+"twitter" = "تويتر";
+"twitch" = "تويتش";
+"discord" = "دسكورد";
+"youtube" = "يوتيوب";
+"instagram" = "انستاقرام";
+"soundcloud" = "ساوند كلاود";
+"website" = "الموقع الألكتروني";
+"spotify" = "سبوتفاي";
+"social" = "التواصل الاجتماعي";
+"music" = "موسيقاي";
+"website_error" = "غير قادر على عرض هذا المتحوى. يرجى التأكد من تثبيت التطبيق ذي الصله";
+"live_now" = "على الهواء الآن!";
+"feedback_title" = "التغذية الرجعية والأقتراحات";
+"feedback_subtitle" = "انضم الى الدسكورد";
+"upcoming_features" = "مميزات قادمة";
+
+"twitter_description" = "ابقَ على اطلاع";
+"twitch_description" = "تابع مباشرة على تويتش";
+"discord_description" = "انضم الى دسكورد المجتمع";
+"youtube_description" = "تابعني على يوتيوب";
+"instagram_description" = "الوسائط عبر انستاقرام";
+"soundcloud_description" = "استمع على ساوند كلاود";
+"spotify_description" = "استمع على سبوتفاي";
+"website_description" = "المزيد عن فيريتاس";
+
+// MARK: - Tabs
+"items" = "العناصر";
+"learn" = "تعلم";
+"more" = "المزيد";
+"search" = "إبحث";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "الذخائر";
+"main_menu_armor" = "دروع البدن";
+"main_menu_ballistics" = "المُنقذفات";
+"main_menu_firearms" = "الأسلحة النارية";
+"main_menu_medical" = "الطبيات";
+"main_menu_melee" = "اسلحة المشاجرة";
+"main_menu_throwables" = "المحذوفات";
+"main_menu_health_calc" = "حاسبة الضرر";
+
+// MARK: - Sub-Categories
+"firearm_types" = "أنواع الأسلحة النارية";
+"calibers" = "العيار";
+
+// MARK: - Calculators
+"pen_chance" = "امكانية الأختراق";
+"no_armor_selected" = "ليس هناك درع محدد";
+"no_ammo_selected" = "ليس هناك ذخيرة محددة";
+"select_ammo" = "اختيار الذخيرة";
+"select_armor" = "اختيار الدرع";
+"pen_chance_help_title" = "حاسبة امكانية الأخترق";
+"pen_chance_help_message" = "هذه الأداة تحسب امكانية اختراق طلقة معينة لدرع معين, عند اختيارك لدرع وطلقه يمكنك تمرير شريط التمرير لمحاكاة متانة درع معين ضد طلقة معينة في مختلف مستويات المتانة";
+
+"health_calc_title" = "حاسبة الضرر";
+"total_hp" = "مجموع نقاط الصحة";
+
+"body_zone_head" = "الرأس";
+"body_zone_thorax" = "الصدر";
+"body_zone_stomach" = "البطن";
+"body_zone_right_arm" = "الذراع اليمنى";
+"body_zone_left_arm" = "الذراع اليسرى";
+"body_zone_right_leg" = "الساق اليمنى";
+"body_zone_left_leg" = "الساق اليسرى";
+
+// MARK: - Items
+"armor" = "الدروع";
+"helmets" = "الخود";
+"ballistics" = "المُنقذفات";
+"health" = "الصحة";
+"firearms" = "الأسلحة النارية";
+"ammunition" = "الذخائر";
+"body_armor" = "دروع البدن";
+"medical_items" = "الأدوات الطبية";
+"throwables" = "المحذوفات";
+"healing_items" = "عناصر الشفاء";
+"pain_management" = "ادارة الألم";
+"status_management" = "ادارة مؤثرات الحالة";
+"stims" = "المٌنشطات";
+"grenades" = "القنابل";
+"properties" = "الخصائص";
+"performance" = "الأداء";
+"ergonomics" = "الإرقنومكس";
+"ergo" = "إرقو";
+"vertical_recoil" = "الأرتداد الرأسي";
+"horizontal_recoil" = "الأرتداد الأفقي";
+"recoil" = "الأرتداد";
+
+// MARK: - Weapons
+"weapon_class" = "الفئة";
+"assault_rifle" = "بندقية";
+"assault_carbine" = "سلاح كاراباين";
+"sniper_rifle" = "سلاح قنص";
+"designated_marksman_rifle" = "سلاح مختصو الرماية";
+"pistol" = "فرد";
+"shotgun" = "شوت قن";
+"sub_machine_gun" = "سلاح رشاش صغير";
+"machine_gun" = "سلاح رشاش كبير";
+"caliber" = "عيار";
+"fire_rate" = "معدل الأطلاق";
+"effective_range" = "نطاق الفعالية";
+"fold_or_retract" = "طي";
+"retractable" = "قابل لمتابعة الأثر";
+"build_wizard" = "مرشد المٌنشئات";
+"gun_build_custom" = "مختص";
+"gun_build_recoil" = "اقل ارتداد";
+"gun_build_ergo" = "اقصى إيرقو";
+"gun_build_random" = "عشوائي";
+"fire_mode" = "وضعية الرماية";
+"fire_modes" = "وضعيات الرماية";
+"fire_mode_semi" = "شبة اوتوماتيكي";
+"fire_mode_auto" = "اوتوماتيكي";
+"fire_mode_burst" = "اطلاق ثلاثي";
+"fire_mode_semi_short" = "شبة";
+"fire_mode_auto_short" = "اوتوماتيكي";
+"fire_mode_burst_short" = "طلق ثلاثي";
+"action" = "اجراء";
+"action_type_pump" = "بمب-شوت قن";
+"action_type_bolt" = "سلاح بولت قناص";
+"action_type_pump_short" = "بمب";
+"action_type_bolt_short" = "بولت";
+"build" = "انشئ";
+"build_this_gun" = "انشئ هذا السلاح";
+
+"compare_preset_semi_auto_rifle" = "اسلحة شبة اوتوماتيكية";
+"compare_preset_full_auto_rifles" = "اسلحة اوتوماتيكية";
+"compare_preset_rifles_caliber_match" = "اسلحة بنفس العيار";
+"compare_preset_rifles" = "البنادق";
+"compare_preset_full_auto_caliber_match" = "اسلحة اوتوماتيكية بنفس العيار";
+"compare_preset_semi_auto_pistols" = "فرود شبة اوتوماتيكية";
+"compare_preset_full_auto_pistols" = "فرود اوتوماتيكية";
+"compare_preset_pistols_caliber_match" = "فرود بنفس العيار";
+"compare_preset_pistols" = "الفرود";
+"compare_preset_manual_shotguns" = "شوت قن يدوي";
+"compare_preset_shotguns" = "اسلحة شت قن";
+"compare_preset_smgs_caliber_match" = "اسلحة اوتوماتيكية صغيرة بنفس العيار";
+"compare_preset_smgs" = "اسلحة اوتوماتيكية صغيرة";
+"compare_preset_bolt_snipers" = "اسلحة بولت قانصة";
+"compare_preset_snipers_and_dmrs" = "القانصات والراميات";
+"compare_preset_dmrs" = "اسلحة مختصو الرماية";
+
+// MARK: - Ammo
+"guns_for_caliber" = "اسلحة ذو صلة";
+"subsonic" = "عيار دون سرعة الصوت";
+"tracer" = "اثر";
+"muzzle_velocity" = "سرعة الفوهه(م/ث)";
+"compatible_firearms" = "الأسلحة المطابقة";
+"rpm" = "سرعة الطلق لكل دقيقه";
+"meters_abbr" = "م";
+"seconds_abbr" = "ث";
+
+// MARK: - Armor
+"armor_class_0" = "لاشئ";
+"armor_class_1" = "فئة 1";
+"armor_class_2" = "فئة 2";
+"armor_class_3" = "فئة 3";
+"armor_class_4" = "فئة 4";
+"armor_class_5" = "فئة 5";
+"armor_class_6" = "فئة 6";
+"armor_type_body" = "درع البدن";
+"armor_type_helmet"= "خوذة";
+"armor_type_visor" = "زجاج مضاد للرصاص";
+"armor_type_attachment" = "مٌرفق";
+"armor_zone_top" = "علوي";
+"armor_zone_eyes" = "العيون";
+"armor_zone_jaws" = "الفك";
+"armor_zone_ears" = "الأذنان";
+"armor_zone_nape" = "مؤخر العنق";
+"armor_zone_chest" = "الصدر";
+"armor_zone_stomach" = "البطن";
+"armor_zone_left_arm" = "الذراع اليسرى";
+"armor_zone_right_arm" = "الذراع اليمنى";
+"armor_zone_left_leg" = "الساق اليسرى";
+"armor_zone_right_leg" = "الساق اليمنى";
+"armor_mat_ceramic" = "سراميك";
+"armor_mat_armored_steel" = "الفولاذ المدرّع";
+"armor_mat_aramid" = "أَراميد";
+"armor_mat_uhmwpe" = "البولي إثيلين فائق الوزن الجزيئي";
+"armor_mat_combined" = "مشترك";
+"armor_mat_aluminum" = "المنيوم";
+"armor_mat_glass" = "زجاج";
+"armor_mat_titanium" = "تايتينيوم";
+
+"armor_type" = "نوع";
+"armor_material" = "مادة";
+"armor_class" = "فئة";
+"armor_points" = "المتانة";
+"armor_zones" = "مناطق حمايه الدرع";
+"penalties" = "عواقب";
+"speed_penalty" = "عواقب الحِمل";
+"turn_speed_penalty" = "سرعة الإلتفاف";
+"ergo_penalty" = "الإرقنوميات";
+
+"penetration" = "إختراق";
+"damage" = "ضرر";
+"armor_damage" = "ضرر الدرع";
+"frag_chance" = "إمكانية التجزئ";
+
+"explore" = "إستطلع";
+"compare" = "قارن";
+"compare_performance" = "قارن الأداء";
+"dps_calc" = "حاسبة الضرر لكل ثانية";
+"kill_time_calc" = "حاسبة زمن القتل";
+
+// MARK: - Medical
+"damage" = "ضرر";
+"contusion" = "كدمة";
+"fracture" = "كسر";
+"pain" = "الم";
+"medkit" = "عدة طب";
+"painkiller" = "مٌسكن";
+"accessory" = "مٌلحق";
+"stimulator" = "محاكي";
+"use_time" = "زمن الإستخدام";
+"effect_duration" = "زمن الأثر";
+"use_count" = "عدد مرات الإستخدام";
+"hp_resource" = "مجموع نقاط الصحة";
+"removes_bloodloss" = "يزيل النزيف";
+"removes_contusion" = "يزيل الكدمة";
+"removes_fracture" = "يزيل الكسر";
+"removes_pain" = "يزيل الألم";
+"hydration_modifier" = "معدل الإرتواء";
+"energy_modifier" = "معدل الطاقة";
+
+// MARK: - Throwables
+"throwable_frag" = "قنبلة";
+"throwable_flash" = "قنبله إعماء";
+"throwable_smoke" = "قنبلة دخان";
+"fuse_time" = "زمن الإشعال";
+"explosion_radius_min" = "الحد الأدنى لمدى الأنفجار";
+"explosion_radius_max" = "الحد الأعلى لمدى الأنفجار";
+"fragmentation_count" = "عدد الشظايا";
+
+// MARK: - Melee
+"damage" = "ضرر";
+"rate" = "معدل الضرب";
+"range" = "المدى";
+
+"stab" = "طعن";
+"stab_dmg" = "ضرر الضعن";
+"stab_rate" = "معدل الضعن";
+"stab_range" = "مدى الطعن";
+
+"slash" = "سلاش";
+"slash_dmg" = "ضرر السلاش";
+"slash_rate" = "معدل السلاش";
+"slash_range" = "مدى السلاش";
+
+// MARK: - Posts
+"ballistics_title" = "الدروع والمقذوفات: الأساسيات";
+"ballistics_body_1" = "نظام المٌنقذفات في تاركوف غامض والقليل من الأشخاص يعرفون طريقة عمله بسبب تعقيد الصيغ المستخدمة لحساب اختراق السطوح والارتداد والضرر للدروع واجسام اللاعبين مع اخذ الأعتبار بالعوامل العشوائية التي تحدث كثير, فهناك دائماً فرق غير ملحوظ لزمن القتل لشخص ذو درع قوي ولاعب عادي وابضا بأعتبار المشاكل الشبكية التي تزيد مع زيادة عدد اللاعبين, فهذا النظام المعقد يعمل على تضخيم الارتباك والعوامل المحبطة للاعبين";
+"ballistics_body_2" = "بداية بالدروع, كيف تعمل وماذا يجب ان تعرفه؟ بغض النظر عن الأسعار والتوفر, هناك خمس اشياء يجب مراعاتها, الإصلاح, الأستخدام, فئة المتانة, المادة والعواقب, مناطق الحماية";
+"ballistics_body_2_1_title" = "رقم 1 : فئة الدرع";
+"ballistics_body_2_1" = "كل درع وملحقاته لها فئة معينة, الفئة في رأيي هي اهم جانب في الدروع, لأن فئة الدرع تمثل مدى فعالية الدرع في ايقاف الطلقات ببساطة, الفئات تترجح من فئه 1 الى 6 كما تعرف, كل ما على الرقم كان الدرع افضل وكانت فرصة ايقاف الطلقات افضل, الدرع فئة 1 لديها القدرة على ايقاف المُنقذفات والطلقات ذات فرصة اختراق قليله اما فئة 6 لديها القدرة على ايقاف افضل واقوى الذخائر في اللعبة, هذه الأشياء التي اريد ان يمكن تفسيرها وايجاد الحلول للتامل معها";
+"ballistics_body_2_2_title" = "رقم 2: المتانة";
+"ballistics_body_2_2_1" = "عند النظر الى متانة الدروع, من المهم ان ننظر الى التفاصيل والأرقام التي تتغير من قبل بي اس جي بكثرة, الأمر الأكثر اهميه هو علاقة فرصة إيقاف اللطلقات مرتبط بشكل مباشر برقم المتانة الحالي مقارنتاً بالرقم الأقصى عند كونه درع جديد";
+"ballistics_body_2_2_2" = "على سبيل المثال الدروع التي تبدأ بمتانة رقم 50 تكون ذو فعاليه كامل عند كونها 50 من 50 , والأقل وضوحاً انه عند اصلاح درع وكونه 40 من 50 فإنه يكون بفس فعالية درع اخر نقاطه 40 من 40";
+"ballistics_body_2_2_3" = "معرفة النقاط القصوى للمتانة لأي درع تعتبر عاده جداً مهمه, الكثير من الأحيان تجد نفسك تملك درع ذو فئه اعلى لكن بنقاط متانه قليله ودرع اضعف بنقاط متانه اكثر, الذي يجب عليك معرفته انك لديك فرص فاعليه افضل بأختيار الدرع ذو نقاط المتانة الأكثر وليس الفئة العليا";
+"ballistics_body_2_3_title" = "رقم 3: مناطق الحماية";
+"ballistics_body_2_3" = "ليس هنالك الكثير من التفاصيل حول هذا الموضوع, يجب عليك معرفة امراً واحداً: بعض الدروع لاتحمي الأجزاء التي واضحه بصرياً, على سبيل المثال درع جين 4 فل بروتيكشن مقارنتة ب جين 4 اسّولت, الأولى بصرياً تغطي مناطق اكثر في الجسم ولكنها مطابقه للثانية لأنها تحوي نفس مناطق الحمايه, دائماً الق نظرة على مناطق الحماية لدروعك لأنه من المهم ان تعرف الدروع التي تحمي اعضاءاكثر في جسم لاعبك لأنها قد تحميك من فقدان ذراعيك أو ساقيك.";
+"ballistics_body_2_4_title" = "رقم 4: المواد";
+"ballistics_body_2_4" = "كل درع مٌصنع من مواد مختلفه, حالياً المواد لاتحمل أي تأثير على فعالية الحماية ولكن تكمن اهميتها عند اصلاح الدروع, بعض الدروع تكون اصعب في الإصلاح لكونها من مواد معينه واخريات لأ تتأثر كثيراً عند اصلاحها وايضا من الممكن ان يكمن فرق شاسع في سعر الأصلاح.";
+"ballistics_body_2_5_title" = "رقم5: العواقب";
+"ballistics_body_2_5" = "بصفه عامه, الزيادة في الحماية تأتي بتكلفه, هذه التكلفه قد تكون مادية او عمليه, كل درع يأتي بعده عواقب, البعض يبطئ من سرعتك او من سرعة التفافك أو حتى عددالإرقو لديك التي تؤثر على سرعه التصويب او معدل خسارة مهارة التحمل وحتى صوت لاعبك عند الحركة, حماية الرأس قد تؤثر على قدرة سمعك او قدرة النظر, هذه المؤثرات يجب عليك اخذها بالأعتبار عند اختيارك لدروعك.";
+"ballistics_body_3_title" = "التلخيص";
+"ballistics_body_3" = "نظام المٌنقذفات في تاركوف معقد ويتطلب الخبره والمعرقه لتتمكن من استخدامها في صالحك, الفديو الذي بالأعلى يشرح اساسيات هذا الجانب من اللعبه";
+
+"health_title" = "حالة وصحة لاعبك";
+"health_body_1" = "هذه المعلومات قادمه قريباً";
+
+"upcoming_body_1" = "لدي الكثير من المميزات الرائعة مخططه لهذا التطبيق ولايمكنني الأنتظار لصنعها, مثل الخرائط التفاعلية, تعديل الأسلحة, حاسبات, المهام, المهارات, والكثير ولكنني اردت ان اطلق النسخة الأولى في اسرع وقت ممكن لكي اتلقى التغذية الرجعيه, تطوير تطبيق اندرويد والويب قادم قريباً";
+
+"attributions_api" = "Morphy2k & قاعدة تاركوف";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "مجتمع";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "عناصر قانونية متنوعة";
+"attributions_translations" = "الترجمة";
+
+"attributions_api_descr" = "المشروع لم يكن ممكنا ً بدون عمل التطوير الرائع الذي قام به مورفي على قاعدة بيانات تاركوف وواجهة برمجة التطبيقات الأساسية";
+"attributions_nofam_descr" = "البطل المجهول في مجتمع تاركوف, مصمم مخططات الذخائر, والمتعاونون على اللآلآت الحاسبة للمقذوفات والمعلومات ذات الصلة, سفير الذخائر, بارون المقذوفات, استاذ الأختراق!";
+"attributions_willerz_descr" = "الكثير من الحب والتقدير لأبن بلدي لتوفيره الكثير من اللقطات المصورة واعطائي الإذن لإستخدامها في التطبيق, وايضاً احد افضل اللاعبين في العالم";
+"attributions_community_descr" = "الكثير من الحب لمجتمع الدسكورد لكل عملهم الجاد في اخذ اللقطات والصور الموجودة في التطبيق";
+"attributions_translations_descr" = "تمت الترجمة لجميع اللغات من قبل اعضاء المجتمع الذين تبرعوا بوقتهم وجهدهم لهذا التطبيق, الجميع في العالم يقدر جهدكم";
+"attributions_bsg_descr" = "شكر خاص لنيكيتا لدعمه هذا التطبيق ولكل العاملين في بي اس جي لكل العمل الجاد الذي خلق الفضل لعبىة منظور اول حربية لكل العصور";
+"attributions_misc_descr" = "جميع ايقونات التواصل الإجتماعي صٌنعت من قبل ابشيك بيبالفا من موقع ايكون فايندر بترخيص من سيرجي باتوتن من ناون بروجكت";
+
+// Analytics
+"total_users_count" = "%@ باتل باديز المنضمين للمعركة";

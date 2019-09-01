@@ -1,0 +1,323 @@
+6// MARK: - General
+"yes" = "Tak";
+"no" = "Nie";
+"ok" = "OK";
+"done" = "Skończ";
+"soon" = "Niedługo™";
+"coming_soon" = "Będzie dodane niedługo™";
+"unknown" = "Nieznany";
+"type" = "Typ";
+"continue" = "Dalej";
+"veritas" = "Veritas";
+"required" = "Wymagania";
+
+// MARK: - Filter/sort/compare
+"compare" = "Porównaj";
+"name" = "Nazwa";
+"save" = "Zapisz";
+"recommended" = "Polecane";
+"similar" = "Podobne";
+"all" = "Wszystkie";
+"compare_with" = "Porównaj do...";
+
+// MARK: - More / Attributions
+"about" = "O Battle Buddy";
+"dev_by" = "Stworzony przez Veritas";
+"dev_support" = "Chcesz wspomóc rozwój?";
+"watch_ad" = "Obejrzyj reklamę";6
+"enable_banner_ads" = "Włącz banery reklamowe";
+"view_on_github" = "Otwórz GitHub";
+"rate_this_app" = "Oceń Battle Buddy";
+"attributions" = "Kredyty";
+"check_out_team" = "Sprawdź nasz zespół";
+"team" = "Zespół";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Social";
+"music" = "Muzyka";
+"website_error" = "Nie można wczytać tej strony. Sprawdź czy masz zainstalowaną daną aplikację.";
+"live_now" = "Stream startuje!";
+"feedback_title" = "Przekaż opinie i pomysły";
+"feedback_subtitle" = "Dołącz do naszego serwera Discord!";
+"upcoming_features" = "Nadchodzące funkcje";
+
+"twitter_description" = "Bądź na bierząco";
+"twitch_description" = "Oglądaj na Twitch";
+"discord_description" = "Dołącz do naszej społeczności na Discord";
+"youtube_description" = "Oglądaj na YouTube";
+"instagram_description" = "Media na Instagram";
+"soundcloud_description" = "Słuchaj na Soundcloud";
+"spotify_description" = "Słuchaj na Spotify";
+"website_description" = "Więcej o Veritas";
+
+// MARK: - Tabs
+"items" = "Przedmioty";
+"learn" = "Naucz się";
+"more" = "Więcej";
+"search" = "Szukaj";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Amunicja";
+"main_menu_armor" = "Opancerzenie";
+"main_menu_ballistics" = "Balistyka";
+"main_menu_firearms" = "Broń palna";
+"main_menu_medical" = "Medycyna";
+"main_menu_melee" = "Broń biała";
+"main_menu_throwables" = "Przedmioty rzucane";
+"main_menu_health_calc" = "Kalkulator obrażeń";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Typy broni palnej";
+"calibers" = "Kalibry";
+
+// MARK: - Calculators
+"pen_chance" = "Szansa na penetrację";
+"no_armor_selected" = "Brak pancerza";
+"no_ammo_selected" = "Brak amunicji";
+"select_ammo" = "Wybierz amunicję";
+"select_armor" = "Wybierz pancerz";
+"pen_chance_help_title" = "Kalkulator szanszy na penetrację";
+"pen_chance_help_message" = "Ten kakulator wylicza szansę którą ma wybrany nabój na penetrację wybranego pancerza. Kiedy wybierzesz nabój i pancerz,  możesz użyć suwak żeby sprawdźić ile obrażeń zada nabój, który trafi w uszkodzony pancerz!";
+
+"health_calc_title" = "Kalkulator obrażeń";
+"total_hp" = "Całkowite życie";
+
+"body_zone_head" = "Głowa";
+"body_zone_thorax" = "Tułów";
+"body_zone_stomach" = "Brzuch";
+"body_zone_right_arm" = "Prawa Ręka";
+"body_zone_left_arm" = "Lewa Ręka";
+"body_zone_right_leg" = "Prawa Noga";
+"body_zone_left_leg" = "Lewa Noga";
+
+// MARK: - Items
+"armor" = "Pancerz";
+"helmets" = "Kask";
+"ballistics" = "Balistyka";
+"health" = "Życie";
+"firearms" = "Broń palna";
+"ammunition" = "Amunicja";
+"body_armor" = "Pancerz";
+"medical_items" = "Przedmioty medyczne";
+"throwables" = "Przedmioty rzucane";
+"healing_items" = "Przedmioty leczące";
+"pain_management" = "Menedżer bólu";
+"status_management" = "Menedżer efektów";
+"stims" = "Stymulanty";
+"grenades" = "Granaty";
+"properties" = "Właściwości";
+"performance" = "Osiągi";
+"ergonomics" = "Ergonomia";
+"ergo" = "Ergo";
+"vertical_recoil" = "Odrzut pionowy";
+"horizontal_recoil" = "Odrzut poziomy";
+"recoil" = "Odrzut";
+
+// MARK: - Weapons
+"weapon_class" = "Klasa";
+"assault_rifle" = "Karabin szturmowy";
+"assault_carbine" = "Krótki karabin szturmowy";
+"sniper_rifle" = "Snajperka";
+"designated_marksman_rifle" = "Karabin wyborowy";
+"pistol" = "Pistolet";
+"shotgun" = "Strzelba";
+"sub_machine_gun" = "Lekki karabin maszynowy";
+"machine_gun" = "Karabin maszynowy";
+"caliber" = "Kaliber";
+"fire_rate" = "Szybkostrzelność";
+"effective_range" = "Zasięg skuteczny";
+"fold_or_retract" = "Złóż";
+"retractable" = "Składany";
+"build_wizard" = "Build Wizard";
+"gun_build_custom" = "Własny";
+"gun_build_recoil" = "Minimalny odrzut";
+"gun_build_ergo" = "Maksymalna ergonomia";
+"gun_build_random" = "Losowy";
+"fire_mode" = "Tryb strzelania";
+"fire_modes" = "Tryby strzelania";
+"fire_mode_semi" = "Samopowtarzalny";
+"fire_mode_auto" = "Automatyczny";
+"fire_mode_burst" = "Seria";
+"fire_mode_semi_short" = "1";
+"fire_mode_auto_short" = "Auto";
+"fire_mode_burst_short" = "Seria";
+"action" = "Akcja";
+"action_type_pump" = "Akcja pompy";
+"action_type_bolt" = "Działanie śruby";
+"action_type_pump_short" = "Pompa";
+"action_type_bolt_short" = "Śruba";
+"build" = "Buduj";
+"build_this_gun" = "Zbuduj tą broń";
+
+"compare_preset_semi_auto_rifle" = "Karabiny samopowtarzalne";
+"compare_preset_full_auto_rifles" = "Karabiny automatyczne";
+"compare_preset_rifles_caliber_match" = "Karabiny tego samego kalibru";
+"compare_preset_rifles" = "Karabiny";
+"compare_preset_full_auto_caliber_match" = "Automatyczne karabiny tego samego kalibru";
+"compare_preset_semi_auto_pistols" = "Pistolety Samopowtarzalny";
+"compare_preset_full_auto_pistols" = "Pistolety Automatyczne";
+"compare_preset_pistols_caliber_match" = "Pistolety tego samego Kalibru";
+"compare_preset_pistols" = "Pistolety";
+"compare_preset_manual_shotguns" = "Strzelby manualne";
+"compare_preset_shotguns" = "Strzelby";
+"compare_preset_smgs_caliber_match" = "Lekkie karabiny maszynowe tego samego kalibru";
+"compare_preset_smgs" = "Lekkie karabiny maszynowe";
+"compare_preset_bolt_snipers" = "Snajperki śrubowe";
+"compare_preset_snipers_and_dmrs" = "Snajperki i karabiny wyborowe";
+"compare_preset_dmrs" = "Karabiny wyborowe";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Związane bronie palne";
+"subsonic" = "Poddzwiękowy";
+"tracer" = "Znacznik";
+"muzzle_velocity" = "Prędkość wylotowa (m/s)";
+"compatible_firearms" = "Zgodne bronie palne";
+"rpm" = "Strzały na minutę";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Brak";
+"armor_class_1" = "Klasa 1";
+"armor_class_2" = "Klasa 2";
+"armor_class_3" = "Klasa 3";
+"armor_class_4" = "Klasa 4";
+"armor_class_5" = "Klasa 5";
+"armor_class_6" = "Klasa 6";
+"armor_type_body" = "Pancerz";
+"armor_type_helmet"= "Kask";
+"armor_type_visor" = "Osłona";
+"armor_type_attachment" = "Dodatki";
+"armor_zone_top" = "Top";
+"armor_zone_eyes" = "Oczy";
+"armor_zone_jaws" = "Szczęka";
+"armor_zone_ears" = "Uszy";
+"armor_zone_nape" = "Kark";
+"armor_zone_chest" = "Klatka";
+"armor_zone_stomach" = "Brzuch";
+"armor_zone_left_arm" = "Lewa Ręka";
+"armor_zone_right_arm" = "Prawa Ręka";
+"armor_zone_left_leg" = "Lewa Noga";
+"armor_zone_right_leg" = "Prawa Noga";
+"armor_mat_ceramic" = "Ceramiczny";
+"armor_mat_armored_steel" = "Stal pancerna";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Mieszany";
+"armor_mat_aluminum" = "Aluminium";
+"armor_mat_glass" = "Szkło";
+"armor_mat_titanium" = "Tytan";
+
+"armor_type" = "Typ";
+"armor_material" = "Materiał";
+"armor_class" = "Klasa";
+"armor_points" = "Wytrzymałość";
+"armor_zones" = "Strefy opancerzone";
+"penalties" = "Kary";
+"speed_penalty" = "Szybkość";
+"turn_speed_penalty" = "Szybkość obrotu";
+"ergo_penalty" = "Ergonomia";
+
+"penetration" = "Penetracja";
+"damage" = "Obrażenia";
+"armor_damage" = "Obrażenia pancerza";
+"frag_chance" = "Szansa na rozbicie";
+
+"explore" = "Odkryj";
+"compare" = "Porównaj";
+"compare_performance" = "Porównaj osiągi";
+"dps_calc" = "Kalkulator DPS";
+"kill_time_calc" = "Kalkulator czasu zabicia";
+
+// MARK: - Medical
+"damage" = "Obrażenia";
+"contusion" = "Stłuczenia";
+"fracture" = "Złamanie";
+"pain" = "Ból";
+"medkit" = "Medkit";
+"painkiller" = "Lek przeciwbólowy";
+"accessory" = "Akcesoria";
+"stimulator" = "Stymulator";
+"use_time" = "Czas Użycia";
+"effect_duration" = "Czas trwania efektu";
+"use_count" = "# użyć";
+"hp_resource" = "Całkowite życie";
+"removes_bloodloss" = "Zatrzymuje krwawienie";
+"removes_contusion" = "Usuwa stłuczenie";
+"removes_fracture" = "Usuwa złamanie";
+"removes_pain" = "Zatrzymuje ból";
+"hydration_modifier" = "Modyfikator uwodnienia";
+"energy_modifier" = "Modyfikator energii";
+
+// MARK: - Throwables
+"throwable_frag" = "Frag";
+"throwable_flash" = "Flash";
+"throwable_smoke" = "Smoke";
+"fuse_time" = "Czas bezpiecznika";
+"explosion_radius_min" = "Min zasięg wybuchu";
+"explosion_radius_max" = "Max zasięg wybuchu";
+"fragmentation_count" = "Ilość fragmentów";
+
+// MARK: - Melee
+"damage" = "Obrażenia";
+"rate" = "Częstotliwość";
+"range" = "Zasięg";
+
+"stab" = "Stab";
+"stab_dmg" = "Obrażenia dźgnięcia";
+"stab_rate" = "Częstotliwość dźgnięcia";
+"stab_range" = "Zasięg dźgnięcia";
+
+"slash" = "Cięcie";
+"slash_dmg" = "Obrażenia cięcia";
+"slash_rate" = "Częstotliwość cięcia";
+"slash_range" = "Zasięg cięcia";
+
+// MARK: - Posts
+"ballistics_title" = "Pancerz i Balistyka: Podstawy";
+"ballistics_body_1" = "System balistyki w Escape from Tarkov jest czarną skrzynką której wewnętrzne funkcjonowanie widziało niewielu. Ze względu na skomplikowanie używanych formuł, na przykład do wyliczenia szansy na penetrację powierzchni, kąty rykoszetu i obrażenia zadane pancerzom i ciałom graczy, jak również wykorzystywane elementy losowe, często występuje niezauważalna różnica w czasie do zabicia w pełni uzbrojonego gracza w najlepsze przedmioty w grze i gracza poziomu pierwszego, który ma nie wiecej niż początkowy pistolet. W połączeniu z dobrze znanymi problemami sieciowymi i lokalnymi, bugami i stale rosnącą ilością graczy z epickimi skarpetakami dla gamerów, wieloznaczność jednych z najważniejszych systemów w grze tylko powiększa zamieszanie i frustrację które odziennie odczuwają nowi gracze i weterani.";
+"ballistics_body_2" = "Zaczynając od pancerza, jak on działa i co powinieneś wiedzieć? Nie zwracając uwagi na dostępność i cenę, powinieneś wziąc pod uwagę pięć ważnych rzeczy wybierając który pancerz kupić, sprzedać, naprawić, założyć, lub wyrzucić - klasa, wytrzymałość, osłonione strefy, materiał i kary.";
+"ballistics_body_2_1_title" = "1. Klasa pancerza";
+"ballistics_body_2_1" = "Każda opancerzona część, od pancerzy do dodadków do kasków balistycznych, ma specyficzną klasę pancerza. W mojej opinii, klasa pancerza jest najważniejszym aspektem ochronnym pancerza. Mówiąc prościej, klasa pancerza reprezentuje jak efektywny jest pancerz w zatrzymywaniu pocisków o różnych poziomach skuteczności balistycznej. W tym momencie zakres klasy pancerzy jest od 1 do 6 i jak się domyślasz, czym większy numer, tym lepiej.\n\nPoziom 1 pancerza jest zdolny ochronić Cię od rykoszetu, odłamków, szrapnelu i niepenetrujących pocisków do pistoletów i śrutu. Poziom 6 pancerza jest zdolny ochronić Cię od większości pocisków, nawet największych kalibrów w grze. Wybrałem słowo 'zdolny' celowo, bo w każdym zderzeniu balistycznym są różne stopnie losowej szansy.\n\nJeśli chodzi o balistykę w Escape from Tarkov, nic nie jest gwarantowane i rzeczy które doświadczamy czasami wydają się niemożliwe lub nie mają sensu. A więc, co to ostatecznie oznacza? Jaki pancerz ochroni mnie przed jakimi posickami? To jest skomplikowane pytanie na które odpowiem bardziej szczegółowo później, przy opisywaniu szczegółow dotyczących zderzeń balistycznych.";
+"ballistics_body_2_2_title" = "2. Wytrzymałość";
+"ballistics_body_2_2_1" = "Jeśli chodzi o wytrzymałość pancerza, ważne jest aby pamiętać, że specyfika działania pancerza zmieniła się wiele razy i w każdej chwili może być zmieniona przez BSG. Mówiąc o wytrzymałości pancerza, trzeba pamiętać, że zdolność ochrony pancerza zależy od wytrzymałości w danym momencie w porównaniu do oryginalnej, maksymalnej wartości, kiedy pancerz był nowy.";
+"ballistics_body_2_2_2" = "Na przykład, nowy pancerz który ma 50 wytrzymałości, zapewnia najlepszą ochronę mając 50/50 wytrzymałości, co jest dość oczywiste. Mniej oczywistą rzeczą jest to, że pancerz który nie był jeszcze naprawiony, na przykład ten co ma 40/50 wytrzymałości, jest dokładnie tak samo efektywny jak i pancerz który był naprawiony i w tym momencie ma 40/40 wytrzymałości.";
+"ballistics_body_2_2_3" = "Bardzo dobrym nawykiem jest sprawdzanie paska wytrzymałości na przedmiocie, lub znajomośc maksymalnej wytrzymałości nowych pancerzy. Często znajdziesz pancerz z niższą klasą niż Twój obecny pancerz. Jeżeli Twój obecny pancerz jest bardzo uszkodzony lub był naprawiony wiele razy, wtedy możliwe jest to, że zakładając pancerz niższej klasy, ale z większym procentem wytrzymałości w porównaniu do nowego pancerza, zwiększy szansę na to, że pancerz uratuje Twoje życie. Dobre zrozumienie systemu ochrony pancerzy różnych klas, wytrzymałości i właściwości penetracji różnych typów kul, może być bezcenną umiejętnością w niektórych sytuacjach bojowych. Odwiedź Kalkulator Obrażeń, aby poczyć jak wszystko działa!";
+"ballistics_body_2_3_title" = "3. Strefy chronione";
+"ballistics_body_2_3" = "W tym temacie nie ma zbyt wielu szczegółów, które muszę opisać. Najważniejszą rzeczą jest to, że pancerz nie osłania tych części ciała, które pokrywa wizualnie! Najlepszym tego przykładem jest Gen4 Full Protection Armor w porównaniu do Gen4 Assault Kit. Gen4 Full Protection Armor wygląda jakby ochraniał więcej twojego ciała, ale ze względu na stery chronione, ochrania dokładnie te same części ciała co Gen4 Assault Kit. Zwacaj uwagę na strefy chronione - w pełni zranione ręce lub brzuch mogą być bardzo denerwujące i często warto mieć dodatkowa ochronę na te częsci ciała, jeżeli Cię na to stać";
+"ballistics_body_2_4_title" = "4. Materiały";
+"ballistics_body_2_4" = "Każdy pancerz jest zrobiony z innych materiałów. W tym momencie materiały nie mają zauważalnego wpływu na umiejętność osłony pancerza. Zamiast tego, materiał jest ważny naprawiając pancerz. Naprawa niektórych materiałow jest bardzo wydajna i tania, a inne mogą stracić znaczną ilość wytrzymałości i kosztować wiecej do naprawienia niż nowy pancerz!";
+"ballistics_body_2_5_title" = "5. Kary";
+"ballistics_body_2_5" = "Mówiąc ogólnie, dodatkowa ochrona kosztuje więcej i ta cena może być finansowa jak również praktyczna. Każdy pancerz ma własny zestaw kar. Niektóre spowalniają ruch, niektóre spowalniają szybkość obrotu i nawet całkowitą orgonomię, która ma wpływ na szybkośc patrzenia przez celownik, szybkość tracenia staminy i nawet głośność wolnego poruszania i celowania. Niektóre osłony głowy mogą limitować Twoje słyszenie lub widzenie na wiele różnych sposobów. Jest pare kompromisów, które powinieneś rozważyć przy wybieraniu czy chcesz nosić bardziej kosztowny kask, czy wypiasiony kask Killa. Który pancerz i kask jest tego warty? Zdecyduj sam!";
+"ballistics_body_3_title" = "Podsumowanie";
+"ballistics_body_3" = "System balistyczny w Escape from Tarkov jest niesamowicie skomplikowany i wymaga sporo doświadczenia i wiedzy aby być w stanie go dobrze wykorzystać. Powyżej znajduje się filmik o pancerzu i balistyce, który wyjaśnia niektóre pojęcia w większych szczegółach, więc upewnij się, że obejrzysz go jeżeli chcesz wiedzieć więcej na te tematy. Powodzenia!";
+
+"health_title" = "Życie i statusy Twojej postaci";
+"health_body_1" = "Te informacje będą dostępne niedługo™";
+
+"upcoming_body_1" = "Mam zaplanowane bardzo wiele fajnych funkcji dla tej aplikacji i nie mogę się doczekać aż je wprowadzę w życie dla naszej społeczności! Interaktywne mapy, budowanie broni, przewodnik zadań, więcej przedmiotów i kalkulatorów, informacje o handlowcach, opis umiejętności i więcej! Planuję wydanie funkcji konsekwentnie, ale chciałem wydać wersję 1.0 jak najszybciej aby zacząć mierzyć zainteresowanie i zbieranie opinii. Rozwój aplikacji na Android i strony internetowej są już w toku, wróć niedługo by sprawdzić postęp!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Społeczność";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Różne kwestie prawne";
+"attributions_translations" = "Lokalizacja";
+
+"attributions_api_descr" = "Ten projekt nie był by możliwy bez fantastycznej pracy rozwojowej od Morphy na Tarkov Database i zasadniczego API.";
+"attributions_nofam_descr" = "Nieznany bohater w społeczności EFT, twórca wykresów amunicji i współpracownik kalkulatorów balistycznych i powiązanych informacji, Ambasador Amunicji, Baron Balistyki, Profesor Penetracji!";
+"attributions_willerz_descr" = "Dużo miłości dla mojego ziomka za dostarczenie niektórych epickiej jakości zrzutów ekranu, które pozwolił użyć w tej aplikacji. Okazuje się też, że jest najlepszym graczem na świecie.";
+"attributions_community_descr" = "Dużo miłości dla mojej społeczności w Discord, za ciężką pracę w uchwyceniu i edytowaniu pięknych zdjęć, które są używane w tej aplikacji!";
+"attributions_translations_descr" = "Wszystkie tłumaczenia zostały napisane przez członków społeczności, którzy poświęcili na to swój czas i siłę. Wszyscy na całym świecie doceniają Twoją ciężką pracę!";
+"attributions_bsg_descr" = "Szczególne podziękowania dla Nikita'y, za wsparcie tej aplikacji i dla wszystkich pracujących dla BSG, za ich trudną pracę i pośwęcenie w budowaniu najlepszej gry FPS na świecie.";
+"attributions_misc_descr" = "Ikony mediów społecznościowych zrobione prez Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licencjonowane na podstawie CC. 'Brain' ikona zrobiona prez Sergey Patutin z Noun Project (https://thenounproject.com/bdesign.by/) licencjonowany na podstawie CC.";
+
+// Analytics
+"total_users_count" = "Battle Buddies dołączyło do walki!";

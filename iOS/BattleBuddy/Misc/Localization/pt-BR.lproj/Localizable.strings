@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Sim";
+"no" = "Não";
+"ok" = "OK";
+"done" = "Feito";
+"soon" = "Em breve™";
+"coming_soon" = "Vindo em Breve™";
+"unknown" = "Desconhecido";
+"type" = "Tipo";
+"continue" = "Próximo";
+"veritas" = "Veritas";
+"required" = "Necessário";
+
+// MARK: - Filter/sort/compare
+"compare" = "Comparar";
+"name" = "Nome";
+"save" = " Salvar";
+"recommended" = "Recomendado";
+"similar" = "Semelhante";
+"all" = "Todos";
+"compare_with" = "Comparar com...";
+
+// MARK: - More / Attributions
+"about" = "Sobre o Battle Buddy";
+"dev_by" = " Desenvolvido por Veritas";
+"dev_support" = "Gostaria de apoiar o desenvolvimento?";
+"watch_ad" = "Assista um anúncio";
+"enable_banner_ads" = "Habilitar anúncios";
+"view_on_github" = "Veja no GitHub";
+"rate_this_app" = "Avalie o Battle Buddy";
+"attributions" = "Créditos";
+"check_out_team" = "Veja Nossa Equipe";
+"team" = "A Equipe";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Social";
+"music" = "Minhas Músicas";
+"website_error" = "Impossível carregar o conteúdo. Por favor, certifique-se que app está instalado corretamente.";
+"live_now" = "Ao Vivo!";
+"feedback_title" = " Feedbacks ou Ideias?";
+"feedback_subtitle" = "Junte-se ao Discord!";
+"upcoming_features" = "Próximas Novidades";
+
+"twitter_description" = "Mantenha-se atualizado";
+"twitch_description" = "Assista Ao Vivo na Twitch";
+"discord_description" = "Junte-se à comunidade do Discord";
+"youtube_description" = "Assista no YouTube";
+"instagram_description" = "Conteúdo no Instagram";
+"soundcloud_description" = "Ouça no SoundCloud";
+"spotify_description" = "Ouça no Spotify";
+"website_description" = "Mais sobre Veritass";
+
+// MARK: - Tabs
+"items" = "Itens";
+"learn" = "Aprenda";
+"more" = "Mais";
+"search" = "Busca";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Munições";
+"main_menu_armor" = "Coletes";
+"main_menu_ballistics" = "Balística";
+"main_menu_firearms" = "Armas de Fogo";
+"main_menu_medical" = "Medicamentos";
+"main_menu_melee" = "Armas Corpo a Corpo";
+"main_menu_throwables" = "Arremessáveis";
+"main_menu_health_calc" = "Calculadora de Dano";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Tipos de Armas de Fogo";
+"calibers" = "Calibres";
+
+// MARK: - Calculators
+"pen_chance" = "Chance de Penetração";
+"no_armor_selected" = "Colete não Selecionado";
+"no_ammo_selected" = "Munição não Selecionada";
+"select_ammo" = "Selecione a Munição";
+"select_armor" = "Selecione o Colete";
+"pen_chance_help_title" = "Calculadora de Chance de Penetração";
+"pen_chance_help_message" = "Essa ferramenta calcula a chance que a munição tem para penetrar o colete escolhido. Após selecionadas a munição e o colete, você pode usar o controle para ajustar a durabilidade da vestimenta e simular quão efetivos são os projéteis dependendo da durabilidade!";
+
+"health_calc_title" = "Calculadora de Dano";
+"total_hp" = "Vida Total";
+
+"body_zone_head" = "Cabeça";
+"body_zone_thorax" = "Tórax";
+"body_zone_stomach" = "Estomago";
+"body_zone_right_arm" = "Braço Direito";
+"body_zone_left_arm" = "Braço Esquerdo";
+"body_zone_right_leg" = "Perna Direita";
+"body_zone_left_leg" = "Perna Esquerda";
+
+// MARK: - Items
+"armor" = "Armaduras";
+"helmets" = "Capacetes";
+"ballistics" = "Balística";
+"health" = "Vida";
+"firearms" = "Armas de Fogo";
+"ammunition" = "Munições";
+"body_armor" = "Coletes";
+"medical_items" = "Itens Médicos";
+"throwables" = "Arremessáveis";
+"healing_items" = "Medicamentos";
+"pain_management" = "Gestão de Dor";
+"status_management" = "Gestão de Condições";
+"stims" = "Estimulantes";
+"grenades" = "Granadas";
+"properties" = "Propriedades";
+"performance" = "Performance";
+"ergonomics" = "Ergonomia";
+"ergo" = "Ergo";
+"vertical_recoil" = "Recuo Vertical";
+"horizontal_recoil" = "Recuo Horizontal";
+"recoil" = "Recuo";
+
+// MARK: - Weapons
+"weapon_class" = "Classes";
+"assault_rifle" = "Rifles de Assalto";
+"assault_carbine" = "Carabinas";
+"sniper_rifle" = "Rifles de Alta Precisão";
+"designated_marksman_rifle" = "Rifle para Atirador Designado";
+"pistol" = "Pistolas";
+"shotgun" = "Escopetas";
+"sub_machine_gun" = "Submetralhadoras";
+"machine_gun" = "Metralhadoras";
+"caliber" = "Calibres";
+"fire_rate" = "Cadência de Tiros";
+"effective_range" = "Distância Efetiva";
+"fold_or_retract" = "Dobrar/Retrair";
+"retractable" = "Retrátil";
+"build_wizard" = "Assistente de Construção";
+"gun_build_custom" = "Customizado";
+"gun_build_recoil" = "Recuo Mínimo";
+"gun_build_ergo" = "Ergonomia Máxima";
+"gun_build_random" = "Aleatório";
+"fire_mode" = "Modo de Tiro";
+"fire_modes" = "Modos de Tiro";
+"fire_mode_semi" = "Semi-Automático";
+"fire_mode_auto" = "Automático";
+"fire_mode_burst" = "Rajada";
+"fire_mode_semi_short" = "Semi";
+"fire_mode_auto_short" = " Automático";
+"fire_mode_burst_short" = "Rajada";
+"action" = "Ação";
+"action_type_pump" = "Ação Pump";
+"action_type_bolt" = "Ação por Ferrolho";
+"action_type_pump_short" = "Pump";
+"action_type_bolt_short" = "Ferrolho";
+"build" = "Montar";
+"build_this_gun" = "Montar esta Arma";
+
+"compare_preset_semi_auto_rifle" = "Rifles Semi Automáticos";
+"compare_preset_full_auto_rifles" = "Rifles Automáticos";
+"compare_preset_rifles_caliber_match" = "Rifles do Mesmo Calibre";
+"compare_preset_rifles" = "Rifles";
+"compare_preset_full_auto_caliber_match" = "Rifles Automáticos do Mesmo Calibre";
+"compare_preset_semi_auto_pistols" = "Pistolas Semi-Automáticas";
+"compare_preset_full_auto_pistols" = "Pistolas Automáticas";
+"compare_preset_pistols_caliber_match" = "Pistolas do Mesmo Calibre";
+"compare_preset_pistols" = "Pistolas";
+"compare_preset_manual_shotguns" = "Escopetas Manuais";
+"compare_preset_shotguns" = "Escopetas";
+"compare_preset_smgs_caliber_match" = "Submetralhadoras do Mesmo Calibre";
+"compare_preset_smgs" = "Submetralhadoras";
+"compare_preset_bolt_snipers" = "Rifles de Alta Precisão Manuais";
+"compare_preset_snipers_and_dmrs" = "Rifles de Alta Precisão e RAD";
+"compare_preset_dmrs" = "Rifles para Atirador Designado";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Armas de Fogo Relacionadas";
+"subsonic" = "Subsônica";
+"tracer" = "Traçante";
+"muzzle_velocity" = "Velocidade de Saída (m/s)";
+"compatible_firearms" = "Armas de Fogo Compatíveis";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Nenhum";
+"armor_class_1" = "Classe 1";
+"armor_class_2" = "Classe 2";
+"armor_class_3" = "Classe 3";
+"armor_class_4" = "Classe 4";
+"armor_class_5" = "Classe 5";
+"armor_class_6" = "Classe 6";
+"armor_type_body" = "Coletes";
+"armor_type_helmet"= "Capacetes";
+"armor_type_visor" = "Visores";
+"armor_type_attachment" = "Acessórios";
+"armor_zone_top" = "Topo";
+"armor_zone_eyes" = "Olhos";
+"armor_zone_jaws" = "Mandíbula";
+"armor_zone_ears" = "Orelhas";
+"armor_zone_nape" = "Nuca";
+"armor_zone_chest" = "Tórax";
+"armor_zone_stomach" = "Estômago";
+"armor_zone_left_arm" = "Braço Esquerdo";
+"armor_zone_right_arm" = "Braço Direito";
+"armor_zone_left_leg" = "Perna Esquerda";
+"armor_zone_right_leg" = "Perna Direita";
+"armor_mat_ceramic" = "Cerâmica";
+"armor_mat_armored_steel" = "Aço Blindado";
+"armor_mat_aramid" = "Aramida";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Combinados";
+"armor_mat_aluminum" = "Alumínio";
+"armor_mat_glass" = "Vídro";
+"armor_mat_titanium" = "Titânio";
+
+"armor_type" = "Tipo";
+"armor_material" = "Material";
+"armor_class" = "Classe";
+"armor_points" = "Durabilidade";
+"armor_zones" = "Áreas";
+"penalties" = "Penalidades";
+"speed_penalty" = "Velocidade";
+"turn_speed_penalty" = "Velocidade de Rotação";
+"ergo_penalty" = "Ergonomia";
+
+"penetration" = "Penetração";
+"damage" = "Dano";
+"armor_damage" = "Dano em Colete";
+"frag_chance" = "Chance de Fragmentação";
+
+"explore" = "Explorar";
+"compare" = "Comparar";
+"compare_performance" = "Comparar Performance";
+"dps_calc" = "Calculadora de DPS";
+"kill_time_calc" = "Calculadora de Tempo para Matar";
+
+// MARK: - Medical
+"damage" = "Dano";
+"contusion" = "Contusão";
+"fracture" = "Fratura";
+"pain" = "Dor";
+"medkit" = "Kit";
+"painkiller" = "Analgésico";
+"accessory" = "Acessório";
+"stimulator" = "Estimulante";
+"use_time" = "Tempo de Uso";
+"effect_duration" = "Duração de Efeito";
+"use_count" = "# de Usos";
+"hp_resource" = "Vida Total";
+"removes_bloodloss" = "Cura Sangramento";
+"removes_contusion" = "Cura Contusão";
+"removes_fracture" = "Cura Fratura";
+"removes_pain" = "Cura Dor";
+"hydration_modifier" = "Modificador de Hidratação";
+"energy_modifier" = "Modificador de Energia";
+
+// MARK: - Throwables
+"throwable_frag" = "Fragmentação";
+"throwable_flash" = "Luz";
+"throwable_smoke" = "Fumaça";
+"fuse_time" = "Tempo de Fusão";
+"explosion_radius_min" = "Distância Mínima de Explosão";
+"explosion_radius_max" = "Distância Máxima de Explosão";
+"fragmentation_count" = "Nº de Fragmentos";
+
+// MARK: - Melee
+"damage" = "Dano";
+"rate" = "Cadência";
+"range" = "Distância";
+
+"stab" = "Perfurar";
+"stab_dmg" = "Dano de Perfuração";
+"stab_rate" = "Cadência de Perfuração";
+"stab_range" = "Distância de Perfuração";
+
+"slash" = "Corte - Slash";
+"slash_dmg" = "Dano de Corte";
+"slash_rate" = "Tada de Corte";
+"slash_range" = "Distância de Corte";
+
+// MARK: - Posts
+"ballistics_title" = "Coletes & Balística: As Bases";
+"ballistics_body_1" = "O sistema balístico em Escape From Tarkov é uma caixa negra que apenas algumas pessoas já vislumbraram o funcionamento. Devido à complexidade das fórmulas usadas para calcular coisas como penetração de superfícies, ângulos de ricochete, e dano tanto em coletes como corpos dos jogadores, bem como os elementos aleatórios envolvidos, existe uma diferença muitas vezes imperceptível no Tempo para Matar quando comparando um jogador de nível alto muito equipado utilizando o melhor equipamento com um jogador nível 1 equipado apenas com uma pistola inicial. Associados com os problemas conhecidos de performance e conectividade, erros, e a quantidade crescente de jogadores com meias gamers épicas, a ambiguidade do mais importante sistema do jogo serve somente para amplificar a confusão e frustração de ambos veteranos e novatos diariamente.";
+"ballistics_body_2" = "Começando por coletes, como isso funciona e o que você deve saber? Deixando de lado disponibilidade e preço, existem cinco aspectos importantes que você deve considerar ao escolher qual colete comprar, vender, reparar, usar ou descartar - classe, durabilidade, zonas de proteção, material e penalidades.";
+"ballistics_body_2_1_title" = "1. Classe de Proteção";
+"ballistics_body_2_1" = "Cada componente de proteção, de colete a anexos balísticos para capacetes, têm uma classe de proteção específica. Classe de proteção é, na minha opinião, o aspecto mais importante de equipamentos de proteção. De forma simples, a classe de proteção representa quão eficaz a proteção é em parar projéteis de níveis variados de eficácia balística. Atualmente, classes de proteção variam de 1 a 6, e como deve estar pensando, quanto maior a classe, melhor. \n\nClasse 1 de proteção é capaz de protegê-lo de coisas como ricochetes, fragmentos, calibres de pistola de baixa penetração ou chumbos. Classe 6 de proteção é capaz de protegê-lo da maioria dos projéteis incluindo até os maiores calibres do jogo. Eu escolho aqui a palavra 'Capaz' porque cada impacto balístico envolve níveis variados de chance aleatória. \n\nQuando se fala de balística em Escape from Tarkov, nada é garantido e nossas experiências parecem, às vezes, impossível ou não fazem sentido. Então, o que isso significa finalmente? Qual colete irá me proteger de quais projéteis? Essa é uma pergunta complicada que eu entrarei em maiores detalhes posteriormente, quando discutirmos os específicos aspectos dos impactos balísticos.";
+"ballistics_body_2_2_title" = "2. Durabilidade";
+"ballistics_body_2_2_1" = "Quando se fala de durabilidade, é importante ressaltar que os valores têm mudado uma porção de vezes e estão, claro, sujeitos à alterações pela BSG a qualquer momento. Deve-se notar, portanto, que a capacidade do colete de progeter seu usuário depende da sua durabilidade atual comparada com seu valor original, a durabilidade máxima do colete quando era novo em folha.";
+"ballistics_body_2_2_2" = "Por exemplo, se um colete novo inicia com 50 de durabilidade, ele proverá sua melhor proteção quando está 50/50, obviamente. A parte menos óbvia é que qualquer proteção que está danificada e ainda não foi reparada, como um colete 40/50, é tão eficaz quanto aquele mesmo colete com durabilidade 40/40.";
+"ballistics_body_2_2_3" = "Saber o valor original de durabilidade dos diferentes coletes, ou olhar a barra de durabilidade quando inspeciona o item é um hábito importante de se criar. Por vezes, você encontrará coletes de classe menor que o seu, mas se o seu colete estiver fortemente danificado, ou já foi reparado muitas vezes, você pode estar, de fato, melhorando suas chances de sobrevivência ao trocar para um colete de classe menor porém com durabilidade alta. Ter um entendimento sólido das chances gerais de proteção para diferentes classes de colete, valores de durabilidade e propriedades de penetração das munições pode ser importantíssimo em algumas situações de combate. Dê uma olhada na Calculadora de Dano para ter uma ideia de como fuciona!";
+"ballistics_body_2_3_title" = "3. Zonas de Proteção";
+"ballistics_body_2_3" = "Não há muitos detalhes para se esclarecer neste tópico, além de que você deve se lembrar de uma simples regra: Proteções não protegem o que eles visualmente aparentam proteger. O melhor exemplo para demonstrar isso é o colete Gen4 Full Protection versus o Gen4 Assault. O Full Protection aparenta cobrir do seu corpo, mas ele protege exatamente as mesmas partes que o Assault porque ele tem as mesmas zonas de proteção. Preste atenção a quais zonas são protegidas - Ter seus braços ou abdome feridos pode ser bem irritante e frequentemente vale a pena protegê-los, se você tiver o dinheiro!";
+"ballistics_body_2_4_title" = "4. Materiais";
+"ballistics_body_2_4" = "Cada proteção tem um material da qual ela é feita. Atualmente os materiais não apresentam diferença notável na capacidade de proteção de um colete. Invés disso, o material torna-se relevante quando pensamos em reparar. Alguns materiais são capazes de serem reparados muito eficientemente e sem altos custos, enquanto outros perder significantemente mais durabilidade e os custos de reparos podem ser mais altos que o valor do colete!";
+"ballistics_body_2_5_title" = "5. Penalidades";
+"ballistics_body_2_5" = "Falando de forma geral, proteção adicional vem com custos, e esses custos podem ser financeiros, bem como práticos. Cada peça de proteção vem com um conjunto de penalidades. Algumas retardam sua velocidade, outras sua rotação e até mesmo sua ergonomia em geral, o que afeta sua velocidade de mirar, taxa de perda de stamina e até quão barulhento seu personagem é quando mira ou caminha. Algumas proteções de cabeça podem limitar sua audição de diversas formas e podem até ocluir sua visão. Estas são trocas que você deve considerar quando estiver decidindo se compra ou não aquele colete caro ou o capacete pesado do Killa. Quais coletes e capacetes valem a pena? Isso é você quem decide!";
+"ballistics_body_3_title" = "Resumo";
+"ballistics_body_3" = "O sistema balístico em Escape from Tarkov é impressionantemente complexo e requer bastante experiência e conhecimento para ser usado em seu favor. O vídeo Armor and Balistics acima explica alguns desses conceitos em mais detalhes, então não deixe de dar uma olhada se você estiver interessado em ouvir mais sobre o assunto. Se cuida lá fora!";
+
+"health_title" = "Saúde e Condições de seu PMC";
+"health_body_1" = "Esta informação estará disponível em breve.";
+
+"upcoming_body_1" = "Eu tenho muitas ideias planejadas para o aplicativo que mal posso esperar para fazer para a comunidade! Mapas interativos, montagem de armas, guias de missões, mais itens e calculadoras, informações dos vendedores, detalhes das habilidades e mais! Eu pretendo lançar essas ferramentas consistentemente, mas quero terminar a versão 1.0 para vocês o mais breve possível para começar a medir o interesse e receber feedback. O desenvolvimento da versão Android e Web já está em andamento, mais informações em breve!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Comunidade";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Termos de Uso";
+"attributions_translations" = "Localidades";
+
+"attributions_api_descr" = "Este projeto não seria possível sem o trabalho desenvolvido pelo Morphy no Tarkov Database e na API envolvida.";
+"attributions_nofam_descr" = "O herói não nomeado da comunidade EFT, o criador das tabelas de munição, o colaborador da balística e calculadoras, o Embaixador da Munição, o Barão da Balística, o Professor da Penetração!";
+"attributions_willerz_descr" = "Muito amor ao meu conterrâneo por prover imagens épicas que ele permitiu usarmos no aplicativo! Ele também, por acaso, é o um dos melhores jogadores do mundo!";
+"attributions_community_descr" = "Muito amor à minha comunidade no Discord por todo o trabalho duro capturando e editando imagens para o aplicativo!";
+"attributions_translations_descr" = "Todas as traduções foram feitas por membros da comunidade doando seu tempo e esforço para a causa! Todos ao redor do mundo apreciam seu trabalho duro!";
+"attributions_bsg_descr" = "Agradecimentos especiais ao Nikita pelo apoio nesse aplicativo, e para todo o pessoal da BSG pelo trabalho duro e dedicação em desenvolver o melhor jogo FPS de todos os tempos.";
+"attributions_misc_descr" = "Ícones de míia social por Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) Licensiados em CC. 'Brain' ícone por Sergey Patutin do Noun Project (https://thenounproject.com/bdesign.by/) licensiado em CC.";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies entraram na luta!";

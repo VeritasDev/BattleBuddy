@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Ja";
+"no" = "Nee";
+"ok" = "OK";
+"done" = "Klaar";
+"soon" = "Soon™";
+"coming_soon" = "Coming Soon™";
+"unknown" = "Onbekend";
+"type" = "Type";
+"continue" = "Verder";
+"veritas" = "Veritas";
+"required" = "Verplicht";
+
+// MARK: - Filter/sort/compare
+"compare" = "Vergelijk";
+"name" = "Naam";
+"save" = "Opslaan";
+"recommended" = "Aanbevolen";
+"similar" = "Soortgelijk";
+"all" = "Alle";
+"compare_with" = "Vergelijk met...";
+
+// MARK: - More / Attributions
+"about" = "Over Battle Buddy";
+"dev_by" = "Ontwikkeld door Veritas";
+"dev_support" = "Wil je de ontwikkeling helpen?";
+"watch_ad" = "Bekijk een reclame";
+"enable_banner_ads" = "Schakel Banner Reclame in";
+"view_on_github" = "Bekijk op GitHub";
+"rate_this_app" = "Beoordeel Battle Buddy";
+"attributions" = "Toeschrijvingen";
+"check_out_team" = "Bekijk het team";
+"team" = "Het team";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Social";
+"music" = "Mijn Muziek";
+"website_error" = "Kan inhoud niet laden. Zorg er alsjeblieft voor dat je de relevante app geinstalleerd hebt.";
+"live_now" = "Nu Live!";
+"feedback_title" = "Feedback of Ideeën?";
+"feedback_subtitle" = "Join de discord!";
+"upcoming_features" = "Toekomstige functies";
+
+"twitter_description" = "Blijf up to date.";
+"twitch_description" = "Bekijk live op Twitch";
+"discord_description" = "Join onze Community Discord";
+"youtube_description" = "Bekijk op YouTube";
+"instagram_description" = "Media op Instagram";
+"soundcloud_description" = "Luister op Soundcloud";
+"spotify_description" = "Luister op Spotify";
+"website_description" = "Meer over Veritas";
+
+// MARK: - Tabs
+"items" = "Voorwerpen";
+"learn" = "Leren";
+"more" = "Meer";
+"search" = "Zoek";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Munitie";
+"main_menu_armor" = "Armor";
+"main_menu_ballistics" = "Ballistiek";
+"main_menu_firearms" = "Vuurwapens";
+"main_menu_medical" = "Medisch";
+"main_menu_melee" = "Handwapens";
+"main_menu_throwables" = "Werpbare";
+"main_menu_health_calc" = "Schade Calculator";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Vuurwapen types";
+"calibers" = "Kalibers";
+
+// MARK: - Calculators
+"pen_chance" = "Penetratie Kans";
+"no_armor_selected" = "Geen Armor Geselecteerd";
+"no_ammo_selected" = "Geen Munitie Geselecteerd";
+"select_ammo" = "Selecteer Munitie";
+"select_armor" = "Selecteer Armor";
+"pen_chance_help_title" = "Penetratie Kans Calculator";
+"pen_chance_help_message" = "Deze tool calculeert de kans van een gekozen kogel die een gegeven body armor kan penetreren. Als je eenmaal een kogel en armor hebt geselecteerd, kun je de slider gebruiken om de gesimuleerde duurzaamheid van de armor te bekijken en hoe effectief verschillende kogels zijn tegen armor van verschillende levels duurzaamheid!";
+
+"health_calc_title" = "Schade Calculator";
+"total_hp" = "Totale HP";
+
+"body_zone_head" = "Hoofd";
+"body_zone_thorax" = "Borstkas";
+"body_zone_stomach" = "Maag";
+"body_zone_right_arm" = "Rechter Arm";
+"body_zone_left_arm" = "Linker Arm";
+"body_zone_right_leg" = "Rechter Been";
+"body_zone_left_leg" = "Linker Been";
+
+// MARK: - Items
+"armor" = "Armor";
+"helmets" = "Helmen";
+"ballistics" = "Ballistiek";
+"health" = "Gezondheid";
+"firearms" = "Vuurwapens";
+"ammunition" = "Munitie";
+"body_armor" = "Body Armor";
+"medical_items" = "Medische Voorwerpen";
+"throwables" = "Werpbare";
+"healing_items" = "Genezende Voorwerpen";
+"pain_management" = "Pijnbeheersing";
+"status_management" = "Status Effect Management";
+"stims" = "Stimulerende Middelen";
+"grenades" = "Granaten";
+"properties" = "Eigenschappen";
+"performance" = "Prestatie";
+"ergonomics" = "Ergonomisch";
+"ergo" = "Ergo";
+"vertical_recoil" = "Verticale Terugslag";
+"horizontal_recoil" = "Horizontale Terugslag";
+"recoil" = "Terugslag";
+
+// MARK: - Weapons
+"weapon_class" = "Klasse";
+"assault_rifle" = "Assault Rifle";
+"assault_carbine" = "Assault Carbine";
+"sniper_rifle" = "Sniper Rifle";
+"designated_marksman_rifle" = "DMR";
+"pistol" = "Pistool";
+"shotgun" = "Shotgun";
+"sub_machine_gun" = "Sub Machine Gun";
+"machine_gun" = "Machine Gun";
+"caliber" = "Kaliber";
+"fire_rate" = "Vuursnelheid";
+"effective_range" = "Effectieve Afstand";
+"fold_or_retract" = "Inklappen/Terugtrekken";
+"retractable" = "Intrekbare";
+"build_wizard" = "Build Wizard";
+"gun_build_custom" = "Custom";
+"gun_build_recoil" = "Minimum Terugslag";
+"gun_build_ergo" = "Maximale Ergonomie";
+"gun_build_random" = "Willekeurig";
+"fire_mode" = "Vuur Modus";
+"fire_modes" = "Vuur Modi";
+"fire_mode_semi" = "Semi Auto";
+"fire_mode_auto" = "Full Auto";
+"fire_mode_burst" = "Burst";
+"fire_mode_semi_short" = "Semi";
+"fire_mode_auto_short" = "Auto";
+"fire_mode_burst_short" = "Burst";
+"action" = "Action";
+"action_type_pump" = "Pump Action";
+"action_type_bolt" = "Bolt Action";
+"action_type_pump_short" = "Pump";
+"action_type_bolt_short" = "Bolt";
+"build" = "Bouwen";
+"build_this_gun" = "Bouw Dit Wapen";
+
+"compare_preset_semi_auto_rifle" = "Semi-Auto Geweren";
+"compare_preset_full_auto_rifles" = "Full-Auto Geweren";
+"compare_preset_rifles_caliber_match" = "Geweren Met Zelfde Kaliber";
+"compare_preset_rifles" = "Geweren";
+"compare_preset_full_auto_caliber_match" = "Full-Auto Geweren Met Zelfde Kaliber";
+"compare_preset_semi_auto_pistols" = "Semi-Auto Pistolen";
+"compare_preset_full_auto_pistols" = "Full-Auto Pistolen";
+"compare_preset_pistols_caliber_match" = "Pistolen Met Zelfde Kaliber";
+"compare_preset_pistols" = "Pistolen";
+"compare_preset_manual_shotguns" = "Manual-Action Shotguns";
+"compare_preset_shotguns" = "Shotguns";
+"compare_preset_smgs_caliber_match" = "Machinepistolen Met Zelfde Kaliber";
+"compare_preset_smgs" = "Machinepistolen";
+"compare_preset_bolt_snipers" = "Bolt-Action Sniper Rifles";
+"compare_preset_snipers_and_dmrs" = "Sniper Rifles & DMRs";
+"compare_preset_dmrs" = "Designated Marksman Rifles";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Gerelateerde Vuurwapens";
+"subsonic" = "Subsonisch";
+"tracer" = "Lichtspoor Kogel";
+"muzzle_velocity" = "Mondingssnelheid (m/s)";
+"compatible_firearms" = "Compatibele Vuurwapens";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Geen";
+"armor_class_1" = "Klasse 1";
+"armor_class_2" = "Klasse 2";
+"armor_class_3" = "Klasse 3";
+"armor_class_4" = "Klasse 4";
+"armor_class_5" = "Klasse 5";
+"armor_class_6" = "Klasse 6";
+"armor_type_body" = "Body Armor";
+"armor_type_helmet"= "Helm";
+"armor_type_visor" = "Visier";
+"armor_type_attachment" = "Toevoeging";
+"armor_zone_top" = "Top";
+"armor_zone_eyes" = "Ogen";
+"armor_zone_jaws" = "Kaken";
+"armor_zone_ears" = "Oren";
+"armor_zone_nape" = "Nek";
+"armor_zone_chest" = "Borst";
+"armor_zone_stomach" = "Maag";
+"armor_zone_left_arm" = "Linker Arm";
+"armor_zone_right_arm" = "Rechter Arm";
+"armor_zone_left_leg" = "Linker Been";
+"armor_zone_right_leg" = "Rechter Been";
+"armor_mat_ceramic" = "Keramisch";
+"armor_mat_armored_steel" = "Gepantserd Staal";
+"armor_mat_aramid" = "Aramide";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Gekombineerd";
+"armor_mat_aluminum" = "Aluminium";
+"armor_mat_glass" = "Glas";
+"armor_mat_titanium" = "Titanium";
+
+"armor_type" = "Type";
+"armor_material" = "Materiaal";
+"armor_class" = "Klasse";
+"armor_points" = "Duurzaamheid";
+"armor_zones" = "Zones";
+"penalties" = "Penalties";
+"speed_penalty" = "Snelheid";
+"turn_speed_penalty" = "Draai Snelheid";
+"ergo_penalty" = "Ergonomie";
+
+"penetration" = "Penetratie";
+"damage" = "Schade";
+"armor_damage" = "Armor Schade";
+"frag_chance" = "Fragmentatie Kans";
+
+"explore" = "Verken";
+"compare" = "Vergelijk";
+"compare_performance" = "Vergelijk Prestatie";
+"dps_calc" = "DPS Calculator";
+"kill_time_calc" = "Kill Time Calculator";
+
+// MARK: - Medical
+"damage" = "Schadee";
+"contusion" = "Kneuzing";
+"fracture" = "Breuk";
+"pain" = "Pijn";
+"medkit" = "Medkit";
+"painkiller" = "Pijnstiller";
+"accessory" = "Accessoire";
+"stimulator" = "Stimulator";
+"use_time" = "Gebruik Tijd";
+"effect_duration" = "Effect Duur";
+"use_count" = "# Gebruiken";
+"hp_resource" = "Totale HP";
+"removes_bloodloss" = "Verwijderd Bloedverlies";
+"removes_contusion" = "Verwijderd Kneuzing";
+"removes_fracture" = "Verwijderd Breuk";
+"removes_pain" = "Verwijderd Pijn";
+"hydration_modifier" = "Hydratie Modifier";
+"energy_modifier" = "Energie Modifier";
+
+// MARK: - Throwables
+"throwable_frag" = "Frag";
+"throwable_flash" = "Flash";
+"throwable_smoke" = "Rook";
+"fuse_time" = "Lont Tijd";
+"explosion_radius_min" = "Min Explosie Afstand";
+"explosion_radius_max" = "Max Explosie Afstand";
+"fragmentation_count" = "Fragment Aantal";
+
+// MARK: - Melee
+"damage" = "Schade";
+"rate" = "Rate";
+"range" = "Afstand";
+
+"stab" = "Stab";
+"stab_dmg" = "Steek Schade";
+"stab_rate" = "Steek Snelheid";
+"stab_range" = "Steek Afstand";
+
+"slash" = "Slash";
+"slash_dmg" = "Hak Schade";
+"slash_rate" = "Hak Snelheid";
+"slash_range" = "Hak Afstand";
+
+// MARK: - Posts
+"ballistics_title" = "Armor & Ballistiek: De Basis";
+"ballistics_body_1" = "Het Ballistische Systeem in Escape from Tarkov is een black box dat alleen een aantal mensen weten hoe het werkt. Door de complexe formules dat gebruikt wordt om te berekenen hoe dingen zo als oppervlakte penetratie kansen, afkets hoeken, en schade aan zowel de armor en het lichaam van de spelers, Zo wel als de RNG-elementen die ze gebruiken, is er vaak onmerkbare verschillen in de tijd om te doden wanneer we een fully-geared en hoog gelevelde speler met de beste end-game uitrusting vergelijken met een level 1 speler die niet meer heeft dan een beginners pistool. Gepaard met de wel bekende netwerk en prestatie problemen, bugs, en alsmaar vergrotende aantal spelers met epic gamer sokken, de dubbelzinnigheid van misschien wel het belangrijkste systeem van het spel zorgt alleenmaar voor grotere frustraties en verwarring voor nieuwe en veteranen op een dagelijkse basis.";
+"ballistics_body_2" = "Beginnend met body armor, hoe werkt het en wat moet je weten? Buiten de beschikbaarheid en prijs om, zijn er vijf belangrijke dingen waar je rekening mee moet houden wanneer je kiest welke armor je koopt, verkoopt, repareert of weg gooit - klasse, duurzaamheid, beschermende zones, materiaal, en penalties.";
+"ballistics_body_2_1_title" = "1. Armor Klasse";
+"ballistics_body_2_1" = "Elk gepantserd component, van body armor tot ballistische helm toevoegingen, hebben een specifieke armor klasse. Armor klasse is, naar mijn mening, het meest belangrijke aspect van beschermende body armor. Simpel gezegd, de armor klasse representeert hoe effectief de armor is tegen het stoppen van projectielen van verschillende levels van ballistische effectiviteit. Momenteel, de armor klasses variëren van 1 tot en met 6, en zo als je misschien al dacht, hoe hoger het nummer hoe beter.\n\nLevel 1 armor heeft de mogelijkheid je te beschermen van dingen zo als afketsende kogels, shrapnel en non-armor penetrerende kogels, pistool kaliber of hagel. Level 6 armor heeft de mogelijkheid je te beschermen tegen de meeste projectielen en is in staat je te beschermen tegen het hoogste kaliber in de game. Ik heb voor de woorden 'in staat' gekozen met opzet, omdat elke ballistische impact te maken heeft met verschillende kansen.\n\nWanneer het aankomt op ballistiek in Escape From Tarkov, is niks gegarandeerd en de dingen die we soms tegen komen lijken onmogelijk of slaan nergens op. Dus wat betekend dat uiteindelijk? Welke armor beschermt me van welke projectielen? Dat is een gecompliceerde vraag waar ik later op terug kom in detail wanneer we het hebben over de bijzonderheden van de ballistische impact.";
+"ballistics_body_2_2_title" = "2. Duurzaamheid";
+"ballistics_body_2_2_1" = "Wanneer het aankomt op armor duurzaamheid,  is het belangrijk om te weten dat de bijzonderheden verschillende keren zijn veranderd en kunnen, natuurlijk, altijd door BSG in de toekomst aangepast worden. Het opmerkelijke ding om te weten over armor duurzaamheid is dat zijn vermogen om de drager te beschermen afhankelijk is van zijn de duurzaamheid dat het momenteel heeft in verhouding tot de originele duurzaamheid wanneer het nieuw was.";
+"ballistics_body_2_2_2" = "Als voorbeeld, wanneer een set van armor begint met 50 duurzaamheid, zorgt het voor de beste bescherming wanneer hij 50 van de 50 is, wat natuurlijk logisch is. Het minder logische gedeelte is dat elke armor dat is beschadigd maar niet is gerepareerd, zo als armor dat 40 van de 50 is, is net zo effectief met het beschermen van je als wanneer de armor beschadigd was en gerepareerd is naar 40 van de 40.";
+"ballistics_body_2_2_3" = "Het weten van de originele maximale duurzaamheid van verschillende armors, of kijken naar de duurzaamheid balk wanneer je het item inspecteert, is een belangrijke gewoonte om aan te leren. Vaak zul je armor vinden met een lagere klasse dan je huidige armor, maar als je huidige armor erg beschadigd is of heel vaak gerepareerd, kun je zelfs je overlevingskansen vergroten wanneer je een lagere klasse oppakt met een hogere huidige duurzaamheid. Een goed begrip hebben van algemene beschermingskansen voor verschillende klasses armor, Duurzaamheid, en kogel penetratie eigenschappen kunnen van onschatbare waarde zijn in sommige gevechtssituaties. Check de Schade Calculator om te leren hoe het allemaal werkt!";
+"ballistics_body_2_3_title" = "3. Beschermende Zones";
+"ballistics_body_2_3" = "Er is niet heel veel waarover ik in detail moet gaan over dit onderwerp, behalve dan dat je een simpele regel moet onthouden: Armor beschermt niet wat het visueel lijkt te beschermen! Het beste voorbeeld hiervan is de Gen4 Full Protection Armor vs. de Gen4 Assault Kit. De Full Protection versie lijkt alsof het meer van je lichaam beschermt, maar beschermt net zo veel als de assault kit omdat het dezelfde beschermende zones heeft. Let op welke zones zijn beschermt - Wanneer je armen of maag er uit geschoten worden kan dit heel vervelend zijn en is meestal de extra bescherming waard, Als je het kan betalen!";
+"ballistics_body_2_4_title" = "4. Materialen";
+"ballistics_body_2_4" = "Elke armor is gemaakt van verschillende materialen. Momenteel hebben verschillende materialen geen zichtbaar effect op de mogelijkheid je te beschermen, in plaats daarvan word het armor materiaal relevant wanneer je het repareert. Sommige materialen kunnen goedkoop en efficiënt gerepareerd worden, wanneer andere juist veel duurzaamheid verliezen en vaak meer kosten dan de originele prijs van de armor!";
+"ballistics_body_2_5_title" = "5. Penalties";
+"ballistics_body_2_5" = "Normaal gesproken, extra bescherming kost extra, dit kan financieel zijn maar ook practisch. Elke armor komt met zijn eigen penalties. Door sommige loop je langzamer, door sommige draai je langzamer om, en zelfs je algemene ergonomie, wat zorgt dat je sneller of langzamer richt, snelheid van uithoudingsvermogen verlies, en zelfs hoe luid je karakter is tijdens langzaam lopen of richten. Sommige helmen kunnen je gehoor aanpassen, of zelfs je zicht aanpassen. Dit zijn afwegingen waar je rekening mee moet houden wanneer je besluit of je wel of niet voor die dure armor wilt gaan of die beefy Killa helm. Welke armor en helm het waard zijn? Dat is aan jou!";
+"ballistics_body_3_title" = "Samenvatting";
+"ballistics_body_3" = "Het ballistische systeem in Escape From Tarkov is immens complex en vraagt een hoop ervaring en kennis om ze tot je voordeel te gebruiken. De Armor and Ballistics video hierboven leggen sommige van deze concepten uit in meer detail, dus check de video als je geïnteresseerd bent in meer over dit onderwerp te weten. Be safe out there!";
+
+"health_title" = "Jouw PMCs Gezondheid & Status";
+"health_body_1" = "Deze informatie komt soon™";
+
+"upcoming_body_1" = "Ik heb zoveel geweldige functies geplanned staan voor deze app waarmee ik niet kan wachten om te bouwen voor de community! Interactieve kaarten, wapen modding, quest handleidingen, meer items en calculators, verkoper informatie,  skills breakdowns, en meer! Ik ben van plan om constant functies toe te voegen, maar wil versie 1.0 zo snel mogelijk uitbrengen voor jullie om interesse te wekken en feedback te krijgen. Ontwikkelingen van de Android en web support zijn al begonnen, Kom later terug voor updates!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Community";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Diverse juridische zaken";
+"attributions_translations" = "Vertalingen";
+
+"attributions_api_descr" = "Dit project was niet mogelijk zonder het fantastische dev werk door Morphy op de Tarkov Database en de onderliggende API.";
+"attributions_nofam_descr" = "De unsung held van de EFT community, de maker van de ammo charts en medewerker aan de ballistische calculators en relevante informatie, de ambassadeur van munitie, de baron van ballistiek, de professor van penetratie!";
+"attributions_willerz_descr" = "Much love naar mijn homeboy voor het aanleveren van sommige van de epische-kwaliteit screenshots, waar hij mij toestemming voor gaf om te gebruiken in de app. Hij is ook een van de beste spelers in de wereld.";
+"attributions_community_descr" = " Much love naar mijn community in Discord voor al het harde werk van het maken en editen van de mooie fotos gebruikt in deze app.";
+"attributions_translations_descr" = "Alle vertalingen zijn gedaan door community leden die hun tijd en moeite doneren aan dit project. Iedereen over de hele wereld stelt op jullie harde werk op prijs!";
+"attributions_bsg_descr" = "Special thanks aan Nikita voor het supporten van deze app, en alle mensen van BSG voor hun harde werk en toewijding aan het bouwen van de beste first-person shooter aller tijden.";
+"attributions_misc_descr" = "Social media iconen gemaakt door Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) onder licentie van CC. 'Brain' icoon gemaakt door Sergey Patutin van het Noun Project (https://thenounproject.com/bdesign.by/) onder licentie van CC.";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies hebben deel genomen aan het gevecht!";

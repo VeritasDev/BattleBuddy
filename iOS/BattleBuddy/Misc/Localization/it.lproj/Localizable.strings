@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Si";
+"no" = "No";
+"ok" = "Ok";
+"done" = "Fatto";
+"soon" = "Presto™";
+"coming_soon" = "Presto in arrivo™";
+"unknown" = "Sconosciuto";
+"type" = "Tipo";
+"continue" = "Continua";
+"veritas" = "Veritas";
+"required" = "Richiesto";
+
+// MARK: - Filter/sort/compare
+"compare" = "Confronta";
+"name" = "Nome";
+"save" = "Salva";
+"recommended" = "Raccomandato";
+"similar" = "Simile";
+"all" = "Tutto";
+"compare_with" = "Confronta con...";
+
+// MARK: - More / Attributions
+"about" = "A proposito di Battle Buddy";
+"dev_by" = "Sviluppato da Veritas";
+"dev_support" = "Vuoi Supportare lo Sviluppo?";
+"watch_ad" = "Guarda una Pubblicità";
+"enable_banner_ads" = "Attiva Banner Pubblicitario";
+"view_on_github" = "Guarda su GitHub";
+"rate_this_app" = "Recensisci Battle Buddy";
+"attributions" = "Crediti";
+"check_out_team" = "Scopri il Team";
+"team" = "Il Team";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Social";
+"music" = "La Mia Musica";
+"website_error" = "Impossibile Caricare Questo Contenuto. Controlla di Avere Installato l'App Correttamente.";
+"live_now" = "Dal Vivo Adesso!";
+"feedback_title" = "Feedback o Suggerimenti per l'App?";
+"feedback_subtitle" = "Entra nel Nostro Discord!";
+"upcoming_features" = "Funzionalità in arrivo";
+
+"twitter_description" = "Rimani Aggiornato";
+"twitch_description" = "Guarda in Live su Twitch";
+"discord_description" = "Entra nel Nostro Discord";
+"youtube_description" = "Guarda su Youtube";
+"instagram_description" = "Foto su Instragram";
+"soundcloud_description" = "Ascolta su Soundcloud";
+"spotify_description" = "Ascolta su Spotify";
+"website_description" = "Altre Informazione su Veritas";
+
+// MARK: - Tabs
+"items" = "Oggetti";
+"learn" = "Impara";
+"more" = "Di Più";
+"search" = "Cerca";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Munizioni";
+"main_menu_armor" = "Armatura";
+"main_menu_ballistics" = "Balistica";
+"main_menu_firearms" = "Armi da Fuoco";
+"main_menu_medical" = "Medicazioni";
+"main_menu_melee" = "Armi da Mischia";
+"main_menu_throwables" = "Granate";
+"main_menu_health_calc" = "Calcolo del Danno";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Tipologia d'Armi";
+"calibers" = "Calibri";
+
+// MARK: - Calculators
+"pen_chance" = "Chance di Penetrazione";
+"no_armor_selected" = "Nessuna Armatura Selezionata";
+"no_ammo_selected" = "Nessun Proiettile Selezionato";
+"select_ammo" = "Scegli il Proiettile";
+"select_armor" = "Scegli l'armatura";
+"pen_chance_help_title" = "Calcolatore di Chance di Penetrazione";
+"pen_chance_help_message" = "Questo strumento calcola la probabilità che un determinato proiettile penetri una determinata armatura. Una volta selezionata l'armatura e il proiettile, puoi usare lo slider per simulare la durabilità dell'armatura per vedere quanto efficenti sono le tipologie di proiettili contro un'armatura a diversi livelli di durabilità!";
+
+"health_calc_title" = "Calcolo del Danno";
+"total_hp" = "HP Totali";
+
+"body_zone_head" = "Testa";
+"body_zone_thorax" = "Torace";
+"body_zone_stomach" = "Stomaco";
+"body_zone_right_arm" = "Braccio Destro";
+"body_zone_left_arm" = "Braccio Sinistro";
+"body_zone_right_leg" = "Gamba Destra";
+"body_zone_left_leg" = "Gamba Sinistra";
+
+// MARK: - Items
+"armor" = "Armatura";
+"helmets" = "Elmetti";
+"ballistics" = "Balistica";
+"health" = "Vita";
+"firearms" = "Armi da Fuoco";
+"ammunition" = "Munizioni";
+"body_armor" = "Armatura";
+"medical_items" = "Medicazioni";
+"throwables" = "Granate";
+"healing_items" = "Cure";
+"pain_management" = "Antidolorifici";
+"status_management" = "Effetti di Status";
+"stims" = "Stimolanti";
+"grenades" = "Granate";
+"properties" = "Proprietà";
+"performance" = "Prestazioni";
+"ergonomics" = "Ergonomia";
+"ergo" = "Ergonomico";
+"vertical_recoil" = "Rinculo Verticale";
+"horizontal_recoil" = "Rinculo Orizzontale";
+"recoil" = "Rinculo";
+
+// MARK: - Weapons
+"weapon_class" = "Classe";
+"assault_rifle" = "Fucile d'Assalto";
+"assault_carbine" = "Carabina d'Assalto";
+"sniper_rifle" = "Fucile da Cecchino";
+"designated_marksman_rifle" = "Fucile da Tiratore";
+"pistol" = "Pistola";
+"shotgun" = "Fucile a Pompa";
+"sub_machine_gun" = "Mitraglietta";
+"machine_gun" = "Mitragliatrice";
+"caliber" = "Calibro";
+"fire_rate" = "Rateo di Fuoco";
+"effective_range" = "Gittata";
+"fold_or_retract" = "Chiudi/Apri";
+"retractable" = "Piegabile";
+"build_wizard" = "Magia del Modding";
+"gun_build_custom" = "Personalizza";
+"gun_build_recoil" = "Minimo Rinculo";
+"gun_build_ergo" = "Massima Ergonomia";
+"gun_build_random" = "Casuale";
+"fire_mode" = "Modalità di fuoco";
+"fire_modes" = "Modalità di fuoco";
+"fire_mode_semi" = "Semiautomatico";
+"fire_mode_auto" = "Automatico";
+"fire_mode_burst" = "Raffica";
+"fire_mode_semi_short" = "Semi";
+"fire_mode_auto_short" = "Auto";
+"fire_mode_burst_short" = "Raff";
+"action" = "Action";
+"action_type_pump" = "Pump Action";
+"action_type_bolt" = "Bolt Action";
+"action_type_pump_short" = "Pump";
+"action_type_bolt_short" = "Bolt";
+"build" = "Modda";
+"build_this_gun" = "Modda Questa Arma";
+
+"compare_preset_semi_auto_rifle" = "Fucili Semiautomatici";
+"compare_preset_full_auto_rifles" = "Fucili Automatici";
+"compare_preset_rifles_caliber_match" = "Fucili con lo Stesso Calibro";
+"compare_preset_rifles" = "Fucili";
+"compare_preset_full_auto_caliber_match" = "Fucili Automatici con lo Stesso Calibro";
+"compare_preset_semi_auto_pistols" = "Pistole Semiautomatiche";
+"compare_preset_full_auto_pistols" = "Pistole Automatiche";
+"compare_preset_pistols_caliber_match" = "Pistole con lo Stesso Calibro";
+"compare_preset_pistols" = "Pistole";
+"compare_preset_manual_shotguns" = "Shotgun ad Azionamento Manuale";
+"compare_preset_shotguns" = "Shotguns";
+"compare_preset_smgs_caliber_match" = "Mitragliatrici con lo stesso calibro";
+"compare_preset_smgs" = "Mitragliette";
+"compare_preset_bolt_snipers" = "Fucili da Cecchino Bolt-Action";
+"compare_preset_snipers_and_dmrs" = "Fucili da Cecchino";
+"compare_preset_dmrs" = "Fucili da Cecchino";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Armi con lo stesso Calibro";
+"subsonic" = "Subsonico";
+"tracer" = "Tracciante";
+"muzzle_velocity" = "Velocità del proiettile (m/s)";
+"compatible_firearms" = "Armi compatibili";
+"rpm" = "Proiettili al Minuto";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Nessuna";
+"armor_class_1" = "Classe 1";
+"armor_class_2" = "Classe 2";
+"armor_class_3" = "Classe 3";
+"armor_class_4" = "Classe 4";
+"armor_class_5" = "Classe 5";
+"armor_class_6" = "Classe 6";
+"armor_type_body" = "Armatura";
+"armor_type_helmet"= "Elmetto";
+"armor_type_visor" = "Visore";
+"armor_type_attachment" = "Accessorio";
+"armor_zone_top" = "Testa";
+"armor_zone_eyes" = "Occhi";
+"armor_zone_jaws" = "Gola";
+"armor_zone_ears" = "Orecchie";
+"armor_zone_nape" = "Nuca";
+"armor_zone_chest" = "Torace";
+"armor_zone_stomach" = "Stomaco";
+"armor_zone_left_arm" = "Braccio Sinistro";
+"armor_zone_right_arm" = "Braccio Destro";
+"armor_zone_left_leg" = "Gamba Sinistra";
+"armor_zone_right_leg" = "Gamba Destra";
+"armor_mat_ceramic" = "Ceramica";
+"armor_mat_armored_steel" = "Metallo rinforzato";
+"armor_mat_aramid" = "Fibra d'Aramide";
+"armor_mat_uhmwpe" = "Polietilene";
+"armor_mat_combined" = "Combinato";
+"armor_mat_aluminum" = "Alluminio";
+"armor_mat_glass" = "Vetro";
+"armor_mat_titanium" = "Titanio";
+
+"armor_type" = "Tipo";
+"armor_material" = "Materiale";
+"armor_class" = "Classe";
+"armor_points" = "Durabilità";
+"armor_zones" = "Zone";
+"penalties" = "Penalità";
+"speed_penalty" = "Velocità";
+"turn_speed_penalty" = "Velocità di rotazione";
+"ergo_penalty" = "Ergonomia";
+
+"penetration" = "Penetrazione";
+"damage" = "Danno";
+"armor_damage" = "Danno all'armatura";
+"frag_chance" = "Chance di Frammentazione";
+
+"explore" = "Esplora";
+"compare" = "Paragona";
+"compare_performance" = "Paragona le Statistiche";
+"dps_calc" = "Calcolo DPS";
+"kill_time_calc" = "Calcolo Tempo di Uccisione";
+
+// MARK: - Medical
+"damage" = "Danno";
+"contusion" = "Contusione";
+"fracture" = "Frattura";
+"pain" = "Dolore";
+"medkit" = "Medkit";
+"painkiller" = "Antidolorifici";
+"accessory" = "Accessori";
+"stimulator" = "Stimulatore";
+"use_time" = "Tempo di Utilizzo";
+"effect_duration" = "Durata dell'Effetto";
+"use_count" = "# di usi";
+"hp_resource" = "HP totali";
+"removes_bloodloss" = "Blocca Emorragia";
+"removes_contusion" = "Rimuove Contusione";
+"removes_fracture" = "Stecca Frattura";
+"removes_pain" = "Antidolorifico";
+"hydration_modifier" = "Cambio di Idratazione";
+"energy_modifier" = "Cambio di Energia";
+
+// MARK: - Throwables
+"throwable_frag" = "Granata a Frammentazione";
+"throwable_flash" = "Flashbang";
+"throwable_smoke" = "Fumogena";
+"fuse_time" = "Tempo di miccia";
+"explosion_radius_min" = "Minimo Raggio di Esplosione";
+"explosion_radius_max" = "Massimo Raggio di Esplosione";
+"fragmentation_count" = "Numero di Frammenti";
+
+// MARK: - Melee
+"damage" = "Danno";
+"rate" = "Velocità";
+"range" = "Raggio";
+
+"stab" = "Affondo";
+"stab_dmg" = "Danno d'Affondo";
+"stab_rate" = "Velocità d'affondo";
+"stab_range" = "Raggio d'affondo";
+
+"slash" = "Taglio";
+"slash_dmg" = "Danno di Taglio";
+"slash_rate" = "Velocità del Taglio";
+"slash_range" = "Raggio del Taglio";
+
+// MARK: - Posts
+"ballistics_title" = "Armatura e Balistica: Le Basi";
+"ballistics_body_1" = "Il sistema balistico di Escape From Tarkov è complicato e in pochi ne conoscono il funzionamento. Data la complessità delle formule usate per calcolare cose come la possibilità di penetrazione, angoli di rimbalzo, danno ai giocatori e anche altri elementi casuali, vi è spesso una differenza impercettibile nel combattimento fra giocatori di cui uno equipaggiato con i migliori oggetti del gioco rispetto a un giocatore livello 1 senza equipaggiamento. Tutto questo assieme a problemi di networking e hardware performance, bugs e cheaters crea un sistema di balistica ancora più frustrante e confusionario sia per i nuovi giocatori che quelli oramai esperti.";
+"ballistics_body_2" = "Iniziamo con l'armatura, come funziona e cosa dovresti sapere? Al di fuori di prezzo e disponibilità, ci sono 5 importanti fattori che dovresti considerare quando decidi quale armatura comprare o vendere: classe, durabilità, zone di protezione, materiale e penalità al movimento.";
+"ballistics_body_2_1_title" = "1. Classe dell'armatura";
+"ballistics_body_2_1" = "Ogni singola armatura, dalle pettorine agli accessori per l'elmetto, ha una specifica classe di armatura. La classe è, nella mia opinione, l'aspetto più importante delle armature. Detto in modo semplice, la classe dell'armatura rappresenta quanto efficacemente fermerà un proiettile. Al momento vi sono da 1 a 6 livelli di classe, e come avrai già intuito, più alto è il numero maggiore è l'efficacia dell'armatura.\n\n Una armatura di classe 1 può proteggerti da cose come i rimbalzi di proiettili e colpi a bassa penetrazione. Una armatura di classe 6 può coprirti dalla maggior parte dei proiettili fino ai calibri più grandi al momento in gioco. Ho usato 'può' dato che ogni colpo comprende anche vari gradi di pura casualità.\n\nQuando si parla di balistica su Escape from Tarkov, nulla è garantito e a volte sperimentiamo cose che sembrano non avere alcun senso, se non addirittura impossibili. Questo cosa vuol dire? Quale armatura mi proteggerà da quale proiettile? Questa è una domanda complicata che richiede maggiori dettagli di cui discuteremo tra poco.";
+"ballistics_body_2_2_title" = "2. Durabilità";
+"ballistics_body_2_2_1" = "Quando si parla di durabilità è importante notare che le statistiche esatte sono cambiate numerose volte e saranno, di conseguenza, cambiate di nuovo nel futuro. La cosa importante da sapere a proposito della durabilità di una armatura è che l'abilità di fermare un proiettile dipende direttamente da quanto valore avesse in originale l'armatura.";
+"ballistics_body_2_2_2" = "Per esempio, se un'armatura parte con una durabilità di 50, avrà la miglior protezione quando è a 50/50, che è piuttosto ovvio. La cosa meno ovvia è che ogni parte di armatura che è stata danneggiata e non ancora riparata, ad esempio 40/50, ha esattamente la stessa capacità di proteggerti da un proiettile quanto una che è stata danneggiata e poi riparata al 40/40";
+"ballistics_body_2_2_3" = "Conoscere l'originale durabilità massima per differenti armatura o guardare la barra di durabilità mentre si ispeziona un oggetto, è una abitudine importante. Spesso troverai una armatura di classe inferiore alla tua, ma se la tua armatura attualmente indossata è danneggiata o è stata riparata numerose volte, potrebbe essere meglio indossare l'armatura di classe più bassa ma con durabilità più alta. Avere una solida conoscenza di come funzionino le armature e le loro chance di penetrazione, valori di durabilità, può essere di vitale importanza durante un combattimento. Dai un'occhiata al calcolatore del danno per avere un'idea di come funzioni.";
+"ballistics_body_2_3_title" = "3. Zone di Protezione";
+"ballistics_body_2_3" = "Non c'è molto da dire in questa parte oltre a una semplice regola, L'armatura non protegge dove visivamente sembra proteggere. Il migliore esempio di questo fenomeno è guardare l'armatura Gen4 Full Protection Armor contro l'armatura Gen4 Assault Kit. La full protection sembra proteggere altre zone del tuo corpo ma protegge esattamente le stesse identiche parti. Fai attenzione a quali zone sono protette ispezionando l'oggetto, avere le braccia o lo stomaco a 0 può essere molto fastidioso e vale spesso spendere qualche soldo in più per un'armatura che le protegge.";
+"ballistics_body_2_4_title" = "4. Materiali";
+"ballistics_body_2_4" = "Ogni armatura è fatta di un differente materiale. Al momento i materiali non hanno alcun impatto sul valore di protezione dell'armatura ma diventano importanti quando ripariamo l'armatura. Alcuni materiali sono meno costosi e si riparano perdendo meno punti di durabilità dell'armatura mentri altri invece perdono numerosi punti di durabilità e costano spesso più dell'armatura stessa.";
+"ballistics_body_2_5_title" = "5. Penalità";
+"ballistics_body_2_5" = "Parlando in generale, avere un'armatura di maggior qualità arriva con un costo, sia economico che pratico. Ogni pezzo di armatura possiede delle determinate penalità. Alcune rallentano il tuo movimento, la velocità di rotazione, o la tua ergonomia generale, la quale ha effetto con la tua velocità con la quale miri, quanta stamina perdi mentre miri e persino quanto rumore fa il tuo personaggio mentre si muove lentamente oppure mira. Alcuni elmetti limitano il tuo udito oppure oscurano la tua visione. Questi scambi di statistiche devono essere considerati quando stai decidendo quali armature usare. È una scelta molto personale.";
+"ballistics_body_3_title" = "Riassunto";
+"ballistics_body_3" = "Il sistema balistico di Escape from Tarkov è incredibilmente complesso e richiede una notevole dose di esperienza e conoscenza per poter essere usato a tuo vantaggio. I video qua sopra spiegano alcuni di questi concetti in maggior dettaglio, dacci un'occhiata se ti interessa.";
+
+"health_title" = "Status e Vita del tuo PMC";
+"health_body_1" = "Presto in arrivo™";
+
+"upcoming_body_1" = "Ho tante idee in mente che non vedo l'ora di implementare. Mappe interattive, modding delle armi, guide alle missioni, maggiori oggetti e calcolatori, informazioni sui trader e sulle skills e altro. Rilascerò altri update più costantemente possibile ma volevo far uscire la 1.0 il prima possibile per iniziare a raccogliere interesse e feedback. Lo sviluppo per Android e supporto web è in arrivo!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Community";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Miscellaneous Legal Stuff";
+"attributions_translations" = "Localization";
+
+"attributions_api_descr" = "Questo progetto non sarebbe stato possibile senza l'aiuto di Morphy sui Database di Tarkov e sottostante API.";
+"attributions_nofam_descr" = "L'eroe nella community di EFT, l'autore dei grafici dei proiettili, il collaboratore sui calcoli balistici e sulle relative informazioni, l'Ambasciatore delle Munizioni, il Barone della Balistica e il Professore della Penetrazione!";
+"attributions_willerz_descr" = "I miei ringraziamenti vanno anche al mio amico per avermi mandato dei super screenshot da usare per l'app. È anche uno dei migliori player al mondo.";
+"attributions_community_descr" = "Un ringraziamento anche alla community del mio discord per avermi inviato screenshot da usare nell'app";
+"attributions_translations_descr" = "Tutte le traduzioni sono state fatte dalla community donando il loro tempo e impegno alla causa. Tutti attorno al mondo apprezzano il vostro duro lavoro!";
+"attributions_bsg_descr" = "Un ringraziamento speciale anche a Nikita per il suo supporto sull'app ed a tutti i dipendenti della BSG per il loro duro lavoro nella creazione del migliore FPS di tutti i tempi.";
+"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC.";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies sono entrati in battaglia!";

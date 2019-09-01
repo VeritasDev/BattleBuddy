@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Ja";
+"no" = "Nej";
+"ok" = "OK";
+"done" = "Färdig";
+"soon" = "Snart™";
+"coming_soon" = "Kommer snart™";
+"unknown" = "Okänd";
+"type" = "Typ";
+"continue" = "Fortsätt";
+"veritas" = "Veritas";
+"required" = "Nödvändig";
+
+// MARK: - Filter/sort/compare
+"compare" = "Jamför";
+"name" = "Namn";
+"save" = "Spara";
+"recommended" = "Rekommenderad";
+"similar" = "Liknande";
+"all" = "Allt";
+"compare_with" = "Jamför med...";
+
+// MARK: - More / Attributions
+"about" = "om Battle Buddy";
+"dev_by" = "Utvecklad av Veritas";
+"dev_support" = "Vill du stödja utvecklingen?";
+"watch_ad" = "Titta på en annons";
+"enable_banner_ads" = "Aktivera bannerannonser";
+"view_on_github" = "Visa på GitHub";
+"rate_this_app" = "Betygsätt Battle Buddy";
+"attributions" = "Tillskrivningar";
+"check_out_team" = "Kolla in teamet";
+"team" = "Laget";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Social";
+"music" = "Min musik";
+"website_error" = "Det går inte att ladda detta innehåll. Se till att du har den relevanta appen installerad.";
+"live_now" = "Live nu!";
+"feedback_title" = "Feedback eller framtidsidéer?";
+"feedback_subtitle" = "Gå med i våran Discord!";
+"upcoming_features" = "Kommande funktioner";
+
+"twitter_description" = "Håll dig uppdaterad";
+"twitch_description" = "Titta live på Twitch";
+"discord_description" = "Gå med i våran community Discord";
+"youtube_description" = "Titta på YouTube";
+"instagram_description" = "Media på Instagram";
+"soundcloud_description" = "Lyssna på Soundcloud";
+"spotify_description" = "Lyssna på Spotify";
+"website_description" = "Mer om Veritas";
+
+// MARK: - Tabs
+"items" = "Artiklar";
+"learn" = "Lär dig";
+"more" = "Mer";
+"search" = "Sök";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Ammunition";
+"main_menu_armor" = "Skyddsvästar";
+"main_menu_ballistics" = "Ballistik";
+"main_menu_firearms" = "Eldhandvapen";
+"main_menu_medical" = "Medicinsk";
+"main_menu_melee" = "Närstridsvapen";
+"main_menu_throwables" = "Kastvapen";
+"main_menu_health_calc" = "Skadeberäknare";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Vapentyper";
+"calibers" = "Kalibrar";
+
+// MARK: - Calculators
+"pen_chance" = "Penetrationschans";
+"no_armor_selected" = "Ingen rustning vald";
+"no_ammo_selected" = "Ingen ammo vald";
+"select_ammo" = "Välj ammunition";
+"select_armor" = "Välj rustning";
+"pen_chance_help_title" = "Penetrationschansberäknare";
+"pen_chance_help_message" = "Detta verktyg beräknar chansen att en vald kula kommer att penetrera en given kroppsrustning. När du väljer en kula och rustning kan du använda skjutreglaget för att justera den simulerade hållfastheten för rustningen för att se hur effektiva olika ammunitionstyper är mot pansar på olika hållbarhetsnivåer!";
+
+"health_calc_title" = "Skadeberäknare";
+"total_hp" = "Totalt HP";
+
+"body_zone_head" = "Huvud";
+"body_zone_thorax" = "Bröstkorg";
+"body_zone_stomach" = "Mage";
+"body_zone_right_arm" = "Höger arm";
+"body_zone_left_arm" = "Vänster arm";
+"body_zone_right_leg" = "Höger ben";
+"body_zone_left_leg" = "Vänster ben";
+
+// MARK: - Items
+"armor" = "Rustning";
+"helmets" = "Hjälmar";
+"ballistics" = "Ballistik";
+"health" = "Hälsa";
+"firearms" = "Eldhandvapen";
+"ammunition" = "Ammunition";
+"body_armor" = "Skyddsvästar";
+"medical_items" = "Medicinska artiklar";
+"throwables" = "Kastvapen";
+"healing_items" = "Helande artiklar";
+"pain_management" = "Smärthantering";
+"status_management" = "Statuseffekthantering";
+"stims" = "Stimulerande medel";
+"grenades" = "Granater";
+"properties" = "Egenskaper";
+"performance" = "Prestanda";
+"ergonomics" = "Ergonomi";
+"ergo" = "Ergo";
+"vertical_recoil" = "Vertikal Rekyl";
+"horizontal_recoil" = "Horisontell rekyl";
+"recoil" = "Rekyl";
+
+// MARK: - Weapons
+"weapon_class" = "Klass";
+"assault_rifle" = "Angreppsgevär";
+"assault_carbine" = "Anfallskarbin";
+"sniper_rifle" = "Prickskyttegevär";
+"designated_marksman_rifle" = "Skarpskyttegevär";
+"pistol" = "Pistol";
+"shotgun" = "Hagelgevär";
+"sub_machine_gun" = "Kulsprutepistol";
+"machine_gun" = "Maskingevär";
+"caliber" = "Kaliber";
+"fire_rate" = "Eldhastighet";
+"effective_range" = "Effektivt avstånd";
+"fold_or_retract" = "Vik ihop/Dra tillbaka";
+"retractable" = "Infällbar";
+"build_wizard" = "Bygg-guiden";
+"gun_build_custom" = "Anpassad";
+"gun_build_recoil" = "Minimal rekyl";
+"gun_build_ergo" = "Maximal Ergonomi";
+"gun_build_random" = "Slumpmässig";
+"fire_mode" = "Avtryckarläge";
+"fire_modes" = "Avtryckarlägen";
+"fire_mode_semi" = "Halvautomatisk";
+"fire_mode_auto" = "Helautomatisk";
+"fire_mode_burst" = "Burst";
+"fire_mode_semi_short" = "Semi";
+"fire_mode_auto_short" = "Auto";
+"fire_mode_burst_short" = "Burst";
+"action" = "Mekanism";
+"action_type_pump" = "Pump Action";
+"action_type_bolt" = "Bolt Action";
+"action_type_pump_short" = "Pump";
+"action_type_bolt_short" = "Bolt";
+"build" = "Bygg";
+"build_this_gun" = "Bygg det här vapnet";
+
+"compare_preset_semi_auto_rifle" = "Halvautomatiskt gevär";
+"compare_preset_full_auto_rifles" = "Helautomatiskt gevär";
+"compare_preset_rifles_caliber_match" = "Gevär med samma kaliber";
+"compare_preset_rifles" = "Gevär";
+"compare_preset_full_auto_caliber_match" = "Helautomatiska gevär med samma kaliber";
+"compare_preset_semi_auto_pistols" = "Halvautomatiska pistoler";
+"compare_preset_full_auto_pistols" = "Helautomatiska pistoler";
+"compare_preset_pistols_caliber_match" = "Pistoler med samma kaliber";
+"compare_preset_pistols" = "Pistoler";
+"compare_preset_manual_shotguns" = "Manuella handeldvapen";
+"compare_preset_shotguns" = "Hagelgevär";
+"compare_preset_smgs_caliber_match" = "Kulsprutepistoler med samma kaliber";
+"compare_preset_smgs" = "Kulsprutepistoler";
+"compare_preset_bolt_snipers" = "Skyttegevär";
+"compare_preset_snipers_and_dmrs" = "Prickskyttegevär & Skarpskyttegevär";
+"compare_preset_dmrs" = "Skarpskyttegevär";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Relaterade skjutvapen";
+"subsonic" = "Subsonisk";
+"tracer" = "Spårljus";
+"muzzle_velocity" = "Utgångshastighet (m/s)";
+"compatible_firearms" = "Kompatibla skjutvapen";
+"rpm" = "Rundor per minut";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Ingen";
+"armor_class_1" = "Klass 1";
+"armor_class_2" = "Klass 2";
+"armor_class_3" = "Klass 3";
+"armor_class_4" = "Klass 4";
+"armor_class_5" = "Klass 5";
+"armor_class_6" = "Klass 6";
+"armor_type_body" = "Skyddsvästar";
+"armor_type_helmet"= "Hjälm";
+"armor_type_visor" = "Visir";
+"armor_type_attachment" = "Bilaga";
+"armor_zone_top" = "Topp";
+"armor_zone_eyes" = "Ögon";
+"armor_zone_jaws" = "Käke";
+"armor_zone_ears" = "Öron";
+"armor_zone_nape" = "Nacke";
+"armor_zone_chest" = "Bröst";
+"armor_zone_stomach" = "Mage";
+"armor_zone_left_arm" = "Vänster arm";
+"armor_zone_right_arm" = "Höger arm";
+"armor_zone_left_leg" = "Vänster ben";
+"armor_zone_right_leg" = "Höger ben";
+"armor_mat_ceramic" = "Keramisk";
+"armor_mat_armored_steel" = "Pansrad stål";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Kombinerad";
+"armor_mat_aluminum" = "Aluminium";
+"armor_mat_glass" = "Glas";
+"armor_mat_titanium" = "Titan";
+
+"armor_type" = "Typ";
+"armor_material" = "Material";
+"armor_class" = "Klass";
+"armor_points" = "Hållbarhet";
+"armor_zones" = "Zoner";
+"penalties" = "Straff";
+"speed_penalty" = "Hastighetsstraff";
+"turn_speed_penalty" = "Svänghastighetsstraff";
+"ergo_penalty" = "Ergonomistraff";
+
+"penetration" = "Genomslag";
+"damage" = "Skada";
+"armor_damage" = "Rustningsskador";
+"frag_chance" = "Fragmenteringschans";
+
+"explore" = "Utforska";
+"compare" = "Jamför";
+"compare_performance" = "Jämför prestanda";
+"dps_calc" = "Skada-per-sekundräknare";
+"kill_time_calc" = "Kill Time Calculator";
+
+// MARK: - Medical
+"damage" = "Skada";
+"contusion" = "Kontusion";
+"fracture" = "Fraktur";
+"pain" = "Smärta";
+"medkit" = "Medkit";
+"painkiller" = "Smärtstillande";
+"accessory" = "Tillbehör";
+"stimulator" = "Stimulerande medel";
+"use_time" = "Användningstid";
+"effect_duration" = "Effektens varaktighet";
+"use_count" = "Antal användningar";
+"hp_resource" = "Totalt HP";
+"removes_bloodloss" = "Stoppar blödning";
+"removes_contusion" = "Tar bort kontusion";
+"removes_fracture" = "Tar bort frakturen";
+"removes_pain" = "Tar bort smärta";
+"hydration_modifier" = "Törstmodifierare";
+"energy_modifier" = "Energimodifierare";
+
+// MARK: - Throwables
+"throwable_frag" = "Frag";
+"throwable_flash" = "Distraktionsgranat";
+"throwable_smoke" = "Rökgranat";
+"fuse_time" = "Stubinstid";
+"explosion_radius_min" = "Min. Explosionsradie";
+"explosion_radius_max" = "Max. Explosionsradie";
+"fragmentation_count" = "Antal Fragment";
+
+// MARK: - Melee
+"damage" = "Skada";
+"rate" = "Slaghastighet";
+"range" = "Räckvidd";
+
+"stab" = "Hugg";
+"stab_dmg" = "Stickskada";
+"stab_rate" = "Stickhastighet";
+"stab_range" = "Stickräckvidd";
+
+"slash" = "Sving";
+"slash_dmg" = "Svingningsskada";
+"slash_rate" = "Svingningshastighet";
+"slash_range" = "Svingningsräckvidd";
+
+// MARK: - Posts
+"ballistics_title" = "Rustning & Ballistik: Grunderna";
+"ballistics_body_1" = "Ballistiksystemet i Escape from Tarkov är som en svart låda som bara ett fåtal personer har sett den inre funktionen av. På grund av komplexiteten i formlerna som används för att beräkna saker som ytinträngningsschanser, ricochetvinklar och skador på både spelarnas rustning och kroppar, såväl som de RNG-baserade elementen de använder, finns det ofta en oskiljbar skillnad i tiden att döda när man jämför en helt utrustad högnivåspelare som bär på den bästa slutspelsutrustningen med en nivå 1-spelare som inte bär på något mer än en startpistol. Tillsammans med de välkända nätverks- och prestandafrågorna, buggar och det ständigt ökande antalet spelare med episka gamerstrumpor tjänar tvetydigheten i det viktigaste spelets system bara för att förstärka förvirringen och frustrationen för både nya och veteranspelare känna dagligen.";
+"ballistics_body_2" = "Vi börjar med kroppsrustning, hur fungerar det och vad ska du veta? Utanför tillgänglighet och pris finns det fem viktiga saker du bör tänka på när du väljer vilken rustning du ska köpa, sälja, reparera, utrusta eller kasta bort - klass, hållbarhet, skyddszoner, material och påföljder.";
+"ballistics_body_2_1_title" = "1. Pansarklass";
+"ballistics_body_2_1" = "Varje pansarkomponent, från kroppsrustning till ballistiska hjälmfästen, har en specifik rustningsklass. Pansarklass är enligt min mening den viktigaste aspekten av skyddande kroppsrustning. Enkelt uttryckt representerar rustningsklassen hur effektiv rustningen är för att stoppa projektiler med olika nivåer av ballistisk effektivitet. För närvarande sträcker sig rustningsklasser från 1 till 6, och som kan antas, desto högre talet desto bättre. \ N \ n Nivå 1-rustning kan skydda dig mot saker som rikoscheetterande kulor, granat och icke rustnings-penetrerande ammunition från pistol-kalibrar eller skotthagel. Pansar på nivå 6 är kapabel att kunna skydda dig från de flesta projektiler, till och med inklusive de största kalibrarna i spelet. Jag valde ordet \"kapabel\" här med avsikt, eftersom varje ballistisk påverkan innebär olika grader av slumpmässig chans. \ N \ n När det handlar om ballistik i Escape from Tarkov är ingenting garanterat och de saker vi upplever ibland verkar omöjliga eller inte vettiga. Så, vad betyder det i slutändan? Vilken rustning skyddar mig mot vilka projektiler? Det är en komplicerad fråga som jag kommer att gå mer in i detalj senare när jag diskuterar detaljerna kring ballistikeffekten.";
+"ballistics_body_2_2_title" = "2. Hållbarhet";
+"ballistics_body_2_2_1" = "När det gäller pansarhållbarhet är det viktigt att notera att statistiken har ändrats ett antal gånger och är naturligtvis föremål för att ändras av BSG när som helst i framtiden. Det anmärkningsvärda att veta om pansarhållbarhet är att dess förmåga att skydda bäraren beror på dess nuvarande hållbarhetsvärde jämfört med det ursprungliga, maximala hållbarhetsvärdet när det var nytt.";
+"ballistics_body_2_2_2" = "Om till exempel rustningsuppsättningen börjar med 50 hållbarhet ger det det bästa skyddet när det är 50/50, vilket är ganska uppenbart. Den mindre uppenbara delen är att alla rustningar som är skadade och ännu inte har reparerats, till exempel rustningar som är 40/50, är exakt lika effektiva för att skydda dig som samma rustning om den skadades och sedan reparerades och är för närvarande 40 / 40.";
+"ballistics_body_2_2_3" = "Att känna till det ursprungliga maximala hållbarhetsvärdet för de olika pansaruppsättningarna, eller titta på hållbarhetsfältet när du kontrollerar föremålet, är en viktig vana att komma in i. Ofta hittar du rustningar med en lägre klass än din nuvarande pansaruppsättning, men om din nuvarande pansaruppsättning är hårt skadad eller har reparerats många gånger kan du faktiskt öka dina chanser att rustningen kan rädda ditt liv om du växlar till en rustning av lägre klass med en högre strömhållbarhetsprocent. Att ha en grundlig förståelse av de allmänna skyddschanserna för olika klasser av rustningar, hållbarhetsvärden och kulpenetrationsegenskaper kan faktiskt vara ovärderligt i vissa stridsituationer. Kolla in skaderäknaren för att få en känsla för hur allt fungerar!";
+"ballistics_body_2_3_title" = "3. Skyddzoner";
+"ballistics_body_2_3" = "Det finns inte en massa av specifikationer som jag behöver gå in i detalj om detta ämne, annat än att du behöver komma ihåg en enkel regel: Pansar skyddar inte vad det visuellt verkar skydda! Det bästa exemplet för att visa detta är att titta på IOTV Gen4 Full Protection Armor kontra IOTV Gen4 Assault Kit. Den fullständiga skyddsversionen ser ut som om den täcker mer av din kropp, men den skyddar dina kroppsdelar exakt samma som anfallsuppsättningen eftersom den har samma skyddszoner. Var uppmärksam på vilka zoner som är skyddade - att få dina armar eller mage svärtade ut kan vara ganska irriterande och är ofta värt lite extra skydd, om du har råd!";
+"ballistics_body_2_4_title" = "4. Material";
+"ballistics_body_2_4" = "Varje rustning har olika material som det är tillverkat av. För närvarande har material ingen märkbar effekt på rustningens skyddsförmåga, istället blir pansermaterialet relevant vid reparation. Vissa material kan repareras mycket effektivt och billigt, medan andra tar betydande förluster på deras hållbarhet vid reparation och kan ofta kosta mer än den ursprungliga kostnaden för rustningen!";
+"ballistics_body_2_5_title" = "5. Straff";
+"ballistics_body_2_5" = "Generellt sett kommer extra skydd till en kostnad, och denna kostnad kan vara såväl ekonomisk som praktisk. Varje pansarstycke har en uppsättning påföljder. Vissa bromsar din rörelse, andra bromsar din vridhastighet och till och med din totala ergonomi, vilket påverkar hastigheten med vilken du siktar ner sikten, hastigheten på uthållighetsförlust och till och med hur hög din karaktär är när du rör dig långsamt eller siktar. Vissa huvudskydd kan begränsa din hörsel på flera sätt och till och med dölja din syn. Det här är de avvägningar du bör tänka på när du beslutar om du vill gå till de dyrare pansaruppsättningarna eller Killa-hjälmen. Vilka rustningar och hjälmar är värda de straff de sätter på dig? Det är för dig att bestämma!";
+"ballistics_body_3_title" = "Sammanfattning";
+"ballistics_body_3" = "Ballistiksystemet i Escape from Tarkov är otroligt komplicerat och kräver en hel del erfarenhet och kunskap för att kunna använda till din fördel. Armour and Ballistics-videon ovan förklarar några av dessa koncept mer detaljerat, så se till att kolla om du är intressant att höra mer om ämnet. Var säker där ute!";
+
+"health_title" = "Din privata militära entreprenörs hälsa & status";
+"health_body_1" = "Denna information kommer snart™";
+
+"upcoming_body_1" = "Jag har så många fantastiska funktioner planerade för den här appen som jag inte kan vänta med att bygga för samhället! Interaktiva kartor, vapenmodifiering, uppdragsguider, fler objekt och miniräknare, handlarinfo, kompetensuppdelningar och mer! Jag planerar att släppa funktioner över tid, men jag ville att version 1.0 skulle skickas till er så snart som möjligt för att börja mäta intresse och få feedback. Utveckling av Android- och webbsupport pågår redan, kom tillbaka för uppdateringar snart!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Community";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Diverse juridiska saker";
+"attributions_translations" = "Lokalisering";
+
+"attributions_api_descr" = "Detta projekt skulle inte ha varit möjligt utan det fantastiska dev-arbetet som utförts av Morphy på Tarkov-databasen och det underliggande API.";
+"attributions_nofam_descr" = "Den obesjungna hjälten i EFT-samhället, skaparen av ammo-diagrammen och samarbetspartner om ballistikräknare och tillhörande information, Ambassadören för ammunition, ballonbaron, professor i penetration!";
+"attributions_willerz_descr" = "Mycket kärlek till min homeboy för att ha tillhandahållit några av de skärmdumpar av episk kvalitet som han gav mig tillåtelse att använda i den här appen. Han är också en av de bästa spelarna i världen.";
+"attributions_community_descr" = "Mycket kärlek till mitt samhälle i Discord för allt hårt arbete att fånga och redigera de vackra foton som används i denna app!";
+"attributions_translations_descr" = "Alla översättningar gjordes av medlemmarna i gemenskapen som donerade sin tid och sin ansträngning till orsaken. Alla runt om i världen uppskattar ditt hårda arbete!";
+"attributions_bsg_descr" = "Särskilt tack till Nikita för hans stöd för den här appen och till alla människor på BSG för deras hårda arbete och engagemang i att bygga den bästa första personens shooter genom tiderna.";
+"attributions_misc_descr" = "Sociala medieikoner av Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licenserat enligt CC. Ikonen 'Hjärna' av Sergey Patutin från Noun-projektet (https://thenounproject.com/bdesign.by/) licenserat enligt CC.";
+
+// Analytics
+"total_users_count" = "Battle Buddies har gått med i kampen!";

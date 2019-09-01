@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Taip";
+"no" = "Ne";
+"ok" = "OK";
+"done" = "Padaryta";
+"soon" = "Tuoj";
+"coming_soon" = "Netrukus™";
+"unknown" = "Nežinoma";
+"type" = "Tipas";
+"continue" = "Tęsti";
+"veritas" = "Veritas";
+"required" = "Reikalaujama";
+
+// MARK: - Filter/sort/compare
+"compare" = "Palyginti";
+"name" = "Vardas";
+"save" = "Saugoti";
+"recommended" = "Patartina";
+"similar" = "panašu";
+"all" = "Visi";
+"compare_with" = "Palyginti su...";
+
+// MARK: - More / Attributions
+"about" = "Apie Battle Buddy";
+"dev_by" = "Sukure Veritas";
+"dev_support" = "Norite padeti su išvystyma?";
+"watch_ad" = "Ziureti Reklama";
+"enable_banner_ads" = "Ijungti Reklamjuostės";
+"view_on_github" = "Matyti su GitHub";
+"rate_this_app" = "Įvertink Battle Buddy";
+"attributions" = "Priskyrimai";
+"check_out_team" = "Pažvelk į komandą";
+"team" = "Komandą";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Socialini tinklai";
+"music" = "Mano Musika";
+"website_error" = "Neįmanoma įkelti šio turinio. Įsitikinkite kad turite atitinkamą programą.";
+"live_now" = "Tiesiogiai dabar!";
+"feedback_title" = "Turitė atsiliepimu arba Funkcijų idėjos?";
+"feedback_subtitle" = "Prisijunkite prie musu discord!";
+"upcoming_features" = "Būsimos Funkcijos";
+
+"twitter_description" = "Neatsilikit nuo žinios";
+"twitch_description" = "Žiurekite tiesiogiai per Twitch";
+"discord_description" = "Prisijunkite prie musu Discord";
+"youtube_description" = "Žiurekite per YouTube";
+"instagram_description" = "Prisijunkite prie musu Instagram";
+"soundcloud_description" = "Klausykite per Soundcloud";
+"spotify_description" = "Klausykite per Spotify";
+"website_description" = "Daugiau apie Veritas";
+
+// MARK: - Tabs
+"items" = "Daiktai";
+"learn" = "Mokynkis";
+"more" = "Daugiau";
+"search" = "Paieška";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Amunicija";
+"main_menu_armor" = "Kūno šarvai";
+"main_menu_ballistics" = "Balistika";
+"main_menu_firearms" = "Ginklai";
+"main_menu_medical" = "Medicininiai daiktai";
+"main_menu_melee" = "Rankiniai Ginklai";
+"main_menu_throwables" = "Metami daiktai";
+"main_menu_health_calc" = "Žalos skaičiuoklė";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Ginklų rūšiai";
+"calibers" = "Kalibrai";
+
+// MARK: - Calculators
+"pen_chance" = "Įsiskverbimo galimybė";
+"no_armor_selected" = "Neišrinkti šarvai";
+"no_ammo_selected" = "Neišrinkta Amunicija";
+"select_ammo" = "Pasirinkite Amunicija";
+"select_armor" = "Pasirinkite Šarvus";
+"pen_chance_help_title" = "Skverbties galimybių skaičiuoklė";
+"pen_chance_help_message" = "Šitas įrankis suskaičiouja šansus kad tavo išrinkta kulka prasiskverbs išrinktus šarvus. Kai tu išrinksi savo kulka ir šarvus, tu gali naudoti šarvu patvarumo juostelė kad pamatyti koks efektyvumas prieš išrinktus šarvus ir šarvu patvaruma";
+
+"health_calc_title" = "Žalos Skaičiuoklė";
+"total_hp" = "Visas HP";
+
+"body_zone_head" = "Galva";
+"body_zone_thorax" = "Krūtinė";
+"body_zone_stomach" = "Skrandis";
+"body_zone_right_arm" = "Dešinė Ranka";
+"body_zone_left_arm" = "Kairė  Ranka";
+"body_zone_right_leg" = "Dešinė Koja";
+"body_zone_left_leg" = "Kairė Koja";
+
+// MARK: - Items
+"armor" = "Šarvai";
+"helmets" = "Šalmai";
+"ballistics" = "Balistika";
+"health" = "Sveikata";
+"firearms" = "Ginklai";
+"ammunition" = "Amunicija";
+"body_armor" = "Kūno Šarvai";
+"medical_items" = "Medicininiai Daiktai";
+"throwables" = "Metami daiktai";
+"healing_items" = "Gydomieji daiktai";
+"pain_management" = "Skausmo valdymas";
+"status_management" = "Statuso efektų valdymas";
+"stims" = "Stimuliatoriai";
+"grenades" = "Granatai";
+"properties" = "Savybės";
+"performance" = "Atlikimas";
+"ergonomics" = "Ergonomika";
+"ergo" = "Ergo";
+"vertical_recoil" = "Vertikali Atatranka";
+"horizontal_recoil" = "Horizontali Atatranka";
+"recoil" = "Atatranka";
+
+// MARK: - Weapons
+"weapon_class" = "Rūšis";
+"assault_rifle" = "Graižtvinis Šautuvas";
+"assault_carbine" = "Karabinas";
+"sniper_rifle" = "Snaiperis";
+"designated_marksman_rifle" = "DMR";
+"pistol" = "Pistoletas";
+"shotgun" = "Šratinis Šautuvas";
+"sub_machine_gun" = "Subautomatas";
+"machine_gun" = "Kulkosvaidis";
+"caliber" = "Kalibras";
+"fire_rate" = "Šaudymo Sparta";
+"effective_range" = "Efektyvus Tolumas";
+"fold_or_retract" = "Sulenkt/Atitraukt";
+"retractable" = "Įtraukiama";
+"build_wizard" = "Šautuvo surinkimas";
+"gun_build_custom" = "Custom";
+"gun_build_recoil" = "Minimali Atatranka";
+"gun_build_ergo" = "Maximumali Ergonomika";
+"gun_build_random" = "Aklai išrinktas surinkimas";
+"fire_mode" = "Ginklo Šaudymo Režimas";
+"fire_modes" = "Ginklo Šaudymo Režimai";
+"fire_mode_semi" = "Pusautomatinis";
+"fire_mode_auto" = "Automatinis";
+"fire_mode_burst" = "Serijos Šuviai";
+"fire_mode_semi_short" = "Pusauto";
+"fire_mode_auto_short" = "Auto";
+"fire_mode_burst_short" = "Serijos Šuviai";
+"action" = "Veiksmas";
+"action_type_pump" = "Rankinis Veiksmas";
+"action_type_bolt" = "Pertaisumas Veiksmas";
+"action_type_pump_short" = "Rankinis";
+"action_type_bolt_short" = "Pertaisumas";
+"build" = "Surinkimas";
+"build_this_gun" = "Surink ši šautuva";
+
+"compare_preset_semi_auto_rifle" = "Pusautomatinis Šautuvas";
+"compare_preset_full_auto_rifles" = "Automatinis Šautuvas";
+"compare_preset_rifles_caliber_match" = "Šautuvas su tuo pačiu Kalibru";
+"compare_preset_rifles" = "Graižtviniai";
+"compare_preset_full_auto_caliber_match" = "Graižtvinis su tuo pačiu kalibru";
+"compare_preset_semi_auto_pistols" = "Pusautomatiniai Pistoletai";
+"compare_preset_full_auto_pistols" = "Automatiniai Pistoletai";
+"compare_preset_pistols_caliber_match" = "Pistoletai su tuo pačiu Kalibru";
+"compare_preset_pistols" = "Pistoletai";
+"compare_preset_manual_shotguns" = "Pumpniai Šratini Šautuvai";
+"compare_preset_shotguns" = "Šratini Šautuvai";
+"compare_preset_smgs_caliber_match" = "Subautomatai su tuo pačiu Kalibru";
+"compare_preset_smgs" = "Subautomatai";
+"compare_preset_bolt_snipers" = "Pertaisumai Snaiperiai";
+"compare_preset_snipers_and_dmrs" = "Snaiperiai ir DMR";
+"compare_preset_dmrs" = "DMR - Paskirtas Marksmano Šautuvas";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Susiję Šautuvai";
+"subsonic" = "Pogarsini";
+"tracer" = "Traceriai";
+"muzzle_velocity" = "Kulkos Greitis (m/s)";
+"compatible_firearms" = "Suderinami Šautuvai";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Joks";
+"armor_class_1" = "1a Klasė";
+"armor_class_2" = "2a Klasė";
+"armor_class_3" = "3a Klasė";
+"armor_class_4" = "4a Klasė";
+"armor_class_5" = "5a Klasė";
+"armor_class_6" = "6a Klasė";
+"armor_type_body" = "Kuno Šarvai";
+"armor_type_helmet"= "Šalmas";
+"armor_type_visor" = "Skydelis";
+"armor_type_attachment" = "Įtaisas";
+"armor_zone_top" = "Viršus";
+"armor_zone_eyes" = "Akys";
+"armor_zone_jaws" = "Žandikauliai";
+"armor_zone_ears" = "Ausys";
+"armor_zone_nape" = "Spenelis";
+"armor_zone_chest" = "Krūtinė";
+"armor_zone_stomach" = "Skrandis";
+"armor_zone_left_arm" = "Kairė  Ranka";
+"armor_zone_right_arm" = "Dešinė Ranka";
+"armor_zone_left_leg" = "Kairė Koja";
+"armor_zone_right_leg" = "Dešinė Koja";
+"armor_mat_ceramic" = "Ceramic";
+"armor_mat_armored_steel" = "Armored Steel";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Combined";
+"armor_mat_aluminum" = "Aluminum";
+"armor_mat_glass" = "Stiklinis";
+"armor_mat_titanium" = "Titanium";
+
+"armor_type" = "Tipas";
+"armor_material" = "Medžiaga";
+"armor_class" = "Klasė";
+"armor_points" = "Patvarumas";
+"armor_zones" = "Zonos";
+"penalties" = "Nuobaudos";
+"speed_penalty" = "Greitis";
+"turn_speed_penalty" = "Pasukties greitįs";
+"ergo_penalty" = "Ergonomika";
+
+"penetration" = "Skverbtis";
+"damage" = "Žala";
+"armor_damage" = "Šarvu Žala";
+"frag_chance" = "Suskaidymo tikimybė";
+
+"explore" = "Ištirti";
+"compare" = "Palyginti";
+"compare_performance" = "Palyginti našumą";
+"dps_calc" = "Žalos Per Sekundę Skaičiuoklė";
+"kill_time_calc" = "Nužudymo Laiko Skaičiuoklė";
+
+// MARK: - Medical
+"damage" = "Žala";
+"contusion" = "Sumušimas";
+"fracture" = "Lūžis";
+"pain" = "Skausmas";
+"medkit" = "Vaistų Rinkinys";
+"painkiller" = "Nuskausminamieji";
+"accessory" = "Priedas";
+"stimulator" = "Stimuliatorius";
+"use_time" = "Naudojamo laikąs";
+"effect_duration" = "Poveikio trukmė";
+"use_count" = "# Naudojema";
+"hp_resource" = "Visas HP";
+"removes_bloodloss" = "Pašalina Kraujo Netekimą";
+"removes_contusion" = "Pašalina Sumušimą";
+"removes_fracture" = "Pašalina Lūžį";
+"removes_pain" = "Pašalina Skausmą";
+"hydration_modifier" = "Hidratacijos Modifikatorius";
+"energy_modifier" = "Energijos Modifikatorius";
+
+// MARK: - Throwables
+"throwable_frag" = "Frag";
+"throwable_flash" = "Flash";
+"throwable_smoke" = "Smoke";
+"fuse_time" = "Saugiklio laikas";
+"explosion_radius_min" = "Min Sprogimo Diapazonas";
+"explosion_radius_max" = "Max Sprogimo Diapazonas";
+"fragmentation_count" = "Fragmentų Skaičius";
+
+// MARK: - Melee
+"damage" = "Žala";
+"rate" = "Dažnis";
+"range" = "Tolumas";
+
+"stab" = "Dūris";
+"stab_dmg" = "Dūrio Žala";
+"stab_rate" = "Dūrio Dažnumas";
+"stab_range" = "Dūrio Tolumas";
+
+"slash" = "Kirtimas";
+"slash_dmg" = "Kirtimo Žala";
+"slash_rate" = "Kirtimo Dažnumas";
+"slash_range" = "Kirtimo Tolumas";
+
+// MARK: - Posts
+"ballistics_title" = "Šarvu ir Balistika: Pagrindai";
+"ballistics_body_1" = "Balistikos sistema terp Escape From Tarkov yra sunkus suprasti daug žmoniem. Komplexualus formulės kur skaičiuojia skverbimos šansus, rikošeto kampai, ir žalos šarvam ir kunui, ir dar RNG elementai kur žaidimas naudoja labai sumaiša žaidejo supratima šios sistemos. Dažnai nesimata skirtumas prieš aukšto lygio žaidėja palyginus su pirmo lygio žaidėja kai skaičioujant laiko nužudyti. Kartu su tinklo kūrimo ir veiklos problemos ir klaidas. Kai ši sistema yra beveik neimanoma suprasti, ji tik padeda supykdint žmones kurie veteranai arba nauji žaidėjiai, dienu dienom.";
+"ballistics_body_2" = "Pradedant su šarvais, kaip jie veikia ir ka tau reikia žinoti? Ignoruodami prieinamuma ir kaina, jums yra svarbus penki dalykai renkatis šarvus kurious jus norite nusipirkti, parduoti, remontuoti, užsideti arba numest ant žemės - klasė, patvarumas, apsaugos zonos, medžiaga ir nuobaudos.";
+"ballistics_body_2_1_title" = "1. Šarvu Klasė";
+"ballistics_body_2_1" = "Kiekvienas šarvu komponentas turi speciali šarvu klasė. Man atrodo kad šarvu klasės yra svarbiausi dalykai apie šarvus. Jeigu reiketu pasakyti paprastai, šarvu klasės yra efektyvumas prieš kulkos. Dabar, šarvu klasės pradeda nuo 1a klasė iki 6a klasė. Didesnis numeris reiškia geresnis efektyvumas.\n\n1a lygio šarvai gali tavė išgelbėti nuo kulkos rikošeta, šrapneli, ir pistoletu kulkos kurie nepadaryti šarvus prašauti arba šratus. 6a lygio šarvai gali tavė išgelbėti nuo iki didžausius kulkos žaidimuije. Bet neišgelbės tavę visada, nes kiekviena kulka turi savo atsitiktina šansa prašauti.\n\nBalistika terp 'Escape From Tarkov' nevisada garantuota kad bus kaip tiketa. Tai kas čia reiškia? Kokie šarvai manę išgelbės nuo kokius kulkos? Čia yra sudetingas klausimas, aš atsakysiu šius klausimus veliau kai aš aiškinsiu balistika.";
+"ballistics_body_2_2_title" = "2. Patvarumas";
+"ballistics_body_2_2_1" = "Labai svarbu suprasti kad BSG visada keičia šarvu patvarumo statistika ir gali betkada pakeisti vėl. Svarbu suprasti kad šarvu patvarumas keičia efektyvuma apsaugoti žmogu. Pilnas patvarumas daug daugiau apsaugo palyginus su sulužusais šarvais ";
+"ballistics_body_2_2_2" = "Pavyzdžiui, 50 patvarumo šarvai veikia geriau kai turi 50/50. Tas yra žinoma. Bet, ne visi žina kad 40/50 esa toks pat efektyvus kaip 40/40 šarvai to paties tipo.";
+"ballistics_body_2_2_3" = "Geras įprotis patekti yra tykrinti šarvu patvaruma ir žinoti originalu maksimalu patvaruma. Jus dažnai surasit prastesnius šarvus, bet tie šarvai gali turėti geresniųs šansus apsaugoti tave jeigu tavo originalus šarvai turi mažiau neigu maximalu patvaruma. Turėti gerų žinių apie šarvu patvaruma gali tave išgelbeti kai kovojant. Pažvelkite į žalos skaičiuoklę kad suprasti ši sistema geriau!";
+"ballistics_body_2_3_title" = "3. Apsaugos zonos";
+"ballistics_body_2_3" = "Nedaug reikia žinoti apie apsaugos zonos. Yra viena paprasta taisyklė: Šarvai nevisada apsaugo ka jie atrodo kad apsaugo! Geriausias pavyzdys yra kad Gen4 Full Protection ir Gen4 Assault Kit apsaugo tos pačios zonos, bet Gen4 Assault atrodo kad daugiau apsaugo. Atkreipk dėmesį į kokios zonos šarvai apsaugo - turint prašauta skrandi arba prašautus rankos gali labai erzinti!";
+"ballistics_body_2_4_title" = "4. Medžiagos";
+"ballistics_body_2_4" = "Kiekvieni šarvai esa padaryti iš skirtingus medžiagos. Šiuo metu medžiagos nieko nekeičia kai stabdant kulkos. Vietoj to, medžiagos esa svarbus kai remontuojant šarvus. Vieni labai pigiai susitaisa, bet kiti esa labai brangus sutaisyti ir gali kainuoti daugiau neigu šarvu originalu kaina!";
+"ballistics_body_2_5_title" = "5. Baudos";
+"ballistics_body_2_5" = "Papildoma apsauga gali tureti finansinės baudos ir praktinės baudos. Kiekvienas šarvas turi savo problemos. Vieni suleteja tavo sukimo greiti arba tavo ergonomika, kuri suleteja tavo greiti nusikreipti į taikyklius, žemina tavo ištvermės, ir tavo charakterio garsumo kai judant. Galvos apsauga gali riboti tavo klausą ir tavo viziją. Čia yra jusu problemos kai reikia pasirinkti šarvus. Kurie šarvai yra verti? Čia yra tavo pasirinkimas!";
+"ballistics_body_3_title" = "Santrauka";
+"ballistics_body_3" = "Balistikos sistema terp 'Escape From Tarkov' esa sudėtingas ir reikia žinios kad naudoti efektyviai. Pažvelkitė į šita Angliška šarvu ir balistikos video kad suprasti daugiau. Bukit saugi!";
+
+"health_title" = "Jūsų PMC sveikata ir būklė";
+"health_body_1" = "Ši informacija netrukus pasirodys™";
+
+"upcoming_body_1" = "Turiu tiek daug nuostabių planuotu funkcijų šioj programoj! Interaktyvūs žemėlapiai, ginklų modifikavimas, darbu vadovai, daugiau skaičiuoklių, informacija apie prekybininkus, įgūdžių analizė ir dar daugiau! Planuoju daugiau funkciju išleisti, bet aš norejiau išleisti versija 1.0 jums ko greičiau kad gauti jusu atsiliepimus. Android ir interneto palaikymas jau vyksta, netrukus patikrinkite, ar nėra atnaujinimų!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Bendruomenė";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Įvairūs teisiniai dalykai";
+"attributions_translations" = "Lokalizavimas";
+
+"attributions_api_descr" = "Šis projektas nebūtų buvęs įmanomas be fantastinio Morphy atlikto darbo Tarkovo duomenų bazėje ir pagrindinėje API.";
+"attributions_nofam_descr" = "Neišvardytas herojus EFT bendruomenėje, amunicijos diagramų kūrėjas, ir balistikos skaičiuotuvų bendradarbis, musu Amunicijos Ambasadorius, Balistikos Baronas, Skverbties Profesorius!";
+"attributions_willerz_descr" = "Mano draugužis kuris pateikė epinės kokybės screenshotus kur jis man davė leidimą naudoti šioje programoje. Jis taip pat yra vienas iš geriausių žaidėjų pasaulyje.";
+"attributions_community_descr" = "Didelis ačiū mano bendruomene Discord už sunkaus darbo kur šioje programoje naudojames gražias nuotraukas!";
+"attributions_translations_descr" = "Visus vertimus atliko bendruomenės nariai, aukodami savo laiką ir jėgas tam. Visi žmonės visame pasaulyje vertina jūsų sunkų darbą!";
+"attributions_bsg_descr" = "Ypatinga padėka Nikitai už palaikymą šioje programoje ir visiems „BSG“ žmonėms už sunkų darbą ir atsidavimą kuriant geriausią žaidima.";
+"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC.";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies prisijungė prie kovos!";

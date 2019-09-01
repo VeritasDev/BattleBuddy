@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Ya";
+"no" = "Tidak";
+"ok" = "OK";
+"done" = "Selesai";
+"soon" = "Segera™";
+"coming_soon" = "Segera Hadir™";
+"unknown" = "Tidak Diketahui";
+"type" = "Jenis";
+"continue" = "Lanjut";
+"veritas" = "Veritas";
+"required" = "Wajib";
+
+// MARK: - Filter/sort/compare
+"compare" = "Perbandingan";
+"name" = "Nama";
+"save" = "Simpan";
+"recommended" = "Rekomendasi";
+"similar" = "Mirip";
+"all" = "Semua";
+"compare_with" = "Bandingkan dengan...";
+
+// MARK: - More / Attributions
+"about" = "Tentang Battle Buddy";
+"dev_by" = "Diproduksi oleh Veritas";
+"dev_support" = "Ingin membantu pengembangan app ini?";
+"watch_ad" = "Lihat Iklan";
+"enable_banner_ads" = "Aktifkan Iklan Banner";
+"view_on_github" = "Lihat di GitHub";
+"rate_this_app" = "Beri penilaian Battle Buddy";
+"attributions" = "Atribusi";
+"check_out_team" = "Lihat Tim";
+"team" = "Tim";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Sosial";
+"music" = "Musik saya";
+"website_error" = "Tidak dapat memuat konten. Pastikan Anda menginstall aplikasi yang relevan.";
+"live_now" = "Live sekarang!";
+"feedback_title" = "Saran atau Ide?";
+"feedback_subtitle" = "Gabung discord kami!";
+"upcoming_features" = "Fitur yang akan datang";
+
+"twitter_description" = "Tetap terkini";
+"twitch_description" = "Tonton Live di Twitch";
+"discord_description" = "Gabung Komunitas Discord kami";
+"youtube_description" = "Tonton di YouTube";
+"instagram_description" = "Media di Instagram";
+"soundcloud_description" = "Dengarkan di Soundcloud";
+"spotify_description" = "Dengarkan di Spotify";
+"website_description" = "Selebihnya Tentang Veritas";
+
+// MARK: - Tabs
+"items" = "Item";
+"learn" = "Tutorial";
+"more" = "Lainnya";
+"search" = "Cari";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Peluru";
+"main_menu_armor" = "Pelindung Tubuh";
+"main_menu_ballistics" = "Balistik";
+"main_menu_firearms" = "Senjata";
+"main_menu_medical" = "Obat";
+"main_menu_melee" = "Senjata Jarak Dekat";
+"main_menu_throwables" = "Dapat dilempar";
+"main_menu_health_calc" = "Kalkulator Kerusakan";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Jenis Senjata";
+"calibers" = "Kaliber";
+
+// MARK: - Calculators
+"pen_chance" = "Kesempatan Menekan";
+"no_armor_selected" = "Tidak ada pelindung tubuh terseleksi";
+"no_ammo_selected" = "Tidak ada peluru terseleksi";
+"select_ammo" = "Pilih peluru";
+"select_armor" = "Pilih pelindung tubuh";
+"pen_chance_help_title" = "Kalkulator Kesempatan Menekan";
+"pen_chance_help_message" = "Alat ini menghitung kemungkinan peluru yang menembus pelindung tubuh. Setelah Anda memilih peluru dan pelindung tubuh, Anda dapat menggunakan slider untuk menyesuaikan daya tahan simulasi dari pelindung tubuh untuk melihat seberapa efektif putaran yang berbeda terhadap pelindung tubuh di berbagai level daya tahan!";
+
+"health_calc_title" = "Kalkulator Kerusakan";
+"total_hp" = "Total HP";
+
+"body_zone_head" = "Kepala";
+"body_zone_thorax" = "Dada";
+"body_zone_stomach" = "Perut";
+"body_zone_right_arm" = "Tangan Kanan";
+"body_zone_left_arm" = "Tangan Kiri";
+"body_zone_right_leg" = "Kaki Kanan";
+"body_zone_left_leg" = "Kaki Kiri";
+
+// MARK: - Items
+"armor" = "Pelindung Tubuh";
+"helmets" = "Helm";
+"ballistics" = "Balistik";
+"health" = "Kesehatan";
+"firearms" = "Senjata";
+"ammunition" = "Peluru";
+"body_armor" = "Pelindung Tubuh";
+"medical_items" = "Obat";
+"throwables" = "Dapat Dilempar";
+"healing_items" = "Item Penyembuhan";
+"pain_management" = "Manajmen Sakit";
+"status_management" = "Manajmen Efek Status";
+"stims" = "Stimulasi";
+"grenades" = "Granat";
+"properties" = "Properti";
+"performance" = "Kinerja";
+"ergonomics" = "Ergonomis";
+"ergo" = "Ergo";
+"vertical_recoil" = "Rekoil Vertikal";
+"horizontal_recoil" = "Rekoil Horisontal";
+"recoil" = "Rekoil";
+
+// MARK: - Weapons
+"weapon_class" = "Class";
+"assault_rifle" = "Senapan Serbu";
+"assault_carbine" = "Senapan Karabin";
+"sniper_rifle" = "Senapan Jarak Jauh";
+"designated_marksman_rifle" = "DMR";
+"pistol" = "Pistol";
+"shotgun" = "Senapan Berburu";
+"sub_machine_gun" = "Senapan Mesin Ringan";
+"machine_gun" = "Senapan Mesin";
+"caliber" = "Kaliber";
+"fire_rate" = "Rata Rata tembakan";
+"effective_range" = "Jarak Efektif";
+"fold_or_retract" = "Lipat/Retract";
+"retractable" = "Dapat di Retract";
+"build_wizard" = "Buat Flow";
+"gun_build_custom" = "Custom";
+"gun_build_recoil" = "Minimum Rekoil";
+"gun_build_ergo" = "Maksimum Ergonomis";
+"gun_build_random" = "Acak";
+"fire_mode" = "Mode Tembak";
+"fire_modes" = "Mode Tembak";
+"fire_mode_semi" = "Semi Otomatis";
+"fire_mode_auto" = "Full Otomatis";
+"fire_mode_burst" = "Burst";
+"fire_mode_semi_short" = "Semi";
+"fire_mode_auto_short" = "Otomatis";
+"fire_mode_burst_short" = "Burst";
+"action" = "Aksi";
+"action_type_pump" = "Pompa Aksi";
+"action_type_bolt" = "Bolt Aksi";
+"action_type_pump_short" = "Pompa";
+"action_type_bolt_short" = "Bolt";
+"build" = "Buat";
+"build_this_gun" = "Buat Senjata Ini";
+
+"compare_preset_semi_auto_rifle" = "Senapan Semi-Otomatis";
+"compare_preset_full_auto_rifles" = "Senapan Full-Otomatis";
+"compare_preset_rifles_caliber_match" = "Senapan Kaliber yang sama";
+"compare_preset_rifles" = "Senapan";
+"compare_preset_full_auto_caliber_match" = "Senapan Full-Otomatis Kaliber yang sama";
+"compare_preset_semi_auto_pistols" = "Pistol Semi-Otomati";
+"compare_preset_full_auto_pistols" = "Pistol Full-Otomatis";
+"compare_preset_pistols_caliber_match" = "Pistol Kaliber yang sama";
+"compare_preset_pistols" = "Pistol";
+"compare_preset_manual_shotguns" = "Manual Senjata Berburu";
+"compare_preset_shotguns" = "Senapan Berburu";
+"compare_preset_smgs_caliber_match" = "Senapan Mesin Ringan Kaliber yang sama";
+"compare_preset_smgs" = "Senapan Mesin Ringan";
+"compare_preset_bolt_snipers" = "Senapan Jarak Jauh Bolt Aksi";
+"compare_preset_snipers_and_dmrs" = "Senapan Jarak Jauh & Senapan Penembak Jitu";
+"compare_preset_dmrs" = "Senapan Penembak Jitu";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Senjata Terkait";
+"subsonic" = "Subsonic";
+"tracer" = "Tracer";
+"muzzle_velocity" = "Kecepatan Peluru (m/s)";
+"compatible_firearms" = "Senjata Kompatibel";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "None";
+"armor_class_1" = "Kelas 1";
+"armor_class_2" = "Kelas 2";
+"armor_class_3" = "Kelas 3";
+"armor_class_4" = "Kelas 4";
+"armor_class_5" = "Kelas 5";
+"armor_class_6" = "Kelas 6";
+"armor_type_body" = "Pelindung Tubuh";
+"armor_type_helmet"= "Helm";
+"armor_type_visor" = "Kaca Helm";
+"armor_type_attachment" = "Alat Tambahan";
+"armor_zone_top" = "Atas";
+"armor_zone_eyes" = "Mata";
+"armor_zone_jaws" = "Rahang";
+"armor_zone_ears" = "Kuping";
+"armor_zone_nape" = "Leher";
+"armor_zone_chest" = "Dada";
+"armor_zone_stomach" = "Perut";
+"armor_zone_left_arm" = "Tangan Kiri";
+"armor_zone_right_arm" = "Tangan Kanan";
+"armor_zone_left_leg" = "Kaki Kiri";
+"armor_zone_right_leg" = "Kaki Kanan";
+"armor_mat_ceramic" = "Keramik";
+"armor_mat_armored_steel" = "Pelindung Baja";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Digabungkan";
+"armor_mat_aluminum" = "Aluminium";
+"armor_mat_glass" = "Kaca";
+"armor_mat_titanium" = "Titanium";
+
+"armor_type" = "Genis";
+"armor_material" = "Material";
+"armor_class" = "Kelas";
+"armor_points" = "Ketahanan";
+"armor_zones" = "Zona";
+"penalties" = "Penalti";
+"speed_penalty" = "Kecepatan";
+"turn_speed_penalty" = "Kecepatan Belok";
+"ergo_penalty" = "Ergonomis";
+
+"penetration" = "Penetrasi";
+"damage" = "Kerusakan";
+"armor_damage" = "Kerusakan Pelindung Tubuh";
+"frag_chance" = "Kesempatan Fragmentasi";
+
+"explore" = "Jelajah";
+"compare" = "Perbandingan";
+"compare_performance" = "Perbandingan Kinerja";
+"dps_calc" = "Kalkulator DPS";
+"kill_time_calc" = "Kalkulator Waktu Membunuh";
+
+// MARK: - Medical
+"damage" = "Kerusakan";
+"contusion" = "Memar";
+"fracture" = "Patah Tulang";
+"pain" = "Sakit";
+"medkit" = "Medkit";
+"painkiller" = "Penawar Rasa Sakit";
+"accessory" = "Aksesoris";
+"stimulator" = "Stimulator";
+"use_time" = "Waktu yang digunakan";
+"effect_duration" = "Durasi Efek";
+"use_count" = "# yang digunakan";
+"hp_resource" = "Total HP";
+"removes_bloodloss" = "Hapus Kehilangan Darah";
+"removes_contusion" = "Hapus Memar";
+"removes_fracture" = "Hapus Patah Tulang";
+"removes_pain" = "Hapus Sakit";
+"hydration_modifier" = "Pengubah Hidrasi";
+"energy_modifier" = "Pengubah Energi";
+
+// MARK: - Throwables
+"throwable_frag" = "Frag";
+"throwable_flash" = "Flash";
+"throwable_smoke" = "Asap";
+"fuse_time" = "Waktu Pencetus";
+"explosion_radius_min" = "Jarak Min Ledakan";
+"explosion_radius_max" = "Jarak Max Ledakan";
+"fragmentation_count" = "Jumlah Fragmen";
+
+// MARK: - Melee
+"damage" = "Kerusakan";
+"rate" = "Rata-Rata";
+"range" = "Jarak";
+
+"stab" = "Tusuk";
+"stab_dmg" = "Kerusakan Tusukan";
+"stab_rate" = "Rata-Rata Tusukan";
+"stab_range" = "Jarak Stab";
+
+"slash" = "Menggorok";
+"slash_dmg" = "Kerusakan Menggorok";
+"slash_rate" = "Rata-Rata Menggorok";
+"slash_range" = "Jarak Menggorok";
+
+// MARK: - Posts (CHECK AGAIN!)
+"ballistics_title" = "Pelindung Tubuh & Balistik: Dasar-Dasar";
+"ballistics_body_1" = "Sistem balistik di Escape from Tarkov adalah sebuah kotak hitam yang hanya beberapa orang telah melihat bagian dalamnya. Karena kompleksitas formula yang digunakan untuk menghitung hal-hal seperti peluang penetrasi permukaan, sudut memantul, dan kerusakan pada baju pelindung dan tubuh pemain, serta elemen berbasis RNG, ada perbedaan yang sering tak terlihat dalam waktu untuk membunuh ketika membandingkan pemain tingkat tinggi yang sepenuhnya diarahkan mengenakan peralatan akhir permainan terbaik untuk pemain level 1 yang memegang tidak lebih dari pistol entry-level. Ditambah dengan jaringan yang terkenal dan masalah kinerja, bug, dan jumlah pemain yang semakin meningkat dengan pemain epik, ambiguitas sistem yang paling penting dari permainan ini hanya berfungsi untuk memperkuat kebingungan dan frustrasi baik pemain baru maupun veteran setiap hari nya.";
+"ballistics_body_2" = "Dimulai dengan pelindung tubuh, bagaimana cara kerjanya dan apa yang harus Anda ketahui? Di luar ketersediaan dan harga, ada lima hal penting yang harus Anda pertimbangkan ketika memilih pelindung tubuh yang akan dibeli, dijual, diperbaiki, dilengkapi, atau dibuang - kelas, daya tahan, zona perlindungan, bahan, dan penalti.";
+"ballistics_body_2_1_title" = "1. Kelas Pelindung Tubuh";
+"ballistics_body_2_1" = "Setiap komponen, dari pelindung tubuh hingga attachment helm balistik, memiliki kelas tertentu. Kelas pelindung tubuh, menurut pendapat saya, adalah aspek paling penting. Sederhananya, kelas pelindung tubuh mewakili seberapa efektif pelindung tersebut dalam menghentikan proyektil peluru dengan berbagai tingkat efektivitas balistik. Saat ini, kelas pelindung tubuh berkisar dari 1 hingga 6, dan seperti yang Anda duga, semakin tinggi angkanya semakin baik.\n\nLevel 1 pelindung mampu melindungi Anda dari hal-hal seperti refleksi peluru, pecahan peluru, dan pistol peluru yang menembus tanpa pistol-berkaliber atau buckshot. Pelindung Level 6 mampu melindungi Anda dari sebagian besar proyektil hingga dan bahkan termasuk putaran kaliber terbesar dalam game. Saya memilih kata 'mampu' di sini dengan sengaja, karena setiap dampak balistik melibatkan berbagai tingkat peluang acak.\n\nKetika menyangkut balistik dalam Escape from Tarkov, tidak ada yang dijamin dan hal-hal yang kita alami kadang-kadang tampak mustahil atau tidak masuk akal. Jadi, apa artinya ini semua? Pelindung tubuh apa yang akan melindungi saya dari proyektil apa? Itu pertanyaan rumit yang akan saya bahas lebih rinci ketika saya membahas secara spesifik terkait dampak balistik.";
+"ballistics_body_2_2_title" = "2. Daya Tahan";
+"ballistics_body_2_2_1" = "Ketika berbicara tentang daya tahan pelindung tubuh, penting untuk dicatat bahwa spesifikasi telah berubah beberapa kali dan, tentu saja, dapat diubah oleh BSG kapan saja di masa depan. Hal penting yang perlu diketahui tentang daya tahan pelindung adalah kemampuannya untuk melindungi pemakai tergantung pada nilai nya dibandingkan dengan nilai daya tahan maksimum ketika masih baru.";
+"ballistics_body_2_2_2" = "Sebagai contoh, jika pelindung dimulai dengan daya tahan 50 menggambarkan nilai perlindungan terbaik, proteksi terbaik tentu saja ketika nilainya 50/50. Bagian yang kurang jelas adalah bahwa setiap pelindung tubuh yang rusak dan belum diperbaiki, seperti pelindung tubuh bernilai 40/50, sama efektifnya untuk melindungi Anda saat bernilai 40/40.";
+"ballistics_body_2_2_3" = "Mengetahui nilai daya tahan maksimum asli untuk set pelindung tubuh yang berbeda, atau melihat level daya tahan saat memeriksa item, merupakan kebiasaan penting untuk dilakukan. Sering kali Anda akan menemukan pelindung tubuh dengan kelas yang lebih rendah daripada pelindung tubuh Anda saat ini, tetapi jika pelindung Anda saat ini rusak parah atau telah diperbaiki berkali-kali, Anda dapat meningkatkan peluang pelindung tubuh untuk menyelamatkan hidup Anda jika Anda beralih ke pelindung kelas bawah dengan persentase ketahanan saat ini yang lebih tinggi. Memiliki pemahaman yang kuat tentang perlindungan umum untuk kelas pelindung yang berbeda, nilai daya tahan, dan sifat penetrasi peluru sebenarnya dapat sangat berharga dalam berbagai situasi pertempuran. Lihat Kalkulator Kerusakan untuk mulai merasakan bagaimana semuanya bekerja!";
+"ballistics_body_2_3_title" = "3. Zona Perlindungan";
+"ballistics_body_2_3" = "Tidak banyak detail dalam topik ini, selain Anda perlu mengingat satu peraturan sederhana: Pelindung tidak melindungi apa yang tampaknya terlihat dilindungi! Contoh nya adalah Gen4 Full Protection pelindung tubuh vs. Gen4 Assault Kit. Pelindung tubuh terlihat sepertinya menutupi lebih banyak tubuh Anda, tetapi melindungi bagian tubuh Anda persis sama dengan assault kit karena memiliki zona perlindungan yang sama. Perhatikan pada zona yang dilindungi!";
+"ballistics_body_2_4_title" = "4. Material";
+"ballistics_body_2_4" = "Setiap pelindung tubuh memiliki bahan yang berbeda. Saat ini, bahan tidak memiliki efek penting pada kemampuan perlindungan pelindung tubuh, sebaliknya bahan pelindung tubuh menjadi relevan ketika diperbaiki. Beberapa material dapat diperbaiki dengan sangat efisien dan murah, sementara yang lain kehilangan daya tahan yang signifikan saat diperbaiki dan seringkali harganya lebih mahal dari biaya asli pelindung!";
+"ballistics_body_2_5_title" = "5. Penalti";
+"ballistics_body_2_5" = "Secara umum, perlindungan tambahan dikenakan biaya, dan biaya ini bisa bersifat finansial, juga praktis. Setiap potongan pelindung tubuh dilengkapi dengan satu set penalti. Beberapa memperlambat gerakan Anda, beberapa memperlambat kecepatan belok Anda, dan bahkan keseluruhan ergonomi Anda, yang mempengaruhi kecepatan di mana Anda membidik sasaran, tingkat kehilangan stamina, dan bahkan cara jalan karakter Anda saat bergerak perlahan atau membidik. Beberapa perlindungan kepala dapat membatasi pendengaran Anda dalam beberapa cara, dan bahkan mengaburkan penglihatan Anda. Ini adalah situasi yang harus Anda pertimbangkan ketika memutuskan apakah Anda ingin membeli set pelindung tubuh yang lebih mahal atau helm Killa. Pelindung tubuh dan helm mana yang layak? Itu keputusan Anda!";
+"ballistics_body_3_title" = "Ringkasan";
+"ballistics_body_3" = "Sistem balistik dalam Escape from Tarkov sangat kompleks dan membutuhkan sedikit pengalaman dan pengetahuan untuk dapat digunakan untuk keuntungan Anda. Video pelindung tubuh dan Balistik di atas menjelaskan beberapa konsep ini secara lebih rinci, jadi pastikan untuk memeriksanya jika Anda tertarik mendengar lebih banyak tentang topik tersebut. Titi DJ!";
+
+"health_title" = "PMC saya Sehatan & Status";
+"health_body_1" = "Informasi ini akan segera hadir™";
+
+"upcoming_body_1" = "Saya memiliki begitu banyak fitur luar biasa yang direncanakan untuk aplikasi ini sehingga saya dapat menunggu untuk membangunnya untuk komunitas! Peta interaktif, modding senjata, panduan pencarian, lebih banyak item dan kalkulator, info trader, rincian keterampilan, dan banyak lagi! Saya berencana untuk merilis fitur secara konsisten, tetapi saya ingin mendapatkan versi 1.0 dikirimkan kepada kalian sesegera mungkin untuk mulai mengukur minat dan mengumpulkan umpan balik. Pengembangan Android dan dukungan web sedang berlangsung, periksa kembali untuk pembaruan segera!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Kommunitas";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Hukum dan lain-lain";
+"attributions_translations" = "Terjemahan";
+
+"attributions_api_descr" = "Proyek ini tidak akan mungkin terjadi tanpa kerja developer yang dilakukan oleh Morphy pada Database Tarkov dan API yang mendasarinya.";
+"attributions_nofam_descr" = "Pahlawan tanpa tanda jasa di komunitas EFT, pencipta bagan amunisi, dan kolaborator pada kalkulator balistik dan informasi terkait, Duta Amunisi, Baron Balistik, Profesor Penetrasi!";
+"attributions_willerz_descr" = "Apresiasi kepada homeboy saya karena memberikan beberapa screenshots berkualitas epik yang dia berikan kepada saya untuk digunakan dalam aplikasi ini. Dia juga kebetulan menjadi salah satu pemain terbaik di dunia.";
+"attributions_community_descr" = "Apresiasi untuk komunitas saya di Discord untuk semua kerja keras mengedit foto-foto indah yang digunakan dalam aplikasi ini!";
+"attributions_translations_descr" = "Semua terjemahan dilakukan oleh komunitas yang menyumbangkan waktu dan upaya mereka. Semua orang di seluruh dunia menghargai kerja keras Anda!";
+"attributions_bsg_descr" = "Terima kasih khusus kepada Nikita atas dukungannya terhadap aplikasi ini, dan kepada semua orang di BSG atas kerja keras dan dedikasi mereka dalam first-person shooter terbaik sepanjang masa.";
+"attributions_misc_descr" = "Ikon media sosial oleh Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) lisensi oleh CC. Ikon 'Brain' oleh Sergey Patutin dari Noun Project (https://thenounproject.com/bdesign.by/) lisensi oleh CC.";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies telah bergabung dengan pertempuran!";

@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Igen";
+"no" = "Nem";
+"ok" = "Rendben";
+"done" = "Befejezve";
+"soon" = "Hamarosan™";
+"coming_soon" = "Hamarosan™ érkezik";
+"unknown" = "Ismeretlen";
+"type" = "Típus";
+"continue" = "Folytatás";
+"veritas" = "Veritas";
+"required" = "Szükséges";
+
+// MARK: - Filter/sort/compare
+"compare" = "Összehasonlítás";
+"name" = "Név";
+"save" = "Mentés";
+"recommended" = "Ajánlott";
+"similar" = "Hasonló";
+"all" = "Összes";
+"compare_with" = "Hasonlítás a következővel...";
+
+// MARK: - More / Attributions
+"about" = "A Battle Buddyról";
+"dev_by" = "Fejlesztve Veritas által";
+"dev_support" = "Szeretnéd támogatni a fejlesztést?";
+"watch_ad" = "Nézz meg egy reklámot";
+"enable_banner_ads" = "Reklámok engedélyezése";
+"view_on_github" = "Megtekintés Github-on";
+"rate_this_app" = "Értékeld az alkalmazást";
+"attributions" = "Tulajdonságok";
+"check_out_team" = "Nézd meg a csapatot";
+"team" = "A Csapat";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Közösségi oldalak";
+"music" = "A zenéim";
+"website_error" = "Nem sikerült betölteni a tartalmat. Bizonyosodj meg abban, hogy a legújabb elérhető verzió van letöltve a készülékeden.";
+"live_now" = "Élő adásban most!";
+"feedback_title" = "Visszajelzésed, esetleg ötleted van?";
+"feedback_subtitle" = "Csatlakozz a Discord szerverünkhöz!";
+"upcoming_features" = "Érkező újdonságok";
+
+"twitter_description" = "Értesülj minden újdonságról!";
+"twitch_description" = "Nézz élőben Twitch-en";
+"discord_description" = "Csatlakozz a Discord közösségünkhöz!";
+"youtube_description" = "Nézz Youtube-on!";
+"instagram_description" = "Instagram oldalam tartalma:";
+"soundcloud_description" = "Hallgasd a zenéimet SoundCloud-on!";
+"spotify_description" = "Hallgass Spotify-on!";
+"website_description" = "Több információ Veritas-ról";
+
+// MARK: - Tabs
+"items" = "Tárgyak";
+"learn" = "Tanulás";
+"more" = "Több";
+"search" = "Keresés";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Lőszerek";
+"main_menu_armor" = "Páncélzat";
+"main_menu_ballistics" = "Ballisztika";
+"main_menu_firearms" = "Lőfegyverek";
+"main_menu_medical" = "Orvosságok";
+"main_menu_melee" = "Ütőfegyverek";
+"main_menu_throwables" = "Gránátok";
+"main_menu_health_calc" = "Sebzés számláló";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Lőfegyver típusok";
+"calibers" = "Kaliberek";
+
+// MARK: - Calculators
+"pen_chance" = "Átütési esély";
+"no_armor_selected" = "Nincs kiválasztott páncélzat";
+"no_ammo_selected" = "Nincs kiválasztott lőszer";
+"select_ammo" = "Válassz ki lőszertípust";
+"select_armor" = "Válassz ki páncélzatot";
+"pen_chance_help_title" = "Átütési esély számláló";
+"pen_chance_help_message" = "Ez az eszköz kiszámolja az esélyt arra, hogy a kiválasztott lőszer átviszi-e a kiválasztott páncélt. Amint kiválasztottál egy lőszertípust és egy páncélt, a csúszkát használva szimulálhatod a páncél használódottságát, hogy megtapasztalhasd eltérő lőszerek hatékonyságát külömböző szintű elhasználódottság között!";
+
+"health_calc_title" = "Sebzés számláló";
+"total_hp" = "Összes életerő";
+
+"body_zone_head" = "Fej";
+"body_zone_thorax" = "Mellkas";
+"body_zone_stomach" = "Gyomor";
+"body_zone_right_arm" = "Jobb kéz";
+"body_zone_left_arm" = "Bal kéz";
+"body_zone_right_leg" = "Jobb láb";
+"body_zone_left_leg" = "Bal láb";
+
+// MARK: - Items
+"armor" = "Páncélok";
+"helmets" = "Sisakok";
+"ballistics" = "Ballisztika";
+"health" = "Életerő";
+"firearms" = "Lőfegyverek";
+"ammunition" = "Lőszerek";
+"body_armor" = "Páncélzat";
+"medical_items" = "Orvosi tárgyak";
+"throwables" = "Gránátok";
+"healing_items" = "Orvosságok";
+"pain_management" = "Fájdalom kezelés";
+"status_management" = "Státusz kezelés";
+"stims" = "Stimulánsok";
+"grenades" = "Gránátok";
+"properties" = "Tulajdonságok";
+"performance" = "Teljesítmény";
+"ergonomics" = "Ergonómia";
+"ergo" = "Ergo";
+"vertical_recoil" = "Függőleges visszarúgás";
+"horizontal_recoil" = "Vízszintes visszarúgás";
+"recoil" = "Visszarúgás";
+
+// MARK: - Weapons
+"weapon_class" = "Osztály";
+"assault_rifle" = "Gépkarabély";
+"assault_carbine" = "Gépkarabély";
+"sniper_rifle" = "Mesterlövész Puska";
+"designated_marksman_rifle" = "DMR";
+"pistol" = "Pisztoly";
+"shotgun" = "Sörétes puska";
+"sub_machine_gun" = "Géppisztoly";
+"machine_gun" = "Géppuska";
+"caliber" = "Kaliber";
+"fire_rate" = "Tűzgyorsaság";
+"effective_range" = "Hatékony táv";
+"fold_or_retract" = "Behajthatóság";
+"retractable" = "Behajtható";
+"build_wizard" = "Építő varázsló";
+"gun_build_custom" = "Egyedi";
+"gun_build_recoil" = "Minimális rúgás";
+"gun_build_ergo" = "Maximális ergonómia";
+"gun_build_random" = "Véletlenszerű";
+"fire_mode" = "Tüzelési mód";
+"fire_modes" = "Tüzelési módok";
+"fire_mode_semi" = "Félautomata";
+"fire_mode_auto" = "Teljesen automata";
+"fire_mode_burst" = "Sorozat lövés";
+"fire_mode_semi_short" = "Fél";
+"fire_mode_auto_short" = "Automata";
+"fire_mode_burst_short" = "Sorozat";
+"action" = "Akció";
+"action_type_pump" = "Pumpás működtetésű";
+"action_type_bolt" = "Reteszfelhúzással működő";
+"action_type_pump_short" = "Pumpás";
+"action_type_bolt_short" = "Felhúzós";
+"build" = "Építés";
+"build_this_gun" = "Építsd meg ezt a fegyvert";
+
+"compare_preset_semi_auto_rifle" = "Félautomata puskák";
+"compare_preset_full_auto_rifles" = "Automata puskák";
+"compare_preset_rifles_caliber_match" = "Puskák egyező kaliberrel";
+"compare_preset_rifles" = "Puskák";
+"compare_preset_full_auto_caliber_match" = "Automata puskák egyező kaliberrel";
+"compare_preset_semi_auto_pistols" = "Félautomata pisztolyok";
+"compare_preset_full_auto_pistols" = "Automata pisztolyok";
+"compare_preset_pistols_caliber_match" = "Pisztolyok egyező kaliberrel";
+"compare_preset_pistols" = "Pisztolyok";
+"compare_preset_manual_shotguns" = "Manuális sörétesek";
+"compare_preset_shotguns" = "Sörétesek";
+"compare_preset_smgs_caliber_match" = "Géppisztolyok egyező kaliberrel";
+"compare_preset_smgs" = "Géppisztolyok";
+"compare_preset_bolt_snipers" = "Felhúzós mesterlövész puskák";
+"compare_preset_snipers_and_dmrs" = "Mesterlövészek és egyéb puskák";
+"compare_preset_dmrs" = "DMR-ek";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Kapcsolódó fegyverek";
+"subsonic" = "Szubszónikus";
+"tracer" = "Nyomjelző";
+"muzzle_velocity" = "Csőtorkollat sebesség (m/mp)";
+"compatible_firearms" = "Kompatibilis fegyverek";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "mp";
+
+// MARK: - Armor
+"armor_class_0" = "Nincs";
+"armor_class_1" = "1-es Osztályzat";
+"armor_class_2" = "2-es Osztályzat";
+"armor_class_3" = "3-mas Osztályzat";
+"armor_class_4" = "4-es Osztályzat";
+"armor_class_5" = "5-ös Osztályzat";
+"armor_class_6" = "6-os Osztályzat";
+"armor_type_body" = "Testpáncél";
+"armor_type_helmet"= "Sisak";
+"armor_type_visor" = "Szemvédő";
+"armor_type_attachment" = "Tartozék";
+"armor_zone_top" = "Fejtető";
+"armor_zone_eyes" = "Szemek";
+"armor_zone_jaws" = "Száj";
+"armor_zone_ears" = "Fülek";
+"armor_zone_nape" = "Tarkó";
+"armor_zone_chest" = "Mellkas";
+"armor_zone_stomach" = "Gyomor";
+"armor_zone_left_arm" = "Bal kéz";
+"armor_zone_right_arm" = "Jobb kéz";
+"armor_zone_left_leg" = "Bal láb";
+"armor_zone_right_leg" = "Jobb láb";
+"armor_mat_ceramic" = "Kerámia";
+"armor_mat_armored_steel" = "Páncélozott acél";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Összetett";
+"armor_mat_aluminum" = "Alumínium";
+"armor_mat_glass" = "Üveg";
+"armor_mat_titanium" = "Titánium";
+
+"armor_type" = "Típus";
+"armor_material" = "Anyag";
+"armor_class" = "Osztályzat";
+"armor_points" = "Tartósság";
+"armor_zones" = "Zónák";
+"penalties" = "Negatívumok";
+"speed_penalty" = "Sebesség";
+"turn_speed_penalty" = "Fordulási sebesség";
+"ergo_penalty" = "Ergonómia";
+
+"penetration" = "Átütőerő";
+"damage" = "Sebzés";
+"armor_damage" = "Páncél sebzés";
+"frag_chance" = "Repeszedési esély";
+
+"explore" = "Felfedezés";
+"compare" = "Összehasonlítás";
+"compare_performance" = "Teljesítmény összehasonlítása";
+"dps_calc" = "Másodpercenkénti sebzés számláló";
+"kill_time_calc" = "Ölésidő számláló";
+
+// MARK: - Medical
+"damage" = "Sebzés";
+"contusion" = "Ütődés";
+"fracture" = "Törés";
+"pain" = "Fájdalom";
+"medkit" = "Orvosság";
+"painkiller" = "Fájdalomcsillapító";
+"accessory" = "Tartozék";
+"stimulator" = "Stimuláns";
+"use_time" = "Használati idő";
+"effect_duration" = "Hatásidő";
+"use_count" = "Hányszor használható:";
+"hp_resource" = "Életerő mennyiség";
+"removes_bloodloss" = "Elállítja a vérzést";
+"removes_contusion" = "Eltávolítja az ütődés státuszt";
+"removes_fracture" = "Eltávolítja a törés státuszt";
+"removes_pain" = "Eltávolítja a fájdalom státuszt";
+"hydration_modifier" = "Hidratáció befolyásolás:";
+"energy_modifier" = "Energia befolyásolás:";
+
+// MARK: - Throwables
+"throwable_frag" = "Repesz";
+"throwable_flash" = "Villanó";
+"throwable_smoke" = "Füst";
+"fuse_time" = "Gyújtózsinór idő";
+"explosion_radius_min" = "Minimális robbanási táv";
+"explosion_radius_max" = "Maximális robbanási táv";
+"fragmentation_count" = "Repeszmennyiség";
+
+// MARK: - Melee
+"damage" = "Sebzés";
+"rate" = "Arány";
+"range" = "Táv";
+
+"stab" = "Stab";
+"stab_dmg" = "Szúró sebzés";
+"stab_rate" = "Döfés sebzés";
+"stab_range" = "Döfés távolság";
+
+"slash" = "Slash";
+"slash_dmg" = "Vágás sebzés";
+"slash_rate" = "Vágás arány";
+"slash_range" = "Vágás távolság";
+
+// MARK: - Posts
+"ballistics_title" = "Páncélzat és ballisztikai alapok";
+"ballistics_body_1" = "A ballisztika rendszer a játékban jelenleg egy olyan dolog, melyet kevés játékos ért meg teljesen. Ez a rendszer komplexitásának köszönhető, hiszen számba veszi a felületi áthatolás esélyeit, lepattanási szögeket, és a sebzést mind a páncél, mind a játékos számára, számos véletlenszerű esélyek mellett, ezért sokszor tapasztalható eltérés az öléshez szükséges időben amikor összehasonlítunk egy teljesen felszerelt játékost egy teljesen csupasszal. Ezt összepárosítjuk a hálozati hibákkal, teljesítmény hézagokkal, és rájövünk, hogy a rendszer kétértelműsége a mai napig zavarba hozza mind a kezdő, mind a veterán játékosokat.";
+"ballistics_body_2" = "Kezdjük a testpáncélzattal. Hogy működik, és mit kell tudnod róla? 5 Fontos dolgot kell figyelembe venned amikor szóba jön hogy milyen páncélt tartunk meg, adunk el, vagy javítunk meg. Ezek pedig:Az osztályzat, a tartóssága, a védelmi zónái, az anyaga, és a negatív tulajdonságai.";
+"ballistics_body_2_1_title" = "1. Páncélzat osztályok";
+"ballistics_body_2_1" = "Minden páncélozott elemnek a testpáncéltól a sisakig megvan az osztályzata, mely az effektívségét jelenti bizonyos ballisztikai tulajdonságú töltények ellen. Jelenleg a játékban 1-6-os osztályozásig vannak páncélok, természetesen minnél nagyobb az értékelés, annál hatékonyabb. Míg az 1-es értékelésű páncélzat megvédhet repeszektől, lepattant töltényektől, és nem páncéltörő tulajdonságokkal rendelkező pisztolytöltényektől vagy sörétektől, a 6-os osztályú páncélzat megvédhet a legnagyobb kaliberektől is a játékban. A feltételes mód használata itt pedig fontos, hiszen a páncélátütés folyamata egy komplex rendszer melyben kulcsfontosságú a szerencse, így nem minden eset egyezhet meg eredmény szerint. Melyik páncélzat véd meg melyik tölténytől? Na ez egy komplikált kérdés, később bele megyünk a részletekbe amikor megbeszéljük  a ballisztikai becsapódáshoz tartozó jellemzőket.";
+"ballistics_body_2_2_title" = "2. Tartósság";
+"ballistics_body_2_2_1" = "Amikor páncéltartósságról van szó, fontos figyelembe venni azt hogy a játék fejlesztése során sokszor változott ez a rendszer, és még változás témája lehet a fejlesztés során. A fontos tudnivaló a páncél tartósságáról, a következő: A páncél védelmezési képessége számít a jelenlegi tartósságáról az eredetihez képest, amely a teljes. (Nem a megjavított páncél teljes értéke, hiszen ez csökken minden javítással.)  ";
+"ballistics_body_2_2_2" = "Például, ha egy páncélzat 50 tartósságponttal kezd, akkor nyújt a legtöbb védelmet ha 50/50 tartósságon van. Viszont egy 40/50 tartóssággal rendelkező páncél teljesen egyező védelmet nyújt egy, már egyszer megjavított 40/40 ponttal rendelkező páncélszettel. ";
+"ballistics_body_2_2_3" = "Ha tisztában vagy a páncélzat rendszer működésével, és bizonyos páncélok értékeivel, kulcsfontosságú döntéseket tudsz hozni a játékban, mint például lecserélni az elhasználódott/többször javított magasabb osztályú páncélodat egy alacsonyabb osztályú, de nagyobb tartóssággal rendelkező páncélra, amely megnövelheti a túlélési esélyeidet. Több információért és tesztelésért próbáld ki a Sebzés számláló felületet!";
+"ballistics_body_2_3_title" = "3. Védelmi zónák";
+"ballistics_body_2_3" = "Nincs sok részlet ebben a témában amit szükséges lenne kiemelni, viszont 1 dolog fontos:A páncél ami rajtad van, nem minden esetben védi meg azt a területet, amit lefed! A legjobb példa erre a Gen4 Full Páncél. Vizuálisan úgy néz ki, hogy sokkal többet véd a Gen4 Assault verziónál, viszont ez nem így van, a két páncél teljesen ugyanannyit véd a testedből. Figyelj oda minden páncél védett területeire, hiszen egy 0-ra lőtt gyomor vagy kéz óriási hátrányt jelenthet, így ha elérhető, legtöbbször megéri megvenni a legtöbbet védő páncélt. ";
+"ballistics_body_2_4_title" = "4. Anyagok";
+"ballistics_body_2_4" = "Minden páncél más anyagból, vagy anyagokból áll össze. Jelenleg az eltérő anyagoknak nincs szerepe abban hogy milyen hatékony védelmezésben, inkább a javításban van. Bizonyos anyagú páncélokat drága és rossz arányban lehet megjavítani, míg más anyagúakat olcsón és effektíven lehet megjavítani, hogy minnél kevesebb tartósságot veszítsen az. Bizonyos páncélok megjavítása drágább lehet, mint egy új szett megvásárlása.";
+"ballistics_body_2_5_title" = "5. Büntetések/Negatívumok";
+"ballistics_body_2_5" = "A legtöbb, ha nem az összes extra védelem mindíg magával hoz negatívumokat, mely lehet pénzügyi, és tulajdonság befolyásoló. Minden páncélnak megvan a saját negatívuma. Bizonyos páncélok lelassítanak mozgásügyileg, míg mások a fordulási sebességedet lassítják le, de akár az ergonómiát is csökkenthetik, így lassabban tudsz célozni a fegyvereddel, és több állóképességet veszíthetsz célzás közben. Sisakoknál, bizonyos sisakok tompíthatják a hallásodat, melyet kompenzálhatsz fejhallgató viselésével. Fontos figyelembe venni ezeket a negatívumokat, és ezeknek megfelelően összeállítani az ideális felszerelést amikor páncélzat jön szóba. ";
+"ballistics_body_3_title" = "Összegzés";
+"ballistics_body_3" = "A játék ballisztika rendszere elképesztően komplex és sok tapasztalatot igényel ahhoz hogy az előnyödre tudd fordítani ezt. A Páncélzat és A ballisztika videó megmagyarázza ezeket a témákat részletesebben, így ha érdekel a téma, és szívesen megtanulnád részletesebben, nézd meg ezeket a videókat!";
+
+"health_title" = "A PMC-d Életereje és Státusza";
+"health_body_1" = "Erről az információ hamarosan érkezik™";
+
+"upcoming_body_1" = "Rendkívül sok hasznos eszközt tervezek még beépíteni ebbe az alkalmazásba, és alig várom hogy elkészítsük ezt a közösséggel! Ilyenek például az interaktív pályák, fegyver testreszabás, küldetés kalauzok, több tárgyak és számlálók, infó a kereskedőkről, a képességek levezetése, és több! Folyamatossággal tervezek frissítéseket kiadni, de szerettem volna az 1.0 Verziót minnél hamarabb eljutattni hozzátok hogy érdeklődést keltsen és visszajelzést tudjak szerezni tőletek. Android és Weboldalas támogatás már úton van, nézz vissza frissítésekért hamarosan!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Közösség";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Szerzői és jogi információ";
+"attributions_translations" = "Fordítás";
+
+"attributions_api_descr" = "Ez a projekt nem lett volna elképzelhető Morphy kiváló fejlesztői munkássága nélkül a Tarkov Adatbázison, és az API-n.";
+"attributions_nofam_descr" = "A Tarkov közösség hőse, a muníció táblázat készítője, résztvevő a sebzésszámláló elkészítésében és az ahhoz szükséges információ megszerzésében, a Muníció Nagykövetje, a Penetráció Professzora!0";
+"attributions_willerz_descr" = "Sok hála a barátomnak aki gyönyörű fényképeihez adott használati jogot. Véletlenül ő az egyik legjobb Escape From Tarkov játékos.";
+"attributions_community_descr" = "Ezer köszönet a Discord közösségemnek a sok fáradtságért és nehéz munkájáért, az alkalmazásban látható fényképek elkészítéséért és szerkesztéséért.";
+"attributions_translations_descr" = "Az összes fordítás a közösség tagjai által készültek, akik a saját idejüket és munkájukat áldozták fel az alkalmazásért. Mindenki a föld körül hálás a kemény munkádért!";
+"attributions_bsg_descr" = "Speciális köszönet Nikitának és az általa nyújtott támogatásnak az alkalmazás felé, és minden BSG munkatársnak a kemény munkájukért és elszántságukért, hogy elkészítsék minden idők legjobb FPS játékát.";
+"attributions_misc_descr" = "Közösségi média ikonok készítője Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva)Licenszelve CC alatt. 'Brain' ikon Sergey Patutin által a Noun Project-ből (https://thenounproject.com/bdesign.by/) Licenszelve CC. alatt.";
+
+// Analytics
+"total_users_count" = "%@ Játékos csatlakozott a Battle Buddies-hoz!";
