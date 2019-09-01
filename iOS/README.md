@@ -16,14 +16,14 @@
 - [ ] Instrument memory and processing performance
 - [ ] Client update user count
 - [ ] Server update user count
-- [ ] iPad support for each screen
+- [x] iPad support for each screen
     - [x] Main menu
     - [x] Search results
     - [x] Item lists
     - [x] Blog posts
     - [x] Base stack view
     - [ ] Pen chance calc
-    - [ ] Health Calc
+    - [x] Health Calc
     - [x] Item Details
     - [x] Comparisons
 - [x] Ensure watch an ad - handle not loaded
