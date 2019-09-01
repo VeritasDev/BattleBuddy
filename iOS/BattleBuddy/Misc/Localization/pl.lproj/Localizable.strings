@@ -1,4 +1,4 @@
-6// MARK: - General
+// MARK: - General
 "yes" = "Tak";
 "no" = "Nie";
 "ok" = "OK";
@@ -24,7 +24,7 @@
 "about" = "O Battle Buddy";
 "dev_by" = "Stworzony przez Veritas";
 "dev_support" = "Chcesz wspomóc rozwój?";
-"watch_ad" = "Obejrzyj reklamę";6
+"watch_ad" = "Obejrzyj reklamę";
 "enable_banner_ads" = "Włącz banery reklamowe";
 "view_on_github" = "Otwórz GitHub";
 "rate_this_app" = "Oceń Battle Buddy";
