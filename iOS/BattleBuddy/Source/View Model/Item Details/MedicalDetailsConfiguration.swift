@@ -103,7 +103,7 @@ class MedicalDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
 
         let cell = tableView.cellForRow(at: indexPath)
 
-        let dbManager = DependencyManager.shared.databaseManager
+        let dbManager = DependencyManagerImpl.shared.databaseManager
         switch cell {
         case compareCell:
             self.delegate?.showLoading(show: true)

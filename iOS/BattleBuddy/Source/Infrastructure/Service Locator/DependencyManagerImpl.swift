@@ -8,14 +8,13 @@
 
 import UIKit
 
-class DependencyManager {
-    static let shared = DependencyManager()
+class DependencyManagerImpl: DependencyManager {
+    static let shared: DependencyManager = DependencyManagerImpl()
 
     let sessionManager: SessionManager
     let databaseManager: DatabaseManager
     let httpRequestor: HttpRequestor
     let firebaseManager: FirebaseManager
-    let statsManager: StatsManager
     let prefsManager: PreferencesManager
     let twitchManager: TwitchManager
     let feedbackManager: FeedbackManager
@@ -35,7 +34,7 @@ class DependencyManager {
         metadataManager = firebase
 
         httpRequestor = AlamofireManager()
-        statsManager = StatsManagerImpl()
+
         prefsManager = PreferencesManager()
         twitchManager = TwitchManager()
         feedbackManager = FeedbackManager()

@@ -17,7 +17,7 @@ enum FirearmBuildPreset {
 }
 
 class FirearmBuild {
-    let databaseManager = DependencyManager.shared.databaseManager
+    let databaseManager = DependencyManagerImpl.shared.databaseManager
     let firearm: Firearm
     let preset: FirearmBuildPreset
     let rootSlots: [ModdableSlot]

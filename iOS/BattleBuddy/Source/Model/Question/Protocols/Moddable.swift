@@ -128,9 +128,9 @@ extension Moddable {
         //        for index in 0..<slots.count {
         //            let attachedToSlot = slots[index].attach(mod: mod, toSlot: destinationSlot)
         //            if let attachedToSlot = attachedToSlot {
-        //                DependencyManager.shared.databaseManager.realm.beginWrite()
+        //                DependencyManagerImpl.shared.databaseManager.realm.beginWrite()
         //                slots[index] = attachedToSlot
-        //                try! DependencyManager.shared.databaseManager.realm.commitWrite()
+        //                try! DependencyManagerImpl.shared.databaseManager.realm.commitWrite()
         //                return true
         //            }
         //        }

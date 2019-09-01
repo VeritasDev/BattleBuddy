@@ -55,7 +55,7 @@ struct SearchResultsPreviewConfiguration: ItemPreviewConfiguration {
 }
 
 struct FirearmPreviewConfiguration: ItemPreviewConfiguration {
-    let dbManager = DependencyManager.shared.databaseManager
+    let dbManager = DependencyManagerImpl.shared.databaseManager
     let title: String = Localized("firearms")
     var items: [Displayable]
     let scrollDirection: UICollectionView.ScrollDirection = .vertical
@@ -65,7 +65,7 @@ struct FirearmPreviewConfiguration: ItemPreviewConfiguration {
 }
 
 struct ThrowablesPreviewConfiguration: ItemPreviewConfiguration {
-    let dbManager = DependencyManager.shared.databaseManager
+    let dbManager = DependencyManagerImpl.shared.databaseManager
     let title: String = Localized("throwables")
     var items: [Displayable]
     let scrollDirection: UICollectionView.ScrollDirection = .vertical
@@ -75,7 +75,7 @@ struct ThrowablesPreviewConfiguration: ItemPreviewConfiguration {
 }
 
 struct MeleePreviewConfiguration: ItemPreviewConfiguration {
-    let dbManager = DependencyManager.shared.databaseManager
+    let dbManager = DependencyManagerImpl.shared.databaseManager
     let title: String = Localized("main_menu_melee")
     var items: [Displayable]
     let scrollDirection: UICollectionView.ScrollDirection = .vertical
@@ -85,7 +85,7 @@ struct MeleePreviewConfiguration: ItemPreviewConfiguration {
 }
 
 struct AmmoPreviewConfiguration: ItemPreviewConfiguration {
-    let dbManager = DependencyManager.shared.databaseManager
+    let dbManager = DependencyManagerImpl.shared.databaseManager
     let title: String = Localized("ammunition")
     var items: [Displayable]
     let scrollDirection: UICollectionView.ScrollDirection = .vertical
@@ -95,7 +95,7 @@ struct AmmoPreviewConfiguration: ItemPreviewConfiguration {
 }
 
 struct ArmorPreviewConfiguration: ItemPreviewConfiguration {
-    let dbManager = DependencyManager.shared.databaseManager
+    let dbManager = DependencyManagerImpl.shared.databaseManager
     let title: String = Localized("armor")
     var items: [Displayable]
     let scrollDirection: UICollectionView.ScrollDirection = .vertical

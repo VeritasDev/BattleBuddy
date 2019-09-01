@@ -85,12 +85,12 @@ struct MainMenuItem {
             return
 
         case .throwables:
-            DependencyManager.shared.databaseManager.getAllThrowables { throwables in
+            DependencyManagerImpl.shared.databaseManager.getAllThrowables { throwables in
                 handler(BaseItemPreviewViewController(delegate: nil, config: ThrowablesPreviewConfiguration(items: throwables)))
                 return
             }
         case .melee:
-            DependencyManager.shared.databaseManager.getAllMelee { melee in
+            DependencyManagerImpl.shared.databaseManager.getAllMelee { melee in
                 handler(BaseItemPreviewViewController(delegate: nil, config: MeleePreviewConfiguration(items: melee)))
                 return
             }

@@ -55,7 +55,7 @@ final class UpcomingFeaturesPost: PostConfiguration {
 final class TraderPost: PostConfiguration {
     var title: String?
     var trader: Trader
-    let fbManager = DependencyManager.shared.firebaseManager
+    let fbManager = DependencyManagerImpl.shared.firebaseManager
 
     init(_ trader: Trader) {
         self.trader = trader

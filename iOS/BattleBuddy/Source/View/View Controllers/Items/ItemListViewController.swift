@@ -11,7 +11,7 @@ import JGProgressHUD
 
 class ItemListViewController: BaseStackViewController {
     var config: ItemListConfig
-    let dbManager = DependencyManager.shared.databaseManager
+    let dbManager = DependencyManagerImpl.shared.databaseManager
     var loaded = false
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
@@ -62,7 +62,7 @@ class ItemListViewController: BaseStackViewController {
                 self.buildStackFromConfig()
             }
         case .ammo:
-            guard let metadata = DependencyManager.shared.metadataManager.getGlobalMetadata() else { return }
+            guard let metadata = DependencyManagerImpl.shared.metadataManager.getGlobalMetadata() else { return }
             let ammoMetadata = metadata.ammoMetadata
             let orderedMetadata = ammoMetadata.sorted(by: { $0.index < $1.index })
 

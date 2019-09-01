@@ -51,7 +51,7 @@ struct DatabaseSnapshot {
     static let lastCategoryInfoPrefix = "LastDatabaseSnapshot_"
 
     static func persistedDatabaseSnapshot() -> DatabaseSnapshot? {
-        let prefsManager: PreferencesManager = DependencyManager.shared.prefsManager
+        let prefsManager: PreferencesManager = DependencyManagerImpl.shared.prefsManager
         var categories: [Category: DatabaseCategoryInfo] = [:]
         for category in Category.allCases {
             let key = keyForCategory(category)
@@ -87,7 +87,7 @@ struct DatabaseSnapshot {
     }
 
     func persistAllInfo() {
-        let prefsManager: PreferencesManager = DependencyManager.shared.prefsManager
+        let prefsManager: PreferencesManager = DependencyManagerImpl.shared.prefsManager
         for (category, info) in categories {
             let key = DatabaseSnapshot.keyForCategory(category)
             prefsManager.update(key, value: info.lastUpdatedDate.timeIntervalSince1970)

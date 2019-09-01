@@ -13,7 +13,7 @@ class FeedbackManager {
     private let launchCountThreshold: Int = 3
     private let fourMonthsInSeconds: Double = 10_368_000.0;
     private let appRatingDelayPrompt: Double = 15.0;
-    lazy var prefsManager = DependencyManager.shared.prefsManager
+    lazy var prefsManager = DependencyManagerImpl.shared.prefsManager
 
     // Require at least 3 launches before we automatically prompt users for a review, as well as
     // a 4-month minimum period in between prompts.

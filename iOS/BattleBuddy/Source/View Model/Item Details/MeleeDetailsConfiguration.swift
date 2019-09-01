@@ -74,7 +74,7 @@ class MeleeWeaponDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITab
 
         let cell = tableView.cellForRow(at: indexPath)
 
-        let dbManager = DependencyManager.shared.databaseManager
+        let dbManager = DependencyManagerImpl.shared.databaseManager
 
         switch cell {
         case compareCell:

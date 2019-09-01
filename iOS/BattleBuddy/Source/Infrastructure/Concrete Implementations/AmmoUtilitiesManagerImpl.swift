@@ -10,7 +10,7 @@ import Foundation
 
 class AmmoUtilitiesManagerImpl: AmmoUtilitiesManager {
     func caliberDisplayName(_ caliber: String) -> String {
-        let metadataManager = DependencyManager.shared.metadataManager
+        let metadataManager = DependencyManagerImpl.shared.metadataManager
         guard let metadata = metadataManager.getGlobalMetadata() else { return caliber }
         for ammo in metadata.ammoMetadata { if ammo.caliber == caliber { return ammo.displayName } }
         return caliber

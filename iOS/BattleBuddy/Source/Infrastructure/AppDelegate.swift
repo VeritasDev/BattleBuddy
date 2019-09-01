@@ -21,12 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.Theme.background
         self.window?.rootViewController = LoadingViewController()
+        defer { self.window?.makeKeyAndVisible() }
+
+        // If we're running unit tests, bail out here as we don't want any
+        // more real app-launch stuff to be processed.
+        guard NSClassFromString("XCTestCase") == nil else { return }
 
         Fabric.with([Crashlytics.self])
         ThemeManager.configureAppearance()
-        DependencyManager.shared.sessionManager.initializeSession()
-
-        self.window?.makeKeyAndVisible()
+        DependencyManagerImpl.shared.sessionManager.initializeSession()
     }
 
     // SessionDelegate
@@ -50,11 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
         self.tabBarController.setViewControllers([itemsNC, learnNC, moreNC], animated: false)
         self.window?.rootViewController = self.tabBarController
 
-        DependencyManager.shared.feedbackManager.promptForReviewIfNecessary()
+        DependencyManagerImpl.shared.feedbackManager.promptForReviewIfNecessary()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        let dependencyManager = DependencyManager.shared
+        let dependencyManager = DependencyManagerImpl.shared
         dependencyManager.twitchManager.refreshTwitchInfo()
         dependencyManager.metadataManager.updateGlobalMetadata { (globalMetadata) -> Void in }
     }

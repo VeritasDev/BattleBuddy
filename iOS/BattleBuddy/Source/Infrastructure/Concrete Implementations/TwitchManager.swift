@@ -12,7 +12,7 @@ class TwitchManager {
     private let baseUrl = "https://api.twitch.tv/helix/"
     private let headers: [String: String] = ["Client-ID": "4fgs4wy7qqlk01ju7ad7vr3skcskqi"]
     private let streamsRoute = "streams"
-    private lazy var requestor = { return DependencyManager.shared.httpRequestor }()
+    private lazy var requestor = { return DependencyManagerImpl.shared.httpRequestor }()
     private var summary = TwitchSummary()
 
     private func generateUrlWithParams(routeComponents: [String] = [], params: [String: String] = [:]) -> String {

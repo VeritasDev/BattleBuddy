@@ -192,7 +192,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
             hud.position = .center
             hud.show(in: self.view)
 
-            DependencyManager.shared.databaseManager.getAllAmmo { allAmmo in
+            DependencyManagerImpl.shared.databaseManager.getAllAmmo { allAmmo in
                 hud.dismiss(animated: false)
 
                 self.ammoOptions = allAmmo

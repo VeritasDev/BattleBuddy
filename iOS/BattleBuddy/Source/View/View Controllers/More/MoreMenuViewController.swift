@@ -15,8 +15,8 @@ struct GroupedTableViewSection {
 
 class MoreMenuViewController: BaseTableViewController, AdDelegate {
     static let iconHeight: CGFloat = 40.0
-    var adManager = DependencyManager.shared.adManager
-    let feedbackManager = DependencyManager.shared.feedbackManager
+    var adManager = DependencyManagerImpl.shared.adManager
+    let feedbackManager = DependencyManagerImpl.shared.feedbackManager
     var userCount = 0
 
     let veritasCell: BaseTableViewCell = {
@@ -135,7 +135,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     }
 
     func updateCells() {
-        userCount = DependencyManager.shared.metadataManager.getGlobalMetadata()?.totalUserCount ?? 0
+        userCount = DependencyManagerImpl.shared.metadataManager.getGlobalMetadata()?.totalUserCount ?? 0
         if userCount > 0,
             let numberString = numberFormatter.string(from: NSNumber(value: userCount)) {
             let fullString = "total_users_count".local(args: [numberString])

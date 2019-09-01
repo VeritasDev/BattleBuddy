@@ -8,6 +8,22 @@
 
 import UIKit
 
+// Mark:- Dependency Manager
+
+protocol DependencyManager {
+    static var shared: DependencyManager { get }
+    var sessionManager: SessionManager { get }
+    var databaseManager: DatabaseManager { get }
+    var httpRequestor: HttpRequestor { get }
+    var firebaseManager: FirebaseManager { get }
+    var prefsManager: PreferencesManager { get }
+    var twitchManager: TwitchManager { get }
+    var feedbackManager: FeedbackManager { get }
+    var adManager: AdManager { get }
+    var metadataManager: GlobalMetadataManager { get }
+    var ammoUtilitiesManager: AmmoUtilitiesManager { get }
+}
+
 // MARK:- Networking
 
 protocol HttpRequestor {
@@ -114,15 +130,4 @@ protocol GlobalMetadataManager {
 
 protocol AmmoUtilitiesManager {
     func caliberDisplayName(_ caliber: String) -> String
-}
-
-// MARK:- Stats
-
-struct AmmoStats {
-    let caliberDamageMap: [String: (maxPen: Ammo, maxDamage: Ammo, maxArmorDamage: Ammo)]
-}
-
-protocol StatsManager {
-    func preCacheAllStats()
-    func overallAmmoStats() -> AmmoStats
 }

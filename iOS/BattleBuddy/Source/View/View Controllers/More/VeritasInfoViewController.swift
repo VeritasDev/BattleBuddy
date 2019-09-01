@@ -40,7 +40,7 @@ class VeritasInfoViewController: BaseTableViewController {
         let musicSection = GroupedTableViewSection(headerTitle: "music".local(), cells: [spotifyCell, soundcloudCell])
         return [socialSection, musicSection]
     }()
-    lazy var twitchManager = DependencyManager.shared.twitchManager
+    lazy var twitchManager = DependencyManagerImpl.shared.twitchManager
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 

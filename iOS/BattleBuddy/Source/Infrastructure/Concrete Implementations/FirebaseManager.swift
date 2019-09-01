@@ -50,7 +50,7 @@ class FirebaseManager: NSObject {
     // TODO: Get real IDs
     private let videoAdUnit = "ca-app-pub-3940256099942544/1712485313"
 
-    private lazy var prefsManager = DependencyManager.shared.prefsManager
+    private lazy var prefsManager = DependencyManagerImpl.shared.prefsManager
     var globalMetadata: GlobalMetadata?
 
     init(sessionDelegate: SessionDelegate) {
@@ -59,7 +59,10 @@ class FirebaseManager: NSObject {
 
         super.init()
 
-        FirebaseApp.configure()
+        let filePath = Bundle.main.path(forResource: "GoogleService-Info-Prod", ofType: "plist")
+        guard let options = FirebaseOptions(contentsOfFile: filePath!)
+            else { fatalError("Couldn't load config file! I gotta make this work for staging environment... SoonTM") }
+        FirebaseApp.configure(options: options)
         GADMobileAds.sharedInstance().start(completionHandler: nil)
 
         videoAd.delegate = self
@@ -340,8 +343,14 @@ extension FirebaseManager: DatabaseManager {
 // MARK:- Session
 extension FirebaseManager: SessionManager {
     func initializeSession() {
+        print("Initializing anonymous session...")
+
         Auth.auth().signInAnonymously() { (authResult, error) in
-            if let error = error { print(error) }
+            if let error = error {
+                print("Anonymous auth failed with error: ", error)
+            } else {
+                print("Anonymous auth succeeded.")
+            }
 
             self.updateGlobalMetadata(handler: { _ in
                 self.sessionDelegate.sessionDidFinishLoading()
