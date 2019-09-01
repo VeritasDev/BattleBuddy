@@ -60,7 +60,6 @@ class MainMenuCollectionViewController: BaseCollectionViewController {
         }
     }
 
-    // TODO: Implement real scaling!
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let menuItem = menuItems[indexPath.item]
         let totalAvailableWidth = collectionView.frame.width - collectionView.contentInset.left - collectionView.contentInset.right

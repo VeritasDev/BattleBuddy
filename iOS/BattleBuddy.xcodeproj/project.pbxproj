@@ -18,7 +18,6 @@
 		2745EC5522CA29BF00CD60D6 /* LocalizationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745EC5422CA29BF00CD60D6 /* LocalizationUtils.swift */; };
 		2753FE6122ECAA3200B20DAD /* DatabaseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6022ECAA3200B20DAD /* DatabaseSnapshot.swift */; };
 		2753FE6522F0767C00B20DAD /* DependencyInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6422F0767C00B20DAD /* DependencyInterfaces.swift */; };
-		2753FE6A22F1B7CC00B20DAD /* CompatibleModStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6922F1B7CC00B20DAD /* CompatibleModStatsCell.swift */; };
 		276AFA79231B7F3B00C9DB3A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA78231B7F3B00C9DB3A /* README.md */; };
 		276AFA7B231B8BA600C9DB3A /* GoogleService-Info-Prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA7A231B8BA600C9DB3A /* GoogleService-Info-Prod.plist */; };
 		276AFA83231B919F00C9DB3A /* BattleBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276AFA82231B919F00C9DB3A /* BattleBuddyTests.swift */; };
@@ -26,7 +25,6 @@
 		276AFA9B231B982600C9DB3A /* DependencyInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6422F0767C00B20DAD /* DependencyInterfaces.swift */; };
 		276D91682310056600CD61E0 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D91672310056600CD61E0 /* AsyncOperation.swift */; };
 		276D916A2310081D00CD61E0 /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D91692310081D00CD61E0 /* BaseItem.swift */; };
-		276D916E23100C4D00CD61E0 /* Moddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D916D23100C4D00CD61E0 /* Moddable.swift */; };
 		276D917023100FE600CD61E0 /* Firearm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D916F23100FE600CD61E0 /* Firearm.swift */; };
 		276D917823102D6400CD61E0 /* FirearmEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D917723102D6400CD61E0 /* FirearmEnums.swift */; };
 		276D917A23102D6D00CD61E0 /* ItemEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D917923102D6D00CD61E0 /* ItemEnums.swift */; };
@@ -70,9 +68,7 @@
 		27BB49C722FC862B00070427 /* Twitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB49C622FC862B00070427 /* Twitch.swift */; };
 		27BB49CA22FCB02500070427 /* Strat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB49C922FCB02500070427 /* Strat.swift */; };
 		27BB49CD22FCB3A700070427 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB49CC22FCB3A700070427 /* Location.swift */; };
-		27BB49CF22FCB79000070427 /* Modding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB49CE22FCB79000070427 /* Modding.swift */; };
 		27BB49D122FCB92000070427 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB49D022FCB92000070427 /* Random.swift */; };
-		27BB4A1F22FDA0FF00070427 /* FirearmBuildSlotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB4A1E22FDA0FF00070427 /* FirearmBuildSlotCell.swift */; };
 		27BF990422C705AD003F01C5 /* BaseCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF990322C705AD003F01C5 /* BaseCardCell.swift */; };
 		27BF990A22C78328003F01C5 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF990922C78328003F01C5 /* BaseCollectionView.swift */; };
 		27BF990E22C78777003F01C5 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF990D22C78777003F01C5 /* ItemDetailsViewController.swift */; };
@@ -125,7 +121,6 @@
 		EF962C7722FB3488009BB397 /* UIKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF962C7622FB3488009BB397 /* UIKitUtils.swift */; };
 		EF962C7922FB3EEF009BB397 /* TwitchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF962C7822FB3EEF009BB397 /* TwitchManager.swift */; };
 		EF962C7B22FB64DB009BB397 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF962C7A22FB64DB009BB397 /* TeamViewController.swift */; };
-		EFABB9DE22D665A10075D17D /* CompatibleItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFABB9DD22D665A10075D17D /* CompatibleItemsViewController.swift */; };
 		EFACDBD22304832C00E3F30B /* ProblemSolvingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFACDBD12304832C00E3F30B /* ProblemSolvingViewController.swift */; };
 		EFACDBD5230488D400E3F30B /* WizardFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFACDBD4230488D400E3F30B /* WizardFlow.swift */; };
 		EFB7050822BAB2A8003E54FA /* ItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7050722BAB2A8003E54FA /* ItemFactory.swift */; };
@@ -144,7 +139,6 @@
 		EFF2FF5422D567BF00BED024 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF5322D567BF00BED024 /* BaseTableView.swift */; };
 		EFF2FF5622D567E100BED024 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF5522D567E100BED024 /* BaseTableViewCell.swift */; };
 		EFF2FF5A22D583D600BED024 /* BaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF5922D583D600BED024 /* BaseCardView.swift */; };
-		EFF2FF5D22D61DD400BED024 /* FirearmBuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF5C22D61DD400BED024 /* FirearmBuildViewController.swift */; };
 		EFF2FF6122D6407A00BED024 /* FirearmBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF6022D6407A00BED024 /* FirearmBuild.swift */; };
 		EFF327B522F8A84200673F57 /* ComparisonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF327B422F8A84200673F57 /* ComparisonCell.swift */; };
 		EFF49E0223049D2500B87BD9 /* ProblemSolvingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF49E0123049D2500B87BD9 /* ProblemSolvingFlow.swift */; };
@@ -197,7 +191,6 @@
 		2745EC5422CA29BF00CD60D6 /* LocalizationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationUtils.swift; sourceTree = "<group>"; };
 		2753FE6022ECAA3200B20DAD /* DatabaseSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseSnapshot.swift; sourceTree = "<group>"; };
 		2753FE6422F0767C00B20DAD /* DependencyInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInterfaces.swift; sourceTree = "<group>"; };
-		2753FE6922F1B7CC00B20DAD /* CompatibleModStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibleModStatsCell.swift; sourceTree = "<group>"; };
 		2753FE6B22F1C91300B20DAD /* CompatibleModsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibleModsHeaderView.swift; sourceTree = "<group>"; };
 		276AFA682319A18600C9DB3A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		276AFA692319A18700C9DB3A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -219,7 +212,6 @@
 		276AFA92231B93AA00C9DB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276D91672310056600CD61E0 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		276D91692310081D00CD61E0 /* BaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseItem.swift; sourceTree = "<group>"; };
-		276D916D23100C4D00CD61E0 /* Moddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moddable.swift; sourceTree = "<group>"; };
 		276D916F23100FE600CD61E0 /* Firearm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firearm.swift; sourceTree = "<group>"; };
 		276D917723102D6400CD61E0 /* FirearmEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirearmEnums.swift; sourceTree = "<group>"; };
 		276D917923102D6D00CD61E0 /* ItemEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEnums.swift; sourceTree = "<group>"; };
@@ -267,9 +259,7 @@
 		27BB49C622FC862B00070427 /* Twitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitch.swift; sourceTree = "<group>"; };
 		27BB49C922FCB02500070427 /* Strat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strat.swift; sourceTree = "<group>"; };
 		27BB49CC22FCB3A700070427 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		27BB49CE22FCB79000070427 /* Modding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modding.swift; sourceTree = "<group>"; };
 		27BB49D022FCB92000070427 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
-		27BB4A1E22FDA0FF00070427 /* FirearmBuildSlotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirearmBuildSlotCell.swift; sourceTree = "<group>"; };
 		27BF990322C705AD003F01C5 /* BaseCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardCell.swift; sourceTree = "<group>"; };
 		27BF990922C78328003F01C5 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		27BF990D22C78777003F01C5 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
@@ -345,7 +335,6 @@
 		EF962C7622FB3488009BB397 /* UIKitUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitUtils.swift; sourceTree = "<group>"; };
 		EF962C7822FB3EEF009BB397 /* TwitchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchManager.swift; sourceTree = "<group>"; };
 		EF962C7A22FB64DB009BB397 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
-		EFABB9DD22D665A10075D17D /* CompatibleItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibleItemsViewController.swift; sourceTree = "<group>"; };
 		EFACDBD12304832C00E3F30B /* ProblemSolvingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSolvingViewController.swift; sourceTree = "<group>"; };
 		EFACDBD4230488D400E3F30B /* WizardFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardFlow.swift; sourceTree = "<group>"; };
 		EFB7050722BAB2A8003E54FA /* ItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFactory.swift; sourceTree = "<group>"; };
@@ -364,7 +353,6 @@
 		EFF2FF5322D567BF00BED024 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		EFF2FF5522D567E100BED024 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		EFF2FF5922D583D600BED024 /* BaseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardView.swift; sourceTree = "<group>"; };
-		EFF2FF5C22D61DD400BED024 /* FirearmBuildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirearmBuildViewController.swift; sourceTree = "<group>"; };
 		EFF2FF6022D6407A00BED024 /* FirearmBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirearmBuild.swift; sourceTree = "<group>"; };
 		EFF327B422F8A84200673F57 /* ComparisonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparisonCell.swift; sourceTree = "<group>"; };
 		EFF49E0123049D2500B87BD9 /* ProblemSolvingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSolvingFlow.swift; sourceTree = "<group>"; };
@@ -425,7 +413,6 @@
 		271AA9B222BC5C030024B63A /* Modding */ = {
 			isa = PBXGroup;
 			children = (
-				27BB49CE22FCB79000070427 /* Modding.swift */,
 				EFF2FF6022D6407A00BED024 /* FirearmBuild.swift */,
 			);
 			path = Modding;
@@ -458,11 +445,9 @@
 			isa = PBXGroup;
 			children = (
 				EFFB10BF22F1F76100EE6B6F /* VeritasCell.swift */,
-				2753FE6922F1B7CC00B20DAD /* CompatibleModStatsCell.swift */,
 				27781CD322F67F5A007134E2 /* AmmoStatsCell.swift */,
 				27781CE322F733D9007134E2 /* SortableTableViewCell.swift */,
 				EFF327B422F8A84200673F57 /* ComparisonCell.swift */,
-				27BB4A1E22FDA0FF00070427 /* FirearmBuildSlotCell.swift */,
 				27D2105C23194185005A538F /* WatchAdCell.swift */,
 			);
 			path = "Table View Cells";
@@ -584,7 +569,6 @@
 			children = (
 				EF831FE022DCECB900C6C138 /* Displayable.swift */,
 				EF831FE722DF8D9300C6C138 /* Comparable.swift */,
-				276D916D23100C4D00CD61E0 /* Moddable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -604,7 +588,6 @@
 		27781CD522F6812C007134E2 /* Sortable List */ = {
 			isa = PBXGroup;
 			children = (
-				EFABB9DD22D665A10075D17D /* CompatibleItemsViewController.swift */,
 				27781CDF22F72BB7007134E2 /* SortableTableViewController.swift */,
 			);
 			path = "Sortable List";
@@ -1007,7 +990,6 @@
 		EFF2FF5B22D61DA000BED024 /* Weapon Building */ = {
 			isa = PBXGroup;
 			children = (
-				EFF2FF5C22D61DD400BED024 /* FirearmBuildViewController.swift */,
 			);
 			path = "Weapon Building";
 			sourceTree = "<group>";
@@ -1247,7 +1229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFDD387422C26BAF00B66E13 /* MoreMenuViewController.swift in Sources */,
-				EFF2FF5D22D61DD400BED024 /* FirearmBuildViewController.swift in Sources */,
 				27F09AD722DC35B000552C35 /* ItemCompareViewController.swift in Sources */,
 				27781CCE22F60DC2007134E2 /* FapCalculatorViewController.swift in Sources */,
 				EF962C7922FB3EEF009BB397 /* TwitchManager.swift in Sources */,
@@ -1255,7 +1236,6 @@
 				EFF2FF5422D567BF00BED024 /* BaseTableView.swift in Sources */,
 				27BB49CA22FCB02500070427 /* Strat.swift in Sources */,
 				EF831FE822DF8D9300C6C138 /* Comparable.swift in Sources */,
-				2753FE6A22F1B7CC00B20DAD /* CompatibleModStatsCell.swift in Sources */,
 				27D2103A2315D046005A538F /* FoundationUtils.swift in Sources */,
 				27A4A90122E730F700C5618E /* ItemPreviewCollectionView.swift in Sources */,
 				27781CDE22F727BF007134E2 /* AmmoSort.swift in Sources */,
@@ -1277,7 +1257,6 @@
 				27BB49B822F8E67300070427 /* ArmorSort.swift in Sources */,
 				27090E3422DB54A900D97320 /* AmmoDetailsConfiguration.swift in Sources */,
 				EF7AF38022C67AAE00DA1A18 /* BaseCollectionViewController.swift in Sources */,
-				EFABB9DE22D665A10075D17D /* CompatibleItemsViewController.swift in Sources */,
 				EFD03DD522B3FAEA00DE1874 /* LoadingViewController.swift in Sources */,
 				2745EC5522CA29BF00CD60D6 /* LocalizationUtils.swift in Sources */,
 				27A263BD22CF852B0089830C /* BaseStackView.swift in Sources */,
@@ -1285,7 +1264,6 @@
 				2753FE6522F0767C00B20DAD /* DependencyInterfaces.swift in Sources */,
 				27A7608E22D230BE00861113 /* ItemPropertyRow.swift in Sources */,
 				EFFB10C022F1F76100EE6B6F /* VeritasCell.swift in Sources */,
-				27BB49CF22FCB79000070427 /* Modding.swift in Sources */,
 				27A4A90522E738C800C5618E /* BaseViewController.swift in Sources */,
 				27A4A90722E73FE400C5618E /* ItemPreviewConfiguration.swift in Sources */,
 				27A4A90322E738A300C5618E /* BaseItemPreviewViewController.swift in Sources */,
@@ -1322,7 +1300,6 @@
 				27D210362314ED7A005A538F /* BaseScrollViewController.swift in Sources */,
 				EF831FFC22E8D2A200C6C138 /* ArmorComparison.swift in Sources */,
 				27781CD422F67F5A007134E2 /* AmmoStatsCell.swift in Sources */,
-				276D916E23100C4D00CD61E0 /* Moddable.swift in Sources */,
 				27BB49BE22F9D47200070427 /* ImageUtils.swift in Sources */,
 				EFF49E0223049D2500B87BD9 /* ProblemSolvingFlow.swift in Sources */,
 				27BF991B22C84427003F01C5 /* MainMenuCollectionViewController.swift in Sources */,
@@ -1347,7 +1324,6 @@
 				278A76B823098E5200E0C745 /* HealthCalcViewController.swift in Sources */,
 				EF831FF122E8C56D00C6C138 /* MeleeDetailsConfiguration.swift in Sources */,
 				EFD03DD222B3FAAA00DE1874 /* BaseTabBarController.swift in Sources */,
-				27BB4A1F22FDA0FF00070427 /* FirearmBuildSlotCell.swift in Sources */,
 				27BF991D22C844A4003F01C5 /* MainMenuCell.swift in Sources */,
 				27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */,
 				EFFB10BE22F1F40F00EE6B6F /* CompatibleModsHeaderView.swift in Sources */,
