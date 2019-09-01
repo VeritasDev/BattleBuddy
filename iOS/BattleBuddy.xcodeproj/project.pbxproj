@@ -20,6 +20,7 @@
 		2753FE6322F075C200B20DAD /* StatsManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6222F075C200B20DAD /* StatsManagerImpl.swift */; };
 		2753FE6522F0767C00B20DAD /* DependencyInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6422F0767C00B20DAD /* DependencyInterfaces.swift */; };
 		2753FE6A22F1B7CC00B20DAD /* CompatibleModStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6922F1B7CC00B20DAD /* CompatibleModStatsCell.swift */; };
+		276AFA79231B7F3B00C9DB3A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA78231B7F3B00C9DB3A /* README.md */; };
 		276D91682310056600CD61E0 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D91672310056600CD61E0 /* AsyncOperation.swift */; };
 		276D916A2310081D00CD61E0 /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D91692310081D00CD61E0 /* BaseItem.swift */; };
 		276D916E23100C4D00CD61E0 /* Moddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D916D23100C4D00CD61E0 /* Moddable.swift */; };
@@ -190,6 +191,7 @@
 		276AFA6F231A8C8500C9DB3A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		276AFA72231AD93D00C9DB3A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		276AFA73231AD93E00C9DB3A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		276AFA78231B7F3B00C9DB3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		276D91672310056600CD61E0 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		276D91692310081D00CD61E0 /* BaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseItem.swift; sourceTree = "<group>"; };
 		276D916D23100C4D00CD61E0 /* Moddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moddable.swift; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 		27954E2322A18470000FC0C6 = {
 			isa = PBXGroup;
 			children = (
+				279B6C2822CCD56F006735D3 /* README.md */,
 				27954E2E22A18470000FC0C6 /* BattleBuddy */,
 				27954E2D22A18470000FC0C6 /* Products */,
 				7ABE6FD9D08AFA0FE132AA0B /* Pods */,
@@ -679,11 +682,11 @@
 		27954E2E22A18470000FC0C6 /* BattleBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				276AFA78231B7F3B00C9DB3A /* README.md */,
 				276AFA76231B792600C9DB3A /* Config */,
 				27793A3E22A4345D00378FE3 /* Source */,
 				27793A3C22A433E200378FE3 /* Misc */,
 				27954E3B22A18472000FC0C6 /* Info.plist */,
-				279B6C2822CCD56F006735D3 /* README.md */,
 			);
 			path = BattleBuddy;
 			sourceTree = "<group>";
@@ -1025,6 +1028,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276AFA79231B7F3B00C9DB3A /* README.md in Resources */,
 				279B6C2922CCD56F006735D3 /* README.md in Resources */,
 				EFD03DCA22B2D25C00DE1874 /* Localizable.strings in Resources */,
 				27954E3A22A18472000FC0C6 /* LaunchScreen.storyboard in Resources */,

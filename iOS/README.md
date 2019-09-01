@@ -1,17 +1,14 @@
-#  Battle Buddy
-### The Unofficial [Escape from Tarkov](http://www.escapefromtarkov.com) Reference App
-
-Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas), with loads of help from his and the greater EFT Community!
+#  Battle Buddy iOS App
 
 ***THIS REPO IS CURRENTLY A WORK IN PROGRESS! I WILL BE ADDED MUCH MORE DOCUMENTATION AFTER THE INITIAL RELEASE!***
     
 ## <u>Roadmap</u>
 
 - [ ] Release iOS v1.0 ***in progress***
-- [ ] Start development on Progressive Web App (PWA) to support Android and the web basic initial features at first.
 
 ## <u>iOS v1.0</u>
 
+- [x] Right-to-left language support
 - [ ] Fix any broken autolayout constraints
 - [ ] Instrument memory and processing performance
 - [ ] Client update user count
@@ -75,16 +72,6 @@ Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas
     - [x] Link to The Team
 - [x] Initial integration of ad support
 
-## <u>Backend v1.0</u>
-
-- [ ] Remote functions deployed
-    - [ ] item update/syncing (every 60 mins)
-    - [ ] Total user count cache (every 5 mins?)
-    - [ ] Total ads watched cache (every 5 mins?)
-
-## <u>PWA v0.1</u>
-
-- [ ] Get basic site up and running at domain
 
 ## <u>v1.1</u>
 - Favoriting Items
@@ -150,7 +137,7 @@ Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas
 - Task item checklist / shopping list
 - Gun building help + random build + UI
     
-# <u>Backlog</u>
+## <u>Backlog</u>
 - Crowdsourced images + gallery for items + fullscreen images
 - Profile
     - Supporter type
@@ -198,8 +185,7 @@ Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas
 ## Project / Repo TODO:
 
 - Unit testing, cc, ci
-- Changelog
 - Finish documentation
 - Migrate to Swift UI
-    - Accessibility
-    - Combine framework
+- Accessibility
+- Combine framework
