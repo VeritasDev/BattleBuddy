@@ -9,8 +9,9 @@
 import UIKit
 
 extension UIView {
+    // tEmP hAcK zOmG Fix Plz
     func isCompactWidth() -> Bool {
-        return traitCollection.horizontalSizeClass == .compact
+        return UIApplication.shared.keyWindow?.rootViewController?.traitCollection.horizontalSizeClass == .compact
     }
 
     func constrainHeight(_ height: CGFloat) {

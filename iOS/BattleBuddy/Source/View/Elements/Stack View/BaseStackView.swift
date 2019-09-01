@@ -33,7 +33,8 @@ class BaseStackView: UIStackView {
         self.spacing = spacing
 
         let isCompact = isCompactWidth()
-        layoutMargins = UIEdgeInsets(top: yPadding, left: isCompact ? xPaddingCompact : xPaddingRegular, bottom: yPadding, right: isCompact ? xPaddingCompact : xPaddingRegular)
+        let xPadding = isCompact ? xPaddingCompact : xPaddingRegular
+        layoutMargins = UIEdgeInsets(top: yPadding, left: xPadding, bottom: yPadding, right: xPadding)
         isLayoutMarginsRelativeArrangement = true
 
         backgroundColor = UIColor.Theme.background
