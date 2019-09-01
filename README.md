@@ -9,7 +9,7 @@ Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas
 
 ## Want to Contribute?
 
-[Read this first!](contributing.md)
+[Read this first!](CONTRIBUTING.md)
 
 ## Project / Repo TODO:
 
