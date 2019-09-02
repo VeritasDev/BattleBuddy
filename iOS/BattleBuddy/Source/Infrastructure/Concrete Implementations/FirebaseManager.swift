@@ -193,16 +193,26 @@ extension FirebaseManager: DatabaseManager {
 
     func getAllFirearms(handler: @escaping (_: [Firearm]) -> Void) {
         db.collection(FirebaseCollection.firearms.rawValue).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
+            if let error = err {
+                print("Failed to get all firearms w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
             guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) firearms.")
             handler(snapshot.getFirearms())
         }
     }
 
     func getAllArmor(handler: @escaping (_: [Armor]) -> Void) {
         db.collection(FirebaseCollection.armor.rawValue).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
+            if let error = err {
+                print("Failed to get all armor w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
             guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) armors.")
             handler(snapshot.getArmor())
         }
     }
@@ -210,16 +220,26 @@ extension FirebaseManager: DatabaseManager {
     func getAllBodyArmor(handler: @escaping (_: [Armor]) -> Void) {
         let bodyArmorRef = db.collection(FirebaseCollection.armor.rawValue).whereField("type", isEqualTo: "body")
         bodyArmorRef.getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
+            if let error = err {
+                print("Failed to get all body armor w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
             guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) body armors.")
             handler(snapshot.getArmor())
         }
     }
 
     func getAllAmmo(handler: @escaping (_: [Ammo]) -> Void) {
         db.collection(FirebaseCollection.ammo.rawValue).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
+            if let error = err {
+                print("Failed to get all ammo w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
             guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) ammo.")
             let allAmmo = snapshot.getAmmo().sorted(by: { $0.penetration > $1.penetration })
             handler(allAmmo)
         }
@@ -227,24 +247,40 @@ extension FirebaseManager: DatabaseManager {
 
     func getAllMedical(handler: @escaping (_: [Medical]) -> Void) {
         db.collection(FirebaseCollection.medical.rawValue).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
+            if let error = err {
+                print("Failed to get all medical w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
             guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) medical items.")
             handler(snapshot.getMedical())
         }
     }
 
     func getAllThrowables(handler: @escaping (_: [Throwable]) -> Void) {
         db.collection(FirebaseCollection.throwables.rawValue).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
+            if let error = err {
+                print("Failed to get all throwables w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
             guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) throwables.")
             handler(snapshot.getThrowables())
         }
     }
 
     func getAllMelee(handler: @escaping (_: [MeleeWeapon]) -> Void) {
         db.collection(FirebaseCollection.melee.rawValue).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
+            if let error = err {
+                print("Failed to get all melee w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
+
             guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) melee weapons.")
             handler(snapshot.getMelee())
         }
     }
