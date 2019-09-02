@@ -16,16 +16,6 @@
 - [ ] Instrument memory and processing performance
 - [ ] Client update user count
 - [ ] Server update user count
-- [x] iPad support for each screen
-    - [x] Main menu
-    - [x] Search results
-    - [x] Item lists
-    - [x] Blog posts
-    - [x] Base stack view
-    - [ ] Pen chance calc
-    - [x] Health Calc
-    - [x] Item Details
-    - [x] Comparisons
 - [x] Ensure watch an ad - handle not loaded
 - [ ] Localizations
     - [x] Dutch
@@ -52,6 +42,8 @@
 - [ ] App store submission stuff
     - Screenshots
     - App description/copy/tags
+
+### <u>Done</u>
 - [x] Initial prototype
 - [x] Firebase migration
 - [x] Item lists and detail pages
@@ -73,6 +65,16 @@
     - [x] Attributions for help on app
     - [x] Link to The Team
 - [x] Initial integration of ad support
+- [x] iPad support for each screen
+- [x] Main menu
+- [x] Search results
+- [x] Item lists
+- [x] Blog posts
+- [x] Base stack view
+- [x] Pen chance calc
+- [x] Health Calc
+- [x] Item Details
+- [x] Comparisons
 
 
 ## <u>v1.1</u>

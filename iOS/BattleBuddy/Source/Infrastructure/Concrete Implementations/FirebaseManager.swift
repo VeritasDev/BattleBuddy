@@ -108,7 +108,6 @@ extension FirebaseManager: DatabaseManager {
                 }
             }
         }
-
     }
 
     // MARK:- Search items
@@ -417,8 +416,15 @@ extension FirebaseManager: AdManager {
 
     func rewardForWatchingAd() {
         guard let currentUser = Auth.auth().currentUser else { return }
-
-        db.collection("users").document(currentUser.uid).updateData(["adsWatched": FieldValue.increment(Int64(1))])
+        let data = ["adsWatched": FieldValue.increment(Int64(1))]
+        db.collection("users").document(currentUser.uid)
+            .setData(data, merge: true) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+        }
     }
 }
 
