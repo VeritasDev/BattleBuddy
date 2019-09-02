@@ -27,7 +27,6 @@
     - [x] Item Details
     - [x] Comparisons
 - [x] Ensure watch an ad - handle not loaded
-- [ ] Fix arabic last translation
 - [ ] Localizations
     - [x] Dutch
     - [x] Italian

@@ -33,7 +33,7 @@ class LocalizationTeamViewController: BaseTableViewController {
             LanguageTeam(languageCodes: ["pt_br"], members: ["Spuritika", "Sir_Tai"]),
             LanguageTeam(languageCodes: ["hu"], members: ["Patkosi"]),
             LanguageTeam(languageCodes: ["cs"], members: ["Frren"]),
-            LanguageTeam(languageCodes: ["zh-hk"], members: ["jasonlin12356789"])
+            LanguageTeam(languageCodes: ["zh-hk"], members: ["jasonlin12356789", "Allen Chang"])
         ]
     }()
 
