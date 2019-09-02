@@ -85,8 +85,8 @@ class FirebaseManager: NSObject {
 }
 
 extension FirebaseManager: DatabaseManager {
-    // MARK:- Item Search
 
+    // MARK:- Item Search
     func getAllItemsWithSearchQuery(_ query: String, handler: @escaping (_: [BaseItem]) -> Void) {
         var allResults: [BaseItem] = []
         self.getFirearmsWithSearchQuery(query) { (firearms) in
@@ -190,7 +190,6 @@ extension FirebaseManager: DatabaseManager {
     }
 
     // MARK:- All items
-
     func getAllFirearms(handler: @escaping (_: [Firearm]) -> Void) {
         db.collection(FirebaseCollection.firearms.rawValue).getDocuments() { (querySnapshot, err) in
             if let error = err {
@@ -286,7 +285,6 @@ extension FirebaseManager: DatabaseManager {
     }
 
     // MARK:- Mapped by category
-
     func getAllFirearmsByType(handler: @escaping ([FirearmType: [Firearm]]) -> Void) {
         getAllFirearms { firearms in
             var map: [FirearmType: [Firearm]] = [:]
@@ -336,7 +334,6 @@ extension FirebaseManager: DatabaseManager {
     }
 
     // MARK:- By category
-
     func getAllFirearmsOfType(type: FirearmType, handler: @escaping ([Firearm]) -> Void) {
         db.collection(FirebaseCollection.firearms.rawValue).whereField("class", isEqualTo: type.rawValue).getDocuments() { (querySnapshot, err) in
             if err != nil { handler([]); return }
@@ -373,7 +370,6 @@ extension FirebaseManager: DatabaseManager {
             handler(snapshot.getArmor())
         }
     }
-
 }
 
 // MARK:- Session
