@@ -44,6 +44,7 @@ protocol SessionDelegate {
 protocol AccountManager {
     func initializeSession()
     func isLoggedIn() -> Bool
+    func getValueForAccountProperty(_ property: AccountProperty, completion: @escaping (_ : Any?) -> Void)
     func updateAccountProperties(_ : [AccountProperty: Any])
 }
 

@@ -110,6 +110,25 @@ extension FirebaseManager: AccountManager {
         return Auth.auth().currentUser
     }
 
+    func getValueForAccountProperty(_ property: AccountProperty, completion: @escaping (Any?) -> Void) {
+        guard let currentUser = currentUser() else { return }
+
+        db.collection("users").document(currentUser.uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print("Error fecthing value for properties: \(err)")
+                return
+            }
+
+            guard let value = snapshot?.data()?[property.rawValue] else {
+                print("Account value not present in data: \(property)")
+                completion(nil)
+                return
+            }
+
+            completion(value)
+        }
+    }
+
     func updateAccountProperties(_ properties: [AccountProperty: Any]) {
         guard let currentUser = currentUser() else { return }
 
