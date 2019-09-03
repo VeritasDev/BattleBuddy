@@ -42,6 +42,8 @@
 - [ ] App store submission stuff
     - Screenshots
     - App description/copy/tags
+- [ ] Logging
+- [ ] Migrate Apple dev account from personal -> business
 
 ### <u>Done</u>
 - [x] Initial prototype

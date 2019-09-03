@@ -11,7 +11,7 @@ import UIKit
 class DependencyManagerImpl: DependencyManager {
     static let shared: DependencyManager = DependencyManagerImpl()
 
-    let sessionManager: SessionManager
+    let accountManager: AccountManager
     let databaseManager: DatabaseManager
     let httpRequestor: HttpRequestor
     let firebaseManager: FirebaseManager
@@ -30,7 +30,7 @@ class DependencyManagerImpl: DependencyManager {
         firebaseManager = firebase
         databaseManager = firebase
         adManager = firebase
-        sessionManager = firebase
+        accountManager = firebase
         metadataManager = firebase
 
         httpRequestor = AlamofireManager()

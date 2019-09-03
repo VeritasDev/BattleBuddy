@@ -59,7 +59,7 @@ class FirebaseManager: NSObject {
 
         super.init()
 
-        let filePath = Bundle.main.path(forResource: "GoogleService-Info-Prod", ofType: "plist")
+        let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
         guard let options = FirebaseOptions(contentsOfFile: filePath!)
             else { fatalError("Couldn't load config file! I gotta make this work for staging environment... SoonTM") }
         FirebaseApp.configure(options: options)
@@ -80,6 +80,120 @@ class FirebaseManager: NSObject {
         case .armor: return armorImageRef.child(imageId)
         case .throwable: return throwableImageRef.child(imageId)
         case .melee: return meleeImageRef.child(imageId)
+        }
+    }
+}
+
+// MARK:- Account Manager
+
+extension FirebaseManager: AccountManager {
+    func initializeSession() {
+        print("Initializing anonymous session...")
+
+        Auth.auth().signInAnonymously() { (authResult, error) in
+            if let error = error {
+                print("Anonymous auth failed with error: ", error)
+            } else {
+                print("Anonymous auth succeeded.")
+            }
+
+            self.updateAccountProperties([AccountProperty.lastLogin: Timestamp(date: Date())])
+            self.updateGlobalMetadata(handler: { _ in self.sessionDelegate.sessionDidFinishLoading() })
+        }
+    }
+
+    func isLoggedIn() -> Bool {
+        return currentUser() != nil
+    }
+
+    func currentUser() -> User? {
+        return Auth.auth().currentUser
+    }
+
+    func updateAccountProperties(_ properties: [AccountProperty: Any]) {
+        guard let currentUser = currentUser() else { return }
+
+        var data: [String: Any] = [:]
+        for property in properties.keys { data[property.rawValue] = properties[property] }
+        db.collection("users").document(currentUser.uid).setData(data, merge: true) { err in
+            if let err = err {
+                print("Error updating account properties: \(err)")
+            } else {
+                print("Account properties successfully written!")
+            }
+        }
+    }
+}
+
+// MARK:- Ads
+extension FirebaseManager: AdManager {
+    func bannerAdsEnabled() -> Bool { return prefsManager.valueForBoolPref(.bannerAds) }
+
+    func updateBannerAdsSetting(_ enabled: Bool) { prefsManager.update(.bannerAds, value: enabled) }
+
+    func reloadVideoAd(after delay: Double = 0) {
+        updateAdState(state: .unavailable)
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.currentVideoAdState = .loading
+            self.videoAd.load(GADRequest(), withAdUnitID: self.videoAdUnit)
+        }
+    }
+
+    func watchAdVideo(from rootVC: UIViewController) {
+        if videoAd.isReady { videoAd.present(fromRootViewController: rootVC) }
+    }
+
+    func rewardForWatchingAd() {
+        updateAccountProperties([.adsWatched: FieldValue.increment(Int64(1))])
+    }
+}
+
+extension FirebaseManager: GADRewardBasedVideoAdDelegate {
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+        rewardForWatchingAd()
+    }
+
+    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        reloadVideoAd(after: 1)
+    }
+
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
+        print("AD FAILED!: \(error.localizedDescription)")
+        updateAdState(state: .unavailable)
+        reloadVideoAd(after: 5)
+    }
+
+    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        updateAdState(state: .ready)
+    }
+
+    func updateAdState(state: VideoAdState) {
+        currentVideoAdState = state
+        self.adDelegate?.adManager(self, didUpdate: currentVideoAdState)
+    }
+}
+
+// MARK:- Global Metadata
+
+extension FirebaseManager: GlobalMetadataManager {
+    func getGlobalMetadata() -> GlobalMetadata? { return globalMetadata }
+
+    func updateGlobalMetadata(handler: @escaping (_ : GlobalMetadata?) -> Void) {
+        db.collection(FirebaseCollection.global.rawValue).getDocuments() { (querySnapshot, err) in
+            guard err == nil else {
+                print("ERROR fetching global metadata: " + err.debugDescription)
+                handler(nil);
+                return
+            }
+
+            guard let globalMeta = querySnapshot?.documents.first?.data() else {
+                print("ERROR: Global meta did not include expected data!")
+                handler(self.globalMetadata)
+                return
+            }
+
+            self.globalMetadata = GlobalMetadata(json: globalMeta)
+            handler(self.globalMetadata)
         }
     }
 }
@@ -367,113 +481,6 @@ extension FirebaseManager: DatabaseManager {
             if err != nil { handler([]); return }
             guard let snapshot = querySnapshot else { handler([]); return }
             handler(snapshot.getArmor())
-        }
-    }
-}
-
-// MARK:- Session
-extension FirebaseManager: SessionManager {
-    func initializeSession() {
-        print("Initializing anonymous session...")
-
-        Auth.auth().signInAnonymously() { (authResult, error) in
-            if let error = error {
-                print("Anonymous auth failed with error: ", error)
-            } else {
-                print("Anonymous auth succeeded.")
-            }
-
-            self.updateGlobalMetadata(handler: { _ in
-                self.sessionDelegate.sessionDidFinishLoading()
-            })
-        }
-    }
-
-    func isLoggedIn() -> Bool {
-        return Auth.auth().currentUser != nil
-    }
-}
-
-// MARK:- Ads
-extension FirebaseManager: AdManager {
-    func bannerAdsEnabled() -> Bool { return prefsManager.valueForBoolPref(.bannerAds) }
-
-    func updateBannerAdsSetting(_ enabled: Bool) { prefsManager.update(.bannerAds, value: enabled) }
-
-    func reloadVideoAd(after delay: Double = 0) {
-        updateAdState(state: .unavailable)
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            self.currentVideoAdState = .loading
-            self.videoAd.load(GADRequest(), withAdUnitID: self.videoAdUnit)
-        }
-    }
-
-    func watchAdVideo(from rootVC: UIViewController) {
-        if videoAd.isReady {
-            videoAd.present(fromRootViewController: rootVC)
-        }
-    }
-
-    func rewardForWatchingAd() {
-        guard let currentUser = Auth.auth().currentUser else { return }
-        let data = ["adsWatched": FieldValue.increment(Int64(1))]
-        db.collection("users").document(currentUser.uid)
-            .setData(data, merge: true) { err in
-                if let err = err {
-                    print("Error writing document: \(err)")
-                } else {
-                    print("Document successfully written!")
-                }
-        }
-    }
-}
-
-extension FirebaseManager: GADRewardBasedVideoAdDelegate {
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-        rewardForWatchingAd()
-    }
-
-    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-        reloadVideoAd(after: 3)
-    }
-
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
-        print("AD FAILED!: \(error.localizedDescription)")
-        updateAdState(state: .unavailable)
-        reloadVideoAd(after: 5)
-    }
-
-    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-        updateAdState(state: .ready)
-    }
-
-    func updateAdState(state: VideoAdState) {
-        currentVideoAdState = state
-        self.adDelegate?.adManager(self, didUpdate: currentVideoAdState)
-    }
-}
-
-// MARK:- Global Metadata
-
-extension FirebaseManager: GlobalMetadataManager {
-    func getGlobalMetadata() -> GlobalMetadata? { return globalMetadata }
-
-    func updateGlobalMetadata(handler: @escaping (_ : GlobalMetadata?) -> Void) {
-        db.collection(FirebaseCollection.global.rawValue).getDocuments() { (querySnapshot, err) in
-            guard err == nil else {
-                print("ERROR fetching global metadata: " + err.debugDescription)
-                handler(nil);
-                return
-            }
-
-            guard let globalMeta = querySnapshot?.documents.first?.data() else {
-                print("ERROR: Global meta did not include expected data!")
-                handler(self.globalMetadata)
-                return
-            }
-
-            self.globalMetadata = GlobalMetadata(json: globalMeta)
-            handler(self.globalMetadata)
         }
     }
 }

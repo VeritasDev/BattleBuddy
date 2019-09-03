@@ -12,7 +12,7 @@ import UIKit
 
 protocol DependencyManager {
     static var shared: DependencyManager { get }
-    var sessionManager: SessionManager { get }
+    var accountManager: AccountManager { get }
     var databaseManager: DatabaseManager { get }
     var httpRequestor: HttpRequestor { get }
     var firebaseManager: FirebaseManager { get }
@@ -32,13 +32,19 @@ protocol HttpRequestor {
 
 // MARK:- Session
 
+enum AccountProperty: String {
+    case lastLogin = "lastLogin"
+    case adsWatched = "adsWatched"
+}
+
 protocol SessionDelegate {
     func sessionDidFinishLoading()
 }
 
-protocol SessionManager {
+protocol AccountManager {
     func initializeSession()
     func isLoggedIn() -> Bool
+    func updateAccountProperties(_ : [AccountProperty: Any])
 }
 
 // MARK: - Database

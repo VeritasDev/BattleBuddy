@@ -19,7 +19,7 @@
 		2753FE6122ECAA3200B20DAD /* DatabaseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6022ECAA3200B20DAD /* DatabaseSnapshot.swift */; };
 		2753FE6522F0767C00B20DAD /* DependencyInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6422F0767C00B20DAD /* DependencyInterfaces.swift */; };
 		276AFA79231B7F3B00C9DB3A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA78231B7F3B00C9DB3A /* README.md */; };
-		276AFA7B231B8BA600C9DB3A /* GoogleService-Info-Prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA7A231B8BA600C9DB3A /* GoogleService-Info-Prod.plist */; };
+		276AFA7B231B8BA600C9DB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA7A231B8BA600C9DB3A /* GoogleService-Info.plist */; };
 		276AFA83231B919F00C9DB3A /* BattleBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276AFA82231B919F00C9DB3A /* BattleBuddyTests.swift */; };
 		276AFA91231B93AA00C9DB3A /* BattleBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276AFA90231B93AA00C9DB3A /* BattleBuddyUITests.swift */; };
 		276AFA9B231B982600C9DB3A /* DependencyInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6422F0767C00B20DAD /* DependencyInterfaces.swift */; };
@@ -203,7 +203,7 @@
 		276AFA72231AD93D00C9DB3A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		276AFA73231AD93E00C9DB3A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		276AFA78231B7F3B00C9DB3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		276AFA7A231B8BA600C9DB3A /* GoogleService-Info-Prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Prod.plist"; sourceTree = "<group>"; };
+		276AFA7A231B8BA600C9DB3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		276AFA80231B919E00C9DB3A /* BattleBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		276AFA82231B919F00C9DB3A /* BattleBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleBuddyTests.swift; sourceTree = "<group>"; };
 		276AFA84231B919F00C9DB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -494,7 +494,7 @@
 		276AFA74231B78A200C9DB3A /* Prod */ = {
 			isa = PBXGroup;
 			children = (
-				276AFA7A231B8BA600C9DB3A /* GoogleService-Info-Prod.plist */,
+				276AFA7A231B8BA600C9DB3A /* GoogleService-Info.plist */,
 			);
 			path = Prod;
 			sourceTree = "<group>";
@@ -1147,7 +1147,7 @@
 				27954E3A22A18472000FC0C6 /* LaunchScreen.storyboard in Resources */,
 				EFD03DD622B3FAEA00DE1874 /* LoadingViewController.xib in Resources */,
 				27954E3722A18472000FC0C6 /* Assets.xcassets in Resources */,
-				276AFA7B231B8BA600C9DB3A /* GoogleService-Info-Prod.plist in Resources */,
+				276AFA7B231B8BA600C9DB3A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

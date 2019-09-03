@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
         // more real app-launch stuff to be processed.
         guard NSClassFromString("XCTestCase") == nil else { return }
 
-        Fabric.with([Crashlytics.self])
         ThemeManager.configureAppearance()
-        DependencyManagerImpl.shared.sessionManager.initializeSession()
+        DependencyManagerImpl.shared.accountManager.initializeSession()
+        Fabric.with([Crashlytics.self])
     }
 
     // SessionDelegate
