@@ -11,12 +11,8 @@
 
 ## <u>iOS v1.0</u>
 
-- [x] Right-to-left language support
-- [ ] Fix any broken autolayout constraints
+- [ ] Handle weird data sync issues
 - [ ] Instrument memory and processing performance
-- [ ] Client update user count
-- [ ] Server update user count
-- [x] Ensure watch an ad - handle not loaded
 - [ ] Localizations
     - [x] Dutch
     - [x] Italian
@@ -33,16 +29,15 @@
     - [x] French
     - [x] Portuguese (pt)
     - [x] Polish
+    - [x] Chinese
+    - [x] German
     - [ ] Romanian
-    - [ ] German
     - [ ] Czech
-    - [ ] Chinese
     - [ ] Norwegian
 - [ ] Replace Google Admob Key w/ Real One
 - [ ] App store submission stuff
     - Screenshots
     - App description/copy/tags
-- [ ] Logging
 - [ ] Migrate Apple dev account from personal -> business
 
 ### <u>Done</u>
@@ -77,6 +72,11 @@
 - [x] Health Calc
 - [x] Item Details
 - [x] Comparisons
+- [x] Right-to-left language support
+- [x] Client update user count
+- [x] Server update user count
+- [x] Ensure watch an ad - handle not loaded
+- [x] Fix any broken autolayout constraints
 
 
 ## <u>v1.1</u>
@@ -187,6 +187,7 @@
     - Moist
     - PMC lines
     - Scav lines
+- Logging
 
 ## Project / Repo TODO:
 

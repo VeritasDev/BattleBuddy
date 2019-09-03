@@ -15,7 +15,6 @@ target 'BattleBuddy' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'Firebase/Firestore'
-  pod 'Firebase/Database'
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.13.4'
   pod 'Firebase/AdMob'
