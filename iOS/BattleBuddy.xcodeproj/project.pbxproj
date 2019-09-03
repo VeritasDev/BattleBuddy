@@ -334,6 +334,8 @@
 		EF844C99231832DE00E29E12 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF844C9A231832FF00E29E12 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EF844C9B231832FF00E29E12 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF94581B231EC7ED00C88609 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EF94581C231EC7EE00C88609 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF962C7622FB3488009BB397 /* UIKitUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitUtils.swift; sourceTree = "<group>"; };
 		EF962C7822FB3EEF009BB397 /* TwitchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchManager.swift; sourceTree = "<group>"; };
 		EF962C7A22FB64DB009BB397 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
@@ -1110,6 +1112,7 @@
 				id,
 				pl,
 				"zh-Hant",
+				de,
 			);
 			mainGroup = 27954E2322A18470000FC0C6;
 			productRefGroup = 27954E2D22A18470000FC0C6 /* Products */;
@@ -1397,6 +1400,7 @@
 				276AFA6E231A8C8400C9DB3A /* id */,
 				276AFA72231AD93D00C9DB3A /* pl */,
 				276AFA9D231C668200C9DB3A /* zh-Hant */,
+				EF94581B231EC7ED00C88609 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1423,6 +1427,7 @@
 				276AFA6F231A8C8500C9DB3A /* id */,
 				276AFA73231AD93E00C9DB3A /* pl */,
 				276AFA9E231C668200C9DB3A /* zh-Hant */,
+				EF94581C231EC7EE00C88609 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

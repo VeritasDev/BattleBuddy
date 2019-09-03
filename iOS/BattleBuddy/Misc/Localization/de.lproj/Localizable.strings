@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Ja";
+"no" = "Nein";
+"ok" = "Ok";
+"done" = "Fertig";
+"soon" = "Bald™";
+"coming_soon" = "Demnächst™";
+"unknown" = "Unbekannt";
+"type" = "Typ";
+"continue" = "Weiter";
+"veritas" = "Veritas";
+"required" = "Erforderlich";
+
+// MARK: - Filter/sort/compare
+"compare" = "Vergleichen";
+"name" = "Name";
+"save" = "Speichern";
+"recommended" = "Empfohlen";
+"similar" = "Ähnlich";
+"all" = "Alle";
+"compare_with" = "Vergleichen mit...";
+
+// MARK: - More / Attributions
+"about" = "Über Battle Buddy";
+"dev_by" = "Entwickelt von Veritas";
+"dev_support" = "Willst du die Entwicklung unterstützen?";
+"watch_ad" = "Werbung ansehen";
+"enable_banner_ads" = "Bannerwerbung Aktivieren";
+"view_on_github" = "Auf GitHub ansehen";
+"rate_this_app" = "Bewerte Battle Buddy";
+"attributions" = "Credits";
+"check_out_team" = "Schau dir das Team an";
+"team" = "Das Team";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Sozial";
+"music" = "Meine Musik";
+"website_error" = "Der Inhalt konnte nicht geladen werden. Bitte stellen Sie sicher dass die zugehörige App installiert ist.";
+"live_now" = "Jetzt Live!";
+"feedback_title" = "Feedback oder Ideen?";
+"feedback_subtitle" = "Trete unserem Discord bei!";
+"upcoming_features" = "Geplante Funktionen";
+
+"twitter_description" = "Bleib auf dem Laufenden";
+"twitch_description" = "Schau Live auf Twitch";
+"discord_description" = "Join unserem Community Discord";
+"youtube_description" = "Schau auf YouTube";
+"instagram_description" = "Medien auf Instagram";
+"soundcloud_description" = "Auf Soundcloud hören";
+"spotify_description" = "Auf Spotify hören";
+"website_description" = "Mehr über Veritas";
+
+// MARK: - Tabs
+"items" = "Ausrüstung";
+"learn" = "Lernen";
+"more" = "Mehr";
+"search" = "Suchen";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Munition";
+"main_menu_armor" = "Rüstung";
+"main_menu_ballistics" = "Ballistik";
+"main_menu_firearms" = "Schusswaffen";
+"main_menu_medical" = "Medizin";
+"main_menu_melee" = "Nahkampfwaffen";
+"main_menu_throwables" = "Wurfwaffen";
+"main_menu_health_calc" = "Schadens-Rechner";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Schusswaffen-Typen";
+"calibers" = "Kaliber";
+
+// MARK: - Calculators
+"pen_chance" = "Durchdringungs-Chance";
+"no_armor_selected" = "Keine Rüstung ausgewählt";
+"no_ammo_selected" = "Keine Munition ausgewählt";
+"select_ammo" = "Munition wählen";
+"select_armor" = "Rüstung wählen";
+"pen_chance_help_title" = "Durchdringungs-Chancen-Rechner";
+"pen_chance_help_message" = "Dieses Tool berechnet die Wahrscheinlichkeit, dass eine ausgewählte Kugel eine bestimmte Rüstung durchschlägt. Sobald du eine Kugel und eine Rüstung ausgewählt hast, kannst du mit dem Schieberegler die simulierte Haltbarkeit der Rüstung anpassen, um festzustellen wie effektiv verschiedene Munitionsarten bei gegebener Haltbarkeit gegenüber dieser Rüstung sind!";
+
+"health_calc_title" = "Schadens-Rechner";
+"total_hp" = "Gesamte Lebenspunkte";
+
+"body_zone_head" = "Kopf";
+"body_zone_thorax" = "Thorax";
+"body_zone_stomach" = "Bauch";
+"body_zone_right_arm" = "Rechter Arm";
+"body_zone_left_arm" = "Linker Arm";
+"body_zone_right_leg" = "Rechtes Bein";
+"body_zone_left_leg" = "Linkes Bein";
+
+// MARK: - Items
+"armor" = "Rüstung";
+"helmets" = "Helme";
+"ballistics" = "Ballistik";
+"health" = "Gesundheit";
+"firearms" = "Schusswaffen";
+"ammunition" = "Muniton";
+"body_armor" = "Körperpanzerung";
+"medical_items" = "Medizinische Ausrüstung";
+"throwables" = "Wurfwaffen";
+"healing_items" = "Heilungsgegenstände";
+"pain_management" = "Schmerztherapie";
+"status_management" = "Statuseffekt Management";
+"stims" = "Stimulanzien";
+"grenades" = "Granaten";
+"properties" = "Eigenschaften";
+"performance" = "Performance";
+"ergonomics" = "Ergonomie";
+"ergo" = "Ergo";
+"vertical_recoil" = "Vertikaler Rückstoß";
+"horizontal_recoil" = "Horizontaler Rückstoß";
+"recoil" = "Rückstoß";
+
+// MARK: - Weapons
+"weapon_class" = "Klasse";
+"assault_rifle" = "Sturmgewehr";
+"assault_carbine" = "Sturmkarabiner";
+"sniper_rifle" = "Scharfschützengewehr";
+"designated_marksman_rifle" = "DMR";
+"pistol" = "Pistole";
+"shotgun" = "Schrotflinte";
+"sub_machine_gun" = "Maschinenpistole";
+"machine_gun" = "Maschinengewehr";
+"caliber" = "Kaliber";
+"fire_rate" = "Feuerrate";
+"effective_range" = "Effektive Reichweite";
+"fold_or_retract" = "Aus/Einklappen";
+"retractable" = "Einklappbar";
+"build_wizard" = "Waffenbau-Simulator";
+"gun_build_custom" = "Benutzerdefiniert";
+"gun_build_recoil" = "Minimaler Rückstoß";
+"gun_build_ergo" = "Maximale Ergonomie";
+"gun_build_random" = "Zufällig";
+"fire_mode" = "Feuermodus";
+"fire_modes" = "Feuermodi";
+"fire_mode_semi" = "Halbautomatisch";
+"fire_mode_auto" = "Vollautomatisch";
+"fire_mode_burst" = "Feuerstoß";
+"fire_mode_semi_short" = "Einzel";
+"fire_mode_auto_short" = "Automatik";
+"fire_mode_burst_short" = "Feuerstoß";
+"action" = "System";
+"action_type_pump" = "Pump Action";
+"action_type_bolt" = "Repetiergewehr";
+"action_type_pump_short" = "Pump";
+"action_type_bolt_short" = "Repetierer";
+"build" = "Bauen";
+"build_this_gun" = "Bau diese Waffe";
+
+"compare_preset_semi_auto_rifle" = "Halbautomatische Gewehre";
+"compare_preset_full_auto_rifles" = "Vollautomatische Gewehre";
+"compare_preset_rifles_caliber_match" = "Gewehre des selben Kalibers";
+"compare_preset_rifles" = "Gewehre";
+"compare_preset_full_auto_caliber_match" = "Vollautomatische Gewehre des selben Kalibers";
+"compare_preset_semi_auto_pistols" = "Halbautomatische Pistolen";
+"compare_preset_full_auto_pistols" = "Vollautomatische Pistolen";
+"compare_preset_pistols_caliber_match" = "Pistolen des selben Kalibers";
+"compare_preset_pistols" = "Pistolen";
+"compare_preset_manual_shotguns" = "Halbautomatische Schrotflinten";
+"compare_preset_shotguns" = "Schrotflinten";
+"compare_preset_smgs_caliber_match" = "Maschinenpistolen des selben Kalibers";
+"compare_preset_smgs" = "Maschinenpistolen";
+"compare_preset_bolt_snipers" = "Repetier-Scharfschützengewehre";
+"compare_preset_snipers_and_dmrs" = "Scharfschützengewehre & DMRs";
+"compare_preset_dmrs" = "DMRs";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Verwandte Schusswaffen";
+"subsonic" = "Unterschall";
+"tracer" = "Leuchtspur";
+"muzzle_velocity" = "Mündungsgeschwindigkeit (m / s)";
+"compatible_firearms" = "Kompatible Schusswaffen";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "None";
+"armor_class_1" = "Klasse 1";
+"armor_class_2" = "Klasse 2";
+"armor_class_3" = "Klasse 3";
+"armor_class_4" = "Klasse 4";
+"armor_class_5" = "Klasse 5";
+"armor_class_6" = "Klassw 6";
+"armor_type_body" = "Körperpanzerung";
+"armor_type_helmet"= "Helm";
+"armor_type_visor" = "Visier";
+"armor_type_attachment" = "Aufsatz";
+"armor_zone_top" = "Stirn";
+"armor_zone_eyes" = "Augen";
+"armor_zone_jaws" = "Kiefer";
+"armor_zone_ears" = "Ohren";
+"armor_zone_nape" = "Nacken";
+"armor_zone_chest" = "Thorax";
+"armor_zone_stomach" = "Bauch";
+"armor_zone_left_arm" = "Linker Arm";
+"armor_zone_right_arm" = "Rechter Arm";
+"armor_zone_left_leg" = "Linkes Bein";
+"armor_zone_right_leg" = "Rechtes Bein";
+"armor_mat_ceramic" = "Keramik";
+"armor_mat_armored_steel" = "Stahl";
+"armor_mat_aramid" = "Kevlar";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Kombiniert";
+"armor_mat_aluminum" = "Aluminium";
+"armor_mat_glass" = "Glas";
+"armor_mat_titanium" = "Titan";
+
+"armor_type" = "Typ";
+"armor_material" = "Material";
+"armor_class" = "Klasse";
+"armor_points" = "Haltbarkeit";
+"armor_zones" = "Zonen";
+"penalties" = "Nachteile";
+"speed_penalty" = "Bewegungsgeschwindigkeit";
+"turn_speed_penalty" = "Drehgeschwindingkeit";
+"ergo_penalty" = "Ergonomie";
+
+"penetration" = "Durchschlagskraft";
+"damage" = "Schaden";
+"armor_damage" = "Rüstungsschaden";
+"frag_chance" = "Fragmentierungs-Chance";
+
+"explore" = "Erkunden";
+"compare" = "Vergleichen";
+"compare_performance" = "Leistungsvergleich";
+"dps_calc" = "Schadens-Rechner (DPS)";
+"kill_time_calc" = "Killzeit Rechner";
+
+// MARK: - Medical
+"damage" = "Schaden";
+"contusion" = "Prellung";
+"fracture" = "Bruch";
+"pain" = "Schmerz";
+"medkit" = "Verbandskasten";
+"painkiller" = "Schmerzmittel";
+"accessory" = "Zubehör";
+"stimulator" = "Stimulanzien";
+"use_time" = "Anwendungsdauer";
+"effect_duration" = "Effektdauer";
+"use_count" = "# Nutzungen";
+"hp_resource" = "Gesamte HP";
+"removes_bloodloss" = "Entfernt Blutverlust";
+"removes_contusion" = "Entfernt Prellungen";
+"removes_fracture" = "Entfernt Brüche";
+"removes_pain" = "Entfernt Schmerzen";
+"hydration_modifier" = "Flüssigkeits Modifikator";
+"energy_modifier" = "Energie Modifikator";
+
+// MARK: - Throwables
+"throwable_frag" = "Splitter";
+"throwable_flash" = "Blend";
+"throwable_smoke" = "Rauch";
+"fuse_time" = "Zündzeit";
+"explosion_radius_min" = "Min Explosionsbereich";
+"explosion_radius_max" = "Max Explosionsbereich";
+"fragmentation_count" = "Fragmentanzahl";
+
+// MARK: - Melee
+"damage" = "Schaden";
+"rate" = "Angriffsgeschwindigkeit";
+"range" = "Reichweite";
+
+"stab" = "Stechen";
+"stab_dmg" = "Stechschaden";
+"stab_rate" = "Stechrate";
+"stab_range" = "Stechreichweite";
+
+"slash" = "Schlitz";
+"slash_dmg" = "Schlitzschaden";
+"slash_rate" = "Schlitzrate";
+"slash_range" = "Schlitzreichweite";
+
+// MARK: - Posts
+"ballistics_title" = "Rüstung & Ballistik: Die Grundlagen";
+"ballistics_body_1" = "Das Ballistiksystem in Escape from Tarkov ist eine Black Box, von der nur wenige das Innenleben gesehen haben. Aufgrund der Komplexität der Formeln, mit denen Dinge wie die Wahrscheinlichkeit eine Rüstung oder Oberfläche zu durchschlagen, Abprallwinkel, oder Schäden an Rüstungen und Körperen von Spielern, sowie die von ihnen verwendeten zufallsbasierten Elemente berechnet werden, gibt es einen oft nicht wahrnehmbaren Unterschied in der Zeit zum Kill beim Vergleich eines hochrangigen Spielers mit der besten Ausrüstung mit einem Spieler der Stufe 1, der nur eine einfache Pistole in der Hand hat. In Verbindung mit den bekannten Netzwerk- und Leistungsproblemen, Fehlern und der ständig wachsenden Anzahl von Spielern mit epischen Spielsocken verstärkt die Mehrdeutigkeit des wohl wichtigsten Systems des Spieles die Verwirrung und den Frust sowohl neuer als auch erfahrener Spieler täglich.";
+"ballistics_body_2" = "Wie funktionieren Rüstungen und was solltest du wissen? Abgesehen von Verfügbarkeit und Preis solltest du dir bei der Auswahl der Rüstung, die du kaufen, verkaufen, reparieren, ausrüsten oder wegwerfen möchtest fünf wichtige Aspekte berücksichtigen: Klasse, Haltbarkeit, Schutzzonen, Material und deren Nachteile. ";
+"ballistics_body_2_1_title" = "1. Rüstungsklassen";
+"ballistics_body_2_1" = "Jedes Rüstungsteil, von Körperpanzerungen bis hin zu ballistischen Helmen hat eine bestimmte Rüstungsklasse. Die Rüstungsklasse ist meiner Meinung nach der wichtigste Aspekt des Schutzes. Einfach ausgedrückt repräsentiert die Rüstungsklasse, wie effektiv die Rüstung Projektile mit unterschiedlich starker ballistischer Wirksamkeit aufhält. Gegenwärtig reichen die Rüstungsklassen von 1 bis 6, je höher die Zahl desto besser. Rüstungen der Stufe 1 können dich vor Dingen wie Querschlägern, Splittern und Munitionsarten mit einer geringen durschlagenden Wirkung, wie Pistolen oder Schrot, schützen. Eine Rüstung der Stufe 6 ist hingegen in der Lage, dich vor den meisten Projektilen bis hin zu den größten Kugeln im Spiel zu schützen. Ich habe hier absichtlich das Wort \"fähig\" gewählt, da jeder Treffer von den verschiedensten zufälligen Faktoren abhängt. Wenn es in Escape from Tarkov um Ballistik geht ist nichts garantiert und die Dinge, die wir erleben, scheinen manchmal unmöglich zu sein oder keinen Sinn zu ergeben. Was bedeutet das letztendlich? Welche Rüstung schützt mich vor welchen Projektilen? Das ist eine komplizierte Frage auf die ich später noch näher eingehen werde, wenn ich die Einzelheiten zum Einfluss der Ballistik diskutiere.";
+"ballistics_body_2_2_title" = "2. Haltbarkeit";
+"ballistics_body_2_2_1" = "Wenn es um die Haltbarkeit von Rüstungen geht, ist es wichtig zu beachten, dass sich die Spezifikationen mehrmals geändert haben und natürlich jederzeit von BSG geändert werden können. Das Beachtenswerte an der Haltbarkeit von Rüstungen ist, dass ihre Fähigkeit den Träger zu schützen von ihrem aktuellen Haltbarkeitswert im Vergleich zum ursprünglichen, maximalen Haltbarkeitswert im Neuzustand abhängt.";
+"ballistics_body_2_2_2" = "Beginnt ein Rüstungsteil beispielsweise mit 50 Haltbarkeit bietet es den besten Schutz bei 50/50, was ziemlich offensichtlich ist. Der weniger offensichtliche Teil ist, dass jede beschädigte und noch nicht reparierte Rüstung, wie z. B. eine Rüstung mit 40/50, genauso wirksam wie dieselbe Rüstung ist, wenn diese beschädigt und dann repariert wurde und schlussendlich 40/40 hat.";
+"ballistics_body_2_2_3" = "Es ist eine wichtige Angewohnheit, den ursprünglichen maximalen Haltbarkeitswert für die verschiedenen Rüstungssätze zu kennen oder die Haltbarkeitsanzeige bei der Inspektion des Gegenstands zu betrachten. Häufig findest du Rüstungen mit einer niedrigeren Klasse als deiner derzeitigen Rüstung. Wenn deine derzeitige Rüstung jedoch stark beschädigt ist oder mehrmals repariert wurde, erhöhst du möglicherweise die Wahrscheinlichkeit, dass die Rüstung dein Leben rettet, indem du zu einer Rüstung mit niedrigerer Klasse, aber höheren Haltbarkeit, wechselst. In manchen Kampfsituationen kann es von unschätzbarem Wert sein, die allgemeinen Schutzchancen für verschiedene Rüstungsklassen, Haltbarkeitswerte und Munitionsarten zu kennen. Schaue dir den Schadenskalkulator an, um ein Gefühl dafür zu bekommen, wie alles funktioniert!";
+"ballistics_body_2_3_title" = "3. Schutzzonen";
+"ballistics_body_2_3" = "Es gibt nicht viele Details, auf die ich zu diesem Thema näher eingehen muss, außer dass du dich an eine einfache Regel erinnern musst: Rüstungen schützten nicht das was sie visuell zu schützen scheinen! Das beste Beispiel, um dies zu demonstrieren, ist die Gen4 Schutzweste (Vollversion) gegen die Gen4 (Angriffsvariante). Die Vollschutzversion sieht so aus, als würde sie mehr von deinem Körper abdecken, aber sie schützt deine Körperteile genauso wie die Angriffsausrüstung, da sie dieselben Schutzzonen aufweist. Achte darauf welche Zonen geschützt sind - einen Verlust der Arme oder des Magens kann ziemlich ärgerlich sein und ist oft einen zusätzlichen Schutz wert, wenn man es sich leisten kann!";
+"ballistics_body_2_4_title" = "4. Materialien";
+"ballistics_body_2_4" = "Rüstungsteile können aus verschiedenen Materialien bestehen. Aktuell hat das Material noch keine Auswirkung auf die Schutzwirkung eines Rüstungsteils. Stattdessen ist das Material für die Reparatur einer Rüstung relevant. Einige Materialen lassen sich sehr effizient und preisgünstig reparieren, während andere einen großen Teil ihrer Haltbarkeit einbüßen. Zudem können die Kosten der Reparatur teilweise sogar die Kosten einer neuen Rüstung übersteigen."
+"ballistics_body_2_5_title" = "5. Nachteile";
+"ballistics_body_2_5" = "Im Allgemeinen ist zusätzlicher Schutz mit Kosten verbunden. Diese Kosten können sowohl finanzieller als auch praktischer Natur sein. Jedes Rüstungsteil hat eine Reihe von Nachteilen. Einige verlangsamen deine Bewegung, einige verlangsamen deine Drehgeschwindigkeit und sogar deine allgemeine Ergonomie, was sich auf die Geschwindigkeit auswirkt, mit der du das Ziel anvisieren, auf die Geschwindigkeit des Ausdauerverlusts und sogar darauf, wie laut dein Charakter ist, wenn du dich langsam bewegst oder zielst. Einige Helme können zudem dein Gehör, oder auch deine Sicht, in vielerlei Hinsicht einschränken. Dies sind die Kompromisse, die du berücksichtigen solltest, wenn du entscheidest ob du teurere Rüstungssets oder den mächtigen Killa-Helm kaufen möchtest. Welche Rüstungen und Helme sind es wert? Das musst du selbst entscheiden!";
+"ballistics_body_3_title" = "Zusammenfassung";
+"ballistics_body_3" = "Das Ballistiksystem in Escape from Tarkov ist erstaunlich komplex und erfordert einiges an Erfahrung und Wissen um es zu deinem Vorteil nutzen zu können. Das obige Video zu Rüstungen und Ballistik erläutert einige dieser Konzepte ausführlicher. Wenn du mehr über das Thema erfahren möchtest solltest du es anschauen. Schütze dich dort draußen!";
+
+"health_title" = "Gesundheit und Status deines PMC";
+"health_body_1" = "Diese Informationen werden in Kürze™ zur Verfügung stehen";
+
+"upcoming_body_1" = "Ich habe so viele tolle Features für diese App geplant, dass ich es kaum erwarten kann, sie für die Community zu erstellen! Interaktive Karten, Waffenmodifikationen, Quest-Anleitungen, mehr Gegenstände, Rechner und Simulatoren, Händlerinformationen, Aufschlüsselung der Fertigkeiten und mehr! Ich habe vor Features konsequent zu veröffentlichen, aber ich wollte euch die Version 1.0 so schnell wie möglich zur Verfügung stellen, um das Interesse zu messen und Feedback zu sammeln. Die Entwicklung des Android- und Web-Supports ist bereits im Gange. In Kürze findest du weitere Updates!";
+
+"attributions_api" = "Morphy2k & Tarkov Datenbank";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Community";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Verschiedenes Rechtliches";
+"attributions_translations" = "Lokalisierung";
+
+"attributions_api_descr" = "Dieses Projekt wäre ohne die fantastische Entwicklungsarbeit von Morphy an der Tarkov-Database und der zugrunde liegenden API nicht möglich gewesen.";
+"attributions_nofam_descr" = "Der unbesungene Held in der EFT-Community, der Schöpfer der Munitionstabellen, Mitersteller der Ballistikrechner, der Bereitsteller der benötigten Informationen, der Botschafter der Munition, der Baron der Ballistik, sowie der Professor für Durchschlagskraft!";
+"attributions_willerz_descr" = "Ich wünsche meinem Homeboy viel Liebe für die Bereitstellung einiger Screenshots in epischer Qualität, für die er mir die Erlaubnis gegeben hat sie in dieser App zu verwenden. Er ist auch einer der besten Spieler der Welt.";
+"attributions_community_descr" = "Vielen Dank an meine Community für all die harte Arbeit beim Erfassen und Bearbeiten der wunderschönen Fotos, die in dieser App verwendet werden!";
+"attributions_translations_descr" = "Alle Übersetzungen wurden von Community-Mitgliedern angefertigt, die ihre Zeit und Mühe für die Sache spendeten. Jeder auf der Welt schätzt eure harte Arbeit!";
+"attributions_bsg_descr" = "Besonderer Dank geht an Nikita für die Unterstützung dieser App und an alle BSG-Mitarbeiter für ihre harte Arbeit und ihren Einsatz beim Aufbau des besten Ego-Shooters aller Zeiten.";
+"attributions_misc_descr" = "Unter CC lizenzierte Social-Media-Icons von Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva). 'Brain'-Symbol von Sergey Patutin aus dem unter CC lizenzierten Noun Project (https://thenounproject.com/bdesign.by/).";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies haben sich dem Kampf angeschlossen!";
