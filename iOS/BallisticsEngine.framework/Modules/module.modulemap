@@ -1,0 +1,11 @@
+framework module BallisticsEngine {
+  umbrella header "BallisticsEngine.h"
+
+  export *
+  module * { export * }
+}
+
+module BallisticsEngine.Swift {
+    header "BallisticsEngine-Swift.h"
+    requires objc
+}
