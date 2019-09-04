@@ -186,7 +186,7 @@
 "armor_class_0" = "Nincs";
 "armor_class_1" = "1-es Osztályzat";
 "armor_class_2" = "2-es Osztályzat";
-"armor_class_3" = "3-mas Osztályzat";
+"armor_class_3" = "3-as Osztályzat";
 "armor_class_4" = "4-es Osztályzat";
 "armor_class_5" = "5-ös Osztályzat";
 "armor_class_6" = "6-os Osztályzat";
@@ -256,9 +256,9 @@
 "energy_modifier" = "Energia befolyásolás:";
 
 // MARK: - Throwables
-"throwable_frag" = "Repesz";
-"throwable_flash" = "Villanó";
-"throwable_smoke" = "Füst";
+"throwable_frag" = "Repeszgránát";
+"throwable_flash" = "Villanógránát";
+"throwable_smoke" = "Füstgránát";
 "fuse_time" = "Gyújtózsinór idő";
 "explosion_radius_min" = "Minimális robbanási táv";
 "explosion_radius_max" = "Maximális robbanási táv";
@@ -269,12 +269,12 @@
 "rate" = "Arány";
 "range" = "Táv";
 
-"stab" = "Stab";
+"stab" = "Szúrás";
 "stab_dmg" = "Szúró sebzés";
-"stab_rate" = "Döfés sebzés";
-"stab_range" = "Döfés távolság";
+"stab_rate" = "Szúró arány";
+"stab_range" = "Szúró távolság";
 
-"slash" = "Slash";
+"slash" = "Vágás";
 "slash_dmg" = "Vágás sebzés";
 "slash_rate" = "Vágás arány";
 "slash_range" = "Vágás távolság";
@@ -282,11 +282,11 @@
 // MARK: - Posts
 "ballistics_title" = "Páncélzat és ballisztikai alapok";
 "ballistics_body_1" = "A ballisztika rendszer a játékban jelenleg egy olyan dolog, melyet kevés játékos ért meg teljesen. Ez a rendszer komplexitásának köszönhető, hiszen számba veszi a felületi áthatolás esélyeit, lepattanási szögeket, és a sebzést mind a páncél, mind a játékos számára, számos véletlenszerű esélyek mellett, ezért sokszor tapasztalható eltérés az öléshez szükséges időben amikor összehasonlítunk egy teljesen felszerelt játékost egy teljesen csupasszal. Ezt összepárosítjuk a hálozati hibákkal, teljesítmény hézagokkal, és rájövünk, hogy a rendszer kétértelműsége a mai napig zavarba hozza mind a kezdő, mind a veterán játékosokat.";
-"ballistics_body_2" = "Kezdjük a testpáncélzattal. Hogy működik, és mit kell tudnod róla? 5 Fontos dolgot kell figyelembe venned amikor szóba jön hogy milyen páncélt tartunk meg, adunk el, vagy javítunk meg. Ezek pedig:Az osztályzat, a tartóssága, a védelmi zónái, az anyaga, és a negatív tulajdonságai.";
+"ballistics_body_2" = "Kezdjük a testpáncélzattal. Hogy működik, és mit kell tudnod róla? 5 Fontos dolgot kell figyelembe venned amikor szóba jön hogy milyen páncélt tartunk meg, adunk el, vagy javítunk meg. Ezek pedig: Az osztályzat, a tartóssága, a védelmi zónái, az anyaga és a negatív tulajdonságai.";
 "ballistics_body_2_1_title" = "1. Páncélzat osztályok";
 "ballistics_body_2_1" = "Minden páncélozott elemnek a testpáncéltól a sisakig megvan az osztályzata, mely az effektívségét jelenti bizonyos ballisztikai tulajdonságú töltények ellen. Jelenleg a játékban 1-6-os osztályozásig vannak páncélok, természetesen minnél nagyobb az értékelés, annál hatékonyabb. Míg az 1-es értékelésű páncélzat megvédhet repeszektől, lepattant töltényektől, és nem páncéltörő tulajdonságokkal rendelkező pisztolytöltényektől vagy sörétektől, a 6-os osztályú páncélzat megvédhet a legnagyobb kaliberektől is a játékban. A feltételes mód használata itt pedig fontos, hiszen a páncélátütés folyamata egy komplex rendszer melyben kulcsfontosságú a szerencse, így nem minden eset egyezhet meg eredmény szerint. Melyik páncélzat véd meg melyik tölténytől? Na ez egy komplikált kérdés, később bele megyünk a részletekbe amikor megbeszéljük  a ballisztikai becsapódáshoz tartozó jellemzőket.";
 "ballistics_body_2_2_title" = "2. Tartósság";
-"ballistics_body_2_2_1" = "Amikor páncéltartósságról van szó, fontos figyelembe venni azt hogy a játék fejlesztése során sokszor változott ez a rendszer, és még változás témája lehet a fejlesztés során. A fontos tudnivaló a páncél tartósságáról, a következő: A páncél védelmezési képessége számít a jelenlegi tartósságáról az eredetihez képest, amely a teljes. (Nem a megjavított páncél teljes értéke, hiszen ez csökken minden javítással.)  ";
+"ballistics_body_2_2_1" = "Amikor páncéltartósságról van szó, fontos figyelembe venni azt hogy a játék fejlesztése során sokszor változott ez a rendszer és még változás témája lehet a fejlesztés során. A fontos tudnivaló a páncél tartósságáról, a következő: A páncél védelmezési képessége számít a jelenlegi tartósságáról az eredetihez képest, amely a teljes. (Nem a megjavított páncél teljes értéke, hiszen ez csökken minden javítással.)  ";
 "ballistics_body_2_2_2" = "Például, ha egy páncélzat 50 tartósságponttal kezd, akkor nyújt a legtöbb védelmet ha 50/50 tartósságon van. Viszont egy 40/50 tartóssággal rendelkező páncél teljesen egyező védelmet nyújt egy, már egyszer megjavított 40/40 ponttal rendelkező páncélszettel. ";
 "ballistics_body_2_2_3" = "Ha tisztában vagy a páncélzat rendszer működésével, és bizonyos páncélok értékeivel, kulcsfontosságú döntéseket tudsz hozni a játékban, mint például lecserélni az elhasználódott/többször javított magasabb osztályú páncélodat egy alacsonyabb osztályú, de nagyobb tartóssággal rendelkező páncélra, amely megnövelheti a túlélési esélyeidet. Több információért és tesztelésért próbáld ki a Sebzés számláló felületet!";
 "ballistics_body_2_3_title" = "3. Védelmi zónák";
@@ -294,14 +294,14 @@
 "ballistics_body_2_4_title" = "4. Anyagok";
 "ballistics_body_2_4" = "Minden páncél más anyagból, vagy anyagokból áll össze. Jelenleg az eltérő anyagoknak nincs szerepe abban hogy milyen hatékony védelmezésben, inkább a javításban van. Bizonyos anyagú páncélokat drága és rossz arányban lehet megjavítani, míg más anyagúakat olcsón és effektíven lehet megjavítani, hogy minnél kevesebb tartósságot veszítsen az. Bizonyos páncélok megjavítása drágább lehet, mint egy új szett megvásárlása.";
 "ballistics_body_2_5_title" = "5. Büntetések/Negatívumok";
-"ballistics_body_2_5" = "A legtöbb, ha nem az összes extra védelem mindíg magával hoz negatívumokat, mely lehet pénzügyi, és tulajdonság befolyásoló. Minden páncélnak megvan a saját negatívuma. Bizonyos páncélok lelassítanak mozgásügyileg, míg mások a fordulási sebességedet lassítják le, de akár az ergonómiát is csökkenthetik, így lassabban tudsz célozni a fegyvereddel, és több állóképességet veszíthetsz célzás közben. Sisakoknál, bizonyos sisakok tompíthatják a hallásodat, melyet kompenzálhatsz fejhallgató viselésével. Fontos figyelembe venni ezeket a negatívumokat, és ezeknek megfelelően összeállítani az ideális felszerelést amikor páncélzat jön szóba. ";
+"ballistics_body_2_5" = "A legtöbb, ha nem az összes extra védelem mindig magával hoz negatívumokat, mely lehet pénzügyi és tulajdonság befolyásoló. Minden páncélnak megvan a saját negatívuma. Bizonyos páncélok lelassítanak mozgásügyileg, míg mások a fordulási sebességedet lassítják le, de akár az ergonómiát is csökkenthetik, így lassabban tudsz célozni a fegyvereddel és több állóképességet veszíthetsz célzás közben. Sisakoknál, bizonyos sisakok tompíthatják a hallásodat, melyet kompenzálhatsz fejhallgató viselésével. Fontos figyelembe venni ezeket a negatívumokat és ezeknek megfelelően összeállítani az ideális felszerelést amikor páncélzat jön szóba. ";
 "ballistics_body_3_title" = "Összegzés";
-"ballistics_body_3" = "A játék ballisztika rendszere elképesztően komplex és sok tapasztalatot igényel ahhoz hogy az előnyödre tudd fordítani ezt. A Páncélzat és A ballisztika videó megmagyarázza ezeket a témákat részletesebben, így ha érdekel a téma, és szívesen megtanulnád részletesebben, nézd meg ezeket a videókat!";
+"ballistics_body_3" = "A játék ballisztika rendszere elképesztően komplex és sok tapasztalatot igényel ahhoz hogy az előnyödre tudd fordítani ezt. A Páncélzat és A ballisztika videó megmagyarázza ezeket a témákat részletesebben, így ha érdekel a téma és szívesen megtanulnád részletesebben, nézd meg ezeket a videókat!";
 
 "health_title" = "A PMC-d Életereje és Státusza";
 "health_body_1" = "Erről az információ hamarosan érkezik™";
 
-"upcoming_body_1" = "Rendkívül sok hasznos eszközt tervezek még beépíteni ebbe az alkalmazásba, és alig várom hogy elkészítsük ezt a közösséggel! Ilyenek például az interaktív pályák, fegyver testreszabás, küldetés kalauzok, több tárgyak és számlálók, infó a kereskedőkről, a képességek levezetése, és több! Folyamatossággal tervezek frissítéseket kiadni, de szerettem volna az 1.0 Verziót minnél hamarabb eljutattni hozzátok hogy érdeklődést keltsen és visszajelzést tudjak szerezni tőletek. Android és Weboldalas támogatás már úton van, nézz vissza frissítésekért hamarosan!";
+"upcoming_body_1" = "Rendkívül sok hasznos eszközt tervezek még beépíteni ebbe az alkalmazásba és alig várom hogy elkészítsük ezt a közösséggel! Ilyenek például az interaktív pályák, fegyver testreszabás, küldetés kalauzok, több tárgyak és számlálók, infó a kereskedőkről, a képességek levezetése és több! Folyamatossággal tervezek frissítéseket kiadni, de szerettem volna az 1.0 Verziót minnél hamarabb eljutattni hozzátok hogy érdeklődést keltsen és visszajelzést tudjak szerezni tőletek. Android és Weboldalas támogatás már úton van, nézz vissza frissítésekért hamarosan!";
 
 "attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
@@ -311,7 +311,7 @@
 "attributions_misc" = "Szerzői és jogi információ";
 "attributions_translations" = "Fordítás";
 
-"attributions_api_descr" = "Ez a projekt nem lett volna elképzelhető Morphy kiváló fejlesztői munkássága nélkül a Tarkov Adatbázison, és az API-n.";
+"attributions_api_descr" = "Ez a projekt nem lett volna elképzelhető Morphy kiváló fejlesztői munkássága nélkül a Tarkov Adatbázison és az API-n.";
 "attributions_nofam_descr" = "A Tarkov közösség hőse, a muníció táblázat készítője, résztvevő a sebzésszámláló elkészítésében és az ahhoz szükséges információ megszerzésében, a Muníció Nagykövetje, a Penetráció Professzora!0";
 "attributions_willerz_descr" = "Sok hála a barátomnak aki gyönyörű fényképeihez adott használati jogot. Véletlenül ő az egyik legjobb Escape From Tarkov játékos.";
 "attributions_community_descr" = "Ezer köszönet a Discord közösségemnek a sok fáradtságért és nehéz munkájáért, az alkalmazásban látható fényképek elkészítéséért és szerkesztéséért.";
