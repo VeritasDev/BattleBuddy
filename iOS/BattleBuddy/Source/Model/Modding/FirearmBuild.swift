@@ -16,7 +16,7 @@ enum FirearmBuildPreset {
 }
 
 struct FirearmBuild {
-    let databaseManager = DependencyManagerImpl.shared.databaseManager
+    let databaseManager = DependencyManagerImpl.shared.databaseManager()
     let firearm: Firearm
     let preset: FirearmBuildPreset
 

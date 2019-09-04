@@ -38,7 +38,7 @@ extension Ammo: Sortable {
     func valueForParam(_ param: SortableParam) -> String {
         switch param.identifier {
         case AmmoSortableParam.name.identifier: return displayNameShort
-        case AmmoSortableParam.caliber.identifier: return DependencyManagerImpl.shared.ammoUtilitiesManager.caliberDisplayName(caliber)
+        case AmmoSortableParam.caliber.identifier: return DependencyManagerImpl.shared.ammoUtilitiesManager().caliberDisplayName(caliber)
         case AmmoSortableParam.pen.identifier: return String(penetration)
         case AmmoSortableParam.damage.identifier: return String(damage)
         default: fatalError()

@@ -10,7 +10,7 @@ import UIKit
 
 class BaseItemPreviewViewController: BaseViewController, ItemPreviewDelegate, UISearchBarDelegate {
     let collectionView: ItemPreviewCollectionView
-    let dbManager = DependencyManagerImpl.shared.databaseManager
+    let dbManager = DependencyManagerImpl.shared.databaseManager()
     let config: ItemPreviewConfiguration
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
@@ -48,7 +48,7 @@ class BaseItemPreviewViewController: BaseViewController, ItemPreviewDelegate, UI
 
         showLoading()
 
-        DependencyManagerImpl.shared.databaseManager.getAllItemsWithSearchQuery(searchText) { results in
+        DependencyManagerImpl.shared.databaseManager().getAllItemsWithSearchQuery(searchText) { results in
             self.hideLoading()
 
             var newConfig = self.collectionView.config

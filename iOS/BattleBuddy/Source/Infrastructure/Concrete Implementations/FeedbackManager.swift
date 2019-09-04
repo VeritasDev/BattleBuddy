@@ -1,5 +1,5 @@
 //
-//  FeedbackManager.swift
+//  FeedbackManagerImpl.swift
 //  BattleBuddy
 //
 //  Created by Mike on 8/8/19.
@@ -9,11 +9,11 @@
 import Foundation
 import StoreKit
 
-class FeedbackManager {
+class FeedbackManagerImpl: FeedbackManager {
     private let launchCountThreshold: Int = 3
     private let fourMonthsInSeconds: Double = 10_368_000.0;
     private let appRatingDelayPrompt: Double = 15.0;
-    lazy var prefsManager = DependencyManagerImpl.shared.prefsManager
+    lazy var prefsManager = DependencyManagerImpl.shared.prefsManager()
 
     // Require at least 3 launches before we automatically prompt users for a review, as well as
     // a 4-month minimum period in between prompts.
@@ -31,6 +31,11 @@ class FeedbackManager {
         let previousReviewTimestamp = prefsManager.valueForDoublePref(.appRatingTimestamp)
         let currentTimestamp = NSDate().timeIntervalSince1970
         return currentTimestamp - previousReviewTimestamp > fourMonthsInSeconds
+    }
+
+    func askForReview() {
+        SKStoreReviewController.requestReview()
+        self.updateRatingTimestamp()
     }
 
     private func updateCheckCount() {

@@ -18,7 +18,7 @@ enum AspectRatioType {
 // TODO: Resize assets for all resolutions!
 
 class BaseImageView: UIImageView {
-    let firebaseManager = DependencyManagerImpl.shared.firebaseManager
+    let firebaseManager = DependencyManagerImpl.shared.firebaseManager()
     var displayableItem: Displayable? {
         didSet {
             guard let displayable = displayableItem else { fatalError() }

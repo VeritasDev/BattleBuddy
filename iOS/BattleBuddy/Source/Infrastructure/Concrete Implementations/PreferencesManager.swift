@@ -14,6 +14,7 @@ enum Preference: String {
     case appRatingCheckCount = "prefs_app_rating_check_count"
 }
 
+// TODO: Make this a concrete implementation of a more generic interface!
 class PreferencesManager {
     private let defaults = UserDefaults.standard
 

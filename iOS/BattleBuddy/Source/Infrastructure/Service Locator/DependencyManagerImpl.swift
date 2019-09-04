@@ -11,33 +11,42 @@ import UIKit
 class DependencyManagerImpl: DependencyManager {
     static let shared: DependencyManager = DependencyManagerImpl()
 
-    let accountManager: AccountManager
-    let databaseManager: DatabaseManager
-    let httpRequestor: HttpRequestor
-    let firebaseManager: FirebaseManager
-    let prefsManager: PreferencesManager
-    let twitchManager: TwitchManager
-    let feedbackManager: FeedbackManager
-    let adManager: AdManager
-    let metadataManager: GlobalMetadataManager
-    let ammoUtilitiesManager: AmmoUtilitiesManager
+    var accountMngr: AccountManager?
+    var dbMngr: DatabaseManager?
+    var httpRqstr: HttpRequestor?
+    var firebaseMngr: FirebaseManager?
+    var prefsMngr: PreferencesManager?
+    var twitchMngr: TwitchManager?
+    var feedbackMngr: FeedbackManager?
+    var adMngr: AdManager?
+    var metadataMngr: GlobalMetadataManager?
+    var ammoUtilitiesMngr: AmmoUtilitiesManager?
 
-    init() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { fatalError() }
-
+    func assembleDependencies(_ appDelegate: AppDelegate) {
         // Firebase handles sessions, accounts, storage, metadata, and ads.
         let firebase = FirebaseManager(sessionDelegate: appDelegate)
-        firebaseManager = firebase
-        databaseManager = firebase
-        adManager = firebase
-        accountManager = firebase
-        metadataManager = firebase
+        firebaseMngr = firebase
+        dbMngr = firebase
+        adMngr = firebase
+        accountMngr = firebase
+        metadataMngr = firebase
 
-        httpRequestor = AlamofireManager()
+        httpRqstr = AlamofireManager()
 
-        prefsManager = PreferencesManager()
-        twitchManager = TwitchManager()
-        feedbackManager = FeedbackManager()
-        ammoUtilitiesManager = AmmoUtilitiesManagerImpl()
+        prefsMngr = PreferencesManager()
+        twitchMngr = TwitchManager()
+        feedbackMngr = FeedbackManagerImpl()
+        ammoUtilitiesMngr = AmmoUtilitiesManagerImpl()
     }
+
+    func accountManager() -> AccountManager { return accountMngr! }
+    func databaseManager() -> DatabaseManager { return dbMngr! }
+    func httpRequestor() -> HttpRequestor { return httpRqstr! }
+    func firebaseManager() -> FirebaseManager { return firebaseMngr! }
+    func prefsManager() -> PreferencesManager { return prefsMngr! }
+    func twitchManager() -> TwitchManager { return twitchMngr! }
+    func feedbackManager() -> FeedbackManager { return feedbackMngr! }
+    func adManager() -> AdManager { return adMngr! }
+    func metadataManager() -> GlobalMetadataManager { return metadataMngr! }
+    func ammoUtilitiesManager() -> AmmoUtilitiesManager { return ammoUtilitiesMngr! }
 }

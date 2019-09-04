@@ -16,6 +16,13 @@ import Crashlytics
 class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
     var window: UIWindow?
     let tabBarController = BaseTabBarController()
+    let dependencyManager = DependencyManagerImpl.shared
+
+    override init() {
+        super.init()
+
+        dependencyManager.assembleDependencies(self)
+    }
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
@@ -28,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
         guard NSClassFromString("XCTestCase") == nil else { return }
 
         ThemeManager.configureAppearance()
-        DependencyManagerImpl.shared.accountManager.initializeSession()
+        dependencyManager.accountManager().initializeSession()
         Fabric.with([Crashlytics.self])
     }
 
@@ -53,13 +60,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
         self.tabBarController.setViewControllers([itemsNC, learnNC, moreNC], animated: false)
         self.window?.rootViewController = self.tabBarController
 
-        DependencyManagerImpl.shared.feedbackManager.promptForReviewIfNecessary()
+        DependencyManagerImpl.shared.feedbackManager().promptForReviewIfNecessary()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        let dependencyManager = DependencyManagerImpl.shared
-        dependencyManager.twitchManager.refreshTwitchInfo()
-        dependencyManager.metadataManager.updateGlobalMetadata { (globalMetadata) -> Void in }
+        dependencyManager.twitchManager().refreshTwitchInfo()
+        dependencyManager.metadataManager().updateGlobalMetadata { (globalMetadata) -> Void in }
     }
 }
 

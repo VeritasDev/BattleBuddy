@@ -11,8 +11,6 @@
 
 ## <u>iOS v1.0</u>
 
-- [ ] Handle weird data sync issues
-- [ ] Instrument memory and processing performance
 - [ ] Localizations
     - [x] Dutch
     - [x] Italian
@@ -38,9 +36,11 @@
 - [ ] App store submission stuff
     - Screenshots
     - App description/copy/tags
-- [ ] Migrate Apple dev account from personal -> business
 
 ### <u>Done</u>
+- [x] Handle weird data sync issues
+- [x] Instrument memory and processing performance
+- [x] Migrate Apple dev account from personal -> business
 - [x] Initial prototype
 - [x] Firebase migration
 - [x] Item lists and detail pages

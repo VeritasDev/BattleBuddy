@@ -95,7 +95,7 @@ class AmmoDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewD
 
         let cell = tableView.cellForRow(at: indexPath)
 
-        let dbManager = DependencyManagerImpl.shared.databaseManager
+        let dbManager = DependencyManagerImpl.shared.databaseManager()
 
         switch cell {
         case caliberCell:

@@ -12,16 +12,17 @@ import UIKit
 
 protocol DependencyManager {
     static var shared: DependencyManager { get }
-    var accountManager: AccountManager { get }
-    var databaseManager: DatabaseManager { get }
-    var httpRequestor: HttpRequestor { get }
-    var firebaseManager: FirebaseManager { get }
-    var prefsManager: PreferencesManager { get }
-    var twitchManager: TwitchManager { get }
-    var feedbackManager: FeedbackManager { get }
-    var adManager: AdManager { get }
-    var metadataManager: GlobalMetadataManager { get }
-    var ammoUtilitiesManager: AmmoUtilitiesManager { get }
+    func assembleDependencies(_ appDelegate: AppDelegate)
+    func accountManager() -> AccountManager
+    func databaseManager() -> DatabaseManager
+    func httpRequestor() -> HttpRequestor
+    func firebaseManager() -> FirebaseManager
+    func prefsManager() -> PreferencesManager
+    func twitchManager() -> TwitchManager
+    func feedbackManager() -> FeedbackManager
+    func adManager() -> AdManager
+    func metadataManager() -> GlobalMetadataManager
+    func ammoUtilitiesManager() -> AmmoUtilitiesManager
 }
 
 // MARK:- Networking
@@ -138,3 +139,12 @@ protocol GlobalMetadataManager {
 protocol AmmoUtilitiesManager {
     func caliberDisplayName(_ caliber: String) -> String
 }
+
+// Mark:- Feedback
+
+protocol FeedbackManager {
+    func promptForReviewIfNecessary()
+    func canAskForReview() -> Bool
+    func askForReview()
+}
+

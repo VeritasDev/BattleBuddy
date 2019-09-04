@@ -38,7 +38,7 @@ class TeamViewController: BaseTableViewController {
     let pestilyCell = TwitchCell(.pestily)
     let antonCell = TwitchCell(.anton)
     lazy var teamCells: [TwitchCell] = [ghostfreakCell, slushCell, pestilyCell, antonCell, veritasCell]
-    lazy var twitchManager = DependencyManagerImpl.shared.twitchManager
+    lazy var twitchManager = DependencyManagerImpl.shared.twitchManager()
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 

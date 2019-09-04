@@ -86,7 +86,7 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -98,7 +98,7 @@
             BlueprintIdentifier = "27954E2B22A18470000FC0C6"
             BuildableName = "BattleBuddy.app"
             BlueprintName = "BattleBuddy"
-            ReferencedContainer = "container:../../../../../../Desktop/dev/BattleBuddy/BattleBuddy.xcodeproj">
+            ReferencedContainer = "container:BattleBuddy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

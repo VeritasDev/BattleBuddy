@@ -19,10 +19,6 @@ enum PostElementType {
     case body
 }
 
-enum PostAction {
-    case showBallisticsCalculator
-}
-
 protocol PostConfiguration {
     var title: String? { get }
     var elements: [PostElement] { get }

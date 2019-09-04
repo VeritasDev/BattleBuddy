@@ -11,7 +11,7 @@ import BallisticsEngine
 import JGProgressHUD
 
 class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSelectionDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    let dbManager = DependencyManagerImpl.shared.databaseManager
+    let dbManager = DependencyManagerImpl.shared.databaseManager()
     var calculator = PenetrationCalculator()
     let selectionCellId = "ItemSelectionCell"
     let resultLabel: UILabel = {
