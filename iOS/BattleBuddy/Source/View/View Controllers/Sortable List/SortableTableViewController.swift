@@ -46,8 +46,11 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
 
     func toggleSort(param: SortableParam) {
         config.toggleStateForParam(param)
-        tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
-        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+
+        if !config.items.isEmpty {
+            tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+            tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        }
     }
 
     // MARK: - Table view data source
