@@ -48,7 +48,6 @@ class FirebaseManager: NSObject {
     var currentVideoAdState: VideoAdState = .unavailable
 
     // TODO: Get real IDs
-    //     ca-app-pub-9675471903990977~4266775851
     private let videoAdUnit = "ca-app-pub-3940256099942544/1712485313"
 
     private lazy var prefsManager = DependencyManagerImpl.shared.prefsManager()
