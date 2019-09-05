@@ -11,7 +11,18 @@
 
 ## <u>iOS v1.0</u>
 
+- [ ] Handle weird data sync issues
 - [ ] Localizations
+    - [ ] Romanian
+    - [ ] Czech
+    - [ ] Norwegian
+- [ ] Replace Google Admob Key w/ Real One
+- [ ] App store submission stuff
+    - Screenshots
+    - App description/copy/tags
+
+### <u>Done</u>
+- [x] Localizations
     - [x] Dutch
     - [x] Italian
     - [x] Swedish
@@ -29,16 +40,6 @@
     - [x] Polish
     - [x] Chinese
     - [x] German
-    - [ ] Romanian
-    - [ ] Czech
-    - [ ] Norwegian
-- [ ] Replace Google Admob Key w/ Real One
-- [ ] App store submission stuff
-    - Screenshots
-    - App description/copy/tags
-
-### <u>Done</u>
-- [x] Handle weird data sync issues
 - [x] Instrument memory and processing performance
 - [x] Migrate Apple dev account from personal -> business
 - [x] Initial prototype
