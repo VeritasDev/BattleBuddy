@@ -29,8 +29,8 @@
 "view_on_github" = "Auf GitHub ansehen";
 "rate_this_app" = "Bewerte Battle Buddy";
 "attributions" = "Credits";
-"check_out_team" = "Schau dir das Team an";
-"team" = "Das Team";
+"check_out_team" = "Schau dir The Team an";
+"team" = "The Team";
 "twitter" = "Twitter";
 "twitch" = "Twitch";
 "discord" = "Discord";
@@ -303,7 +303,7 @@
 
 "upcoming_body_1" = "Ich habe so viele tolle Features für diese App geplant, dass ich es kaum erwarten kann, sie für die Community zu erstellen! Interaktive Karten, Waffenmodifikationen, Quest-Anleitungen, mehr Gegenstände, Rechner und Simulatoren, Händlerinformationen, Aufschlüsselung der Fertigkeiten und mehr! Ich habe vor Features konsequent zu veröffentlichen, aber ich wollte euch die Version 1.0 so schnell wie möglich zur Verfügung stellen, um das Interesse zu messen und Feedback zu sammeln. Die Entwicklung des Android- und Web-Supports ist bereits im Gange. In Kürze findest du weitere Updates!";
 
-"attributions_api" = "Morphy2k & Tarkov Datenbank";
+"attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
 "attributions_willerz" = "Willer_Z";
 "attributions_community" = "Community";
