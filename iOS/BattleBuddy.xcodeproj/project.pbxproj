@@ -18,7 +18,6 @@
 		2745EC5522CA29BF00CD60D6 /* LocalizationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745EC5422CA29BF00CD60D6 /* LocalizationUtils.swift */; };
 		2753FE6522F0767C00B20DAD /* DependencyInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6422F0767C00B20DAD /* DependencyInterfaces.swift */; };
 		276AFA79231B7F3B00C9DB3A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA78231B7F3B00C9DB3A /* README.md */; };
-		276AFA7B231B8BA600C9DB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276AFA7A231B8BA600C9DB3A /* GoogleService-Info.plist */; };
 		276AFA83231B919F00C9DB3A /* BattleBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276AFA82231B919F00C9DB3A /* BattleBuddyTests.swift */; };
 		276AFA91231B93AA00C9DB3A /* BattleBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276AFA90231B93AA00C9DB3A /* BattleBuddyUITests.swift */; };
 		276AFA9B231B982600C9DB3A /* DependencyInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753FE6422F0767C00B20DAD /* DependencyInterfaces.swift */; };
@@ -98,6 +97,7 @@
 		27FDE6C123204CC200CA727B /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; };
 		27FDE6C323204D2A00CA727B /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
+		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };
 		EF7AF36322C2A8D300DA1A18 /* Ammo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF36222C2A8D300DA1A18 /* Ammo.swift */; };
 		EF7AF36B22C3E58100DA1A18 /* BaseStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF36922C3E58100DA1A18 /* BaseStackViewController.swift */; };
@@ -198,7 +198,6 @@
 		276AFA72231AD93D00C9DB3A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		276AFA73231AD93E00C9DB3A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		276AFA78231B7F3B00C9DB3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		276AFA7A231B8BA600C9DB3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		276AFA80231B919E00C9DB3A /* BattleBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		276AFA82231B919F00C9DB3A /* BattleBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleBuddyTests.swift; sourceTree = "<group>"; };
 		276AFA84231B919F00C9DB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -300,6 +299,7 @@
 		55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.release.xcconfig"; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EF5E38E22316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF5E38E32316F5A00098C4C2 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -485,30 +485,6 @@
 				27F09AE022E11F6200552C35 /* TraderMenuViewController.swift */,
 			);
 			path = Learn;
-			sourceTree = "<group>";
-		};
-		276AFA74231B78A200C9DB3A /* Prod */ = {
-			isa = PBXGroup;
-			children = (
-				276AFA7A231B8BA600C9DB3A /* GoogleService-Info.plist */,
-			);
-			path = Prod;
-			sourceTree = "<group>";
-		};
-		276AFA75231B78AA00C9DB3A /* Staging */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Staging;
-			sourceTree = "<group>";
-		};
-		276AFA76231B792600C9DB3A /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				276AFA74231B78A200C9DB3A /* Prod */,
-				276AFA75231B78AA00C9DB3A /* Staging */,
-			);
-			path = Config;
 			sourceTree = "<group>";
 		};
 		276AFA81231B919F00C9DB3A /* BattleBuddyTests */ = {
@@ -725,9 +701,9 @@
 			children = (
 				276AFA78231B7F3B00C9DB3A /* README.md */,
 				27793A3E22A4345D00378FE3 /* Source */,
-				276AFA76231B792600C9DB3A /* Config */,
 				27793A3C22A433E200378FE3 /* Misc */,
 				27954E3B22A18472000FC0C6 /* Info.plist */,
+				EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */,
 			);
 			path = BattleBuddy;
 			sourceTree = "<group>";
@@ -1136,7 +1112,7 @@
 				27954E3A22A18472000FC0C6 /* LaunchScreen.storyboard in Resources */,
 				EFD03DD622B3FAEA00DE1874 /* LoadingViewController.xib in Resources */,
 				27954E3722A18472000FC0C6 /* Assets.xcassets in Resources */,
-				276AFA7B231B8BA600C9DB3A /* GoogleService-Info.plist in Resources */,
+				EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1644,9 +1620,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = 63LNS64VMY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1658,7 +1634,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9.2;
+				MARKETING_VERSION = 0.9.3;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -1776,9 +1752,9 @@
 			baseConfigurationReference = 55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 63LNS64VMY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1791,11 +1767,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9.2;
+				MARKETING_VERSION = 0.9.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.veritas.BattleBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Production 9-4-19";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

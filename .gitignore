@@ -2,9 +2,6 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## Env config
-iOS/BattleBuddy/Config/Prod/*
-
 ## Private frameworks
 *Private
 

@@ -59,12 +59,12 @@ class FirebaseManager: NSObject {
 
         super.init()
 
-        let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
-        guard let options = FirebaseOptions(contentsOfFile: filePath!)
-            else { fatalError("Couldn't load config file! I gotta make this work for staging environment... SoonTM") }
-        FirebaseApp.configure(options: options)
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        FirebaseApp.configure()
 
+        // Uncomment this out for debugging purposes.
+        // FirebaseConfiguration.shared.setLoggerLevel(.max)
+
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         videoAd.delegate = self
         reloadVideoAd()
     }
