@@ -1,7 +1,7 @@
 // MARK: - General
 "yes" = "Ja";
 "no" = "Nein";
-"ok" = "Ok";
+"ok" = "OK";
 "done" = "Fertig";
 "soon" = "Bald™";
 "coming_soon" = "Demnächst™";
@@ -29,7 +29,7 @@
 "view_on_github" = "Auf GitHub ansehen";
 "rate_this_app" = "Bewerte Battle Buddy";
 "attributions" = "Credits";
-"check_out_team" = "Schau dir The Team an";
+"check_out_team" = "Schaue dir The Team an";
 "team" = "The Team";
 "twitter" = "Twitter";
 "twitch" = "Twitch";
@@ -48,9 +48,9 @@
 "upcoming_features" = "Geplante Funktionen";
 
 "twitter_description" = "Bleib auf dem Laufenden";
-"twitch_description" = "Schau Live auf Twitch";
+"twitch_description" = "Schaue Live auf Twitch";
 "discord_description" = "Join unserem Community Discord";
-"youtube_description" = "Schau auf YouTube";
+"youtube_description" = "Schaue auf YouTube";
 "instagram_description" = "Medien auf Instagram";
 "soundcloud_description" = "Auf Soundcloud hören";
 "spotify_description" = "Auf Spotify hören";
@@ -176,7 +176,7 @@
 "guns_for_caliber" = "Verwandte Schusswaffen";
 "subsonic" = "Unterschall";
 "tracer" = "Leuchtspur";
-"muzzle_velocity" = "Mündungsgeschwindigkeit (m / s)";
+"muzzle_velocity" = "Mündungsgeschwindigkeit (m/s)";
 "compatible_firearms" = "Kompatible Schusswaffen";
 "rpm" = "rpm";
 "meters_abbr" = "m";
