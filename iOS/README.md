@@ -12,16 +12,12 @@
 ## <u>iOS v1.0</u>
 
 - [ ] Handle weird data sync issues
-- [ ] Localizations
-    - [ ] Romanian
-    - [ ] Czech
-    - [ ] Norwegian
-- [ ] Replace Google Admob Key w/ Real One
-- [ ] App store submission stuff
-    - Screenshots
-    - App description/copy/tags
 
 ### <u>Done</u>
+- [x] Replace Google Admob Key w/ Real One
+- [x] App store submission stuff
+    - Screenshots
+    - App description/copy/tags
 - [x] Localizations
     - [x] Dutch
     - [x] Italian
@@ -81,6 +77,7 @@
 
 
 ## <u>v1.1</u>
+- New Localizations
 - Favoriting Items
 - Additional Info to Existing Items:
     - Mods -> Firearms 

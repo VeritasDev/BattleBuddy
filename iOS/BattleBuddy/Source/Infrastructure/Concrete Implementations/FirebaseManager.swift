@@ -179,7 +179,7 @@ extension FirebaseManager: GADRewardBasedVideoAdDelegate {
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
         print("AD FAILED!: \(error.localizedDescription)")
         updateAdState(state: .unavailable)
-        reloadVideoAd(after: 5)
+        reloadVideoAd(after: 15)
     }
 
     func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
