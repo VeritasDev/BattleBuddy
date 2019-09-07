@@ -75,9 +75,16 @@
 - [x] Ensure watch an ad - handle not loaded
 - [x] Fix any broken autolayout constraints
 
+## Pre-release Checklist
+- [ ] Update Localizations
+- [ ] Check any TODOs
+- [ ] Update screenshots?
+- [ ] Write 'whats new in this version'
+- [ ] Ensure all keys are updated with production keys
+    - [ ] Google Ad Mob
+- [ ] Update attributions
 
 ## <u>v1.1</u>
-- New Localizations
 - Favoriting Items
 - Additional Info to Existing Items:
     - Mods -> Firearms 
@@ -104,32 +111,31 @@
     - Total supporters
     - Leaderboards
 - In app purchases for supporters
-- Support
-    - Banner ads
-    - Supporter mode - IAP
 - More info to future features blog post
-- Skills and how to level them
-- News/changelog
-    - BSG Twitter Feed
-- Ballistics Simulation
-    - Choose armor (and rig), choose round, fire shot, show result of shot (pen, armor damage, flesh damage, blunt damage, fragmentation)
-- Exchange rate calculator
 - Choose gun
     - See available parts
     - Max ergo
-    - Min recoil
+    - Min recoi
 - Attributions Additions
-    - SmooothBrain for design work 
-- Item details additions
-    - Related items feed
+    - SmooothBrain for design work
 - Add ? info to health calculator
 - Comparison Screen Improvements
     - Add ? info to comparison screen
     - Revisit range again
     - Color scheme preference, gradient, black/white, highlight best/worst?
+
     
     
 ## <u>v1.2</u>
+
+- Skills and how to level them
+- News/changelog
+- BSG Twitter Feed
+- Ballistics Simulation
+    - Choose armor (and rig), choose round, fire shot, show result of shot (pen, armor damage, flesh damage, blunt damage, fragmentation)
+- Exchange rate calculator
+- Item details additions
+- Related items feed
 - Nuke UIKit to the ground; Foundation FTW
 - V-Harmony Item Matchmaker (play on e-harmony)
     - Select the type (gun, armor, helmet to start)
