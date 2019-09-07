@@ -4,8 +4,8 @@
 
 ## <u>Roadmap</u>
 
-- [x] Submit iOS v1.0
-- [ ] Release iOS v1.0 ***in progress***
+- [x] Submit v1.0
+- [ ] Release v1.0 ***awaiting Apple review***
 
 # Architecture
 - [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
