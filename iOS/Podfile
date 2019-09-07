@@ -17,7 +17,6 @@ target 'BattleBuddy' do
   pod 'Firebase/Firestore'
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.13.4'
-  pod 'Firebase/AdMob'
   pod 'JGProgressHUD'
   pod "youtube-ios-player-helper", "~> 0.1.4"
 end

@@ -97,6 +97,7 @@
 		27FDE6C123204CC200CA727B /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; };
 		27FDE6C323204D2A00CA727B /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
+		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
 		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };
 		EF7AF36322C2A8D300DA1A18 /* Ammo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF36222C2A8D300DA1A18 /* Ammo.swift */; };
@@ -379,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27FDE6C123204CC200CA727B /* BallisticsEngine.framework in Frameworks */,
+				AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

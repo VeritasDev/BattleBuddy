@@ -236,8 +236,9 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let totalWidth = collectionView.frame.width - 20.0
         let height = collectionView.frame.height * 0.9
-        let width = (collectionView.frame.width * 0.5)
+        let width = totalWidth / 2.0
         return CGSize.init(width: width, height: height)
     }
 
