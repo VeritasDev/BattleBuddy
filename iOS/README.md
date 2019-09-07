@@ -4,6 +4,7 @@
 
 ## <u>Roadmap</u>
 
+- [x] Submit iOS v1.0
 - [ ] Release iOS v1.0 ***in progress***
 
 # Architecture
@@ -11,9 +12,7 @@
 
 ## <u>iOS v1.0</u>
 
-- [ ] Handle weird data sync issues
-
-### <u>Done</u>
+- [x] Handle weird data sync issues
 - [x] Replace Google Admob Key w/ Real One
 - [x] App store submission stuff
     - Screenshots
@@ -124,7 +123,6 @@
     - Revisit range again
     - Color scheme preference, gradient, black/white, highlight best/worst?
 
-    
     
 ## <u>v1.2</u>
 
