@@ -106,10 +106,11 @@ struct AmmoMetadata {
 struct GlobalMetadata {
     let totalUserCount: Int
     let totalAdsWatched: Int
+    let totalBugsFound: Int
     let ammoMetadata: [AmmoMetadata]
 
     init?(json: [String: Any]) {
-        guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedAdCount = json["totalAdsWatched"] as? NSNumber else {
+        guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedAdCount = json["totalAdsWatched"] as? NSNumber, let boxedBugsCount = json["totalBugsFound"] as? NSNumber else {
             return nil
         }
 
@@ -126,6 +127,7 @@ struct GlobalMetadata {
         totalUserCount = boxedUserCount.intValue
         totalAdsWatched = boxedAdCount.intValue
         ammoMetadata = tempAmmoMeta
+        totalBugsFound = boxedBugsCount.intValue
     }
 }
 

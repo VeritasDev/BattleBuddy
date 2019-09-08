@@ -84,10 +84,14 @@
 - [ ] Update attributions
 
 ## <u>v1.1</u>
+- Bugs
+    - Arabic HP fraction order
+    - Arabic Comparison Layout issue
 - Global metrics
     - Total ads watched count
     - Total supporters
     - Leaderboards
+    - Total bugs found by community and fixed count
 - Survival rate calculator
     - Survival rate
     - Investment per run
@@ -115,11 +119,11 @@
 - Penetration Calculator Improvements
     - Helmets/face shields/mods
     - Armored Rigs + Multi-layer support to ballistics calc
-
-## <u>v1.2</u>
 - Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
+
+## <u>v1.2</u>
 - Display shot result
 - News/changelog
 - BSG Twitter Feed
