@@ -74,21 +74,19 @@ class ItemCompareViewController: BaseTableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = comparison.itemsBeingCompared[indexPath.row]
+        let itemDetailsConfig: ItemDetailsConfiguration
+
         switch item {
-        case let firearm as Firearm:
-            let firearmVC = ItemDetailsViewController(FirearmDetailsConfiguration(firearm))
-            navigationController?.pushViewController(firearmVC, animated: true)
-        case let ammo as Ammo:
-            let ammoVC = ItemDetailsViewController(AmmoDetailsConfiguration(ammo))
-            navigationController?.pushViewController(ammoVC, animated: true)
-        case let armor as Armor:
-            let armorVC = ItemDetailsViewController(ArmorDetailsConfiguration(armor))
-            navigationController?.pushViewController(armorVC, animated: true)
-        case let med as Medical:
-            let medVC = ItemDetailsViewController(MedicalDetailsConfiguration(med))
-            navigationController?.pushViewController(medVC, animated: true)
-        default:
-            fatalError()
+        case let firearm as Firearm: itemDetailsConfig = FirearmDetailsConfiguration(firearm)
+        case let ammo as Ammo: itemDetailsConfig = AmmoDetailsConfiguration(ammo)
+        case let armor as Armor: itemDetailsConfig = ArmorDetailsConfiguration(armor)
+        case let med as Medical: itemDetailsConfig = MedicalDetailsConfiguration(med)
+        case let throwable as Throwable: itemDetailsConfig = ThrowableDetailsConfiguration(throwable)
+        case let melee as MeleeWeapon: itemDetailsConfig = MeleeWeaponDetailsConfiguration(melee)
+        default: fatalError()
         }
+
+        let detailsVC = ItemDetailsViewController(itemDetailsConfig)
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
