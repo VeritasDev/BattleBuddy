@@ -301,7 +301,7 @@
 "health_title" = "Din privata militära entreprenörs hälsa & status";
 "health_body_1" = "Denna information kommer snart™";
 
-"upcoming_body_1" = "Jag har så många fantastiska funktioner planerade för den här appen som jag inte kan vänta med att bygga för samhället! Interaktiva kartor, vapenmodifiering, uppdragsguider, fler objekt och miniräknare, handlarinfo, kompetensuppdelningar och mer! Jag planerar att släppa funktioner över tid, men jag ville att version 1.0 skulle skickas till er så snart som möjligt för att börja mäta intresse och få feedback. Utveckling av Android- och webbsupport pågår redan, kom tillbaka för uppdateringar snart!";
+"upcoming_body_1" = "Jag har så många fantastiska funktioner planerade för den här appen som jag inte kan vänta med att bygga för samhället! Interaktiva kartor, vapenmodifiering, uppdragsguider, fler objekt och miniräknare, handlarinfo, kompetensuppdelningar och mer! Jag planerar att släppa funktioner över tid, men jag ville att version 1.0 skulle skickas till er så snart som möjligt för att börja mäta intresse och få feedback. Kom tillbaka för uppdateringar snart!";
 
 "attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";

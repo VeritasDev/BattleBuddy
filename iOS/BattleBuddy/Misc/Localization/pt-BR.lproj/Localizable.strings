@@ -301,7 +301,7 @@
 "health_title" = "Saúde e Condições de seu PMC";
 "health_body_1" = "Esta informação estará disponível em breve.";
 
-"upcoming_body_1" = "Eu tenho muitas ideias planejadas para o aplicativo que mal posso esperar para fazer para a comunidade! Mapas interativos, montagem de armas, guias de missões, mais itens e calculadoras, informações dos vendedores, detalhes das habilidades e mais! Eu pretendo lançar essas ferramentas consistentemente, mas quero terminar a versão 1.0 para vocês o mais breve possível para começar a medir o interesse e receber feedback. O desenvolvimento da versão Android e Web já está em andamento, mais informações em breve!";
+"upcoming_body_1" = "Eu tenho muitas ideias planejadas para o aplicativo que mal posso esperar para fazer para a comunidade! Mapas interativos, montagem de armas, guias de missões, mais itens e calculadoras, informações dos vendedores, detalhes das habilidades e mais! Eu pretendo lançar essas ferramentas consistentemente, mas quero terminar a versão 1.0 para vocês o mais breve possível para começar a medir o interesse e receber feedback. Mais informações em breve!";
 
 "attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
