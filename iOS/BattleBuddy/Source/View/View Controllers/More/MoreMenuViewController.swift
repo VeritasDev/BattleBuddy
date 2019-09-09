@@ -10,7 +10,14 @@ import UIKit
 
 struct GroupedTableViewSection {
     let headerTitle: String?
+    let footerTitle: String?
     let cells: [UITableViewCell]
+
+    init(headerTitle: String?, footerTitle: String? = nil, cells: [UITableViewCell]) {
+        self.headerTitle = headerTitle
+        self.footerTitle = footerTitle
+        self.cells = cells
+    }
 }
 
 class MoreMenuViewController: BaseTableViewController, AdDelegate {
@@ -144,10 +151,11 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
             userCountCell.textLabel?.text = nil
         }
 
+        let appVersion = DependencyManagerImpl.shared.deviceManager().appVersionString()
         let aboutCells = userCount > 0 ? [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell, userCountCell] : [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, theTeamCell, watchAdCell] : [feedbackCell, theTeamCell, watchAdCell]
-        let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), cells: supportCells)
+        let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), footerTitle: appVersion, cells: supportCells)
         sections = [aboutSection, supportSection]
         tableView.reloadData()
     }
@@ -164,6 +172,10 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section].headerTitle
+    }
+
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return sections[section].footerTitle
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

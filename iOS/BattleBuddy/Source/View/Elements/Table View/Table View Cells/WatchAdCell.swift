@@ -32,15 +32,19 @@ class WatchAdCell: BaseTableViewCell {
         switch videoAdState {
         case .loading:
             accessory.startAnimating()
+            accessory.alpha = 1.0
+            contentView.alpha = 0.1
             isUserInteractionEnabled = false
         case .ready:
             accessory.stopAnimating()
+            accessory.alpha = 1.0
             contentView.alpha = 1.0
             isUserInteractionEnabled = true
         case .unavailable:
-            accessory.stopAnimating()
-            isUserInteractionEnabled = false
+            accessory.startAnimating()
+            accessory.alpha = 0.4
             contentView.alpha = 0.1
+            isUserInteractionEnabled = false
         }
     }
 }

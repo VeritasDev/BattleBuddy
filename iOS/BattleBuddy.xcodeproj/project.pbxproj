@@ -99,6 +99,7 @@
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
 		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
 		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
+		EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };
 		EF7AF36322C2A8D300DA1A18 /* Ammo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF36222C2A8D300DA1A18 /* Ammo.swift */; };
 		EF7AF36B22C3E58100DA1A18 /* BaseStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF36922C3E58100DA1A18 /* BaseStackViewController.swift */; };
@@ -303,6 +304,7 @@
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EF5E38E22316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF5E38E32316F5A00098C4C2 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 				EF962C7822FB3EEF009BB397 /* TwitchManager.swift */,
 				27BB49BF22FC710B00070427 /* FeedbackManager.swift */,
 				27C0B177231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift */,
+				EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */,
 			);
 			path = "Concrete Implementations";
 			sourceTree = "<group>";
@@ -1295,6 +1298,7 @@
 				276D917A23102D6D00CD61E0 /* ItemEnums.swift in Sources */,
 				EF7AF37A22C66B0C00DA1A18 /* StaticGridCollectionView.swift in Sources */,
 				27D2105D23194185005A538F /* WatchAdCell.swift in Sources */,
+				EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */,
 				276D917E231033C200CD61E0 /* MedicalEnums.swift in Sources */,
 				27F09ADD22DF50A100552C35 /* MathUtils.swift in Sources */,
 				EFFB10C522F1FC3600EE6B6F /* WebKitUtils.swift in Sources */,
