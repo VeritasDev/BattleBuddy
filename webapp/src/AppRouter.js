@@ -1,8 +1,6 @@
 import React from "react";
-import { Router, Route, Link } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -22,8 +20,11 @@ import LocalLibraryOutlinedIcon from '@material-ui/icons/LocalLibraryOutlined';
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
 import BallotOutlinedIcon from '@material-ui/icons/BallotOutlined';
 
+import Items from './pages/items'
+import More from './pages/more'
+import Learn from './pages/learn'
 
-import history from './history';
+import history from './history'
 
 const drawerWidth = 240;
 
@@ -87,18 +88,6 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(3),
     },
   }));
-
-function Items() {
-    return <h2>Items</h2>;
-}
-
-function Learn() {
-    return <h2>Learn</h2>;
-}
-
-function More() {
-    return <h2>More</h2>;
-}
 
 function AppRouter() {
     const classes = useStyles();
