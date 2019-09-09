@@ -84,6 +84,7 @@
 - [ ] Update attributions
 
 ## <u>v1.1</u>
+- Add app version info to about screen for debuggingx1
 - Bugs
     - Arabic HP fraction order
     - Arabic Comparison Layout issue

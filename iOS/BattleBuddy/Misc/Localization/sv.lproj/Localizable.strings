@@ -320,4 +320,4 @@
 "attributions_misc_descr" = "Sociala medieikoner av Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licenserat enligt CC. Ikonen 'Hjärna' av Sergey Patutin från Noun-projektet (https://thenounproject.com/bdesign.by/) licenserat enligt CC.";
 
 // Analytics
-"total_users_count" = "Battle Buddies har gått med i kampen!";
+"total_users_count" = "%@ Battle Buddies har gått med i kampen!";

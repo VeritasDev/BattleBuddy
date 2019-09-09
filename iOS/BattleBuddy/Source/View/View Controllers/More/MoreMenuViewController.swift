@@ -135,17 +135,22 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     }
 
     func updateCells() {
-        userCount = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata()?.totalUserCount ?? 0
-        if userCount > 0,
-            let numberString = numberFormatter.string(from: NSNumber(value: userCount)) {
-            let fullString = "total_users_count".local(args: [numberString])
-            userCountCell.textLabel?.attributedText = fullString.createAttributedString(boldedSubstring: numberString, font: .systemFont(ofSize: 18, weight: .light))
-        } else {
-            userCountCell.textLabel?.text = nil
-        }
+        sections = []
 
         let aboutCells = userCount > 0 ? [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell, userCountCell] : [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
+        sections.append(aboutSection)
+
+        if let metadata = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata() {
+            userCount = metadata.totalUserCount
+            let numberString = numberFormatter.string(from: NSNumber(value: userCount)) ?? String(userCount)
+            let fullString = "total_users_count".local(args: [numberString])
+            userCountCell.textLabel?.attributedText = fullString.createAttributedString(boldedSubstring: numberString, font: .systemFont(ofSize: 18, weight: .light))
+
+            let statsCells = [userCountCell]
+            let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
+        }
+
         let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, theTeamCell, watchAdCell] : [feedbackCell, theTeamCell, watchAdCell]
         let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), cells: supportCells)
         sections = [aboutSection, supportSection]
