@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Jah";
+"no" = "Ei";
+"ok" = "OK";
+"done" = "Tehtud";
+"soon" = "Varsti™";
+"coming_soon" = "Tulekul™";
+"unknown" = "Teadmatta";
+"type" = "Tüüp";
+"continue" = "Edasi";
+"veritas" = "Veritas";
+"required" = "Vajalik";
+
+// MARK: - Filter/sort/compare
+"compare" = "Võrdle";
+"name" = "Nimi";
+"save" = "Salvesta";
+"recommended" = "Soovitatav";
+"similar" = "Sarnane";
+"all" = "Kõik";
+"compare_with" = "Võrreldes...";
+
+// MARK: - More / Attributions
+"about" = "Rohkem Battle Buddyst";
+"dev_by" = "Arendatud Veritase poolt";
+"dev_support" = "Soovid aidata Appi arendust?";
+"watch_ad" = "Vaata reklaami";
+"enable_banner_ads" = "Luba Banneri Reklaamid";
+"view_on_github" = "Vaata GitHubist";
+"rate_this_app" = "Hinda Battle Buddy";
+"attributions" = "Omadused";
+"check_out_team" = "Vaata Meeskonda";
+"team" = "Meeskond";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Sotsiaal";
+"music" = "Minu muusika";
+"website_error" = "Seda sisu ei saa laadida. Veenduge, et teil oleks vastav rakendus installitud.";
+"live_now" = "Eetris nüüd!";
+"feedback_title" = "Tagasiside ja Funktsiooni ideed?";
+"feedback_subtitle" = "Liitu meie discordiga!";
+"upcoming_features" = "Tulekul Funktsiooni ideed";
+
+"twitter_description" = "Püsi ajaga kaasas";
+"twitch_description" = "Vaata otse-eetris Twitchis";
+"discord_description" = "Liitu meie komuuni Discordiga";
+"youtube_description" = "Vaata YouTubes";
+"instagram_description" = "Meie Instagram";
+"soundcloud_description" = "Kuula Soundclouds";
+"spotify_description" = "Kuula Spotifys";
+"website_description" = "Rohkem Veritasest";
+
+// MARK: - Tabs
+"items" = "Asjad";
+"learn" = "Õppi";
+"more" = "Veel";
+"search" = "Otsi";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Laskemoon";
+"main_menu_armor" = "Keha Armor";
+"main_menu_ballistics" = "Ballistika";
+"main_menu_firearms" = "Tulirelvad";
+"main_menu_medical" = "Meditsiin";
+"main_menu_melee" = "Külmrelvad";
+"main_menu_throwables" = "Visatavad";
+"main_menu_health_calc" = "Kahju kalkulaator";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Tulirelvade tüübid";
+"calibers" = "Kaliibrid";
+
+// MARK: - Calculators
+"pen_chance" = "Läbistamisvõimalus";
+"no_armor_selected" = "Armor valimatta";
+"no_ammo_selected" = "Laskemoon valimatta";
+"select_ammo" = "Vali laskemoon";
+"select_armor" = "Vali Armor";
+"pen_chance_help_title" = "Läbistamisvõimaluste kalkulaator";
+"pen_chance_help_message" = "See tööriist arvutab välja kui suure võimalusega kuul läbistab antud keha armori. Kui olete kuuli ja armori valinud, saate liuguri abil kohandada armori simuleeritud vastupidavust, et näha, kui tõhusad on erinevad kuulid erineva vastupidavuse tasemel armori vastu.!";
+
+"health_calc_title" = "Kahju kalkulaator";
+"total_hp" = "Kogu HP";
+
+"body_zone_head" = "Pea";
+"body_zone_thorax" = "Ringkere";
+"body_zone_stomach" = "Kõht";
+"body_zone_right_arm" = "Parem käsi";
+"body_zone_left_arm" = "Vasak käsi";
+"body_zone_right_leg" = "Parem jalg";
+"body_zone_left_leg" = "Vasak jalg";
+
+// MARK: - Items
+"armor" = "Armor";
+"helmets" = "Kiivrid";
+"ballistics" = "Ballistikad";
+"health" = "Elud";
+"firearms" = "Tulirelvad";
+"ammunition" = "Laskemoon";
+"body_armor" = "Keha Armor";
+"medical_items" = "Meditsiinilised asjad";
+"throwables" = "Heidetavad";
+"healing_items" = "Elustavad asjad";
+"pain_management" = "Valu taluvus";
+"status_management" = "Olekuefektide taluvus";
+"stims" = "Stimulandid";
+"grenades" = "Granaadid";
+"properties" = "Properties";
+"performance" = "Performance";
+"ergonomics" = "Ergonoomika";
+"ergo" = "Ergo";
+"vertical_recoil" = "Vertikaalne tagasilöök";
+"horizontal_recoil" = "Horisontaalne tagasilöök";
+"recoil" = "Tagasilöök";
+
+// MARK: - Weapons
+"weapon_class" = "Klass";
+"assault_rifle" = "Assault Rifle";
+"assault_carbine" = "Assault Carbine";
+"sniper_rifle" = "Sniper Rifle";
+"designated_marksman_rifle" = "DMR";
+"pistol" = "Püstol";
+"shotgun" = "Pumppüss";
+"sub_machine_gun" = "Sub Machine Gun";
+"machine_gun" = "Machine Gun";
+"caliber" = "Kaliiber";
+"fire_rate" = "Fire Rate";
+"effective_range" = "Efektiivne vahemik";
+"fold_or_retract" = "Voldi/Tõmba sisse";
+"retractable" = "Sissetõmmatav";
+"build_wizard" = "Build Wizard";
+"gun_build_custom" = "Custom";
+"gun_build_recoil" = "Minimaalne tagasilöök";
+"gun_build_ergo" = "Maksimaalne Ergonoomika";
+"gun_build_random" = "Random";
+"fire_mode" = "Fire Mode";
+"fire_modes" = "Fire Modes";
+"fire_mode_semi" = "Pool Automaat";
+"fire_mode_auto" = "Täis Automaat";
+"fire_mode_burst" = "Burst";
+"fire_mode_semi_short" = "Semi";
+"fire_mode_auto_short" = "Auto";
+"fire_mode_burst_short" = "Burst";
+"action" = "Action";
+"action_type_pump" = "Pump Action";
+"action_type_bolt" = "Bolt Action";
+"action_type_pump_short" = "Pump";
+"action_type_bolt_short" = "Bolt";
+"build" = "Ehita";
+"build_this_gun" = "Ehita see relv";
+
+"compare_preset_semi_auto_rifle" = "Pool-Automaat Relvad";
+"compare_preset_full_auto_rifles" = "Täis-Automaat Relvad";
+"compare_preset_rifles_caliber_match" = "Relvad w/ Sama Kaliibriga";
+"compare_preset_rifles" = "Relvad";
+"compare_preset_full_auto_caliber_match" = "Täis-Automaat Relvad w/ Sama Kaliibriga";
+"compare_preset_semi_auto_pistols" = "Pool-Automaat Püstolid";
+"compare_preset_full_auto_pistols" = "Täis-Automaat Püstolid";
+"compare_preset_pistols_caliber_match" = "Püstolid w/ Sama Kaliibriga";
+"compare_preset_pistols" = "Püstolid";
+"compare_preset_manual_shotguns" = "Manual-Action Pumppüssid";
+"compare_preset_shotguns" = "Pumppüssid";
+"compare_preset_smgs_caliber_match" = "Submachine Guns w/ Sama Kaliibriga";
+"compare_preset_smgs" = "Submachine Guns";
+"compare_preset_bolt_snipers" = "Bolt-Action Sniper Rifles";
+"compare_preset_snipers_and_dmrs" = "Sniper Rifles & DMRs";
+"compare_preset_dmrs" = "Designated Marksman Rifles";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Related Firearms";
+"subsonic" = "Subsonic";
+"tracer" = "Tracer";
+"muzzle_velocity" = "Muzzle Velocity (m/s)";
+"compatible_firearms" = "Compatible Firearms";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Pole";
+"armor_class_1" = "Klass 1";
+"armor_class_2" = "Klass 2";
+"armor_class_3" = "Klass 3";
+"armor_class_4" = "Klass 4";
+"armor_class_5" = "Klass 5";
+"armor_class_6" = "Klass 6";
+"armor_type_body" = "Keha Armor";
+"armor_type_helmet"= "Kiiver";
+"armor_type_visor" = "Visiir";
+"armor_type_attachment" = "Attachment";
+"armor_zone_top" = "Lagi";
+"armor_zone_eyes" = "Silmad";
+"armor_zone_jaws" = "Jaws";
+"armor_zone_ears" = "Kõrvad";
+"armor_zone_nape" = "Nape";
+"armor_zone_chest" = "Ringkere";
+"armor_zone_stomach" = "Kõht";
+"armor_zone_left_arm" = "Vasak käsi";
+"armor_zone_right_arm" = "Parem käsi";
+"armor_zone_left_leg" = "Vasak jalg";
+"armor_zone_right_leg" = "Parem jalg";
+"armor_mat_ceramic" = "Ceramic";
+"armor_mat_armored_steel" = "Armored Steel";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Combined";
+"armor_mat_aluminum" = "Alumiinium";
+"armor_mat_glass" = "Klaas";
+"armor_mat_titanium" = "Titaanium";
+
+"armor_type" = "Tüüp";
+"armor_material" = "Materjal";
+"armor_class" = "Klass";
+"armor_points" = "Vastupidavus";
+"armor_zones" = "Kaitsetsoonid";
+"penalties" = "Miinused";
+"speed_penalty" = "Kiirus";
+"turn_speed_penalty" = "Keeramis kiirus";
+"ergo_penalty" = "Ergonoomika";
+
+"penetration" = "Läbivus";
+"damage" = "Kahju";
+"armor_damage" = "Armori Kahju";
+"frag_chance" = "Killustatuse võimalus";
+
+"explore" = "Avasta";
+"compare" = "Võrdle";
+"compare_performance" = "Võrdle jõudlust";
+"dps_calc" = "DPS Kalkulaator";
+"kill_time_calc" = "Tapmise aja kalkulaator";
+
+// MARK: - Medical
+"damage" = "Kahju";
+"contusion" = "Contusion";
+"fracture" = "Murd";
+"pain" = "Valu";
+"medkit" = "Esmaabi pakk";
+"painkiller" = "Valuvaigisti";
+"accessory" = "Lisatarvik";
+"stimulator" = "Stimulaator";
+"use_time" = "Kasutus aeg";
+"effect_duration" = "Efekti kestvus";
+"use_count" = "# kasutust";
+"hp_resource" = "Kogu HP";
+"removes_bloodloss" = "Eemaldab verejooksu";
+"removes_contusion" = "Eemaldab Contusion";
+"removes_fracture" = "Eemaldab Murrud";
+"removes_pain" = "Eemaldab valu";
+"hydration_modifier" = "Hydration Modifier";
+"energy_modifier" = "Energy Modifier";
+
+// MARK: - Throwables
+"throwable_frag" = "Kild";
+"throwable_flash" = "Välgatus";
+"throwable_smoke" = "Suits";
+"fuse_time" = "Aega";
+"explosion_radius_min" = "Min plahvatus kaugus";
+"explosion_radius_max" = "Max plahvatus kaugus";
+"fragmentation_count" = "Fragment Count";
+
+// MARK: - Melee
+"damage" = "Kahju";
+"rate" = "Kiirus";
+"range" = "Kaugus";
+
+"stab" = "Torge";
+"stab_dmg" = "Torke kahju";
+"stab_rate" = "Torke kiirus";
+"stab_range" = "Torke kaugus";
+
+"slash" = "Slash";
+"slash_dmg" = "Slash kahju";
+"slash_rate" = "Slash kiirus";
+"slash_range" = "Slash kaugus";
+
+// MARK: - Posts
+"ballistics_title" = "Armor & Ballistika: Põhiasjad";
+"ballistics_body_1" = "Escape From Tarkovi ballistikasüsteem on must kast, mida ainult vähesed inimesed on näinud sisemiselt. Selliste valemite keerukuse tõttu, mida kasutatakse selliste pindalade läbitungimisvõimaluste, rikošeti nurkade ning mängijate armori ja kerekahjustuste ning nende kasutatavate RNG-põhiste elementide arvutamiseks, on sageli märgatav erinevus tapmis ajas, kui võrrelda kõige paremini mängu lõppvarustust kandvat täielikult orienteeritud kõrgetasemelist mängijat 1. taseme mängijaga, kellel pole muud kui algtaseme püstol. Koos teadaolevate võrgu- ja jõudlusprobleemide vigadega ning eepiliste mängur sokkidega mängijate arvu suurenemisega on mängu vaieldamatult kõige olulisema süsteemi ebaselgus nii uute kui ka veteranide mängijate segadust ja pettumust tunda pannud end igapäevaselt.";
+"ballistics_body_2" = "Alustades keha armorist, kuidas see töötab ja mida peaksite teadma? Väljaspool saadavust ja hinda on viis olulist asja, mida peaksite jälgima, et teada Millist armorit osta, müüa, remontida, varustada või ära visata - klass, vastupidavus, kaitsetsoonid, materjal ja armori miinused.";
+"ballistics_body_2_1_title" = "1. Armor Klass";
+"ballistics_body_2_1" = "Every armored component, from body armor to ballistic helmet attachments, has a specified armor class. Armor class is, in my opinion, the most important aspect of protective body armor. Put simply, the armor class represents how effective the armor is at stopping projectiles with varying levels of ballistic effectiveness. Currently, armor classes range from 1 to 6, and as you may have guessed, the higher the number the better.\n\nLevel 1 armor is capable of protecting you from things like bullet ricochets, shrapnel, and non-armor penetrating rounds pistol-calibers or buckshot. Level 6 armor is capable of protecting you from most projectiles up to and even including the largest caliber rounds in the game. I chose the word ‘capable’ here on purpose, because every ballistics impact involves varying degrees of random chance.\n\nWhen it comes to ballistics in Escape from Tarkov, nothing is guaranteed and the things we experience sometimes seem impossible or don’t make sense. So, what does that ultimately mean? What armor will protect me from what projectiles? That’s a complicated question that I’ll get more into that detail later when I discuss the specifics related to the ballistics impact.";
+"ballistics_body_2_2_title" = "2. Vastupidavus";
+"ballistics_body_2_2_1" = "Armori vastupidavuse osas on oluline arvestada, et nende eripära on mitu korda muutunud ja BSG võib neid muidugi tulevikus igal ajal muuta. Väärib märkimist armori vastupidavuse kohta, et selle võime kaitsta kandjat sõltub selle praegusest vastupidavusväärtusest võrreldes algse maksimaalse vastupidavusväärtusega, kui see oli uus.";
+"ballistics_body_2_2_2" = "Näiteks kui armor algab 50 vastupidavusega, pakub see parimat kaitset, kui see on 50/50, mis on üsna ilmselge. Vähem ilmselge osa on see, et iga kahjustatud ja veel parandamata armor, näiteks armor, mille suurus on 40/50, kaitseb teid täpselt sama tõhusalt kui sama armor, kui see oleks kahjustatud ja seejärel parandatud ning praegu on see 40/40.";
+"ballistics_body_2_2_3" = "Erinevate armorite esialgse maksimaalse vastupidavuse väärtuse tundmine või eseme kontrollimisel vastupidavusriba vaatamine on oluline omale sisse harjutada. Sageli leiate madalama klassi armori kui teie praegune armor, kuid kui teie praegune armor on tõsiselt kahjustatud või seda on mitu korda parandatud, võite tõenäolisemalt suurendada oma armori võimalusi oma elu päästa, vahetades madalama klassi armori vastu. Erinevate armorite üldiste kaitsevõimaluste, vastupidavusväärtuste ja kuuli läbitungimise omaduste põhjalik tundmine võib mõnes lahingusituatsioonis olla hindamatu. Vaadake kahjukalkulaatorit, et saaksite teada, kuidas see kõik töötab!";
+"ballistics_body_2_3_title" = "3. Kaitsetsoonid";
+"ballistics_body_2_3" = "Pole palju üksikasju, mida ma peaksin selle teemaga põhjalikumalt rääkima, peale selle, et peate meeles pidama ühte lihtsat reeglit: Armor ei kaitse seda, mida see visuaalselt kaitseb! Parim näide selle demonstreerimiseks on vaadata Gen4 Full Protection Armor vs Gen4 Assault Kit. Full Protection Armor näeb välja nii, et see katab rohkem teie keha, kuid see kaitseb teie kehaosi täpselt samamoodi kui Assault Kit, kuna sellel on samad kaitsetsoonid. Pöörake tähelepanu sellele, millised tsoonid on kaitstud - käte või kõhu mustaks tõmbamine võib olla üsna tüütu ja on väärt lisakaitset, kui saate seda endale lubada.!";
+"ballistics_body_2_4_title" = "4. Materialid";
+"ballistics_body_2_4" = "Igal armoril on erinevad materjalid, millest see on valmistatud. Praegu ei ole materjalidel armori kaitsevõimele märkimisväärset mõju, selle asemel muutub armori materjal remontimisel oluliseks. Mõningaid materjale on võimalik väga tõhusalt ja odavalt parandada, samas kui teised kaotavad nende parandamisel vastupidavuse märkimisväärselt ja võivad sageli maksta rohkem kui armori algmaksumus.!";
+"ballistics_body_2_5_title" = "5. Miinused";
+"ballistics_body_2_5" = "Üldiselt tuleb lisakaitset maksta ja see hind võib olla rahaline ja ka praktiline. Igal armoril on üldiselt omad miinused. Mõni aeglustab teie liikumist, mõni aeglustab pöördekiirust ja isegi üldist ergonoomikat, mis mõjutab vaatamisväärsuste vähendamise kiirust, vastupidavuse kaotuse määra ja isegi seda, kui vali on teie tegelane aeglaselt liikudes või sihtides. Mõni peakaitse võib kuulmist mitmel viisil piirata ja isegi nägemist varjata.Need on kompromissid, mida peaksite kaaluma, kui otsustate, kas soovite minna kallimatele armoritele või sellele vägevale Killa kiivrile või mitte. Millised armorid ja kiivrid on seda väärt? See jääb sinule otsustamiseks!";
+"ballistics_body_3_title" = "Kokkuvõte";
+"ballistics_body_3" = "Escape from Tarkovi ballistika süsteem on hämmastavalt keeruline ning eeliseks on vaja üsna palju kogemusi ja teadmisi.. Ülalolev video Armor and Ballistic selgitab mõnda neist mõistetest üksikasjalikumalt, nii et veenduge kindlasti, kas teid huvitab selle teema kohta rohkem teada saada. Olge ettevaatligud!";
+
+"health_title" = "Sinu PMC's Elud & Staatus";
+"health_body_1" = "See informatsioon on Tulekul™";
+
+"upcoming_body_1" = "Mul on selle rakenduse jaoks kavandatud nii palju vingeid funktsioone, et võin kogukonna loomiseks oodata! Interaktiivsed kaardid, relvade modifitseerimine, otsingute juhendid, muud üksused ja kalkulaatorid, teave kaupleja kohta, oskuste jaotus ja palju muud! Kavatsen funktsioone järjepidevalt vabastada, kuid soovisin, et versioon 1.0 saadetaks teile võimalikult kiiresti, et hakata huvi tundma ja tagasisidet koguma. Androidi ja veebitoe arendamine on juba käimas, kontrollige varsti värskendusi!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Komuun";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Miscellaneous Legal Stuff";
+"attributions_translations" = "Localization";
+
+"attributions_api_descr" = "See projekt poleks olnud võimalik ilma Morphy poolt tehtud fantastilise arendustööta Tarkovi andmebaasis ja selle aluseks olevas API-s.";
+"attributions_nofam_descr" = "EFT-kogukonnas laulmata kangelane, laskemoonakaartide koostaja ning ballistiliste kalkulaatorite ja sellega seotud teabe kaastöötaja, laskemoona suursaadik, ballistiliste parun, läbistamise professor!";
+"attributions_willerz_descr" = "Suured tänud eepiliste kvaliteetidega ekraanipiltide eest, millele ta andis mulle loa selle rakenduse jaoks kasutamiseks. Ta on ka üks parimaid mängijaid maailmas.";
+"attributions_community_descr" = "Palju armastust minu kogukonna Discordi vastu kogu selle raske töö eest, mis on selles rakenduses kasutatud ilusate fotode jäädvustamiseks ja redigeerimiseks!";
+"attributions_translations_descr" = "Kõik tõlked tegid kogukonna liikmed, annetades selleks oma aega ja vaeva. Kõik inimesed kogu maailmas hindavad teie rasket tööd!!";
+"attributions_bsg_descr" = "Eriline tänu Nikitale selle rakenduse toetamise eest ja kõigile BSG töötajatele nende raske töö ja pühendumuse eest kõigi aegade parima First-person shooter ehitamisel.";
+"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC.";
+
+// Analytics
+"total_users_count" = "%@ Lahingusõbrad on võitlusega liitunud!";

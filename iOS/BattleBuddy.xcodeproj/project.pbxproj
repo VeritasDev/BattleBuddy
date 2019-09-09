@@ -246,6 +246,8 @@
 		27A7605C22D1776200861113 /* ItemPreviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewCardView.swift; sourceTree = "<group>"; };
 		27A7608D22D230BE00861113 /* ItemPropertyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPropertyRow.swift; sourceTree = "<group>"; };
 		27A7609522D2F06C00861113 /* PreviewMenuCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMenuCollectionView.swift; sourceTree = "<group>"; };
+		27B2003C23266EBA00EE16BC /* et */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = et; path = et.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		27B2003D23266EBA00EE16BC /* et */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = et; path = et.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27BB49B722F8E67300070427 /* ArmorSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorSort.swift; sourceTree = "<group>"; };
 		27BB49B922F9B34400070427 /* PreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
 		27BB49BB22F9C1F000070427 /* VeritasInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeritasInfoViewController.swift; sourceTree = "<group>"; };
@@ -1077,6 +1079,7 @@
 				pl,
 				"zh-Hant",
 				de,
+				et,
 			);
 			mainGroup = 27954E2322A18470000FC0C6;
 			productRefGroup = 27954E2D22A18470000FC0C6 /* Products */;
@@ -1381,6 +1384,7 @@
 				276AFA72231AD93D00C9DB3A /* pl */,
 				276AFA9D231C668200C9DB3A /* zh-Hant */,
 				EF94581B231EC7ED00C88609 /* de */,
+				27B2003C23266EBA00EE16BC /* et */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1408,6 +1412,7 @@
 				276AFA73231AD93E00C9DB3A /* pl */,
 				276AFA9E231C668200C9DB3A /* zh-Hant */,
 				EF94581C231EC7EE00C88609 /* de */,
+				27B2003D23266EBA00EE16BC /* et */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
