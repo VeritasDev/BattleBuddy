@@ -1,11 +1,20 @@
-import React from "react"
-import { connect } from 'react-redux'
-import { useTranslation } from 'react-i18next'
+import React from "react";
+import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { SectionHeading } from '../styles/typography';
+import { LearnPageWrapper,
+    LearnPageInput
+} from '../styles/pages/learn';
 
 function Learn(props) {
     const { t, i18n } = useTranslation()
 
-    return <h2>{t('headers.learn')}</h2>
+    return (
+        <LearnPageWrapper>
+            <SectionHeading>{t('headers.learn')}</SectionHeading>
+            <LearnPageInput isHidden />
+        </LearnPageWrapper>
+    )
 }
 
 const mapStateToProps = (state /*, ownProps*/) => {

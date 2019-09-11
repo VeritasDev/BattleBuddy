@@ -7,7 +7,7 @@ import { createLogger } from 'redux-logger'
 
 import './i18n'
 import rootReducer from './reducers'
-import './index.css'
+import { GlobalStyle } from './styles/global-config';
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
@@ -24,6 +24,7 @@ const rootElement = document.getElementById('root')
 
 ReactDOM.render(
     <Provider store={store}>
+        <GlobalStyle />
         <App />
     </Provider>,
     rootElement
