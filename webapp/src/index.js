@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
+import { Normalize } from 'styled-normalize'
 
 import './i18n'
 import rootReducer from './reducers'
@@ -24,6 +25,7 @@ const rootElement = document.getElementById('root')
 
 ReactDOM.render(
     <Provider store={store}>
+        <Normalize />
         <GlobalStyle />
         <App />
     </Provider>,
