@@ -10,98 +10,25 @@
 # Architecture
 - [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
 
-## <u>iOS v1.0</u>
-
-- [x] Handle weird data sync issues
-- [x] Replace Google Admob Key w/ Real One
-- [x] App store submission stuff
-    - Screenshots
-    - App description/copy/tags
-- [x] Localizations
-    - [x] Dutch
-    - [x] Italian
-    - [x] Swedish
-    - [x] Spanish (es)
-    - [x] Serbian
-    - [x] Croatian
-    - [x] Spanish (es-419)
-    - [x] Hungarian
-    - [x] Russian
-    - [x] Portuguese (br)
-    - [x] Lithuanian
-    - [x] Arabic
-    - [x] French
-    - [x] Portuguese (pt)
-    - [x] Polish
-    - [x] Chinese
-    - [x] German
-- [x] Instrument memory and processing performance
-- [x] Migrate Apple dev account from personal -> business
-- [x] Initial prototype
-- [x] Firebase migration
-- [x] Item lists and detail pages
-    - [x] Firearms
-    - [x] Body Armor
-    - [x] Medical
-    - [x] Ammo
-    - [x] Throwables
-    - [x] Melee weapons
-- [x] Item searching
-- [x] Prototype health/damage calculator
-- [x] Penetration chance calculator
-- [x] Blog post/writeup for ballistics system
-- [x] Misc. App Info in *More* menu
-    - [x] Info about Veritas
-        - [x] Universal links to discord, socials, etc
-    - [x] Upcoming features
-    - [x] Links to github
-    - [x] Attributions for help on app
-    - [x] Link to The Team
-- [x] Initial integration of ad support
-- [x] iPad support for each screen
-- [x] Main menu
-- [x] Search results
-- [x] Item lists
-- [x] Blog posts
-- [x] Base stack view
-- [x] Pen chance calc
-- [x] Health Calc
-- [x] Item Details
-- [x] Comparisons
-- [x] Right-to-left language support
-- [x] Client update user count
-- [x] Server update user count
-- [x] Ensure watch an ad - handle not loaded
-- [x] Fix any broken autolayout constraints
-
-## Pre-release Checklist
-- [ ] Update Localizations
-- [ ] Check any TODOs
-- [ ] Update screenshots?
-- [ ] Write 'whats new in this version'
-- [ ] Ensure all keys are updated with production keys
-    - [ ] Google Ad Mob
-- [ ] Update attributions
-
 ## <u>v1.1</u>
-- Add app version info to about screen for debuggingx1
-- Bugs
+- [ ] Add app version info to about screen for debuggingx1
+- [ ] Bugs
     - Arabic HP fraction order
     - Arabic Comparison Layout issue
-- Global metrics
+- [ ] Global metrics
     - Total ads watched count
     - Total supporters
     - Leaderboards
     - Total bugs found by community and fixed count
-- Survival rate calculator
+- [ ] Survival rate calculator
     - Survival rate
     - Investment per run
     - Total earned per run
-- Change upcoming features blog post to news / updates
-- Additional Info to Existing Items:
+- [ ] Change upcoming features blog post to news / updates
+- [ ] Additional Info to Existing Items:
     - Compatible Mods on Firearms
     - Related items feed
-- Add New Item Types
+- [ ] Add New Item Types
     - Helmets and accessories
     - Headphones
     - Rigs
@@ -109,20 +36,26 @@
         - See all attachments that fits on it
         - See all mods it can attach to
         - See all mods it conflicts with 
-- Support
+- [ ] Support
     - Banner ads
     - IAP
     - Leaderboard Integration
-- Attributions Additions
+- [ ] Attributions Additions
     - SmooothBrain for design work
-- Add ? info to health calculator
-- Add ? info to comparison screen
-- Penetration Calculator Improvements
+- [ ] Add ? info to health calculator
+- [ ] Add ? info to comparison screen
+- [ ] Penetration Calculator Improvements
     - Helmets/face shields/mods
     - Armored Rigs + Multi-layer support to ballistics calc
-- Health Calculator Improvements
+- [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
+- [ ] Shots to kill calculator
+    - Choose target
+    - Choose armor
+    - Choose aim type (thorax only, headshots only, leg meta)
+    - Choose fragmentation type (never - worst case, always - best case, ammo specific - realistic)
+    - Calculate
 
 ## <u>v1.2</u>
 - Display shot result
@@ -194,6 +127,15 @@
     - PMC lines
     - Scav lines
 - Logging
+
+## Pre-release Checklist
+- [ ] Update Localizations
+- [ ] Check any TODOs
+- [ ] Update screenshots?
+- [ ] Write 'whats new in this version'
+- [ ] Ensure all keys are updated with production keys
+- [ ] Google Ad Mob
+- [ ] Update attributions
 
 ## Project / Repo TODO:
 
