@@ -328,3 +328,5 @@
 "leaderboard" = "Supporter Leaderboard";
 "total_bugs_found" = "%@ bugs reported by the community and fixed!";
 "total_ads_watched" = "%@ ads watched by the community!";
+
+"sound_training" = "Sound Training";

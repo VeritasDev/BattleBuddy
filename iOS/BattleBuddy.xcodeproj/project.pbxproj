@@ -98,6 +98,9 @@
 		27FDE6C323204D2A00CA727B /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
 		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
+		EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */; };
+		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
+		EF10CCE1232A9D5700E95A45 /* SoundTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */; };
 		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
 		EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };
@@ -303,6 +306,9 @@
 		55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.release.xcconfig"; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
+		EF10CCDE232A9BE800E95A45 /* c6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c6.mp3; sourceTree = "<group>"; };
+		EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTrainingViewController.swift; sourceTree = "<group>"; };
 		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -490,6 +496,7 @@
 				278A76B723098E5100E0C745 /* HealthCalcViewController.swift */,
 				EFACDBD12304832C00E3F30B /* ProblemSolvingViewController.swift */,
 				27F09AE022E11F6200552C35 /* TraderMenuViewController.swift */,
+				EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -587,6 +594,7 @@
 		27793A3C22A433E200378FE3 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				EF10CCDD232A9BD600E95A45 /* Sounds */,
 				EFD03DC922B2D23600DE1874 /* Localization */,
 				27954E3622A18472000FC0C6 /* Assets.xcassets */,
 				27954E3822A18472000FC0C6 /* LaunchScreen.storyboard */,
@@ -634,6 +642,7 @@
 		27793A4122A434A600378FE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF10CCDA232A98FB00E95A45 /* Audio */,
 				27C0B17F23140165004BCE14 /* Calculator */,
 				276D91662310054A00CD61E0 /* Operations */,
 				276D9165230F9D9100CD61E0 /* Item */,
@@ -854,6 +863,22 @@
 				55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF10CCDA232A98FB00E95A45 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		EF10CCDD232A9BD600E95A45 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				EF10CCDE232A9BE800E95A45 /* c6.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		EF7AF36422C2AA7900DA1A18 /* Utils */ = {
@@ -1115,6 +1140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */,
 				276AFA79231B7F3B00C9DB3A /* README.md in Resources */,
 				EFD03DCA22B2D25C00DE1874 /* Localizable.strings in Resources */,
 				27954E3A22A18472000FC0C6 /* LaunchScreen.storyboard in Resources */,
@@ -1265,12 +1291,14 @@
 				27781CDC22F7209D007134E2 /* Sortable.swift in Sources */,
 				EFD03DC222B2AAE000DE1874 /* ThemeManager.swift in Sources */,
 				27090E2F22DB53C600D97320 /* ItemDetailsConfiguration.swift in Sources */,
+				EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */,
 				27090E2222D9FADA00D97320 /* BaseWebViewController.swift in Sources */,
 				EFF2FF4F22D4DF1F00BED024 /* UIViewUtilities.swift in Sources */,
 				27C0B17A23140061004BCE14 /* BodyZoneHealthButton.swift in Sources */,
 				27A4A8FF22E6A29E00C5618E /* ThrowableDetailsConfiguration.swift in Sources */,
 				27781CE422F733D9007134E2 /* SortableTableViewCell.swift in Sources */,
 				27F09AE822E3875600552C35 /* PenChanceCalcViewController.swift in Sources */,
+				EF10CCE1232A9D5700E95A45 /* SoundTrainingViewController.swift in Sources */,
 				27F09ADB22DE97CD00552C35 /* BarGraphView.swift in Sources */,
 				279B6C2E22CD4C15006735D3 /* ItemPreviewCell.swift in Sources */,
 				27954E3022A18470000FC0C6 /* AppDelegate.swift in Sources */,

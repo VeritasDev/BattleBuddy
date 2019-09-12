@@ -16,10 +16,12 @@
     - Push notifications
     - Banner ads
     - IAP
+- [ ] Stereo audio tool
 - [x] Add app version info to about screen for debugging
 - [ ] Bugs
     - Arabic HP fraction order
     - Arabic Comparison Layout issue
+    - UIWebView deprecation
 - [ ] Global metrics
     - Total ads watched count
     - Total supporters
