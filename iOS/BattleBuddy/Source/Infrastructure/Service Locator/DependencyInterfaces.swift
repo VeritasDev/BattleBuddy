@@ -109,6 +109,7 @@ struct GlobalMetadata {
     let totalAdsWatched: Int
     let totalBugsFound: Int
     let ammoMetadata: [AmmoMetadata]
+    let leaderboard: [[String: Int]]
 
     init?(json: [String: Any]) {
         guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedAdCount = json["totalAdsWatched"] as? NSNumber, let boxedBugsCount = json["totalBugsFound"] as? NSNumber else {

@@ -322,7 +322,7 @@
 //MARK:- Analytics
 "total_users_count" = "%@ Battle Buddies have joined the fight!";
 
-
+// ----------------------------------------
 // V1.1.0
 "global_stats" = "Community Stats";
 "leaderboard" = "Supporter Leaderboard";

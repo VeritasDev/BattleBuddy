@@ -11,7 +11,12 @@
 - [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
 
 ## <u>v1.1</u>
-- [ ] Add app version info to about screen for debuggingx1
+- [ ] Settings
+    - Nickname
+    - Push notifications
+    - Banner ads
+    - IAP
+- [x] Add app version info to about screen for debugging
 - [ ] Bugs
     - Arabic HP fraction order
     - Arabic Comparison Layout issue
@@ -56,6 +61,7 @@
     - Choose aim type (thorax only, headshots only, leg meta)
     - Choose fragmentation type (never - worst case, always - best case, ammo specific - realistic)
     - Calculate
+- [ ] Push notification support v1.0
 
 ## <u>v1.2</u>
 - Display shot result

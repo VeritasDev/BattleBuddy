@@ -25,6 +25,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     var adManager = DependencyManagerImpl.shared.adManager()
     let feedbackManager = DependencyManagerImpl.shared.feedbackManager()
     var userCount = 0
+    var bugsFixedCount = 0
 
     let veritasCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
@@ -65,6 +66,22 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.selectionStyle = .none
         cell.isUserInteractionEnabled = false
         cell.imageView?.image = UIImage(named: "user_count")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        return cell
+    }()
+    let leaderboardCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell()
+        cell.textLabel?.text = "leaderboard".local()
+        cell.textLabel?.numberOfLines = 0
+        cell.accessoryType = .disclosureIndicator
+        cell.imageView?.image = UIImage(named: "trophy")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        return cell
+    }()
+    let bugFixesCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell()
+        cell.textLabel?.text = "leaderboard".local()
+        cell.textLabel?.numberOfLines = 0
+        cell.accessoryType = .disclosureIndicator
+        cell.imageView?.image = UIImage(named: "trophy")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
         return cell
     }()
 
@@ -151,17 +168,24 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
 
         if let metadata = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata() {
             userCount = metadata.totalUserCount
-            let numberString = numberFormatter.string(from: NSNumber(value: userCount)) ?? String(userCount)
-            let fullString = "total_users_count".local(args: [numberString])
-            userCountCell.textLabel?.attributedText = fullString.createAttributedString(boldedSubstring: numberString, font: .systemFont(ofSize: 18, weight: .light))
+            bugsFixedCount = metadata.totalBugsFound
 
-            let statsCells = [userCountCell]
+            let userCountString = numberFormatter.string(from: NSNumber(value: userCount)) ?? String(userCount)
+            let fullUsersString = "total_users_count".local(args: [userCountString])
+            userCountCell.textLabel?.attributedText = fullUsersString.createAttributedString(boldedSubstring: userCountString, font: .systemFont(ofSize: 18, weight: .light))
+
+            let bugsFixedString = numberFormatter.string(from: NSNumber(value: bugsFixedCount)) ?? String(bugsFixedCount)
+            let fullBugsString = "total_bugs_found".local(args: [bugsFixedString])
+            bugFixesCell.textLabel?.attributedText = fullBugsString.createAttributedString(boldedSubstring: bugsFixedString, font: .systemFont(ofSize: 18, weight: .light))
+
+            let statsCells = [userCountCell, leaderboardCell, bugFixesCell]
             let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
+            sections.append(globalStatsSection)
         }
 
         let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, theTeamCell, watchAdCell] : [feedbackCell, theTeamCell, watchAdCell]
         let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), footerTitle: appVersion, cells: supportCells)
-        sections = [aboutSection, supportSection]
+        sections.append(supportSection)
         tableView.reloadData()
     }
 
