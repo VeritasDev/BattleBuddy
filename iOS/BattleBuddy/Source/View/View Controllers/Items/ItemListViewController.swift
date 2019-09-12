@@ -97,6 +97,7 @@ class ItemListViewController: BaseStackViewController {
 
     func buildStackFromConfig() {
         loaded = true
+        stackView.removeAllArrangedSubviews()
 
         for section in config.sections {
             let sectionHeaderView = SectionHeaderView(headerText: section.title)

@@ -1,0 +1,18 @@
+{
+    "headers": {
+        "items": "Items",
+        "learn": "Learn",
+        "more": "More"
+    },
+    "labels": {
+        "items": {
+
+        },
+        "learn": {
+
+        },
+        "more": {
+            "enableAds": "Enable Ads to support us"
+        }
+    }
+}

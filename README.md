@@ -21,8 +21,8 @@ Concept and development brought to you by [Veritas](http://www.twitch.tv/veritas
 
 ## <u>Backend v1.0</u>
 
-- [ ] Remote functions deployed
+- [x] Remote functions deployed
 - [x] Fold server
-- [ ] item update/syncing (every 60 mins)
+- [x] user/item update/syncing (every 60 mins)
 - [ ] Total user count cache (every 5 mins?)
 - [ ] Total ads watched cache (every 5 mins?)

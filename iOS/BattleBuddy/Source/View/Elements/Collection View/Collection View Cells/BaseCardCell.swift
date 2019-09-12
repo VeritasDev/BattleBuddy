@@ -12,7 +12,7 @@ class BaseCardCell: UICollectionViewCell {
     private let baseCardCellPadding: CGFloat = 10.0
     internal let containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.Theme.background
         view.layer.cornerRadius = 16
         view.layer.masksToBounds = true
         return view

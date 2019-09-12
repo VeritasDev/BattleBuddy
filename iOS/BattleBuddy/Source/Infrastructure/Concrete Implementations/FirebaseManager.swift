@@ -62,11 +62,11 @@ class FirebaseManager: NSObject {
         FirebaseApp.configure()
 
         // Uncomment this out for debugging purposes.
-        // FirebaseConfiguration.shared.setLoggerLevel(.max)
-
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+//        FirebaseConfiguration.shared.setLoggerLevel(.max)
         videoAd.delegate = self
-        reloadVideoAd()
+        GADMobileAds.sharedInstance().start { _ in
+            self.reloadVideoAd()
+        }
     }
 
     // MARK:- Images

@@ -23,6 +23,7 @@ protocol DependencyManager {
     func adManager() -> AdManager
     func metadataManager() -> GlobalMetadataManager
     func ammoUtilitiesManager() -> AmmoUtilitiesManager
+    func deviceManager() -> DeviceManager
 }
 
 // MARK:- Networking
@@ -150,3 +151,8 @@ protocol FeedbackManager {
     func askForReview()
 }
 
+// MARK:- Device
+
+protocol DeviceManager {
+    func appVersionString() -> String?
+}

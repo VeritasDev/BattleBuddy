@@ -21,6 +21,7 @@ class DependencyManagerImpl: DependencyManager {
     var adMngr: AdManager?
     var metadataMngr: GlobalMetadataManager?
     var ammoUtilitiesMngr: AmmoUtilitiesManager?
+    var deviceMngr: DeviceManager?
 
     func assembleDependencies(_ appDelegate: AppDelegate) {
         // Firebase handles sessions, accounts, storage, metadata, and ads.
@@ -37,6 +38,7 @@ class DependencyManagerImpl: DependencyManager {
         twitchMngr = TwitchManager()
         feedbackMngr = FeedbackManagerImpl()
         ammoUtilitiesMngr = AmmoUtilitiesManagerImpl()
+        deviceMngr = DeviceManagerImpl()
     }
 
     func accountManager() -> AccountManager { return accountMngr! }
@@ -49,4 +51,5 @@ class DependencyManagerImpl: DependencyManager {
     func adManager() -> AdManager { return adMngr! }
     func metadataManager() -> GlobalMetadataManager { return metadataMngr! }
     func ammoUtilitiesManager() -> AmmoUtilitiesManager { return ammoUtilitiesMngr! }
+    func deviceManager() -> DeviceManager { return deviceMngr! }
 }
