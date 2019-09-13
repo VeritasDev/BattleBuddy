@@ -325,8 +325,8 @@
 // ----------------------------------------
 // V1.1.0
 "global_stats" = "Community Stats";
-"leaderboard" = "Supporter Leaderboard";
-"total_bugs_found" = "%@ bugs reported by the community and fixed!";
+"supporter_leaderboard" = "Supporter Leaderboard";
+"leaderboard" = "Leaderboard";
 "total_ads_watched" = "%@ ads watched by the community!";
 
 "sound_training" = "Sound Training";

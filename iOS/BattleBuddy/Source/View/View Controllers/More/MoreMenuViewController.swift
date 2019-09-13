@@ -25,7 +25,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     var adManager = DependencyManagerImpl.shared.adManager()
     let feedbackManager = DependencyManagerImpl.shared.feedbackManager()
     var userCount = 0
-    var bugsFixedCount = 0
+    lazy var globalMetadata: GlobalMetadata? = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata()
 
     let veritasCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
@@ -70,15 +70,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     }()
     let leaderboardCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
-        cell.textLabel?.text = "leaderboard".local()
-        cell.textLabel?.numberOfLines = 0
-        cell.accessoryType = .disclosureIndicator
-        cell.imageView?.image = UIImage(named: "trophy")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
-        return cell
-    }()
-    let bugFixesCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell()
-        cell.textLabel?.text = "leaderboard".local()
+        cell.textLabel?.text = "supporter_leaderboard".local()
         cell.textLabel?.numberOfLines = 0
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: "trophy")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
@@ -160,25 +152,21 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
 
     func updateCells() {
         sections = []
+        tableView.reloadData()
 
         let appVersion = DependencyManagerImpl.shared.deviceManager().appVersionString()
         let aboutCells = userCount > 0 ? [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell, userCountCell] : [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 
-        if let metadata = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata() {
-            userCount = metadata.totalUserCount
-            bugsFixedCount = metadata.totalBugsFound
+        if let metaData = globalMetadata {
+            userCount = metaData.totalUserCount
 
             let userCountString = numberFormatter.string(from: NSNumber(value: userCount)) ?? String(userCount)
             let fullUsersString = "total_users_count".local(args: [userCountString])
             userCountCell.textLabel?.attributedText = fullUsersString.createAttributedString(boldedSubstring: userCountString, font: .systemFont(ofSize: 18, weight: .light))
 
-            let bugsFixedString = numberFormatter.string(from: NSNumber(value: bugsFixedCount)) ?? String(bugsFixedCount)
-            let fullBugsString = "total_bugs_found".local(args: [bugsFixedString])
-            bugFixesCell.textLabel?.attributedText = fullBugsString.createAttributedString(boldedSubstring: bugsFixedString, font: .systemFont(ofSize: 18, weight: .light))
-
-            let statsCells = [userCountCell, leaderboardCell, bugFixesCell]
+            let statsCells = [userCountCell, leaderboardCell]
             let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
             sections.append(globalStatsSection)
         }
@@ -229,6 +217,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         case watchAdCell: adManager.watchAdVideo(from: self)
         case theTeamCell: navigationController?.pushViewController(TeamViewController(), animated: true)
         case rateCell: feedbackManager.askForReview()
+        case leaderboardCell: navigationController?.pushViewController(LeaderboardViewController(globalMetadata!.adsWatchedLeaderboard), animated: true)
         default: break
         }
     }

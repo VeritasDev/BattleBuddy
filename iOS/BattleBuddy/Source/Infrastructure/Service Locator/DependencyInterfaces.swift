@@ -96,43 +96,6 @@ protocol AdManager {
     func watchAdVideo(from rootVC: UIViewController)
 }
 
-// MARK:- Global Metadata
-
-struct AmmoMetadata {
-    let caliber: String
-    let displayName: String
-    let index: Int
-}
-
-struct GlobalMetadata {
-    let totalUserCount: Int
-    let totalAdsWatched: Int
-    let totalBugsFound: Int
-    let ammoMetadata: [AmmoMetadata]
-    let leaderboard: [[String: Int]] = []
-
-    init?(json: [String: Any]) {
-        guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedAdCount = json["totalAdsWatched"] as? NSNumber, let boxedBugsCount = json["totalBugsFound"] as? NSNumber else {
-            return nil
-        }
-
-        var tempAmmoMeta: [AmmoMetadata] = []
-        for caliber in ammoMeta.keys {
-            guard let data = ammoMeta[caliber], let displayName = data["displayName"] as? String,
-                let rawIndex = data["index"] as? NSNumber else {
-                return nil
-            }
-
-            tempAmmoMeta.append(AmmoMetadata(caliber: caliber, displayName: displayName, index: rawIndex.intValue))
-        }
-
-        totalUserCount = boxedUserCount.intValue
-        totalAdsWatched = boxedAdCount.intValue
-        ammoMetadata = tempAmmoMeta
-        totalBugsFound = boxedBugsCount.intValue
-    }
-}
-
 protocol GlobalMetadataManager {
     func getGlobalMetadata() -> GlobalMetadata?
     func updateGlobalMetadata(handler: @escaping (_ : GlobalMetadata?) -> Void)

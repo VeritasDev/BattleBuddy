@@ -11,6 +11,7 @@
 - [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
 
 ## <u>v1.1</u>
+- [ ] Known issues post
 - [ ] Settings
     - Nickname
     - Push notifications
@@ -22,6 +23,8 @@
     - Arabic HP fraction order
     - Arabic Comparison Layout issue
     - UIWebView deprecation
+    - Pen chance cell text size
+    - Jittery post screen
 - [ ] Global metrics
     - Total ads watched count
     - Total supporters
@@ -91,6 +94,7 @@
 - Gun building help + random build + UI
     
 ## <u>Backlog</u>
+- Surveys
 - Crowdsourced images + gallery for items + fullscreen images
 - Profile
     - Supporter type
