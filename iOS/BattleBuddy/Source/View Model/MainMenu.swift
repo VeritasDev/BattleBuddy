@@ -112,7 +112,7 @@ struct MainMenuItem {
         case .medical: return UIImage(named: "card_hero_medical")
         case .penChanceCalc: return UIImage(named: "card_hero_pen_chance")
         case .healthCalc: return UIImage(named: "card_hero_health_calc")
-        case .soundTraining: return UIImage(named: "card_hero_health_calc") // TODO
+        case .soundTraining: return UIImage(named: "card_hero_sound_training")
         }
     }
 
@@ -139,7 +139,7 @@ struct MainMenuItem {
         case .healthCalc:
             alignment = .left
         case .soundTraining:
-            alignment = .left
+            alignment = .right
         }
 
         cell.imageView.image = cardImage()
