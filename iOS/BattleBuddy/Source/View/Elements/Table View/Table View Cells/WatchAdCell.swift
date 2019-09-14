@@ -24,6 +24,7 @@ class WatchAdCell: BaseTableViewCell {
 
         accessory.hidesWhenStopped = true
         accessoryView = accessory
+        height = 70.0
 
         updateVideoAdState()
     }

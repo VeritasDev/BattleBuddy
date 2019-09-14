@@ -11,6 +11,7 @@
 - [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
 
 ## <u>v1.1</u>
+- [ ] Reduce image sizes in Firebase storage
 - [ ] Known issues post
 - [ ] Settings
     - Nickname

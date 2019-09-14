@@ -11,9 +11,9 @@ import UIKit
 struct GroupedTableViewSection {
     let headerTitle: String?
     let footerTitle: String?
-    let cells: [UITableViewCell]
+    let cells: [BaseTableViewCell]
 
-    init(headerTitle: String?, footerTitle: String? = nil, cells: [UITableViewCell]) {
+    init(headerTitle: String?, footerTitle: String? = nil, cells: [BaseTableViewCell]) {
         self.headerTitle = headerTitle
         self.footerTitle = footerTitle
         self.cells = cells
@@ -33,6 +33,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         cell.imageView?.image = UIImage(named: "veritas")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
         return cell
     }()
     let upcomingFeaturesCell: BaseTableViewCell = {
@@ -41,6 +42,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: "calendar")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
         return cell
     }()
     let githubCell: BaseTableViewCell = {
@@ -50,6 +52,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         cell.imageView?.image = UIImage(named: "github")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight)).withRenderingMode(.alwaysTemplate)
         cell.imageView?.tintColor = .white
+        cell.height = 70.0
         return cell
     }()
     let attributionsCell: BaseTableViewCell = {
@@ -58,6 +61,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: "attributions")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
         return cell
     }()
     let userCountCell: BaseTableViewCell = {
@@ -66,6 +70,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.selectionStyle = .none
         cell.isUserInteractionEnabled = false
         cell.imageView?.image = UIImage(named: "user_count")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
         return cell
     }()
     let leaderboardCell: BaseTableViewCell = {
@@ -74,6 +79,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.textLabel?.numberOfLines = 0
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: "trophy")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
         return cell
     }()
 
@@ -83,6 +89,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: "seems_good")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
         return cell
     }()
     let theTeamCell: BaseTableViewCell = {
@@ -91,6 +98,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: "team_logo")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
         return cell
     }()
     lazy var enableBannerAdsCell: BaseTableViewCell = {
@@ -197,6 +205,10 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].cells.count
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return sections[indexPath.section].cells[indexPath.row].height
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
