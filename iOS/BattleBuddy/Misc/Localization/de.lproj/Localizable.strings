@@ -132,7 +132,7 @@
 "caliber" = "Kaliber";
 "fire_rate" = "Feuerrate";
 "effective_range" = "Effektive Reichweite";
-"fold_or_retract" = "Aus/Einklappen";
+"fold_or_retract" = "Einklappen/Einziehen";
 "retractable" = "Einklappbar";
 "build_wizard" = "Waffenbau-Simulator";
 "gun_build_custom" = "Benutzerdefiniert";
@@ -144,7 +144,7 @@
 "fire_mode_semi" = "Halbautomatisch";
 "fire_mode_auto" = "Vollautomatisch";
 "fire_mode_burst" = "Feuerstoß";
-"fire_mode_semi_short" = "Einzel";
+"fire_mode_semi_short" = "Halb";
 "fire_mode_auto_short" = "Automatik";
 "fire_mode_burst_short" = "Feuerstoß";
 "action" = "System";
@@ -189,7 +189,7 @@
 "armor_class_3" = "Klasse 3";
 "armor_class_4" = "Klasse 4";
 "armor_class_5" = "Klasse 5";
-"armor_class_6" = "Klassw 6";
+"armor_class_6" = "Klasse 6";
 "armor_type_body" = "Körperpanzerung";
 "armor_type_helmet"= "Helm";
 "armor_type_visor" = "Visier";
