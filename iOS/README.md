@@ -5,19 +5,15 @@
 ## <u>Roadmap</u>
 
 - [x] Submit v1.0
-- [ ] Release v1.0 ***awaiting Apple review***
-
-# Architecture
-- [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
+- [x] Release v1.0
+- [ ] Release v1.1 ***In development - see TODO list below***
 
 ## <u>v1.1</u>
-- [ ] Reduce image sizes in Firebase storage
-- [ ] Known issues post
+- [x] Refresh global info when app foregrounded
+- [ ] Fix comparison screen bugs
 - [ ] Settings
     - Nickname
-    - Push notifications
-    - Banner ads
-    - IAP
+    - Enable Banner ads
 - [ ] Stereo audio tool
 - [x] Add app version info to about screen for debugging
 - [ ] Bugs
@@ -26,64 +22,46 @@
     - UIWebView deprecation
     - Pen chance cell text size
     - Jittery post screen
+    - Fix ads
+    - [x] More menu cells issue
 - [ ] Global metrics
     - Total ads watched count
-    - Total supporters
-    - Leaderboards
-    - Total bugs found by community and fixed count
-- [ ] Survival rate calculator
-    - Survival rate
-    - Investment per run
-    - Total earned per run
-- [ ] Change upcoming features blog post to news / updates
-- [ ] Additional Info to Existing Items:
-    - Compatible Mods on Firearms
-    - Related items feed
+    - [x] Leaderboards
 - [ ] Add New Item Types
     - Helmets and accessories
-    - Headphones
-    - Rigs
-    - Mods
-        - See all attachments that fits on it
-        - See all mods it can attach to
-        - See all mods it conflicts with 
-- [ ] Support
-    - Banner ads
-    - IAP
-    - Leaderboard Integration
-- [ ] Attributions Additions
-    - SmooothBrain for design work
-- [ ] Add ? info to health calculator
-- [ ] Add ? info to comparison screen
+- [ ] Implement Banner Ads (if setting enabled)
 - [ ] Penetration Calculator Improvements
     - Helmets/face shields/mods
     - Armored Rigs + Multi-layer support to ballistics calc
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
-- [ ] Shots to kill calculator
-    - Choose target
-    - Choose armor
-    - Choose aim type (thorax only, headshots only, leg meta)
-    - Choose fragmentation type (never - worst case, always - best case, ammo specific - realistic)
-    - Calculate
-- [ ] Push notification support v1.0
+- [ ] Attributions Additions
+    - SmooothBrain for design work
+    - Betrix for images
 
 ## <u>v1.2</u>
 - Display shot result
 - News/changelog
+- IAP
 - BSG Twitter Feed
 - Skills and how to level them
+- [ ] Add ? info to health calculator
+- [ ] Add ? info to comparison screen
+- [ ] Additional Info to Existing Items:
+    - Compatible Mods on Firearms
+    - Related items feed
 - Comparison Screen Improvements
     - Revisit range again
     - Color scheme preference, gradient, black/white, highlight best/worst?
 - Favoriting Items
+- [ ] Reduce image sizes in Firebase storage
+- [ ] Known issues post
 - Firearm building
     - Custom
     - Max ergo
     - Min recoil
     - Random
-- Nuke UIKit to the ground; Foundation FTW
 - V-Harmony Item Matchmaker (play on e-harmony)
     - Select the type (gun, armor, helmet to start)
     - Questionnaire - What's is and isn't important to you? Fire rate, bullet, pen, damage, mobility, etc
@@ -93,8 +71,29 @@
 - Strat Roulette
 - Task item checklist / shopping list
 - Gun building help + random build + UI
+- [ ] Survival rate calculator
+    - Survival rate
+    - Investment per run
+    - Total earned per run
+- [ ] Change upcoming features blog post to news / updates
+- [ ] Push notification support v1.0
+- [ ] Shots to kill calculator
+    - Choose target
+    - Choose armor
+    - Choose aim type (thorax only, headshots only, leg meta)
+    - Choose fragmentation type (never - worst case, always - best case, ammo specific - realistic)
+    - Calculate
+- [ ] Add New Item Types
+    - Rigs
+    - Helmets and accessories
+    - Headphones
+    - Mods
+    - See all attachments that fits on it
+    - See all mods it can attach to
+    - See all mods it conflicts with 
     
 ## <u>Backlog</u>
+- Nuke UIKit to the ground; Foundation FTW
 - Surveys
 - Crowdsourced images + gallery for items + fullscreen images
 - Profile
@@ -149,6 +148,10 @@
 - [ ] Ensure all keys are updated with production keys
 - [ ] Google Ad Mob
 - [ ] Update attributions
+
+
+# Architecture
+- [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
 
 ## Project / Repo TODO:
 

@@ -101,6 +101,7 @@
 		6083741F232BBAAE00AA9D29 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */; };
 		60837425232BC24B00AA9D29 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837424232BC24B00AA9D29 /* Global.swift */; };
 		60837428232BCB6000AA9D29 /* BBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837427232BCB6000AA9D29 /* BBUser.swift */; };
+		6083742A232D0BEE00AA9D29 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837429232D0BEE00AA9D29 /* SettingsViewController.swift */; };
 		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
 		EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */; };
 		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
@@ -312,6 +313,7 @@
 		6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		60837424232BC24B00AA9D29 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		60837427232BCB6000AA9D29 /* BBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUser.swift; sourceTree = "<group>"; };
+		60837429232D0BEE00AA9D29 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 				27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */,
 				27BB49BB22F9C1F000070427 /* VeritasInfoViewController.swift */,
 				27D2104E23174B20005A538F /* LocalizationTeamViewController.swift */,
+				60837429232D0BEE00AA9D29 /* SettingsViewController.swift */,
 				6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */,
 			);
 			path = More;
@@ -1310,6 +1313,7 @@
 				2745EC5522CA29BF00CD60D6 /* LocalizationUtils.swift in Sources */,
 				27A263BD22CF852B0089830C /* BaseStackView.swift in Sources */,
 				60837425232BC24B00AA9D29 /* Global.swift in Sources */,
+				6083742A232D0BEE00AA9D29 /* SettingsViewController.swift in Sources */,
 				EFF327B522F8A84200673F57 /* ComparisonCell.swift in Sources */,
 				2753FE6522F0767C00B20DAD /* DependencyInterfaces.swift in Sources */,
 				27A7608E22D230BE00861113 /* ItemPropertyRow.swift in Sources */,

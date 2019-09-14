@@ -25,7 +25,8 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     var adManager = DependencyManagerImpl.shared.adManager()
     let feedbackManager = DependencyManagerImpl.shared.feedbackManager()
     var userCount = 0
-    lazy var globalMetadata: GlobalMetadata? = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata()
+    let globalMetadataManager: GlobalMetadataManager = DependencyManagerImpl.shared.metadataManager()
+    lazy var globalMetadata: GlobalMetadata? = globalMetadataManager.getGlobalMetadata()
 
     let veritasCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
@@ -101,19 +102,6 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.height = 70.0
         return cell
     }()
-    lazy var enableBannerAdsCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell()
-        cell.textLabel?.text = "enable_banner_ads".local()
-        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-        cell.accessoryView = {
-            let toggle = UISwitch()
-            toggle.setOn(adManager.bannerAdsEnabled(), animated: false)
-            toggle.addTarget(self, action: #selector(toggleBannerAds(sender:)), for: .valueChanged)
-            return toggle
-        }()
-        cell.selectionStyle = .none
-        return cell
-    }()
     let watchAdCell: WatchAdCell = WatchAdCell(iconHeight: iconHeight)
     let feedbackCell: BaseTableViewCell = {
         let cell = BaseTableViewCell(style: .subtitle, reuseIdentifier: nil)
@@ -143,7 +131,6 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         super.init(style: .grouped)
 
         adManager.adDelegate = self
-        tableView.rowHeight = 70.0
     }
 
     override func viewDidLoad() {
@@ -160,10 +147,8 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
 
     func updateCells() {
         sections = []
-        tableView.reloadData()
 
-        let appVersion = DependencyManagerImpl.shared.deviceManager().appVersionString()
-        let aboutCells = userCount > 0 ? [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell, userCountCell] : [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell]
+        let aboutCells = [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 
@@ -179,15 +164,11 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
             sections.append(globalStatsSection)
         }
 
+        let appVersion = DependencyManagerImpl.shared.deviceManager().appVersionString()
         let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, theTeamCell, watchAdCell] : [feedbackCell, theTeamCell, watchAdCell]
         let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), footerTitle: appVersion, cells: supportCells)
         sections.append(supportSection)
         tableView.reloadData()
-    }
-
-    @objc func toggleBannerAds(sender: UISwitch) {
-        let adsEnabled = sender.isOn
-        adManager.updateBannerAdsSetting(adsEnabled)
     }
 
     // MARK: - Table view data source
