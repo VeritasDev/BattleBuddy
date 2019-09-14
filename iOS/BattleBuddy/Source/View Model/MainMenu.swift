@@ -75,7 +75,6 @@ struct MainMenuItem {
         case .medical:
             handler(ItemListViewController(itemType: .medical))
             return
-
         case .ballistics:
             handler(PostViewController(BallisticsPost()))
             return
@@ -117,37 +116,11 @@ struct MainMenuItem {
     }
 
     func configureCell(_ cell: MainMenuCell) {
-        let alignment: NSTextAlignment
-
-        switch type {
-        case .firearms:
-            alignment = .right
-        case .armor:
-            alignment = .left
-        case .ammunition:
-            alignment = .left
-        case .medical:
-            alignment = .right
-        case .melee:
-            alignment = .left
-        case .throwables:
-            alignment = .left
-        case .ballistics:
-            alignment = .right
-        case .penChanceCalc:
-            alignment = .right
-        case .healthCalc:
-            alignment = .left
-        case .soundTraining:
-            alignment = .right
-        }
-
         cell.imageView.image = cardImage()
         cell.label.font = UIFont.systemFont(ofSize: 32.0, weight: .heavy)
         cell.label.textColor = .white
         cell.label.layer.shadowColor = UIColor.black.cgColor
         cell.label.text = type.local()
-        cell.label.textAlignment = alignment
     }
 
     func updateLayoutForCell(_ cell: MainMenuCell) {
@@ -161,14 +134,6 @@ struct MainMenuItem {
         cell.label.frame = CGRect.init(x: 0, y: 0, width: labelWidth, height: 0)
         cell.label.sizeToFit()
         let labelHeight = cell.label.frame.height
-        let topFrame = CGRect.init(x: xPadding, y: yPadding, width: labelWidth, height: labelHeight)
-        let bottomFrame = CGRect.init(x: xPadding, y: containerHeight - labelHeight - yPadding, width: labelWidth, height: labelHeight)
-
-        switch type {
-        case .firearms, .ammunition, .melee, .throwables, .healthCalc:
-            cell.label.frame = bottomFrame
-        default:
-            cell.label.frame = topFrame
-        }
+        cell.label.frame = CGRect.init(x: xPadding, y: containerHeight - labelHeight - yPadding, width: labelWidth, height: labelHeight)
     }
 }
