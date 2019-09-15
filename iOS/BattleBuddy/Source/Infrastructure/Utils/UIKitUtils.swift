@@ -57,3 +57,9 @@ extension UIStackView {
         removedSubviews.forEach({ $0.removeFromSuperview() })
     }
 }
+
+extension NSTextAlignment {
+    static var invNatural: NSTextAlignment {
+        return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft ? .left : .right
+    }
+}

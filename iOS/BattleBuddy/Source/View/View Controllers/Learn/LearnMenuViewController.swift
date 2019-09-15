@@ -16,7 +16,7 @@ class LearnMenuViewController: MainMenuCollectionViewController {
         super.init(items: [
             MainMenuItem(type: .penChanceCalc, compactSize: .medium, regularSize: .large),
             MainMenuItem(type: .healthCalc, compactSize: .medium, regularSize: .large),
-            MainMenuItem(type: .soundTraining, compactSize: .medium, regularSize: .large),
+//            MainMenuItem(type: .soundTraining, compactSize: .medium, regularSize: .large),
             MainMenuItem(type: .ballistics, compactSize: .medium, regularSize: .large)
             ])
     }

@@ -29,7 +29,7 @@ class CompatibleModsHeaderView: UIView {
         let label = UILabel()
         label.text = "modification".local()
         label.numberOfLines = 0
-        label.textAlignment = .right
+        label.textAlignment = .invNatural
         label.font = UIFont.systemFont(ofSize: 14.0, weight: .semibold)
         return label
     }()

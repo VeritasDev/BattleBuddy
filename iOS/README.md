@@ -17,10 +17,8 @@
 - [x] Add app version info to about screen for debugging
 - [ ] Bugs
     - [ ] Arabic HP fraction order
-    - [ ] Arabic Comparison Layout issue
-    - [ ] UIWebView deprecation
+    - [x] Arabic Comparison Layout issue
     - [ ] Pen chance cell text size
-    - [ ] Jittery post screen
     - [ ] Fix ads
     - [x] More menu cells issue
     - [ ] Twitch stream memory crash
@@ -28,6 +26,8 @@
 - [x] Korean Translations
 
 ## <u>v1.1</u>
+- [ ] UIWebView deprecation
+- [ ] Jittery post screen
 - [ ] Settings
     - Nickname
     - Enable Banner ads

@@ -23,7 +23,7 @@ class BarGraphView: UIView {
     private let valueLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14.0, weight: .bold)
-        label.textAlignment = .right
+        label.textAlignment = .invNatural
         label.textColor = .white
         return label
     }()

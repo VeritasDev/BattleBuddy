@@ -46,7 +46,7 @@ class LeaderboardCell: BaseTableViewCell {
     }()
     let scoreLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.textAlignment = .right
+        label.textAlignment = .invNatural
         label.font = UIFont.systemFont(ofSize: 20.0, weight: .regular)
         label.textColor = .white
         return label
