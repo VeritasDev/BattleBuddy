@@ -6,24 +6,32 @@
 
 - [x] Submit v1.0
 - [x] Release v1.0
-- [ ] Release v1.1 ***In development - see TODO list below***
+- [ ] Release v1.0.1 ***In development - see TODO list below***
+- [ ] Release v1.1
 
-## <u>v1.1</u>
+## <u>v1.0.1</u>
 - [x] Refresh global info when app foregrounded
 - [ ] Fix comparison screen bugs
+- [x] Add app version info to about screen for debugging
+- [ ] Bugs
+    - [ ] Arabic HP fraction order
+    - [ ] Arabic Comparison Layout issue
+    - [ ] UIWebView deprecation
+    - [ ] Pen chance cell text size
+    - [ ] Jittery post screen
+    - [ ] Fix ads
+    - [x] More menu cells issue
+    - [ ] Twitch stream memory crash
+    - [x] Duplicate paragraphs on ballistics
+    - [ ]
+    - [ ] Korean Translations
+
+## <u>v1.1</u>
 - [ ] Settings
     - Nickname
     - Enable Banner ads
+    - [ ] Language override
 - [ ] Stereo audio tool
-- [x] Add app version info to about screen for debugging
-- [ ] Bugs
-    - Arabic HP fraction order
-    - Arabic Comparison Layout issue
-    - UIWebView deprecation
-    - Pen chance cell text size
-    - Jittery post screen
-    - Fix ads
-    - [x] More menu cells issue
 - [ ] Global metrics
     - [x] Leaderboards
 - [ ] Add New Item Types
@@ -39,6 +47,7 @@
     - SmooothBrain for design work
     - Betrix for images
 - [ ] Double-check Korean translations
+- [ ] Real-time community stats updates
 
 ## <u>v1.2</u>
 - Display shot result

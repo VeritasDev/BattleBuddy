@@ -9,12 +9,24 @@
 import Foundation
 
 internal func Localized(_ key: String, args: [CVarArg] = []) -> String {
-    return NSLocalizedString(key, comment: "")
+    if let lang = DependencyManagerImpl.shared.prefsManager().valueForStringPref(.languageOverride) {
+        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        return NSLocalizedString(key, tableName: nil, bundle: bundle!, value: "", comment: "")
+    }
+
+    return NSLocalizedString(String(format: key, arguments: args), comment: "")
 }
 
 extension String {
     func local() -> String {
-        return NSLocalizedString(self, comment: "")
+        if let lang = DependencyManagerImpl.shared.prefsManager().valueForStringPref(.languageOverride) {
+            let path = Bundle.main.path(forResource: lang, ofType: "lproj")
+            let bundle = Bundle(path: path!)
+            return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+        } else {
+            return NSLocalizedString(self, comment: "")
+        }
     }
 
     func local(args: [CVarArg]) -> String {
