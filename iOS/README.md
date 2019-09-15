@@ -25,7 +25,6 @@
     - Fix ads
     - [x] More menu cells issue
 - [ ] Global metrics
-    - Total ads watched count
     - [x] Leaderboards
 - [ ] Add New Item Types
     - Helmets and accessories
@@ -36,9 +35,10 @@
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
-- [ ] Attributions Additions
+- [x] Attributions Additions
     - SmooothBrain for design work
     - Betrix for images
+- [ ] Double-check Korean translations
 
 ## <u>v1.2</u>
 - Display shot result
