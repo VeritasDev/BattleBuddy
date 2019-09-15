@@ -24,6 +24,7 @@ protocol DependencyManager {
     func metadataManager() -> GlobalMetadataManager
     func ammoUtilitiesManager() -> AmmoUtilitiesManager
     func deviceManager() -> DeviceManager
+    func localeManager() -> LocaleManager
 }
 
 // MARK:- Networking
@@ -119,4 +120,16 @@ protocol FeedbackManager {
 
 protocol DeviceManager {
     func appVersionString() -> String?
+}
+
+// MARK:- Locale
+
+struct LanguageSetting {
+    let code: String
+    let displayName: String
+}
+
+protocol LocaleManager {
+    func supportedLanguages() -> [LanguageSetting]
+    func currentLanguageDisplayName() -> String
 }

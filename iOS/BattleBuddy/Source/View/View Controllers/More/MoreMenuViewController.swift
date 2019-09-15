@@ -8,18 +8,6 @@
 
 import UIKit
 
-struct GroupedTableViewSection {
-    let headerTitle: String?
-    let footerTitle: String?
-    let cells: [BaseTableViewCell]
-
-    init(headerTitle: String?, footerTitle: String? = nil, cells: [BaseTableViewCell]) {
-        self.headerTitle = headerTitle
-        self.footerTitle = footerTitle
-        self.cells = cells
-    }
-}
-
 class MoreMenuViewController: BaseTableViewController, AdDelegate {
     static let iconHeight: CGFloat = 40.0
     var adManager = DependencyManagerImpl.shared.adManager()
@@ -71,6 +59,16 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.selectionStyle = .none
         cell.isUserInteractionEnabled = false
         cell.imageView?.image = UIImage(named: "user_count")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
+        return cell
+    }()
+    let settingsCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell()
+        cell.textLabel?.text = "settings".local()
+        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        cell.textLabel?.numberOfLines = 0
+        cell.accessoryType = .disclosureIndicator
+        cell.imageView?.image = UIImage(named: "settings")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
         cell.height = 70.0
         return cell
     }()
@@ -136,7 +134,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "more".local()
+        title = "more".local()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -148,7 +146,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     func updateCells() {
         sections = []
 
-        let aboutCells = [veritasCell, upcomingFeaturesCell, githubCell, attributionsCell]
+        let aboutCells = [settingsCell, veritasCell, upcomingFeaturesCell, githubCell, attributionsCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 
@@ -159,7 +157,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
             let fullUsersString = "total_users_count".local(args: [userCountString])
             userCountCell.textLabel?.attributedText = fullUsersString.createAttributedString(boldedSubstring: userCountString, font: .systemFont(ofSize: 18, weight: .light))
 
-            let statsCells = [userCountCell, leaderboardCell]
+            let statsCells = [userCountCell]
             let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
             sections.append(globalStatsSection)
         }
@@ -202,6 +200,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         let cell = tableView.cellForRow(at: indexPath)
 
         switch cell {
+        case settingsCell: navigationController?.pushViewController(SettingsViewController(), animated: true)
         case veritasCell: navigationController?.pushViewController(VeritasInfoViewController(), animated: true)
         case upcomingFeaturesCell: navigationController?.pushViewController(PostViewController(UpcomingFeaturesPost()), animated: true)
         case githubCell: handleLink(VeritasSocial.github)

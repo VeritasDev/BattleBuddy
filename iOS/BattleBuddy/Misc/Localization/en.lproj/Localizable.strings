@@ -323,8 +323,14 @@
 "total_users_count" = "%@ Battle Buddies have joined the fight!";
 
 // ----------------------------------------
-// V1.1.0
+// V1.0.1
 "global_stats" = "Community Stats";
+"settings" = "Settings";
+"language_system_default" = "System";
+"language" = "Language";
+
+// ----------------------------------------
+// V1.1.0
 "supporter_leaderboard" = "Supporter Leaderboard";
 "leaderboard" = "Leaderboard";
 "total_ads_watched" = "%@ ads watched by the community!";

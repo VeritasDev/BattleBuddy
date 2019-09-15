@@ -10,6 +10,8 @@
 - [ ] Release v1.1
 
 ## <u>v1.0.1</u>
+- [x] Settings
+    - x ] Language override
 - [x] Refresh global info when app foregrounded
 - [ ] Fix comparison screen bugs
 - [x] Add app version info to about screen for debugging
@@ -23,14 +25,13 @@
     - [x] More menu cells issue
     - [ ] Twitch stream memory crash
     - [x] Duplicate paragraphs on ballistics
-    - [ ]
-    - [ ] Korean Translations
+- [x] Korean Translations
 
 ## <u>v1.1</u>
 - [ ] Settings
     - Nickname
     - Enable Banner ads
-    - [ ] Language override
+- [ ] Language override
 - [ ] Stereo audio tool
 - [ ] Global metrics
     - [x] Leaderboards

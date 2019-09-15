@@ -28,6 +28,6 @@ class PreferencesManager {
     func valueForIntPref(_ pref: Preference) -> Int { return defaults.integer(forKey: pref.rawValue) }
 
     // MARK: - Write
-    func update(_ pref: Preference, value: Any) { defaults.set(value, forKey: pref.rawValue) }
-    func update(_ key: String, value: Any) { defaults.set(value, forKey: key) }
+    func update(_ pref: Preference, value: Any?) { defaults.set(value, forKey: pref.rawValue) }
+    func update(_ key: String, value: Any?) { defaults.set(value, forKey: key) }
 }

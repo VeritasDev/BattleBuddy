@@ -9,6 +9,8 @@
 import UIKit
 
 extension UIViewController {
+    static func dm() -> DependencyManager { return DependencyManagerImpl.shared }
+
     func handleUrlString(_ urlString: String) {
         let app = UIApplication.shared
 

@@ -102,6 +102,9 @@
 		60837425232BC24B00AA9D29 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837424232BC24B00AA9D29 /* Global.swift */; };
 		60837428232BCB6000AA9D29 /* BBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837427232BCB6000AA9D29 /* BBUser.swift */; };
 		6083742A232D0BEE00AA9D29 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837429232D0BEE00AA9D29 /* SettingsViewController.swift */; };
+		6083742E232E534E00AA9D29 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083742D232E534E00AA9D29 /* TableViewModel.swift */; };
+		60837430232E546F00AA9D29 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */; };
+		60837432232E564F00AA9D29 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837431232E564F00AA9D29 /* LocaleManager.swift */; };
 		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
 		EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */; };
 		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
@@ -316,6 +319,9 @@
 		60837429232D0BEE00AA9D29 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6083742B232E3A5500AA9D29 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6083742C232E3A5600AA9D29 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6083742D232E534E00AA9D29 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewController.swift; sourceTree = "<group>"; };
+		60837431232E564F00AA9D29 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
@@ -460,6 +466,7 @@
 				27BB49BF22FC710B00070427 /* FeedbackManager.swift */,
 				27C0B177231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift */,
 				EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */,
+				60837431232E564F00AA9D29 /* LocaleManager.swift */,
 			);
 			path = "Concrete Implementations";
 			sourceTree = "<group>";
@@ -487,6 +494,7 @@
 				27BB49BB22F9C1F000070427 /* VeritasInfoViewController.swift */,
 				27D2104E23174B20005A538F /* LocalizationTeamViewController.swift */,
 				60837429232D0BEE00AA9D29 /* SettingsViewController.swift */,
+				6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */,
 				6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */,
 			);
 			path = More;
@@ -992,6 +1000,7 @@
 				27A4A90622E73FE400C5618E /* ItemPreviewConfiguration.swift */,
 				27090E2422D9FDC000D97320 /* PostConfiguration.swift */,
 				27090E2A22DA187100D97320 /* Posts.swift */,
+				6083742D232E534E00AA9D29 /* TableViewModel.swift */,
 				27781CDA22F7208A007134E2 /* Item Sorting */,
 				EF831FF222E8D28700C6C138 /* Item Comparisons */,
 				27090E3022DB546400D97320 /* Item Details */,
@@ -1296,6 +1305,7 @@
 				EF831FE622DF78A300C6C138 /* Medical.swift in Sources */,
 				27BF992822C8F1EA003F01C5 /* MainMenu.swift in Sources */,
 				27A263C122CF93F30089830C /* FrameUtils.swift in Sources */,
+				6083742E232E534E00AA9D29 /* TableViewModel.swift in Sources */,
 				6083741D232BBA5F00AA9D29 /* LeaderboardViewController.swift in Sources */,
 				27BB49C722FC862B00070427 /* Twitch.swift in Sources */,
 				27BF990E22C78777003F01C5 /* ItemDetailsViewController.swift in Sources */,
@@ -1309,6 +1319,7 @@
 				27090E2B22DA187100D97320 /* Posts.swift in Sources */,
 				EFF2FF5622D567E100BED024 /* BaseTableViewCell.swift in Sources */,
 				27BB49C422FC851400070427 /* Social.swift in Sources */,
+				60837430232E546F00AA9D29 /* LanguageSelectionViewController.swift in Sources */,
 				27BB49B822F8E67300070427 /* ArmorSort.swift in Sources */,
 				27090E3422DB54A900D97320 /* AmmoDetailsConfiguration.swift in Sources */,
 				EF7AF38022C67AAE00DA1A18 /* BaseCollectionViewController.swift in Sources */,
@@ -1360,6 +1371,7 @@
 				27781CD422F67F5A007134E2 /* AmmoStatsCell.swift in Sources */,
 				27BB49BE22F9D47200070427 /* ImageUtils.swift in Sources */,
 				EFF49E0223049D2500B87BD9 /* ProblemSolvingFlow.swift in Sources */,
+				60837432232E564F00AA9D29 /* LocaleManager.swift in Sources */,
 				6083741F232BBAAE00AA9D29 /* LeaderboardCell.swift in Sources */,
 				27BF991B22C84427003F01C5 /* MainMenuCollectionViewController.swift in Sources */,
 				276D917A23102D6D00CD61E0 /* ItemEnums.swift in Sources */,
