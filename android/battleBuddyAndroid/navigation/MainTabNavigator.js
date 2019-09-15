@@ -6,31 +6,19 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import * as Localization from 'expo-localization';
+import i18n from 'i18n-js';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
   default: {},
 });
 
-const HomeStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-  },
-  config
-);
+const HomeStack = createStackNavigator( { Home: HomeScreen }, config );
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
-  ),
+  tabBarLabel: 'Items',  
+  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} name={ 'md-bug' }/> ),
 };
 
 HomeStack.path = '';
@@ -43,10 +31,8 @@ const LinksStack = createStackNavigator(
 );
 
 LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
-  ),
+  tabBarLabel: 'Learn',
+  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} iconName={'icon.png'} /> ),
 };
 
 LinksStack.path = '';
@@ -59,10 +45,8 @@ const SettingsStack = createStackNavigator(
 );
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
+  tabBarLabel: 'More',
+  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} name={'md-more'} /> ),
 };
 
 SettingsStack.path = '';
