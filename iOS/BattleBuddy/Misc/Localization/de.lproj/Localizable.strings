@@ -132,7 +132,7 @@
 "caliber" = "Kaliber";
 "fire_rate" = "Feuerrate";
 "effective_range" = "Effektive Reichweite";
-"fold_or_retract" = "Aus/Einklappen";
+"fold_or_retract" = "Einklappen/Einziehen";
 "retractable" = "Einklappbar";
 "build_wizard" = "Waffenbau-Simulator";
 "gun_build_custom" = "Benutzerdefiniert";
@@ -144,7 +144,7 @@
 "fire_mode_semi" = "Halbautomatisch";
 "fire_mode_auto" = "Vollautomatisch";
 "fire_mode_burst" = "Feuerstoß";
-"fire_mode_semi_short" = "Einzel";
+"fire_mode_semi_short" = "Halb";
 "fire_mode_auto_short" = "Automatik";
 "fire_mode_burst_short" = "Feuerstoß";
 "action" = "System";
@@ -153,7 +153,7 @@
 "action_type_pump_short" = "Pump";
 "action_type_bolt_short" = "Repetierer";
 "build" = "Bauen";
-"build_this_gun" = "Bau diese Waffe";
+"build_this_gun" = "Baue diese Waffe";
 
 "compare_preset_semi_auto_rifle" = "Halbautomatische Gewehre";
 "compare_preset_full_auto_rifles" = "Vollautomatische Gewehre";
@@ -178,7 +178,7 @@
 "tracer" = "Leuchtspur";
 "muzzle_velocity" = "Mündungsgeschwindigkeit (m/s)";
 "compatible_firearms" = "Kompatible Schusswaffen";
-"rpm" = "rpm";
+"rpm" = "spm";
 "meters_abbr" = "m";
 "seconds_abbr" = "s";
 
@@ -189,7 +189,7 @@
 "armor_class_3" = "Klasse 3";
 "armor_class_4" = "Klasse 4";
 "armor_class_5" = "Klasse 5";
-"armor_class_6" = "Klassw 6";
+"armor_class_6" = "Klasse 6";
 "armor_type_body" = "Körperpanzerung";
 "armor_type_helmet"= "Helm";
 "armor_type_visor" = "Visier";
@@ -269,15 +269,15 @@
 "rate" = "Angriffsgeschwindigkeit";
 "range" = "Reichweite";
 
-"stab" = "Stechen";
-"stab_dmg" = "Stechschaden";
-"stab_rate" = "Stechrate";
-"stab_range" = "Stechreichweite";
+"stab" = "Stich";
+"stab_dmg" = "Stichschaden";
+"stab_rate" = "Stichrate";
+"stab_range" = "Stichreichweite";
 
-"slash" = "Schlitz";
-"slash_dmg" = "Schlitzschaden";
-"slash_rate" = "Schlitzrate";
-"slash_range" = "Schlitzreichweite";
+"slash" = "Hieb";
+"slash_dmg" = "Hiebschaden";
+"slash_rate" = "Hiebrate";
+"slash_range" = "Hiebreichweite";
 
 // MARK: - Posts
 "ballistics_title" = "Rüstung & Ballistik: Die Grundlagen";
