@@ -11,8 +11,8 @@
 
 ## <u>v1.0.1</u>
 - [x] Settings
-    - x ] Language override
-- [x] Refresh global info when app foregrounded
+    - [x] Language override
+- [ ] Real-time global metadata updates
 - [ ] Fix comparison screen bugs
 - [x] Add app version info to about screen for debugging
 - [ ] Bugs
@@ -21,17 +21,17 @@
     - [ ] Pen chance cell text size
     - [ ] Fix ads
     - [x] More menu cells issue
-    - [ ] Twitch stream memory crash
     - [x] Duplicate paragraphs on ballistics
 - [x] Korean Translations
 
 ## <u>v1.1</u>
-- [ ] UIWebView deprecation
-- [ ] Jittery post screen
+- [ ] Bugs
+    - [ ] UIWebView deprecation
+    - [ ] Jittery post screen
+    - [ ] Twitch stream memory issue
 - [ ] Settings
     - Nickname
     - Enable Banner ads
-- [ ] Language override
 - [ ] Stereo audio tool
 - [ ] Global metrics
     - [x] Leaderboards
