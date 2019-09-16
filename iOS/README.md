@@ -18,7 +18,6 @@
 - [ ] Bugs
     - [ ] Arabic HP fraction order
     - [ ] Arabic Comparison Layout issue
-    - [ ] UIWebView deprecation
     - [ ] Pen chance cell text size
     - [ ] Jittery post screen
     - [x] Fix ads
@@ -28,13 +27,21 @@
 - [x] Korean Translations
 
 ## <u>v1.1</u>
+- [ ] Logging / tags / debugging / etc
+- [ ] UIWebView deprecation
 - [ ] Settings
     - Nickname
     - Enable Banner ads
 - [ ] Language override
 - [ ] Stereo audio tool
-- [ ] Global metrics
-    - [x] Leaderboards
+- [ ] Loyalty Leaderboard
+    - [ ] Random bonus loyalty points % chance
+    - [ ] Points for watching ads
+    - [ ] Points for launching app
+    - [ ] Points for opening up each day
+    - [ ] Points for enabling push notifications
+    - [ ] Banner ads
+    - [ ] Interstitial
 - [ ] Add New Item Types
     - Helmets and accessories
 - [ ] Implement Banner Ads (if setting enabled)
