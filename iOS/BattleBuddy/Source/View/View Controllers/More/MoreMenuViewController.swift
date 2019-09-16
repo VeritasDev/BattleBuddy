@@ -25,15 +25,6 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.height = 70.0
         return cell
     }()
-    let upcomingFeaturesCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell()
-        cell.textLabel?.text = "upcoming_features".local()
-        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-        cell.accessoryType = .disclosureIndicator
-        cell.imageView?.image = UIImage(named: "calendar")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
-        cell.height = 70.0
-        return cell
-    }()
     let githubCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
         cell.textLabel?.text = "view_on_github".local()
@@ -147,7 +138,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     func updateCells() {
         sections = []
 
-        let aboutCells = [settingsCell, veritasCell, upcomingFeaturesCell, githubCell, attributionsCell]
+        let aboutCells = [settingsCell, veritasCell, githubCell, attributionsCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 
@@ -205,7 +196,6 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         switch cell {
         case settingsCell: navigationController?.pushViewController(SettingsViewController(), animated: true)
         case veritasCell: navigationController?.pushViewController(VeritasInfoViewController(), animated: true)
-        case upcomingFeaturesCell: navigationController?.pushViewController(PostViewController(UpcomingFeaturesPost()), animated: true)
         case githubCell: handleLink(VeritasSocial.github)
         case attributionsCell: navigationController?.pushViewController(AttributionsViewController(), animated: true)
         case feedbackCell: handleLink(VeritasSocial.discord)
