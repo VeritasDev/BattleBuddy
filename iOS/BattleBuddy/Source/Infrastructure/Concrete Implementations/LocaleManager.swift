@@ -10,11 +10,11 @@ import Foundation
 
 class LocaleManagerImpl: LocaleManager {
     let prefsManager = DependencyManagerImpl.shared.prefsManager()
-    let supportedLanguageCodes = ["en", "hu", "sv", "nl", "hr", "es-419", "ru", "sr", "sr-Latn", "es", "it", "pt-BR", "lt", "ar", "fr", "pt-PT", "id", "pl", "zh-Hant", "de", "et", "ko"]
+    let supportedLanguageCodes = ["en", "hu", "sv", "nl", "hr", "es", "es-419", "ru", "sr", "sr-Latn", "it", "pt-BR", "lt", "ar", "fr", "pt-PT", "id", "pl", "zh-Hant", "de", "et", "ko", "nb"]
 
     func supportedLanguages() -> [LanguageSetting] {
-        let currentLocale = Locale.autoupdatingCurrent
-        return supportedLanguageCodes.map { LanguageSetting(code: $0, displayName: currentLocale.localizedString(forLanguageCode: $0) ?? fallbackDisplayNameForLanguageCode($0)) }
+        let settings = supportedLanguageCodes.map { LanguageSetting(code: $0, displayName: fallbackDisplayNameForLanguageCode($0)) }
+        return settings.sorted { $0.displayName.localizedCaseInsensitiveCompare($1.displayName) == ComparisonResult.orderedAscending }
     }
 
     func currentLanguageDisplayName() -> String {
@@ -48,7 +48,8 @@ class LocaleManagerImpl: LocaleManager {
             "zh-Hant" : "Chinese",
             "de" : "German",
             "et" : "Estonian",
-            "ko" : "Korean"
+            "ko" : "Korean",
+            "nb" : "Norwegian"
         ]
 
         guard let displayName = map[code] else { fatalError() }

@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "Ja";
+"no" = "Nei";
+"ok" = "OK";
+"done" = "Ferdig";
+"soon" = "Snart™";
+"coming_soon" = "Kommer Snart™";
+"unknown" = "Ukjent";
+"type" = "Skriv";
+"continue" = "Fortsett";
+"veritas" = "Veritas";
+"required" = "Nødvendig";
+
+// MARK: - Filter/sort/compare
+"compare" = "Sammenligne";
+"name" = "Navn";
+"save" = "Lagre";
+"recommended" = "Foreslått";
+"similar" = "Lik";
+"all" = "Alle";
+"compare_with" = "Sammenligne med...";
+
+// MARK: - More / Attributions
+"about" = "Om Battle Buddy";
+"dev_by" = "Utviklet av Veritas";
+"dev_support" = "Vil du hjelpe til med Utviklingen?";
+"watch_ad" = "Se en Annonse";
+"enable_banner_ads" = "Aktiver Banner Annonse";
+"view_on_github" = "Vis på GitHub";
+"rate_this_app" = "Rate Battle Buddy";
+"attributions" = "Attribusjoner";
+"check_out_team" = "Sjekk ut Laget";
+"team" = "Laget";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Sosial";
+"music" = "Min Musikk";
+"website_error" = "Klarte ikke laste innholdet. Sjekk at du har relevant app installert.";
+"live_now" = "Direkte nå!";
+"feedback_title" = "Tilbakemeldinger eller Funksjonsidéer?";
+"feedback_subtitle" = "Hopp i vår Discord!";
+"upcoming_features" = "Kommende Funksjoner";
+
+"twitter_description" = "Hold deg oppdatert";
+"twitch_description" = "Se Direkte på Twitch";
+"discord_description" = "Bli med i vår Sammfunns Discord";
+"youtube_description" = "Se på YouTube";
+"instagram_description" = "Media på Instagram";
+"soundcloud_description" = "Hør på Soundcloud";
+"spotify_description" = "Hør på Spotify";
+"website_description" = "Mer om Veritas";
+
+// MARK: - Tabs
+"items" = "Gjenstander";
+"learn" = "Lær";
+"more" = "Mer";
+"search" = "Søk";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Ammunisjon";
+"main_menu_armor" = "Kroppsbeskyttelse";
+"main_menu_ballistics" = "Ballistikk";
+"main_menu_firearms" = "Skytevåpen";
+"main_menu_medical" = "Medisinsk";
+"main_menu_melee" = "Nærkampvåpen";
+"main_menu_throwables" = "Kastbare Gjenstander";
+"main_menu_health_calc" = "Skade Kalkulator";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Skytevåpen Typer";
+"calibers" = "Kaliber";
+
+// MARK: - Calculators
+"pen_chance" = "Penetrasjonssjanse";
+"no_armor_selected" = "Ingen Kroppsbeskyttelse Valgt";
+"no_ammo_selected" = "Ingen Ammunisjon Valgt";
+"select_ammo" = "Velg Ammunisjon";
+"select_armor" = "Velg Kroppsbeskyttelse";
+"pen_chance_help_title" = "Penetrasjonssjanse Kalkulator";
+"pen_chance_help_message" = "Verktøyet kalkulerer sjansen som en kule har til å penetrere en gitt Kroppsbeskyttelse. Når du har valgt en kule og kroppsbeskyttelse, kan du bruke glidebryteren til å justere den simulerte varighet av kroppsbeskyttelsen for å se hvor effektiv forskjellig ammunisjon er mot kroppsbeskyttelsen på forskjellig varighet!";
+
+"health_calc_title" = "Skade Kalkulator";
+"total_hp" = "Total HP";
+
+"body_zone_head" = "Hode";
+"body_zone_thorax" = "Brystkasse";
+"body_zone_stomach" = "Mage";
+"body_zone_right_arm" = "Høyre Arm";
+"body_zone_left_arm" = "Venstre Arm";
+"body_zone_right_leg" = "Høyre Bein";
+"body_zone_left_leg" = "Venstre Bein";
+
+// MARK: - Items
+"armor" = "Kroppsbeskyttelse";
+"helmets" = "Hjelmer";
+"ballistics" = "Ballistikk";
+"health" = "Helse";
+"firearms" = "Skytevåpen";
+"ammunition" = "Ammunisjon";
+"body_armor" = "Kroppsbeskyttelse";
+"medical_items" = "Medisinsk Utstyr";
+"throwables" = "Kastbare Gjenstander";
+"healing_items" = "Helbredende Gjenstander";
+"pain_management" = "Smertebehandling";
+"status_management" = "Statuseffektstyring";
+"stims" = "Sentralstimulerende";
+"grenades" = "Granater";
+"properties" = "Egenskaper";
+"performance" = "Ytelse";
+"ergonomics" = "Ergonomi";
+"ergo" = "Ergo";
+"vertical_recoil" = "Vertikal Rekyl";
+"horizontal_recoil" = "Horisontal Rekyl";
+"recoil" = "Rekyl";
+
+// MARK: - Weapons
+"weapon_class" = "Klasse";
+"assault_rifle" = "Angrepsgevær";
+"assault_carbine" = "Angrepskarbiner";
+"sniper_rifle" = "Skarpskytterrifle";
+"designated_marksman_rifle" = "Utpekt Skarpskytterrifle";
+"pistol" = "Pistol";
+"shotgun" = "Hagle";
+"sub_machine_gun" = "Maskinpistol";
+"machine_gun" = "Maskingevær";
+"caliber" = "Kaliber";
+"fire_rate" = "Skuddtakt";
+"effective_range" = "Effektiv Rekkevidde";
+"fold_or_retract" = "Brette/Trekke Tilbake";
+"retractable" = "Uttrekkbar";
+"build_wizard" = "Bygge Veiviser";
+"gun_build_custom" = "Tilpasset";
+"gun_build_recoil" = "Minimum Rekyl";
+"gun_build_ergo" = "Maksimum Ergonomi";
+"gun_build_random" = "Tilfeldig";
+"fire_mode" = "Skyte Variant";
+"fire_modes" = "Skyte Varianter";
+"fire_mode_semi" = "Halvautomatisk";
+"fire_mode_auto" = "Helautomatisk";
+"fire_mode_burst" = "Burst";
+"fire_mode_semi_short" = "Halvauto";
+"fire_mode_auto_short" = "Helauto";
+"fire_mode_burst_short" = "Burst";
+"action" = "Handling";
+"action_type_pump" = "Pumpeaksjon";
+"action_type_bolt" = "Bolt handling";
+"action_type_pump_short" = "Pumpe";
+"action_type_bolt_short" = "Bolt";
+"build" = "Bygge";
+"build_this_gun" = "Bygg dette våpenet";
+
+"compare_preset_semi_auto_rifle" = "Halvautomatiske Rifler";
+"compare_preset_full_auto_rifles" = "Helautomatiske Rifler";
+"compare_preset_rifles_caliber_match" = "Rifler m/ Lik Kaliber";
+"compare_preset_rifles" = "Rifler";
+"compare_preset_full_auto_caliber_match" = "Helautomatisk Rifler m/ Lik Kaliber";
+"compare_preset_semi_auto_pistols" = "Halvautomatiske Pistoler";
+"compare_preset_full_auto_pistols" = "Helautomatisk Pistoler";
+"compare_preset_pistols_caliber_match" = "Pistoler m/ Lik Kaliber";
+"compare_preset_pistols" = "Pistoler";
+"compare_preset_manual_shotguns" = "Pumpehagle";
+"compare_preset_shotguns" = "Hagler";
+"compare_preset_smgs_caliber_match" = "Maskinpistoler m/ Lik Kaliber";
+"compare_preset_smgs" = "Maskinpistoler";
+"compare_preset_bolt_snipers" = "Bolt-Handling Skarpskytterrifle";
+"compare_preset_snipers_and_dmrs" = "Skarpskytterrifle & DMRs";
+"compare_preset_dmrs" = "Utpekt Skarpskytterrifle";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Relaterte Skytevåpen";
+"subsonic" = "Subsonisk";
+"tracer" = "Tracer";
+"muzzle_velocity" = "Utgangshastighet (m/s)";
+"compatible_firearms" = "Kompatible Skytevåpen";
+"rpm" = "Skuddtakt";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Ingen";
+"armor_class_1" = "Klasse 1";
+"armor_class_2" = "Klasse 2";
+"armor_class_3" = "Klasse 3";
+"armor_class_4" = "Klasse 4";
+"armor_class_5" = "Klasse 5";
+"armor_class_6" = "Klasse 6";
+"armor_type_body" = "Kroppsbeskyttelse";
+"armor_type_helmet"= "Hjelm";
+"armor_type_visor" = "Visor";
+"armor_type_attachment" = "Attachment";
+"armor_zone_top" = "Top";
+"armor_zone_eyes" = "Øyne";
+"armor_zone_jaws" = "Kjeve";
+"armor_zone_ears" = "Ører";
+"armor_zone_nape" = "Nakken";
+"armor_zone_chest" = "Bryst";
+"armor_zone_stomach" = "Mage";
+"armor_zone_left_arm" = "Venstre Arm";
+"armor_zone_right_arm" = "Høyre Arm";
+"armor_zone_left_leg" = "Venstre Bein";
+"armor_zone_right_leg" = "Høyre Bein";
+"armor_mat_ceramic" = "Keramisk";
+"armor_mat_armored_steel" = "Pansret stål";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "Ultrahøy Molekylvekt-PE";
+"armor_mat_combined" = "Kombinert";
+"armor_mat_aluminum" = "Aluminium";
+"armor_mat_glass" = "Glass";
+"armor_mat_titanium" = "Titanium";
+
+"armor_type" = "Type";
+"armor_material" = "Material";
+"armor_class" = "Klasse";
+"armor_points" = "Holdbarhet";
+"armor_zones" = "Soner";
+"penalties" = "Straffer";
+"speed_penalty" = "Fart";
+"turn_speed_penalty" = "Snu Hastighet";
+"ergo_penalty" = "Ergonomi";
+
+"penetration" = "Penetration";
+"damage" = "Skade";
+"armor_damage" = "Kroppsbeskyttelses Skade";
+"frag_chance" = "Fragmenterings Sjanse";
+
+"explore" = "Utforsk";
+"compare" = "Sammenlign";
+"compare_performance" = "Sammenligne Ytelse";
+"dps_calc" = "DPS Kalkulator";
+"kill_time_calc" = "Drapstid Kalkulator";
+
+// MARK: - Medical
+"damage" = "Skade";
+"contusion" = "Kontusjon";
+"fracture" = "Brudd";
+"pain" = "Smerte";
+"medkit" = "Medisinskrin";
+"painkiller" = "Smertestillende";
+"accessory" = "Tilbehør";
+"stimulator" = "Stimulator";
+"use_time" = "Bruks Tid";
+"effect_duration" = "Effekt Varighet";
+"use_count" = "# bruk gjenstående";
+"hp_resource" = "Total HP";
+"removes_bloodloss" = "Stopper Blodtap";
+"removes_contusion" = "Fjerner kontusjon";
+"removes_fracture" = "Fikser Brudd";
+"removes_pain" = "Fjerner Smerte";
+"hydration_modifier" = "Hydrering Modifikator";
+"energy_modifier" = "Energi Modifikator";
+
+// MARK: - Throwables
+"throwable_frag" = "Frag";
+"throwable_flash" = "Flash";
+"throwable_smoke" = "Røyk";
+"fuse_time" = "Tennrørs Tid";
+"explosion_radius_min" = "Min Eksplosjons Rekkevidde";
+"explosion_radius_max" = "Maks Eksplosjons Rekkevidde";
+"fragmentation_count" = "Fragment Antall";
+
+// MARK: - Melee
+"damage" = "Skade";
+"rate" = "Hastighet";
+"range" = "Rekkevidde";
+
+"stab" = "Stikk";
+"stab_dmg" = "Stikk Skade";
+"stab_rate" = "Stikk Hastighet";
+"stab_range" = "Stikk Rekkevidde";
+
+"slash" = "Kutte";
+"slash_dmg" = "Kutte Skade";
+"slash_rate" = "Kutte Hastighet";
+"slash_range" = "Kutte Rekkevidde";
+
+// MARK: - Posts
+"ballistics_title" = "Kroppsbeskyttelse & Ballistikk: Det Grunnleggende";
+"ballistics_body_1" = "Ballistikk systemet i Escape from Tarkov er en svart boks som bare noen få har sett innsiden av. På grunn av kompleksiteten til formlene som er brukt til å kalkulere ting som overflate-penetrasjonssjanser, rikosjettvinkler og skade delt mellom kroppsbeskyttelse og kroppen av spillere, i tillegg til tilfeldigheten av ulike elementer de utnytter, er det ofte en ubemerkbar forskjell i tid-brukt-til-drap når en sammenligner en fullt-beskyttet høy-level spiller som har på seg det beste utstyret, med en level 1 spiller som holder ingenting annet enn en nybegynner pistol. Kombinert med de godt kjente nettverks- og prestasjonsproblemene, \"bugs\", og den stadig økende spillgruppen med episke gamer sokker, tvetydigheten av systemet til spillet er uten tvil den mest viktige delen av spillet, men også delen som forsterker forvirrelse og frustasjon for både nye og gamle spillere på en daglig basis.";
+"ballistics_body_2" = "Først, litt om kroppsbeskyttelse. Hvordan virker det, og hva burde du vite? Bortsett fra tilgjengelighet og priser, er det fem viktige ting du burde vurdere når du velger hva type kroppsbeskyttelse du vil kjøpe, selge, reparere, ta på eller kaste vekk: klasse, varighet, soner av beskyttelse, materiell og sidevirkninger.";
+"ballistics_body_2_1_title" = "1. Beskyttelsesklasse";
+"ballistics_body_2_1" = "Hvert eneste beskyttelseslag, fra kroppsbeskyttelse til ballistisk-hjelm tilbehør, har en spesifisert beskyttelsesklasse. Beskyttelsesklasser, er i følge meg det mest viktige aspektet av kroppsbeskyttelse. Enkelt sagt vil beskyttelsesklassen representere hvor god kroppsbeskyttelsen din er på å stoppe prosjektiler med varierende penetrasjonskraft. Akkurat nå varierer beskyttelsesklassene fra 1 til 6, og som du kanskje gjettet, desto høyere nummeret er, desto bedre. Klasse 1 kan beskytte deg mot kule-rikosjett, splinter, hul-punkt kuler, pistol kaliber og enkelte hagle patroner. Klasse 6 kan beskytte deg mot de fleste prosjektiler, opptil og til og med det høyeste kaliberet som finnes i spillet. Jeg velger å si \"kan\" her med vilje, fordi hver eneste ballistisk interaksjon involverer en varierende grad med tilfeldigheter. Når det kommer til ballistikk i Escape from Tarkov er ingenting garantert, og opplevelser en erfarer kan noen ganger føles umulige, eller gir lite mening. Så i bunn-og-grunn hva betyr dette? Hva slags type beskyttelse vil beskytte meg mot hva slags type prosjektiler? Dette er et komplisert spørsmål som jeg vil gå mer i detaljer om når jeg diskuterer det spesifikke relatert til ballistisk virkning.";
+"ballistics_body_2_2_title" = "2. Varighet";
+"ballistics_body_2_2_1" = "Når det handler om kroppsbeskyttelses-varighet er det viktig å notere at de særegne nummerene som blir brukt kan bli endret når som helst av utviklerne av spillet. Det bemerkelsesverdige om kroppsbeskyttelses-varighet er at dens evne til å beskytte brukeren er avhengig av dens tilstand, sammenlignet med den originale, maksimum varighets-verdien når den var ny.";
+"ballistics_body_2_2_2" = "For eksempel, hvis kroppsbeskyttelsen starter med en 50 varighet, så beskytter den best når tilstanden er 50/50, som er ganske åpenbart. Den mindre åpenbare delen er at hvilken som helst kroppsbeskyttelse som er skadet og som ikke har blitt reparert, f.eks kroppsbeskyttelse med en 40/50 tilstand, er akkurat så effektiv som å beskytte deg, som om du hadde en 40/40 tilstand.";
+"ballistics_body_2_2_3" = "Å vite den originale maksimumsgrensen for varigheten til ulike typer kroppsbeskyttelse, eller å se på varigheten til en type imens en inspiserer en ting, er en viktig vane å komme inn i. Mange ganger vil du finne kroppsbeskyttelse fra en lavere klasse enn din nåværende kroppsbeskyttelse, men hvis din type kroppsbeskyttelse er hardt skadet eller har blitt reparert flere ganger, kan du øke dine sjanser for å overleve hvis du bytter til en lavere klasse kroppsbeskyttelse med en høyere kroppsbeskyttelses-tilstandsprosent. Å ha en solid forståelse over de generelle beskyttelsessjansene for ulike typer kroppsbeskyttelses-klasser, varighetsverdier og kulepenetrasjons-egenskaper kan faktisk være uvurderlig i mange kamp-scenarioer. Sjekk ut skade-kalkulatoren for å begynne å få følelsen for hvordan alt virker!";
+"ballistics_body_2_3_title" = "3. Soner av Beskyttelse";
+"ballistics_body_2_3" = "Det er ikke enormt mange detaljer å vite om i dette emnet, annet enn en enkel regel: Kroppsbeskyttelse beskytter ikke hva det visuelt ser ut som om det beskytter! Det beste eksemplet for å demonstrere dette er å se på \"Gen4 Full Protection Armor\" mot \"Gen4 Assault Kit\". Den fullt beskyttede versjonen av Gen4 ser ut som om den dekker mer av kroppen din, men den beskytter like mye som angreps-versjonen av Gen4, fordi den har de samme sonene av beskyttelse. Vær oppmerksom på hvilke soner som er beskyttet, å få helt svartnet armer eller mage kan være ganske irriterende, og det er ofte verdt ekstra beskyttelse, hvis du har råd!";
+"ballistics_body_2_4_title" = "4. Materiell";
+"ballistics_body_2_4" = "Hver eneste kroppsbeskyttelse har ulike materiell som den er laget av. Foreløpig har ikke materiell noen bemerkelsesverdige effekter på kroppsbeskyttelsens beskyttelsesegenskaper, det vil i stedet for bli relevant når en reparerer kroppsbeskyttelsen. Noen materiell kan bli reparert veldig effektivt og billig, i mens andre typer mister mye varighet når en reparerer og kan koste mer enn den originale prisen for kroppsbeskyttelsen!";
+"ballistics_body_2_5_title" = "5. Sidevirkninger";
+"ballistics_body_2_5" = "Generelt sagt vil mer beskyttelse komme på en høyere kostnad, og denne kostnaden kan være høy, samtidig som den kan være praktisk. Hver eneste kroppsbeskyttelse kommer med ulike sidevirkninger. Noen sakker ned bevegelsesfarten din, andre sakker ned din snu-hastighet, og til og med din generelle ergonomi, som påvirker hastigheten du klarer å se ned siktet ditt, tap av uutholdenhet, og til og med hvor mye lyd karakteren din lager når du beveger deg sakte eller sikter. Noen typer hodebeskyttelse kan begrense hvor mye du kan høre, og andre typer kan til og med tilsløre synet ditt. Dette er ulike sidevirkninger som du bør vurdere, når du vurderer om du vil kjøpe dyre beskyttelsessett, eller den skikkelige robuste \"Killa\" hjelmen. Hvilke kroppsbeskyttelser og hjelmer er verdt det? Det er opptil deg!";
+"ballistics_body_3_title" = "Sammendrag";
+"ballistics_body_3" = "Ballistikksystemet i Escape from Tarkov er utrolig komplekst og krever ganske mye erfaring og kunnskap for å bruke fordelene og få overtaket. Kroppsbeskyttelse- og ballistikkvideoen overfor forklarer noen av disse konseptene i mer detaljer, så sørg for å sjekke videoen hvis du er interessert i å høre mer om emnet. Vær trygg der ute!";
+
+"health_title" = "Din PMC's Helse & Status";
+"health_body_1" = "Denne informasjonen kommer snart™";
+
+"upcoming_body_1" = "Jeg har så mange fantastiske funksjoner planlagt for denne applikasjonen, som jeg nesten ikke klarer å vente med å lage for samfunnet! Interaktive kart, våpenmodifikasjon, oppdrag guides, flere utstyr og kalkulatorer, handelsmanninformasjon, ferdighetsfordeling, og mer! Jeg planlegger å gi funksjoner jevnlig, men jeg ville gi dere versjon 1.0 så snart som mulig for å begynne å måle interessen deres, og deres tilbakemeldinger. Utviklingen av Android-versjonen og nettstøtte er allerede på vei, sjekk innom for tidlige oppdateringer!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Samfunn";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Diverse Juridiske ting";
+"attributions_translations" = "lokalisering";
+
+"attributions_api_descr" = "Dette prosjektet ville ikke vært mulig uten det fantastiske utviklerarbeidet gjort av Morphy på databasen av Tarkov, og den underliggende \"API\"";
+"attributions_nofam_descr" = "Den usungte helten i EFT samfunnet, skaperen av ammunisjon statistikk og kollabotøren på ballistikk kalkulatorer og relatert informasjon, ambassadøren av ammunisjon, baronen av ballistikk, professoren av penetrasjon!";
+"attributions_willerz_descr" = "Mye kjærlighet til min \"homeboy\" for å tilby noen av de episk-kvalitet skjermbilder han ga meg tillatelse til å bruke i denne applikasjonen. Han er også tilfeldigvis blant de beste spillerne i verden.";
+"attributions_community_descr" = "Mye kjærlighet til mitt samfunn i Discord for all deres hardt arbeid i å ta bilde og redigere de nydelige bildene brukt i denne appen!";
+"attributions_translations_descr" = "Alle oversettelser er gjort av sammfunnsmedlemmene som gir deres tid og innsats til saken. Alle rundt om i verden setter pris på deres hardt arbeid!";
+"attributions_bsg_descr" = "En spesiell takk til Nikita for hans støtte av denne applikasjonen, og til alle folkene av BSG for deres hardt arbeid og dedikasjon i å bygge det beste førstepersonsskytespillet noensinne!";
+"attributions_misc_descr" = "Sosiale media bilder av Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) lisensert under CC. 'Brain' bilde av Sergey Patutin fra Noun Project (https://thenounproject.com/bdesign.by/) lisensiert under CC.";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies har sluttet seg til kampen!";

@@ -37,7 +37,7 @@ protocol HttpRequestor {
 
 enum AccountProperty: String {
     case lastLogin = "lastLogin"
-    case adsWatched = "adsWatched"
+    case loyalty = "loyalty"
 }
 
 protocol SessionDelegate {
@@ -49,6 +49,7 @@ protocol AccountManager {
     func isLoggedIn() -> Bool
     func getValueForAccountProperty(_ property: AccountProperty, completion: @escaping (_ : Any?) -> Void)
     func updateAccountProperties(_ : [AccountProperty: Any])
+    func addLoyaltyPoints(_ points: Int)
 }
 
 // MARK: - Database
@@ -81,6 +82,7 @@ protocol DatabaseManager {
 
 enum VideoAdState {
     case unavailable
+    case idle
     case loading
     case ready
 }
@@ -92,6 +94,7 @@ protocol AdDelegate {
 protocol AdManager {
     var adDelegate: AdDelegate? { get set }
     var currentVideoAdState: VideoAdState { get }
+    func loadVideoAd()
     func bannerAdsEnabled() -> Bool
     func updateBannerAdsSetting(_ enabled: Bool)
     func watchAdVideo(from rootVC: UIViewController)

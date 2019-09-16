@@ -12,29 +12,37 @@
 ## <u>v1.0.1</u>
 - [x] Settings
     - [x] Language override
-- [ ] Real-time global metadata updates
+- [x] Refresh global info when app foregrounded
+- [ ] Loyalty points implemented in app and server
 - [ ] Fix comparison screen bugs
 - [x] Add app version info to about screen for debugging
-- [ ] Bugs
-    - [ ] Arabic HP fraction order
-    - [x] Arabic Comparison Layout issue
-    - [ ] Pen chance cell text size
-    - [ ] Fix ads
-    - [x] More menu cells issue
-    - [x] Duplicate paragraphs on ballistics
-- [x] Korean Translations
+- [x] Jittery post screen
+- [x] Fix ads
+- [x] More menu cells issue
+- [x] Duplicate paragraphs on ballistics
+- [x] Translations
+    - [x] Korean
+    - [x] Norwegian
+- [x] UIWebView deprecation
+- [x] Attributions Additions
+    - SmooothBrain for design work
+    - Betrix for images
 
 ## <u>v1.1</u>
-- [ ] Bugs
-    - [ ] UIWebView deprecation
-    - [ ] Jittery post screen
-    - [ ] Twitch stream memory issue
+- [ ] Logging / tags / debugging / etc
 - [ ] Settings
     - Nickname
     - Enable Banner ads
+- [ ] Language override
 - [ ] Stereo audio tool
-- [ ] Global metrics
-    - [x] Leaderboards
+- [ ] Loyalty Leaderboard
+    - [ ] Random bonus loyalty points % chance
+    - [ ] Points for watching ads
+    - [ ] Points for launching app
+    - [ ] Points for opening up each day
+    - [ ] Points for enabling push notifications
+    - [ ] Banner ads
+    - [ ] Interstitial
 - [ ] Add New Item Types
     - Helmets and accessories
 - [ ] Implement Banner Ads (if setting enabled)
@@ -44,11 +52,13 @@
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
-- [x] Attributions Additions
-    - SmooothBrain for design work
-    - Betrix for images
 - [ ] Double-check Korean translations
 - [ ] Real-time community stats updates
+- [ ] Arabic HP fraction order
+- [ ] Arabic Comparison Layout issue
+- [ ] Pen chance cell text size
+- [ ] Twitch stream memory crash
+- [ ] Health calc buckshot fix
 
 ## <u>v1.2</u>
 - Display shot result
