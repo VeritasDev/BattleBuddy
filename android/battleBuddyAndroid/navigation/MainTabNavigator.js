@@ -2,6 +2,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
+import Colors from '../constants/Colors';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
@@ -20,7 +21,7 @@ const HomeStack = createStackNavigator( {
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Items',  
-  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} name={ 'md-bug' }/> ),
+  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} name={'items'}/> ),
 };
 
 HomeStack.path = '';
@@ -29,7 +30,7 @@ const LinksStack = createStackNavigator( { Links: LinksScreen }, config );
 
 LinksStack.navigationOptions = {
   tabBarLabel: 'Learn',
-  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} iconName={'icon.png'} /> ),
+  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} name={'learn'} /> ),
 };
 
 LinksStack.path = '';
@@ -43,18 +44,20 @@ const SettingsStack = createStackNavigator(
 
 SettingsStack.navigationOptions = {
   tabBarLabel: 'More',
-  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} name={'md-more'} /> ),
+  tabBarIcon: ({ focused }) => ( <TabBarIcon focused={focused} name={'more'} /> ),
 };
 
 SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({ HomeStack, LinksStack, SettingsStack },
-  { tabBarOptions: {
-    activeTintColor: '#FF491C'
-  }, style: {
-    backgroundColor: '#FF00FF',
+  {
+    tabBarOptions: {
+      activeTintColor: '#FF491C',
+      style: {
+        backgroundColor: Colors.tabBar,
+      }
+    } 
   }
-}
 );
 
 tabNavigator.path = '';
