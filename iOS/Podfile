@@ -19,4 +19,5 @@ target 'BattleBuddy' do
   pod 'Crashlytics', '~> 3.13.4'
   pod 'JGProgressHUD'
   pod "youtube-ios-player-helper", "~> 0.1.4"
+  pod 'inmobi-ios-sdk', :source => 'https://bitbucket.org/aerservllc/inmobi-ios-sdk-pod.git'
 end

@@ -21,7 +21,7 @@
     - [ ] UIWebView deprecation
     - [ ] Pen chance cell text size
     - [ ] Jittery post screen
-    - [ ] Fix ads
+    - [x] Fix ads
     - [x] More menu cells issue
     - [ ] Twitch stream memory crash
     - [x] Duplicate paragraphs on ballistics

@@ -25,11 +25,10 @@ class DependencyManagerImpl: DependencyManager {
     var localeMngr: LocaleManager?
 
     func assembleDependencies(_ appDelegate: AppDelegate) {
-        // Firebase handles sessions, accounts, storage, metadata, and ads.
+        // Firebase handles sessions, accounts, storage, and metadata
         let firebase = FirebaseManager(sessionDelegate: appDelegate)
         firebaseMngr = firebase
         dbMngr = firebase
-        adMngr = firebase
         accountMngr = firebase
         metadataMngr = firebase
 
@@ -41,6 +40,7 @@ class DependencyManagerImpl: DependencyManager {
         ammoUtilitiesMngr = AmmoUtilitiesManagerImpl()
         deviceMngr = DeviceManagerImpl()
         localeMngr = LocaleManagerImpl()
+        adMngr = InmobiManager()
     }
 
     func accountManager() -> AccountManager { return accountMngr! }

@@ -109,6 +109,7 @@
 		EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */; };
 		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
 		EF10CCE1232A9D5700E95A45 /* SoundTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */; };
+		EF166DA2232FEAB200A9EF63 /* InmobiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF166DA1232FEAB200A9EF63 /* InmobiManager.swift */; };
 		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
 		EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };
@@ -327,6 +328,7 @@
 		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
 		EF10CCDE232A9BE800E95A45 /* c6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c6.mp3; sourceTree = "<group>"; };
 		EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTrainingViewController.swift; sourceTree = "<group>"; };
+		EF166DA1232FEAB200A9EF63 /* InmobiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InmobiManager.swift; sourceTree = "<group>"; };
 		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -467,6 +469,7 @@
 				27C0B177231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift */,
 				EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */,
 				60837431232E564F00AA9D29 /* LocaleManager.swift */,
+				EF166DA1232FEAB200A9EF63 /* InmobiManager.swift */,
 			);
 			path = "Concrete Implementations";
 			sourceTree = "<group>";
@@ -1313,6 +1316,7 @@
 				EF831FFB22E8D2A200C6C138 /* AmmoComparison.swift in Sources */,
 				EF831FE422DE328A00C6C138 /* ComparisonOptionsViewController.swift in Sources */,
 				27BF990422C705AD003F01C5 /* BaseCardCell.swift in Sources */,
+				EF166DA2232FEAB200A9EF63 /* InmobiManager.swift in Sources */,
 				27C0B1742311FA3B004BCE14 /* ItemListViewController.swift in Sources */,
 				27BF990A22C78328003F01C5 /* BaseCollectionView.swift in Sources */,
 				27090E3222DB547C00D97320 /* FirearmDetailsConfiguration.swift in Sources */,

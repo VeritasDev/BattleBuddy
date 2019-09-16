@@ -135,6 +135,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         super.viewDidLoad()
 
         title = "more".local()
+        adManager.loadVideoAd()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -161,6 +162,8 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
             let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
             sections.append(globalStatsSection)
         }
+
+        watchAdCell.videoAdState = adManager.currentVideoAdState
 
         let appVersion = DependencyManagerImpl.shared.deviceManager().appVersionString()
         let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, theTeamCell, watchAdCell] : [feedbackCell, theTeamCell, watchAdCell]

@@ -31,7 +31,7 @@ class WatchAdCell: BaseTableViewCell {
 
     func updateVideoAdState() {
         switch videoAdState {
-        case .loading:
+        case .loading, .idle:
             accessory.startAnimating()
             accessory.alpha = 1.0
             contentView.alpha = 0.1
