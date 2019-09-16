@@ -13,6 +13,7 @@
 - [x] Settings
     - [x] Language override
 - [x] Refresh global info when app foregrounded
+- [ ] Loyalty points implemented in app and server
 - [ ] Fix comparison screen bugs
 - [x] Add app version info to about screen for debugging
 - [x] Jittery post screen
