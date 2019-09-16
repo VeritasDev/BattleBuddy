@@ -8,51 +8,44 @@
 
 import UIKit
 
-class PostViewController: UIViewController {
-    let scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.contentInsetAdjustmentBehavior = .never
-        scrollView.backgroundColor = UIColor.Theme.background
-        return scrollView
-    }()
-    let stackView: BaseStackView
+class PostViewController: BaseTableViewController {
     let config: PostConfiguration
+    let cells: [PostElementCell]
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
     init(_ postConfig: PostConfiguration) {
-        self.stackView = BaseStackView(spacing: 5.0, xPaddingCompact: 0.0, xPaddingRegular: 50.0, yPadding: 0.0)
         config = postConfig
+        cells = config.elements.map { PostElementCell($0) }
 
-        super.init(nibName: nil, bundle: nil)
+        super.init(style: .plain)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = config.title
-
-        view.addSubview(scrollView)
-        scrollView.addSubview(stackView)
-
-        scrollView.pinToContainer()
-
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
-            ])
-
-        generatePostContents()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorColor = .clear
     }
 
-    func generatePostContents() {
-        for element in config.elements {
-            let elementView = element.generateContent()
-            stackView.addArrangedSubview(elementView)
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cells.count
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let element = config.elements[indexPath.row]
+        switch element.type {
+        case .youtube, .image: return tableView.frame.width * 0.56
+        default: return UITableView.automaticDimension
         }
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return cells[indexPath.row]
     }
 }

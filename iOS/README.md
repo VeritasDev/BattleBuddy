@@ -15,21 +15,18 @@
 - [x] Refresh global info when app foregrounded
 - [ ] Fix comparison screen bugs
 - [x] Add app version info to about screen for debugging
-- [ ] Bugs
-    - [ ] Arabic HP fraction order
-    - [ ] Arabic Comparison Layout issue
-    - [ ] Pen chance cell text size
-    - [ ] Jittery post screen
-    - [x] Fix ads
-    - [x] More menu cells issue
-    - [ ] Twitch stream memory crash
-    - [x] Duplicate paragraphs on ballistics
-- [x] Korean Translations
+- [x] Jittery post screen
+- [x] Fix ads
+- [x] More menu cells issue
+- [x] Duplicate paragraphs on ballistics
+- [x] Translations
+    - [x] Korean
+    - [x] Norwegian
+- [x] UIWebView deprecation
 - [ ] Health calc buckshot fix
 
 ## <u>v1.1</u>
 - [ ] Logging / tags / debugging / etc
-- [ ] UIWebView deprecation
 - [ ] Settings
     - Nickname
     - Enable Banner ads
@@ -57,6 +54,10 @@
     - Betrix for images
 - [ ] Double-check Korean translations
 - [ ] Real-time community stats updates
+- [ ] Arabic HP fraction order
+- [ ] Arabic Comparison Layout issue
+- [ ] Pen chance cell text size
+- [ ] Twitch stream memory crash
 
 ## <u>v1.2</u>
 - Display shot result

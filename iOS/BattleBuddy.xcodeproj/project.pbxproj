@@ -110,6 +110,7 @@
 		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
 		EF10CCE1232A9D5700E95A45 /* SoundTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */; };
 		EF166DA2232FEAB200A9EF63 /* InmobiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF166DA1232FEAB200A9EF63 /* InmobiManager.swift */; };
+		EF166DA4232FF67500A9EF63 /* PostElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF166DA3232FF67500A9EF63 /* PostElementCell.swift */; };
 		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
 		EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };

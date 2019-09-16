@@ -140,7 +140,7 @@ PODS:
   - SDWebImage (5.1.1):
     - SDWebImage/Core (= 5.1.1)
   - SDWebImage/Core (5.1.1)
-  - youtube-ios-player-helper (0.1.6)
+  - YoutubePlayer-in-WKWebView (0.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
@@ -156,7 +156,7 @@ DEPENDENCIES:
   - inmobi-ios-sdk
   - JGProgressHUD
   - SDWebImage (~> 5.0)
-  - youtube-ios-player-helper (~> 0.1.4)
+  - YoutubePlayer-in-WKWebView (~> 0.3.0)
 
 SPEC REPOS:
   https://bitbucket.org/aerservllc/inmobi-ios-sdk-pod.git:
@@ -190,7 +190,7 @@ SPEC REPOS:
     - nanopb
     - Protobuf
     - SDWebImage
-    - youtube-ios-player-helper
+    - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -222,8 +222,8 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
-  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+  YoutubePlayer-in-WKWebView: f9c20a456c5d99e5f5248e4d2079a5d3b6950d13
 
-PODFILE CHECKSUM: bd522e897e08d6d4098c8fa196a1c3360b9aa197
+PODFILE CHECKSUM: e8b4a15bbb7657c60dbc0eab29e2aaf100fc21c4
 
 COCOAPODS: 1.7.5

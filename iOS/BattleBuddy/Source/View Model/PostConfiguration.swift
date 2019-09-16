@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseStorage
-import youtube_ios_player_helper
+import YoutubePlayer_in_WKWebView
 
 enum PostElementType {
     case image
@@ -89,7 +89,7 @@ struct PostElementYouTube: PostElement {
     var type: PostElementType = .youtube
     let videoId: String
     let height: CGFloat
-    let playerView = YTPlayerView()
+    let playerView = WKYTPlayerView()
 
     init(videoId: String, height: CGFloat) {
         self.videoId = videoId
@@ -98,8 +98,6 @@ struct PostElementYouTube: PostElement {
 
     func generateContent() -> UIView {
         playerView.load(withVideoId: videoId)
-        playerView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([NSLayoutConstraint(item: playerView, attribute: .height, relatedBy: .equal, toItem: playerView, attribute: .width, multiplier: 0.56, constant: 0)])
         return playerView
     }
 }
