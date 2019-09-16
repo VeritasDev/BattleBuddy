@@ -11,7 +11,7 @@
 
 ## <u>v1.0.1</u>
 - [x] Settings
-    - x ] Language override
+    - [x] Language override
 - [x] Refresh global info when app foregrounded
 - [ ] Fix comparison screen bugs
 - [x] Add app version info to about screen for debugging
@@ -25,6 +25,7 @@
     - [ ] Twitch stream memory crash
     - [x] Duplicate paragraphs on ballistics
 - [x] Korean Translations
+- [ ] Health calc buckshot fix
 
 ## <u>v1.1</u>
 - [ ] Logging / tags / debugging / etc

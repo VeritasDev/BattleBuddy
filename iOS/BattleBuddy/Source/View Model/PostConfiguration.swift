@@ -98,7 +98,8 @@ struct PostElementYouTube: PostElement {
 
     func generateContent() -> UIView {
         playerView.load(withVideoId: videoId)
-        playerView.constrainHeight(height)
+        playerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([NSLayoutConstraint(item: playerView, attribute: .height, relatedBy: .equal, toItem: playerView, attribute: .width, multiplier: 0.56, constant: 0)])
         return playerView
     }
 }

@@ -329,6 +329,9 @@
 		EF10CCDE232A9BE800E95A45 /* c6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c6.mp3; sourceTree = "<group>"; };
 		EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTrainingViewController.swift; sourceTree = "<group>"; };
 		EF166DA1232FEAB200A9EF63 /* InmobiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InmobiManager.swift; sourceTree = "<group>"; };
+		EF166DA3232FF67500A9EF63 /* PostElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostElementCell.swift; sourceTree = "<group>"; };
+		EF166DA7233002AA00A9EF63 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EF166DA8233002AA00A9EF63 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -483,6 +486,7 @@
 				EFF327B422F8A84200673F57 /* ComparisonCell.swift */,
 				27D2105C23194185005A538F /* WatchAdCell.swift */,
 				6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */,
+				EF166DA3232FF67500A9EF63 /* PostElementCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -1154,6 +1158,7 @@
 				de,
 				et,
 				ko,
+				nb,
 			);
 			mainGroup = 27954E2322A18470000FC0C6;
 			productRefGroup = 27954E2D22A18470000FC0C6 /* Products */;
@@ -1422,6 +1427,7 @@
 				276D917823102D6400CD61E0 /* FirearmEnums.swift in Sources */,
 				27D2104F23174B20005A538F /* LocalizationTeamViewController.swift in Sources */,
 				27793A6022A45B9100378FE3 /* DependencyManagerImpl.swift in Sources */,
+				EF166DA4232FF67500A9EF63 /* PostElementCell.swift in Sources */,
 				27793A6422A45C6F00378FE3 /* AlamofireManager.swift in Sources */,
 				27BF991722C82725003F01C5 /* SectionHeaderView.swift in Sources */,
 				276D916A2310081D00CD61E0 /* BaseItem.swift in Sources */,
@@ -1473,6 +1479,7 @@
 				EF94581B231EC7ED00C88609 /* de */,
 				27B2003C23266EBA00EE16BC /* et */,
 				6083742B232E3A5500AA9D29 /* ko */,
+				EF166DA7233002AA00A9EF63 /* nb */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1502,6 +1509,7 @@
 				EF94581C231EC7EE00C88609 /* de */,
 				27B2003D23266EBA00EE16BC /* et */,
 				6083742C232E3A5600AA9D29 /* ko */,
+				EF166DA8233002AA00A9EF63 /* nb */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
