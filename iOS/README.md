@@ -23,7 +23,9 @@
     - [x] Korean
     - [x] Norwegian
 - [x] UIWebView deprecation
-- [ ] Health calc buckshot fix
+- [x] Attributions Additions
+    - SmooothBrain for design work
+    - Betrix for images
 
 ## <u>v1.1</u>
 - [ ] Logging / tags / debugging / etc
@@ -49,15 +51,13 @@
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
-- [x] Attributions Additions
-    - SmooothBrain for design work
-    - Betrix for images
 - [ ] Double-check Korean translations
 - [ ] Real-time community stats updates
 - [ ] Arabic HP fraction order
 - [ ] Arabic Comparison Layout issue
 - [ ] Pen chance cell text size
 - [ ] Twitch stream memory crash
+- [ ] Health calc buckshot fix
 
 ## <u>v1.2</u>
 - Display shot result
