@@ -52,12 +52,12 @@
 "discord_description" = "加入Discord社群";
 "youtube_description" = "在YouTube觀看";
 "instagram_description" = "Instagram上的媒體";
-"soundcloud_description" = "在Soundcloud上聆聽";
-"spotify_description" = "在Spotify上聆聽";
+"soundcloud_description" = "在Soundcloud上聽";
+"spotify_description" = "在Spotify上聽";
 "website_description" = "關於Veritas";
 
 // MARK: - Tabs
-"items" = "物品";
+"items" = "裝備";
 "learn" = "學習";
 "more" = "更多";
 "search" = "搜尋";
@@ -83,7 +83,7 @@
 "select_ammo" = "選擇彈藥";
 "select_armor" = "選擇護甲";
 "pen_chance_help_title" = "貫穿機率計算器";
-"pen_chance_help_message" = "此工具可計算所選子彈貫穿特定防彈背心的機率。選擇子彈和護甲後，您可以使用滑條調整護甲的模擬耐久度，以了解不同子彈在不同耐久度下對抗護甲的效果！";
+"pen_chance_help_message" = "此工具可計算所選子彈貫穿特定防彈背心的機率。選擇子彈和護甲後，您可以使用滑桿調整護甲的模擬耐久度，以了解不同子彈在不同耐久度下對抗護甲的效果！";
 
 "health_calc_title" = "傷害計算器";
 "total_hp" = "總血量";
@@ -124,18 +124,18 @@
 "assault_rifle" = "突擊步槍";
 "assault_carbine" = "突擊卡賓槍";
 "sniper_rifle" = "狙擊步槍";
-"designated_marksman_rifle" = "DMR";  //if you want translation than use "精確射手步槍"
+"designated_marksman_rifle" = "精確射手步槍";
 "pistol" = "手槍";
 "shotgun" = "散彈槍";
 "sub_machine_gun" = "衝鋒槍";
-"machine_gun" = "機關槍";
+"machine_gun" = "輕機槍";
 "caliber" = "口徑";
 "fire_rate" = "射速";
 "effective_range" = "有效射程";
 "fold_or_retract" = "摺疊/伸縮";
 "retractable" = "伸縮型";
 "build_wizard" = "改造武器";
-"gun_build_custom" = "自訂";
+"gun_build_custom" = "自訂"; 
 "gun_build_recoil" = "最低後座力";
 "gun_build_ergo" = "最高人體工學值";
 "gun_build_random" = "隨機";
@@ -147,10 +147,10 @@
 "fire_mode_semi_short" = "單發";
 "fire_mode_auto_short" = "連發";
 "fire_mode_burst_short" = "點放";
-"action" = "槍機";
+"action" = "槍機"; 
 "action_type_pump" = "泵動式";
 "action_type_bolt" = "栓動式";
-"action_type_pump_short" = "泵動";
+"action_type_pump_short" = "泵動"; 
 "action_type_bolt_short" = "栓動";
 "build" = "建造";
 "build_this_gun" = "建造這把槍";
@@ -169,7 +169,7 @@
 "compare_preset_smgs_caliber_match" = "同口徑的衝鋒槍";
 "compare_preset_smgs" = "衝鋒槍";
 "compare_preset_bolt_snipers" = "栓動狙擊步槍";
-"compare_preset_snipers_and_dmrs" = "狙擊步槍 & DMRs"; //if you want translation for DMR than use "精確射手步槍"
+"compare_preset_snipers_and_dmrs" = "狙擊步槍 & 精確射手步槍";
 "compare_preset_dmrs" = "精確射手步槍";
 
 // MARK: - Ammo
@@ -178,7 +178,7 @@
 "tracer" = "曳光彈";
 "muzzle_velocity" = "初速 (公尺/秒)";
 "compatible_firearms" = "相容槍枝";
-"rpm" = "射速";
+"rpm" = "rpm";
 "meters_abbr" = "公尺";
 "seconds_abbr" = "秒";
 
@@ -232,7 +232,7 @@
 "explore" = "探索";
 "compare" = "比較";
 "compare_performance" = "比較性能";
-"dps_calc" = "傷害輸出計算器";
+"dps_calc" = "傷害輸出計算器";  
 "kill_time_calc" = "擊殺時間計算器";
 
 // MARK: - Medical
@@ -242,7 +242,7 @@
 "pain" = "疼痛";
 "medkit" = "醫療包";
 "painkiller" = "止痛藥";
-"accessory" = "用品";
+"accessory" = "其它用品";
 "stimulator" = "興奮劑";
 "use_time" = "使用時間";
 "effect_duration" = "有效時間";
@@ -252,13 +252,13 @@
 "removes_contusion" = "去除腦震盪";
 "removes_fracture" = "去除骨折";
 "removes_pain" = "去除疼痛";
-"hydration_modifier" = "對水分的影響";
-"energy_modifier" = "對能量的影響";
+"hydration_modifier" = "對水分的影響"; 
+"energy_modifier" = "對能量的影響"; 
 
 // MARK: - Throwables
-"throwable_frag" = "破片彈";
-"throwable_flash" = "閃光彈";
-"throwable_smoke" = "煙霧彈";
+"throwable_frag" = "破片彈";  
+"throwable_flash" = "閃光彈"; 
+"throwable_smoke" = "煙霧彈"; 
 "fuse_time" = "引信時間";
 "explosion_radius_min" = "最小爆炸範圍";
 "explosion_radius_max" = "最大爆炸範圍";
@@ -284,10 +284,11 @@
 "ballistics_body_1" = "Escape from Trakov的彈道系統是個只有少數人才知道細節的謎團。 由於用於計算穿透機率、跳彈角度、玩家護甲與身體傷害以及隨機要素等的判定機制相當複雜，在比較穿著頂級裝備的高等玩家和只有入門手槍的初級玩家的擊殺時間時，通常只存在著難以察覺的差異。再加上EFT眾所周知的連線與性能問題、Bug以及越來越多的外掛玩家，重要遊戲系統的不確定性只會日漸增加新手與老玩家的困惑與挫折感。";
 "ballistics_body_2" = "首先是防彈背心的原理，你該知道些什麼？除了稀有度與價格之外，在決定購買、販賣、修理、裝備或丟棄護甲時應考慮五件重要事項 - 等級、耐久值、防護區域、材質以及負面效果";
 "ballistics_body_2_1_title" = "1. 等級";
-"ballistics_body_2_1" = "每個護甲部件，從防彈背心到防彈頭盔的配件，都有特定的等級。在我看來，等級是防彈衣最重要的部分。簡而言之，等級代表著該護甲在抵擋不同子彈時的防護能力。目前護甲一共分為六級。你可能已經猜到了，數字越高越好。 \n\n 等級一的護甲基本上能抵擋住跳彈、破片、非穿甲手槍彈以及鹿彈等等。六級護甲基本上能夠抵擋住包括遊戲內最大口徑的大多數子彈。我特意用“基本上”這個詞是因為每次的著彈都將受到隨機因素的影響。\n\n 當涉及到Escape from Tarkov的彈道學時，沒有任何事是絕對的，因此我們的經歷有時看似不可能或不合邏輯。那麼，這意味著什麼呢？什麼護甲能抵擋什麼子彈？我之後講解彈道學相關細節時將會討論這個複雜的問題。";
+"ballistics_body_2_1" = "每個護甲部件，從防彈背心到防彈頭盔的配件，都有特定的等級。在我看來，等級是防彈衣最重要的部分。簡而言之，等級代表著該護甲在抵擋不同子彈時的防護能力。目前護甲一共分為六級。你可能已經猜到了，數字越高越好。 \n\n 等級一的護甲基本上能抵擋住跳彈、破片、非穿甲手槍彈以及鹿彈等等。六級護甲基本上能夠抵擋住包括遊戲內最大口徑的大多數子彈。我特意用“基本上”這個詞是因為每次的彈著都將受到隨機因素的影響。\n\n 當涉及到Escape from Tarkov的彈道學時，沒有任何事是絕對的，因此我們的經歷有時看似不可能或不合邏輯。那麼，這意味著什麼呢？什麼護甲能抵擋什麼子彈？我之後講解彈道學相關細節時將會討論這個複雜的問題。";
 "ballistics_body_2_2_title" = "2. 耐久值";
-"ballistics_body_2_2_1" = "當涉及護甲耐久值時，請記住具體細節經常、並且在任何時候都可能被BSG更改。關於護甲耐久值值得注意的是，它的防護能力取決於當前耐久值對新品耐久值的比率。";
-"ballistics_body_2_2_2" = "假如一副全新護甲的耐久值是50，它明顯的會在耐久值50/50時提供最好的保護。但是受損並尚未修復的護甲，例如40/50的護甲，與修復完畢現有40/40耐久值的護甲持有相同的防護能力卻是鮮為人知的部分。";
+"ballistics_body_2_2_1" = "當涉及護甲耐久值時，請記住具體細節經常、並且在任何時候都可能被BSG更改。關於護甲耐久值值得注意的是，它的防護能力取決於當前耐久值對於新品耐久值的比例。";
+"ballistics_body_2_2_2" = "
+假如一副全新護甲的耐久值是50，它理所當然的會在耐久值50/50時提供最好的保護。但是受損並且尚未修復的護甲，例如40/50的護甲，與修復完畢、現有40/40耐久值的護甲擁有相同的防護能力卻鮮為人知。";
 "ballistics_body_2_2_3" = "了解不同護甲的初始耐久值，或在檢閱時查看耐久值條，是需要養成的重要習慣。很多時候你會找到等級比你現有裝備還低的護甲。但是如果你當前的護甲嚴重受損或是經過了多次修理，使用擁有更高耐久值比的低等級護甲實際上可能會增加你活命的機會。對於不同護甲的防護能力、耐久值以及子彈貫穿性擁有充分的了解將會在某些戰鬥情況下十分有用。開始使用傷害計算器來了解實際的運作！";
 "ballistics_body_2_3_title" = "3. 防護區域";
 "ballistics_body_2_3" = "這個主題並沒有太多的細節，除了一個簡單的規則：護甲實際的防護區域與視覺上是不同的！最好的例子是Gen4 Full Protection與Gen4 Assault Kit。 Full Protection版本看起來覆蓋了更多的面積，但由於它與Assault Kit版本具有相同的防護區域，所以實際上保護的身體部位完全相同。請注意哪些部位有被護甲保護著 - 失去手臂或腹部十分的煩人，所以額外的保護是值得的，只要你付得起的話！";
@@ -301,21 +302,21 @@
 "health_title" = "PMC的健康與狀態";
 "health_body_1" = "這些信息即將推出™";
 
-"upcoming_body_1" = "我為了這個應用程式計劃了很多很棒的功能，我已經等不及要為大家製作了！互動式地圖，武器改裝，任務指南，更多項目與計算器，商人信息，技能分解等等！我打算一直發布新的功能，但我想盡快將版本1.0給你們來試探你們的興趣和收集意見。 請記得關注更新！";
+"upcoming_body_1" = "我為了這個應用程式計劃了很多很棒的功能，我已經迫不及待要為大家製作了！互動式地圖、武器改裝、任務指南、更多項目與計算器、商人信息、技能分解等等！我打算一直發布新的功能，但我想盡快將版本1.0給你們來試探你們的興趣和收集意見。網頁版已經在開發中，請記得關注更新！";
 
 "attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
 "attributions_willerz" = "Willer_Z";
-"attributions_community" = "社群";
+"attributions_community" = "社群"; 
 "attributions_bsg" = "Battlestate Games Limited";
-"attributions_misc" = "其他法律事務";
-"attributions_translations" = "翻譯";
+"attributions_misc" = "其他法律事務"; 
+"attributions_translations" = "翻譯"; 
 "attributions_api_descr" = "如果沒有Morphy在Tarkov Database與基層API上的開發工作，這個項目是不可能實現的。";
 "attributions_nofam_descr" = "EFT社群中的無名英雄、彈藥表的創建者、彈道計算器及相關信息的合作者、彈藥大使、彈道學家、貫穿教授！";
 "attributions_willerz_descr" = "感謝我的好友提供並允許我在這個程式中使用他精美的截圖。他也剛好是世界上最厲害的玩家之一。";
 "attributions_community_descr" = "感謝我的Discord社群在搜集與編輯此程式中所使用的精美圖片上花費的精力！";
 "attributions_translations_descr" = "所有的翻譯都是由社群成員捐贈他們的時間與精力完成的。全世界的人都將感謝你們的努力！";
-"attributions_bsg_descr" = "特別感謝Nikita對於這個應用程式的支持。也感謝BSG的所有人員在創作這個史上最好的第一人稱射擊遊戲時的努力與奉獻。";
+"attributions_bsg_descr" = "特別感謝Nikita對於這個應用程式的支持，也感謝BSG的所有人員在創作這個史上最好的第一人稱射擊遊戲時付出的努力與奉獻。";
 "attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC.";
 
 // Analytics
