@@ -14,7 +14,9 @@ const config = Platform.select({
   default: {},
 });
 
-const HomeStack = createStackNavigator( { Home: HomeScreen }, config );
+const HomeStack = createStackNavigator( { 
+  Home: HomeScreen
+}, config );
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Items',  
@@ -23,12 +25,7 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
-const LinksStack = createStackNavigator(
-  {
-    Links: LinksScreen,
-  },
-  config
-);
+const LinksStack = createStackNavigator( { Links: LinksScreen }, config );
 
 LinksStack.navigationOptions = {
   tabBarLabel: 'Learn',
@@ -51,11 +48,14 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
-const tabNavigator = createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
-});
+const tabNavigator = createBottomTabNavigator({ HomeStack, LinksStack, SettingsStack },
+  { tabBarOptions: {
+    activeTintColor: '#FF491C'
+  }, style: {
+    backgroundColor: '#FF00FF',
+  }
+}
+);
 
 tabNavigator.path = '';
 

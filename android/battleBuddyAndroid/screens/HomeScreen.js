@@ -18,6 +18,11 @@ export default function HomeScreen() {
 
 HomeScreen.navigationOptions = {
   title: 'Items',
-  backgroundColor: '#191919',
-  headerTintColor: '#f00',
+  headerStyle: {
+    backgroundColor: '#191919',
+  },
+  headerTintColor: '#FF491C',
+  headerTitleStyle: {
+    fontSize: 28,
+  },
 };

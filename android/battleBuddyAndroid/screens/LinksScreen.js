@@ -16,6 +16,13 @@ export default function LinksScreen() {
 
 LinksScreen.navigationOptions = {
   title: 'Learn',
+    headerStyle: {
+    backgroundColor: '#191919',
+  },
+  headerTintColor: '#FF491C',
+  headerTitleStyle: {
+    fontSize: 28,
+  },
 };
 
 const styles = StyleSheet.create({
