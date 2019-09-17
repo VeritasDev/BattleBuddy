@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components/native';
 import PropTypes from 'prop-types';
 
 const StyledCard = styled.ImageBackground`
+  /* prettier-ignore */
   aspectRatio: 1.77;
   width: 100%;
   padding: 16px;
@@ -32,7 +33,9 @@ const Text = styled.Text`
   font-size: 35px;
   color: white;
   font-weight: bold;
+  /* prettier-ignore */
   textShadowColor: black;
+  /* prettier-ignore */
   textShadowRadius: 10;
 `;
 
@@ -51,6 +54,7 @@ Card.defaultProps = {
 
 Card.propTypes = {
   text: PropTypes.string.isRequired,
+  image: PropTypes.any.isRequired,
   textPosition: PropTypes.string,
 };
 

@@ -1,15 +1,13 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-
-import { MonoText } from '../components/StyledText';
 import Card from '../components/common/Card';
 import ScrollableContainer from '../components/common/ScrollableContainer';
-import { createStackNavigator } from 'react-navigation';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 // For now until we decide where data/images come from.
 const items = [
   {
     text: 'Firearms',
+    path: 'Firearms',
     textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/firearms.png'),
   },
@@ -40,15 +38,25 @@ const items = [
   },
 ];
 
-export default function HomeScreen() {
+export default HomeScreen = ({ navigation }) => {
+  const onPressHandler = item => {
+    if (item.path) {
+      navigation.navigate(item.path);
+    } else {
+      alert(`${item.text} not yet implemented`);
+    }
+  };
+
   return (
     <ScrollableContainer>
       {items.map((item, index) => (
-        <Card {...item} key={index} />
+        <TouchableOpacity key={index} onPress={() => onPressHandler(item)}>
+          <Card {...item} />
+        </TouchableOpacity>
       ))}
     </ScrollableContainer>
   );
-}
+};
 
 HomeScreen.navigationOptions = {
   title: 'Items',
