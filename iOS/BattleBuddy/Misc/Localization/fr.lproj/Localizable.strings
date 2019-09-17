@@ -1,3 +1,5 @@
+//-------------------
+// V1.0
 // MARK: - General
 "yes" = "Oui";
 "no" = "Non";
@@ -321,3 +323,10 @@
 
 // Analytics
 "total_users_count" = "%@ Battle Buddies ayant rejoint le combat!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Statistiques communautaires";
+"settings" = "Paramètres";
+"language_system_default" = "Système";
+"language" = "Langue";
