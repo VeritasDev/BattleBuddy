@@ -13,7 +13,7 @@
 - [x] Settings
     - [x] Language override
 - [x] Refresh global info when app foregrounded
-- [ ] Loyalty points implemented in app and server
+- [x] Loyalty points implemented in app and server
 - [ ] Fix comparison screen bugs
 - [x] Add app version info to about screen for debugging
 - [x] Jittery post screen
@@ -29,6 +29,7 @@
     - Betrix for images
 
 ## <u>v1.1</u>
+- [ ] Ammo needs to be disconnected from global metadata!
 - [ ] Logging / tags / debugging / etc
 - [ ] Settings
     - Nickname

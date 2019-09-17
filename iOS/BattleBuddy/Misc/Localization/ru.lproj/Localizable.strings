@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "В сражение вступили уже %@ Battle Buddies!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Статистика по сообществу";
+"settings" = "Настройки";
+"language_system_default" = "Язык системы";
+"language" = "Язык";
