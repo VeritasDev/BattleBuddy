@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components/native';
 import PropTypes from 'prop-types';
 
 const StyledCard = styled.ImageBackground`
-  height: 200px;
+  aspectRatio: 1.77;
   width: 100%;
   padding: 16px;
   border-radius: 10px;
@@ -27,9 +27,11 @@ const StyledCard = styled.ImageBackground`
 `;
 
 const Text = styled.Text`
-  font-size: 24px;
+  font-size: 35px;
   color: white;
   font-weight: bold;
+  textShadowColor: black;
+  textShadowRadius: 10;
 `;
 
 const Card = ({ image, text, ...props }) => {
