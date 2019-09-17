@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from '../components/common/Card';
 import ScrollableContainer from '../components/common/ScrollableContainer';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity, TextInput } from 'react-native-gesture-handler';
+import Search from '../components/common/Search';
 
 // For now until we decide where data/images come from.
 const items = [
@@ -49,6 +50,7 @@ export default HomeScreen = ({ navigation }) => {
 
   return (
     <ScrollableContainer>
+      <Search />
       {items.map((item, index) => (
         <TouchableOpacity key={index} onPress={() => onPressHandler(item)}>
           <Card {...item} />
