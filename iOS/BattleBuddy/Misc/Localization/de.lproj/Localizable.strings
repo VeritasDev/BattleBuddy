@@ -324,7 +324,7 @@
 
 // ----------------------------------------
 // V1.0.1
-"global_stats" = "Statistiken";
+"global_stats" = "Community-Statistiken";
 "settings" = "Einstellungen";
 "language_system_default" = "System";
 "language" = "Sprache";
