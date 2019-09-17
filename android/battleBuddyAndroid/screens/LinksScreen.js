@@ -7,18 +7,18 @@ import ScrollableContainer from '../components/common/ScrollableContainer';
 const items = [
   {
     // Need to get 'Chance' to align at flex end without spaces
-    text: 'Penetration\n       Chance',
-    textPosition: 'right',
+    text: 'Penetration\nChance',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/pen_chance.png')
   },
   {
     text: 'Damage\nCalculator',
-    textPosition: 'bottom',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/damage_calc.png')
   },
   {
     text: 'Ballistics',
-    textPosition: 'right',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/ballistics.png')
   }
 ]
