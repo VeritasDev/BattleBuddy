@@ -1,25 +1,57 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import {
-  Image,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
 
 import { MonoText } from '../components/StyledText';
+import Card from '../components/common/Card';
+import ScrollableContainer from '../components/common/ScrollableContainer';
+import { createStackNavigator } from 'react-navigation';
+
+// For now until we decide where data/images come from.
+const items = [
+  {
+    text: 'Firearms',
+    textPosition: 'bottom right',
+    image: require('../assets/images/card_heroes/firearms.png'),
+  },
+  {
+    text: 'Ammunition',
+    textPosition: 'bottom',
+    image: require('../assets/images/card_heroes/ammo.jpg'),
+  },
+  {
+    text: 'Body armor',
+    image: require('../assets/images/card_heroes/armor.jpg'),
+  },
+  {
+    text: 'Medical',
+    textPosition: 'bottom right',
+    image: require('../assets/images/card_heroes/medical.png'),
+  },
+  {
+    text: 'Melee Weapons',
+    textPosition: 'bottom',
+    image: require('../assets/images/card_heroes/melee.jpg'),
+  },
+  {
+    text: 'Throwables',
+    image: require('../assets/images/card_heroes/throwables.jpg'),
+  },
+];
 
 export default function HomeScreen() {
-  return null;
+  return (
+    <ScrollableContainer>
+      {items.map((item, index) => (
+        <Card {...item} key={index} />
+      ))}
+    </ScrollableContainer>
+  );
 }
 
 HomeScreen.navigationOptions = {
   title: 'Items',
   headerStyle: {
-    backgroundColor: '#191919',
+    backgroundColor: '#151515',
   },
   headerTintColor: '#FF491C',
   headerTitleStyle: {
