@@ -10,30 +10,32 @@ import { createStackNavigator } from 'react-navigation';
 const items = [
   {
     text: 'Firearms',
-    textPosition: 'bottom right',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/firearms.png'),
   },
   {
     text: 'Ammunition',
-    textPosition: 'bottom',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/ammo.jpg'),
   },
   {
     text: 'Body armor',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/armor.jpg'),
   },
   {
     text: 'Medical',
-    textPosition: 'bottom right',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/medical.png'),
   },
   {
     text: 'Melee Weapons',
-    textPosition: 'bottom',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/melee.jpg'),
   },
   {
     text: 'Throwables',
+    textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/throwables.jpg'),
   },
 ];
