@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "%@ Battle Buddies prisijungė prie kovos!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Statistika";
+"settings" = "Nustatymai";
+"language_system_default" = "Sistema";
+"language" = "Kalba";

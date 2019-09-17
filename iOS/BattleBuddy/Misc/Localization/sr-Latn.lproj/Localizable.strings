@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "%@ Betl Badijeva je ušlo u borbu!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Društvene statistike";
+"settings" = "Podešavanja";
+"language_system_default" = "Sistem";
+"language" = "Jezik";
