@@ -1,34 +1,45 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+
+import Card from '../components/common/Card';
+import ScrollableContainer from '../components/common/ScrollableContainer';
+
+// Copied pattern from HomeScreen
+const items = [
+  {
+    // Need to get 'Chance' to align at flex end without spaces
+    text: 'Penetration\n       Chance',
+    textPosition: 'right',
+    image: require('../assets/images/card_heroes/pen_chance.png')
+  },
+  {
+    text: 'Damage\nCalculator',
+    textPosition: 'bottom',
+    image: require('../assets/images/card_heroes/damage_calc.png')
+  },
+  {
+    text: 'Ballistics',
+    textPosition: 'right',
+    image: require('../assets/images/card_heroes/ballistics.png')
+  }
+]
 
 export default function LinksScreen() {
   return (
-    <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoLinksView and replace it with your content;
-       * we just wanted to provide you with some helpful links.
-       */}
-      <ExpoLinksView />
-    </ScrollView>
+    <ScrollableContainer>
+      {items.map((item, index) => (
+        <Card {...item} key={index} />
+      ))}
+    </ScrollableContainer>
   );
 }
 
 LinksScreen.navigationOptions = {
   title: 'Learn',
     headerStyle: {
-    backgroundColor: '#191919',
+    backgroundColor: '#151515',
   },
   headerTintColor: '#FF491C',
   headerTitleStyle: {
     fontSize: 28,
   },
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
-  },
-});

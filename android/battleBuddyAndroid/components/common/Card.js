@@ -26,10 +26,14 @@ const StyledCard = styled.ImageBackground`
     `}
 `;
 
+// Increased text-size some
+// Added text shadow prop so text would stand out more
 const Text = styled.Text`
-  font-size: 24px;
+  font-size: 36px;
   color: white;
   font-weight: bold;
+  textShadowColor: #000;
+  textShadowRadius: 10;
 `;
 
 const Card = ({ image, text, ...props }) => {
