@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "%@ Bojni prijatelji su se pridruzili bitci!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Statistike Zajednice";
+"settings" = "Postavke";
+"language_system_default" = "Sustav";
+"language" = "Jezik";
