@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "%@位Battle Buddies加入了戰局!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "社群數據";
+"settings" = "設定";
+"language_system_default" = "系統";
+"language" = "語言";
