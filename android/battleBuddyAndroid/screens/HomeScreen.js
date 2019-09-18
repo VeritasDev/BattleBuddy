@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from '../components/common/Card';
 import ScrollableContainer from '../components/common/ScrollableContainer';
-import { TouchableOpacity, TextInput } from 'react-native-gesture-handler';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import Search from '../components/common/Search';
+import PropTypes from 'prop-types';
 
 // For now until we decide where data/images come from.
 const items = [
@@ -10,37 +11,37 @@ const items = [
     text: 'Firearms',
     path: 'Firearms',
     textPosition: 'bottom left',
-    image: require('../assets/images/card_heroes/firearms.png'),
+    image: require('../assets/images/card_heroes/firearms.png')
   },
   {
     text: 'Ammunition',
     textPosition: 'bottom left',
-    image: require('../assets/images/card_heroes/ammo.jpg'),
+    image: require('../assets/images/card_heroes/ammo.jpg')
   },
   {
     text: 'Body armor',
     textPosition: 'bottom left',
-    image: require('../assets/images/card_heroes/armor.jpg'),
+    image: require('../assets/images/card_heroes/armor.jpg')
   },
   {
     text: 'Medical',
     textPosition: 'bottom left',
-    image: require('../assets/images/card_heroes/medical.png'),
+    image: require('../assets/images/card_heroes/medical.png')
   },
   {
     text: 'Melee Weapons',
     textPosition: 'bottom left',
-    image: require('../assets/images/card_heroes/melee.jpg'),
+    image: require('../assets/images/card_heroes/melee.jpg')
   },
   {
     text: 'Throwables',
     textPosition: 'bottom left',
-    image: require('../assets/images/card_heroes/throwables.jpg'),
-  },
+    image: require('../assets/images/card_heroes/throwables.jpg')
+  }
 ];
 
-export default HomeScreen = ({ navigation }) => {
-  const onPressHandler = item => {
+const HomeScreen = ({navigation}) => {
+  const onPressHandler = (item) => {
     if (item.path) {
       navigation.navigate(item.path);
     } else {
@@ -63,10 +64,18 @@ export default HomeScreen = ({ navigation }) => {
 HomeScreen.navigationOptions = {
   title: 'Items',
   headerStyle: {
-    backgroundColor: '#151515',
+    backgroundColor: '#151515'
   },
   headerTintColor: '#FF491C',
   headerTitleStyle: {
-    fontSize: 28,
-  },
+    fontSize: 28
+  }
 };
+
+HomeScreen.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired
+  }).isRequired
+};
+
+export default HomeScreen;

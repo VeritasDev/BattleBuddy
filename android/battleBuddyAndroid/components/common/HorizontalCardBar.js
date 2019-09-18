@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView } from 'react-native';
+import {ScrollView} from 'react-native';
 import SmallCard from './SmallCard';
 import styled from 'styled-components/native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const Text = styled.Text`
   font-size: 20px;
@@ -16,8 +16,8 @@ const View = styled.View`
   margin-bottom: 16px;
 `;
 
-const HorizontalCardBar = ({ title, items }) => {
-  const onPressHandler = item => {
+const HorizontalCardBar = ({title, items}) => {
+  const onPressHandler = (item) => {
     if (item.path) {
       // TODO: implement navigation here
     } else {
@@ -29,7 +29,7 @@ const HorizontalCardBar = ({ title, items }) => {
     <View>
       <Text>{title}</Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-        {items.map(item => (
+        {items.map((item) => (
           <TouchableOpacity
             onPress={() => onPressHandler(item)}
             key={item.text}
@@ -44,7 +44,7 @@ const HorizontalCardBar = ({ title, items }) => {
 
 HorizontalCardBar.propTypes = {
   title: PropTypes.string.isRequired,
-  items: PropTypes.array.isRequired,
+  items: PropTypes.array.isRequired
 };
 
 export default HorizontalCardBar;

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
+import {Image, StyleSheet} from 'react-native';
+import PropTypes from 'prop-types';
 
 import Colors from '../constants/Colors';
 
 export default function TabBarIcon(props) {
   var icon;
-  switch(props.name){
+  switch (props.name) {
     case 'items':
       icon = require('../assets/images/items.png');
       break;
@@ -30,12 +31,19 @@ export default function TabBarIcon(props) {
 const styles = StyleSheet.create({
   iconBase: {
     marginBottom: -3,
-    transform: [{
-      scale: 0.5
-    }],
-    tintColor: Colors.tabIconDefault,
+    transform: [
+      {
+        scale: 0.5
+      }
+    ],
+    tintColor: Colors.tabIconDefault
   },
   selectedIcon: {
     tintColor: Colors.tabIconSelected
   }
 });
+
+TabBarIcon.propTypes = {
+  name: PropTypes.string.isRequired(),
+  focused: PropTypes.bool
+};

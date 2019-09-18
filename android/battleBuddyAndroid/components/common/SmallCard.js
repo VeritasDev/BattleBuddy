@@ -22,7 +22,7 @@ const Text = styled.Text`
   textShadowRadius: 10;
 `;
 
-const SmallCard = ({ text, image }) => {
+const SmallCard = ({text, image}) => {
   return (
     <StyledSmallCard source={image}>
       <Text>{text}</Text>
@@ -32,7 +32,7 @@ const SmallCard = ({ text, image }) => {
 
 SmallCard.propTypes = {
   text: PropTypes.string,
-  image: PropTypes.any.isRequired,
+  image: PropTypes.any.isRequired
 };
 
 export default SmallCard;

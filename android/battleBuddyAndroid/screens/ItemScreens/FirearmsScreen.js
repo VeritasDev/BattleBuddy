@@ -6,7 +6,7 @@ import firearmsData from '../../test-data/firearms';
 const FirearmsScreen = () => {
   return (
     <ScrollableContainer>
-      {firearmsData.map(data => (
+      {firearmsData.map((data) => (
         <HorizontalCardBar
           title={data.title}
           items={data.items}
@@ -20,12 +20,12 @@ const FirearmsScreen = () => {
 FirearmsScreen.navigationOptions = {
   title: 'Firearms',
   headerStyle: {
-    backgroundColor: '#151515',
+    backgroundColor: '#151515'
   },
   headerTintColor: '#FF491C',
   headerTitleStyle: {
-    fontSize: 28,
-  },
+    fontSize: 28
+  }
 };
 
 export default FirearmsScreen;
