@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
 });
 
 TabBarIcon.propTypes = {
-  name: PropTypes.string.isRequired(),
+  name: PropTypes.string.isRequired,
   focused: PropTypes.bool
 };
