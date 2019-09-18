@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "%@ 배틀버디가 전투에 참가하였습니다!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "커뮤니티 통계";
+"settings" = "세팅";
+"language_system_default" = "시스템";
+"language" = "언어";

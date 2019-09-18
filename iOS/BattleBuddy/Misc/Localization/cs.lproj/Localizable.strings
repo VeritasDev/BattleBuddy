@@ -1,0 +1,330 @@
+// MARK: - General
+"yes" = "Ano";
+"no" = "Ne";
+"ok" = "OK";
+"done" = "Hotovo";
+"soon" = "Brzy™";
+"coming_soon" = "Již brzy™";
+"unknown" = "Neznámý";
+"type" = "Typ";
+"continue" = "Pokračovat";
+"veritas" = "Veritas";
+"required" = "Vyžadováno";
+
+// MARK: - Filter/sort/compare
+"compare" = "Porovnat";
+"name" = "Jméno";
+"save" = "Uložit";
+"recommended" = "Doporučeno";
+"similar" = "Podobné";
+"all" = "Vše";
+"compare_with" = "Porovnat s...";
+
+// MARK: - More / Attributions
+"about" = "O Battle Buddy";
+"dev_by" = "Vyvynul Veritas";
+"dev_support" = "Chceš podpořit vývoj?";
+"watch_ad" = "Zhlédnout reklamu";
+"enable_banner_ads" = "Zapnout bannerové reklamy";
+"view_on_github" = "Zobrazit na GitHubu";
+"rate_this_app" = "Ohodnotit Battle Buddy";
+"attributions" = "Atribuce";
+"check_out_team" = "Podívejte se na tým";
+"team" = "Tým";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Sociální sítě";
+"music" = "Moje hudba";
+"website_error" = "Nelze načíst tento obsah. Prosím ujistěte se, že máte nainstalovanou potřebnou aplikaci.";
+"live_now" = "Právě vysílá!";
+"feedback_title" = "Zpětná vazba nebo nápad na vylepšení?";
+"feedback_subtitle" = "Připojte se na náš discord!";
+"upcoming_features" = "Budoucí funkce";
+
+"twitter_description" = "Zůstaňte v obraze";
+"twitch_description" = "Sledujte živě na Twitchi";
+"discord_description" = "Připojte se na náš komunitní discord";
+"youtube_description" = "Sledujte na YouTube";
+"instagram_description" = "Média na Instagramu";
+"soundcloud_description" = "Poslouchejte na Soundcloudu";
+"spotify_description" = "Poslouchejte na Spotify";
+"website_description" = "Více o  Veritasovi";
+
+// MARK: - Tabs
+"items" = "Předměty";
+"learn" = "Učit se";
+"more" = "Více";
+"search" = "Hledat";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Munice";
+"main_menu_armor" = "Armory";
+"main_menu_ballistics" = "Balistika";
+"main_menu_firearms" = "Střelné zbraně";
+"main_menu_medical" = "Léčení";
+"main_menu_melee" = "Sečné zbraně";
+"main_menu_throwables" = "Granáty";
+"main_menu_health_calc" = "Kalkulačna poranění";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Typy střelných zbraní";
+"calibers" = "Ráže";
+
+// MARK: - Calculators
+"pen_chance" = "Šance průstřelu";
+"no_armor_selected" = "Není zvolena žádná zbroj";
+"no_ammo_selected" = "Není zvolena žádná munice";
+"select_ammo" = "Vybrat munici";
+"select_armor" = "Vybrat zbroj";
+"pen_chance_help_title" = "Kalkulačna šance průstřelu";
+"pen_chance_help_message" = "Tento nástroj počítá šanci průstřelu zvolené zbroje zvolenou municí. Jakmile zvolíte munici a zbroj, můžete využít posuvník pro úpravu simulované výdrže zbroje pro zobrazení efektivity různých munící s různými úrovněmi výdrže zbroje!";
+
+"health_calc_title" = "Kalkulačka poškození";
+"total_hp" = "Total HP";
+
+"body_zone_head" = "Hlava";
+"body_zone_thorax" = "Hrudník";
+"body_zone_stomach" = "Žaludek";
+"body_zone_right_arm" = "Pravá ruka";
+"body_zone_left_arm" = "Levá ruka";
+"body_zone_right_leg" = "Pravá noha";
+"body_zone_left_leg" = "Levá noha";
+
+// MARK: - Items
+"armor" = "Zbroj";
+"helmets" = "Helmy";
+"ballistics" = "Balistika";
+"health" = "Zdraví";
+"firearms" = "Střelné zbraně";
+"ammunition" = "Munice";
+"body_armor" = "Zbroj";
+"medical_items" = "Léčivé předměty";
+"throwables" = "Granáty";
+"healing_items" = "Léčivé předměty";
+"pain_management" = "Zvládání bolesti";
+"status_management" = "Status Effect Management";
+"stims" = "Stimulanty";
+"grenades" = "Granáty";
+"properties" = "Vlatnosti";
+"performance" = "Výkon";
+"ergonomics" = "Ergonomika";
+"ergo" = "Ergo";
+"vertical_recoil" = "Vertikální recoil";
+"horizontal_recoil" = "Horizontální recoil";
+"recoil" = "Recoil";
+
+// MARK: - Weapons
+"weapon_class" = "Třída";
+"assault_rifle" = "Útočná puška";
+"assault_carbine" = "Útočná karabina";
+"sniper_rifle" = "Odstřelovací puška";
+"designated_marksman_rifle" = "Puška pro přesnou střelbu";
+"pistol" = "Pistole";
+"shotgun" = "Brokovnice";
+"sub_machine_gun" = "Samopal";
+"machine_gun" = "Kulomet";
+"caliber" = "Ráže";
+"fire_rate" = "Kadence";
+"effective_range" = "Efektivní vzdálenost";
+"fold_or_retract" = "Skládání/Zatahování";
+"retractable" = "Zatahovací";
+"build_wizard" = "Průvodce stavbou";
+"gun_build_custom" = "Custom";
+"gun_build_recoil" = "Minimální recoil";
+"gun_build_ergo" = "Maximální ergonomika";
+"gun_build_random" = "Náhodný";
+"fire_mode" = "Mód střelby";
+"fire_modes" = "Módy střelby";
+"fire_mode_semi" = "Poloautomatický";
+"fire_mode_auto" = "Automatický";
+"fire_mode_burst" = "Dávky";
+"fire_mode_semi_short" = "Poloauto";
+"fire_mode_auto_short" = "Auto";
+"fire_mode_burst_short" = "Dávka";
+"action" = "Akce";
+"action_type_pump" = "Opakovací";
+"action_type_bolt" = "Jednoraná";
+"action_type_pump_short" = "Pumpa";
+"action_type_bolt_short" = "Jednoranka";
+"build" = "Postavit";
+"build_this_gun" = "Postavit tuto zbraň";
+
+"compare_preset_semi_auto_rifle" = "Poloautomatické pušky";
+"compare_preset_full_auto_rifles" = "Automatické zbraně";
+"compare_preset_rifles_caliber_match" = "Zbraně stejné ráže";
+"compare_preset_rifles" = "Pušky";
+"compare_preset_full_auto_caliber_match" = "Automatické zbraně stejné ráže";
+"compare_preset_semi_auto_pistols" = "Poloautomatické pistole";
+"compare_preset_full_auto_pistols" = "Automatické pistole";
+"compare_preset_pistols_caliber_match" = "Pistole stejné řáže";
+"compare_preset_pistols" = "Pistole";
+"compare_preset_manual_shotguns" = "Opakovací brokovnice";
+"compare_preset_shotguns" = "Brokovnice";
+"compare_preset_smgs_caliber_match" = "Samopaly stejné ráže";
+"compare_preset_smgs" = "Samopaly";
+"compare_preset_bolt_snipers" = "Odstřelovací pušky";
+"compare_preset_snipers_and_dmrs" = "Odstřelovací pušky & pušky pro přesnou střelbu";
+"compare_preset_dmrs" = "Pušky pro přesnou střelbu";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Související střelné zbraně";
+"subsonic" = "Subsonic";
+"tracer" = "Tracer";
+"muzzle_velocity" = "Úsťová rychlost (m/s)";
+"compatible_firearms" = "Kompatibilní střelné zbraně";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Žádný";
+"armor_class_1" = "1. třída";
+"armor_class_2" = "2. třída";
+"armor_class_3" = "3. třída";
+"armor_class_4" = "4. třída";
+"armor_class_5" = "5. třída";
+"armor_class_6" = "6. třída";
+"armor_type_body" = "Zbroj";
+"armor_type_helmet"= "Helma";
+"armor_type_visor" = "Hledí";
+"armor_type_attachment" = "Připínatelné příslušenství";
+"armor_zone_top" = "Horní část";
+"armor_zone_eyes" = "Oči";
+"armor_zone_jaws" = "Čelisti";
+"armor_zone_ears" = "Uši";
+"armor_zone_nape" = "Šíje";
+"armor_zone_chest" = "Hrudník";
+"armor_zone_stomach" = "Žaludek";
+"armor_zone_left_arm" = "Levá ruka";
+"armor_zone_right_arm" = "Pravá ruka";
+"armor_zone_left_leg" = "Levá noha";
+"armor_zone_right_leg" = "Pravá noha";
+"armor_mat_ceramic" = "Keramika";
+"armor_mat_armored_steel" = "Obrněná ocel";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Kombinovaný";
+"armor_mat_aluminum" = "Hliník";
+"armor_mat_glass" = "Sklo";
+"armor_mat_titanium" = "Titanium";
+
+"armor_type" = "Typ";
+"armor_material" = "Materiál";
+"armor_class" = "Třída";
+"armor_points" = "Výdrž";
+"armor_zones" = "Zóny";
+"penalties" = "Znevýhodnění";
+"speed_penalty" = "Rychlost";
+"turn_speed_penalty" = "Rychlost otáčení";
+"ergo_penalty" = "Ergonomika";
+
+"penetration" = "Průraznost";
+"damage" = "Poškození";
+"armor_damage" = "Poškození zbroje";
+"frag_chance" = "Šance roztříštění";
+
+"explore" = "Prozkoumat";
+"compare" = "Porovnat";
+"compare_performance" = "Porovnat výkon";
+"dps_calc" = "DPS Kalkulačka";
+"kill_time_calc" = "Kill Time Kalkulačka";
+
+// MARK: - Medical
+"damage" = "Poškození";
+"contusion" = "Pohmoždění";
+"fracture" = "Zlomenina";
+"pain" = "Bolest";
+"medkit" = "Medkit";
+"painkiller" = "Lék proti bolesti";
+"accessory" = "Doplněk";
+"stimulator" = "Stimulátor";
+"use_time" = "Čas užití";
+"effect_duration" = "Doba trvání účinku";
+"use_count" = "Počet použití";
+"hp_resource" = "Celková HP";
+"removes_bloodloss" = "Zastavuje krvácení";
+"removes_contusion" = "Odstraňuje pohmoždění";
+"removes_fracture" = "Léčí zlomeniny";
+"removes_pain" = "Odstraňuje bolest";
+"hydration_modifier" = "Modifikátor hydratace";
+"energy_modifier" = "Modifikátor energie";
+
+// MARK: - Throwables
+"throwable_frag" = "Granát";
+"throwable_flash" = "Oslepující granát";
+"throwable_smoke" = "Dýmovnice";
+"fuse_time" = "Pojistková doba";
+"explosion_radius_min" = "Minimální dosah exploze";
+"explosion_radius_max" = "Maximální dosah exploze";
+"fragmentation_count" = "Počet fragmentů";
+
+// MARK: - Melee
+"damage" = "Poškození";
+"rate" = "Rychlost";
+"range" = "Dosah";
+
+"stab" = "Bodnutí";
+"stab_dmg" = "Poškození bodnutím";
+"stab_rate" = "Rychlost podnutí";
+"stab_range" = "Dosah bodnutí";
+
+"slash" = "Seknutí";
+"slash_dmg" = "Poškození seknutím";
+"slash_rate" = "Rychlost seknutí";
+"slash_range" = "Dosah seknutí";
+
+// MARK: - Posts
+"ballistics_title" = "Zbroj a balistika: Základy";
+"ballistics_body_1" = "Systém balistiky v Escape from Tarkov je černou skříňkou a pouze malé množství lidí má možnost nahlédnout na jeho pozadí. Vzhledem ke složitosti vzorců používaných k výpočtu hodnot, jako jsou šance průstřelu, úhly odrazu a poškození jak zbroje a těl hráčů, tak i prvků založených na RNG, které jsou zahrnuty, existuje často nepostřehnutelný rozdíl v čase pro zabití při porovnání plně vybaveného hráče na vysoké úrovni, který nosí nejlepší vybavení pro koncovou hru, s hráčem na úrovni 1, který nemá nic jiného než základní pistoli. Ve spojení s dobře známými problémy v oblasti networkingu a výkonu, bugy a stále rostoucím počtem hráčů, dvojznačnost pravděpodobně nejdůležitějšího systému hry slouží pouze k zesílení zmatku a frustrace jak nových hráčů tak veteránu na denní bázi.";
+"ballistics_body_2" = "Začínáme se zbrojí, jak to funguje a co byste měli vědět? Kromě dostupnosti a ceny existuje pět důležitých věcí, které byste měli zvážit při úvaze jakou zbroj koupit, prodat, opravit, použít nebo zahodit - třída, výdrž, ochranné zóny, materiál a znevýhodnění.";
+"ballistics_body_2_1_title" = "1. Třída zbroje";
+"ballistics_body_2_1" = "Každá část pancéřování, od vestavěných částí těla po části připevnitené k balistické helmě, má stanovenou třídu zbroje. Třída zbroje je podle mého názoru nejdůležitějším aspektem ochranné zbroj. Jednoduše řečeno, třída zbroje představuje její účinnost při zastavení projektilů s různou úrovní balistické účinnosti. V současné době se zbrojní třídy pohybují od 1 do 6, a jak jste možná uhodli, čím vyšší číslo, tím lepší.\n\nZbroje 1. třídy Vás mohou ochránit před věcmi, jako jsou odražené střely, šrapnely a pistolové nepenetrující munice nebo buckshoty. Zbroje úrovně 6 Vás mohou ochránit od většiny projektilů až po největší ráže ve hře. Zvolil jsem zde slovo „schopný“ úmyslně, protože každý balistický dopad zahrnuje různé stupně náhodné šance.\n\nPokud jde o balistiku v Escape from Tarkov, není zaručeno nic a věci, které zažíváme, se někdy zdají nemožné nebo nedávají smysl. Co to tedy v konečném důsledku znamená? Jaká zbroj mě ochrání před jakým projektilem? To je složitá otázka, ke které se podrobněji dostanu později, až budu diskutovat o specifikách souvisejících s balistickým dopadem.";
+"ballistics_body_2_2_title" = "2. Výdrž";
+"ballistics_body_2_2_1" = "Pokud jde o výdrž zbroje, je důležité si uvědomit, že specifika se mnohokrát změnila a mohou samozřejmě být změněny ze strany BSG kdykoli v budoucnu. Pozoruhodné na výdrži zbroje je to, že jeho schopnost chránit uživatele závisí na jeho současné hodnotě výdrže ve srovnání s původní maximální hodnotou výdrže nové zbroje.";
+"ballistics_body_2_2_2" = "Například, pokud sada zbroje začíná s 50 body výdrže, poskytuje nejlepší ochranu, když je 50/50, což je celkem zřejmé. Méně zřejmou částí je, že jakákoliv zbroj, která je poškozena a dosud nebyla opraveno, jako je zbroj s výdrží 40/50, je stejně účinná při Vaší ochraně jako stejná zbroj, pokud byla poškozena a poté opravena a je aktuálně 40 / 40.";
+"ballistics_body_2_2_3" = "Znalost původní hodnoty maximální vádrže pro různé sady zbroje nebo prohlížení lišty výdrže při kontrole položky je důležitým zvykem, který lze nabýt. Často najdete zbroj s nižší třídou, než je vaše současná sada zbroje, ale pokud je vaše současná sada zbroje vážně poškozena nebo byla mnohokrát opravena, můžete skutečně zvýšit své šance na přežití, pokud ji zaměníte za zbroj nižší třídy s vyšším procentem výdrže. Porozumění obecným možnostem ochrany pro různé třídy zbrojí, hodnot výdrže a šancím průniku střely může být v některých bojových situacích skutečně neocenitelné. Podívejte se na kalkulačku poškození a poznejte jak to funguje!";
+"ballistics_body_2_3_title" = "3. Zóny ochrany";
+"ballistics_body_2_3" = "Není tu moc detailů na toto téma, u kterých bych musel zabíhat do podrobností, kromě toho, že si musíte pamatovat jedno jednoduché pravidlo: Zbroj nechrání to, co vizuálně chrání! Nejlepším příkladem toho je Gen4 Full Protection Armor vs. Gen4 Assault Kit. Gen4 Full Protection vypadá, že pokrývá větší část vašeho těla, ale chrání Vaše tělo naprosto stejně jako Assault Kit, protože má stejné ochranné zóny. Věnujte pozornost tomu, které zóny jsou chráněny - přijít o paži nebo žaludek může být docela nepříjemné a často si zaslouží zvláštní ochranu, pokud si to můžete dovolit!";
+"ballistics_body_2_4_title" = "4. Materiály";
+"ballistics_body_2_4" = "Každá zbroj je vyrobena z různách materiálů. V současné době nemají materiály žádný významný vliv na ochrannou schopnost zbroje, místo toho se materiál zbroje stává důležitým při opravě. Některé materiály mohou být opraveny velmi efektivně a levně, zatímco jiné mohou při opravách utrpět značné ztráty své trvanlivosti a opravy často mohou stát více než původní náklady na celou zbroj!";
+"ballistics_body_2_5_title" = "5. Znevýhodnění";
+"ballistics_body_2_5" = "Obecně lze říci, že dodatečná ochrana přichází za cenu a tyto náklady mohou být finanční i praktické. Každý kus zbroje je vybaven sadou znevýhodnění. Některá zpomalují Váš pohyb, jiná zpomalují Vaši rychlost otáčení a dokonce i Vaši celkovou ergonomii, která ovlivňuje rychlost, kterou zaměřujete, rychlost ztáty staminy a dokonce i hlasitost Vaší postavy při pomalém pohybu nebo zaměřování. Některá ochrana hlavy může Váš sluch omezit několika způsoby, a dokonce i zakrýt Váš zrak. Jedná se o kompromisy, které byste měli zvážit při rozhodování, zda chcete nebo nechcete jít do dražší sady zbroje nebo zvolíte přiléhavou Killa helmu. Které zbroje a přilby stojí za to? Rozhodnutí je jen na Vás!";
+"ballistics_body_3_title" = "Shrnutí";
+"ballistics_body_3" = "Balistický systém v Escape z Tarkova je neuvěřitelně složitý a vyžaduje poměrně dost zkušeností a znalostí, aby jste byli schopni využít ho ve svůj prospěch. Výše uvedené video Armor and Ballistics vysvětluje některé z těchto konceptů podrobněji, takže se nezapomeňte podívat, jestli Vás zajímá více o tomto tématu. Dávejte si tam venku pozor!";
+
+"health_title" = "Zdraví a stav Vašeho PMC";
+"health_body_1" = "Tato informace bude brzy k dispozici™";
+
+"upcoming_body_1" = "Mám pro tuto aplikaci naplánováno tolik úžasných funkcí, že se nemůžu dočkat až je pro komunitu připravím! Interaktivní mapy, modifikace zbraní, průvodce questy, další položky a kalkulačky, informace o obchodnících, rozpis dovedností a další! Plánuji důsledně uvolňovat funkce, ale chtěl jsem, aby Vám byla doručena verze 1.0 co nejdříve, aby bylo možné začít měřit zájem a shromažďovat zpětnou vazbu. Brzy zkontrolujte aktualizace!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Komunita";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Miscellaneous Legal Stuff";
+"attributions_translations" = "Lokalizace";
+
+"attributions_api_descr" = "Tento projekt by nebyl možný bez fantastické vývojové práce Morphyho na Tarkovské databázi a na základním API.";
+"attributions_nofam_descr" = "Nezraněný hrdina v komunitě EFT, tvůrce muničních map a spolupracovník na balistických kalkulačkách a souvisejících informacích, velvyslanec munice, baron balistiky, profesor penetrace!";
+"attributions_willerz_descr" = "Spoustu lásky pro Willer_Z za poskytnutí některých snímků v epické kvalitě, které mi dovolil použít v této aplikaci. Také je jedním z nejlepších hráčů na světě.";
+"attributions_community_descr" = "Spoustu lásky mé komunitě na Discordu za veškerou těžkou práci, zachycení a úpravy krásných fotografií použitých v této aplikaci!";
+"attributions_translations_descr" = "Všechny překlady byly provedeny členy komunity, kteří věci věnovali svůj čas a úsilí. Všichni na celém světě oceňují vaši tvrdou práci!";
+"attributions_bsg_descr" = "Zvláštní poděkování patří Nikitovu za podporu této aplikace a všem lidem v BSG za jejich tvrdou práci a odhodlání při budování nejlepší FPS všech dob.";
+"attributions_misc_descr" = "Ikony sociálních médií od Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licencované pod CC. Ikona 'mozku' Sergey Patutin z Noun Project (https://thenounproject.com/bdesign.by/) licencována pod CC.";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies se přidalo do boje!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Komunitní statistiky";
+"settings" = "Nastavení";
+"language_system_default" = "Systém";
+"language" = "Jazyk";
