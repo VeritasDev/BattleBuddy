@@ -4,6 +4,7 @@ import ScrollableContainer from '../components/common/ScrollableContainer';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Search from '../components/common/Search';
 import PropTypes from 'prop-types';
+import firearmsData from '../test-data/firearms';
 
 // For now until we decide where data/images come from.
 const items = [
@@ -43,7 +44,7 @@ const items = [
 const HomeScreen = ({navigation}) => {
   const onPressHandler = (item) => {
     if (item.path) {
-      navigation.navigate(item.path);
+      navigation.navigate(item.path, {...item, data: firearmsData});
     } else {
       alert(`${item.text} not yet implemented`);
     }

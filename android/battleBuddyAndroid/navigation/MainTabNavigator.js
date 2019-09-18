@@ -6,8 +6,8 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import FirearmsScreen from '../screens/ItemScreens/FirearmsScreen';
 import {theme} from '../components/Theme';
+import ItemScreen from '../screens/ItemScreen';
 
 const config = Platform.select({
   web: {headerMode: 'screen'},
@@ -17,7 +17,7 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
   {
     Home: {screen: HomeScreen, path: 'home'},
-    Firearms: {screen: FirearmsScreen, path: 'firearms'}
+    Firearms: {screen: ItemScreen, path: 'firearms'}
   },
   {
     ...config,
