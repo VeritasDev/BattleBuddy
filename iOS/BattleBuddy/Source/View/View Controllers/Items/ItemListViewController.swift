@@ -68,7 +68,7 @@ class ItemListViewController: BaseStackViewController {
                 let allCalibers: [String]
                 if let metadata = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata() {
                     let ammoMetadata = metadata.ammoMetadata
-                    allCalibers = ammoMetadata.sorted(by: { $0.index < $1.index }).map { $0.displayName }
+                    allCalibers = ammoMetadata.sorted(by: { $0.index < $1.index }).map { $0.caliber }
                 } else {
                     allCalibers = Array(ammoMap.keys)
                 }
