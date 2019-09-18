@@ -21,7 +21,7 @@ const items = [
     textPosition: 'bottom left',
     image: require('../assets/images/card_heroes/ballistics.png')
   }
-]
+];
 
 export default function LinksScreen() {
   return (
@@ -35,11 +35,11 @@ export default function LinksScreen() {
 
 LinksScreen.navigationOptions = {
   title: 'Learn',
-    headerStyle: {
-    backgroundColor: '#151515',
+  headerStyle: {
+    backgroundColor: '#151515'
   },
   headerTintColor: '#FF491C',
   headerTitleStyle: {
-    fontSize: 28,
-  },
+    fontSize: 28
+  }
 };

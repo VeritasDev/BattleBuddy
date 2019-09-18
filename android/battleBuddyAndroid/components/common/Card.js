@@ -1,8 +1,9 @@
 import React from 'react';
-import styled, { css } from 'styled-components/native';
+import styled, {css} from 'styled-components/native';
 import PropTypes from 'prop-types';
 
 const StyledCard = styled.ImageBackground`
+  /* prettier-ignore */
   aspectRatio: 1.77;
   width: 100%;
   padding: 16px;
@@ -13,13 +14,13 @@ const StyledCard = styled.ImageBackground`
 
   /* Conditions for positioning texts by textPosition string. */
   /* e.g.: textProps="bottom left" will include both conditions. */
-  ${props =>
+  ${(props) =>
     props.textPosition.includes('right') &&
     css`
       align-items: flex-end;
     `}
 
-  ${props =>
+  ${(props) =>
     props.textPosition.includes('bottom') &&
     css`
       justify-content: flex-end;
@@ -32,11 +33,13 @@ const Text = styled.Text`
   font-size: 35px;
   color: white;
   font-weight: bold;
+  /* prettier-ignore */
   textShadowColor: black;
+  /* prettier-ignore */
   textShadowRadius: 10;
 `;
 
-const Card = ({ image, text, ...props }) => {
+const Card = ({image, text, ...props}) => {
   return (
     <StyledCard source={image} {...props}>
       <Text>{text}</Text>
@@ -46,12 +49,13 @@ const Card = ({ image, text, ...props }) => {
 
 Card.defaultProps = {
   text: 'Card Text',
-  textPosition: '',
+  textPosition: ''
 };
 
 Card.propTypes = {
   text: PropTypes.string.isRequired,
-  textPosition: PropTypes.string,
+  image: PropTypes.any.isRequired,
+  textPosition: PropTypes.string
 };
 
 export default Card;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExpoConfigView } from '@expo/samples';
+import {ExpoConfigView} from '@expo/samples';
 
 export default function SettingsScreen() {
   /**
@@ -12,10 +12,10 @@ export default function SettingsScreen() {
 SettingsScreen.navigationOptions = {
   title: 'More',
   headerStyle: {
-    backgroundColor: '#191919',
+    backgroundColor: '#191919'
   },
   headerTintColor: '#FF491C',
   headerTitleStyle: {
-    fontSize: 28,
-  },
+    fontSize: 28
+  }
 };
