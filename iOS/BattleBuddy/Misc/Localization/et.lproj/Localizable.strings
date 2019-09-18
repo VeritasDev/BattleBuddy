@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "%@ Lahingusõbrad on võitlusega liitunud!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Kogukonna Statistika";
+"settings" = "Seadistused";
+"language_system_default" = "Süsteem";
+"language" = "Keel";
