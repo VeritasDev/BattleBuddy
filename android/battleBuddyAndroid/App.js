@@ -1,14 +1,23 @@
+import React, {useState} from 'react';
+import styled from 'styled-components/native';
 import {AppLoading} from 'expo';
 import {Asset} from 'expo-asset';
 import * as Font from 'expo-font';
-import React, {useState} from 'react';
-import {Platform, StatusBar, StyleSheet, View} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
 import AppNavigator from './navigation/AppNavigator';
+import Theme from './components/Theme';
 
-export default function App(props) {
+const Container = styled.View`
+  flex: 1;
+`;
+
+const App = (props) => {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
+
+  const handleFinishLoading = () => {
+    setLoadingComplete(true);
+  };
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return (
@@ -20,13 +29,14 @@ export default function App(props) {
     );
   } else {
     return (
-      <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <AppNavigator />
-      </View>
+      <Theme>
+        <Container>
+          <AppNavigator />
+        </Container>
+      </Theme>
     );
   }
-}
+};
 
 async function loadResourcesAsync() {
   await Promise.all([
@@ -50,13 +60,4 @@ function handleLoadingError(error) {
   console.warn(error);
 }
 
-function handleFinishLoading(setLoadingComplete) {
-  setLoadingComplete(true);
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff'
-  }
-});
+export default App;

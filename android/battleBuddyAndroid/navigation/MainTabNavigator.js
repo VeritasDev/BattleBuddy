@@ -2,12 +2,12 @@ import React from 'react';
 import {Platform, Easing, Animated} from 'react-native';
 import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 
-import Colors from '../constants/Colors';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import FirearmsScreen from '../screens/ItemScreens/FirearmsScreen';
+import {theme} from '../components/Theme';
 
 const config = Platform.select({
   web: {headerMode: 'screen'},
@@ -83,9 +83,9 @@ const tabNavigator = createBottomTabNavigator(
   {HomeStack, LinksStack, SettingsStack},
   {
     tabBarOptions: {
-      activeTintColor: '#FF491C',
+      activeTintColor: theme.colors.orange,
       style: {
-        backgroundColor: Colors.tabBar
+        backgroundColor: theme.colors.almostBlack
       }
     }
   }
