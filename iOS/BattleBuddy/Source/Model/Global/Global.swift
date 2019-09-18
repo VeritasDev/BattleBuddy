@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct AmmoMetadata {
     let caliber: String
@@ -19,19 +20,16 @@ struct GlobalMetadata {
     let totalLoyalty: Int
     let ammoMetadata: [AmmoMetadata]
     let loyaltyLeaderboard: [BBUser]
+    let lastWipeDate: Date
 
     init?(json: [String: Any]) {
-        guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedLoyalty = json["totalLoyalty"] as? NSNumber, let leaderboard = json["loyalty"] as? [[String: Any]] else {
+        guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedLoyalty = json["totalLoyalty"] as? NSNumber, let leaderboard = json["loyalty"] as? [[String: Any]], let boxedLastWipeTimestamp = json["lastWipe"] as? Timestamp else {
             return nil
         }
 
         var tempAmmoMeta: [AmmoMetadata] = []
         for caliber in ammoMeta.keys {
-            guard let data = ammoMeta[caliber], let displayName = data["displayName"] as? String,
-                let rawIndex = data["index"] as? NSNumber else {
-                    return nil
-            }
-
+            guard let data = ammoMeta[caliber], let displayName = data["displayName"] as? String, let rawIndex = data["index"] as? NSNumber else { continue }
             tempAmmoMeta.append(AmmoMetadata(caliber: caliber, displayName: displayName, index: rawIndex.intValue))
         }
 
@@ -39,5 +37,6 @@ struct GlobalMetadata {
         totalLoyalty = boxedLoyalty.intValue
         ammoMetadata = tempAmmoMeta
         loyaltyLeaderboard = leaderboard.map { BBUser($0) }
+        lastWipeDate = Date(timeIntervalSince1970: Double(boxedLastWipeTimestamp.seconds))
     }
 }

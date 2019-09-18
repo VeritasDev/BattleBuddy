@@ -28,10 +28,10 @@
 - [x] Attributions Additions
     - SmooothBrain for design work
     - Betrix for images
-- [ ] Finish translations
-- [ ] Days since wipe counter
+- [x] Finish translations
 
 ## <u>v1.1</u>
+- [ ] Days since wipe counter
 - [ ] Ammo needs to be disconnected from global metadata!
 - [ ] Logging / tags / debugging / etc
 - [ ] Settings

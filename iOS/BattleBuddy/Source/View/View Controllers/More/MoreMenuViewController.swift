@@ -72,7 +72,6 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.height = 70.0
         return cell
     }()
-
     let rateCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
         cell.textLabel?.text = "rate_this_app".local()

@@ -324,7 +324,7 @@
 
 // ----------------------------------------
 // V1.0.1
-"global_stats" = "Statistika Skupnosti"
+"global_stats" = "Statistika Skupnosti";
 "settings" = "Nastavitve";
 "language_system_default" = "Sistem";
 "language" = "Jezik";
