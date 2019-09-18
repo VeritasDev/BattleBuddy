@@ -33,5 +33,7 @@ class ComparisonCell: BaseTableViewCell {
         progressView.name = name
         progressView.valueText = valueText
         progressView.progress = progressPercent
+        setNeedsLayout()
+        progressView.setNeedsLayout()
     }
 }

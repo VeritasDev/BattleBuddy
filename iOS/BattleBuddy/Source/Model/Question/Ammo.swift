@@ -20,6 +20,7 @@ struct Ammo: BaseItem, CalculableAmmo {
     let muzzleVelocity: Int
     let tracer: Bool
     let subsonic: Bool
+    let projectileCount: Int
 
     init?(json: [String : Any]) {
         self.json = json
@@ -47,6 +48,12 @@ struct Ammo: BaseItem, CalculableAmmo {
         muzzleVelocity = rawMuzzleVel.intValue
         subsonic = rawSubsonic.boolValue
         tracer = rawTracer.boolValue
+
+        if let rawPellets = json["pellets"] as? NSNumber {
+            projectileCount = rawPellets.intValue
+        } else {
+            projectileCount = 1
+        }
     }
 
     // MARK: Ammo calculable
@@ -56,12 +63,12 @@ struct Ammo: BaseItem, CalculableAmmo {
     }
 
     var resolvedDamage: Double {
-        get { return Double(damage) }
+        get { return Double(damage * projectileCount) }
         set { damage = Int(newValue) }
     }
 
     var resolvedArmorDamage: Double {
-        get { return Double(armorDamage) }
+        get { return Double(armorDamage * projectileCount) }
         set { armorDamage = Int(newValue) }
     }
 

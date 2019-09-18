@@ -50,6 +50,7 @@ enum FirearmComparisonPreset: Localizable {
 
 struct FirearmComparison: ItemComparison {
     var propertyType: ComparablePropertyType = .firearm
+    var allItems: [Comparable]
     var itemsBeingCompared: [Comparable]
     var possibleOptions: [Comparable]
     var recommendedOptions: [Comparable]
@@ -60,6 +61,7 @@ struct FirearmComparison: ItemComparison {
     var preferRecommended: Bool = true
 
     init(_ initialFirearm: Firearm? = nil, allFirearms: [Firearm]) {
+        allItems = allFirearms
         if let firearm = initialFirearm {
             let presets = FirearmComparison.resolvePresetsFromFirearm(firearm)
             let itemsForPreset = FirearmComparison.filterItems(allFirearms, firearmBeingCompared: firearm, presets: presets)
@@ -204,7 +206,7 @@ struct FirearmComparison: ItemComparison {
         var hRecoilRange = PropertyRange()
         var effectiveDistRange = PropertyRange()
 
-        for case let firearm as Firearm in itemsBeingCompared {
+        for case let firearm as Firearm in allItems {
             fireRateRange.updatedRangeIfNeeded(candidateValue: Float(firearm.fireRate))
             ergoRange.updatedRangeIfNeeded(candidateValue: Float(firearm.ergonomics))
             vRecoilRange.updatedRangeIfNeeded(candidateValue: Float(firearm.verticalRecoil))
@@ -226,11 +228,11 @@ struct FirearmComparison: ItemComparison {
         let range = getComparedItemsSummaryMap()[property]!
 
         switch property {
-        case .fireRate: return scaledValue(propertyValue: Float(firearm.fireRate), range: range, traitCollection: traitCollection)
-        case .ergonomics: return scaledValue(propertyValue: Float(firearm.ergonomics), range: range, traitCollection: traitCollection)
-        case .verticalRecoil: return scaledValue(propertyValue: Float(firearm.verticalRecoil), range: range, traitCollection: traitCollection)
-        case .horizontalRecoil: return scaledValue(propertyValue: Float(firearm.horizontalRecoil), range: range, traitCollection: traitCollection)
-        case .effectiveRange: return scaledValue(propertyValue: Float(firearm.effectiveDistance), range: range, traitCollection: traitCollection)
+        case .fireRate: return scaledValue(propertyValue: Float(firearm.fireRate), range: range)
+        case .ergonomics: return scaledValue(propertyValue: Float(firearm.ergonomics), range: range)
+        case .verticalRecoil: return scaledValue(propertyValue: Float(firearm.verticalRecoil), range: range)
+        case .horizontalRecoil: return scaledValue(propertyValue: Float(firearm.horizontalRecoil), range: range)
+        case .effectiveRange: return scaledValue(propertyValue: Float(firearm.effectiveDistance), range: range)
         default: fatalError()
         }
     }

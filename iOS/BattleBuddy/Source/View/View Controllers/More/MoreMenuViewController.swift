@@ -202,7 +202,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         case watchAdCell: adManager.watchAdVideo(from: self)
         case theTeamCell: navigationController?.pushViewController(TeamViewController(), animated: true)
         case rateCell: feedbackManager.askForReview()
-        case leaderboardCell: navigationController?.pushViewController(LeaderboardViewController(globalMetadata!.adsWatchedLeaderboard), animated: true)
+        case leaderboardCell: navigationController?.pushViewController(LeaderboardViewController(globalMetadata!.loyaltyLeaderboard), animated: true)
         default: break
         }
     }

@@ -9,11 +9,15 @@
 import UIKit
 
 class BarGraphView: UIView {
-    private let filledView: BaseStackView = {
-        let view = BaseStackView(axis: .horizontal, distribution: .fillEqually, xPaddingCompact: 10.0, xPaddingRegular: 10.0, yPadding: 1.0)
-        view.translatesAutoresizingMaskIntoConstraints = false
+    private let containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 0.15, alpha: 0.6)
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 1.0
+        view.layer.masksToBounds = true
         return view
     }()
+    private let filledView = UIView()
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -27,30 +31,11 @@ class BarGraphView: UIView {
         label.textColor = .white
         return label
     }()
-    private lazy var filledWidthConstraint: NSLayoutConstraint = {
-        NSLayoutConstraint(item: filledView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0.5, constant: 0)
-    }()
 
-    var filledColor: UIColor = UIColor.Theme.primary { didSet { filledView.backgroundView.backgroundColor = filledColor } }
-
-    var progress: Float = 0.0 {
-        didSet {
-            filledWidthConstraint = filledWidthConstraint.deactivateAndCreateNewActivated(multiplier: CGFloat(progress))
-            layoutIfNeeded()
-        }
-    }
-
-    var name: String? {
-        didSet {
-            nameLabel.text = name
-        }
-    }
-
-    var valueText: String? {
-        didSet {
-            valueLabel.text = valueText
-        }
-    }
+    var filledColor: UIColor = UIColor.Theme.primary { didSet { filledView.backgroundColor = filledColor } }
+    var progress: Float = 0.0 { didSet { layoutIfNeeded() } }
+    var name: String? { didSet { nameLabel.text = name } }
+    var valueText: String? { didSet { valueLabel.text = valueText } }
 
     required init(coder: NSCoder) { fatalError() }
 
@@ -59,16 +44,25 @@ class BarGraphView: UIView {
 
         backgroundColor = .clear
 
-        addSubview(filledView)
+        addSubview(containerView)
+        containerView.addSubview(filledView)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(valueLabel)
+    }
 
-        NSLayoutConstraint.activate([
-            filledView.topAnchor.constraint(equalTo: topAnchor),
-            filledView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            filledView.leadingAnchor.constraint(equalTo: leadingAnchor)
-            ])
+    override func layoutSubviews() {
+        super.layoutSubviews()
 
-        filledView.addArrangedSubview(nameLabel)
-        filledView.addArrangedSubview(valueLabel)
+        let height: CGFloat = self.frame.height
+
+        containerView.frame = CGRect(x: 0, y: 0, width: self.frame.width * 0.9, height: height)
+        filledView.frame = CGRect(x: 0, y: 0, width: containerView.frame.width * CGFloat(progress), height: containerView.frame.height)
+
+        let pad: CGFloat = 10
+        let totalWidth = containerView.frame.width - (4 * pad)
+        let halfWidth = totalWidth / 2.0
+        nameLabel.frame = CGRect(x: pad, y: 0, width: halfWidth, height: containerView.frame.height)
+        valueLabel.frame = CGRect(x: nameLabel.frame.maxX + pad, y: 0, width: halfWidth, height: containerView.frame.height)
     }
 
 }

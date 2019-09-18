@@ -16,12 +16,12 @@ struct AmmoMetadata {
 
 struct GlobalMetadata {
     let totalUserCount: Int
-    let totalAdsWatched: Int
+    let totalLoyalty: Int
     let ammoMetadata: [AmmoMetadata]
-    let adsWatchedLeaderboard: [BBUser]
+    let loyaltyLeaderboard: [BBUser]
 
     init?(json: [String: Any]) {
-        guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedAdCount = json["totalAdsWatched"] as? NSNumber, let leaderboard = json["leaderboard"] as? [String: [Any]], let topAdsWatchedUsers = leaderboard["adsWatched"] as? [[String: Any]] else {
+        guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedLoyalty = json["totalLoyalty"] as? NSNumber, let leaderboard = json["loyalty"] as? [[String: Any]] else {
             return nil
         }
 
@@ -36,8 +36,8 @@ struct GlobalMetadata {
         }
 
         totalUserCount = boxedUserCount.intValue
-        totalAdsWatched = boxedAdCount.intValue
+        totalLoyalty = boxedLoyalty.intValue
         ammoMetadata = tempAmmoMeta
-        adsWatchedLeaderboard = topAdsWatchedUsers.map { BBUser($0) }
+        loyaltyLeaderboard = leaderboard.map { BBUser($0) }
     }
 }

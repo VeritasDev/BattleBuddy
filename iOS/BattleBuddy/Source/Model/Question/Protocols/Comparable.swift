@@ -125,9 +125,9 @@ extension Ammo: Comparable {
     func getValueStringForProperty(_ property: ComparableProperty) -> String {
         switch property {
         case .penetration: return String(penetration)
-        case .damage: return String(damage)
+        case .damage: return String(Int(resolvedDamage))
         case .fragChance: return String(Int(fragChance * 100)) + "%"
-        case .armorDamage: return String(armorDamage)
+        case .armorDamage: return String(Int(resolvedArmorDamage))
         case .muzzleVelocity: return String(muzzleVelocity)
         default: fatalError()
         }

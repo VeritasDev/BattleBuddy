@@ -19,6 +19,7 @@ enum ComparablePropertyType {
 
 protocol ItemComparison {
     var propertyType: ComparablePropertyType { get }
+    var allItems: [Comparable] { get }
     var itemsBeingCompared: [Comparable] { get set }
     var possibleOptions: [Comparable] { get set }
     var recommendedOptions: [Comparable] { get set }
@@ -42,14 +43,14 @@ struct PropertyRange {
 }
 
 extension ItemComparison {
-    func scaledValue(propertyValue: Float, range: PropertyRange, traitCollection: UITraitCollection) -> Float {
-        let isCompact = traitCollection.horizontalSizeClass == .compact
-        let minAllowed: Float = isCompact ? 0.35 : 0.25
-        let maxAllowed: Float = isCompact ? 0.95 : 0.90
-        return scaleBetween(unscaledNum: propertyValue, minAllowed: minAllowed, maxAllowed: maxAllowed, min: range.minValue, max: range.maxValue)
+    func scaledValue(propertyValue: Float, range: PropertyRange) -> Float {
+        let minAllowed: Float = 0.01
+        let maxAllowed: Float = 1.0
+        let scaledValue = scaleBetween(unscaledNum: propertyValue, minAllowed: minAllowed, maxAllowed: maxAllowed, min: range.minValue, max: range.maxValue)
+        return scaledValue
     }
 
-    func scaledValue(boolValue isTrue: Bool, range: PropertyRange, traitCollection: UITraitCollection) -> Float {
-        return scaledValue(propertyValue: isTrue ? range.maxValue : range.minValue, range: range, traitCollection: traitCollection)
+    func scaledValue(boolValue isTrue: Bool, range: PropertyRange) -> Float {
+        return scaledValue(propertyValue: isTrue ? range.maxValue : range.minValue, range: range)
     }
 }

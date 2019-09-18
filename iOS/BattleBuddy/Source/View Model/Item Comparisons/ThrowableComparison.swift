@@ -17,6 +17,7 @@ private struct ComparedThrowablePropertiesSummary {
 
 struct ThrowableComparison: ItemComparison {
     var propertyType: ComparablePropertyType = .throwable
+    var allItems: [Comparable]
     var itemsBeingCompared: [Comparable]
     var possibleOptions: [Comparable]
     var recommendedOptions: [Comparable]
@@ -28,6 +29,7 @@ struct ThrowableComparison: ItemComparison {
     private var comparedItemsSummary: ComparedThrowablePropertiesSummary?
 
     init(_ allThrowables: [Throwable]) {
+        allItems = allThrowables
         itemsBeingCompared = allThrowables
         recommendedOptions = allThrowables
         possibleOptions = []
@@ -38,10 +40,10 @@ struct ThrowableComparison: ItemComparison {
         let range = getComparedItemsSummaryMap()[property]!
 
         switch property {
-        case .fuseTime: return scaledValue(propertyValue: Float(throwable.fuseTime), range: range, traitCollection: traitCollection)
-        case .fragmentationCount: return scaledValue(propertyValue: Float(throwable.fragmentationCount), range: range, traitCollection: traitCollection)
-        case .explosionRadiusMin: return scaledValue(propertyValue: Float(throwable.explosionRadiusMin), range: range, traitCollection: traitCollection)
-        case .explosionRadiusMax: return scaledValue(propertyValue: Float(throwable.explosionRadiusMax), range: range, traitCollection: traitCollection)
+        case .fuseTime: return scaledValue(propertyValue: Float(throwable.fuseTime), range: range)
+        case .fragmentationCount: return scaledValue(propertyValue: Float(throwable.fragmentationCount), range: range)
+        case .explosionRadiusMin: return scaledValue(propertyValue: Float(throwable.explosionRadiusMin), range: range)
+        case .explosionRadiusMax: return scaledValue(propertyValue: Float(throwable.explosionRadiusMax), range: range)
         default: fatalError()
         }
     }
@@ -51,7 +53,7 @@ struct ThrowableComparison: ItemComparison {
         var fragCountRange = PropertyRange()
         var radiusRange = PropertyRange()
 
-        for case let throwable as Throwable in itemsBeingCompared {
+        for case let throwable as Throwable in allItems {
             fuseTimeRange.updatedRangeIfNeeded(candidateValue: Float(throwable.fuseTime))
             fragCountRange.updatedRangeIfNeeded(candidateValue: Float(throwable.fragmentationCount))
             radiusRange.updatedRangeIfNeeded(candidateValue: Float(throwable.explosionRadiusMin))

@@ -14,19 +14,22 @@
     - [x] Language override
 - [x] Refresh global info when app foregrounded
 - [x] Loyalty points implemented in app and server
-- [ ] Fix comparison screen bugs
+- [x] Fix comparison screen bugs
 - [x] Add app version info to about screen for debugging
 - [x] Jittery post screen
 - [x] Fix ads
 - [x] More menu cells issue
 - [x] Duplicate paragraphs on ballistics
-- [x] Translations
-    - [x] Korean
-    - [x] Norwegian
+- [x] Korean
+- [x] Norwegian
+- [x] Slovenian
+- [x] Czech
 - [x] UIWebView deprecation
 - [x] Attributions Additions
     - SmooothBrain for design work
     - Betrix for images
+- [ ] Finish translations
+- [ ] Days since wipe counter
 
 ## <u>v1.1</u>
 - [ ] Ammo needs to be disconnected from global metadata!
