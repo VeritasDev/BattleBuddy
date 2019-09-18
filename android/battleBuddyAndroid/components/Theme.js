@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ThemeProvider} from 'styled-components/';
+import {Dimensions} from 'react-native';
+
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
 
 /**
  * Theme for ThemeProvider. Now in every styled-component you can get the theme
@@ -23,6 +27,13 @@ export const theme = {
     white: '#fff',
     yellow: '#EAEB5E',
     olive: '#666804'
+  },
+  layout: {
+    device: {
+      width,
+      height,
+      isSmallDevice: width < 375
+    }
   }
 };
 
