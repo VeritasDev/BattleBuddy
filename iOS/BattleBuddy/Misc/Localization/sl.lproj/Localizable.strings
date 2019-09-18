@@ -89,7 +89,7 @@
 "total_hp" = "Skupni HP";
 
 "body_zone_head" = "Glava";
-"body_zone_thorax" = "Prsni koš;
+"body_zone_thorax" = "Prsni koš";
 "body_zone_stomach" = "Želodec";
 "body_zone_right_arm" = "Desna roka";
 "body_zone_left_arm" = "Leva roka";
@@ -132,7 +132,7 @@
 "caliber" = "Kaliber";
 "fire_rate" = "Hitrost streljanja";
 "effective_range" = "Učinkovit domet";
-"fold_or_retract" = "Zložiti/izvlečno
+"fold_or_retract" = "Zložiti/izvlečno";
 "retractable" = "Izvlečna";
 "build_wizard" = "Čarovnik za gradnjo";
 "gun_build_custom" = "Po meri";
@@ -253,7 +253,7 @@
 "removes_fracture" = "Odstrani Zlom";
 "removes_pain" = "Odstrani Bolečino";
 "hydration_modifier" = "Hidracijski Modifikator";
-"energy_modifier" = "Energijski Modifikator
+"energy_modifier" = "Energijski Modifikator";
 
 // MARK: - Throwables
 "throwable_frag" = "Frag";
