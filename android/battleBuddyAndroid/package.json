@@ -10,11 +10,15 @@
     "lint": "eslint ./",
     "format": "npm run prettier -- --write",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
-    "validate": "npm run lint && npm run prettier -- --list-different",
-    "precommit": "lint-staged"
+    "validate": "npm run lint && npm run prettier -- --list-different"
   },
   "jest": {
     "preset": "jest-expo"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "@expo/samples": "~3.0.3",
