@@ -38,6 +38,7 @@ protocol HttpRequestor {
 enum AccountProperty: String {
     case lastLogin = "lastLogin"
     case loyalty = "loyalty"
+    case nickname = "nickname"
 }
 
 protocol SessionDelegate {
@@ -47,8 +48,10 @@ protocol SessionDelegate {
 protocol AccountManager {
     func initializeSession()
     func isLoggedIn() -> Bool
+    func currentUserMetadata() -> BBUser?
     func getValueForAccountProperty(_ property: AccountProperty, completion: @escaping (_ : Any?) -> Void)
-    func updateAccountProperties(_ : [AccountProperty: Any])
+    func updateAccountProperties(_ : [AccountProperty: Any], completion: @escaping (_ : Bool) -> Void)
+    func refreshUserMetadata(_ : @escaping (_ : BBUser?) -> Void)
     func addLoyaltyPoints(_ points: Int)
 }
 

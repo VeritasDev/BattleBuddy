@@ -12,6 +12,7 @@ import InMobiSDK
 class InmobiManager: NSObject, AdManager {
     var adDelegate: AdDelegate?
     var currentVideoAdState: VideoAdState = .idle
+    let prefsManager = DependencyManagerImpl.shared.prefsManager()
     let accountId = "1ca74bc970374286b43eb23451514f6d"
     let consentData: [AnyHashable: Any] = [IM_GDPR_CONSENT_AVAILABLE: "true", "gdpr": 1]
     lazy var video: IMInterstitial = IMInterstitial(placementId: 1567297909039, delegate: self)
@@ -34,11 +35,11 @@ class InmobiManager: NSObject, AdManager {
     }
 
     func bannerAdsEnabled() -> Bool {
-        return false
+        return prefsManager.valueForBoolPref(.bannerAds)
     }
 
     func updateBannerAdsSetting(_ enabled: Bool) {
-
+        prefsManager.update(.bannerAds, value: enabled)
     }
 
     func watchAdVideo(from rootVC: UIViewController) {

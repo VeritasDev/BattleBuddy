@@ -21,6 +21,7 @@ enum FirebaseCollection: String {
     case throwables = "grenade"
     case melee = "melee"
     case global = "global"
+    case users = "users"
 }
 
 enum ImageSize: String {
@@ -41,6 +42,8 @@ class FirebaseManager: NSObject {
     private lazy var throwableImageRef = storageRef.child("throwables")
     private lazy var meleeImageRef = storageRef.child("melee")
     var sessionDelegate: SessionDelegate
+    var userMetadata: BBUser?
+
 
     private lazy var prefsManager = DependencyManagerImpl.shared.prefsManager()
     var globalMetadata: GlobalMetadata?
@@ -84,7 +87,7 @@ extension FirebaseManager: AccountManager {
                 print("Anonymous auth succeeded.")
             }
 
-            self.updateAccountProperties([AccountProperty.lastLogin: Timestamp(date: Date())])
+            self.updateAccountProperties([AccountProperty.lastLogin: Timestamp(date: Date())]) { _ in }
             self.updateGlobalMetadata(handler: { _ in self.sessionDelegate.sessionDidFinishLoading() })
         }
     }
@@ -116,7 +119,7 @@ extension FirebaseManager: AccountManager {
         }
     }
 
-    func updateAccountProperties(_ properties: [AccountProperty: Any]) {
+    func updateAccountProperties(_ properties: [AccountProperty: Any], completion: @escaping (_: Bool) -> Void) {
         guard let currentUser = currentUser() else { return }
 
         var data: [String: Any] = [:]
@@ -124,8 +127,22 @@ extension FirebaseManager: AccountManager {
         db.collection("users").document(currentUser.uid).setData(data, merge: true) { err in
             if let err = err {
                 print("Error updating account properties: \(err)")
-            } else {
-                print("Account properties successfully written!")
+                completion(false)
+                return
+            }
+
+            print("Account properties successfully written!")
+            print("Fetching updated user data...")
+            self.refreshUserMetadata() { userMeta in
+                guard let userMeta = userMeta else {
+                    print("Error fetching updated user data: \(err)")
+                    completion(true)
+                    return
+                }
+
+                print("User data successfully refreshed!!")
+                self.userMetadata = userMeta
+                completion(true)
             }
         }
     }
@@ -133,7 +150,25 @@ extension FirebaseManager: AccountManager {
     func addLoyaltyPoints(_ points: Int) {
         print("Adding \(points) loyalty points to account!")
 
-        updateAccountProperties([AccountProperty.loyalty: FieldValue.increment(Int64(1))])
+        updateAccountProperties([AccountProperty.loyalty: FieldValue.increment(Int64(1))]) { _ in }
+    }
+
+    func refreshUserMetadata(_ handler: @escaping (_ : BBUser?) -> Void) {
+        guard let currentUser = currentUser() else { return }
+        let usersRef = db.collection(FirebaseCollection.users.rawValue).document(currentUser.uid)
+        usersRef.getDocument() { (document, err) in
+            guard let document = document, document.exists, let userMeta = document.data() else {
+                handler(nil)
+                return
+            }
+
+            self.userMetadata = BBUser(userMeta)
+            handler(self.userMetadata)
+        }
+    }
+
+    func currentUserMetadata() -> BBUser? {
+        return userMetadata
     }
 }
 

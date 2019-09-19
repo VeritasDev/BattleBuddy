@@ -9,11 +9,11 @@
 import Foundation
 
 struct BBUser {
-    let nickname: String
-    let adsWatched: NSNumber
+    let nickname: String?
+    let loyalty: NSNumber
 
     init(_ json: [String: Any]) {
-        nickname = json["nickname"] as? String ?? "Anonymous"
-        adsWatched = json["adsWatched"] as? NSNumber ?? NSNumber(value: 0)
+        nickname = json["nickname"] as? String
+        loyalty = json["loyalty"] as? NSNumber ?? NSNumber(value: 0)
     }
 }

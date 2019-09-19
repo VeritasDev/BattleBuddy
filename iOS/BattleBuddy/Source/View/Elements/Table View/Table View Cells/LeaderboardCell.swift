@@ -26,8 +26,8 @@ class LeaderboardCell: BaseTableViewCell {
     var user: BBUser? {
         didSet {
             guard let user = user else { return }
-            nameLabel.text = user.nickname
-            scoreLabel.text = scoreFormatter.string(from: user.adsWatched)
+            nameLabel.text = user.nickname ?? "nickname_placeholder".local()
+            scoreLabel.text = scoreFormatter.string(from: user.loyalty)
         }
     }
 

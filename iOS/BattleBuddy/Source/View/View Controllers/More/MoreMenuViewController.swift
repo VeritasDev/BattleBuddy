@@ -44,6 +44,16 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.height = 70.0
         return cell
     }()
+    let daysSinceWipeCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell()
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.font = .systemFont(ofSize: 22, weight: .regular)
+        cell.selectionStyle = .none
+        cell.isUserInteractionEnabled = false
+        cell.imageView?.image = UIImage(named: "wipe")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
+        return cell
+    }()
     let userCountCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
         cell.textLabel?.numberOfLines = 0
@@ -65,6 +75,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     }()
     let leaderboardCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
+        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         cell.textLabel?.text = "supporter_leaderboard".local()
         cell.textLabel?.numberOfLines = 0
         cell.accessoryType = .disclosureIndicator
@@ -142,13 +153,19 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         sections.append(aboutSection)
 
         if let metaData = globalMetadata {
+            let dateDifference = Date().timeIntervalSince(metaData.lastWipeDate)
+            let daysSinceWipe = ceil(dateDifference / 86_400)
+            let dayCountString = String(Int(daysSinceWipe))
+            let daysSinceWipeString =  "days_since_wipe".local(args: [dayCountString])
+            daysSinceWipeCell.textLabel?.attributedText = daysSinceWipeString.createAttributedString(boldedSubstring: dayCountString, font: .systemFont(ofSize: 20, weight: .light))
+
             userCount = metaData.totalUserCount
 
             let userCountString = numberFormatter.string(from: NSNumber(value: userCount)) ?? String(userCount)
             let fullUsersString = "total_users_count".local(args: [userCountString])
             userCountCell.textLabel?.attributedText = fullUsersString.createAttributedString(boldedSubstring: userCountString, font: .systemFont(ofSize: 18, weight: .light))
 
-            let statsCells = [userCountCell]
+            let statsCells = [daysSinceWipeCell, userCountCell, leaderboardCell]
             let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
             sections.append(globalStatsSection)
         }

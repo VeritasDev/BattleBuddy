@@ -6,42 +6,24 @@
 
 - [x] Submit v1.0
 - [x] Release v1.0
-- [ ] Release v1.0.1 ***In development - see TODO list below***
-- [ ] Release v1.1
-
-## <u>v1.0.1</u>
-- [x] Settings
-    - [x] Language override
-- [x] Refresh global info when app foregrounded
-- [x] Loyalty points implemented in app and server
-- [x] Fix comparison screen bugs
-- [x] Add app version info to about screen for debugging
-- [x] Jittery post screen
-- [x] Fix ads
-- [x] More menu cells issue
-- [x] Duplicate paragraphs on ballistics
-- [x] Korean
-- [x] Norwegian
-- [x] Slovenian
-- [x] Czech
-- [x] UIWebView deprecation
-- [x] Attributions Additions
-    - SmooothBrain for design work
-    - Betrix for images
-- [x] Finish translations
+- [x] Release v1.0.1  ***In Review By Apple***
+- [ ] Release v1.1  ***In development - see TODO list below***
 
 ## <u>v1.1</u>
-- [ ] Days since wipe counter
+- [x] Days since wipe counter
 - [ ] Ammo needs to be disconnected from global metadata!
 - [ ] Logging / tags / debugging / etc
-- [ ] Settings
-    - Nickname
-    - Enable Banner ads
-- [ ] Language override
+- [x] Settings
+    - [x] Nickname
+    - [x] Enable Banner ads
+- [ ] Implementing Banner Ads
+- [x] Language override
 - [ ] Stereo audio tool
-- [ ] Loyalty Leaderboard
+- [x] Loyalty Leaderboard
+- [ ] Info page on how to earn points
+- [ ] Loyalty points
     - [ ] Random bonus loyalty points % chance
-    - [ ] Points for watching ads
+    - [x] Points for watching ads
     - [ ] Points for launching app
     - [ ] Points for opening up each day
     - [ ] Points for enabling push notifications
@@ -56,12 +38,10 @@
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
-- [ ] Double-check Korean translations
 - [ ] Real-time community stats updates
 - [ ] Arabic HP fraction order
 - [ ] Arabic Comparison Layout issue
 - [ ] Pen chance cell text size
-- [ ] Twitch stream memory crash
 - [ ] Health calc buckshot fix
 
 ## <u>v1.2</u>
