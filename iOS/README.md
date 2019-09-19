@@ -5,135 +5,87 @@
 ## <u>Roadmap</u>
 
 - [x] Submit v1.0
-- [ ] Release v1.0 ***awaiting Apple review***
+- [x] Release v1.0
+- [ ] Release v1.0.1 ***In development - see TODO list below***
+- [ ] Release v1.1
 
-# Architecture
-- [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
-
-## <u>iOS v1.0</u>
-
-- [x] Handle weird data sync issues
-- [x] Replace Google Admob Key w/ Real One
-- [x] App store submission stuff
-    - Screenshots
-    - App description/copy/tags
-- [x] Localizations
-    - [x] Dutch
-    - [x] Italian
-    - [x] Swedish
-    - [x] Spanish (es)
-    - [x] Serbian
-    - [x] Croatian
-    - [x] Spanish (es-419)
-    - [x] Hungarian
-    - [x] Russian
-    - [x] Portuguese (br)
-    - [x] Lithuanian
-    - [x] Arabic
-    - [x] French
-    - [x] Portuguese (pt)
-    - [x] Polish
-    - [x] Chinese
-    - [x] German
-- [x] Instrument memory and processing performance
-- [x] Migrate Apple dev account from personal -> business
-- [x] Initial prototype
-- [x] Firebase migration
-- [x] Item lists and detail pages
-    - [x] Firearms
-    - [x] Body Armor
-    - [x] Medical
-    - [x] Ammo
-    - [x] Throwables
-    - [x] Melee weapons
-- [x] Item searching
-- [x] Prototype health/damage calculator
-- [x] Penetration chance calculator
-- [x] Blog post/writeup for ballistics system
-- [x] Misc. App Info in *More* menu
-    - [x] Info about Veritas
-        - [x] Universal links to discord, socials, etc
-    - [x] Upcoming features
-    - [x] Links to github
-    - [x] Attributions for help on app
-    - [x] Link to The Team
-- [x] Initial integration of ad support
-- [x] iPad support for each screen
-- [x] Main menu
-- [x] Search results
-- [x] Item lists
-- [x] Blog posts
-- [x] Base stack view
-- [x] Pen chance calc
-- [x] Health Calc
-- [x] Item Details
-- [x] Comparisons
-- [x] Right-to-left language support
-- [x] Client update user count
-- [x] Server update user count
-- [x] Ensure watch an ad - handle not loaded
-- [x] Fix any broken autolayout constraints
-
-## Pre-release Checklist
-- [ ] Update Localizations
-- [ ] Check any TODOs
-- [ ] Update screenshots?
-- [ ] Write 'whats new in this version'
-- [ ] Ensure all keys are updated with production keys
-    - [ ] Google Ad Mob
-- [ ] Update attributions
+## <u>v1.0.1</u>
+- [x] Settings
+    - [x] Language override
+- [x] Refresh global info when app foregrounded
+- [x] Loyalty points implemented in app and server
+- [x] Fix comparison screen bugs
+- [x] Add app version info to about screen for debugging
+- [x] Jittery post screen
+- [x] Fix ads
+- [x] More menu cells issue
+- [x] Duplicate paragraphs on ballistics
+- [x] Korean
+- [x] Norwegian
+- [x] Slovenian
+- [x] Czech
+- [x] UIWebView deprecation
+- [x] Attributions Additions
+    - SmooothBrain for design work
+    - Betrix for images
+- [x] Finish translations
 
 ## <u>v1.1</u>
-- Global metrics
-    - Total ads watched count
-    - Total supporters
-    - Leaderboards
-- Survival rate calculator
-    - Survival rate
-    - Investment per run
-    - Total earned per run
-- Change upcoming features blog post to news / updates
-- Additional Info to Existing Items:
-    - Compatible Mods on Firearms
-    - Related items feed
-- Add New Item Types
+- [ ] Days since wipe counter
+- [ ] Ammo needs to be disconnected from global metadata!
+- [ ] Logging / tags / debugging / etc
+- [ ] Settings
+    - Nickname
+    - Enable Banner ads
+- [ ] Language override
+- [ ] Stereo audio tool
+- [ ] Loyalty Leaderboard
+    - [ ] Random bonus loyalty points % chance
+    - [ ] Points for watching ads
+    - [ ] Points for launching app
+    - [ ] Points for opening up each day
+    - [ ] Points for enabling push notifications
+    - [ ] Banner ads
+    - [ ] Interstitial
+- [ ] Add New Item Types
     - Helmets and accessories
-    - Headphones
-    - Rigs
-    - Mods
-        - See all attachments that fits on it
-        - See all mods it can attach to
-        - See all mods it conflicts with 
-- Support
-    - Banner ads
-    - IAP
-    - Leaderboard Integration
-- Attributions Additions
-    - SmooothBrain for design work
-- Add ? info to health calculator
-- Add ? info to comparison screen
-- Penetration Calculator Improvements
+- [ ] Implement Banner Ads (if setting enabled)
+- [ ] Penetration Calculator Improvements
     - Helmets/face shields/mods
     - Armored Rigs + Multi-layer support to ballistics calc
-
-## <u>v1.2</u>
-- Health Calculator Improvements
+- [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
+- [ ] Double-check Korean translations
+- [ ] Real-time community stats updates
+- [ ] Arabic HP fraction order
+- [ ] Arabic Comparison Layout issue
+- [ ] Pen chance cell text size
+- [ ] Twitch stream memory crash
+- [ ] Health calc buckshot fix
+
+## <u>v1.2</u>
 - Display shot result
 - News/changelog
+- IAP
 - BSG Twitter Feed
 - Skills and how to level them
+- [ ] Add ? info to health calculator
+- [ ] Add ? info to comparison screen
+- [ ] Additional Info to Existing Items:
+    - Compatible Mods on Firearms
+    - Related items feed
 - Comparison Screen Improvements
     - Revisit range again
     - Color scheme preference, gradient, black/white, highlight best/worst?
 - Favoriting Items
+- [ ] Reduce image sizes in Firebase storage
+- [ ] Known issues post
 - Firearm building
     - Custom
     - Max ergo
     - Min recoil
     - Random
-- Nuke UIKit to the ground; Foundation FTW
 - V-Harmony Item Matchmaker (play on e-harmony)
     - Select the type (gun, armor, helmet to start)
     - Questionnaire - What's is and isn't important to you? Fire rate, bullet, pen, damage, mobility, etc
@@ -143,8 +95,30 @@
 - Strat Roulette
 - Task item checklist / shopping list
 - Gun building help + random build + UI
+- [ ] Survival rate calculator
+    - Survival rate
+    - Investment per run
+    - Total earned per run
+- [ ] Change upcoming features blog post to news / updates
+- [ ] Push notification support v1.0
+- [ ] Shots to kill calculator
+    - Choose target
+    - Choose armor
+    - Choose aim type (thorax only, headshots only, leg meta)
+    - Choose fragmentation type (never - worst case, always - best case, ammo specific - realistic)
+    - Calculate
+- [ ] Add New Item Types
+    - Rigs
+    - Helmets and accessories
+    - Headphones
+    - Mods
+    - See all attachments that fits on it
+    - See all mods it can attach to
+    - See all mods it conflicts with 
     
 ## <u>Backlog</u>
+- Nuke UIKit to the ground; Foundation FTW
+- Surveys
 - Crowdsourced images + gallery for items + fullscreen images
 - Profile
     - Supporter type
@@ -189,6 +163,19 @@
     - PMC lines
     - Scav lines
 - Logging
+
+## Pre-release Checklist
+- [ ] Update Localizations
+- [ ] Check any TODOs
+- [ ] Update screenshots?
+- [ ] Write 'whats new in this version'
+- [ ] Ensure all keys are updated with production keys
+- [ ] Google Ad Mob
+- [ ] Update attributions
+
+
+# Architecture
+- [ ] There's files and folders and shit... More to come here once I get some time to make some nifty diagrams...
 
 ## Project / Repo TODO:
 

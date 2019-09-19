@@ -9,6 +9,8 @@
 import UIKit
 
 extension UIViewController {
+    static func dm() -> DependencyManager { return DependencyManagerImpl.shared }
+
     func handleUrlString(_ urlString: String) {
         let app = UIApplication.shared
 
@@ -53,5 +55,11 @@ extension UIStackView {
 
         NSLayoutConstraint.deactivate(removedSubviews.flatMap({ $0.constraints }))
         removedSubviews.forEach({ $0.removeFromSuperview() })
+    }
+}
+
+extension NSTextAlignment {
+    static var invNatural: NSTextAlignment {
+        return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft ? .left : .right
     }
 }

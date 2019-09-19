@@ -10,6 +10,7 @@ import UIKit
 
 struct AmmoComparison: ItemComparison {
     var propertyType: ComparablePropertyType = .ammo
+    var allItems: [Comparable]
     var itemsBeingCompared: [Comparable]
     var possibleOptions: [Comparable]
     var recommendedOptions: [Comparable]
@@ -20,6 +21,7 @@ struct AmmoComparison: ItemComparison {
     var preferRecommended: Bool = true
 
     init(_ initialAmmo: Ammo? = nil, allAmmo: [Ammo]) {
+        allItems = allAmmo
         if let ammo = initialAmmo {
             possibleOptions = allAmmo
 
@@ -53,10 +55,10 @@ struct AmmoComparison: ItemComparison {
         var fragChanceRange = PropertyRange()
         var muzzleVelRange = PropertyRange()
 
-        for case let ammo as Ammo in itemsBeingCompared {
+        for case let ammo as Ammo in allItems {
             penRange.updatedRangeIfNeeded(candidateValue: Float(ammo.penetration))
-            damageRange.updatedRangeIfNeeded(candidateValue: Float(ammo.damage))
-            armorDamageRange.updatedRangeIfNeeded(candidateValue: Float(ammo.armorDamage))
+            damageRange.updatedRangeIfNeeded(candidateValue: Float(ammo.resolvedDamage))
+            armorDamageRange.updatedRangeIfNeeded(candidateValue: Float(ammo.resolvedArmorDamage))
             fragChanceRange.updatedRangeIfNeeded(candidateValue: Float(ammo.fragChance))
             muzzleVelRange.updatedRangeIfNeeded(candidateValue: Float(ammo.muzzleVelocity))
         }
@@ -75,11 +77,11 @@ struct AmmoComparison: ItemComparison {
         let range = getComparedItemsSummaryMap()[property]!
 
         switch property {
-        case .penetration: return scaledValue(propertyValue: Float(ammo.penetration), range: range, traitCollection: traitCollection)
-        case .damage: return scaledValue(propertyValue: Float(ammo.damage), range: range, traitCollection: traitCollection)
-        case .armorDamage: return scaledValue(propertyValue: Float(ammo.armorDamage), range: range, traitCollection: traitCollection)
-        case .fragChance: return scaledValue(propertyValue: Float(ammo.fragChance), range: range, traitCollection: traitCollection)
-        case .muzzleVelocity: return scaledValue(propertyValue: Float(ammo.muzzleVelocity), range: range, traitCollection: traitCollection)
+        case .penetration: return scaledValue(propertyValue: Float(ammo.penetration), range: range)
+        case .damage: return scaledValue(propertyValue: Float(ammo.resolvedDamage), range: range)
+        case .armorDamage: return scaledValue(propertyValue: Float(ammo.resolvedArmorDamage), range: range)
+        case .fragChance: return scaledValue(propertyValue: Float(ammo.fragChance), range: range)
+        case .muzzleVelocity: return scaledValue(propertyValue: Float(ammo.muzzleVelocity), range: range)
         default: fatalError()
         }
     }

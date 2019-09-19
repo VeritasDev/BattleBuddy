@@ -10,8 +10,9 @@ import UIKit
 
 struct MedicalComparison: ItemComparison {
     var propertyType: ComparablePropertyType = .medical
+    var allItems: [Comparable]
     var itemsBeingCompared: [Comparable]
-    var possibleOptions: [Comparable] = []//ItemController(itemFilter: MedicalFilter()).getItems()
+    var possibleOptions: [Comparable] = []
     var recommendedOptions: [Comparable]
     var recommendedOptionsTitle: String?
     var secondaryRecommendedOptions: [Comparable] = []
@@ -20,6 +21,7 @@ struct MedicalComparison: ItemComparison {
     var preferRecommended: Bool = true
 
     init(_ initialMed: Medical? = nil, allMedical: [Medical]) {
+        allItems = allMedical
         if let medical = initialMed {
             self.itemsBeingCompared = MedicalComparison.generateRecommendedOptions(medical, allMedical: allMedical)
             recommendedOptions = self.itemsBeingCompared
@@ -47,7 +49,7 @@ struct MedicalComparison: ItemComparison {
         var useTimeRange = PropertyRange()
         var effectDurationRange = PropertyRange()
 
-        for case let med as Medical in itemsBeingCompared {
+        for case let med as Medical in allItems {
             useCountRange.updatedRangeIfNeeded(candidateValue: Float(med.totalUses))
             useTimeRange.updatedRangeIfNeeded(candidateValue: Float(med.useTime))
             effectDurationRange.updatedRangeIfNeeded(candidateValue: Float(med.effectDuration))
@@ -69,13 +71,13 @@ struct MedicalComparison: ItemComparison {
         let range = getComparedItemsSummaryMap()[property]!
 
         switch property {
-        case .useCount: return scaledValue(propertyValue: Float(med.totalUses), range: range, traitCollection: traitCollection)
-        case .useTime: return scaledValue(propertyValue: Float(med.useTime), range: range, traitCollection: traitCollection)
-        case .effectDuration: return scaledValue(propertyValue: Float(med.effectDuration), range: range, traitCollection: traitCollection)
-        case .removesBloodloss: return scaledValue(boolValue: med.removesBloodloss, range: range, traitCollection: traitCollection)
-        case .removesPain: return scaledValue(boolValue: med.removesPain, range: range, traitCollection: traitCollection)
-        case .removesFracture: return scaledValue(boolValue: med.removesFracture, range: range, traitCollection: traitCollection)
-        case .removesContusion: return scaledValue(boolValue: med.removesContusion, range: range, traitCollection: traitCollection)
+        case .useCount: return scaledValue(propertyValue: Float(med.totalUses), range: range)
+        case .useTime: return scaledValue(propertyValue: Float(med.useTime), range: range)
+        case .effectDuration: return scaledValue(propertyValue: Float(med.effectDuration), range: range)
+        case .removesBloodloss: return scaledValue(boolValue: med.removesBloodloss, range: range)
+        case .removesPain: return scaledValue(boolValue: med.removesPain, range: range)
+        case .removesFracture: return scaledValue(boolValue: med.removesFracture, range: range)
+        case .removesContusion: return scaledValue(boolValue: med.removesContusion, range: range)
         default: fatalError()
         }
     }

@@ -22,13 +22,13 @@ class DependencyManagerImpl: DependencyManager {
     var metadataMngr: GlobalMetadataManager?
     var ammoUtilitiesMngr: AmmoUtilitiesManager?
     var deviceMngr: DeviceManager?
+    var localeMngr: LocaleManager?
 
     func assembleDependencies(_ appDelegate: AppDelegate) {
-        // Firebase handles sessions, accounts, storage, metadata, and ads.
+        // Firebase handles sessions, accounts, storage, and metadata
         let firebase = FirebaseManager(sessionDelegate: appDelegate)
         firebaseMngr = firebase
         dbMngr = firebase
-        adMngr = firebase
         accountMngr = firebase
         metadataMngr = firebase
 
@@ -39,6 +39,8 @@ class DependencyManagerImpl: DependencyManager {
         feedbackMngr = FeedbackManagerImpl()
         ammoUtilitiesMngr = AmmoUtilitiesManagerImpl()
         deviceMngr = DeviceManagerImpl()
+        localeMngr = LocaleManagerImpl()
+        adMngr = InmobiManager()
     }
 
     func accountManager() -> AccountManager { return accountMngr! }
@@ -52,4 +54,5 @@ class DependencyManagerImpl: DependencyManager {
     func metadataManager() -> GlobalMetadataManager { return metadataMngr! }
     func ammoUtilitiesManager() -> AmmoUtilitiesManager { return ammoUtilitiesMngr! }
     func deviceManager() -> DeviceManager { return deviceMngr! }
+    func localeManager() -> LocaleManager { return localeMngr! }
 }

@@ -13,6 +13,7 @@ enum MenuItemType: CaseIterable, Localizable {
     case firearms
     case ammunition
     case armor
+    case helmets
     case medical
     case melee
     case throwables
@@ -21,11 +22,13 @@ enum MenuItemType: CaseIterable, Localizable {
     case ballistics
     case healthCalc
     case penChanceCalc
+    case soundTraining
 
     func local(short: Bool = false) -> String {
         switch self {
         case .ammunition: return Localized("main_menu_ammo")
         case .armor: return Localized("main_menu_armor")
+        case .helmets: return Localized("main_menu_helmets")
         case .ballistics: return Localized("main_menu_ballistics")
         case .healthCalc: return Localized("main_menu_health_calc")
         case .firearms: return Localized("main_menu_firearms")
@@ -33,6 +36,7 @@ enum MenuItemType: CaseIterable, Localizable {
         case .medical: return Localized("main_menu_medical")
         case .throwables: return Localized("main_menu_throwables")
         case .penChanceCalc: return Localized("pen_chance")
+        case .soundTraining: return Localized("sound_training")
         }
     }
 }
@@ -70,10 +74,12 @@ struct MainMenuItem {
         case .armor:
             handler(ItemListViewController(itemType: .armor))
             return
+        case .helmets:
+//            handler(ItemListViewController(itemType: .armor))
+            return
         case .medical:
             handler(ItemListViewController(itemType: .medical))
             return
-
         case .ballistics:
             handler(PostViewController(BallisticsPost()))
             return
@@ -83,7 +89,9 @@ struct MainMenuItem {
         case .penChanceCalc:
             handler(PenChanceCalcViewController())
             return
-
+        case .soundTraining:
+            handler(SoundTrainingViewController())
+            return
         case .throwables:
             DependencyManagerImpl.shared.databaseManager().getAllThrowables { throwables in
                 handler(BaseItemPreviewViewController(delegate: nil, config: ThrowablesPreviewConfiguration(items: throwables)))
@@ -104,43 +112,21 @@ struct MainMenuItem {
         case .melee: return UIImage(named: "card_hero_melee")
         case .throwables: return UIImage(named: "card_hero_throwables")
         case .armor: return UIImage(named: "card_hero_armor")
+        case .helmets: return UIImage(named: "card_hero_helmets")
         case .ballistics: return UIImage(named: "card_hero_ballistics")
         case .medical: return UIImage(named: "card_hero_medical")
         case .penChanceCalc: return UIImage(named: "card_hero_pen_chance")
         case .healthCalc: return UIImage(named: "card_hero_health_calc")
+        case .soundTraining: return UIImage(named: "card_hero_sound_training")
         }
     }
 
     func configureCell(_ cell: MainMenuCell) {
-        let alignment: NSTextAlignment
-
-        switch type {
-        case .firearms:
-            alignment = .right
-        case .armor:
-            alignment = .left
-        case .ammunition:
-            alignment = .left
-        case .medical:
-            alignment = .right
-        case .melee:
-            alignment = .left
-        case .throwables:
-            alignment = .left
-        case .ballistics:
-            alignment = .right
-        case .penChanceCalc:
-            alignment = .right
-        case .healthCalc:
-            alignment = .left
-        }
-
         cell.imageView.image = cardImage()
         cell.label.font = UIFont.systemFont(ofSize: 32.0, weight: .heavy)
         cell.label.textColor = .white
         cell.label.layer.shadowColor = UIColor.black.cgColor
         cell.label.text = type.local()
-        cell.label.textAlignment = alignment
     }
 
     func updateLayoutForCell(_ cell: MainMenuCell) {
@@ -154,14 +140,6 @@ struct MainMenuItem {
         cell.label.frame = CGRect.init(x: 0, y: 0, width: labelWidth, height: 0)
         cell.label.sizeToFit()
         let labelHeight = cell.label.frame.height
-        let topFrame = CGRect.init(x: xPadding, y: yPadding, width: labelWidth, height: labelHeight)
-        let bottomFrame = CGRect.init(x: xPadding, y: containerHeight - labelHeight - yPadding, width: labelWidth, height: labelHeight)
-
-        switch type {
-        case .firearms, .ammunition, .melee, .throwables, .healthCalc:
-            cell.label.frame = bottomFrame
-        default:
-            cell.label.frame = topFrame
-        }
+        cell.label.frame = CGRect.init(x: xPadding, y: containerHeight - labelHeight - yPadding, width: labelWidth, height: labelHeight)
     }
 }

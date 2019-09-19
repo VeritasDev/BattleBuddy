@@ -50,8 +50,16 @@ class AmmoDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewD
 
         caliberCell.detailTextLabel?.text = ammo.caliber
         penetrationCell.detailTextLabel?.text = String(ammo.penetration)
-        damageCell.detailTextLabel?.text = String(ammo.damage)
-        armorDamageCell.detailTextLabel?.text = String(ammo.armorDamage)
+
+        if ammo.projectileCount > 1 {
+            damageCell.detailTextLabel?.text = "\(Int(ammo.resolvedDamage)) (\(ammo.damage)x\(ammo.projectileCount))"
+            armorDamageCell.detailTextLabel?.text = "\(Int(ammo.resolvedArmorDamage)) (\(ammo.armorDamage)x\(ammo.projectileCount))"
+        } else {
+            damageCell.detailTextLabel?.text = String(ammo.damage)
+            armorDamageCell.detailTextLabel?.text = String(ammo.armorDamage)
+        }
+
+
         fragChanceCell.detailTextLabel?.text = String(Int(ammo.fragChance * 100)) + "%"
         tracerCell.detailTextLabel?.text = Localized(ammo.tracer ? "yes" : "no")
         subsonicCell.detailTextLabel?.text = Localized(ammo.subsonic ? "yes" : "no")

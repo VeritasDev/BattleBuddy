@@ -10,7 +10,6 @@ import Foundation
 import Firebase
 import FirebaseStorage
 import FirebaseUI
-import GoogleMobileAds
 import FirebaseFirestore
 import FirebaseAuth
 
@@ -43,19 +42,11 @@ class FirebaseManager: NSObject {
     private lazy var meleeImageRef = storageRef.child("melee")
     var sessionDelegate: SessionDelegate
 
-    let videoAd: GADRewardBasedVideoAd
-    var adDelegate: AdDelegate?
-    var currentVideoAdState: VideoAdState = .unavailable
-
-    // TODO: Get real IDs
-    private let videoAdUnit = "ca-app-pub-3940256099942544/1712485313"
-
     private lazy var prefsManager = DependencyManagerImpl.shared.prefsManager()
     var globalMetadata: GlobalMetadata?
 
     init(sessionDelegate: SessionDelegate) {
         self.sessionDelegate = sessionDelegate
-        self.videoAd = GADRewardBasedVideoAd.sharedInstance()
 
         super.init()
 
@@ -63,10 +54,6 @@ class FirebaseManager: NSObject {
 
         // Uncomment this out for debugging purposes.
 //        FirebaseConfiguration.shared.setLoggerLevel(.max)
-        videoAd.delegate = self
-        GADMobileAds.sharedInstance().start { _ in
-            self.reloadVideoAd()
-        }
     }
 
     // MARK:- Images
@@ -142,53 +129,11 @@ extension FirebaseManager: AccountManager {
             }
         }
     }
-}
 
-// MARK:- Ads
-extension FirebaseManager: AdManager {
-    func bannerAdsEnabled() -> Bool { return prefsManager.valueForBoolPref(.bannerAds) }
+    func addLoyaltyPoints(_ points: Int) {
+        print("Adding \(points) loyalty points to account!")
 
-    func updateBannerAdsSetting(_ enabled: Bool) { prefsManager.update(.bannerAds, value: enabled) }
-
-    func reloadVideoAd(after delay: Double = 0) {
-        updateAdState(state: .unavailable)
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            self.currentVideoAdState = .loading
-            self.videoAd.load(GADRequest(), withAdUnitID: self.videoAdUnit)
-        }
-    }
-
-    func watchAdVideo(from rootVC: UIViewController) {
-        if videoAd.isReady { videoAd.present(fromRootViewController: rootVC) }
-    }
-
-    func rewardForWatchingAd() {
-        updateAccountProperties([.adsWatched: FieldValue.increment(Int64(1))])
-    }
-}
-
-extension FirebaseManager: GADRewardBasedVideoAdDelegate {
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-        rewardForWatchingAd()
-    }
-
-    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-        reloadVideoAd(after: 1)
-    }
-
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
-        print("AD FAILED!: \(error.localizedDescription)")
-        updateAdState(state: .unavailable)
-        reloadVideoAd(after: 15)
-    }
-
-    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-        updateAdState(state: .ready)
-    }
-
-    func updateAdState(state: VideoAdState) {
-        currentVideoAdState = state
-        self.adDelegate?.adManager(self, didUpdate: currentVideoAdState)
+        updateAccountProperties([AccountProperty.loyalty: FieldValue.increment(Int64(1))])
     }
 }
 

@@ -19,6 +19,7 @@ private struct ComparedMeleePropertiesSummary {
 
 struct MeleeWeaponComparison: ItemComparison {
     var propertyType: ComparablePropertyType = .melee
+    var allItems: [Comparable]
     var itemsBeingCompared: [Comparable]
     var possibleOptions: [Comparable]
     var recommendedOptions: [Comparable]
@@ -30,13 +31,14 @@ struct MeleeWeaponComparison: ItemComparison {
     private var comparedItemsSummary: ComparedMeleePropertiesSummary?
 
     init(_ allMelee: [MeleeWeapon]) {
+        allItems = allMelee
         itemsBeingCompared = allMelee
         recommendedOptions = allMelee
         possibleOptions = []
 
         var summary = ComparedMeleePropertiesSummary()
 
-        for case let melee as MeleeWeapon in itemsBeingCompared {
+        for case let melee as MeleeWeapon in allItems {
             let candidateStabDmg = Float(melee.stabDamage)
             let candidateStabRate = Float(melee.stabRate)
             let candidateStabRange = Float(melee.stabRange)
@@ -61,12 +63,12 @@ struct MeleeWeaponComparison: ItemComparison {
         let range = getComparedItemsSummaryMap()[property]!
 
         switch property {
-        case .stabDamage: return scaledValue(propertyValue: Float(melee.stabDamage), range: range, traitCollection: traitCollection)
-        case .stabRate: return scaledValue(propertyValue: Float(melee.stabRate), range: range, traitCollection: traitCollection)
-        case .stabRange: return scaledValue(propertyValue: Float(melee.stabRange), range: range, traitCollection: traitCollection)
-        case .slashDamage: return scaledValue(propertyValue: Float(melee.slashDamage), range: range, traitCollection: traitCollection)
-        case .slashRate: return scaledValue(propertyValue: Float(melee.slashRate), range: range, traitCollection: traitCollection)
-        case .slashRange: return scaledValue(propertyValue: Float(melee.slashRange), range: range, traitCollection: traitCollection)
+        case .stabDamage: return scaledValue(propertyValue: Float(melee.stabDamage), range: range)
+        case .stabRate: return scaledValue(propertyValue: Float(melee.stabRate), range: range)
+        case .stabRange: return scaledValue(propertyValue: Float(melee.stabRange), range: range)
+        case .slashDamage: return scaledValue(propertyValue: Float(melee.slashDamage), range: range)
+        case .slashRate: return scaledValue(propertyValue: Float(melee.slashRate), range: range)
+        case .slashRange: return scaledValue(propertyValue: Float(melee.slashRange), range: range)
         default: fatalError()
         }
     }

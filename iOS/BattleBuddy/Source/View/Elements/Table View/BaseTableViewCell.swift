@@ -9,6 +9,8 @@
 import UIKit
 
 class BaseTableViewCell: UITableViewCell {
+    var height: CGFloat = UITableView.automaticDimension
+
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -17,6 +19,7 @@ class BaseTableViewCell: UITableViewCell {
         backgroundColor = UIColor(white: 0.05, alpha: 1.0)
         textLabel?.textColor = UIColor(white: 0.9, alpha: 1.0)
         detailTextLabel?.textColor = .white
+        tintColor = UIColor.Theme.primary
     }
 
     convenience init(text: String? = nil, accessory: UITableViewCell.AccessoryType = .disclosureIndicator, selection: UITableViewCell.SelectionStyle = .gray) {
@@ -30,6 +33,7 @@ class BaseTableViewCell: UITableViewCell {
         accessoryType = accessory
         selectionStyle = selection
         isUserInteractionEnabled = selection != .none
+        tintColor = UIColor.Theme.primary
     }
 
     convenience init(style: UITableViewCell.CellStyle = .subtitle, text: String? = nil, detailText: String? = nil, accessory: UITableViewCell.AccessoryType = .none, selection: UITableViewCell.SelectionStyle = .gray) {
@@ -44,5 +48,6 @@ class BaseTableViewCell: UITableViewCell {
         accessoryType = accessory
         selectionStyle = selection
         isUserInteractionEnabled = selection != .none
+        tintColor = UIColor.Theme.primary
     }
 }

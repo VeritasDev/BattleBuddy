@@ -42,25 +42,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
     // SessionDelegate
 
     func sessionDidFinishLoading() {
+        reloadRootViewController()
+        DependencyManagerImpl.shared.feedbackManager().promptForReviewIfNecessary()
+    }
+
+    func reloadRootViewController() {
         let itemsVC = ItemsMenuViewController()
-        itemsVC.title = NSLocalizedString("items", comment: "")
+        itemsVC.title = "items".local()
         itemsVC.tabBarItem.image = UIImage(named: "items")
         let itemsNC = BaseNavigationController(rootViewController: itemsVC)
 
         let learnVC = LearnMenuViewController()
-        learnVC.title = NSLocalizedString("learn", comment: "")
+        learnVC.title = "learn".local()
         learnVC.tabBarItem.image = UIImage(named: "learn")
         let learnNC = BaseNavigationController(rootViewController: learnVC)
 
         let moreVC = MoreMenuViewController()
-        moreVC.title = NSLocalizedString("more", comment: "")
+        moreVC.title = "more".local()
         moreVC.tabBarItem.image = UIImage(named: "more")
         let moreNC = BaseNavigationController(rootViewController: moreVC)
 
         self.tabBarController.setViewControllers([itemsNC, learnNC, moreNC], animated: false)
         self.window?.rootViewController = self.tabBarController
-
-        DependencyManagerImpl.shared.feedbackManager().promptForReviewIfNecessary()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

@@ -62,15 +62,19 @@ class ItemListViewController: BaseStackViewController {
                 self.buildStackFromConfig()
             }
         case .ammo:
-            guard let metadata = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata() else { return }
-            let ammoMetadata = metadata.ammoMetadata
-            let orderedMetadata = ammoMetadata.sorted(by: { $0.index < $1.index })
-
             self.dbManager.getAllAmmoByCaliber { ammoMap in
                 hud.dismiss(animated: false)
+
+                let allCalibers: [String]
+                if let metadata = DependencyManagerImpl.shared.metadataManager().getGlobalMetadata() {
+                    let ammoMetadata = metadata.ammoMetadata
+                    allCalibers = ammoMetadata.sorted(by: { $0.index < $1.index }).map { $0.caliber }
+                } else {
+                    allCalibers = Array(ammoMap.keys)
+                }
+
                 var ammoSections: [ItemSection] = []
-                for metadata in orderedMetadata {
-                    let caliber = metadata.caliber
+                for caliber in allCalibers {
                     if let items = ammoMap[caliber], items.count > 0 {
                         ammoSections.append(ItemSection(title: caliber, items: items))
                     }

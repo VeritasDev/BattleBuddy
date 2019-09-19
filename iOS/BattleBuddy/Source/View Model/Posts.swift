@@ -24,7 +24,7 @@ final class BallisticsPost: PostConfiguration {
             PostElementBody(body: "ballistics_body_2_2_1".local()),
             PostElementYouTube(videoId: "3KbFMHp4NOE", height: 260.0),
             PostElementBody(body: "ballistics_body_2_2_2".local()),
-            PostElementBody(body: "ballistics_body_2_2_2".local()),
+            PostElementBody(body: "ballistics_body_2_2_3".local()),
             PostElementImage(image: UIImage(named: "ballistics_post_1")!, height: 200.0),
             PostElementBodyTitle(title: "ballistics_body_2_3_title".local()),
             PostElementBody(body: "ballistics_body_2_3".local()),

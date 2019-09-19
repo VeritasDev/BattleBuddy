@@ -1,0 +1,330 @@
+// MARK: - General
+"yes" = "Ja";
+"no" = "Ne";
+"ok" = "OK";
+"done" = "končano";
+"soon" = "Kmalu™";
+"coming_soon" = "Prihaja kmalu™";
+"unknown" = "Neznano";
+"type" = "Tip";
+"continue" = "Nadaljuj";
+"veritas" = "Veritas";
+"required" = "Potrebno";
+
+// MARK: - Filter/sort/compare
+"compare" = "Primerjaj";
+"name" = "Ime";
+"save" = "Shrani";
+"recommended" = "Predlagano";
+"similar" = "Podobno";
+"all" = "Vse";
+"compare_with" = "Primerjaj z...";
+
+// MARK: - More / Attributions
+"about" = "O Battle Buddy";
+"dev_by" = "Razvijalec je Veritas";
+"dev_support" = "Hočeš podpredi razvijalca?";
+"watch_ad" = "Poglej oglas";
+"enable_banner_ads" = "Vključi oglasni pas";
+"view_on_github" = "Poglej na GitHub";
+"rate_this_app" = "Oceni Battle Buddy";
+"attributions" = "Atribucije";
+"check_out_team" = "Preveri ekipo";
+"team" = "Ekipa";
+"twitter" = "Twitter";
+"twitch" = "Twitch";
+"discord" = "Discord";
+"youtube" = "YouTube";
+"instagram" = "Instagram";
+"soundcloud" = "Soundcloud";
+"website" = "veritas.wtf";
+"spotify" = "Spotify";
+"social" = "Social";
+"music" = "moja glasba";
+"website_error" = "Te vsebine ni mogoče naložiti. Prepričajte se, da imate nameščeno ustrezno aplikacijo.";
+"live_now" = "V živo zdaj!";
+"feedback_title" = "Predlogi za povratne informacije ali funkcije?";
+"feedback_subtitle" = "Pridruži se našemu Discordu!";
+"upcoming_features" = "Prihajajoče funkcije";
+
+"twitter_description" = "Bodite na tekočem";
+"twitch_description" = "Gledaj v živo na Twitchu";
+"discord_description" = "Pridružite se naši Discord skupnosti";
+"youtube_description" = "Gledaj na YouTubu";
+"instagram_description" = "Mediji na instagramu";
+"soundcloud_description" = "Poslušaj na Soundcloudu";
+"spotify_description" = "Poslušaj na Spotifyu";
+"website_description" = "Več o Veritasu";
+
+// MARK: - Tabs
+"items" = "Predmeti";
+"learn" = "Nauči se";
+"more" = "Več";
+"search" = "Iskanje";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "Strelivo";
+"main_menu_armor" = "Oklep/neprebojni jopič";
+"main_menu_ballistics" = "Balistika";
+"main_menu_firearms" = "Orožja";
+"main_menu_medical" = "Medicinsko";
+"main_menu_melee" = "Melee orožje";
+"main_menu_throwables" = "Predmeti ki se lahko mečejo";
+"main_menu_health_calc" = "Kalkulator škode";
+
+// MARK: - Sub-Categories
+"firearm_types" = "Vrste orožja";
+"calibers" = "Calibri";
+
+// MARK: - Calculators
+"pen_chance" = "Možnost predrtja";
+"no_armor_selected" = "Oklep ni izbran";
+"no_ammo_selected" = "Strelivo ni izbrano";
+"select_ammo" = "Izberi strelivo";
+"select_armor" = "Izberi oklep/neprebojni jopič";
+"pen_chance_help_title" = "Kalkulator možnosti penetracije";
+"pen_chance_help_message" = "To orodje izračuna možnost, da bo izbrana krogla prodrla v določen oklep/neprebojni jopič. Ko izberete kroglo in oklep/neprebojni jopič, lahko z drsnikom prilagodite simulirano vzdržljivost oklepa/neprebojnega jopiča, da vidite, kako učinkoviti so različni krogle proti oklepu/neprebojnem jopiču na različnih stopnjah trajnosti!";
+
+"health_calc_title" = "Kalkulator škode";
+"total_hp" = "Skupni HP";
+
+"body_zone_head" = "Glava";
+"body_zone_thorax" = "Prsni koš";
+"body_zone_stomach" = "Želodec";
+"body_zone_right_arm" = "Desna roka";
+"body_zone_left_arm" = "Leva roka";
+"body_zone_right_leg" = "Desna noga";
+"body_zone_left_leg" = "Leva noga";
+
+// MARK: - Items
+"armor" = "Oklep/neprebojni jopič";
+"helmets" = "Čelade";
+"ballistics" = "Balistika";
+"health" = "Zdravje";
+"firearms" = "Orožja";
+"ammunition" = "Streljivo";
+"body_armor" = "Oklep/neprebojni jopič";
+"medical_items" = "Medicinski predmeti";
+"throwables" = "Predmeti ki se lahko mečejo";
+"healing_items" = "Zdravilni predmeti";
+"pain_management" = "Obvladovanje bolečine";
+"status_management" = "Upravljanje stanja učinkov";
+"stims" = "Stimulansi";
+"grenades" = "Granate";
+"properties" = "Lastnosti";
+"performance" = "Zmogljivost";
+"ergonomics" = "Ergonomija";
+"ergo" = "Ergo";
+"vertical_recoil" = "Vertikalni Povratek";
+"horizontal_recoil" = "Horizontalni Povratek";
+"recoil" = "Povratek";
+
+// MARK: - Weapons
+"weapon_class" = "Razred";
+"assault_rifle" = "Jurišne puške";
+"assault_carbine" = "Jurišne karabinke";
+"sniper_rifle" = "Ostrostrelske puške";
+"designated_marksman_rifle" = "DMR";
+"pistol" = "Pištola";
+"shotgun" = "Pumparca";
+"sub_machine_gun" = "Pod strojnica";
+"machine_gun" = "Strojnica";
+"caliber" = "Kaliber";
+"fire_rate" = "Hitrost streljanja";
+"effective_range" = "Učinkovit domet";
+"fold_or_retract" = "Zložiti/izvlečno";
+"retractable" = "Izvlečna";
+"build_wizard" = "Čarovnik za gradnjo";
+"gun_build_custom" = "Po meri";
+"gun_build_recoil" = "Minimalni Povratek";
+"gun_build_ergo" = "Maksimalna ergonomija";
+"gun_build_random" = "Naključno";
+"fire_mode" = "Streljski način";
+"fire_modes" = "Streljski načini";
+"fire_mode_semi" = "Polavtomatski";
+"fire_mode_auto" = "Avtomatsko";
+"fire_mode_burst" = "Burst";
+"fire_mode_semi_short" = "polauto";
+"fire_mode_auto_short" = "Avto";
+"fire_mode_burst_short" = "Burst";
+"action" = "Action";
+"action_type_pump" = "Pumparca";
+"action_type_bolt" = "Repetirka";
+"action_type_pump_short" = "Pump";
+"action_type_bolt_short" = "Repetirka";
+"build" = "Zgradi";
+"build_this_gun" = "sestavite to pištolo";
+
+"compare_preset_semi_auto_rifle" = "Polavtomatske puške";
+"compare_preset_full_auto_rifles" = "Automatske puške";
+"compare_preset_rifles_caliber_match" = "Puške z istim kalibrom";
+"compare_preset_rifles" = "Puške";
+"compare_preset_full_auto_caliber_match" = "automatske puške z istim kalibrom";
+"compare_preset_semi_auto_pistols" = "Polavtomatske pištole";
+"compare_preset_full_auto_pistols" = "Automatske pištole";
+"compare_preset_pistols_caliber_match" = "Pištole z istim kalibrom";
+"compare_preset_pistols" = "Pištolce";
+"compare_preset_manual_shotguns" = "Ročne pumparce";
+"compare_preset_shotguns" = "Pumparce";
+"compare_preset_smgs_caliber_match" = "Brzostrelke z istim kalibrom";
+"compare_preset_smgs" = "Brzostrelke";
+"compare_preset_bolt_snipers" = "Repetirne Ostrostrelske puške";
+"compare_preset_snipers_and_dmrs" = "Ostrostrelske puške in DMRji";
+"compare_preset_dmrs" = "Dezignirane ostrostrelske puške ";
+
+// MARK: - Ammo
+"guns_for_caliber" = "Sorodna orožja";
+"subsonic" = "Podzvočno";
+"tracer" = "Sledilnik";
+"muzzle_velocity" = "Izstopna hitrost (m/s)";
+"compatible_firearms" = "Compatibilna orožja";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "Noben";
+"armor_class_1" = "Razred 1";
+"armor_class_2" = "Razred 2";
+"armor_class_3" = "Razred 3";
+"armor_class_4" = "Razred 4";
+"armor_class_5" = "Razred 5";
+"armor_class_6" = "Razred 6";
+"armor_type_body" = "Oklep/Neprebojni Jopič";
+"armor_type_helmet"= "Čelada";
+"armor_type_visor" = "Vizir";
+"armor_type_attachment" = "Nastavki";
+"armor_zone_top" = "Zgoraj";
+"armor_zone_eyes" = "Oči";
+"armor_zone_jaws" = "Čeljust";
+"armor_zone_ears" = "Ušesa";
+"armor_zone_nape" = "Vrat";
+"armor_zone_chest" = "Prsni Koš";
+"armor_zone_stomach" = "Želodec";
+"armor_zone_left_arm" = "Leva Roka";
+"armor_zone_right_arm" = "Desna Roka";
+"armor_zone_left_leg" = "Leva Noga";
+"armor_zone_right_leg" = "Desna Noga";
+"armor_mat_ceramic" = "Keramika";
+"armor_mat_armored_steel" = "Ojačano Jeklo";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "Kombinirano";
+"armor_mat_aluminum" = "Aluminij";
+"armor_mat_glass" = "Steklo";
+"armor_mat_titanium" = "Titan";
+
+"armor_type" = "Tip";
+"armor_material" = "Material";
+"armor_class" = "Razred";
+"armor_points" = "Trpežnost";
+"armor_zones" = "Območja";
+"penalties" = "Kazni";
+"speed_penalty" = "Hitrost";
+"turn_speed_penalty" = "Hitrost Obračanja";
+"ergo_penalty" = "Ergonomija";
+
+"penetration" = "Predrtje";
+"damage" = "Škoda";
+"armor_damage" = "Armor Damage";
+"frag_chance" = "Možnost razdrobljenosti";
+
+"explore" = "razišči";
+"compare" = "Primerjaj";
+"compare_performance" = "Primerjaj Zmogljivost";
+"dps_calc" = "DPS Kalkulator";
+"kill_time_calc" = "Kill Time Kalkulator";
+
+// MARK: - Medical
+"damage" = "Škoda";
+"contusion" = "kontuzija";
+"fracture" = "Zlom";
+"pain" = "Bolečina";
+"medkit" = "Medkit";
+"painkiller" = "Protibolečinski Tableti";
+"accessory" = "Dodatna Oprema";
+"stimulator" = "Stimulator";
+"use_time" = "Čas Uporabe";
+"effect_duration" = "Trajanje Učinka";
+"use_count" = "# Kratna Uporaba";
+"hp_resource" = "Skupni HP";
+"removes_bloodloss" = "Odstrani Izgubo krvi";
+"removes_contusion" = "Odstrani Kontruzijo";
+"removes_fracture" = "Odstrani Zlom";
+"removes_pain" = "Odstrani Bolečino";
+"hydration_modifier" = "Hidracijski Modifikator";
+"energy_modifier" = "Energijski Modifikator";
+
+// MARK: - Throwables
+"throwable_frag" = "Frag";
+"throwable_flash" = "Blisk";
+"throwable_smoke" = "Dim";
+"fuse_time" = "Čas Varovalke";
+"explosion_radius_min" = "Min Območje Eksplozije";
+"explosion_radius_max" = "Max Območje Eksplozije";
+"fragmentation_count" = "Število Fragmentov";
+
+// MARK: - Melee
+"damage" = "Škoda";
+"rate" = "Hitrost";
+"range" = "Domet";
+
+"stab" = "zabodi";
+"stab_dmg" = "Škoda Vboda";
+"stab_rate" = "Hitrsot Vboda";
+"stab_range" = "Domet Zaboda";
+
+"slash" = "Urez";
+"slash_dmg" = "Škoda Ureza";
+"slash_rate" = "Hitrost Ureza";
+"slash_range" = "Domet Ureza";
+
+// MARK: - Posts
+"ballistics_title" = "Oklep/Neprebojni Jopič in balistika: Osnove";
+"ballistics_body_1" = "Balistični sistem Escape from Tarkov je črna škatla, ki si jo je ogledalo samo nekaj ljudi. Zaradi zapletenosti formul, ki se uporabljajo za izračun stvari, kot so možnosti za prodor na površino, koti rikošeta in poškodbe oklepa/Neprebojnega Jopiča in teles igralcev, pa tudi elementov, ki temeljijo na RNG, ki jih uporabljajo, je pogosto neopazna razlika v času ubitja , če primerjamo popolnoma oboroženega igralca na visokem levelu, ki nosi najboljšo opremo za končno igro, in igralca prve stopnje, ki nima nič drugega kot pištolo začetnega nivoja. Skupaj z dobro znanimi težavami z mrežnim in zmogljivostmi napakami in vedno večjim številom igralcev z epskimi igralskimi nogavicami, dvoumnost verjetno najpomembnejšega sistema igre služi samo za povečanje zmede in frustracije tako novih kot veteranskih igralcev vsak dan.";
+"ballistics_body_2" = "Začetk z telesnim oklepom/Neprebojnim Jopičem, kako deluje in kaj morate vedeti? Zunaj razpoložljivosti in cene je pet pomembnih stvari, ki jih morate upoštevati pri izbiri oklepa/Neprebojnega Jopiča, ki ga boste kupili, prodali, popravili, opremili ali zavrgli - razred, vzdržljivost, območja zaščite, material in kazni.";
+"ballistics_body_2_1_title" = "1. Oklepni Razred";
+"ballistics_body_2_1" = "Vsak oklepni sestavni del, od oklepa/Neprebojnega jopiča do balističnih nastavkov čelade, ima določen razred oklepa.Razred oklepa je po mojem mnenju najpomembnejši vidik zaščitnega  oklepa. Preprosto povedano, oklepni razred predstavlja, kako učinkovit je oklep pri zaustavljanju projektilov z različnimi stopnjami balistične učinkovitosti. Trenutno se razredi oklepov gibljejo od 1 do 6, in kot ste morda uganili, večja je številka, tem bolje. \n \nLevel 1 okelp/neprebojni jopič vas lahko zaščiti pred stvarmi, kot so ricošeji krogel, šrapneli in pištol ki ne uporabljajo AP krogel. -kalibri ali buckshot nabojam. Oklep 6. stopnje vas lahko zaščiti pred večino projektilov do in celo vključi kroge največjega kalibra v igri. Tu sem namerno izbral besedo \"sposoben\", ker vsak balistični vpliv vključuje različne stopnje naključnih možnosti. \n \nČe gre za balistiko v Escape from Tarkov, nič ni zagotovljeno in stvari, ki jih doživljamo, se včasih zdijo nemogoče ali ne smiselno. Torej, kaj to na koncu pomeni? Kateri oklep me bo zaščitil pred kakšnimi izstrelki? To je zapleteno vprašanje, o katerem bom podrobneje spoznal pozneje, ko bom razpravljal o podrobnostih, povezanih z vplivom balistike.";
+"ballistics_body_2_2_title" = "2. Trpežnost";
+"ballistics_body_2_2_1" = "Kar se tiče vzdržljivosti oklepa/neprebojnega jopiča, je pomembno upoštevati, da so se specifike že večkrat spremenile in jih seveda BSG lahko kadar koli spremeni. O trajnosti oklepa je treba vedeti, da je njegova sposobnost zaščite uporabnika odvisna od njegove trenutne vrednosti trajnosti v primerjavi s prvotno največjo vrednostjo trajnosti, ko je bil nov.";
+"ballistics_body_2_2_2" = "Če se na primer oklep začne s 50 vzdržljivostmi, zagotavlja najboljšo zaščito, kot je 50/50, kar je precej očitno. Manj očiten del je, da je vsak oklep, ki je poškodovan in še ni bil popravljen, na primer oklep 40/50, ravno tako učinkovit, da vas zaščiti kot isti oklep, če je bil poškodovan in nato popravljen in je trenutno 40 / 40.";
+"ballistics_body_2_2_3" = "Pomembna navada je, da poznate prvotno največjo vrednost trpežnosti za različne komplete oklepa ali pogledate pas za vzdržljivost pri pregledu predmeta. Pogosto lahko najdete oklep nižjega razreda od vašega trenutnega oklepa, če pa je vaš trenutni oklep močno poškodovan ali je bil večkrat popravljen, morda dejansko povečate svoje možnosti, da oklep rešuje življenje, če preklopite na oklep nižjega razreda z višjim odstotkom vzdržljivosti toka. Popolnoma razumevanje možnosti splošne zaščite za različne razrede oklepa, vrednosti trajnosti in lastnosti prodiranja krogel je v nekaterih bojnih situacijah lahko neprecenljivo. Oglejte si kalkulator škode, da začnete imeti občutek, kako vse to deluje!";
+"ballistics_body_2_3_title" = "3. Območja zaščite";
+"ballistics_body_2_3" = "Na to temo ne bi smel podrobneje opisovati, razen tega, da se morate spomniti enega preprostega pravila: oklep ne ščiti tistega, kar se mu vizualno zdi, da ščiti! Najboljši primer za to je pogled na polni zaščitni oklep Gen4 proti jurišnem Gen4. Popolna zaščitna različica je videti, kot da pokriva večino vašega telesa, vendar ščiti vaše dele telesa popolnoma enako kot jurišni gen4, ker ima enake cone zaščite. Bodite pozorni, katera območja so zaščitena - izpuščanje rok ali želodca je lahko zelo moteče in je pogosto vredno dodatne zaščite, če si jo lahko privoščite!";
+"ballistics_body_2_4_title" = "4. Materiali";
+"ballistics_body_2_4" = "Vsak oklep ima različne materiale, iz katerih je izdelan. Trenutno materiali nimajo pomembnega učinka na zaščitno zaščito oklepa, namesto tega material oklep postane pomemben pri popravilu. Nekatere materiale je mogoče popraviti zelo učinkovito in poceni, drugi pa pri popravilu znatno izgubijo svojo trajnost in pogosto lahko stanejo več kot prvotni stroški oklepa!";
+"ballistics_body_2_5_title" = "5. Kazni";
+"ballistics_body_2_5" = "Na splošno velja, da dodatna zaščita prinaša stroške, ti stroški pa so lahko finančni in praktični. Vsak kos oklepa prihaja z nizom kazni. Nekateri upočasnijo vaše gibanje, nekateri upočasnijo hitrost obračanja in celo splošno ergonomijo, kar vpliva na hitrost, s katero ciljate navzdol, na hitrost izgube vzdržljivosti in celo na glasnost vašega characterja, ko se premikate počasi ali ciljate. Nekatere zaščite glave lahko na več načinov omejijo sluh in celo zasenčijo vid. To so kompromisi, ki bi jih morali upoštevati pri odločitvi, ali želite iti na dražje komplete oklepov ali thicc čelado Kille. Kateri oklep in čelade sta vredni? To se morate odločiti!";
+"ballistics_body_3_title" = "Povzetek";
+"ballistics_body_3" = "Balistični sistem Escape from Tarkov je neverjetno zapleten in zahteva kar nekaj izkušenj in znanja, da ga lahko uporabimo v svojo korist. Zgoraj navedeni video \"oklep/neprebojni jopič in balistika\" pojasnjuje nekatere od teh pojmov podrobneje, zato preverite, če ste zainterisirani, če boste slišali več o tej temi. Bodite varni v battlefieldu!";
+
+"health_title" = "Zdravje in stanje vašega PMC-a";
+"health_body_1" = "Te informacije bodo kmalu prišle™";
+
+"upcoming_body_1" = "Za to aplikacijo imam načrtovanih toliko odličnih funkcij, tako da komaj čakam , da zgradim vse to za skupnost! Interaktivni zemljevidi, oblikovanje orožja, vodniki iskanja, več predmetov in kalkulatorjev, informacije o trgovcih, razčlenitve veščin in še več! Načrtujem sprotno posodabljanje, vendar sem želel čim prej dostaviti različico 1.0, da začnete meriti in zbirati povratne informacije. Kmalu preverite, ali obstajajo posodobitve!";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Community";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Miscellaneous Legal Stuff";
+"attributions_translations" = "Localization";
+
+"attributions_api_descr" = "Ta projekt ne bi bil mogoč brez fantastičnega razvitja, ki ga je naredil Morphy na bazi podatkov Tarkov in z njim povezanih API-jev.";
+"attributions_nofam_descr" = "Nesojeni junak v skupnosti EFT, ustvarjalec strelivih in sodelavec balističnih kalkulatorjev in z njimi povezanih informacij, veleposlanik za strelivo, baron balistike, profesor prodora!";
+"attributions_willerz_descr" = "Veliko ljubezni svojemu domačemu zaradi zagotavljanja nekaterih epskih posnetkov zaslona, ​​ki mi jih je dal, dovoljenje za uporabo v tej aplikaciji. Zgodi se, da je tudi eden najboljših igralcev na svetu. ";
+"attributions_community_descr" = "Veliko ljubezni mojemu homeboyu in moji skupnosti v Discordu za vso trdo delo, ki je zajemalo in urejalo čudovite fotografije uporabljene v tej aplikaciji!";
+"attributions_translations_descr" = "Vse prevode so opravili člani skupnosti, ki so vložili svoj čas in trud za to stvar. Vsi po vsem svetu cenijo vaše trdo delo!";
+"attributions_bsg_descr" = "Posebna zahvala Nikiti za podporo tej aplikaciji in vsem ljudem na BSG za njihovo trdo delo in predanost pri gradnji najboljšega prvoligaškega strelca vseh časov.";
+"attributions_misc_descr" = "avtor Ikone družbenih medijev  Abhishek Pipalva  (https://www.iconfinder.com/abhishekpipalva) licenca pod CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC.";
+
+// Analytics
+"total_users_count" = "%@ Battle Buddies so se pridružili boju!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Statistika Skupnosti";
+"settings" = "Nastavitve";
+"language_system_default" = "Sistem";
+"language" = "Jezik";

@@ -24,6 +24,7 @@ protocol DependencyManager {
     func metadataManager() -> GlobalMetadataManager
     func ammoUtilitiesManager() -> AmmoUtilitiesManager
     func deviceManager() -> DeviceManager
+    func localeManager() -> LocaleManager
 }
 
 // MARK:- Networking
@@ -36,7 +37,7 @@ protocol HttpRequestor {
 
 enum AccountProperty: String {
     case lastLogin = "lastLogin"
-    case adsWatched = "adsWatched"
+    case loyalty = "loyalty"
 }
 
 protocol SessionDelegate {
@@ -48,6 +49,7 @@ protocol AccountManager {
     func isLoggedIn() -> Bool
     func getValueForAccountProperty(_ property: AccountProperty, completion: @escaping (_ : Any?) -> Void)
     func updateAccountProperties(_ : [AccountProperty: Any])
+    func addLoyaltyPoints(_ points: Int)
 }
 
 // MARK: - Database
@@ -80,6 +82,7 @@ protocol DatabaseManager {
 
 enum VideoAdState {
     case unavailable
+    case idle
     case loading
     case ready
 }
@@ -91,43 +94,10 @@ protocol AdDelegate {
 protocol AdManager {
     var adDelegate: AdDelegate? { get set }
     var currentVideoAdState: VideoAdState { get }
+    func loadVideoAd()
     func bannerAdsEnabled() -> Bool
     func updateBannerAdsSetting(_ enabled: Bool)
     func watchAdVideo(from rootVC: UIViewController)
-}
-
-// MARK:- Global Metadata
-
-struct AmmoMetadata {
-    let caliber: String
-    let displayName: String
-    let index: Int
-}
-
-struct GlobalMetadata {
-    let totalUserCount: Int
-    let totalAdsWatched: Int
-    let ammoMetadata: [AmmoMetadata]
-
-    init?(json: [String: Any]) {
-        guard let ammoMeta = json["ammoMetadata"] as? [String: [String: Any]], let boxedUserCount = json["totalUserCount"] as? NSNumber, let boxedAdCount = json["totalAdsWatched"] as? NSNumber else {
-            return nil
-        }
-
-        var tempAmmoMeta: [AmmoMetadata] = []
-        for caliber in ammoMeta.keys {
-            guard let data = ammoMeta[caliber], let displayName = data["displayName"] as? String,
-                let rawIndex = data["index"] as? NSNumber else {
-                return nil
-            }
-
-            tempAmmoMeta.append(AmmoMetadata(caliber: caliber, displayName: displayName, index: rawIndex.intValue))
-        }
-
-        totalUserCount = boxedUserCount.intValue
-        totalAdsWatched = boxedAdCount.intValue
-        ammoMetadata = tempAmmoMeta
-    }
 }
 
 protocol GlobalMetadataManager {
@@ -153,4 +123,16 @@ protocol FeedbackManager {
 
 protocol DeviceManager {
     func appVersionString() -> String?
+}
+
+// MARK:- Locale
+
+struct LanguageSetting {
+    let code: String
+    let displayName: String
+}
+
+protocol LocaleManager {
+    func supportedLanguages() -> [LanguageSetting]
+    func currentLanguageDisplayName() -> String
 }

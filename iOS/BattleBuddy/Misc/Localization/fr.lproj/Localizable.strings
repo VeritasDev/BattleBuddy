@@ -246,10 +246,10 @@
 "stimulator" = "Stimulant";
 "use_time" = "Temps d'utilisation";
 "effect_duration" = "Durée d'effet";
-"use_count" = "# d'utilisations";
+"use_count" = "# utilisations";
 "hp_resource" = "Points de vie totaux";
-"removes_bloodloss" = "Soigne un saignement";
-"removes_contusion" = "Arrête la confusion";
+"removes_bloodloss" = "Arrête le saignement";
+"removes_contusion" = "Retire la confusion";
 "removes_fracture" = "Soigne une fracture";
 "removes_pain" = "Arrête la douleur";
 "hydration_modifier" = "Modificateur d'hydratation";
@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "%@ Battle Buddies ayant rejoint le combat!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Statistiques communautaires";
+"settings" = "Paramètres";
+"language_system_default" = "Système";
+"language" = "Langue";

@@ -320,4 +320,11 @@
 "attributions_misc_descr" = "Ikony mediów społecznościowych zrobione prez Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licencjonowane na podstawie CC. 'Brain' ikona zrobiona prez Sergey Patutin z Noun Project (https://thenounproject.com/bdesign.by/) licencjonowany na podstawie CC.";
 
 // Analytics
-"total_users_count" = "Battle Buddies dołączyło do walki!";
+"total_users_count" = "%@ Battle Buddies dołączyło do walki!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Statystyki Społeczności";
+"settings" = "Ustawienia";
+"language_system_default" = "System";
+"language" = "Język";

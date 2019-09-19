@@ -10,6 +10,7 @@ import UIKit
 
 struct ArmorComparison: ItemComparison {
     var propertyType: ComparablePropertyType = .armor
+    var allItems: [Comparable]
     var itemsBeingCompared: [Comparable]
     var possibleOptions: [Comparable]
     var recommendedOptions: [Comparable]
@@ -20,6 +21,7 @@ struct ArmorComparison: ItemComparison {
     var preferRecommended: Bool = true
 
     init(_ initialArmor: Armor? = nil, allArmor: [Armor]) {
+        allItems = allArmor
         possibleOptions = allArmor
 
         if let armor = initialArmor {
@@ -54,7 +56,7 @@ struct ArmorComparison: ItemComparison {
         var turnSpeedPenRange = PropertyRange()
         var ergoPenRange = PropertyRange()
 
-        for case let armor as Armor in itemsBeingCompared {
+        for case let armor as Armor in allItems {
             classRange.updatedRangeIfNeeded(candidateValue: Float(armor.armorClass.rawValue))
             durabilityRange.updatedRangeIfNeeded(candidateValue: Float(armor.maxDurability))
             zonesRange.updatedRangeIfNeeded(candidateValue: armor.armorZoneConfig.coveragePercent(type: armor.armorType))
@@ -78,12 +80,12 @@ struct ArmorComparison: ItemComparison {
         let range = getComparedItemsSummaryMap()[property]!
 
         switch property {
-        case .armorClass: return scaledValue(propertyValue: Float(armor.armorClass.rawValue), range: range, traitCollection: traitCollection)
-        case .armorDurability: return scaledValue(propertyValue: Float(armor.maxDurability), range: range, traitCollection: traitCollection)
-        case .armorZones: return scaledValue(propertyValue: armor.armorZoneConfig.coveragePercent(type: armor.armorType), range: range, traitCollection: traitCollection)
-        case .speedPenalty: return scaledValue(propertyValue: Float(armor.penalties.movementSpeed), range: range, traitCollection: traitCollection)
-        case .turnSpeedPenalty: return scaledValue(propertyValue: Float(armor.penalties.turnSpeed), range: range, traitCollection: traitCollection)
-        case .ergoPenalty: return scaledValue(propertyValue: Float(armor.penalties.ergonomics), range: range, traitCollection: traitCollection)
+        case .armorClass: return scaledValue(propertyValue: Float(armor.armorClass.rawValue), range: range)
+        case .armorDurability: return scaledValue(propertyValue: Float(armor.maxDurability), range: range)
+        case .armorZones: return scaledValue(propertyValue: armor.armorZoneConfig.coveragePercent(type: armor.armorType), range: range)
+        case .speedPenalty: return scaledValue(propertyValue: Float(armor.penalties.movementSpeed), range: range)
+        case .turnSpeedPenalty: return scaledValue(propertyValue: Float(armor.penalties.turnSpeed), range: range)
+        case .ergoPenalty: return scaledValue(propertyValue: Float(armor.penalties.ergonomics), range: range)
         default: fatalError()
         }
     }

@@ -321,3 +321,26 @@
 
 //MARK:- Analytics
 "total_users_count" = "%@ Battle Buddies have joined the fight!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Community Stats";
+"settings" = "Settings";
+"language_system_default" = "System";
+"language" = "Language";
+
+// ----------------------------------------
+// V1.1.0
+"supporter_leaderboard" = "Supporter Leaderboard";
+"leaderboard" = "Leaderboard";
+"total_ads_watched" = "%@ ads watched by the community!";
+
+"sound_training" = "Sound Training";
+
+"main_menu_helmets" = "Helmets";
+
+"attributions_smoooth" = "SmooothBrain";
+"attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbails, album covers and 3D animations - this man is a legend!";
+
+"attributions_betrix" = "Betrix";
+"attributions_betrix_descr" = "Many of the beautiful menu images and in-game item screenshots were created by Betrix!";

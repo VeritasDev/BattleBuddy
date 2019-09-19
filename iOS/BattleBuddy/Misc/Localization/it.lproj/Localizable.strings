@@ -321,3 +321,10 @@
 
 // Analytics
 "total_users_count" = "%@ Battle Buddies sono entrati in battaglia!";
+
+// ----------------------------------------
+// V1.0.1
+"global_stats" = "Statistiche Comunitarie";
+"settings" = "Impostazioni";
+"language_system_default" = "Sistema";
+"language" = "Linguaggio";

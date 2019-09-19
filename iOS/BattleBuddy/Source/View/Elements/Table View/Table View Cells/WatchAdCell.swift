@@ -24,13 +24,14 @@ class WatchAdCell: BaseTableViewCell {
 
         accessory.hidesWhenStopped = true
         accessoryView = accessory
+        height = 70.0
 
         updateVideoAdState()
     }
 
     func updateVideoAdState() {
         switch videoAdState {
-        case .loading:
+        case .loading, .idle:
             accessory.startAnimating()
             accessory.alpha = 1.0
             contentView.alpha = 0.1

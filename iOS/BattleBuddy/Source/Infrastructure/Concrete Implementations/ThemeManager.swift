@@ -23,10 +23,6 @@ class ThemeManager {
         tabBarAppearance.tintColor = UIColor.Theme.primary
         tabBarAppearance.unselectedItemTintColor = .gray
 
-        let tabBarItemAppearance = UITabBarItem.appearance()
-        let tabBarItemAttr: [NSAttributedString.Key : Any]? = [.foregroundColor: UIColor.Theme.primary]
-        tabBarItemAppearance.setTitleTextAttributes(tabBarItemAttr, for: .normal)
-
         let switchAppearance = UISwitch.appearance()
         switchAppearance.onTintColor = UIColor.Theme.primary
     }
