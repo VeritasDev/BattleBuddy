@@ -25,7 +25,7 @@ const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
 `;
 
-const SettingsScreen = ({navigation}) => {
+const MoreScreen = ({navigation}) => {
   const DATA = [
     {
       title: 'About Battle Buddy',
@@ -102,7 +102,7 @@ const SettingsScreen = ({navigation}) => {
   );
 };
 
-SettingsScreen.navigationOptions = {
+MoreScreen.navigationOptions = {
   title: 'More',
   headerStyle: {
     backgroundColor: '#191919'
@@ -113,10 +113,10 @@ SettingsScreen.navigationOptions = {
   }
 };
 
-SettingsScreen.propTypes = {
+MoreScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired
   })
 };
 
-export default SettingsScreen;
+export default MoreScreen;
