@@ -317,7 +317,6 @@
 "attributions_community_descr" = "Much love to my community in the Discord for all of the hard work capturing and editing the beautiful photos used in this app!";
 "attributions_translations_descr" = "All translations were done by community members donating their time and effort to the cause. Everyone around the world appreciates your hard work!";
 "attributions_bsg_descr" = "Special thanks to Nikita for his support of this app, and to all the folks at BSG for their hard work and dedication in building the best first-person shooter of all time.";
-"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC.";
 
 //MARK:- Analytics
 "total_users_count" = "%@ Battle Buddies have joined the fight!";
@@ -348,6 +347,7 @@
 
 // MARK:- Menu Items
 "sound_training" = "Sound Training";
+"sound_training_post" = "";
 "main_menu_helmets" = "Helmets";
 
 // MARK:- Attributions
@@ -365,3 +365,7 @@
 "speed_penalty_full" = "Speed Penalty";
 "turn_speed_penalty_full" = "Turn Speed Penalty";
 "ergo_penalty_full" = "Ergonomics Penalty";
+
+// ----------------------------------------
+// V1.1.0 - Changes to existing translations
+"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC. Top-down soldier animation images copyright Riley Gombart.";

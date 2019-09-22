@@ -39,6 +39,14 @@ final class BallisticsPost: PostConfiguration {
     }
 }
 
+final class SoundLocalizationPost: PostConfiguration {
+    var title: String?
+
+    var elements: [PostElement] {
+        return []
+    }
+}
+
 final class UpcomingFeaturesPost: PostConfiguration {
     var title: String? = "upcoming_features".local()
 

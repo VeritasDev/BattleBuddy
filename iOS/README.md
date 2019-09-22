@@ -6,20 +6,23 @@
 
 - [x] Submit v1.0
 - [x] Release v1.0
-- [x] Release v1.0.1  ***In Review By Apple***
+- [x] Release v1.0.1
+- [x] Release v1.0.2 
 - [ ] Release v1.1  ***In development - see TODO list below***
 
 ## <u>v1.1</u>
 - [ ] Add New Item Types
     - [x] Helmets
+    - [ ] Helmet
     - [ ] Accessories
     - [x] Compare helmets secondary recommendation are one class below
 - [x] Placeholder images for helmets
 - [x] Resize helmet placeholder
 - [ ] Placeholder images for accessories
-- [ ] Ammo needs to be disconnected from global metadata!
+- [x] Ammo needs to be disconnected from global metadata!
 - [ ] Implementing Banner Ads
 - [ ] Stereo audio tool
+- [ ] Stereo audio post writeup
 - [ ] Info page on how to earn points
 - [ ] Loyalty points
     - [ ] Random bonus loyalty points % chance
@@ -45,7 +48,6 @@
 - [ ] Buckshot damage multiplier
 - [ ] Cell label font sizing
 - [ ] Attributions for localizations I missed last release
-- [ ] Logging / tags / debugging / etc
 - [x] Days since wipe counter
 - [x] Settings
     - [x] Nickname
@@ -106,6 +108,7 @@
     - See all mods it conflicts with 
     
 ## <u>Backlog</u>
+- [ ] Logging / tags / debugging / etc
 - Nuke UIKit to the ground; Foundation FTW
 - Surveys
 - Crowdsourced images + gallery for items + fullscreen images
