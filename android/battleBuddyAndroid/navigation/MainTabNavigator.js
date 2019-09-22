@@ -14,6 +14,7 @@ import TeamScreen from '../screens/More/TeamScreen';
 import PenChanceScreen from '../screens/Learn/PenChanceScreen';
 import DamageCalcScreen from '../screens/Learn/DamageCalcScreen';
 import BallisticsScreen from '../screens/Learn/BallisticsScreen';
+import ItemDetailScreen from '../screens/Item/ItemDetailScreen';
 
 const config = Platform.select({
   web: {headerMode: 'screen'},
@@ -49,7 +50,8 @@ const transitionConfig = () => ({
 const HomeStack = createStackNavigator(
   {
     Home: {screen: HomeScreen, path: 'home'},
-    Firearms: {screen: ItemScreen, path: 'firearms'}
+    Firearms: {screen: ItemScreen, path: 'firearms'},
+    Detail: {screen: ItemDetailScreen, path: 'detail'}
   },
   {
     ...config,
