@@ -11,6 +11,7 @@ import ItemScreen from '../screens/ItemScreen';
 import VeritasScreen from '../screens/More/VeritasScreen';
 import AttributionsScreen from '../screens/More/AttributionsScreen';
 import TeamScreen from '../screens/More/TeamScreen';
+import ItemDetailScreen from '../screens/Item/ItemDetailScreen';
 
 const config = Platform.select({
   web: {headerMode: 'screen'},
@@ -20,7 +21,8 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
   {
     Home: {screen: HomeScreen, path: 'home'},
-    Firearms: {screen: ItemScreen, path: 'firearms'}
+    Firearms: {screen: ItemScreen, path: 'firearms'},
+    Detail: {screen: ItemDetailScreen, path: 'detail'}
   },
   {
     ...config,
