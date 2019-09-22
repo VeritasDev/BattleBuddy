@@ -14,8 +14,8 @@ struct ArmorComparison: ItemComparison {
     var itemsBeingCompared: [Comparable]
     var possibleOptions: [Comparable]
     var recommendedOptions: [Comparable]
-    var secondaryRecommendedOptions: [Comparable] = []
-    var secondaryRecommendedOptionsTitle: String? = nil
+    var secondaryRecommendedOptions: [Comparable]
+    var secondaryRecommendedOptionsTitle: String?
     var propertyOptions: [ComparableProperty] = ComparableProperty.propertiesForType(type: .armor)
     var recommendedOptionsTitle: String?
     var preferRecommended: Bool = true
@@ -25,9 +25,13 @@ struct ArmorComparison: ItemComparison {
         possibleOptions = allArmor
 
         if let armor = initialArmor {
-            itemsBeingCompared = ArmorComparison.generateRecommendedOptions(armor, allArmor: allArmor)
+            let recommendations = ArmorComparison.generateRecommendedOptions(armor, allArmor: allArmor)
+            itemsBeingCompared = recommendations.primary
             recommendedOptions = itemsBeingCompared
             recommendedOptionsTitle = armor.armorClass.local()
+
+            secondaryRecommendedOptions = recommendations.secondary
+            secondaryRecommendedOptionsTitle = recommendations.secondaryTitle
 
             // Filter out recommendations from all possible
             for recommended in recommendedOptions {
@@ -36,16 +40,68 @@ struct ArmorComparison: ItemComparison {
         } else {
             itemsBeingCompared = []
             recommendedOptions = []
+            secondaryRecommendedOptions = []
         }
     }
 
-    private static func generateRecommendedOptions(_ initialArmor: Armor, allArmor: [Armor]) -> [Armor] {
+    private static func generateRecommendedOptions(_ initialArmor: Armor, allArmor: [Armor]) -> (primary: [Armor], secondary: [Armor], secondaryTitle: String?) {
         let armorMatchingClassAndType = allArmor.filter {
             if initialArmor.armorType != $0.armorType { return false }
             if initialArmor.armorClass != $0.armorClass { return false }
             return true
         }
-        return armorMatchingClassAndType
+
+
+        let secondaryRecommendation: [Armor]
+        let secondaryTitle: String?
+        switch initialArmor.armorClass {
+        case .none:
+            secondaryRecommendation = []
+            secondaryTitle = nil
+        case .one:
+            secondaryRecommendation = allArmor.filter {
+                if initialArmor.armorType != $0.armorType { return false }
+                if $0.armorClass != .two { return false }
+                return true
+            }
+            secondaryTitle = ArmorClass.two.local()
+        case .two:
+            secondaryRecommendation = allArmor.filter {
+                if initialArmor.armorType != $0.armorType { return false }
+                if $0.armorClass != .three { return false }
+                return true
+            }
+            secondaryTitle = ArmorClass.three.local()
+        case .three:
+            secondaryRecommendation = allArmor.filter {
+                if initialArmor.armorType != $0.armorType { return false }
+                if $0.armorClass != .four { return false }
+                return true
+            }
+            secondaryTitle = ArmorClass.four.local()
+        case .four:
+            secondaryRecommendation = allArmor.filter {
+                if initialArmor.armorType != $0.armorType { return false }
+                if $0.armorClass != .five { return false }
+                return true
+            }
+            secondaryTitle = ArmorClass.five.local()
+        case .five:
+            secondaryRecommendation = allArmor.filter {
+                if initialArmor.armorType != $0.armorType { return false }
+                if $0.armorClass != .six { return false }
+                return true
+            }
+            secondaryTitle = ArmorClass.six.local()
+        case .six:
+            secondaryRecommendation = allArmor.filter {
+                if initialArmor.armorType != $0.armorType { return false }
+                if $0.armorClass != .five { return false }
+                return true
+            }
+            secondaryTitle = ArmorClass.five.local()
+        }
+        return (armorMatchingClassAndType, secondaryRecommendation, secondaryTitle)
     }
 
     func getComparedItemsSummaryMap() -> [ComparableProperty: PropertyRange] {

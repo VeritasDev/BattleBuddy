@@ -361,3 +361,7 @@
 "hearing_penalty_high" = "High";
 "hearing_penalty_low" = "Low";
 "hearing_penalty_none" = "None";
+"hearing_penalty_full" = "Hearing Penalty";
+"speed_penalty_full" = "Speed Penalty";
+"turn_speed_penalty_full" = "Turn Speed Penalty";
+"ergo_penalty_full" = "Ergonomics Penalty";

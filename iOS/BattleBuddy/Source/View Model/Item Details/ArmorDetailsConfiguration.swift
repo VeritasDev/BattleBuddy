@@ -26,10 +26,10 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
     let penaltiesStackView = BaseStackView(xPaddingCompact: 0.0)
     let penaltiesHeaderView = SectionHeaderView(headerText: Localized("penalties"))
     lazy var penaltiesTableView = { BaseTableView(dataSource: self, delegate: self) }()
-    let hearingPenaltyCell = BaseTableViewCell(text: Localized("hearing_penalty"), accessory: .none, selection: .none)
-    let speedPenaltyCell = BaseTableViewCell(text: Localized("speed_penalty"), accessory: .none, selection: .none)
-    let turnSpeedPenaltyCell = BaseTableViewCell(text: Localized("turn_speed_penalty"), accessory: .none, selection: .none)
-    let ergoPenaltyCell = BaseTableViewCell(text: Localized("ergo_penalty"), accessory: .none, selection: .none)
+    let hearingPenaltyCell = BaseTableViewCell(text: Localized("hearing_penalty_full"), accessory: .none, selection: .none)
+    let speedPenaltyCell = BaseTableViewCell(text: Localized("speed_penalty_full"), accessory: .none, selection: .none)
+    let turnSpeedPenaltyCell = BaseTableViewCell(text: Localized("turn_speed_penalty_full"), accessory: .none, selection: .none)
+    let ergoPenaltyCell = BaseTableViewCell(text: Localized("ergo_penalty_full"), accessory: .none, selection: .none)
     lazy var penaltiesCells: [BaseTableViewCell] = {
         switch armor.armorType {
         case .body:

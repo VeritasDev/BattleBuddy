@@ -13,7 +13,7 @@
 - [ ] Add New Item Types
     - [x] Helmets
     - [ ] Accessories
-    - [ ] Compare helmets secondary recommendation are one class below
+    - [x] Compare helmets secondary recommendation are one class below
 - [x] Placeholder images for helmets
 - [x] Resize helmet placeholder
 - [ ] Placeholder images for accessories
