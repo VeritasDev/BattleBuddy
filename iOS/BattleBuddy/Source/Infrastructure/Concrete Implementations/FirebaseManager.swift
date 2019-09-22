@@ -38,6 +38,7 @@ class FirebaseManager: NSObject {
     private lazy var ammoImageRef = storageRef.child("ammo")
     private lazy var medsImageRef = storageRef.child("meds")
     private lazy var armorImageRef = storageRef.child("armor")
+    private lazy var helmetImageRef = storageRef.child("helmet")
     private lazy var tradersImageRef = storageRef.child("traders")
     private lazy var throwableImageRef = storageRef.child("throwables")
     private lazy var meleeImageRef = storageRef.child("melee")
@@ -68,6 +69,7 @@ class FirebaseManager: NSObject {
         case .ammo: return ammoImageRef.child(imageId)
         case .medical: return medsImageRef.child(imageId)
         case .armor: return armorImageRef.child(imageId)
+        case .helmet: return helmetImageRef.child(imageId)
         case .throwable: return throwableImageRef.child(imageId)
         case .melee: return meleeImageRef.child(imageId)
         }
@@ -135,7 +137,7 @@ extension FirebaseManager: AccountManager {
             print("Fetching updated user data...")
             self.refreshUserMetadata() { userMeta in
                 guard let userMeta = userMeta else {
-                    print("Error fetching updated user data: \(err)")
+                    print("Error fetching updated user data: \(err.debugDescription)")
                     completion(true)
                     return
                 }
@@ -342,6 +344,48 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
+    func getAllHelmets(handler: @escaping ([Armor]) -> Void) {
+        let helmetRef = db.collection(FirebaseCollection.armor.rawValue).whereField("type", isEqualTo: "helmet")
+        helmetRef.getDocuments() { (querySnapshot, err) in
+            if let error = err {
+                print("Failed to get all helmets w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
+            guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) helmets.")
+            handler(snapshot.getArmor())
+        }
+    }
+
+    func getAllHelmetArmor(handler: @escaping (_: [Armor]) -> Void) {
+        let visorRef = db.collection(FirebaseCollection.armor.rawValue).whereField("type", isEqualTo: "visor")
+        let attachmentRef = db.collection(FirebaseCollection.armor.rawValue).whereField("type", isEqualTo: "attachment")
+        visorRef.getDocuments() { (querySnapshot, err) in
+            if let error = err {
+                print("Failed to get all visors w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
+            guard let snapshot = querySnapshot else { handler([]); return }
+            let visors = snapshot.getArmor()
+
+            attachmentRef.getDocuments() { (querySnapshot, err) in
+                if let error = err {
+                    print("Failed to get all helmet attachments w/ error: ", error.localizedDescription)
+                    handler([]);
+                    return
+                }
+                guard let snapshot = querySnapshot else { handler([]); return }
+
+                let attachments = snapshot.getArmor()
+                let combinedResults = visors + attachments
+                print("Successfully fetched \(String(combinedResults.count)) helmet armor.")
+                handler(combinedResults)
+            }
+        }
+    }
+
     func getAllAmmo(handler: @escaping (_: [Ammo]) -> Void) {
         db.collection(FirebaseCollection.ammo.rawValue).getDocuments() { (querySnapshot, err) in
             if let error = err {
@@ -424,6 +468,28 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
+    func getAllHelmetsByClass(handler: @escaping ([ArmorClass : [Armor]]) -> Void) {
+        getAllHelmets { allArmor in
+            var map: [ArmorClass: [Armor]] = [:]
+            for type in ArmorClass.allCases { map[type] = [] }
+            for armor in allArmor { map[armor.armorClass]?.append(armor) }
+
+            self.getAllHelmetArmor { allHelmetArmor in
+                for armor in allHelmetArmor { map[armor.armorClass]?.append(armor) }
+                handler(map)
+            }
+        }
+    }
+
+    func getAllHelmetArmorByClass(handler: @escaping ([ArmorClass: [Armor]]) -> Void) {
+        getAllHelmetArmor { allArmor in
+            var map: [ArmorClass: [Armor]] = [:]
+            for type in ArmorClass.allCases { map[type] = [] }
+            for armor in allArmor { map[armor.armorClass]?.append(armor) }
+            handler(map)
+        }
+    }
+
     func getAllAmmoByCaliber(handler: @escaping ([String: [Ammo]]) -> Void) {
         getAllAmmo { allAmmo in
             var map: [String: [Ammo]] = [:]
@@ -475,11 +541,59 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
+    func getAllHelmetOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void) {
+        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "helmet").getDocuments() { (querySnapshot, err) in
+            if err != nil { handler([]); return }
+            guard let snapshot = querySnapshot else { handler([]); return }
+            handler(snapshot.getArmor())
+        }
+    }
+
+    func getAllHelmetArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void) {
+        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "visor").getDocuments() { (querySnapshot, err) in
+            if err != nil { handler([]); return }
+            guard let snapshot = querySnapshot else { handler([]); return }
+            let visors = snapshot.getArmor()
+
+            self.db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "visor").getDocuments() { (querySnapshot, err) in
+                if err != nil { handler([]); return }
+                guard let snapshot = querySnapshot else { handler([]); return }
+
+                let attachments = snapshot.getArmor()
+                handler(visors + attachments)
+            }
+        }
+    }
+
     func getAllBodyArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void) {
         db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "body").getDocuments() { (querySnapshot, err) in
             if err != nil { handler([]); return }
             guard let snapshot = querySnapshot else { handler([]); return }
             handler(snapshot.getArmor())
+        }
+    }
+
+    func getAllHelmetWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void) {
+        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "helmet").getDocuments() { (querySnapshot, err) in
+            if err != nil { handler([]); return }
+            guard let snapshot = querySnapshot else { handler([]); return }
+            handler(snapshot.getArmor())
+        }
+    }
+
+    func getAllHelmetArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void) {
+        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "visor").getDocuments() { (querySnapshot, err) in
+            if err != nil { handler([]); return }
+            guard let snapshot = querySnapshot else { handler([]); return }
+            let visors = snapshot.getArmor()
+
+            self.db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "visor").getDocuments() { (querySnapshot, err) in
+                if err != nil { handler([]); return }
+                guard let snapshot = querySnapshot else { handler([]); return }
+
+                let attachments = snapshot.getArmor()
+                handler(visors + attachments)
+            }
         }
     }
 }

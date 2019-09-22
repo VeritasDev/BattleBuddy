@@ -132,10 +132,18 @@ enum ArmorMaterial: String, CaseIterable, Localizable {
     }
 }
 
-enum HearingPenalty: String, CaseIterable {
+enum HearingPenalty: String, CaseIterable, Localizable {
     case none = "none"
     case low = "low"
     case high = "high"
+
+    func local(short: Bool = false) -> String {
+        switch self {
+        case .none: return "hearing_penalty_none".local()
+        case .high: return "hearing_penalty_high".local()
+        case .low: return "hearing_penalty_low".local()
+        }
+    }
 }
 
 struct RichochetParams {

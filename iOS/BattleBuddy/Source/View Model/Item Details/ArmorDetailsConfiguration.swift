@@ -26,10 +26,18 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
     let penaltiesStackView = BaseStackView(xPaddingCompact: 0.0)
     let penaltiesHeaderView = SectionHeaderView(headerText: Localized("penalties"))
     lazy var penaltiesTableView = { BaseTableView(dataSource: self, delegate: self) }()
+    let hearingPenaltyCell = BaseTableViewCell(text: Localized("hearing_penalty"), accessory: .none, selection: .none)
     let speedPenaltyCell = BaseTableViewCell(text: Localized("speed_penalty"), accessory: .none, selection: .none)
     let turnSpeedPenaltyCell = BaseTableViewCell(text: Localized("turn_speed_penalty"), accessory: .none, selection: .none)
     let ergoPenaltyCell = BaseTableViewCell(text: Localized("ergo_penalty"), accessory: .none, selection: .none)
-    lazy var penaltiesCells = { [speedPenaltyCell, turnSpeedPenaltyCell, ergoPenaltyCell] }()
+    lazy var penaltiesCells: [BaseTableViewCell] = {
+        switch armor.armorType {
+        case .body:
+            return [speedPenaltyCell, turnSpeedPenaltyCell, ergoPenaltyCell]
+        case .helmet, .visor, .attachment:
+            return [hearingPenaltyCell, speedPenaltyCell, turnSpeedPenaltyCell, ergoPenaltyCell]
+        }
+    }()
 
     let exploreStackView = BaseStackView(xPaddingCompact: 0.0)
     let exploreHeaderView = SectionHeaderView(headerText: Localized("explore"))
@@ -63,6 +71,7 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
         speedPenaltyCell.detailTextLabel?.text = String(armor.penalties.movementSpeed)
         turnSpeedPenaltyCell.detailTextLabel?.text = String(armor.penalties.turnSpeed)
         ergoPenaltyCell.detailTextLabel?.text = String(armor.penalties.ergonomics)
+        hearingPenaltyCell.detailTextLabel?.text = armor.penalties.hearing.local()
 
         setupConstraints()
     }
@@ -114,31 +123,65 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
         case armorClassCell:
             self.delegate?.showLoading(show: true)
 
-            dbManager.getAllBodyArmorOfClass(armorClass: armor.armorClass) { allArmor in
-                self.delegate?.showLoading(show: false)
+            switch armor.armorType {
+            case .body:
+                dbManager.getAllBodyArmorOfClass(armorClass: armor.armorClass) { allArmor in
+                    self.delegate?.showLoading(show: false)
 
-                let armorClassVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
-                armorClassVC.title = self.armor.armorClass.local()
-                self.delegate?.showViewController(viewController: armorClassVC)
+                    let armorClassVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
+                    armorClassVC.title = self.armor.armorClass.local()
+                    self.delegate?.showViewController(viewController: armorClassVC)
+                }
+            case .helmet, .visor, .attachment:
+                dbManager.getAllHelmetOfClass(armorClass: armor.armorClass) { allArmor in
+                    self.delegate?.showLoading(show: false)
+
+                    let armorClassVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
+                    armorClassVC.title = self.armor.armorClass.local()
+                    self.delegate?.showViewController(viewController: armorClassVC)
+                }
             }
         case armorMaterialCell:
             self.delegate?.showLoading(show: true)
 
-            dbManager.getAllBodyArmorWithMaterial(material: armor.material) { allArmor in
-                self.delegate?.showLoading(show: false)
+            switch armor.armorType {
+            case .body:
+                dbManager.getAllBodyArmorWithMaterial(material: armor.material) { allArmor in
+                    self.delegate?.showLoading(show: false)
 
-                let armorVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
-                armorVC.title = self.armor.material.local()
-                self.delegate?.showViewController(viewController: armorVC)
+                    let armorVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
+                    armorVC.title = self.armor.material.local()
+                    self.delegate?.showViewController(viewController: armorVC)
+                }
+            case .helmet, .visor, .attachment:
+                dbManager.getAllHelmetWithMaterial(material: armor.material) { allArmor in
+                    self.delegate?.showLoading(show: false)
+
+                    let armorVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
+                    armorVC.title = self.armor.material.local()
+                    self.delegate?.showViewController(viewController: armorVC)
+                }
             }
+
+
         case compareCell:
             self.delegate?.showLoading(show: true)
 
-            dbManager.getAllBodyArmor() { allArmor in
-                self.delegate?.showLoading(show: false)
+            switch armor.armorType {
+            case .body:
+                dbManager.getAllBodyArmor() { allArmor in
+                    self.delegate?.showLoading(show: false)
 
-                let compareOptionsVC = ComparisonOptionsViewController(ArmorComparison(self.armor, allArmor: allArmor))
-                self.delegate?.showViewController(viewController: compareOptionsVC)
+                    let compareOptionsVC = ComparisonOptionsViewController(ArmorComparison(self.armor, allArmor: allArmor))
+                    self.delegate?.showViewController(viewController: compareOptionsVC)
+                }
+            case .helmet, .visor, .attachment:
+                dbManager.getAllHelmets() { allArmor in
+                    self.delegate?.showLoading(show: false)
+
+                    let compareOptionsVC = ComparisonOptionsViewController(ArmorComparison(self.armor, allArmor: allArmor))
+                    self.delegate?.showViewController(viewController: compareOptionsVC)
+                }
             }
         case penChanceCalcCell:
             let penChanceVC = PenChanceCalcViewController()

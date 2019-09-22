@@ -84,6 +84,8 @@ class SettingsViewController: BaseTableViewController {
         toolbar.barStyle = .blackTranslucent
         toolbar.tintColor = UIColor.Theme.primary
         nicknameCell.textField.inputAccessoryView = toolbar
+
+        adManager.addBannerToView(tableView)
     }
 
     override func viewWillAppear(_ animated: Bool) {

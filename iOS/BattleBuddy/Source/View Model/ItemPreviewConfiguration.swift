@@ -24,14 +24,10 @@ struct ItemListConfig {
         self.title = type.localizedTitle()
 
         switch type {
-        case .firearm:
-            cellWidthMultiplier = 1.6
-        case .ammo:
-            cellWidthMultiplier = 1.3
-        case .armor, .medical:
-            cellWidthMultiplier = 1.3
-        default:
-            fatalError()
+        case .firearm: cellWidthMultiplier = 1.6
+        case .ammo: cellWidthMultiplier = 1.3
+        case .armor, .medical, .helmet: cellWidthMultiplier = 1.3
+        default: fatalError()
         }
     }
 }

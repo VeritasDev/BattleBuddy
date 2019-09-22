@@ -16,6 +16,7 @@ class InmobiManager: NSObject, AdManager {
     let accountId = "1ca74bc970374286b43eb23451514f6d"
     let consentData: [AnyHashable: Any] = [IM_GDPR_CONSENT_AVAILABLE: "true", "gdpr": 1]
     lazy var video: IMInterstitial = IMInterstitial(placementId: 1567297909039, delegate: self)
+    lazy var banner: IMBanner = IMBanner(frame: .zero, placementId: 1570287735547, delegate: self)
 
     override init() {
         super.init()
@@ -47,8 +48,15 @@ class InmobiManager: NSObject, AdManager {
         video.show(from: rootVC)
         self.adDelegate?.adManager(self, didUpdate: .unavailable)
     }
+
+    func addBannerToView(_ view: UIView) {
+//        view.addSubview(banner)
+//        banner.pinToBottom(height: 50.0)
+//        banner.load()
+    }
 }
 
+// MARK:- Interstitial Delegate
 extension InmobiManager: IMInterstitialDelegate {
     func interstitialDidReceiveAd(_ interstitial: IMInterstitial!) {
         print("Interstitial did receive ad!")
@@ -93,4 +101,9 @@ extension InmobiManager: IMInterstitialDelegate {
             self.video.load()
         }
     }
+}
+
+// MARK:- Banner Delegate
+extension InmobiManager: IMBannerDelegate {
+
 }

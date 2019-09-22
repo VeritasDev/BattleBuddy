@@ -9,7 +9,7 @@
 import Foundation
 import BallisticsEngine
 
-struct Armor: BaseItem, CalculableArmor {
+struct Armor: BaseItem, Armored, CalculableArmor {
     let json: [String : Any]
     let type: ItemType
     var maxDurability: Int

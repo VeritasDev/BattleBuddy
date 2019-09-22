@@ -63,6 +63,8 @@ protocol DatabaseManager {
     func getAllFirearms(handler: @escaping (_: [Firearm]) -> Void)
     func getAllArmor(handler: @escaping (_: [Armor]) -> Void)
     func getAllBodyArmor(handler: @escaping (_: [Armor]) -> Void)
+    func getAllHelmets(handler: @escaping (_: [Armor]) -> Void)
+    func getAllHelmetArmor(handler: @escaping (_: [Armor]) -> Void)
     func getAllAmmo(handler: @escaping (_: [Ammo]) -> Void)
     func getAllMedical(handler: @escaping (_: [Medical]) -> Void)
     func getAllThrowables(handler: @escaping (_: [Throwable]) -> Void)
@@ -71,6 +73,8 @@ protocol DatabaseManager {
     func getAllFirearmsByType(handler: @escaping ([FirearmType: [Firearm]]) -> Void)
     func getAllArmorByClass(handler: @escaping ([ArmorClass: [Armor]]) -> Void)
     func getAllBodyArmorByClass(handler: @escaping ([ArmorClass: [Armor]]) -> Void)
+    func getAllHelmetsByClass(handler: @escaping ([ArmorClass: [Armor]]) -> Void)
+    func getAllHelmetArmorByClass(handler: @escaping ([ArmorClass: [Armor]]) -> Void)
     func getAllAmmoByCaliber(handler: @escaping ([String: [Ammo]]) -> Void)
     func getAllMedicalByType(handler: @escaping ([MedicalItemType: [Medical]]) -> Void)
 
@@ -79,6 +83,10 @@ protocol DatabaseManager {
     func getAllAmmoOfCaliber(caliber: String, handler: @escaping ([Ammo]) -> Void)
     func getAllBodyArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
     func getAllBodyArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
+    func getAllHelmetOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
+    func getAllHelmetWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
+    func getAllHelmetArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
+    func getAllHelmetArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
 }
 
 // MARK:- Ads
@@ -101,6 +109,7 @@ protocol AdManager {
     func bannerAdsEnabled() -> Bool
     func updateBannerAdsSetting(_ enabled: Bool)
     func watchAdVideo(from rootVC: UIViewController)
+    func addBannerToView(_ view: UIView)
 }
 
 protocol GlobalMetadataManager {

@@ -106,6 +106,7 @@
 		60837430232E546F00AA9D29 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */; };
 		60837432232E564F00AA9D29 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837431232E564F00AA9D29 /* LocaleManager.swift */; };
 		60EA7D2623331D5000EAD566 /* BaseTextfieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2523331D5000EAD566 /* BaseTextfieldCell.swift */; };
+		60EA7D2A23346CAB00EAD566 /* Armored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2923346CAB00EAD566 /* Armored.swift */; };
 		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
 		EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */; };
 		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
@@ -330,6 +331,7 @@
 		60EA7D2323323A2E00EAD566 /* sl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sl; path = sl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		60EA7D2423323A3200EAD566 /* sl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sl; path = sl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		60EA7D2523331D5000EAD566 /* BaseTextfieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextfieldCell.swift; sourceTree = "<group>"; };
+		60EA7D2923346CAB00EAD566 /* Armored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Armored.swift; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 			children = (
 				EF831FE022DCECB900C6C138 /* Displayable.swift */,
 				EF831FE722DF8D9300C6C138 /* Comparable.swift */,
+				60EA7D2923346CAB00EAD566 /* Armored.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1350,6 +1353,7 @@
 				EFF327B522F8A84200673F57 /* ComparisonCell.swift in Sources */,
 				2753FE6522F0767C00B20DAD /* DependencyInterfaces.swift in Sources */,
 				27A7608E22D230BE00861113 /* ItemPropertyRow.swift in Sources */,
+				60EA7D2A23346CAB00EAD566 /* Armored.swift in Sources */,
 				EFFB10C022F1F76100EE6B6F /* VeritasCell.swift in Sources */,
 				27A4A90522E738C800C5618E /* BaseViewController.swift in Sources */,
 				27A4A90722E73FE400C5618E /* ItemPreviewConfiguration.swift in Sources */,
@@ -1740,7 +1744,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 63LNS64VMY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1753,7 +1757,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -1874,7 +1878,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 63LNS64VMY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1887,7 +1891,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.veritas.BattleBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";

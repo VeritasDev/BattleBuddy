@@ -15,6 +15,7 @@ enum ItemType: String {
     case armor = "armor"
     case medical = "medical"
     case throwable = "grenade"
+    case helmet = "helmet"
 
     func localizedTitle() -> String {
         switch self {
@@ -24,6 +25,7 @@ enum ItemType: String {
         case .armor: return "main_menu_armor".local()
         case .medical: return "main_menu_medical".local()
         case .throwable: return "main_menu_throwables".local()
+        case .helmet: return "main_menu_helmets".local()
         }
     }
 }

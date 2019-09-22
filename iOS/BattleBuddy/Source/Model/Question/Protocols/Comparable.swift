@@ -34,6 +34,7 @@ enum ComparableProperty: Localizable {
     case speedPenalty
     case turnSpeedPenalty
     case ergoPenalty
+    case hearingPenalty
 
     // Medical
     case useCount
@@ -76,6 +77,7 @@ enum ComparableProperty: Localizable {
         case .speedPenalty: return Localized("speed_penalty")
         case .turnSpeedPenalty: return Localized("turn_speed_penalty")
         case .ergoPenalty: return Localized("ergo_penalty")
+        case .hearingPenalty: return Localized("hearing_penalty")
         case .useCount: return Localized("use_count")
         case .useTime: return Localized("use_time")
         case .effectDuration: return Localized("effect_duration")
@@ -143,6 +145,7 @@ extension Armor: Comparable {
         case .speedPenalty: return String(penalties.movementSpeed)
         case .turnSpeedPenalty: return String(penalties.turnSpeed)
         case .ergoPenalty: return String(penalties.ergonomics)
+        case .hearingPenalty: return penalties.hearing.local()
         default: fatalError()
         }
     }

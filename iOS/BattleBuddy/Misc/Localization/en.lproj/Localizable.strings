@@ -342,6 +342,7 @@
 "profile" = "Profile";
 "nickname" = "Nickname";
 "nickname_placeholder" = "Nickname";
+"nickname_anon" = "Anonymous";
 "app_settings" = "App Settings";
 "settings_save_error" = "Unable to save your settings, please try again later.";
 
@@ -354,3 +355,9 @@
 "attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbails, album covers and 3D animations - this man is a legend!";
 "attributions_betrix" = "Betrix";
 "attributions_betrix_descr" = "Many of the beautiful menu images and in-game item screenshots were created by Betrix!";
+
+// MARK:- Helmets / Accessories
+"hearing_penalty" = "Hearing";
+"hearing_penalty_high" = "High";
+"hearing_penalty_low" = "Low";
+"hearing_penalty_none" = "None";

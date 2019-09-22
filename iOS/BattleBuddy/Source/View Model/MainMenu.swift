@@ -75,7 +75,7 @@ struct MainMenuItem {
             handler(ItemListViewController(itemType: .armor))
             return
         case .helmets:
-//            handler(ItemListViewController(itemType: .armor))
+            handler(ItemListViewController(itemType: .helmet))
             return
         case .medical:
             handler(ItemListViewController(itemType: .medical))

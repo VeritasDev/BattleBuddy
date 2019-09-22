@@ -10,6 +10,9 @@
 - [ ] Release v1.1  ***In development - see TODO list below***
 
 ## <u>v1.1</u>
+- [ ] Add New Item Types
+    - Helmets and accessories
+- [ ] Placeholder images for helmets/accessories of different levels
 - [x] Days since wipe counter
 - [ ] Ammo needs to be disconnected from global metadata!
 - [ ] Logging / tags / debugging / etc
@@ -29,12 +32,11 @@
     - [ ] Points for enabling push notifications
     - [ ] Banner ads
     - [ ] Interstitial
-- [ ] Add New Item Types
-    - Helmets and accessories
 - [ ] Implement Banner Ads (if setting enabled)
 - [ ] Penetration Calculator Improvements
     - Helmets/face shields/mods
     - Armored Rigs + Multi-layer support to ballistics calc
+    - Add a "shoot" button to simulate damage
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
@@ -43,6 +45,7 @@
 - [ ] Arabic Comparison Layout issue
 - [ ] Pen chance cell text size
 - [ ] Health calc buckshot fix
+- [ ] Attributions for localizations I missed last release
 
 ## <u>v1.2</u>
 - Display shot result

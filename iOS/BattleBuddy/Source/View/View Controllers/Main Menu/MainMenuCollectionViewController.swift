@@ -12,6 +12,7 @@ import JGProgressHUD
 class MainMenuCollectionViewController: BaseCollectionViewController {
     let cellId = "MainMenuCell"
     let menuItems: [MainMenuItem]
+    let adManager = dm().adManager()
 
     required init?(coder aDecoder: NSCoder) { fatalError("NIMP") }
 
@@ -26,6 +27,12 @@ class MainMenuCollectionViewController: BaseCollectionViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.contentInset = UIEdgeInsets.init(top: 10, left: 10, bottom: 0, right: 10)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        adManager.addBannerToView(view)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
