@@ -5,9 +5,12 @@ import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import MoreScreen from '../screens/MoreScreen';
 import {theme} from '../components/Theme';
 import ItemScreen from '../screens/ItemScreen';
+import VeritasScreen from '../screens/More/VeritasScreen';
+import AttributionsScreen from '../screens/More/AttributionsScreen';
+import TeamScreen from '../screens/More/TeamScreen';
 
 const config = Platform.select({
   web: {headerMode: 'screen'},
@@ -65,22 +68,27 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = '';
 
-const SettingsStack = createStackNavigator(
+const MoreStack = createStackNavigator(
   {
-    Settings: SettingsScreen
+    More: MoreScreen,
+    Veritas: VeritasScreen,
+    Team: TeamScreen,
+    Attributions: AttributionsScreen
   },
-  config
+  {
+    ...config
+  }
 );
 
-SettingsStack.navigationOptions = {
+MoreStack.navigationOptions = {
   tabBarLabel: 'More',
   tabBarIcon: ({focused}) => <TabBarIcon focused={focused} name="more" /> // eslint-disable-line
 };
 
-SettingsStack.path = '';
+MoreStack.path = '';
 
 const tabNavigator = createBottomTabNavigator(
-  {HomeStack, LinksStack, SettingsStack},
+  {HomeStack, LinksStack, MoreStack},
   {
     tabBarOptions: {
       activeTintColor: theme.colors.orange,

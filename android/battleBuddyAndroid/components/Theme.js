@@ -22,6 +22,7 @@ export const theme = {
     background: '#181818',
     almostBlack: '#191919',
     lightGray: '#ccc',
+    gray: '#5C5C5C',
     orange: '#FF491C',
     red: 'red',
     white: '#fff',
