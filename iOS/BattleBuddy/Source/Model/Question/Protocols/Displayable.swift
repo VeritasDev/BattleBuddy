@@ -91,14 +91,25 @@ extension Armor: Displayable {
     var titleFont: UIFont { get { return UIFont.systemFont(ofSize: 21.0, weight: .bold) } }
     var placeholderImage: UIImage? {
         get {
-            switch armorClass {
-            case .none: return nil
-            case .one: return UIImage(named: "class_1_placeholder")?.withRenderingMode(.alwaysTemplate)
-            case .two: return UIImage(named: "class_2_placeholder")?.withRenderingMode(.alwaysTemplate)
-            case .three: return UIImage(named: "class_3_placeholder")?.withRenderingMode(.alwaysTemplate)
-            case .four: return UIImage(named: "class_4_placeholder")?.withRenderingMode(.alwaysTemplate)
-            case .five: return UIImage(named: "class_5_placeholder")?.withRenderingMode(.alwaysTemplate)
-            case .six: return UIImage(named: "class_6_placeholder")?.withRenderingMode(.alwaysTemplate)
+            switch (armorClass, armorType) {
+            case (.none, .body): return nil
+            case (.one, .body): return UIImage(named: "class_1_placeholder")?.withRenderingMode(.alwaysTemplate)
+            case (.two, .body): return UIImage(named: "class_2_placeholder")?.withRenderingMode(.alwaysTemplate)
+            case (.three, .body): return UIImage(named: "class_3_placeholder")?.withRenderingMode(.alwaysTemplate)
+            case (.four, .body): return UIImage(named: "class_4_placeholder")?.withRenderingMode(.alwaysTemplate)
+            case (.five, .body): return UIImage(named: "class_5_placeholder")?.withRenderingMode(.alwaysTemplate)
+            case (.six, .body): return UIImage(named: "class_6_placeholder")?.withRenderingMode(.alwaysTemplate)
+
+            case (.none, .helmet): return nil
+            case (.one, .helmet): return UIImage(named: "class_1_placeholder_helmet")?.withRenderingMode(.alwaysTemplate)
+            case (.two, .helmet): return UIImage(named: "class_2_placeholder_helmet")?.withRenderingMode(.alwaysTemplate)
+            case (.three, .helmet): return UIImage(named: "class_3_placeholder_helmet")?.withRenderingMode(.alwaysTemplate)
+            case (.four, .helmet): return UIImage(named: "class_4_placeholder_helmet")?.withRenderingMode(.alwaysTemplate)
+            case (.five, .helmet): return UIImage(named: "class_5_placeholder_helmet")?.withRenderingMode(.alwaysTemplate)
+            case (.six, .helmet): return UIImage(named: "class_6_placeholder_helmet")?.withRenderingMode(.alwaysTemplate)
+
+            case (_, .visor): return nil
+            case (_, .attachment): return nil
             }
         }
     }

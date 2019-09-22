@@ -473,11 +473,7 @@ extension FirebaseManager: DatabaseManager {
             var map: [ArmorClass: [Armor]] = [:]
             for type in ArmorClass.allCases { map[type] = [] }
             for armor in allArmor { map[armor.armorClass]?.append(armor) }
-
-            self.getAllHelmetArmor { allHelmetArmor in
-                for armor in allHelmetArmor { map[armor.armorClass]?.append(armor) }
-                handler(map)
-            }
+            handler(map)
         }
     }
 
@@ -541,7 +537,7 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
-    func getAllHelmetOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void) {
+    func getAllHelmetsOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void) {
         db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "helmet").getDocuments() { (querySnapshot, err) in
             if err != nil { handler([]); return }
             guard let snapshot = querySnapshot else { handler([]); return }
@@ -555,7 +551,7 @@ extension FirebaseManager: DatabaseManager {
             guard let snapshot = querySnapshot else { handler([]); return }
             let visors = snapshot.getArmor()
 
-            self.db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "visor").getDocuments() { (querySnapshot, err) in
+            self.db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "attachment").getDocuments() { (querySnapshot, err) in
                 if err != nil { handler([]); return }
                 guard let snapshot = querySnapshot else { handler([]); return }
 
@@ -573,7 +569,7 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
-    func getAllHelmetWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void) {
+    func getAllHelmetsWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void) {
         db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "helmet").getDocuments() { (querySnapshot, err) in
             if err != nil { handler([]); return }
             guard let snapshot = querySnapshot else { handler([]); return }
@@ -587,7 +583,7 @@ extension FirebaseManager: DatabaseManager {
             guard let snapshot = querySnapshot else { handler([]); return }
             let visors = snapshot.getArmor()
 
-            self.db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "visor").getDocuments() { (querySnapshot, err) in
+            self.db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "attachment").getDocuments() { (querySnapshot, err) in
                 if err != nil { handler([]); return }
                 guard let snapshot = querySnapshot else { handler([]); return }
 

@@ -133,7 +133,7 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
                     self.delegate?.showViewController(viewController: armorClassVC)
                 }
             case .helmet, .visor, .attachment:
-                dbManager.getAllHelmetOfClass(armorClass: armor.armorClass) { allArmor in
+                dbManager.getAllHelmetsOfClass(armorClass: armor.armorClass) { allArmor in
                     self.delegate?.showLoading(show: false)
 
                     let armorClassVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
@@ -154,7 +154,7 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
                     self.delegate?.showViewController(viewController: armorVC)
                 }
             case .helmet, .visor, .attachment:
-                dbManager.getAllHelmetWithMaterial(material: armor.material) { allArmor in
+                dbManager.getAllHelmetsWithMaterial(material: armor.material) { allArmor in
                     self.delegate?.showLoading(show: false)
 
                     let armorVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))

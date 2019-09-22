@@ -11,18 +11,15 @@
 
 ## <u>v1.1</u>
 - [ ] Add New Item Types
-    - Helmets and accessories
-- [ ] Placeholder images for helmets/accessories of different levels
-- [x] Days since wipe counter
+    - [x] Helmets
+    - [ ] Accessories
+    - [ ] Compare helmets secondary recommendation are one class below
+- [x] Placeholder images for helmets
+- [x] Resize helmet placeholder
+- [ ] Placeholder images for accessories
 - [ ] Ammo needs to be disconnected from global metadata!
-- [ ] Logging / tags / debugging / etc
-- [x] Settings
-    - [x] Nickname
-    - [x] Enable Banner ads
 - [ ] Implementing Banner Ads
-- [x] Language override
 - [ ] Stereo audio tool
-- [x] Loyalty Leaderboard
 - [ ] Info page on how to earn points
 - [ ] Loyalty points
     - [ ] Random bonus loyalty points % chance
@@ -45,7 +42,16 @@
 - [ ] Arabic Comparison Layout issue
 - [ ] Pen chance cell text size
 - [ ] Health calc buckshot fix
+- [ ] Buckshot damage multiplier
+- [ ] Cell label font sizing
 - [ ] Attributions for localizations I missed last release
+- [ ] Logging / tags / debugging / etc
+- [x] Days since wipe counter
+- [x] Settings
+    - [x] Nickname
+    - [x] Enable Banner ads
+- [x] Language override
+- [x] Loyalty Leaderboard
 
 ## <u>v1.2</u>
 - Display shot result

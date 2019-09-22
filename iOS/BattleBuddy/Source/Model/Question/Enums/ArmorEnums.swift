@@ -70,6 +70,12 @@ struct ArmorZonesConfig {
             if stomach { percent += 0.16 }
             if leftArm { percent += 0.08 }
             if rightArm { percent += 0.08 }
+        case .helmet:
+            if topHead { percent += 0.5 }
+            if eyes { percent += 0.05 }
+            if jaws { percent += 0.05 }
+            if ears { percent += 0.20 }
+            if nape { percent += 0.20 }
         default: fatalError("NIMP")
         }
 

@@ -14,7 +14,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     let feedbackManager = DependencyManagerImpl.shared.feedbackManager()
     var userCount = 0
     let globalMetadataManager: GlobalMetadataManager = DependencyManagerImpl.shared.metadataManager()
-    lazy var globalMetadata: GlobalMetadata? = globalMetadataManager.getGlobalMetadata()
+    var globalMetadata: GlobalMetadata?
 
     let veritasCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
@@ -142,6 +142,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        globalMetadata = globalMetadataManager.getGlobalMetadata()
         updateCells()
     }
 

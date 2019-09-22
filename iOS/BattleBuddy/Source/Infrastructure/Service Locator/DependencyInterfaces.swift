@@ -83,8 +83,8 @@ protocol DatabaseManager {
     func getAllAmmoOfCaliber(caliber: String, handler: @escaping ([Ammo]) -> Void)
     func getAllBodyArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
     func getAllBodyArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
-    func getAllHelmetOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
-    func getAllHelmetWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
+    func getAllHelmetsOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
+    func getAllHelmetsWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
     func getAllHelmetArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
     func getAllHelmetArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
 }
