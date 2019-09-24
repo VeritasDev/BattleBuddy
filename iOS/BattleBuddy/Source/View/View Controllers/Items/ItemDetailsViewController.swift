@@ -25,6 +25,7 @@ class ItemDetailsViewController: BaseStackViewController, ItemDetailsSectionDele
 
     init(_ configuration: ItemDetailsConfiguration) {
         self.configuration = configuration
+        print(configuration.item.id)
 
         super.init(BaseStackView(xPaddingCompact: 0.0, xPaddingRegular: 0.0))
 

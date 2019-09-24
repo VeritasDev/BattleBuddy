@@ -25,6 +25,7 @@ protocol DependencyManager {
     func ammoUtilitiesManager() -> AmmoUtilitiesManager
     func deviceManager() -> DeviceManager
     func localeManager() -> LocaleManager
+    func weaponBuildController() -> WeaponBuildController
 }
 
 // MARK:- Networking

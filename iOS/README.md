@@ -13,7 +13,6 @@
 ## <u>v1.1</u>
 - [ ] Add New Item Types
     - [x] Helmets
-    - [ ] Helmet
     - [ ] Accessories
     - [x] Compare helmets secondary recommendation are one class below
 - [x] Placeholder images for helmets
@@ -25,13 +24,8 @@
 - [ ] Stereo audio post writeup
 - [ ] Info page on how to earn points
 - [ ] Loyalty points
-    - [ ] Random bonus loyalty points % chance
     - [x] Points for watching ads
-    - [ ] Points for launching app
-    - [ ] Points for opening up each day
-    - [ ] Points for enabling push notifications
     - [ ] Banner ads
-    - [ ] Interstitial
 - [ ] Implement Banner Ads (if setting enabled)
 - [ ] Penetration Calculator Improvements
     - Helmets/face shields/mods
@@ -40,7 +34,6 @@
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
-- [ ] Real-time community stats updates
 - [ ] Arabic HP fraction order
 - [ ] Arabic Comparison Layout issue
 - [ ] Pen chance cell text size
@@ -56,6 +49,14 @@
 - [x] Loyalty Leaderboard
 
 ## <u>v1.2</u>
+- [ ] Real-time community stats updates
+- [ ] Info page on how to earn points
+- [ ] Loyalty points
+    - [ ] Random bonus loyalty points % chance
+    - [ ] Points for launching app
+    - [ ] Points for opening up each day
+    - [ ] Points for enabling push notifications
+    - [ ] Interstitial
 - Display shot result
 - News/changelog
 - IAP

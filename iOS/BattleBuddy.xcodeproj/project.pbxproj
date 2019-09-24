@@ -107,6 +107,7 @@
 		60837432232E564F00AA9D29 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837431232E564F00AA9D29 /* LocaleManager.swift */; };
 		60EA7D2623331D5000EAD566 /* BaseTextfieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2523331D5000EAD566 /* BaseTextfieldCell.swift */; };
 		60EA7D2A23346CAB00EAD566 /* Armored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2923346CAB00EAD566 /* Armored.swift */; };
+		60EA7D2F2339BA6000EAD566 /* WeaponBuildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2E2339BA6000EAD566 /* WeaponBuildController.swift */; };
 		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
 		EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */; };
 		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
@@ -332,6 +333,7 @@
 		60EA7D2423323A3200EAD566 /* sl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sl; path = sl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		60EA7D2523331D5000EAD566 /* BaseTextfieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextfieldCell.swift; sourceTree = "<group>"; };
 		60EA7D2923346CAB00EAD566 /* Armored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Armored.swift; sourceTree = "<group>"; };
+		60EA7D2E2339BA6000EAD566 /* WeaponBuildController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponBuildController.swift; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
@@ -915,6 +917,14 @@
 			path = Global;
 			sourceTree = "<group>";
 		};
+		60EA7D2D2339B9BE00EAD566 /* Weapon Building */ = {
+			isa = PBXGroup;
+			children = (
+				60EA7D2E2339BA6000EAD566 /* WeaponBuildController.swift */,
+			);
+			path = "Weapon Building";
+			sourceTree = "<group>";
+		};
 		7ABE6FD9D08AFA0FE132AA0B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -990,6 +1000,7 @@
 		EFB7050F22BBEC73003E54FA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				60EA7D2D2339B9BE00EAD566 /* Weapon Building */,
 				278A76AD2307354A00E0C745 /* In App Purchase */,
 			);
 			path = Controller;
@@ -1407,6 +1418,7 @@
 				EFFB10C522F1FC3600EE6B6F /* WebKitUtils.swift in Sources */,
 				27BB49C022FC710B00070427 /* FeedbackManager.swift in Sources */,
 				27F09ADF22DFE69100552C35 /* ArmorDetailsConfiguration.swift in Sources */,
+				60EA7D2F2339BA6000EAD566 /* WeaponBuildController.swift in Sources */,
 				EF7AF36B22C3E58100DA1A18 /* BaseStackViewController.swift in Sources */,
 				EFF2FF6122D6407A00BED024 /* FirearmBuild.swift in Sources */,
 				27A7605D22D1776200861113 /* ItemPreviewCardView.swift in Sources */,

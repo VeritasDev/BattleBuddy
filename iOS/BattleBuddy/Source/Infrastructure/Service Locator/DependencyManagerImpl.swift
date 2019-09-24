@@ -23,6 +23,7 @@ class DependencyManagerImpl: DependencyManager {
     var ammoUtilitiesMngr: AmmoUtilitiesManager?
     var deviceMngr: DeviceManager?
     var localeMngr: LocaleManager?
+    var weaponBuildCtr: WeaponBuildController?
 
     func assembleDependencies(_ appDelegate: AppDelegate) {
         // Firebase handles sessions, accounts, storage, and metadata
@@ -41,6 +42,7 @@ class DependencyManagerImpl: DependencyManager {
         deviceMngr = DeviceManagerImpl()
         localeMngr = LocaleManagerImpl()
         adMngr = InmobiManager()
+        weaponBuildCtr = WeaponBuildController()
     }
 
     func accountManager() -> AccountManager { return accountMngr! }
@@ -55,4 +57,5 @@ class DependencyManagerImpl: DependencyManager {
     func ammoUtilitiesManager() -> AmmoUtilitiesManager { return ammoUtilitiesMngr! }
     func deviceManager() -> DeviceManager { return deviceMngr! }
     func localeManager() -> LocaleManager { return localeMngr! }
+    func weaponBuildController() -> WeaponBuildController { return weaponBuildCtr }
 }

@@ -34,7 +34,7 @@ class SoundTrainingViewController: BaseViewController {
     let trainer = LocalizationTrainer()
     lazy var gr: UIPanGestureRecognizer = { UIPanGestureRecognizer(target: self, action: #selector(handlePan)) }()
     var panOffset: CGFloat = 0.0
-    var animationRotationDegrees: CGFloat = 0.0
+    let sensitivity: CGFloat = 0.1
     lazy var animationImageView: UIImageView = {
         let imageView = UIImageView()
 
@@ -46,18 +46,34 @@ class SoundTrainingViewController: BaseViewController {
         }
         imageView.animationImages = images
         imageView.isUserInteractionEnabled = false
-        imageView.transform = CGAffineTransform(rotationAngle: self.degreesToRadians(animationRotationDegrees));
         return imageView
+    }()
+    lazy var commitButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("sound_training_commit".local(), for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
+        button.titleLabel?.numberOfLines = 0
+        button.tintColor = UIColor.Theme.primary
+        button.backgroundColor = UIColor.Theme.primary
+        button.layer.cornerRadius = 7.0
+        button.addTarget(self, action: #selector(commit), for: .touchUpInside)
+        return button
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        edgesForExtendedLayout = []
+
+        title = "sound_training".local();
+
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .play, target: self, action: #selector(play))
 
         view.addGestureRecognizer(gr)
         view.addSubview(animationImageView)
+        view.addSubview(commitButton)
 
         animationImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -66,51 +82,47 @@ class SoundTrainingViewController: BaseViewController {
             animationImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             animationImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             ])
+
+        commitButton.pinToBottom(xInset: 25.0, yInset: 20.0, height: 44.0)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         animationImageView.startAnimating()
     }
 
     @objc func play() {
-        trainer.playTone()
+        panOffset = 0.0
         animationImageView.transform = .identity
+        trainer.startTest()
     }
 
     @objc func handlePan() {
         // Get the translation of the pan gesture relative to our view
         let xTranslation = gr.translation(in: view).x
 
-        // Calculate the offset with an arbitrary multiplier. If we ever want to adjust
-        // sensitivity, the multiplier here is where we'd do that.
-        let offset = xTranslation / view.frame.width * 0.2
+        // Calculate the offset with an arbitrary sensitivity multiplier.
+        let offset = xTranslation / view.frame.width * sensitivity
 
         // Adjust our pan by applying the calculated offset. We subtract, rather than add, because
         // we're moving our head rather than the sound source, so it's technically inverted.
         panOffset -= offset
 
-        print(panOffset)
-//        animationRotationDegrees = panOffset * -8
-//        print(animationRotationDegrees)
-        animationImageView.transform = CGAffineTransform(rotationAngle: radiansToDegrees(panOffset))
-
-        // 1 = full right
-        // 0 is full center
-        // -1 = full left
+        // The inverse of the pan offset is the direction our character should now be looking.
+        animationImageView.transform = CGAffineTransform(rotationAngle: -panOffset)
 
         // Toss our pan offset value into the sin function, which will do the hard work of simulating
         // the sound moving from in front, to the side, behind, and back around again.
-        print(sin(panOffset))
-        trainer.setPan(pan: Float(sin(panOffset)))
+        trainer.offsetPan(Float(offset))
     }
 
-    func degreesToRadians(_ degrees: CGFloat) -> CGFloat {
-        return degrees * .pi / 180.0
-    }
-
-    func radiansToDegrees(_ radians: CGFloat) -> CGFloat {
-        return radians * 180.0 / .pi
+    @objc func commit() {
+        let wasCorrect = trainer.commitAnswer()
+        if wasCorrect {
+            showOkAlert(message: "CORRECT")
+        } else {
+            showOkAlert(message: "WRONG")
+        }
     }
 }

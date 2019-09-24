@@ -38,7 +38,7 @@ class FirebaseManager: NSObject {
     private lazy var ammoImageRef = storageRef.child("ammo")
     private lazy var medsImageRef = storageRef.child("meds")
     private lazy var armorImageRef = storageRef.child("armor")
-    private lazy var helmetImageRef = storageRef.child("helmet")
+    private lazy var helmetImageRef = storageRef.child("armor")
     private lazy var tradersImageRef = storageRef.child("traders")
     private lazy var throwableImageRef = storageRef.child("throwables")
     private lazy var meleeImageRef = storageRef.child("melee")
@@ -208,15 +208,18 @@ extension FirebaseManager: DatabaseManager {
             allResults += firearms
             self.getBodyArmorWithSearchQuery(query) { armor in
                 allResults += armor
-                self.getAmmoWithSearchQuery(query) { ammo in
-                    allResults += ammo
-                    self.getMedicalWithSearchQuery(query) { medical in
-                        allResults += medical
-                        self.getThrowablesWithSearchQuery(query) { throwables in
-                            allResults += throwables
-                            self.getMeleeWithSearchQuery(query) { melee in
-                                allResults += melee
-                                handler(allResults)
+                self.getHelmetsWithSearchQuery(query) { armor in
+                    allResults += armor
+                    self.getAmmoWithSearchQuery(query) { ammo in
+                        allResults += ammo
+                        self.getMedicalWithSearchQuery(query) { medical in
+                            allResults += medical
+                            self.getThrowablesWithSearchQuery(query) { throwables in
+                                allResults += throwables
+                                self.getMeleeWithSearchQuery(query) { melee in
+                                    allResults += melee
+                                    handler(allResults)
+                                }
                             }
                         }
                     }
@@ -242,6 +245,20 @@ extension FirebaseManager: DatabaseManager {
 
     func getBodyArmorWithSearchQuery(_ query: String, handler: @escaping (_: [Armor]) -> Void) {
         getAllBodyArmor { armor in
+            let filteredResults = armor.filter {
+                $0.displayDescription.containsIgnoringCase(query)
+                    || $0.displayName.containsIgnoringCase(query)
+                    || $0.displayNameShort.containsIgnoringCase(query)
+                    || $0.material.rawValue.containsIgnoringCase(query)
+                    || $0.armorType.rawValue.containsIgnoringCase(query)
+            }
+
+            handler(filteredResults)
+        }
+    }
+
+    func getHelmetsWithSearchQuery(_ query: String, handler: @escaping (_: [Armor]) -> Void) {
+        getAllHelmets { armor in
             let filteredResults = armor.filter {
                 $0.displayDescription.containsIgnoringCase(query)
                     || $0.displayName.containsIgnoringCase(query)
