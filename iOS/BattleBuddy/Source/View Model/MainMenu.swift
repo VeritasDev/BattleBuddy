@@ -12,6 +12,7 @@ enum MenuItemType: CaseIterable, Localizable {
     // Items
     case firearms
     case ammunition
+    case mods
     case armor
     case helmets
     case medical
@@ -32,6 +33,7 @@ enum MenuItemType: CaseIterable, Localizable {
         case .ballistics: return Localized("main_menu_ballistics")
         case .healthCalc: return Localized("main_menu_health_calc")
         case .firearms: return Localized("main_menu_firearms")
+        case .mods: return Localized("main_menu_mods")
         case .melee: return Localized("main_menu_melee")
         case .medical: return Localized("main_menu_medical")
         case .throwables: return Localized("main_menu_throwables")
@@ -67,6 +69,9 @@ struct MainMenuItem {
         switch type {
         case .firearms:
             handler(ItemListViewController(itemType: .firearm))
+            return
+        case .mods:
+            handler(ItemListViewController(itemType: .modification))
             return
         case .ammunition:
             handler(ItemListViewController(itemType: .ammo))
@@ -108,6 +113,7 @@ struct MainMenuItem {
     func cardImage() -> UIImage? {
         switch type {
         case .firearms: return UIImage(named: "card_hero_firearms")
+        case .mods: return UIImage(named: "card_hero_mods")
         case .ammunition: return UIImage(named: "card_hero_ammo")
         case .melee: return UIImage(named: "card_hero_melee")
         case .throwables: return UIImage(named: "card_hero_throwables")

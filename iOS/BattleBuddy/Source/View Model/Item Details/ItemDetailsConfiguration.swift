@@ -23,6 +23,7 @@ class ItemDetailsConfigurationFactory {
     static func configuredItemDetailsViewController(displayable: Displayable) -> ItemDetailsViewController {
         switch displayable.type {
         case .firearm: return ItemDetailsViewController(FirearmDetailsConfiguration(displayable as! Firearm))
+        case .modification: return ItemDetailsViewController(FirearmDetailsConfiguration(displayable as! Firearm)) // TODO
         case .ammo: return ItemDetailsViewController(AmmoDetailsConfiguration(displayable as! Ammo))
         case .armor: return ItemDetailsViewController(ArmorDetailsConfiguration(displayable as! Armor))
         case .helmet: return ItemDetailsViewController(ArmorDetailsConfiguration(displayable as! Armor))

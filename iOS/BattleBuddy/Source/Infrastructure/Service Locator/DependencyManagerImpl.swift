@@ -57,5 +57,5 @@ class DependencyManagerImpl: DependencyManager {
     func ammoUtilitiesManager() -> AmmoUtilitiesManager { return ammoUtilitiesMngr! }
     func deviceManager() -> DeviceManager { return deviceMngr! }
     func localeManager() -> LocaleManager { return localeMngr! }
-    func weaponBuildController() -> WeaponBuildController { return weaponBuildCtr }
+    func weaponBuildController() -> WeaponBuildController { return weaponBuildCtr! }
 }

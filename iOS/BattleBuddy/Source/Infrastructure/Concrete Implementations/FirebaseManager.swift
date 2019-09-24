@@ -15,6 +15,7 @@ import FirebaseAuth
 
 enum FirebaseCollection: String {
     case firearms = "firearm"
+    case mods = "modification"
     case armor = "armor"
     case ammo = "ammunition"
     case medical = "medical"
@@ -35,6 +36,7 @@ class FirebaseManager: NSObject {
     private lazy var storage = Storage.storage()
     private lazy var storageRef = storage.reference()
     private lazy var firearmsImageRef = storageRef.child("guns")
+    private lazy var modsImageRef = storageRef.child("mods")
     private lazy var ammoImageRef = storageRef.child("ammo")
     private lazy var medsImageRef = storageRef.child("meds")
     private lazy var armorImageRef = storageRef.child("armor")
@@ -66,6 +68,7 @@ class FirebaseManager: NSObject {
         let imageId = itemId + size.rawValue
         switch itemType {
         case .firearm: return firearmsImageRef.child(imageId)
+        case .modification: return modsImageRef.child(imageId)
         case .ammo: return ammoImageRef.child(imageId)
         case .medical: return medsImageRef.child(imageId)
         case .armor: return armorImageRef.child(imageId)
