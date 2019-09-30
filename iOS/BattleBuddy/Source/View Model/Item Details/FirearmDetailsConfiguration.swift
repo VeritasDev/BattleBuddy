@@ -28,16 +28,22 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
     let fireRateCell = BaseTableViewCell(text: Localized("fire_rate"), accessory: .none, selection: .none)
     let actionCell = BaseTableViewCell(text: Localized("action"), accessory: .none, selection: .none)
     let effectiveRangeCell = BaseTableViewCell(text: Localized("effective_range"), accessory: .none, selection: .none)
-    let compareCell = BaseTableViewCell(text: Localized("compare_performance"))
     lazy var performanceCells: [BaseTableViewCell] = {
         if firearm.fullAuto {
-            return [fireModesCell, fireRateCell, effectiveRangeCell, compareCell]
+            return [fireModesCell, fireRateCell, effectiveRangeCell]
         } else if firearm.action == .other {
-            return [fireModesCell, effectiveRangeCell, compareCell]
+            return [fireModesCell, effectiveRangeCell]
         } else {
-            return [actionCell, effectiveRangeCell, compareCell]
+            return [actionCell, effectiveRangeCell]
         }
     }()
+
+    let exploreStackView = BaseStackView(xPaddingCompact: 0.0)
+    let exploreHeaderView = SectionHeaderView(headerText: "explore".local())
+    lazy var exploreTableView = { BaseTableView(dataSource: self, delegate: self) }()
+    let compareCell = BaseTableViewCell(text: "compare_performance".local())
+    let customBuildCell = BaseTableViewCell(text: "gun_build_custom".local())
+    lazy var exploreCells: [BaseTableViewCell] = { return [compareCell, customBuildCell] }()
 
     init(_ firearm: Firearm) {
         self.firearm = firearm
@@ -50,6 +56,9 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
 
         performanceStackView.addArrangedSubview(performanceHeaderView)
         performanceStackView.addArrangedSubview(performanceTableView)
+
+        exploreStackView.addArrangedSubview(exploreHeaderView)
+        exploreStackView.addArrangedSubview(exploreTableView)
 
         firearmTypeCell.detailTextLabel?.text = firearm.firearmType.local()
         caliberCell.detailTextLabel?.text = firearm.caliber
@@ -71,16 +80,21 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
         let performanceTableViewHeight = CGFloat(performanceCells.count) * performanceTableView.rowHeight
         let totalPerformanceStackHeight: CGFloat = performanceHeaderView.height() + performanceTableViewHeight + performanceStackView.totalPadding
         performanceStackView.constrainHeight(totalPerformanceStackHeight)
+
+        let exploreTableViewHeight = CGFloat(exploreCells.count) * exploreTableView.rowHeight
+        let totalExploreStackHeight: CGFloat = exploreHeaderView.height() + exploreTableViewHeight + exploreStackView.totalPadding
+        exploreStackView.constrainHeight(totalExploreStackHeight)
     }
 
     func getArrangedSubviews() -> [UIView] {
-        return [propertiesStackView, performanceStackView]
+        return [propertiesStackView, performanceStackView, exploreStackView]
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView {
         case propertiesTableView: return propertiesCells.count
         case performanceTableView: return performanceCells.count
+        case exploreTableView: return exploreCells.count
         default: fatalError()
         }
     }
@@ -89,6 +103,7 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
         switch tableView {
         case propertiesTableView: return propertiesCells[indexPath.row]
         case performanceTableView: return performanceCells[indexPath.row]
+        case exploreTableView: return exploreCells[indexPath.row]
         default: fatalError()
         }
     }
@@ -129,6 +144,15 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
 
                 let comparisonVC = ComparisonOptionsViewController(FirearmComparison(self.firearm, allFirearms: firearms))
                 self.delegate?.showViewController(viewController: comparisonVC)
+            }
+        case customBuildCell:
+            self.delegate?.showLoading(show: true)
+
+            let controller = FirearmBuildController(firearm)
+            let buildVC = FirearmBuildViewController(controller)
+            controller.loadBuildData { _ in
+                self.delegate?.showLoading(show: false)
+                self.delegate?.showViewController(viewController: buildVC)
             }
         default:
             fatalError()

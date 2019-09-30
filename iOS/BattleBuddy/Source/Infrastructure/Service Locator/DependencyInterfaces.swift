@@ -25,7 +25,6 @@ protocol DependencyManager {
     func ammoUtilitiesManager() -> AmmoUtilitiesManager
     func deviceManager() -> DeviceManager
     func localeManager() -> LocaleManager
-    func weaponBuildController() -> WeaponBuildController
 }
 
 // MARK:- Networking
@@ -88,6 +87,12 @@ protocol DatabaseManager {
     func getAllHelmetsWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
     func getAllHelmetArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
     func getAllHelmetArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
+
+    func getAllMods(handler: @escaping (_: [Modification]) -> Void)
+    func getAllModsByType(handler: @escaping ([ModType: [Modification]]) -> Void)
+    func getAllModsOfType(_ type: ModType, handler: @escaping ([Modification]) -> Void)
+
+    func getCompatibleItemsForFirearm(_ firearm: Firearm, handler: @escaping (FirearmBuildConfig) -> Void)
 }
 
 // MARK:- Ads

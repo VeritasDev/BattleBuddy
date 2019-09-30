@@ -19,6 +19,7 @@ class ItemFactory {
         case ItemType.armor.rawValue: return Armor(json: json)
         case ItemType.medical.rawValue: return Medical(json: json)
         case ItemType.throwable.rawValue: return Throwable(json: json)
+        case let kind where kind.contains("modification"): return Modification(json: json)
         default: return nil
         }
     }

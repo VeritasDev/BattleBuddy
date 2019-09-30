@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
 
     func sessionDidFinishLoading() {
         reloadRootViewController()
-        DependencyManagerImpl.shared.feedbackManager().promptForReviewIfNecessary()
+        dependencyManager.feedbackManager().promptForReviewIfNecessary()
     }
 
     func reloadRootViewController() {

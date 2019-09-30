@@ -23,6 +23,7 @@ enum FirebaseCollection: String {
     case melee = "melee"
     case global = "global"
     case users = "users"
+    case compatibility = "compatibility"
 }
 
 enum ImageSize: String {
@@ -47,7 +48,6 @@ class FirebaseManager: NSObject {
     var sessionDelegate: SessionDelegate
     var userMetadata: BBUser?
 
-
     private lazy var prefsManager = DependencyManagerImpl.shared.prefsManager()
     var globalMetadata: GlobalMetadata?
 
@@ -63,7 +63,6 @@ class FirebaseManager: NSObject {
     }
 
     // MARK:- Images
-
     func itemImageReference(itemId: String, itemType: ItemType, size: ImageSize) -> StorageReference {
         let imageId = itemId + size.rawValue
         switch itemType {
@@ -80,7 +79,6 @@ class FirebaseManager: NSObject {
 }
 
 // MARK:- Account Manager
-
 extension FirebaseManager: AccountManager {
     func initializeSession() {
         print("Initializing anonymous session...")
@@ -612,6 +610,40 @@ extension FirebaseManager: DatabaseManager {
             }
         }
     }
+
+    // MARK:- Mods
+    func getAllMods(handler: @escaping (_: [Modification]) -> Void) {
+        db.collection(FirebaseCollection.mods.rawValue).getDocuments() { (querySnapshot, err) in
+            if let error = err {
+                print("Failed to get all mods w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
+            guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) mods.")
+            let allMods = snapshot.getMods().sorted(by: { $0.ergonomics > $1.ergonomics })
+            handler(allMods)
+        }
+    }
+
+    func getAllModsByType(handler: @escaping ([ModType: [Modification]]) -> Void) {
+
+    }
+
+    func getAllModsOfType(_ type: ModType, handler: @escaping ([Modification]) -> Void) {
+
+    }
+
+    func getCompatibleItemsForFirearm(_ firearm: Firearm, handler: @escaping (FirearmBuildConfig) -> Void) {
+        db.collection(FirebaseCollection.compatibility.rawValue).document(firearm.id).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                print("Document data: \(data)")
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
 }
 
 extension QuerySnapshot {
@@ -621,4 +653,5 @@ extension QuerySnapshot {
     func getMedical() -> [Medical] { return documents.compactMap{ Medical(json: $0.data()) } }
     func getMelee() -> [MeleeWeapon] { return documents.compactMap{ MeleeWeapon(json: $0.data()) } }
     func getThrowables() -> [Throwable] { return documents.compactMap{ Throwable(json: $0.data()) } }
+    func getMods() -> [Modification] { return documents.compactMap{ Modification(json: $0.data()) } }
 }

@@ -135,7 +135,7 @@
 "fold_or_retract" = "Fold/Retract";
 "retractable" = "Retractable";
 "build_wizard" = "Build Wizard";
-"gun_build_custom" = "Custom";
+"gun_build_custom" = "Customize This Gun";
 "gun_build_recoil" = "Minimum Recoil";
 "gun_build_ergo" = "Maximum Ergonomics";
 "gun_build_random" = "Random";
@@ -367,6 +367,25 @@
 "speed_penalty_full" = "Speed Penalty";
 "turn_speed_penalty_full" = "Turn Speed Penalty";
 "ergo_penalty_full" = "Ergonomics Penalty";
+
+// MARK:- Mods
+"mod_generic" = "modification";
+"mod_barrel" = "modificationBarrel";
+"mod_bipod"  = "modificationBipod";
+"mod_charge" = "modificationCharge";
+"mod_device" = "modificationDevice";
+"mod_foregrip" = "modificationForegrip";
+"mod_gasBlock" = "modificationGasblock";
+"mod_goggles" = "modificationGoggles";
+"mod_handgaurd" = "modificationHandguard";
+"mod_launcher" = "modificationLauncher";
+"mod_mount" = "modificationMount";
+"mod_muzzle" = "modificationMuzzle";
+"mod_pistolGrip" = "modificationPistolgrip";
+"mod_receiver" = "modificationReceiver";
+"mod_sight" = "modificationSight";
+"mod_sightSpecial" = "modificationSightSpecial";
+"mod_stock" = "modificationStock";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations

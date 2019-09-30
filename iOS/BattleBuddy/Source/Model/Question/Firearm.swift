@@ -22,6 +22,7 @@ struct Firearm: BaseItem {
     let fireRate: Int
     let effectiveDistance: Int
     let foldableOrRetractable: Bool
+    let slots: [Slot]
 
     init?(json: [String : Any]) {
         self.json = json
@@ -37,7 +38,8 @@ struct Firearm: BaseItem {
             let boxedHorizontalRecoil: NSNumber = json["recoilHorizontal"] as? NSNumber,
             let boxedFoldRetractable: NSNumber = json["foldRectractable"] as? NSNumber,
             let boxedFireRate: NSNumber = json["rof"] as? NSNumber,
-            let boxedEffectiveDistance: NSNumber = json["effectiveDist"] as? NSNumber else {
+            let boxedEffectiveDistance: NSNumber = json["effectiveDist"] as? NSNumber,
+            let slotsJson = json["slots"] as? [String: Any] else {
                 print("ERROR: Firearm missing required parameters in json: \(json)")
                 return nil
         }
@@ -53,6 +55,10 @@ struct Firearm: BaseItem {
         foldableOrRetractable = boxedFoldRetractable.boolValue
         fireRate = boxedFireRate.intValue
         effectiveDistance = boxedEffectiveDistance.intValue
+        slots = slotsJson.keys.compactMap {
+            guard let json = slotsJson[$0] as? [String: Any] else { return nil }
+            return Slot(name: $0, json: json)
+        }
     }
 
     func fireModesDisplayString() -> String {

@@ -17,11 +17,16 @@ enum FirearmBuildPreset {
 
 struct FirearmBuild {
     let databaseManager = DependencyManagerImpl.shared.databaseManager()
-    let firearm: Firearm
+    let buildConfig: FirearmBuildConfig
     let preset: FirearmBuildPreset
 
-    init(firearm: Firearm, preset: FirearmBuildPreset) {
-        self.firearm = firearm
+    init(config: FirearmBuildConfig, preset: FirearmBuildPreset) {
+        self.buildConfig = config
         self.preset = preset
     }
+}
+
+struct FirearmBuildConfig {
+    let firearm: Firearm
+    let allCompatibleMods: [Modification]
 }
