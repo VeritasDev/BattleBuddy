@@ -15,13 +15,13 @@
     - [x] Helmets
     - [ ] Accessories
     - [x] Compare helmets secondary recommendation are one class below
+- [ ] Japenese Localization
 - [x] Placeholder images for helmets
 - [x] Resize helmet placeholder
 - [ ] Placeholder images for accessories
 - [x] Ammo needs to be disconnected from global metadata!
 - [ ] Implementing Banner Ads
 - [ ] Stereo audio tool
-- [ ] Stereo audio post writeup
 - [ ] Info page on how to earn points
 - [ ] Loyalty points
     - [x] Points for watching ads
@@ -37,7 +37,6 @@
     - Armor Zones
 - [ ] Health calc buckshot fix
 - [ ] Buckshot damage multiplier
-- [ ] Cell label font sizing
 - [ ] Attributions for localizations I missed last release
 - [x] Days since wipe counter
 - [x] Settings
@@ -47,6 +46,8 @@
 - [x] Loyalty Leaderboard
 
 ## <u>v1.2</u>
+- [ ] Cell label font sizing
+- [ ] Stereo audio post writeup
 - [ ] Real-time community stats updates
 - [ ] Arabic HP fraction order
 - [ ] Arabic Comparison Layout issue
