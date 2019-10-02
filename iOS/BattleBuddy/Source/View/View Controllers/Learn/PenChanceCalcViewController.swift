@@ -10,7 +10,7 @@ import UIKit
 import BallisticsEngine
 import JGProgressHUD
 
-class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSelectionDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class PenChanceCalcViewController: BaseCalculatorViewController {
     let dbManager = DependencyManagerImpl.shared.databaseManager()
     var calculator = PenetrationCalculator()
     let selectionCellId = "ItemSelectionCell"
@@ -45,7 +45,7 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
     let durabilitySlider: UISlider = {
         let slider = UISlider(frame: .zero)
         slider.tintColor = UIColor.Theme.primary
-        slider.isHidden = true
+        slider.enable(false)
         return slider
     }()
     lazy var selectionCollectionView: BaseCollectionView = {
@@ -60,11 +60,28 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
         collectionView.isScrollEnabled = false
         return collectionView
     }()
+    let gunshotButtonStackView = BaseStackView(axis: .horizontal, distribution: .fillEqually)
+    lazy var penButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("simulate_gunshot_pen".local(), for: .normal)
+        button.addTarget(self, action: #selector(simulateShotWithPen), for: .touchUpInside)
+        button.enable(false)
+        button.applyDefaultStyle()
+        return button
+    }()
+    lazy var noPenButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("simulate_gunshot_no_pen".local(), for: .normal)
+        button.addTarget(self, action: #selector(simulateShotWithNoPen), for: .touchUpInside)
+        button.enable(false)
+        button.applyDefaultStyle()
+        return button
+    }()
 
     var armor: Armor? {
         didSet {
             if let armor = armor {
-                durabilitySlider.isHidden = false
+                durabilitySlider.enable(true)
                 durabilityValueLabel.isHidden = false
                 durabilityLabel.isHidden = false
 
@@ -73,7 +90,7 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
                 durabilitySlider.value = durabilitySlider.maximumValue
                 updateCalculator()
             } else {
-                durabilitySlider.isHidden = true
+                durabilitySlider.enable(false)
                 durabilityValueLabel.isHidden = true
                 durabilityLabel.isHidden = true
             }
@@ -108,23 +125,45 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
         stackView.addArrangedSubview(selectionCollectionView)
         stackView.addArrangedSubview(durabilityLabelStackView)
         stackView.addArrangedSubview(durabilitySliderStackView)
+        stackView.addArrangedSubview(gunshotButtonStackView)
 
         durabilityLabelStackView.addArrangedSubview(durabilityLabel)
         durabilityLabelStackView.addArrangedSubview(UIView())
         durabilityLabelStackView.addArrangedSubview(durabilityValueLabel)
-
         durabilitySliderStackView.addArrangedSubview(durabilitySlider)
+
+        gunshotButtonStackView.addArrangedSubview(penButton)
+        gunshotButtonStackView.addArrangedSubview(noPenButton)
 
         NSLayoutConstraint.activate([
             NSLayoutConstraint.init(item: resultLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 175.0),
             NSLayoutConstraint.init(item: selectionCollectionView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.2, constant: 0.0),
             NSLayoutConstraint.init(item: durabilityLabelStackView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 30.0),
             NSLayoutConstraint.init(item: durabilitySlider, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 60.0),
+            NSLayoutConstraint.init(item: penButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 55.0),
+            NSLayoutConstraint.init(item: noPenButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 55.0),
         ])
     }
 
     @objc func showHelp() {
         presentDefaultAlert(title: "pen_chance_help_title".local(), message: "pen_chance_help_message".local())
+    }
+
+    @objc func simulateShotWithPen() {
+        shootWithPen(true)
+    }
+
+    @objc func simulateShotWithNoPen() {
+        shootWithPen(false)
+    }
+
+    func shootWithPen(_ pen: Bool) {
+        guard let armor = armor, let ammo = ammo else { fatalError() }
+
+        let damage = calculator.calculateDurabilityDamage(armor: armor, ammo: ammo, didPen: pen)
+        durabilitySlider.value -= Float(damage)
+
+        updateCalculator()
     }
 
     func showAmmoOptions() {
@@ -167,7 +206,8 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
         selectionCollectionView.reloadData()
 
         if var armor = armor, let ammo = ammo {
-            armor.currentDurability = Int(durabilitySlider.value)
+            let durability = Int(durabilitySlider.value)
+            armor.currentDurability = durability
 
             let midPoint: CGFloat = 50.0;
             let penChance: CGFloat = CGFloat(calculator.penetrationChance(armor: armor, ammo: ammo))
@@ -181,17 +221,27 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
 
             durabilityValueLabel.text = "\(Int(durabilitySlider.value)) / \(Int(durabilitySlider.maximumValue))"
             durabilitySlider.tintColor = resultColor
+
+            penButton.enable(durability > 0)
+            noPenButton.enable(durability > 0)
         } else {
             resultLabel.text = "-"
         }
     }
+}
 
-    // MARK: Sort selection delegate
+// MARK:- Sortable Selection Delegate
+extension PenChanceCalcViewController: SortableItemSelectionDelegate {
     func itemSelected(_ selection: Sortable) {
         switch selection {
         case let selectedArmor as Armor: armor = selectedArmor
         case let selectedAmmo as Ammo: ammo = selectedAmmo
         default: fatalError()
+        }
+
+        if let _ = armor, let _ = ammo {
+            penButton.enable(true)
+            noPenButton.enable(true)
         }
 
         dismiss(animated: true, completion: nil)
@@ -200,9 +250,10 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
     func selectionCancelled() {
         dismiss(animated: true, completion: nil)
     }
+}
 
-    // MARK: Collection view methods
-
+// MARK:- Collection View
+extension PenChanceCalcViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -231,7 +282,7 @@ class PenChanceCalcViewController: BaseCalculatorViewController, SortableItemSel
         super.viewWillTransition(to: size, with: coordinator)
 
         coordinator.animate(alongsideTransition: { _ in
-                self.selectionCollectionView.collectionViewLayout.invalidateLayout()
+            self.selectionCollectionView.collectionViewLayout.invalidateLayout()
         }, completion:nil)
     }
 

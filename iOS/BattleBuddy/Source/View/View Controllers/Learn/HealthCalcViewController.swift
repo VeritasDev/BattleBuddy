@@ -10,10 +10,9 @@ import UIKit
 import BallisticsEngine
 import JGProgressHUD
 
-class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegate, HealthCalculatorDelegate {
-    lazy var calculator: HealthCalculator = {
-        let calc = HealthCalculator()
-        calc.delegate = self
+class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegate {
+    lazy var calculator: CombatCalculator = {
+        let calc = CombatCalculator()
         calc.fragChanceSetting = .never
         return calc
     }()
@@ -202,35 +201,38 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
     }
 
     @objc func handleHeadshot() {
-        if let ammo = ammo, let target = target { calculator.processImpact(to: target, on: target.head, with: ammo) }
+        handleImpact(.head)
     }
 
     @objc func handleThoraxShot() {
-        if let ammo = ammo, let target = target { calculator.processImpact(to: target, on: target.thorax, with: ammo) }
+        handleImpact(.thorax)
     }
 
     @objc func handleStomachShot() {
-        if let ammo = ammo, let target = target { calculator.processImpact(to: target, on: target.stomach, with: ammo) }
+        handleImpact(.stomach)
     }
 
     @objc func handleLeftArmShot() {
-        if let ammo = ammo, let target = target { calculator.processImpact(to: target, on: target.leftArm, with: ammo) }
+        handleImpact(.leftArm)
     }
 
     @objc func handleRightArmShot() {
-        if let ammo = ammo, let target = target { calculator.processImpact(to: target, on: target.rightArm, with: ammo) }
+        handleImpact(.rightArm)
     }
 
     @objc func handleLeftLegShot() {
-        if let ammo = ammo, let target = target { calculator.processImpact(to: target, on: target.leftLeg, with: ammo) }
+        handleImpact(.leftLeg)
     }
 
     @objc func handleRightLegShot() {
-        if let ammo = ammo, let target = target { calculator.processImpact(to: target, on: target.rightLeg, with: ammo) }
+        handleImpact(.rightLeg)
     }
 
-    func healthCalculator(_ calculator: HealthCalculator, processedImpact: BallisticsImpact) {
-        target = processedImpact.target
+    func handleImpact(_ zone: BallisticsEngine.BodyZoneType) {
+        if let ammo = ammo, let target = target {
+            let result = calculator.processImpact(to: target, zoneType: zone, with: ammo)
+            self.target = result.target
+        }
     }
 
     // MARK: Sort selection delegate

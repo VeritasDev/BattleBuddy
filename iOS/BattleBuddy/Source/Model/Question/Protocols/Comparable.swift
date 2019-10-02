@@ -127,9 +127,9 @@ extension Ammo: Comparable {
     func getValueStringForProperty(_ property: ComparableProperty) -> String {
         switch property {
         case .penetration: return String(penetration)
-        case .damage: return String(Int(resolvedDamage))
+        case .damage: return String(Int(resolvedDamage) * projectileCount)
         case .fragChance: return String(Int(fragChance * 100)) + "%"
-        case .armorDamage: return String(Int(resolvedArmorDamage))
+        case .armorDamage: return String(Int(resolvedArmorDamage) * projectileCount)
         case .muzzleVelocity: return String(muzzleVelocity)
         default: fatalError()
         }
@@ -187,6 +187,14 @@ extension MeleeWeapon: Comparable {
         case .slashDamage: return String(slashDamage)
         case .slashRate: return String(slashRate)
         case .slashRange: return String(slashRange) + "meters_abbr".local()
+        default: fatalError()
+        }
+    }
+}
+
+extension Modification: Comparable {
+    func getValueStringForProperty(_ property: ComparableProperty) -> String {
+        switch property {
         default: fatalError()
         }
     }

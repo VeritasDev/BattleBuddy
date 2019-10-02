@@ -106,6 +106,18 @@ class ItemListViewController: BaseStackViewController {
                 self.config.sections = medicalSections
                 self.buildStackFromConfig()
             }
+        case .modification:
+            self.dbManager.getAllModsByType { modMap in
+                hud.dismiss(animated: false)
+                var modSections: [ItemSection] = []
+                for type in ModType.allCases {
+                    if let items = modMap[type], items.count > 0 {
+                        modSections.append(ItemSection(title: type.local(), items: items))
+                    }
+                }
+                self.config.sections = modSections
+                self.buildStackFromConfig()
+            }
         default:
             fatalError()
         }
@@ -149,6 +161,9 @@ extension ItemListViewController: PreviewMenuSelectionDelegate {
         case .medical:
             let medVC = ItemDetailsViewController(MedicalDetailsConfiguration(displayable as! Medical))
             navigationController?.pushViewController(medVC, animated: true)
+        case .modification:
+            let modVC = ItemDetailsViewController(ModificationDetailsConfiguration(displayable as! Modification))
+            navigationController?.pushViewController(modVC, animated: true)
         default:
             fatalError()
         }

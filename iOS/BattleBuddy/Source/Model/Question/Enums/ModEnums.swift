@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ModType: String, Localizable {
+enum ModType: String, Localizable, CaseIterable {
     case generic = "modification"
     case barrel = "modificationBarrel"
     case bipod  = "modificationBipod"
@@ -28,7 +28,7 @@ enum ModType: String, Localizable {
     case stock = "modificationStock"
 
     func local(short: Bool = false) -> String {
-        return "mod_" + self.rawValue
+        return self.rawValue.local()
     }
 }
 

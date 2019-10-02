@@ -8,36 +8,39 @@
 - [x] Release v1.0
 - [x] Release v1.0.1
 - [x] Release v1.0.2 
-- [ ] Release v1.1  ***In development - see TODO list below***
+- [ ] Release v1.1.0  ***In development - see TODO list below***
 
 ## <u>v1.1</u>
-- [ ] Add New Item Types
-    - [x] Helmets
-    - [ ] Accessories
-    - [x] Compare helmets secondary recommendation are one class below
+- [ ] Face shields
 - [ ] Japenese Localization
-- [x] Placeholder images for helmets
-- [x] Resize helmet placeholder
+- [ ] Mods List
+- [ ] Mods Detail Screen
+- [ ] Mods Comparison
 - [ ] Placeholder images for accessories
-- [x] Ammo needs to be disconnected from global metadata!
 - [ ] Implementing Banner Ads
 - [ ] Stereo audio tool
-- [ ] Info page on how to earn points
-- [ ] Loyalty points
-    - [x] Points for watching ads
-    - [ ] Banner ads
+- [ ] Info on how to earn points
 - [ ] Implement Banner Ads (if setting enabled)
 - [ ] Filter selection lists
 - [ ] Penetration Calculator Improvements
-    - Helmets/face shields/mods
-    - Armored Rigs + Multi-layer support to ballistics calc
-    - Add a "shoot" button to simulate damage
+    - [ ] Helmets/face shields/mods
+    - [x] Add a "shoot" button to simulate damage
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
-- [ ] Health calc buckshot fix
-- [ ] Buckshot damage multiplier
-- [ ] Attributions for localizations I missed last release
+
+- [x] Health calc buckshot fix
+- [x] Placeholder images for helmets
+- [x] Resize helmet placeholder
+- [x] Ammo needs to be disconnected from global metadata!
+- [x] Add New Item Types
+    - [x] Helmets
+    - [x] Compare helmets secondary recommendation are one class below
+- [x] Loyalty points
+    - [x] Points for watching ads
+    - [x] Banner ads
+- [x] Buckshot damage multiplier
+- [x] Attributions for localizations I missed last release
 - [x] Days since wipe counter
 - [x] Settings
     - [x] Nickname

@@ -13,6 +13,7 @@ class InmobiManager: NSObject, AdManager {
     var adDelegate: AdDelegate?
     var currentVideoAdState: VideoAdState = .idle
     let prefsManager = DependencyManagerImpl.shared.prefsManager()
+    let accountManager = DependencyManagerImpl.shared.accountManager()
     let accountId = "1ca74bc970374286b43eb23451514f6d"
     let consentData: [AnyHashable: Any] = [IM_GDPR_CONSENT_AVAILABLE: "true", "gdpr": 1]
     lazy var video: IMInterstitial = IMInterstitial(placementId: 1567297909039, delegate: self)
@@ -41,6 +42,9 @@ class InmobiManager: NSObject, AdManager {
 
     func updateBannerAdsSetting(_ enabled: Bool) {
         prefsManager.update(.bannerAds, value: enabled)
+
+        let points = enabled ? 50 : -50
+        accountManager.addLoyaltyPoints(points)
     }
 
     func watchAdVideo(from rootVC: UIViewController) {
@@ -50,9 +54,11 @@ class InmobiManager: NSObject, AdManager {
     }
 
     func addBannerToView(_ view: UIView) {
-//        view.addSubview(banner)
-//        banner.pinToBottom(height: 50.0)
-//        banner.load()
+        if bannerAdsEnabled() {
+            view.addSubview(banner)
+            banner.pinToBottom(height: 50.0)
+            banner.load()
+        }
     }
 }
 
@@ -92,7 +98,7 @@ extension InmobiManager: IMInterstitialDelegate {
     func interstitial(_ interstitial: IMInterstitial!, rewardActionCompletedWithRewards rewards: [AnyHashable : Any]!) {
         print("Rewards received!")
 
-        DependencyManagerImpl.shared.accountManager().addLoyaltyPoints(1)
+        accountManager.addLoyaltyPoints(1)
     }
 
     func reloadVideoAd(after delay: Double = 0) {
@@ -106,4 +112,11 @@ extension InmobiManager: IMInterstitialDelegate {
 // MARK:- Banner Delegate
 extension InmobiManager: IMBannerDelegate {
 
+    func bannerDidFinishLoading(_ banner: IMBanner!) {
+        print("Banner loaded.")
+    }
+
+    func banner(_ banner: IMBanner!, didFailToLoadWithError error: IMRequestStatus!) {
+        print("Banner failed to load: ", error)
+    }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import BallisticsEngine
 
-struct Ammo: BaseItem, CalculableAmmo {
+struct Ammo: BaseItem {
     let json: [String : Any]
     let type: ItemType
     let caliber: String
@@ -21,6 +21,7 @@ struct Ammo: BaseItem, CalculableAmmo {
     let tracer: Bool
     let subsonic: Bool
     let projectileCount: Int
+    var fragmented: Bool = false
 
     init?(json: [String : Any]) {
         self.json = json
@@ -55,8 +56,10 @@ struct Ammo: BaseItem, CalculableAmmo {
             projectileCount = 1
         }
     }
+}
 
-    // MARK: Ammo calculable
+// MARK: Ammo calculable
+extension Ammo: CalculableAmmo {
     var resolvedPenetration: Double {
         get { return Double(penetration) }
         set { penetration = Int(newValue) }
@@ -74,5 +77,10 @@ struct Ammo: BaseItem, CalculableAmmo {
 
     var resolvedFragmentationChance: Double {
         return Double(fragChance)
+    }
+
+    var didFragment: Bool {
+        get { return fragmented }
+        set(newValue) { fragmented = newValue }
     }
 }

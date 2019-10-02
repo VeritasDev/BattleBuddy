@@ -51,13 +51,8 @@ class SoundTrainingViewController: BaseViewController {
     lazy var commitButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.setTitle("sound_training_commit".local(), for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
-        button.titleLabel?.numberOfLines = 0
-        button.tintColor = UIColor.Theme.primary
-        button.backgroundColor = UIColor.Theme.primary
-        button.layer.cornerRadius = 7.0
         button.addTarget(self, action: #selector(commit), for: .touchUpInside)
+        button.applyDefaultStyle()
         return button
     }()
 

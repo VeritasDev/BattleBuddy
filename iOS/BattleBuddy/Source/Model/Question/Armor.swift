@@ -134,9 +134,8 @@ struct Armor: BaseItem, Armored {
     }
 }
 
+// MARK: Calculable Armor
 extension Armor: CalculableArmor {
-
-    // MARK: Calculable Armor
     var resolvedArmorClass: Int { get { return armorClass.rawValue } }
     var resolvedCurrentDurability: Double {
         get { return Double(currentDurability) }
@@ -148,4 +147,21 @@ extension Armor: CalculableArmor {
     }
     var resolvedDestructibility: Double { get {  return Double(material.destructibility()) } }
     var resolvedBluntThroughput: Double { get {  return Double(bluntThroughput) } }
+    var resolvedProtectionZones: [BallisticsEngine.BodyZoneType] {
+        var zones: [BallisticsEngine.BodyZoneType] = []
+
+        if protectsTopHead { zones.append(.head) }
+        if protectsEyes { zones.append(.head) }
+        if protectsJaws { zones.append(.head) }
+        if protectsEars { zones.append(.head) }
+        if protectsNape { zones.append(.head) }
+        if protectsChest { zones.append(.thorax) }
+        if protectsStomach { zones.append(.stomach) }
+        if protectsLeftArm { zones.append(.leftArm) }
+        if protectsRightArm { zones.append(.rightArm) }
+        if protectsLeftLeg { zones.append(.leftLeg) }
+        if protectsRightLeg { zones.append(.rightLeg) }
+
+        return zones
+    }
 }

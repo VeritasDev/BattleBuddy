@@ -2,7 +2,7 @@
 //  PostElementCell.swift
 //  BattleBuddy
 //
-//  Created by Amaral, Michael on 9/16/19.
+//  Created by Veritas on 9/16/19.
 //  Copyright © 2019 Veritas. All rights reserved.
 //
 

@@ -16,7 +16,7 @@ struct LanguageTeam {
 class LocalizationTeamViewController: BaseTableViewController {
     lazy var teams: [LanguageTeam] = {
         return [
-            LanguageTeam(languageCodes: ["no"], members: ["Vegard Kjølås"]),
+            LanguageTeam(languageCodes: ["nb"], members: ["Vegard Kjølås"]),
             LanguageTeam(languageCodes: ["nl"], members: ["Robinblitz"]),
             LanguageTeam(languageCodes: ["ru"], members: ["JackWithMeat", "Danila \"Danilablond\"", "Anatoly \"Nagodre\" Kotov", "Alexey Byron"]),
             LanguageTeam(languageCodes: ["it"], members: ["Adriano Crippa"]),
@@ -33,7 +33,10 @@ class LocalizationTeamViewController: BaseTableViewController {
             LanguageTeam(languageCodes: ["pt_br"], members: ["Spuritika", "Sir_Tai"]),
             LanguageTeam(languageCodes: ["hu"], members: ["Kevin Patkósi"]),
             LanguageTeam(languageCodes: ["cs"], members: ["Frren"]),
-            LanguageTeam(languageCodes: ["zh-hk"], members: ["jasonlin12356789", "Allen Chang"])
+            LanguageTeam(languageCodes: ["zh-hk"], members: ["jasonlin12356789", "Allen Chang"]),
+            LanguageTeam(languageCodes: ["sl"], members: ["CrazyHKS"]),
+            LanguageTeam(languageCodes: ["ko"], members: ["JT"]),
+            LanguageTeam(languageCodes: ["ja"], members: ["Ruin"])
         ]
     }()
 

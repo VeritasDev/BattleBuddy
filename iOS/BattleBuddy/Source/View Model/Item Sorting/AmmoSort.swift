@@ -53,10 +53,10 @@ class AmmoSortConfig: SortConfiguration {
             case (false, AmmoSortableParam.name.rawValue): return $0.displayNameShort > $1.displayNameShort
             case (true, AmmoSortableParam.caliber.rawValue): return $0.caliber < $1.caliber
             case (false, AmmoSortableParam.caliber.rawValue): return $0.caliber > $1.caliber
-            case (true, AmmoSortableParam.pen.rawValue): return $0.penetration < $1.penetration
-            case (false, AmmoSortableParam.pen.rawValue): return $0.penetration > $1.penetration
-            case (true, AmmoSortableParam.damage.rawValue): return $0.damage < $1.damage
-            case (false, AmmoSortableParam.damage.rawValue): return $0.damage > $1.damage
+            case (true, AmmoSortableParam.pen.rawValue): return $0.resolvedPenetration < $1.resolvedPenetration
+            case (false, AmmoSortableParam.pen.rawValue): return $0.resolvedPenetration > $1.resolvedPenetration
+            case (true, AmmoSortableParam.damage.rawValue): return $0.resolvedDamage < $1.resolvedDamage
+            case (false, AmmoSortableParam.damage.rawValue): return $0.resolvedDamage > $1.resolvedDamage
             default: fatalError()
             }
         }

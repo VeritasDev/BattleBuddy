@@ -141,6 +141,8 @@
 		EF962C7B22FB64DB009BB397 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF962C7A22FB64DB009BB397 /* TeamViewController.swift */; };
 		EFACDBD22304832C00E3F30B /* ProblemSolvingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFACDBD12304832C00E3F30B /* ProblemSolvingViewController.swift */; };
 		EFACDBD5230488D400E3F30B /* WizardFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFACDBD4230488D400E3F30B /* WizardFlow.swift */; };
+		EFACFCA023453776003A3624 /* ModificationDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFACFC9F23453775003A3624 /* ModificationDetailsConfiguration.swift */; };
+		EFACFCA2234537F0003A3624 /* ModificationComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFACFCA1234537F0003A3624 /* ModificationComparison.swift */; };
 		EFB7050822BAB2A8003E54FA /* ItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7050722BAB2A8003E54FA /* ItemFactory.swift */; };
 		EFD03DC222B2AAE000DE1874 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03DC122B2AAE000DE1874 /* ThemeManager.swift */; };
 		EFD03DC522B2CA5200DE1874 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03DC422B2CA5200DE1874 /* BaseNavigationController.swift */; };
@@ -390,6 +392,8 @@
 		EF962C7A22FB64DB009BB397 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		EFACDBD12304832C00E3F30B /* ProblemSolvingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSolvingViewController.swift; sourceTree = "<group>"; };
 		EFACDBD4230488D400E3F30B /* WizardFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardFlow.swift; sourceTree = "<group>"; };
+		EFACFC9F23453775003A3624 /* ModificationDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificationDetailsConfiguration.swift; sourceTree = "<group>"; };
+		EFACFCA1234537F0003A3624 /* ModificationComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificationComparison.swift; sourceTree = "<group>"; };
 		EFB7050722BAB2A8003E54FA /* ItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFactory.swift; sourceTree = "<group>"; };
 		EFD03DC122B2AAE000DE1874 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		EFD03DC422B2CA5200DE1874 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -458,6 +462,7 @@
 				EF831FE922DFA89E00C6C138 /* MedicalDetailsConfiguration.swift */,
 				27F09ADE22DFE69100552C35 /* ArmorDetailsConfiguration.swift */,
 				EF831FF022E8C56D00C6C138 /* MeleeDetailsConfiguration.swift */,
+				EFACFC9F23453775003A3624 /* ModificationDetailsConfiguration.swift */,
 				27A4A8FE22E6A29E00C5618E /* ThrowableDetailsConfiguration.swift */,
 			);
 			path = "Item Details";
@@ -987,6 +992,7 @@
 				EF831FF922E8D2A200C6C138 /* ArmorComparison.swift */,
 				EF831FFD22E8D46F00C6C138 /* MedicalComparison.swift */,
 				EF831FF322E8D29600C6C138 /* MeleeWeaponComparison.swift */,
+				EFACFCA1234537F0003A3624 /* ModificationComparison.swift */,
 				EF831FF522E8D29800C6C138 /* ThrowableComparison.swift */,
 			);
 			path = "Item Comparisons";
@@ -1394,6 +1400,7 @@
 				EFF2FF4F22D4DF1F00BED024 /* UIViewUtilities.swift in Sources */,
 				27C0B17A23140061004BCE14 /* BodyZoneHealthButton.swift in Sources */,
 				27A4A8FF22E6A29E00C5618E /* ThrowableDetailsConfiguration.swift in Sources */,
+				EFACFCA2234537F0003A3624 /* ModificationComparison.swift in Sources */,
 				27781CE422F733D9007134E2 /* SortableTableViewCell.swift in Sources */,
 				27F09AE822E3875600552C35 /* PenChanceCalcViewController.swift in Sources */,
 				EF10CCE1232A9D5700E95A45 /* SoundTrainingViewController.swift in Sources */,
@@ -1409,6 +1416,7 @@
 				2771D97A22D370A9009B99F1 /* PreviewMenuCell.swift in Sources */,
 				EFF2FF4622D3C5A200BED024 /* FirebaseManager.swift in Sources */,
 				27F09AD922DCA00D00552C35 /* Theme.swift in Sources */,
+				EFACFCA023453776003A3624 /* ModificationDetailsConfiguration.swift in Sources */,
 				278A76AF2307355E00E0C745 /* InAppPurchaseController.swift in Sources */,
 				27781CE222F72C34007134E2 /* SortableHeaderView.swift in Sources */,
 				EFACDBD5230488D400E3F30B /* WizardFlow.swift in Sources */,

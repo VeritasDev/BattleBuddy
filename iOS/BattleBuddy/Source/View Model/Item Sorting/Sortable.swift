@@ -39,8 +39,8 @@ extension Ammo: Sortable {
         switch param.identifier {
         case AmmoSortableParam.name.identifier: return displayNameShort
         case AmmoSortableParam.caliber.identifier: return DependencyManagerImpl.shared.ammoUtilitiesManager().caliberDisplayName(caliber)
-        case AmmoSortableParam.pen.identifier: return String(penetration)
-        case AmmoSortableParam.damage.identifier: return String(damage)
+        case AmmoSortableParam.pen.identifier: return String(Int(resolvedPenetration))
+        case AmmoSortableParam.damage.identifier: return String(Int(resolvedDamage))
         default: fatalError()
         }
     }

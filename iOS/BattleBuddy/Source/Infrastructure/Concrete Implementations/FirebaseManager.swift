@@ -627,7 +627,12 @@ extension FirebaseManager: DatabaseManager {
     }
 
     func getAllModsByType(handler: @escaping ([ModType: [Modification]]) -> Void) {
-
+        getAllMods { mods in
+            var map: [ModType: [Modification]] = [:]
+            for type in ModType.allCases { map[type] = [] }
+            for mod in mods { map[mod.modType]?.append(mod) }
+            handler(map)
+        }
     }
 
     func getAllModsOfType(_ type: ModType, handler: @escaping ([Modification]) -> Void) {

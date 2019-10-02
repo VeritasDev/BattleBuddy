@@ -63,3 +63,22 @@ extension NSTextAlignment {
         return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft ? .left : .right
     }
 }
+
+extension UIControl {
+    func enable(_ enabled: Bool) {
+        isUserInteractionEnabled = enabled
+        alpha = enabled ? 1.0 : 0.4
+    }
+}
+
+extension UIButton {
+    func applyDefaultStyle() {
+        setTitleColor(.white, for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
+        titleLabel?.numberOfLines = 0
+        titleLabel?.textAlignment = .center
+        tintColor = UIColor.Theme.primary
+        backgroundColor = UIColor.Theme.primary
+        layer.cornerRadius = 7.0
+    }
+}

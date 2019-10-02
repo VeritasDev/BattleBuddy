@@ -369,23 +369,28 @@
 "ergo_penalty_full" = "Ergonomics Penalty";
 
 // MARK:- Mods
-"mod_generic" = "modification";
-"mod_barrel" = "modificationBarrel";
-"mod_bipod"  = "modificationBipod";
-"mod_charge" = "modificationCharge";
-"mod_device" = "modificationDevice";
-"mod_foregrip" = "modificationForegrip";
-"mod_gasBlock" = "modificationGasblock";
-"mod_goggles" = "modificationGoggles";
-"mod_handgaurd" = "modificationHandguard";
-"mod_launcher" = "modificationLauncher";
-"mod_mount" = "modificationMount";
-"mod_muzzle" = "modificationMuzzle";
-"mod_pistolGrip" = "modificationPistolgrip";
-"mod_receiver" = "modificationReceiver";
-"mod_sight" = "modificationSight";
-"mod_sightSpecial" = "modificationSightSpecial";
-"mod_stock" = "modificationStock";
+"modification" = "Modification";
+"modificationBarrel" = "Barrel";
+"modificationBipod"  = "Bipod";
+"modificationCharge" = "Charging Handle";
+"modificationDevice" = "Device";
+"modificationForegrip" = "Foregrip";
+"modificationGasblock" = "Gas Block";
+"modificationGoggles" = "Goggles";
+"modificationHandguard" = "Handguard";
+"modificationLauncher" = "Launcher";
+"modificationMount" = "Mount";
+"modificationMuzzle" = "Muzzle";
+"modificationPistolgrip" = "Pistol Grip";
+"modificationReceiver" = "Receiver";
+"modificationSight" = "Sight";
+"modificationSightSpecial" = "Sight (Special)";
+"modificationStock" = "Stock";
+
+// MARK: Calculators
+"simulate_gunshot_pen" = "Shoot\nw/ Penetration";
+"simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
+
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
