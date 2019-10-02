@@ -10,16 +10,13 @@ import Foundation
 
 class FirearmBuildController {
     lazy var dbManager = DependencyManagerImpl.shared.databaseManager()
-    let firearm: Firearm
-    var firearmBuild: FirearmBuild?
+    let buildConfig: FirearmBuildConfig
 
-    init(_ firearm: Firearm) {
-        self.firearm = firearm
+    init(_ config: FirearmBuildConfig) {
+        buildConfig = config
     }
 
-    func loadBuildData(handler: @escaping (_: [Modification]) -> Void) {
-        dbManager.getCompatibleItemsForFirearm(firearm) { (config) in
-            self.firearmBuild = FirearmBuild(config: config, preset: .none)
-        }
+    func attachMod(_ mod: Modification, toSlot slot: Slot) {
+        guard slot.compatibleItemIds.contains(mod.id), !slot.conflictingItemIds.contains(mod.id) else { fatalError() }
     }
 }

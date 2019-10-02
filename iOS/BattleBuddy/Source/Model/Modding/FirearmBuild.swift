@@ -28,5 +28,5 @@ struct FirearmBuild {
 
 struct FirearmBuildConfig {
     let firearm: Firearm
-    let allCompatibleMods: [Modification]
+    let allCompatibleModIds: [String]
 }

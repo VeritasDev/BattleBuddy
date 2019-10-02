@@ -27,6 +27,7 @@
     - [x] Points for watching ads
     - [ ] Banner ads
 - [ ] Implement Banner Ads (if setting enabled)
+- [ ] Filter selection lists
 - [ ] Penetration Calculator Improvements
     - Helmets/face shields/mods
     - Armored Rigs + Multi-layer support to ballistics calc
@@ -34,9 +35,6 @@
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
-- [ ] Arabic HP fraction order
-- [ ] Arabic Comparison Layout issue
-- [ ] Pen chance cell text size
 - [ ] Health calc buckshot fix
 - [ ] Buckshot damage multiplier
 - [ ] Cell label font sizing
@@ -50,6 +48,9 @@
 
 ## <u>v1.2</u>
 - [ ] Real-time community stats updates
+- [ ] Arabic HP fraction order
+- [ ] Arabic Comparison Layout issue
+- [ ] Pen chance cell text size
 - [ ] Info page on how to earn points
 - [ ] Loyalty points
     - [ ] Random bonus loyalty points % chance

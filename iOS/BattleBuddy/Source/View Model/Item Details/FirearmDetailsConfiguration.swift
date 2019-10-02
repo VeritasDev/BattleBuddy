@@ -148,10 +148,11 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
         case customBuildCell:
             self.delegate?.showLoading(show: true)
 
-            let controller = FirearmBuildController(firearm)
-            let buildVC = FirearmBuildViewController(controller)
-            controller.loadBuildData { _ in
+            dbManager.getCompatibleItemsForFirearm(firearm) { config in
                 self.delegate?.showLoading(show: false)
+
+                let buildController = FirearmBuildController(config)
+                let buildVC = FirearmBuildViewController(buildController)
                 self.delegate?.showViewController(viewController: buildVC)
             }
         default:

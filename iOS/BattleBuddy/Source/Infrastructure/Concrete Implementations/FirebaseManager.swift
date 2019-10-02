@@ -637,10 +637,11 @@ extension FirebaseManager: DatabaseManager {
     func getCompatibleItemsForFirearm(_ firearm: Firearm, handler: @escaping (FirearmBuildConfig) -> Void) {
         db.collection(FirebaseCollection.compatibility.rawValue).document(firearm.id).getDocument { (document, error) in
             if let document = document, document.exists {
-                let data = document.data()
-                print("Document data: \(data)")
+                guard let data = document.data(), let ids = data["items"] as? [String] else { return }
+                let config = FirearmBuildConfig(firearm: firearm, allCompatibleModIds:ids)
+                handler(config)
             } else {
-                print("Document does not exist")
+
             }
         }
     }
