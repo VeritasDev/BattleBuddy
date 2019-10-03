@@ -28,11 +28,9 @@
 - [ ] Mods Detail Screen
 - [ ] Mods Comparison
 - [ ] Placeholder images for accessories
-- [ ] Implementing Banner Ads
 - [ ] Stereo audio tool
-- [ ] Info on how to earn points
-- [ ] Implement Banner Ads (if setting enabled)
 - [ ] Filter selection lists
+- [ ] Combine penetration calc and health calc? Combat Calc?
 - [ ] Penetration Calculator Improvements
     - [ ] Helmets/face shields/mods
     - [x] Add a "shoot" button to simulate damage
@@ -58,6 +56,11 @@
     - [x] Enable Banner ads
 - [x] Language override
 - [x] Loyalty Leaderboard
+
+### Low priority - maybe later?
+- [ ] Info on how to earn points
+- [ ] Implement Banner Ads (if setting enabled)
+- [ ] Implementing Banner Ads
 
 ## <u>v1.2</u>
 - [ ] Cell label font sizing
