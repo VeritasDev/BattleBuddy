@@ -15,6 +15,8 @@
 - [ ] Japenese Localization
 - [ ] Firearms - compatible mods
 - [ ] Armor - compatible attachments
+- [ ] Combat Simulation
+- [ ] Best Item Calculator
 - [ ] Mods List
     - [ ] Optics
         - [ ] Introduce array of images - 1 of item image and `n` for different modes
@@ -28,15 +30,20 @@
 - [ ] Mods Detail Screen
 - [ ] Mods Comparison
 - [ ] Placeholder images for accessories
-- [ ] Stereo audio tool
+- [ ] Sound Training Beta
+    - [ ] Start test button
+    - [ ] Commit Answer button shows results on screen
+    - [ ] View will disappear - stop player
 - [ ] Filter selection lists
-- [ ] Combine penetration calc and health calc? Combat Calc?
+- [ ] Combat Simulation
+- [x] Earn random bud points
 - [ ] Penetration Calculator Improvements
     - [ ] Helmets/face shields/mods
     - [x] Add a "shoot" button to simulate damage
-- [ ] Health Calculator Improvements
-    - Add fragmentation toggle
-    - Armor Zones
+- [x] Info on how to earn points
+- [ ] Implement Banner Ads (if setting enabled)
+- [ ] Implementing Banner Ads
+- [ ] Improve search
 
 - [x] Health calc buckshot fix
 - [x] Placeholder images for helmets
@@ -57,10 +64,10 @@
 - [x] Language override
 - [x] Loyalty Leaderboard
 
-### Low priority - maybe later?
-- [ ] Info on how to earn points
-- [ ] Implement Banner Ads (if setting enabled)
-- [ ] Implementing Banner Ads
+### Maybe later?
+- [ ] Health Calculator Improvements
+    - Add fragmentation toggle
+    - Armor Zones
 
 ## <u>v1.2</u>
 - [ ] Cell label font sizing

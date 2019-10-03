@@ -8,13 +8,15 @@
 
 import UIKit
 
-class MoreMenuViewController: BaseTableViewController, AdDelegate {
+class MoreMenuViewController: BaseTableViewController {
     static let iconHeight: CGFloat = 40.0
-    var adManager = DependencyManagerImpl.shared.adManager()
-    let feedbackManager = DependencyManagerImpl.shared.feedbackManager()
-    var userCount = 0
+    var adManager = dm().adManager()
+    let feedbackManager = dm().feedbackManager()
+    let accountManager = dm().accountManager()
     let globalMetadataManager: GlobalMetadataManager = DependencyManagerImpl.shared.metadataManager()
     var globalMetadata: GlobalMetadata?
+    var currentUserMetadata: BBUser?
+    var userCount = 0
 
     let veritasCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
@@ -54,6 +56,31 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         cell.height = 70.0
         return cell
     }()
+    let versionCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(style: .value1, text: "app_version".local(), detailText: nil, accessory: .none, selection: .none)
+        cell.textLabel?.numberOfLines = 0
+        cell.imageView?.image = UIImage(named: "app_version")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 18.0)
+        cell.height = 70.0
+        return cell
+    }()
+    let budScoreCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(style: .value1, text: "your_bud_score".local(), detailText: nil)
+        cell.textLabel?.numberOfLines = 0
+        cell.imageView?.image = UIImage(named: "your_bud_score")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: .medium)
+        cell.accessoryType = .disclosureIndicator
+        cell.height = 70.0
+        return cell
+    }()
+    let rewardCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(style: .value1, text: "bud_reward".local(), detailText: nil)
+        cell.textLabel?.numberOfLines = 0
+        cell.imageView?.image = UIImage(named: "reward")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: .medium)
+        cell.height = 70.0
+        return cell
+    }()
     let userCountCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
         cell.textLabel?.numberOfLines = 0
@@ -76,7 +103,7 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
     let leaderboardCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
         cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-        cell.textLabel?.text = "supporter_leaderboard".local()
+        cell.textLabel?.text = "bud_leaderboard".local()
         cell.textLabel?.numberOfLines = 0
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: "trophy")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
@@ -123,6 +150,19 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         formatter.generatesDecimalNumbers = false
         return formatter
     }()
+    lazy var updateTimer: Timer? = {
+        return Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) { _ in
+            self.globalMetadataManager.updateGlobalMetadata { updatedMeta in
+                self.globalMetadata = updatedMeta
+
+                self.accountManager.refreshUserMetadata { updatedUser in
+                    self.currentUserMetadata = updatedUser
+
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }()
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -137,19 +177,27 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
 
         title = "more".local()
         adManager.loadVideoAd()
+
+        startUpdateTimer()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         globalMetadata = globalMetadataManager.getGlobalMetadata()
+        currentUserMetadata = accountManager.currentUserMetadata()
         updateCells()
+    }
+
+    func startUpdateTimer() {
+        updateTimer?.fire()
     }
 
     func updateCells() {
         sections = []
 
-        let aboutCells = [settingsCell, veritasCell, githubCell, attributionsCell]
+        versionCell.detailTextLabel?.text = DependencyManagerImpl.shared.deviceManager().appVersionString()
+        let aboutCells = [settingsCell, versionCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 
@@ -166,21 +214,54 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
             let fullUsersString = "total_users_count".local(args: [userCountString])
             userCountCell.textLabel?.attributedText = fullUsersString.createAttributedString(boldedSubstring: userCountString, font: .systemFont(ofSize: 18, weight: .light))
 
-            let statsCells = [daysSinceWipeCell, userCountCell, leaderboardCell]
+            let nextAvailableReward = accountManager.nextAvailableBudPointsReward()
+            if nextAvailableReward.redeemable {
+                rewardCell.contentView.alpha = 1.0
+                rewardCell.isUserInteractionEnabled = true
+            } else {
+                rewardCell.contentView.alpha = 0.3
+                rewardCell.isUserInteractionEnabled = false
+            }
+
+            rewardCell.detailTextLabel?.text = String(nextAvailableReward.points)
+
+            let statsCells = [userCountCell, budScoreCell, leaderboardCell, rewardCell, watchAdCell, daysSinceWipeCell]
             let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
             sections.append(globalStatsSection)
         }
 
+        if let currentUserData = currentUserMetadata {
+            budScoreCell.detailTextLabel?.text = currentUserData.loyalty.stringValue
+        }
+
         watchAdCell.videoAdState = adManager.currentVideoAdState
 
-        let appVersion = DependencyManagerImpl.shared.deviceManager().appVersionString()
-        let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, theTeamCell, watchAdCell] : [feedbackCell, theTeamCell, watchAdCell]
-        let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), footerTitle: appVersion, cells: supportCells)
+        let supportCells = feedbackManager.canAskForReview() ? [veritasCell, rateCell, feedbackCell, githubCell, theTeamCell, attributionsCell] : [veritasCell, feedbackCell, githubCell, theTeamCell, attributionsCell]
+        let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), cells: supportCells)
         sections.append(supportSection)
         tableView.reloadData()
     }
 
-    // MARK: - Table view data source
+    func earnReward() {
+        showLoading()
+
+        accountManager.redeemBudPoints {
+            self.hideLoading()
+            self.showAlert(title: "bud_reward_title".local(), message: "bud_reward_message".local())
+            self.updateCells()
+        }
+    }
+}
+
+// MARK: - Ad delegate
+extension MoreMenuViewController: AdDelegate {
+    func adManager(_ adManager: AdManager, didUpdate videoAdState: VideoAdState) {
+        watchAdCell.videoAdState = videoAdState
+    }
+}
+
+// MARK: - Table view data source
+extension MoreMenuViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -220,11 +301,9 @@ class MoreMenuViewController: BaseTableViewController, AdDelegate {
         case theTeamCell: navigationController?.pushViewController(TeamViewController(), animated: true)
         case rateCell: feedbackManager.askForReview()
         case leaderboardCell: navigationController?.pushViewController(LeaderboardViewController(globalMetadata!.loyaltyLeaderboard), animated: true)
+        case budScoreCell: navigationController?.pushViewController(PostViewController(BudPost()), animated: true)
+        case rewardCell: earnReward()
         default: break
         }
-    }
-
-    func adManager(_ adManager: AdManager, didUpdate videoAdState: VideoAdState) {
-        watchAdCell.videoAdState = videoAdState
     }
 }

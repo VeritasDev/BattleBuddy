@@ -24,6 +24,7 @@ enum MenuItemType: CaseIterable, Localizable {
     case healthCalc
     case penChanceCalc
     case soundTraining
+    case budPoints
 
     func local(short: Bool = false) -> String {
         switch self {
@@ -39,6 +40,7 @@ enum MenuItemType: CaseIterable, Localizable {
         case .throwables: return Localized("main_menu_throwables")
         case .penChanceCalc: return Localized("pen_chance")
         case .soundTraining: return Localized("sound_training")
+        case .budPoints: return Localized("bud_points")
         }
     }
 }
@@ -97,6 +99,9 @@ struct MainMenuItem {
         case .soundTraining:
             handler(SoundTrainingViewController())
             return
+        case .budPoints:
+            handler(PostViewController(BudPost()))
+            return
         case .throwables:
             DependencyManagerImpl.shared.databaseManager().getAllThrowables { throwables in
                 handler(BaseItemPreviewViewController(delegate: nil, config: ThrowablesPreviewConfiguration(items: throwables)))
@@ -124,6 +129,7 @@ struct MainMenuItem {
         case .penChanceCalc: return UIImage(named: "card_hero_pen_chance")
         case .healthCalc: return UIImage(named: "card_hero_health_calc")
         case .soundTraining: return UIImage(named: "card_hero_sound_training")
+        case .budPoints: return UIImage(named: "bud_hero")
         }
     }
 

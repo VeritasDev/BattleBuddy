@@ -39,6 +39,29 @@ final class BallisticsPost: PostConfiguration {
     }
 }
 
+final class BudPost: PostConfiguration {
+    var title: String? = Localized("bud_points")
+
+    var elements: [PostElement] {
+        return [
+            PostElementImage(image: UIImage(named: "bud_hero")!, height: 200.0),
+            PostElementHeader(localizedTitle: "bud_how_to_title".local(), authorName: "Veritas", publishDate: Date(timeIntervalSince1970: 1570131801)),
+            PostElementBody(body: "bud_how_to_subtitle".local()),
+            PostElementBodyTitle(title: "bud_how_to_title_1".local()),
+            PostElementBody(body: "bud_how_to_body_1".local()),
+            PostElementImage(image: UIImage(named: "bud_1")!, height: 200.0),
+            PostElementBodyTitle(title: "bud_how_to_title_2".local()),
+            PostElementBody(body: "bud_how_to_body_2".local()),
+            PostElementImage(image: UIImage(named: "bud_2")!, height: 200.0),
+            PostElementBodyTitle(title: "bud_how_to_title_3".local()),
+            PostElementBody(body: "bud_how_to_body_3".local()),
+            PostElementImage(image: UIImage(named: "bud_3")!, height: 200.0),
+            PostElementBodyTitle(title: "bud_how_to_title_4".local()),
+            PostElementBody(body: "bud_how_to_body_4".local()),
+        ]
+    }
+}
+
 final class SoundLocalizationPost: PostConfiguration {
     var title: String?
 

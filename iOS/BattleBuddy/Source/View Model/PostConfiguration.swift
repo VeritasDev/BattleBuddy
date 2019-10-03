@@ -72,6 +72,7 @@ struct PostElementImage: PostElement {
     var type: PostElementType = .image
     let image: UIImage
     let height: CGFloat
+    let containerView = UIView()
     let imageView = BaseImageView(imageSize: .large, aspectRatio: .standard)
 
     init(image: UIImage, height: CGFloat) {
@@ -80,8 +81,10 @@ struct PostElementImage: PostElement {
     }
 
     func generateContent() -> UIView {
+        containerView.addSubview(imageView)
         imageView.image = image
-        return imageView
+        imageView.pinToContainer(xInset: 0.0, yInset: 10.0)
+        return containerView
     }
 }
 

@@ -44,7 +44,7 @@ class InmobiManager: NSObject, AdManager {
         prefsManager.update(.bannerAds, value: enabled)
 
         let points = enabled ? 50 : -50
-        accountManager.addLoyaltyPoints(points)
+        accountManager.addLoyaltyPoints(points) {}
     }
 
     func watchAdVideo(from rootVC: UIViewController) {
@@ -98,7 +98,7 @@ extension InmobiManager: IMInterstitialDelegate {
     func interstitial(_ interstitial: IMInterstitial!, rewardActionCompletedWithRewards rewards: [AnyHashable : Any]!) {
         print("Rewards received!")
 
-        accountManager.addLoyaltyPoints(1)
+        accountManager.addLoyaltyPoints(1) {}
     }
 
     func reloadVideoAd(after delay: Double = 0) {

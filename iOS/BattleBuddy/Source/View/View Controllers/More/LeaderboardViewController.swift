@@ -9,6 +9,7 @@
 import UIKit
 
 class LeaderboardViewController: BaseTableViewController {
+    let accountManager = dm().accountManager()
     let leaderboard: [BBUser]
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
@@ -21,7 +22,7 @@ class LeaderboardViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "leaderboard".local()
+        title = "bud_leaderboard".local()
 
         tableView.rowHeight = 55.0
     }
@@ -39,8 +40,10 @@ class LeaderboardViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: LeaderboardCell.leaderboardCellReuseId) ?? LeaderboardCell()) as! LeaderboardCell
         let row = indexPath.row
+        let user = leaderboard[row]
         cell.rank = row + 1
-        cell.user = leaderboard[row]
+        cell.user = user
+        cell.isCurrentUser = accountManager.currentUserMetadata() == user
         return cell
     }
 }

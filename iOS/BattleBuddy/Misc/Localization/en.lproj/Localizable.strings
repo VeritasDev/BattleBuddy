@@ -333,9 +333,30 @@
 
 // MARK:- More
 "days_since_wipe" = "%@ days since last wipe...";
-"supporter_leaderboard" = "Supporter Leaderboard";
-"leaderboard" = "Leaderboard";
+"bud_leaderboard" = "Bud Leaderboard";
 "total_ads_watched" = "%@ ads watched by the community!";
+"app_version" = "App Version";
+"your_bud_score" = "Your Bud Score";
+"bud_reward" = "Redeem Reward";
+"bud_reward_title" = "Reward Redeemed";
+"bud_reward_message" = "Thanks for being a bud!";
+
+// Being A Bud
+"bud_points" = "Bud Points©";
+"bud_how_to_title" = "How To Be A Bud";
+"bud_how_to_subtitle" = "I developed Battle Buddy, in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies. As a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+
+"bud_how_to_title_1" = "Come Back Often";
+"bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
+
+"bud_how_to_title_2" = "Watch Ads";
+"bud_how_to_body_2" = "Another way to be a bud and earn Bud Points© is by watching video ads. On the main More menu, there's the option to \"Watch an Ad\". If an ad is available from one of our content providers, you will be able to watch a short advertisement and will be rewarded with Bud points showcasing how much of a bud you are. After watching an ad, another will be available after some time, so if you want to be a huge bud, be patient!";
+
+"bud_how_to_title_3" = "Enable Banner Ads";
+"bud_how_to_body_3" = "Enabling banner ads is another amazing way to be a bud! You can enable banner ads from the Settings screen! Don't try to be cheeky though bud, if you disable banner ads the points you earned will be lost until you re-enable them.";
+
+"bud_how_to_title_4" = "More Ways To Be A Bud";
+"bud_how_to_body_4" = "As more features are introduced into Battle Buddy more ways to earn and use your Bud Points© will emerge! Stay tuned buds!";
 
 // MARK:- Settings
 "profile" = "Profile";

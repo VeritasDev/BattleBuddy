@@ -47,6 +47,22 @@ class FirebaseManager: NSObject {
     private lazy var meleeImageRef = storageRef.child("melee")
     var sessionDelegate: SessionDelegate
     var userMetadata: BBUser?
+    lazy var nextAvailableReward: BudPointsReward = {
+        let persistedTimestamp = prefsManager.valueForDoublePref(.nextRewardDate)
+        let persistedRewardAmount = prefsManager.valueForIntPref(.nextRewardAmount)
+        let nextRewardDate: Date
+        let nextRewardPoints: Int
+
+        if persistedTimestamp > 0 && persistedRewardAmount > 0 {
+            nextRewardDate = Date(timeIntervalSince1970: persistedTimestamp)
+            nextRewardPoints = persistedRewardAmount
+        } else {
+            nextRewardDate = Date()
+            nextRewardPoints = randomPointValue()
+        }
+
+        return BudPointsReward(nextAvailableDate: nextRewardDate, pointValue: nextRewardPoints)
+    }()
 
     private lazy var prefsManager = DependencyManagerImpl.shared.prefsManager()
     var globalMetadata: GlobalMetadata?
@@ -60,6 +76,21 @@ class FirebaseManager: NSObject {
 
         // Uncomment this out for debugging purposes.
 //        FirebaseConfiguration.shared.setLoggerLevel(.max)
+    }
+
+    func updateNextAvailableReward() {
+        // Random delay between 15 minutes and 1 hour...
+        let randomTimestampInFuture = Date().timeIntervalSince1970 + Double.random(in: 900.0...3_600.0)
+        let newDate = Date(timeIntervalSince1970: randomTimestampInFuture)
+        let newPointValue = randomPointValue()
+        nextAvailableReward = BudPointsReward(nextAvailableDate: newDate, pointValue: newPointValue)
+
+        prefsManager.update(.nextRewardDate, value: randomTimestampInFuture)
+        prefsManager.update(.nextRewardAmount, value: newPointValue)
+    }
+
+    func randomPointValue() -> Int {
+        return Int.random(in: 5...100)
     }
 
     // MARK:- Images
@@ -150,23 +181,35 @@ extension FirebaseManager: AccountManager {
         }
     }
 
-    func addLoyaltyPoints(_ points: Int) {
+    func addLoyaltyPoints(_ points: Int, completion: @escaping () -> Void) {
         print("Adding \(points) loyalty points to account!")
 
-        updateAccountProperties([AccountProperty.loyalty: FieldValue.increment(Int64(1))]) { _ in }
+        updateAccountProperties([AccountProperty.loyalty: FieldValue.increment(Int64(points))]) { _ in completion() }
     }
 
     func refreshUserMetadata(_ handler: @escaping (_ : BBUser?) -> Void) {
         guard let currentUser = currentUser() else { return }
         let usersRef = db.collection(FirebaseCollection.users.rawValue).document(currentUser.uid)
         usersRef.getDocument() { (document, err) in
-            guard let document = document, document.exists, let userMeta = document.data() else {
+            guard let document = document, document.exists, var userMeta = document.data() else {
                 handler(nil)
                 return
             }
 
+            userMeta["id"] = currentUser.uid
             self.userMetadata = BBUser(userMeta)
             handler(self.userMetadata)
+        }
+    }
+
+    func nextAvailableBudPointsReward() -> BudPointsReward {
+        return nextAvailableReward
+    }
+
+    func redeemBudPoints(completion: @escaping () -> Void) {
+        addLoyaltyPoints(nextAvailableReward.points) {
+            self.updateNextAvailableReward()
+            completion()
         }
     }
 

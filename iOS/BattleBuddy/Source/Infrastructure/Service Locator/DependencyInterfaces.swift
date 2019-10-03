@@ -52,7 +52,9 @@ protocol AccountManager {
     func getValueForAccountProperty(_ property: AccountProperty, completion: @escaping (_ : Any?) -> Void)
     func updateAccountProperties(_ : [AccountProperty: Any], completion: @escaping (_ : Bool) -> Void)
     func refreshUserMetadata(_ : @escaping (_ : BBUser?) -> Void)
-    func addLoyaltyPoints(_ points: Int)
+    func addLoyaltyPoints(_ points: Int, completion: @escaping () -> Void)
+    func nextAvailableBudPointsReward() -> BudPointsReward
+    func redeemBudPoints(completion: @escaping () -> Void)
 }
 
 // MARK: - Database

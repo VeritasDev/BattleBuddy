@@ -13,6 +13,8 @@ enum Preference: String {
     case appRatingTimestamp = "prefs_app_rating_date"
     case appRatingCheckCount = "prefs_app_rating_check_count"
     case languageOverride = "prefs_language_override"
+    case nextRewardDate = "next_reward_date"
+    case nextRewardAmount = "next_reward_amount"
 }
 
 // TODO: Make this a concrete implementation of a more generic interface!
