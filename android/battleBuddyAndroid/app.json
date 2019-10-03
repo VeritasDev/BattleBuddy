@@ -3,7 +3,7 @@
     "name": "Battle Buddy",
     "slug": "battleBuddyAndroid",
     "privacy": "public",
-    "sdkVersion": "34.0.0",
+    "sdkVersion": "35.0.0",
     "platforms": ["android"],
     "version": "1.0.0",
     "orientation": "portrait",
