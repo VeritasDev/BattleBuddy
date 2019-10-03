@@ -320,11 +320,11 @@
 "attributions_misc_descr" = "Icônes de réseaux sociaux par Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) sous license CC. L'icône 'Brain' par Sergey Patutin du Noun Project (https://thenounproject.com/bdesign.by/) sous license CC.";
 
 // Analytics
-"total_users_count" = "%@ Battle Buddies ayant rejoint le combat!";
+"total_users_count" = "%@ Battle Buddies ont rejoint le combat!";
 
 // ----------------------------------------
 // V1.0.1
-"global_stats" = "Statistiques communautaires";
+"global_stats" = "Statistiques";
 "settings" = "Paramètres";
 "language_system_default" = "Système";
 "language" = "Langue";
