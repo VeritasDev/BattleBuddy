@@ -13,7 +13,18 @@
 ## <u>v1.1</u>
 - [ ] Face shields
 - [ ] Japenese Localization
+- [ ] Firearms - compatible mods
+- [ ] Armor - compatible attachments
 - [ ] Mods List
+    - [ ] Optics
+        - [ ] Introduce array of images - 1 of item image and `n` for different modes
+        - [ ] Gallery - auto/fade to next image
+        - [ ] Tap to see all images
+    - [ ] Foregrips
+    - [ ] Pistol Grips
+    - [ ] Handguards
+    - [ ] Stocks
+    - [ ] Other
 - [ ] Mods Detail Screen
 - [ ] Mods Comparison
 - [ ] Placeholder images for accessories
