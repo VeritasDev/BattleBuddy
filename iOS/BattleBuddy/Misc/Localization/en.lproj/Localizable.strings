@@ -372,6 +372,7 @@
 "sound_training_commit" = "Commit Answer";
 "main_menu_helmets" = "Helmets";
 "main_menu_mods" = "Modifications";
+"main_menu_combat_sim" = "Combat Simulator";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";

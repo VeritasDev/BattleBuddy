@@ -44,7 +44,7 @@ final class BudPost: PostConfiguration {
 
     var elements: [PostElement] {
         return [
-            PostElementImage(image: UIImage(named: "bud_hero")!, height: 200.0),
+            PostElementImage(image: UIImage(named: "card_hero_bud_points")!, height: 200.0),
             PostElementHeader(localizedTitle: "bud_how_to_title".local(), authorName: "Veritas", publishDate: Date(timeIntervalSince1970: 1570131801)),
             PostElementBody(body: "bud_how_to_subtitle".local()),
             PostElementBodyTitle(title: "bud_how_to_title_1".local()),
