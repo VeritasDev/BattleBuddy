@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/primary_dark</item>
+        <!-- Workaround for white flash before splash screen -->
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+</resources>

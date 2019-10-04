@@ -1,24 +1,4 @@
 {
-  "expo": {
-    "name": "Battle Buddy",
-    "slug": "battleBuddyAndroid",
-    "privacy": "public",
-    "sdkVersion": "35.0.0",
-    "platforms": ["android"],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/app-icon.png",
-    "splash": {
-      "image": "./assets/images/bb_splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#FF453A"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "supportsTablet": true
-    }
-  }
+  "name": "BattleBuddy",
+  "displayName": "BattleBuddy"
 }
