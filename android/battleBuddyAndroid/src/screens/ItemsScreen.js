@@ -6,6 +6,7 @@ import ScrollableContainer from '../components/common/ScrollableContainer';
 import Card from '../components/common/Card';
 import Search from '../components/common/Search';
 import firearmsData from '../../test-data/firearms';
+
 // For now until we decide where data/images come from.
 const items = [
   {
@@ -49,6 +50,28 @@ const ItemsScreen = ({navigation}) => {
       alert(`${item.text} not yet implemented`);
     }
   };
+
+  // console.log(firestore);
+  // const test = async () => {
+  //   // try {
+  //   //   const snapshot = await firestore()
+  //   //     .collection('firearm')
+  //   //     .getAll();
+
+  //   //   console.log(snapshot.data());
+  //   // } catch (error) {
+  //   //   console.log(error);
+  //   // }
+  //   const res = await firestore()
+  //     .collection('firearm')
+  //     .get();
+
+  //   console.log(res);
+  // };
+
+  // useEffect(() => {
+  //   test();
+  // }, []);
 
   return (
     <ScrollableContainer>
