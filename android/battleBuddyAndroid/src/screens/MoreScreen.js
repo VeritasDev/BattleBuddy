@@ -5,7 +5,6 @@ import {Linking} from 'react-native';
 import CustomListItem from '../components/settings/CustomListItem';
 import Socials from '../constants/Socials';
 import {useMetaData} from '../context/MetaDataProvider';
-import LoadingIndicator from '../components/common/LoadingIndicator';
 
 const SectionTitle = styled.Text`
   color: ${({theme}) => theme.colors.gray};
@@ -28,8 +27,7 @@ const ScrollView = styled.ScrollView`
 `;
 
 const MoreScreen = ({navigation}) => {
-  const {loading, data} = useMetaData();
-  console.log(loading, data);
+  const {data} = useMetaData();
 
   const DATA = [
     {
@@ -92,8 +90,6 @@ const MoreScreen = ({navigation}) => {
       ]
     }
   ];
-
-  if (loading) return <LoadingIndicator />;
 
   return (
     <ScrollView>

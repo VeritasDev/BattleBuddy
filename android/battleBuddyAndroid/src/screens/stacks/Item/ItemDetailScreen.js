@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
-import m4a1Example from '../../../../test-data/m4a1.example';
-import Classes from '../../../constants/Classes';
 import DetailSection from '../../../components/detail/DetailSection';
+import useStorageImage from '../../../hooks/useStorageImage';
+import ImageType from '../../../constants/ImageType';
+import localeString from '../../../utils/localeString';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -23,18 +25,20 @@ const Description = styled(Text)`
   text-align: justify;
 `;
 
-const ItemDetailScreen = () => {
+const ItemDetailScreen = ({navigation}) => {
+  const {item} = navigation.state.params;
   // Placeholder data until data comes from backend
   // TODO: Implement backend data for detail page
+
   const data = [
     {
       title: 'Properties',
       rows: [
-        {key: 'Class', value: Classes[m4a1Example.class]},
-        {key: 'Caliber', value: m4a1Example.caliber},
+        {key: 'Class', value: localeString(item.class)},
+        {key: 'Caliber', value: item.caliber},
         {
           key: 'Fold/Retract',
-          value: m4a1Example.foldRectractable ? 'Yes' : 'No',
+          value: item.foldRectractable ? 'Yes' : 'No',
           hideChevron: true
         }
       ]
@@ -44,13 +48,13 @@ const ItemDetailScreen = () => {
       rows: [
         {
           key: 'Fire Modes',
-          value: m4a1Example.modes.join(', '),
+          value: item.modes.join(', '),
           hideChevron: true
         },
-        {key: 'Fire Rate', value: `${m4a1Example.rof}rpm`, hideChevron: true},
+        {key: 'Fire Rate', value: `${item.rof}rpm`, hideChevron: true},
         {
           key: 'Effective Range',
-          value: `${m4a1Example.effectiveDist}m`,
+          value: `${item.effectiveDist}m`,
           hideChevron: true
         },
         {key: 'Compare Performance'}
@@ -58,13 +62,12 @@ const ItemDetailScreen = () => {
     }
   ];
 
+  const {placeholder, image} = useStorageImage(item, ImageType.large);
+
   return (
     <ScrollView>
-      <Image
-        source={require('../../../../assets/images/card_heroes/ammo.jpg')}
-        resizeMode="contain"
-      />
-      <Description>{m4a1Example.description}</Description>
+      <Image source={image ? image : placeholder} resizeMode="contain" />
+      <Description>{item.description}</Description>
       {data.map((d) => (
         <DetailSection key={d.title} section={d} />
       ))}
@@ -72,8 +75,8 @@ const ItemDetailScreen = () => {
   );
 };
 
-ItemDetailScreen.navigationOptions = {
-  title: m4a1Example.name,
+ItemDetailScreen.navigationOptions = (screenProps) => ({
+  title: screenProps.navigation.getParam('item').shortName,
   headerStyle: {
     backgroundColor: '#191919'
   },
@@ -81,6 +84,10 @@ ItemDetailScreen.navigationOptions = {
   headerTitleStyle: {
     fontSize: 28
   }
+});
+
+ItemDetailScreen.propTypes = {
+  navigation: PropTypes.any.isRequired
 };
 
 export default ItemDetailScreen;

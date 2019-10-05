@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
+import useStorageImage from '../../hooks/useStorageImage';
+import ImageType from '../../constants/ImageType';
 
 const StyledSmallCard = styled.ImageBackground`
   /* prettier-ignore */
@@ -22,17 +24,20 @@ const Text = styled.Text`
   textShadowRadius: 10;
 `;
 
-const SmallCard = ({text, image}) => {
+const SmallCard = ({shortName, ...item}) => {
+  // TODO: Optimize image loading.
+  const {placeholder, image} = useStorageImage(item, ImageType.medium);
+
   return (
-    <StyledSmallCard source={image}>
-      <Text>{text}</Text>
+    <StyledSmallCard source={image ? image : placeholder}>
+      <Text>{shortName}</Text>
     </StyledSmallCard>
   );
 };
 
 SmallCard.propTypes = {
-  text: PropTypes.string,
-  image: PropTypes.any.isRequired
+  shortName: PropTypes.string.isRequired,
+  _id: PropTypes.string.isRequired
 };
 
 export default SmallCard;

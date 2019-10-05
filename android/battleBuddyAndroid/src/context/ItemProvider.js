@@ -1,16 +1,18 @@
 import React, {useState, useContext, createContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import firestore from '@react-native-firebase/firestore';
+import {useDbManager} from './FirebaseProvider';
 
 const ItemContext = createContext();
 
-const ItemProvider = ({children, collectionName}) => {
+const ItemProvider = ({children}) => {
   const [state, setState] = useState({
     loading: true,
     error: null,
     data: null,
-    collectionName
+    collectionName: null
   });
+
+  const db = useDbManager();
 
   const setCollectionName = (name) => {
     setState((prevState) => ({
@@ -20,21 +22,12 @@ const ItemProvider = ({children, collectionName}) => {
   };
 
   useEffect(() => {
-    firestore()
-      .collection(state.collectionName)
-      .get()
-      .then((snapshot) => {
-        setState((prevState) => ({
-          ...prevState,
-          loading: false,
-          data: snapshot.data()
-        }));
-      })
-      .catch((error) => {
-        // TODO: error handling.
-        setState((prevState) => ({...prevState, error}));
-        console.error(error);
+    if (state.collectionName) {
+      db.getAllFirearmsByType().then((x) => {
+        console.log(x);
+        setState((prevState) => ({...prevState, data: x, loading: false}));
       });
+    }
   }, [state.collectionName]);
 
   return (
@@ -47,8 +40,7 @@ const ItemProvider = ({children, collectionName}) => {
 export const useItems = () => useContext(ItemContext);
 
 ItemProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-  collectionName: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default ItemProvider;

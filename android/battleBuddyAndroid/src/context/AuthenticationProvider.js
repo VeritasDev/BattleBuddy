@@ -1,6 +1,6 @@
 import React, {useState, useContext, createContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import useAuthStateChange from '../hooks/useAuthStateChange';
+import {useAuthManager} from './FirebaseProvider';
 
 const AuthContext = createContext();
 
@@ -9,16 +9,21 @@ const AuthenticationProvider = ({
   initialState = {authenticated: false, user: null}
 }) => {
   const [state, setState] = useState(initialState);
-  const authState = useAuthStateChange();
+  const auth = useAuthManager();
+  const isLoggedIn = auth.isLoggedIn();
 
   useEffect(() => {
-    if (authState) {
+    auth.initializeSession();
+  }, []);
+
+  useEffect(() => {
+    if (isLoggedIn) {
       setState({
         authenticated: true,
-        user: authState._user
+        user: auth.currentUser()
       });
     }
-  }, [authState]);
+  }, [isLoggedIn]);
 
   return (
     <AuthContext.Provider value={{...state}}>{children}</AuthContext.Provider>
