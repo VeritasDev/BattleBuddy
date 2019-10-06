@@ -1,4 +1,4 @@
-package com.battlebuddy;
+package com.veritas.battlebuddy;
 
 import android.app.Application;
 import android.content.Context;

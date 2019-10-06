@@ -1,4 +1,4 @@
-package com.battlebuddy;
+package com.veritas.battlebuddy;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;

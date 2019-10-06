@@ -1,33 +1,25 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import ScrollableContainer from '../components/common/ScrollableContainer';
 import HorizontalCardBar from '../components/common/HorizontalCardBar';
 import LoadingIndicator from '../components/common/LoadingIndicator';
+import {useItems} from '../context/ItemProvider';
 
 const CategoryScreen = ({navigation}) => {
-  const [loading, setLoading] = useState(true);
-  const {data} = navigation.state.params;
+  const {loading, data: docs, setCollectionName} = useItems();
+  const {collection} = navigation.state.params;
 
   useEffect(() => {
-    // Just for loading testing purposes until fetching
-    // data from backend is in place.
-    // TODO: remove setTimeout
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
-  }, []);
+    setCollectionName(collection);
+  }, [collection]);
 
-  return loading ? (
-    <LoadingIndicator />
-  ) : (
+  if (loading) return <LoadingIndicator />;
+
+  return (
     <ScrollableContainer>
-      {data.map((category) => (
-        <HorizontalCardBar
-          title={category.title}
-          items={category.items}
-          key={category.title}
-        />
-      ))}
+      {Object.entries(docs).map(([name, items]) => {
+        return <HorizontalCardBar title={name} items={items} key={name} />;
+      })}
     </ScrollableContainer>
   );
 };
@@ -48,7 +40,7 @@ CategoryScreen.propTypes = {
     state: PropTypes.shape({
       params: PropTypes.shape({
         text: PropTypes.string.isRequired,
-        data: PropTypes.array.isRequired
+        collection: PropTypes.string.isRequired
       })
     })
   })

@@ -5,37 +5,42 @@ import {theme} from '../components/Theme';
 import ScrollableContainer from '../components/common/ScrollableContainer';
 import Card from '../components/common/Card';
 import Search from '../components/common/Search';
-import firearmsData from '../../test-data/firearms';
+
 // For now until we decide where data/images come from.
 const items = [
   {
     text: 'Firearms',
-    path: 'Category',
+    collection: 'firearm',
     textPosition: 'bottom left',
     image: require('../../assets/images/card_heroes/firearms.png')
   },
   {
     text: 'Ammunition',
+    collection: 'ammunition',
     textPosition: 'bottom left',
     image: require('../../assets/images/card_heroes/ammo.jpg')
   },
   {
     text: 'Body armor',
+    collection: 'armor',
     textPosition: 'bottom left',
     image: require('../../assets/images/card_heroes/armor.jpg')
   },
   {
     text: 'Medical',
+    collection: 'medical',
     textPosition: 'bottom left',
     image: require('../../assets/images/card_heroes/medical.png')
   },
   {
     text: 'Melee Weapons',
+    collection: 'melee',
     textPosition: 'bottom left',
     image: require('../../assets/images/card_heroes/melee.jpg')
   },
   {
     text: 'Throwables',
+    collection: 'grenade',
     textPosition: 'bottom left',
     image: require('../../assets/images/card_heroes/throwables.jpg')
   }
@@ -43,12 +48,30 @@ const items = [
 
 const ItemsScreen = ({navigation}) => {
   const onPressHandler = (item) => {
-    if (item.path) {
-      navigation.navigate(item.path, {...item, data: firearmsData});
-    } else {
-      alert(`${item.text} not yet implemented`);
-    }
+    navigation.navigate('Category', {...item});
   };
+
+  // console.log(firestore);
+  // const test = async () => {
+  //   // try {
+  //   //   const snapshot = await firestore()
+  //   //     .collection('firearm')
+  //   //     .getAll();
+
+  //   //   console.log(snapshot.data());
+  //   // } catch (error) {
+  //   //   console.log(error);
+  //   // }
+  //   const res = await firestore()
+  //     .collection('firearm')
+  //     .get();
+
+  //   console.log(res);
+  // };
+
+  // useEffect(() => {
+  //   test();
+  // }, []);
 
   return (
     <ScrollableContainer>

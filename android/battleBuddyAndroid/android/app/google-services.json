@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "417648040868",
+    "firebase_url": "https://battlebuddy-e0530.firebaseio.com",
+    "project_id": "battlebuddy-e0530",
+    "storage_bucket": "battlebuddy-e0530.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417648040868:android:4eed8ef42cfb72dd75ff31",
+        "android_client_info": {
+          "package_name": "com.veritas.battlebuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417648040868-ac9pnco2urksp31dk1oitj75lmk2d1ho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKtolM-loj-u-AIEh6HCH0BaL8UminqVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417648040868-ac9pnco2urksp31dk1oitj75lmk2d1ho.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "417648040868-c2mejt5s1dt5c7tf6q395qgjonm9dmd6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.veritas.BattleBuddy",
+                "app_store_id": "1476820880"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

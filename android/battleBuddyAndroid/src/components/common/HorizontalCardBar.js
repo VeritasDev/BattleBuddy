@@ -5,6 +5,7 @@ import SmallCard from './SmallCard';
 import styled from 'styled-components/native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {withNavigation} from 'react-navigation';
+import localeString from '../../utils/localeString';
 
 const Text = styled.Text`
   font-size: 20px;
@@ -25,12 +26,12 @@ const HorizontalCardBar = ({title, items, navigation}) => {
 
   return (
     <View>
-      <Text>{title}</Text>
+      <Text>{localeString(title)}</Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {items.map((item) => (
           <TouchableOpacity
             onPress={() => onPressHandler(item)}
-            key={item.text}
+            key={item.name}
           >
             <SmallCard {...item} />
           </TouchableOpacity>

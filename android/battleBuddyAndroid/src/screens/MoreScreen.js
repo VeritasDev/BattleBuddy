@@ -4,6 +4,7 @@ import styled from 'styled-components/native';
 import {Linking} from 'react-native';
 import CustomListItem from '../components/settings/CustomListItem';
 import Socials from '../constants/Socials';
+import {useMetaData} from '../context/MetaDataProvider';
 
 const SectionTitle = styled.Text`
   color: ${({theme}) => theme.colors.gray};
@@ -26,6 +27,8 @@ const ScrollView = styled.ScrollView`
 `;
 
 const MoreScreen = ({navigation}) => {
+  const {data} = useMetaData();
+
   const DATA = [
     {
       title: 'About Battle Buddy',
@@ -54,7 +57,10 @@ const MoreScreen = ({navigation}) => {
         {
           title: (
             <Text>
-              <Bold>12.345</Bold> Battle Buddies have joined the fight!
+              <Bold>
+                {data.totalUserCount.toLocaleString().replace(',', '.')}
+              </Bold>{' '}
+              Battle Buddies have joined the fight!
             </Text>
           ),
           image: require('../../assets/images/misc_icons/user_count.png'),
