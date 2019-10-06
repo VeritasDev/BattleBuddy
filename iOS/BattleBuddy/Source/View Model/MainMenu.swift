@@ -105,7 +105,7 @@ struct MainMenuItem {
             handler(PostViewController(BudPost()))
             return
         case .combatSim:
-            // TODO
+            handler(CombatSimViewController())
             return
         case .throwables:
             DependencyManagerImpl.shared.databaseManager().getAllThrowables { throwables in

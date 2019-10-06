@@ -24,10 +24,16 @@ class CombatSimSubjectEditViewController: BaseTableViewController {
     }()
     var sections: [GroupedTableViewSection] = []
 
+    required init?(coder aDecoder: NSCoder) { fatalError() }
+
+    init() {
+        super.init(style: .grouped)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "main_menu_combat_sim".local()
+        title = "combat_sim_edit_subject".local()
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: #selector(save))
     }
 

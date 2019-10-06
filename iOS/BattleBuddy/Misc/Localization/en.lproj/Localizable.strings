@@ -331,6 +331,9 @@
 // ----------------------------------------
 // V1.1.0
 
+// MARK:- Common
+"common_always" = "";
+
 // MARK:- More
 "days_since_wipe" = "%@ days since last wipe...";
 "bud_leaderboard" = "Bud Leaderboard";
@@ -413,6 +416,26 @@
 "simulate_gunshot_pen" = "Shoot\nw/ Penetration";
 "simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
 
+"combat_sim_subject_type" = "Subject Type";
+"combat_sim_aim_setting" = "Aim Setting";
+"combat_sim_edit_subject" = "Edit Test Subject";
+"combat_sim_subject_1" = "Test Subject #1";
+"combat_sim_subject_2" = "Test Subject #2";
+"combat_sim_run" = "Run";
+"combat_sim_test_subjects" = "Test Subjects";
+"combat_sim_results" = "Simulation Results";
+"combat_sim_results_iterations" = "Iterations";
+"combat_sim_results_winner" = "Winner";
+"combat_sim_results_loser" = "Loser";
+"combat_sim_results_tie" = "Tie";
+"combat_sim_results_win_percent" = "Win Percent";
+"combat_sim_settings" = "Simulation Settings";
+
+"combat_sim_pen_setting" = "Penetration Setting";
+"combat_sim_pen_setting_" = "";
+
+"combat_sim_frag_setting" = "Fragmentation Setting";
+"combat_sim_frag_setting_" = "";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
