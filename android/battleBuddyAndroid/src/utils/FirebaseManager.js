@@ -3,6 +3,11 @@ import storage from '@react-native-firebase/storage';
 import auth from '@react-native-firebase/auth';
 import ItemType from '../constants/ItemType';
 import FirearmType from '../constants/FirearmType';
+import ArmorClass from '../constants/ArmorClass';
+import getDescendantProp from './getDescendantProp';
+import AmmoType from '../constants/AmmoType';
+import MedicalItemType from '../constants/MedicalItemType';
+import checkDocQueryMatch from './checkDocQueryMatch';
 
 const AccountProperty = {
   lastLogin: 'lastLogin',
@@ -138,60 +143,224 @@ export class AccountManager extends FirebaseManager {
 }
 
 export class DatabaseManager extends FirebaseManager {
-  getAllFirearms() {
-    return this._getAllItemsByType(ItemType.firearm);
-  }
-
-  async getAllFirearmsByType() {
-    const firearms = await this.getAllFirearms();
-    const map = {};
-
-    // eslint-disable-next-line no-unused-vars
-    for (const [_, value] of Object.entries(FirearmType)) {
-      map[value] = [];
-    }
-
-    firearms.forEach((x) => {
-      map[x.class].push(x);
-    });
-
-    return map;
-  }
-
-  getAllMelee() {
-    return this._getAllItemsByType(ItemType.melee);
-  }
-
-  getAllAmmo() {
-    return this._getAllItemsByType(ItemType.ammo);
-  }
-
-  getAllArmor() {
-    return this._getAllItemsByType(ItemType.armor);
-  }
-
-  getAllMedical() {
-    return this._getAllItemsByType(ItemType.medical);
-  }
-
-  getAllThrowables() {
-    return this._getAllItemsByType(ItemType.throwable);
-  }
-
-  async _getAllItemsByType(type) {
+  /**
+   * Private method to fetch all items by collection name.
+   *
+   * @param {string} collection - Collection name
+   *
+   * @returns {Promise}
+   */
+  async _getAllItemsByCollection(collection) {
     try {
       const snapshot = await this.db
-        .collection(type)
+        .collection(collection)
         .get()
         .then((x) => x.docs.map((d) => d.data()));
 
       console.log(
-        `Successfully fetched ${snapshot.length} documents of type "${type}".`
+        `Successfully fetched ${snapshot.length} documents of type "${collection}".`
       );
       return snapshot;
     } catch (error) {
-      console.error(`Failed to get all items of type ${type} w/ error:`, error);
+      console.error(
+        `Failed to get all items of type ${collection} w/ error:`,
+        error
+      );
     }
+  }
+
+  /**
+   * Private method to fetch collection by certain type/
+   *
+   * @param {string} collection - Name of collection
+   * @param {string} property - Item property
+   * @param {any} value - Item property value
+   *
+   * @returns {Promise}
+   */
+  async _getAllItemsOfType(collection, property, value) {
+    try {
+      const snapshot = await this.db
+        .collection(collection)
+        .where(property, value)
+        .get()
+        .then((x) => x.docs.map((d) => d.data()));
+
+      console.log(
+        `Successfully fetched ${snapshot.length} documents of type "${collection}".`
+      );
+      return snapshot;
+    } catch (error) {
+      console.error(
+        `Failed to get all items of type ${collection} w/ error:`,
+        error
+      );
+    }
+  }
+
+  /**
+   * Private Method to fetch item and sort them by given property like "class"
+   *
+   * @param {string} collection - Name of collection
+   * @param {*} type - Type like FirarmType or ArmorClass
+   * @param {*} key - Item key like class, caliber, armor.class (supports dot notation)
+   */
+  async _getAllItemsByProperty(collection, type, key) {
+    const docs = await this._getAllItemsByCollection(collection);
+    const map = {};
+
+    // eslint-disable-next-line no-unused-vars
+    for (const [_, value] of Object.entries(type)) {
+      map[value] = [];
+    }
+
+    switch (collection) {
+      case ItemType.armor:
+        docs.forEach((x) =>
+          map[`armor_class_${getDescendantProp(x, key)}`].push(x)
+        );
+        break;
+      case ItemType.ammo:
+        docs.forEach((x) => map[x[key]].push(x));
+        break;
+      default:
+        docs.forEach((x) => map[getDescendantProp(x, key)].push(x));
+        break;
+    }
+
+    return map;
+  }
+
+  async getFirearmsWithSearchQuery(query) {
+    const firearms = await this.getAllFirearms();
+
+    return firearms.filter((x) => checkDocQueryMatch(x, 'firearm', query));
+  }
+
+  async getArmorWithSearchQuery(query) {
+    const armor = await this.getAllArmor();
+
+    return armor.filter((x) => checkDocQueryMatch(x, 'armor', query));
+  }
+
+  async getAmmoWithSearchQuery(query) {
+    const ammo = await this.getAllAmmo();
+
+    return ammo.filter((x) => checkDocQueryMatch(x, 'ammo', query));
+  }
+
+  async getMedicalWithSearchQuery(query) {
+    const medical = await this.getAllMedical();
+
+    return medical.filter((x) => checkDocQueryMatch(x, 'medical', query));
+  }
+
+  async getThrowablesWithSearchQuery(query) {
+    const throwables = await this.getAllThrowables();
+
+    return throwables.filter((x) => checkDocQueryMatch(x, 'grenade', query));
+  }
+
+  async getMeleeWithSearchQuery(query) {
+    const melee = await this.getAllMelee();
+
+    return melee.filter((x) => checkDocQueryMatch(x, 'melee', query));
+  }
+
+  async getAllItemsWithSearchQuery(query) {
+    const items = Promise.all([
+      this.getFirearmsWithSearchQuery(query),
+      this.getArmorWithSearchQuery(query),
+      this.getAmmoWithSearchQuery(query),
+      this.getMedicalWithSearchQuery(query),
+      this.getThrowablesWithSearchQuery(query),
+      this.getMeleeWithSearchQuery(query)
+    ]);
+
+    const result = await items;
+
+    return result.filter((x) => x.length);
+  }
+
+  // Get all items
+
+  getAllFirearms() {
+    return this._getAllItemsByCollection(ItemType.firearm);
+  }
+
+  getAllMelee() {
+    return this._getAllItemsByCollection(ItemType.melee);
+  }
+
+  getAllAmmo() {
+    return this._getAllItemsByCollection(ItemType.ammo);
+  }
+
+  getAllArmor() {
+    return this._getAllItemsByCollection(ItemType.armor);
+  }
+
+  getAllMedical() {
+    return this._getAllItemsByCollection(ItemType.medical);
+  }
+
+  getAllThrowables() {
+    return this._getAllItemsByCollection(ItemType.throwable);
+  }
+
+  // Get by type
+  getAllFirearmsByType() {
+    return this._getAllItemsByProperty(ItemType.firearm, FirearmType, 'class');
+  }
+
+  getAllArmorByClass() {
+    return this._getAllItemsByProperty(
+      ItemType.armor,
+      ArmorClass,
+      'armor.class'
+    );
+  }
+
+  getAllBodyArmorByClass() {
+    // No helmet implementation yet so we return above method.
+    return this.getAllArmorByClass();
+  }
+
+  getAllAmmoByCaliber() {
+    return this._getAllItemsByProperty(ItemType.ammo, AmmoType, 'caliber');
+  }
+
+  getAllMedicalByType() {
+    return this._getAllItemsByProperty(
+      ItemType.medical,
+      MedicalItemType,
+      'type'
+    );
+  }
+
+  // Get by category
+  getAllFirearmsOfType(type) {
+    return this._getAllItemsOfType(ItemType.firearm, 'class', type);
+  }
+
+  getAllFirearmsOfCaliber(caliber) {
+    return this._getAllItemsOfType(ItemType.firearm, 'caliber', caliber);
+  }
+
+  getAllAmmoOfCaliber(caliber) {
+    return this._getAllItemsOfType(ItemType.ammo, 'caliber', caliber);
+  }
+
+  getAllBodyArmorOfClass(armorClass) {
+    return this._getAllItemsOfType(ItemType.armor, 'armor.class', armorClass);
+  }
+
+  getAllBodyArmorWithMaterial(material) {
+    return this._getAllItemsOfType(
+      ItemType.armor,
+      'armor.material.name',
+      material
+    );
   }
 }
 
