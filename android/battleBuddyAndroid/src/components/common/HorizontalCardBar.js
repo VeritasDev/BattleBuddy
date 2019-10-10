@@ -26,7 +26,7 @@ const HorizontalCardBar = ({title, items, navigation}) => {
 
   return (
     <View>
-      <Text>{localeString(title) || title}</Text>
+      <Text>{localeString(title)}</Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {items.map((item) => (
           <TouchableOpacity

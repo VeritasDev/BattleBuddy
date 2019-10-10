@@ -8,6 +8,7 @@ import getDescendantProp from './getDescendantProp';
 import AmmoType from '../constants/AmmoType';
 import MedicalItemType from '../constants/MedicalItemType';
 import checkDocQueryMatch from './checkDocQueryMatch';
+import ThrowableType from '../constants/ThrowableType';
 
 const AccountProperty = {
   lastLogin: 'lastLogin',
@@ -357,6 +358,14 @@ export class DatabaseManager extends FirebaseManager {
     return this._getAllItemsByProperty(
       ItemType.medical,
       MedicalItemType,
+      'type'
+    );
+  }
+
+  getAllThrowablesByType() {
+    return this._getAllItemsByProperty(
+      ItemType.throwable,
+      ThrowableType,
       'type'
     );
   }

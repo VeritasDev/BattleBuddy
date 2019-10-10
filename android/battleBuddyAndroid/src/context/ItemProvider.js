@@ -53,6 +53,16 @@ const ItemProvider = ({children}) => {
             setState((prevState) => ({...prevState, data: x, loading: false}));
           });
           break;
+        case 'grenade':
+          db.getAllThrowablesByType().then((x) => {
+            setState((prevState) => ({...prevState, data: x, loading: false}));
+          });
+          break;
+        case 'melee':
+          db.getAllMelee().then((x) => {
+            setState((prevState) => ({...prevState, data: x, loading: false}));
+          });
+          break;
       }
     }
   }, [state.collectionName]);

@@ -4,6 +4,8 @@ import ScrollableContainer from '../components/common/ScrollableContainer';
 import HorizontalCardBar from '../components/common/HorizontalCardBar';
 import LoadingIndicator from '../components/common/LoadingIndicator';
 import {useItems} from '../context/ItemProvider';
+import ItemType from '../constants/ItemType';
+import MeleeItemList from '../components/common/MeleeItemList';
 
 const CategoryScreen = ({navigation}) => {
   const {loading, data: docs, setCollectionName, clearData} = useItems();
@@ -19,9 +21,13 @@ const CategoryScreen = ({navigation}) => {
 
   return (
     <ScrollableContainer>
-      {Object.entries(docs).map(([name, items]) => {
-        return <HorizontalCardBar title={name} items={items} key={name} />;
-      })}
+      {collection !== ItemType.melee ? (
+        Object.entries(docs).map(([name, items]) => {
+          return <HorizontalCardBar title={name} items={items} key={name} />;
+        })
+      ) : (
+        <MeleeItemList items={docs} />
+      )}
     </ScrollableContainer>
   );
 };
