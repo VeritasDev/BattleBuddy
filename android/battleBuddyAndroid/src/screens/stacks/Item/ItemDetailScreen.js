@@ -25,44 +25,116 @@ const Description = styled(Text)`
   text-align: justify;
 `;
 
+const fillDataForCategory = (category, item) => {
+  let data = [];
+
+  switch (category) {
+    case 'firearm':
+      data = [
+        {
+          title: 'Properties',
+          rows: [
+            {key: 'Class', value: localeString(item.class)},
+            {key: 'Caliber', value: item.caliber},
+            {
+              key: 'Fold/Retract',
+              value: item.foldRectractable ? 'Yes' : 'No',
+              hideChevron: true
+            }
+          ]
+        },
+        {
+          title: 'Performance',
+          rows: [
+            {
+              key: 'Fire Modes',
+              value: item.modes.join(', '),
+              hideChevron: true
+            },
+            {key: 'Fire Rate', value: `${item.rof}rpm`, hideChevron: true},
+            {
+              key: 'Effective Range',
+              value: `${item.effectiveDist}m`,
+              hideChevron: true
+            },
+            {key: 'Compare Performance'}
+          ]
+        }
+      ];
+      break;
+    case 'armor':
+      data = [
+        {
+          title: 'Properties',
+          rows: [
+            {
+              key: 'Type',
+              value: localeString(item.type) || item.type,
+              hideChevron: true
+            },
+            {key: 'Class', value: `Class ${item.armor.class}`},
+            {
+              key: 'Durability',
+              value: item.armor.durability,
+              hideChevron: true
+            },
+            {key: 'Material', value: item.armor.material.name},
+            {
+              key: 'Zones',
+              value: item.armor.zones.join(', '),
+              hideChevron: true
+            }
+          ]
+        },
+        {
+          title: 'Penalties',
+          rows: [
+            {
+              key: 'Speed',
+              value: item.penalties.speed,
+              hideChevron: true
+            },
+            {
+              key: 'Turn Speed',
+              value: item.penalties.mouse,
+              hideChevron: true
+            },
+            {
+              key: 'Ergonomics',
+              value: item.penalties.ergonomics,
+              hideChevron: true
+            }
+          ]
+        },
+        {
+          title: 'Explore',
+          rows: [
+            {
+              key: 'Compare'
+            },
+            {
+              key: 'Penetration Chance'
+            }
+          ]
+        }
+      ];
+      break;
+
+    default:
+      break;
+  }
+
+  return data;
+};
+
 const ItemDetailScreen = ({navigation}) => {
-  const {item} = navigation.state.params;
+  const {item, type} = navigation.state.params;
   // Placeholder data until data comes from backend
   // TODO: Implement backend data for detail page
 
-  const data = [
-    {
-      title: 'Properties',
-      rows: [
-        {key: 'Class', value: localeString(item.class)},
-        {key: 'Caliber', value: item.caliber},
-        {
-          key: 'Fold/Retract',
-          value: item.foldRectractable ? 'Yes' : 'No',
-          hideChevron: true
-        }
-      ]
-    },
-    {
-      title: 'Performance',
-      rows: [
-        {
-          key: 'Fire Modes',
-          value: item.modes.join(', '),
-          hideChevron: true
-        },
-        {key: 'Fire Rate', value: `${item.rof}rpm`, hideChevron: true},
-        {
-          key: 'Effective Range',
-          value: `${item.effectiveDist}m`,
-          hideChevron: true
-        },
-        {key: 'Compare Performance'}
-      ]
-    }
-  ];
-
   const {placeholder, image} = useStorageImage(item, ImageType.large);
+
+  const data = fillDataForCategory(type, item);
 
   return (
     <ScrollView>

@@ -6,11 +6,13 @@ import LoadingIndicator from '../components/common/LoadingIndicator';
 import {useItems} from '../context/ItemProvider';
 
 const CategoryScreen = ({navigation}) => {
-  const {loading, data: docs, setCollectionName} = useItems();
+  const {loading, data: docs, setCollectionName, clearData} = useItems();
   const {collection} = navigation.state.params;
 
   useEffect(() => {
     setCollectionName(collection);
+
+    return clearData;
   }, [collection]);
 
   if (loading) return <LoadingIndicator />;

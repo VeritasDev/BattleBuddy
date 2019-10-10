@@ -182,6 +182,7 @@ export class DatabaseManager extends FirebaseManager {
     try {
       const snapshot = await this.db
         .collection(collection)
+        .where('type', '==', 'body')
         .where(property, value)
         .get()
         .then((x) => x.docs.map((d) => d.data()));
@@ -268,18 +269,21 @@ export class DatabaseManager extends FirebaseManager {
   }
 
   async getAllItemsWithSearchQuery(query) {
-    const items = Promise.all([
-      this.getFirearmsWithSearchQuery(query),
-      this.getArmorWithSearchQuery(query),
-      this.getAmmoWithSearchQuery(query),
-      this.getMedicalWithSearchQuery(query),
-      this.getThrowablesWithSearchQuery(query),
-      this.getMeleeWithSearchQuery(query)
-    ]);
+    const firearms = await this.getFirearmsWithSearchQuery(query);
+    const armor = await this.getArmorWithSearchQuery(query);
+    const ammo = await this.getAmmoWithSearchQuery(query);
+    const medical = await this.getMedicalWithSearchQuery(query);
+    const throwables = await this.getThrowablesWithSearchQuery(query);
+    const melee = await this.getMeleeWithSearchQuery(query);
 
-    const result = await items;
-
-    return result.filter((x) => x.length);
+    return [
+      ...firearms,
+      ...armor,
+      ...ammo,
+      ...medical,
+      ...throwables,
+      ...melee
+    ];
   }
 
   // Get all items
@@ -296,8 +300,27 @@ export class DatabaseManager extends FirebaseManager {
     return this._getAllItemsByCollection(ItemType.ammo);
   }
 
-  getAllArmor() {
-    return this._getAllItemsByCollection(ItemType.armor);
+  async getAllArmor() {
+    // return this._getAllItemsByCollection(ItemType.armor);
+    try {
+      const snapshot = await this.db
+        .collection('armor')
+        .where('type', '==', 'body')
+        .get()
+        .then((x) => x.docs.map((d) => d.data()));
+
+      console.log(
+        `Successfully fetched ${
+          snapshot.length
+        } documents of type "${'armor'}".`
+      );
+      return snapshot;
+    } catch (error) {
+      console.error(
+        `Failed to get all items of type ${'armor'} w/ error:`,
+        error
+      );
+    }
   }
 
   getAllMedical() {

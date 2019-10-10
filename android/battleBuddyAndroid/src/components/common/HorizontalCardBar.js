@@ -21,12 +21,12 @@ const View = styled.View`
 const HorizontalCardBar = ({title, items, navigation}) => {
   const onPressHandler = (item) => {
     // TODO: Revisit when backend is implemented
-    navigation.navigate('Detail', {item});
+    navigation.navigate('Detail', {item, type: item._kind});
   };
 
   return (
     <View>
-      <Text>{localeString(title)}</Text>
+      <Text>{localeString(title) || title}</Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {items.map((item) => (
           <TouchableOpacity

@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MetaDataProvider from '../context/MetaDataProvider';
 import ItemProvider from '../context/ItemProvider';
+import SearchProvider from '../context/SearchProvider';
 
 const AuthenticatedAppProviders = ({children}) => {
   return (
     <MetaDataProvider>
-      <ItemProvider>{children}</ItemProvider>
+      <ItemProvider>
+        <SearchProvider>{children}</SearchProvider>
+      </ItemProvider>
     </MetaDataProvider>
   );
 };
