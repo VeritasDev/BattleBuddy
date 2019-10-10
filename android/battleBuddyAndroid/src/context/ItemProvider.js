@@ -21,17 +21,54 @@ const ItemProvider = ({children}) => {
     }));
   };
 
+  const clearData = () => {
+    setState({
+      loading: true,
+      error: null,
+      data: null,
+      collectionName: null
+    });
+  };
+
   useEffect(() => {
     if (state.collectionName) {
-      db.getAllFirearmsByType().then((x) => {
-        console.log(x);
-        setState((prevState) => ({...prevState, data: x, loading: false}));
-      });
+      switch (state.collectionName) {
+        case 'firearm':
+          db.getAllFirearmsByType().then((x) => {
+            setState((prevState) => ({...prevState, data: x, loading: false}));
+          });
+          break;
+        case 'armor':
+          db.getAllArmorByClass().then((x) => {
+            setState((prevState) => ({...prevState, data: x, loading: false}));
+          });
+          break;
+        case 'ammunition':
+          db.getAllAmmoByCaliber().then((x) => {
+            setState((prevState) => ({...prevState, data: x, loading: false}));
+          });
+          break;
+        case 'medical':
+          db.getAllMedicalByType().then((x) => {
+            setState((prevState) => ({...prevState, data: x, loading: false}));
+          });
+          break;
+        case 'grenade':
+          db.getAllThrowablesByType().then((x) => {
+            setState((prevState) => ({...prevState, data: x, loading: false}));
+          });
+          break;
+        case 'melee':
+          db.getAllMelee().then((x) => {
+            setState((prevState) => ({...prevState, data: x, loading: false}));
+          });
+          break;
+      }
     }
   }, [state.collectionName]);
 
   return (
-    <ItemContext.Provider value={{...state, setCollectionName}}>
+    <ItemContext.Provider value={{...state, setCollectionName, clearData}}>
       {children}
     </ItemContext.Provider>
   );

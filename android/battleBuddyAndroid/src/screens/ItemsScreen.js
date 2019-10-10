@@ -51,28 +51,6 @@ const ItemsScreen = ({navigation}) => {
     navigation.navigate('Category', {...item});
   };
 
-  // console.log(firestore);
-  // const test = async () => {
-  //   // try {
-  //   //   const snapshot = await firestore()
-  //   //     .collection('firearm')
-  //   //     .getAll();
-
-  //   //   console.log(snapshot.data());
-  //   // } catch (error) {
-  //   //   console.log(error);
-  //   // }
-  //   const res = await firestore()
-  //     .collection('firearm')
-  //     .get();
-
-  //   console.log(res);
-  // };
-
-  // useEffect(() => {
-  //   test();
-  // }, []);
-
   return (
     <ScrollableContainer>
       <Search />

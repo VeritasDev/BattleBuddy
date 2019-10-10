@@ -47,12 +47,15 @@ const placeholderImages = {
 const useStorageImage = (doc, size) => {
   let placeholder;
 
+  // TODO: Fuck this system.
   switch (doc._kind) {
     case 'firearm':
       placeholder = placeholderImages[doc._kind][doc.class];
       break;
     case 'armor':
-      placeholder = placeholderImages[doc._kind][doc.armor]['class'];
+      // TODO: Fix armor placeholder as sometimes it returns undefined.
+      placeholder = placeholderImages.armor[1];
+      // placeholder = placeholderImages[doc._kind][doc.armor]['class'];
       break;
     case 'ammunition':
       placeholder = placeholderImages[doc._kind][doc.caliber];
@@ -76,14 +79,18 @@ const useStorageImage = (doc, size) => {
   });
 
   const loadImageFromRef = async () => {
-    const uri = await firebase
-      .itemImageReference(doc._id, doc._kind, size)
-      .getDownloadURL();
+    try {
+      const uri = await firebase
+        .itemImageReference(doc._id, doc._kind, size)
+        .getDownloadURL();
 
-    setState((prevState) => ({
-      ...prevState,
-      image: {uri}
-    }));
+      setState((prevState) => ({
+        ...prevState,
+        image: {uri}
+      }));
+    } catch (error) {
+      console.log('somthing went wrong', doc._id);
+    }
   };
 
   useEffect(() => {

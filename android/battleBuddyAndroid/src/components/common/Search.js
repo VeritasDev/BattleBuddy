@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import styled from 'styled-components/native';
 import I from 'react-native-vector-icons/MaterialCommunityIcons';
+import {useSearch} from '../../context/SearchProvider';
+import {useNavigation} from 'react-navigation-hooks';
 
 const Input = styled.TextInput.attrs({
   placeholderTextColor: 'rgba(255, 255, 255, 0.3)'
@@ -9,7 +11,7 @@ const Input = styled.TextInput.attrs({
   flex: 1;
 `;
 
-const SearchContainer = styled.View`
+const Container = styled.View`
   position: relative;
   padding-left: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -27,18 +29,26 @@ const Icon = styled(I)`
 
 const Search = () => {
   // TODO: implement search query.
-  const [searchTerm, setSearchTerm] = useState('');
+  const {setSearchTerm, searchTerm} = useSearch();
+  const {navigate} = useNavigation();
+  const [state, setState] = useState(searchTerm);
+
+  const handleSubmit = () => {
+    setSearchTerm(state);
+    navigate('Search', {searchTerm: state});
+  };
 
   return (
-    <SearchContainer>
+    <Container>
       <Input
         placeholder="Search"
-        onChangeText={(text) => setSearchTerm(text)}
-        value={searchTerm}
+        onChangeText={(text) => setState(text)}
+        value={state}
         autoCorrect={false}
+        onEndEditing={handleSubmit}
       />
       <Icon name="magnify" size={24} color="rgba(255, 255, 255, 0.3)" />
-    </SearchContainer>
+    </Container>
   );
 };
 

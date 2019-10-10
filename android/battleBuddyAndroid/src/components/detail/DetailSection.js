@@ -54,8 +54,8 @@ DetailSection.propTypes = {
     title: PropTypes.string.isRequired,
     rows: PropTypes.arrayOf(
       PropTypes.shape({
-        key: PropTypes.string.isRequired,
-        value: PropTypes.string,
+        key: PropTypes.any.isRequired,
+        value: PropTypes.any,
         hideChevron: PropTypes.bool
       })
     ).isRequired
