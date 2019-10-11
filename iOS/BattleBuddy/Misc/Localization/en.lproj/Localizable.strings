@@ -437,6 +437,18 @@
 "combat_sim_frag_setting" = "Fragmentation Setting";
 "combat_sim_frag_setting_" = "";
 
+"aim_setting_center_mass" = "Center of Mass";
+"aim_setting_headshots" = "Headshots Only";
+"aim_setting_random_leg" = "Leg Meta - Randomized";
+"aim_setting_single_leg" = "Leg Meta - Single Leg Only";
+"aim_setting_thorax" = "Thorax Only";
+
+"aim_setting_center_mass_desc" = "All bullets fired will impact the target on a randomly selected limb, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
+"aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
+"aim_setting_random_leg_desc" = "All bullets fired will impact one of the legs randomly with an equal chance ";
+"aim_setting_single_leg_desc" = "";
+"aim_setting_thorax_desc" = "";
+
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
 "attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC. Top-down soldier animation images copyright Riley Gombart.";

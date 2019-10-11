@@ -91,7 +91,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
     override init() {
-        self.target = Person(.pmc)
+        self.target = Person(.pmc, aimSetting: .headshotsOnly, firearm: nil)
         super.init()
     }
 
@@ -178,7 +178,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
     }
 
     @objc func reset() {
-        target = Person(.pmc)
+        target = Person(.pmc, aimSetting: .headshotsOnly, firearm: nil)
     }
 
     @objc func showSettings() {

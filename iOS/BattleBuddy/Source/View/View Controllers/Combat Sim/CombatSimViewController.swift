@@ -27,6 +27,7 @@ class CombatSimViewController: BaseTableViewController {
         return cell
     }()
     var sections: [GroupedTableViewSection] = []
+    let simulation = CombatSimulation()
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -58,7 +59,11 @@ class CombatSimViewController: BaseTableViewController {
     }
 
     @objc func runSim() {
+        let firearm = FirearmConfig(fireRate: 200, ammoConfig: [])
+        let subject1 = Person(aimSetting: .centerOfMass, firearm: firearm)
+        simulation.runSimulation { (person1Result, person2Result) in
 
+        }
     }
 }
 

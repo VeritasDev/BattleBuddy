@@ -22,3 +22,15 @@ extension BodyZoneType: Localizable {
         }
     }
 }
+
+extension AimSetting: Localizable {
+    func local(short: Bool = false) -> String {
+        switch self {
+        case .centerOfMass: return "aim_setting_center_mass".local()
+        case .headshotsOnly: return "aim_setting_headshots".local()
+        case .randomLegMeta: return "aim_setting_random_leg".local()
+        case .singleLegMeta: return "aim_setting_single_leg".local()
+        case .thoraxOnly: return "aim_setting_thorax".local()
+        }
+    }
+}
