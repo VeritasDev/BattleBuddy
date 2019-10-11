@@ -29,10 +29,20 @@ class CombatSimViewController: BaseTableViewController {
     var sections: [GroupedTableViewSection] = []
     let simulation = CombatSimulation()
 
+    lazy var subject1EditViewController: CombatSimSubjectEditViewController = {
+        return CombatSimSubjectEditViewController(self, person: simulation.subject1!)
+    }()
+    lazy var subject2EditViewController: CombatSimSubjectEditViewController = {
+        return CombatSimSubjectEditViewController(self, person: simulation.subject2!)
+    }()
+
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
     init() {
         super.init(style: .grouped)
+
+        simulation.subject1 = Person(aimSetting: .centerOfMass, firearm: nil)
+        simulation.subject2 = Person(aimSetting: .centerOfMass, firearm: nil)
     }
 
     override func viewDidLoad() {
@@ -98,11 +108,20 @@ extension CombatSimViewController {
 
         let cell = tableView.cellForRow(at: indexPath)
         switch cell {
-        case subject1Cell: break
-        case subject2Cell: break
+        case subject1Cell: navigationController?.pushViewController(CombatSimSubjectEditViewController(self, person: simulation.subject1), animated: true)
+        case subject2Cell: navigationController?.pushViewController(CombatSimSubjectEditViewController(self, person: simulation.subject2), animated: true)
         case penetrationCell: break
         case fragmentationCell: break
         default: fatalError()
+        }
+    }
+}
+
+extension CombatSimViewController: SubjectEditViewControllerDelegate {
+    func combatSimSubjectEditViewController(_ subjectEditViewController: CombatSimSubjectEditViewController, didFinishEditing subject: Person) {
+        switch subjectEditViewController {
+        case subject1EditViewController: simulation.subject1 = subject
+        case subject2EditViewController: simulation.subject2 = subject
         }
     }
 }

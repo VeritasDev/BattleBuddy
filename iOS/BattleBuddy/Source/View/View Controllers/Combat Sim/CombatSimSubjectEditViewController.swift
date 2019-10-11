@@ -9,7 +9,13 @@
 import UIKit
 import BallisticsEngine
 
+
+protocol SubjectEditViewControllerDelegate {
+    func combatSimSubjectEditViewController(_ subjectEditViewController: CombatSimSubjectEditViewController, didFinishEditing subject: Person)
+}
+
 class CombatSimSubjectEditViewController: BaseTableViewController {
+    let subjectEditDelegate: SubjectEditViewControllerDelegate
     let subjectTypeCell: BaseTableViewCell = {
         let cell = BaseTableViewCell(text: "combat_sim_subject_type".local())
         return cell
@@ -22,11 +28,20 @@ class CombatSimSubjectEditViewController: BaseTableViewController {
         let cell = BaseTableViewCell(text: "firearm".local())
         return cell
     }()
+    var person: Person
     var sections: [GroupedTableViewSection] = []
+    lazy var subjectTypeSelectionViewController: SelectionViewController = {
+        return SelectionViewController(self, options: [])
+    }()
+    lazy var aimSettingSelectionViewController: SelectionViewController = {
+        return SelectionViewController(self, options: [AimSetting.centerOfMass, AimSetting.headshotsOnly, AimSetting.thoraxOnly, AimSetting.randomLegMeta, AimSetting.singleLegMeta])
+    }()
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    init() {
+    init(_ subjectEditDelegate: SubjectEditViewControllerDelegate, person: Person) {
+        self.subjectEditDelegate = subjectEditDelegate
+        self.person = person
         super.init(style: .grouped)
     }
 
@@ -50,7 +65,9 @@ class CombatSimSubjectEditViewController: BaseTableViewController {
     }
 
     @objc func save() {
-        
+        // TODO: Gather data from UI and package into Person
+        let person = Person(.dealmaker, aimSetting: .centerOfMass, armor: [], firearm: nil)
+        subjectEditDelegate.combatSimSubjectEditViewController(self, didFinishEditing: person)
     }
 }
 
@@ -78,5 +95,27 @@ extension CombatSimSubjectEditViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return sections[indexPath.section].cells[indexPath.row]
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let cell = tableView.cellForRow(at: indexPath)
+        switch cell {
+        case aimCell: navigationController?.pushViewController(SelectionViewController(self, options: []), animated: true)
+        default: break
+        }
+    }
+}
+
+extension CombatSimSubjectEditViewController: SelectionDelegate {
+    func selectionViewController(_ selectionViewController: SelectionViewController, didMakeSelection selection: SelectionOption) {
+        switch selectionViewController {
+        case aimSettingSelectionViewController:
+            guard let aimSetting = selection as? AimSetting else { fatalError() }
+            person.aim = aimSetting
+        default:
+            break
+        }
     }
 }

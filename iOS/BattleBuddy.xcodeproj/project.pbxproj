@@ -79,7 +79,6 @@
 		27C0B176231203F6004BCE14 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C0B175231203F6004BCE14 /* BaseTableViewController.swift */; };
 		27C0B178231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C0B177231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift */; };
 		27C0B17A23140061004BCE14 /* BodyZoneHealthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C0B17923140061004BCE14 /* BodyZoneHealthButton.swift */; };
-		27C0B18123140173004BCE14 /* CalculatorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C0B18023140173004BCE14 /* CalculatorUtils.swift */; };
 		27D210362314ED7A005A538F /* BaseScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D210352314ED7A005A538F /* BaseScrollViewController.swift */; };
 		27D2103A2315D046005A538F /* FoundationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D210392315D046005A538F /* FoundationUtils.swift */; };
 		27D2104F23174B20005A538F /* LocalizationTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2104E23174B20005A538F /* LocalizationTeamViewController.swift */; };
@@ -119,6 +118,9 @@
 		EF10CCE1232A9D5700E95A45 /* SoundTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */; };
 		EF166DA2232FEAB200A9EF63 /* InmobiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF166DA1232FEAB200A9EF63 /* InmobiManager.swift */; };
 		EF166DA4232FF67500A9EF63 /* PostElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF166DA3232FF67500A9EF63 /* PostElementCell.swift */; };
+		EF1945A423510C31007D8242 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945A323510C31007D8242 /* SelectionViewController.swift */; };
+		EF1945A623510E4E007D8242 /* Options List.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945A523510E4E007D8242 /* Options List.swift */; };
+		EF1945A823510FED007D8242 /* DependencyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945A723510FED007D8242 /* DependencyUtils.swift */; };
 		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
 		EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };
@@ -296,7 +298,6 @@
 		27C0B175231203F6004BCE14 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		27C0B177231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmmoUtilitiesManagerImpl.swift; sourceTree = "<group>"; };
 		27C0B17923140061004BCE14 /* BodyZoneHealthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyZoneHealthButton.swift; sourceTree = "<group>"; };
-		27C0B18023140173004BCE14 /* CalculatorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUtils.swift; sourceTree = "<group>"; };
 		27D210352314ED7A005A538F /* BaseScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScrollViewController.swift; sourceTree = "<group>"; };
 		27D210392315D046005A538F /* FoundationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationUtils.swift; sourceTree = "<group>"; };
 		27D2104823172F4D005A538F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -359,6 +360,9 @@
 		EF166DA3232FF67500A9EF63 /* PostElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostElementCell.swift; sourceTree = "<group>"; };
 		EF166DA7233002AA00A9EF63 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EF166DA8233002AA00A9EF63 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF1945A323510C31007D8242 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		EF1945A523510E4E007D8242 /* Options List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Options List.swift"; sourceTree = "<group>"; };
+		EF1945A723510FED007D8242 /* DependencyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyUtils.swift; sourceTree = "<group>"; };
 		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -712,7 +716,6 @@
 				60837423232BC24300AA9D29 /* Global */,
 				60837420232BC0F000AA9D29 /* User */,
 				EF10CCDA232A98FB00E95A45 /* Audio */,
-				27C0B17F23140165004BCE14 /* Calculator */,
 				276D91662310054A00CD61E0 /* Operations */,
 				276D9165230F9D9100CD61E0 /* Item */,
 				EFACDBD3230488C000E3F30B /* Question */,
@@ -900,14 +903,6 @@
 			path = "Search & Compare";
 			sourceTree = "<group>";
 		};
-		27C0B17F23140165004BCE14 /* Calculator */ = {
-			isa = PBXGroup;
-			children = (
-				27C0B18023140173004BCE14 /* CalculatorUtils.swift */,
-			);
-			path = Calculator;
-			sourceTree = "<group>";
-		};
 		27F2DDC822C245F200BD9779 /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -921,6 +916,7 @@
 				27090E2622D9FDEF00D97320 /* PostViewController.swift */,
 				27F09AE522E3820B00552C35 /* BaseCalculatorViewController.swift */,
 				27C0B175231203F6004BCE14 /* BaseTableViewController.swift */,
+				EF1945A323510C31007D8242 /* SelectionViewController.swift */,
 			);
 			path = "Base Classes";
 			sourceTree = "<group>";
@@ -996,6 +992,7 @@
 				EF962C7622FB3488009BB397 /* UIKitUtils.swift */,
 				27BB49D022FCB92000070427 /* Random.swift */,
 				27D210392315D046005A538F /* FoundationUtils.swift */,
+				EF1945A723510FED007D8242 /* DependencyUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1065,6 +1062,7 @@
 				27090E2422D9FDC000D97320 /* PostConfiguration.swift */,
 				27090E2A22DA187100D97320 /* Posts.swift */,
 				6083742D232E534E00AA9D29 /* TableViewModel.swift */,
+				EF1945A523510E4E007D8242 /* Options List.swift */,
 				27781CDA22F7208A007134E2 /* Item Sorting */,
 				EF831FF222E8D28700C6C138 /* Item Comparisons */,
 				27090E3022DB546400D97320 /* Item Details */,
@@ -1454,6 +1452,7 @@
 				276D917A23102D6D00CD61E0 /* ItemEnums.swift in Sources */,
 				EF7AF37A22C66B0C00DA1A18 /* StaticGridCollectionView.swift in Sources */,
 				27D2105D23194185005A538F /* WatchAdCell.swift in Sources */,
+				EF1945A823510FED007D8242 /* DependencyUtils.swift in Sources */,
 				EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */,
 				276D917E231033C200CD61E0 /* MedicalEnums.swift in Sources */,
 				27F09ADD22DF50A100552C35 /* MathUtils.swift in Sources */,
@@ -1468,6 +1467,7 @@
 				EF962C7B22FB64DB009BB397 /* TeamViewController.swift in Sources */,
 				27C0B178231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift in Sources */,
 				27BB49BA22F9B34400070427 /* PreferencesManager.swift in Sources */,
+				EF1945A623510E4E007D8242 /* Options List.swift in Sources */,
 				27F2DDC722C245DA00BD9779 /* ItemsMenuViewController.swift in Sources */,
 				60EA7D31233A651200EAD566 /* Modification.swift in Sources */,
 				EF962C7722FB3488009BB397 /* UIKitUtils.swift in Sources */,
@@ -1480,7 +1480,6 @@
 				EFFB10BE22F1F40F00EE6B6F /* CompatibleModsHeaderView.swift in Sources */,
 				EF831FF422E8D29600C6C138 /* MeleeWeaponComparison.swift in Sources */,
 				EF831FEA22DFA89E00C6C138 /* MedicalDetailsConfiguration.swift in Sources */,
-				27C0B18123140173004BCE14 /* CalculatorUtils.swift in Sources */,
 				27A4A90A22E8861200C5618E /* Trader.swift in Sources */,
 				27F09AE622E3820B00552C35 /* BaseCalculatorViewController.swift in Sources */,
 				27C0B176231203F6004BCE14 /* BaseTableViewController.swift in Sources */,
@@ -1503,6 +1502,7 @@
 				276D916A2310081D00CD61E0 /* BaseItem.swift in Sources */,
 				27A7609622D2F06C00861113 /* PreviewMenuCollectionView.swift in Sources */,
 				27BB49D122FCB92000070427 /* Random.swift in Sources */,
+				EF1945A423510C31007D8242 /* SelectionViewController.swift in Sources */,
 				60EA7D3E23494A0700EAD566 /* CombatSimViewController.swift in Sources */,
 				EF831FE122DCECB900C6C138 /* Displayable.swift in Sources */,
 				EF831FF822E8D29900C6C138 /* FirearmComparison.swift in Sources */,

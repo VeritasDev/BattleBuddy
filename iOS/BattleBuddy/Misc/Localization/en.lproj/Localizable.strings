@@ -445,9 +445,9 @@
 
 "aim_setting_center_mass_desc" = "All bullets fired will impact the target on a randomly selected limb, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
 "aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
-"aim_setting_random_leg_desc" = "All bullets fired will impact one of the legs randomly with an equal chance ";
-"aim_setting_single_leg_desc" = "";
-"aim_setting_thorax_desc" = "";
+"aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
+"aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
+"aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
