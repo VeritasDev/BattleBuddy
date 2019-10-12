@@ -28,7 +28,6 @@ const Icon = styled(I)`
 `;
 
 const Search = () => {
-  // TODO: implement search query.
   const {setSearchTerm, searchTerm} = useSearch();
   const {navigate} = useNavigation();
   const [state, setState] = useState(searchTerm);
