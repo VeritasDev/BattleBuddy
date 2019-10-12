@@ -23,7 +23,8 @@ const CategoryScreen = ({navigation}) => {
     <ScrollableContainer>
       {collection !== ItemType.melee ? (
         Object.entries(docs).map(([name, items]) => {
-          return <HorizontalCardBar title={name} items={items} key={name} />;
+          if (items.length)
+            return <HorizontalCardBar title={name} items={items} key={name} />;
         })
       ) : (
         <MeleeItemList items={docs} />

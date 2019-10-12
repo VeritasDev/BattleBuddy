@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
-import useStorageImage from '../../../hooks/useStorageImage';
-import ImageType from '../../../constants/ImageType';
 import FirearmDetail from '../../../components/detail/FirearmDetail';
 import ArmorDetail from '../../../components/detail/ArmorDetail';
 import AmmoDetail from '../../../components/detail/AmmoDetail';
 import MedicalDetail from '../../../components/detail/MedicalDetail';
 import ThrowableDetail from '../../../components/detail/ThrowableDetail';
 import MeleeDetail from '../../../components/detail/MeleeDetail';
+import StorageImage from '../../../components/common/StorageImage';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -31,10 +30,6 @@ const Description = styled(Text)`
 
 const ItemDetailScreen = ({navigation}) => {
   const {item, type} = navigation.state.params;
-  // Placeholder data until data comes from backend
-  // TODO: Implement backend data for detail page
-  const {placeholder, image} = useStorageImage(item, ImageType.large);
-
   const typeToComponent = {
     firearm: FirearmDetail,
     armor: ArmorDetail,
@@ -48,7 +43,7 @@ const ItemDetailScreen = ({navigation}) => {
 
   return (
     <ScrollView>
-      <Image source={image ? image : placeholder} resizeMode="contain" />
+      <StorageImage doc={item} element={Image} resizeMode="contain" />
       <Description>{item.description}</Description>
       <DetailElement item={item} />
     </ScrollView>
