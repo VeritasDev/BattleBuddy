@@ -27,15 +27,12 @@
     - [ ] Handguards
     - [ ] Stocks
     - [ ] Other
-- [ ] Mods Detail Screen
-- [ ] Mods Comparison
 - [ ] Placeholder images for accessories
 - [ ] Sound Training Beta
     - [ ] Start test button
     - [ ] Commit Answer button shows results on screen
     - [ ] View will disappear - stop player
 - [ ] Filter selection lists
-- [ ] Combat Simulation
 - [x] Earn random bud points
 - [ ] Penetration Calculator Improvements
     - [ ] Helmets/face shields/mods
@@ -67,7 +64,9 @@
 ### Maybe later?
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
-    - Armor Zones
+- Armor Zones
+    - [ ] Mods Detail Screen
+    - [ ] Mods Comparison
 
 ## <u>v1.2</u>
 - [ ] Cell label font sizing

@@ -35,11 +35,33 @@ extension AimSetting: Localizable {
     }
 }
 
+extension ChanceSetting: Localizable {
+    func local(short: Bool = false) -> String {
+        switch self {
+        case .always: return "common_always".local()
+        case .never: return "common_never".local()
+        case .realistic: return "common_realistic".local()
+        }
+    }
+}
+
+extension PersonType: Localizable {
+    func local(short: Bool = false) -> String {
+        switch self {
+        case .pmc: return "person_type_pmc".local()
+        case .scav: return "person_type_scav".local()
+        case .raider: return "person_type_raider".local()
+        case .killa: return "person_type_killa".local()
+        case .dealmaker: return "person_type_dealmaker".local()
+        case .dealmakerFollower: return "person_type_dealmaker_guard".local()
+        }
+    }
+}
 
 extension AimSetting: SelectionOption {
     var optionTitle: String { return local() }
 
-    var optionSubtitle: String {
+    var optionSubtitle: String? {
         switch self {
         case .centerOfMass: return "aim_setting_center_mass_desc".local()
         case .headshotsOnly: return "aim_setting_headshots_desc".local()
@@ -48,6 +70,22 @@ extension AimSetting: SelectionOption {
         case .thoraxOnly: return "aim_setting_thorax_desc".local()
         }
     }
+}
 
+extension PersonType: SelectionOption {
+    var optionTitle: String { return local() }
 
+    var optionSubtitle: String? { return nil }
+}
+
+extension ChanceSetting: SelectionOption {
+    var optionTitle: String { return local() }
+
+    var optionSubtitle: String? {
+        switch self {
+        case .always: return "common_always_desc".local()
+        case .never: return "common_never_desc".local()
+        case .realistic: return "common_realistic_desc".local()
+        }
+    }
 }

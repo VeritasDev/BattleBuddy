@@ -13,7 +13,6 @@ import JGProgressHUD
 class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegate {
     lazy var calculator: CombatCalculator = {
         let calc = CombatCalculator()
-        calc.fragChanceSetting = .never
         return calc
     }()
     var target: Person? {

@@ -21,23 +21,34 @@ class SelectionOptionCell: BaseTableViewCell {
 
     init() {
         super.init(style: .subtitle, reuseIdentifier: SelectionOptionCell.reuseId)
+
+        textLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        textLabel?.numberOfLines = 0
+        detailTextLabel?.font = .systemFont(ofSize: 14, weight: .regular)
+        detailTextLabel?.numberOfLines = 0
+        detailTextLabel?.textColor = UIColor(white: 0.8, alpha: 1.0)
+        selectionStyle = .gray
     }
 }
 
 class SelectionViewController: BaseTableViewController {
     let selectionDelegate: SelectionDelegate
     let options: [SelectionOption]
+    let titleText: String
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    init(_ selectionDelegate: SelectionDelegate, options: [SelectionOption]) {
+    init(_ selectionDelegate: SelectionDelegate, title: String, options: [SelectionOption]) {
         self.selectionDelegate = selectionDelegate
         self.options = options
+        self.titleText = title
         super.init(style: .grouped)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = titleText
     }
 
 }

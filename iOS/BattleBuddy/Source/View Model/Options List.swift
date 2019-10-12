@@ -10,7 +10,7 @@ import Foundation
 
 protocol SelectionOption {
     var optionTitle: String { get }
-    var optionSubtitle: String { get }
+    var optionSubtitle: String? { get }
 }
 
 protocol SelectionDelegate {

@@ -9,7 +9,7 @@
 import UIKit
 import BallisticsEngine
 
-class CombatSimViewController: BaseTableViewController {
+class CombatSimViewController: StaticGroupedTableViewController {
     let subject1Cell: BaseTableViewCell = {
         let cell = BaseTableViewCell(text: "combat_sim_subject_1".local())
         return cell
@@ -18,15 +18,6 @@ class CombatSimViewController: BaseTableViewController {
         let cell = BaseTableViewCell(text: "combat_sim_subject_2".local())
         return cell
     }()
-    let penetrationCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell(text: "combat_sim_pen_setting".local())
-        return cell
-    }()
-    let fragmentationCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell(text: "combat_sim_frag_setting".local())
-        return cell
-    }()
-    var sections: [GroupedTableViewSection] = []
     let simulation = CombatSimulation()
 
     lazy var subject1EditViewController: CombatSimSubjectEditViewController = {
@@ -38,8 +29,8 @@ class CombatSimViewController: BaseTableViewController {
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    init() {
-        super.init(style: .grouped)
+    override init() {
+        super.init()
 
         simulation.subject1 = Person(aimSetting: .centerOfMass, firearm: nil)
         simulation.subject2 = Person(aimSetting: .centerOfMass, firearm: nil)
@@ -52,20 +43,10 @@ class CombatSimViewController: BaseTableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "combat_sim_run".local(), style: .plain, target: self, action: #selector(runSim))
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        updateCells()
-    }
-
-    func updateCells() {
+    override func generateSections() -> [GroupedTableViewSection] {
         let subjectSection = GroupedTableViewSection(headerTitle: "combat_sim_test_subjects".local(), cells: [subject1Cell, subject2Cell])
-        let simSettingsSection = GroupedTableViewSection(headerTitle: "combat_sim_settings".local(), cells: [penetrationCell, fragmentationCell])
         let resultsSection = GroupedTableViewSection(headerTitle: "combat_sim_results".local(), cells: [])
-
-        sections = [subjectSection, simSettingsSection, resultsSection]
-
-        tableView.reloadData()
+        return [subjectSection, resultsSection]
     }
 
     @objc func runSim() {
@@ -75,43 +56,11 @@ class CombatSimViewController: BaseTableViewController {
 
         }
     }
-}
 
-// MARK: - Table view
-extension CombatSimViewController {
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
-    }
-
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].headerTitle
-    }
-
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return sections[section].footerTitle
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].cells.count
-    }
-
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return sections[indexPath.section].cells[indexPath.row].height
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return sections[indexPath.section].cells[indexPath.row]
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        let cell = tableView.cellForRow(at: indexPath)
+    override func handleCellSelected(_ cell: BaseTableViewCell) {
         switch cell {
-        case subject1Cell: navigationController?.pushViewController(CombatSimSubjectEditViewController(self, person: simulation.subject1), animated: true)
-        case subject2Cell: navigationController?.pushViewController(CombatSimSubjectEditViewController(self, person: simulation.subject2), animated: true)
-        case penetrationCell: break
-        case fragmentationCell: break
+        case subject1Cell: navigationController?.pushViewController(CombatSimSubjectEditViewController(self, person: simulation.subject1!), animated: true)
+        case subject2Cell: navigationController?.pushViewController(CombatSimSubjectEditViewController(self, person: simulation.subject2!), animated: true)
         default: fatalError()
         }
     }
@@ -122,6 +71,9 @@ extension CombatSimViewController: SubjectEditViewControllerDelegate {
         switch subjectEditViewController {
         case subject1EditViewController: simulation.subject1 = subject
         case subject2EditViewController: simulation.subject2 = subject
+        default: break
         }
+
+        navigationController?.popViewController(animated: true)
     }
 }

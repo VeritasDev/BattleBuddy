@@ -331,9 +331,6 @@
 // ----------------------------------------
 // V1.1.0
 
-// MARK:- Common
-"common_always" = "";
-
 // MARK:- More
 "days_since_wipe" = "%@ days since last wipe...";
 "bud_leaderboard" = "Bud Leaderboard";
@@ -432,10 +429,14 @@
 "combat_sim_settings" = "Simulation Settings";
 
 "combat_sim_pen_setting" = "Penetration Setting";
-"combat_sim_pen_setting_" = "";
+"combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
+"combat_sim_pen_setting_always_desc" = "Bullets will always penetrate armor as long as there is a non-zero chance. For example, a 1% penetration chance will always penetrate, but a 0% penetration chance will not.";
+"combat_sim_pen_setting_never_desc" = "Bullets will not penetrate any armor unless the armor is at 0% durabilty, at which time the chance becomes 100%";
 
 "combat_sim_frag_setting" = "Fragmentation Setting";
-"combat_sim_frag_setting_" = "";
+"combat_sim_frag_setting_realistic_desc" = "Bullets have the same chance to fragment as they do in-game.";
+"combat_sim_frag_setting_always_desc" = "Bullets will always fragment as long as their effective fragmentation chance is non-zero. As of writing this, low-penetration ammo, such as RIP slugs, cannot currently fragment in the game despite it's 100% advertised fragmentation chance.";
+"combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
 
 "aim_setting_center_mass" = "Center of Mass";
 "aim_setting_headshots" = "Headshots Only";
@@ -448,6 +449,13 @@
 "aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
 "aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
 "aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
+
+"person_type_pmc" = "PMC (USEC or BEAR)";
+"person_type_scav" = "Normal Scav";
+"person_type_raider" = "Labs Raider";
+"person_type_dealmaker" = "Reshala AKA \"Dealmaker\"";
+"person_type_dealmaker_guard" = "Bodyguard for Reshala";
+"person_type_killa" = "Killa";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
