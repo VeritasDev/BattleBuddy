@@ -20,7 +20,6 @@ const View = styled.View`
 
 const HorizontalCardBar = ({title, items, navigation}) => {
   const onPressHandler = (item) => {
-    // TODO: Revisit when backend is implemented
     navigation.navigate('Detail', {item, type: item._kind});
   };
 
