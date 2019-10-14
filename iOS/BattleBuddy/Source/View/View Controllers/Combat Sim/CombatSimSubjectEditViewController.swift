@@ -18,14 +18,37 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     let subjectEditDelegate: SubjectEditViewControllerDelegate
     let subjectTypeCell: BaseTableViewCell = {
         let cell = BaseTableViewCell(text: "combat_sim_subject_type".local())
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
         return cell
     }()
     let aimCell: BaseTableViewCell = {
         let cell = BaseTableViewCell(text: "combat_sim_aim_setting".local())
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
+        return cell
+    }()
+    let armorCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(text: "armor".local())
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
+        return cell
+    }()
+    let helmetCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(text: "helmets".local())
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
         return cell
     }()
     let firearmCell: BaseTableViewCell = {
         let cell = BaseTableViewCell(text: "firearm".local())
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
         return cell
     }()
     var person: Person
@@ -42,6 +65,8 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
         self.subjectEditDelegate = subjectEditDelegate
         self.person = person
         super.init()
+
+        updateCells()
     }
 
     override func viewDidLoad() {
@@ -52,13 +77,18 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     }
 
     @objc func save() {
-        // TODO: Gather data from UI and package into Person
-        let person = Person(.dealmaker, aimSetting: .centerOfMass, armor: [], firearm: nil)
         subjectEditDelegate.combatSimSubjectEditViewController(self, didFinishEditing: person)
     }
 
     override func generateSections() -> [GroupedTableViewSection] {
         return [GroupedTableViewSection(headerTitle: nil, cells: [subjectTypeCell, aimCell, firearmCell])]
+    }
+
+    func updateCells() {
+        subjectTypeCell.detailTextLabel?.text = person.type.local()
+        aimCell.detailTextLabel?.text = person.aim.local()
+        armorCell.detailTextLabel?.text = person.equippedArmor.isEmpty ? "common_none".local() : "common_none".local()
+
     }
 }
 
@@ -69,8 +99,12 @@ extension CombatSimSubjectEditViewController {
 
         let cell = tableView.cellForRow(at: indexPath)
         switch cell {
-        case subjectTypeCell: navigationController?.pushViewController(subjectTypeSelectionViewController, animated: true)
-        case aimCell: navigationController?.pushViewController(aimSettingSelectionViewController, animated: true)
+        case subjectTypeCell:
+            subjectTypeSelectionViewController.currentSelection = person.type
+            navigationController?.pushViewController(subjectTypeSelectionViewController, animated: true)
+        case aimCell:
+            aimSettingSelectionViewController.currentSelection = person.aim
+            navigationController?.pushViewController(aimSettingSelectionViewController, animated: true)
         default: break
         }
     }
@@ -90,6 +124,7 @@ extension CombatSimSubjectEditViewController: SelectionDelegate {
             break
         }
 
+        updateCells()
         navigationController?.popViewController(animated: true)
     }
 }

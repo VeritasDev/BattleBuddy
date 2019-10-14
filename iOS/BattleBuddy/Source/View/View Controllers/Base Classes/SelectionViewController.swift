@@ -35,6 +35,11 @@ class SelectionViewController: BaseTableViewController {
     let selectionDelegate: SelectionDelegate
     let options: [SelectionOption]
     let titleText: String
+    var currentSelection: SelectionOption? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -50,7 +55,6 @@ class SelectionViewController: BaseTableViewController {
 
         title = titleText
     }
-
 }
 
 // MARK: - Table view data source
@@ -66,7 +70,10 @@ extension SelectionViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SelectionOptionCell.reuseId) as? SelectionOptionCell ?? SelectionOptionCell()
-        cell.option = options[indexPath.row]
+        let option = options[indexPath.row]
+        let currentlySelected = currentSelection?.optionTitle == option.optionTitle
+        cell.option = option
+        cell.accessoryType = currentlySelected ? .checkmark : .none
         return cell
     }
 

@@ -9,6 +9,12 @@
 import UIKit
 import BallisticsEngine
 
+class SimulationSubjectCell: BaseTableViewCell {
+    init() {
+        
+    }
+}
+
 class CombatSimViewController: StaticGroupedTableViewController {
     let subject1Cell: BaseTableViewCell = {
         let cell = BaseTableViewCell(text: "combat_sim_subject_1".local())

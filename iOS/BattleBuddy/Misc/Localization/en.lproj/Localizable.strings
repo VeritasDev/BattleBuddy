@@ -331,6 +331,10 @@
 // ----------------------------------------
 // V1.1.0
 
+// MARK:- Common
+"firearm" = "Firearm";
+"common_none" = "None";
+
 // MARK:- More
 "days_since_wipe" = "%@ days since last wipe...";
 "bud_leaderboard" = "Bud Leaderboard";
