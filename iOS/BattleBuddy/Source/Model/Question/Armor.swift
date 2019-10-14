@@ -136,6 +136,7 @@ struct Armor: BaseItem, Armored {
 
 // MARK: Calculable Armor
 extension Armor: CalculableArmor {
+    var resolvedArmorName: String { get { return displayName } }
     var resolvedArmorClass: Int { get { return armorClass.rawValue } }
     var resolvedCurrentDurability: Double {
         get { return Double(currentDurability) }

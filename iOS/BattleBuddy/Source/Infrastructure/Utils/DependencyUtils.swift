@@ -58,6 +58,17 @@ extension PersonType: Localizable {
     }
 }
 
+
+extension CombatSimulationResult: Localizable {
+    func local(short: Bool = false) -> String {
+        switch self {
+        case .win: return "simulation_result_win".local()
+        case .loss: return "simulatoin_result_loss".local()
+        case .tie: return "simulation_result_tie".local()
+        }
+    }
+}
+
 extension AimSetting: SelectionOption {
     var optionTitle: String { return local() }
 
@@ -86,6 +97,18 @@ extension ChanceSetting: SelectionOption {
         case .always: return "common_always_desc".local()
         case .never: return "common_never_desc".local()
         case .realistic: return "common_realistic_desc".local()
+        }
+    }
+}
+
+extension PersonType {
+    var avatarImage: UIImage {
+        switch self {
+        case .pmc: return UIImage(named: "avatar_pmc")!
+        case .scav: return UIImage(named: "avatar_scav")!
+        case .raider, .dealmakerFollower: return UIImage(named: "avatar_raider")!
+        case .killa: return UIImage(named: "avatar_killa")!
+        case .dealmaker: return UIImage(named: "avatar_dealmaker")!
         }
     }
 }

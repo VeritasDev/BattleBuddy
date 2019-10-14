@@ -87,8 +87,8 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     func updateCells() {
         subjectTypeCell.detailTextLabel?.text = person.type.local()
         aimCell.detailTextLabel?.text = person.aim.local()
-        armorCell.detailTextLabel?.text = person.equippedArmor.isEmpty ? "common_none".local() : "common_none".local()
-
+        armorCell.detailTextLabel?.text = person.equippedArmor.isEmpty ? "common_none".local() : person.equippedArmor.compactMap{$0.resolvedArmorName}.joined(separator: ", ")
+        firearmCell.detailTextLabel?.text = person.firearmConfig.name
     }
 }
 

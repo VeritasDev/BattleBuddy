@@ -11,7 +11,7 @@ import UIKit
 struct GroupedTableViewSection {
     let headerTitle: String?
     let footerTitle: String?
-    let cells: [BaseTableViewCell]
+    var cells: [BaseTableViewCell]
 
     init(headerTitle: String?, footerTitle: String? = nil, cells: [BaseTableViewCell]) {
         self.headerTitle = headerTitle

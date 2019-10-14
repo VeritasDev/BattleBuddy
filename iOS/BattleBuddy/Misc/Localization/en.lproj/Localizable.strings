@@ -423,7 +423,6 @@
 "combat_sim_subject_1" = "Test Subject #1";
 "combat_sim_subject_2" = "Test Subject #2";
 "combat_sim_run" = "Run";
-"combat_sim_test_subjects" = "Test Subjects";
 "combat_sim_results" = "Simulation Results";
 "combat_sim_results_iterations" = "Iterations";
 "combat_sim_results_winner" = "Winner";
@@ -460,6 +459,14 @@
 "person_type_dealmaker" = "Reshala AKA \"Dealmaker\"";
 "person_type_dealmaker_guard" = "Bodyguard for Reshala";
 "person_type_killa" = "Killa";
+
+"simulation_result_win" = "Win";
+"simulatoin_result_loss" = "Loss";
+"simulation_result_tie" = "Tie";
+
+"simulation_win_percent" = "Win Percent";
+"simulation_time_to_kill" = "Avg. Time-to-Kill";
+"simulation_win_shots_to_kill" = "Avg. Shots-to-Kill";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations

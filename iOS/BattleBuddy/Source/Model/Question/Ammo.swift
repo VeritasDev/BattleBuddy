@@ -60,6 +60,10 @@ struct Ammo: BaseItem {
 
 // MARK: Ammo calculable
 extension Ammo: CalculableAmmo {
+    var resolvedAmmoName: String {
+        get { return displayName }
+    }
+
     var resolvedPenetration: Double {
         get { return Double(penetration) }
         set { penetration = Int(newValue) }
