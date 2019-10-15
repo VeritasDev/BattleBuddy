@@ -17,6 +17,7 @@ enum PostElementType {
     case subHeader
     case bodyTitle
     case body
+    case note
 }
 
 protocol PostConfiguration {
@@ -160,6 +161,27 @@ struct PostElementBody: PostElement {
         titleLabel.textColor = .init(white: 0.9, alpha: 1.0)
         titleLabel.font = .systemFont(ofSize: 18, weight: .thin)
         titleLabel.text = bodyText
+        titleLabel.numberOfLines = 0
+
+        let containerStackView = BaseStackView(spacing: 3.0, xPaddingCompact: 20.0, xPaddingRegular: 100.0)
+        containerStackView.addArrangedSubview(titleLabel)
+        return containerStackView
+    }
+}
+
+struct PostElementNote: PostElement {
+    var type: PostElementType = .note
+    let noteText: String
+
+    init(note: String) {
+        noteText = note
+    }
+
+    func generateContent() -> UIView {
+        let titleLabel = UILabel()
+        titleLabel.textColor = .init(white: 0.8, alpha: 1.0)
+        titleLabel.font = .italicSystemFont(ofSize: 16)
+        titleLabel.text = noteText
         titleLabel.numberOfLines = 0
 
         let containerStackView = BaseStackView(spacing: 3.0, xPaddingCompact: 20.0, xPaddingRegular: 100.0)

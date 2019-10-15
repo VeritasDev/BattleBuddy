@@ -63,10 +63,22 @@ final class BudPost: PostConfiguration {
 }
 
 final class SoundLocalizationPost: PostConfiguration {
-    var title: String?
+    var title: String? = "sound_training".local()
 
     var elements: [PostElement] {
-        return []
+        return [
+            PostElementImage(image: UIImage(named: "card_hero_sound_training")!, height: 200.0),
+            PostElementHeader(localizedTitle: "sound_localization_info_title".local(), authorName: "Veritas", publishDate: Date(timeIntervalSince1970: 1571151087)),
+            PostElementNote(note: "sound_localization_info_note_1".local()),
+            PostElementBody(body: "sound_localization_info_body_1".local()),
+            PostElementYouTube(videoId: "-_JpAyWMeiQ", height: 260.0),
+            PostElementBodyTitle(title: "sound_localization_info_subtitle_2".local()),
+            PostElementBody(body: "sound_localization_info_body_2".local()),
+            PostElementBodyTitle(title: "sound_localization_info_subtitle_3".local()),
+            PostElementBody(body: "sound_localization_info_body_3".local()),
+            PostElementImage(image: UIImage(named: "sound_1")!, height: 200.0),
+            PostElementBody(body: "sound_localization_info_body_4".local()),
+        ]
     }
 }
 
@@ -82,7 +94,7 @@ final class UpcomingFeaturesPost: PostConfiguration {
     }
 }
 
-// TODO: v1.1?
+// TODO: v1.2?
 final class TraderPost: PostConfiguration {
     var title: String?
     var trader: Trader
@@ -105,7 +117,7 @@ final class TraderPost: PostConfiguration {
     }
 }
 
-// TODO: v1.1?
+// TODO: v1.2?
 final class HealthAndStatusEffectsPost: PostConfiguration {
     var title: String? = Localized("health")
 

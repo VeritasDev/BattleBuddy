@@ -414,12 +414,19 @@
 "sound_training" = "Sound Training Beta";
 "sound_training_start" = "Start Training";
 "sound_training_commit" = "Guess";
-"sound_training_help_title" = "Sound Training Help";
-"sound_training_help_message" = "The sound training tool is currently in beta! Headphones are highly recommended for this feature.\n\nPress the Start Training button to begin, and a tone will play on regular intervals. This tone will be panned to a random direction, somewhere around your character on screen in a 360-degree radius.\n\nSlowly turn your character left and right by sliding your finger across the screen from left to right, just like you would with a trackpack or a mouse. You will hear the volume of the sound get louder in one ear as your character turns towards it.\n\nYour goal is to turn your character towards the source of the sound so they are facing as close as possible to the source of the sound. One you think you're done, press the Guess button to see if you're correct!";
 "sound_training_result_correct" = "Correct!";
 "sound_training_result_wrong" = "Keep Trying!";
 
-// MARK:- Calculators
+"sound_localization_info_title" = "Learn How To Localize Sound";
+"sound_localization_info_note_1" = "The sound training tool is currently in beta! Headphones are required!";
+"sound_localization_info_body_1" = "Escape from Tarkov currently utilizes your standard stereo sound, which is more than adequate enough for sound localization in most cases. At this point in time, no 5.1 or 7.1 surround sound options are supported, and as such I would HIGHLY recommend against using any virtual audio settings in your headphone software or windows audio settings.\n\nThere's no doubt there are people that swear by these more advanced settings, but they simply are not required, will not give you any more information about distance, location, etc., because they don't have any more information from the game or the engine itself! The game outputs stereo audio - a Left channel and a Right channel, nothing more complex than that. In my experience, enabling these more advanced settings makes sound localization harder, not easier. If you have these settings on and have issues with localizing sound in Tarkov or any other first-person shooter, try turning them off and see if that makes a difference, you might be surprised!";
+"sound_localization_info_subtitle_2" = "How To Play";
+"sound_localization_info_body_2" = "The goal of this mini-game is to locate the direction of sound around your on-screen character. When you begin, and a tone will play at a regular interval, panned to a random direction somewhere around your character on screen in a 360-degree radius.\n\nSwipe left and right on screen to turn your character, just like you would with a trackpad or a mouse. As your character's left or right ears get closer or further away from the source of the sound, the volume will change in each ear accordingly.\n\nWhen the tone is equally loud in both your left and right ears, your character is likely facing towards the sound. Once you think you're done, confirm your choice by pressing the button to see if you're correct!";
+"sound_localization_info_subtitle_3" = "Front and Back Sound The Same?!";
+"sound_localization_info_body_3" = "You may have noticed that sounds that are directly in front of you sound indistinguishable from sounds that are directly behind you. In both cases, the volume of the left and right channels are equal. Ignoring things like context clues based on map knowledge and materials in the environment, all of which are extremely useful in determining the location of sounds occurring around you, the only way to differentiate between sounds in front and behind is by turning your character's head relative to the sound, and paying attention to the direction the sound appears to move when you do. Take a look at this image example below:";
+"sound_localization_info_body_4" = "When you turn your character left or right, or even better turn just your character's silently head using free-look, you should be able to hear the volume of the sound increase or decrease in each ear. If you turn your head to the right and the sound is in front of you, your left ear will be closer to the sound and your right ear will be further from it, so the volume will be louder in your left ear compared to your right. Conversely, if the sound was actually behind you, when you turn right it will get louder in your right ear and softer in your left. Try using the direction that the sound moves when you turn your head as an indication of the location of the sound. The way it works in this tool is exactly like it works in Escape from Tarkov, and most other first-person shooters!";
+
+// MARK:- Combat Sim
 "simulate_gunshot_pen" = "Shoot\nw/ Penetration";
 "simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
 
@@ -448,10 +455,10 @@
 "combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
 
 "aim_setting_center_mass" = "Center of Mass";
-"aim_setting_headshots" = "Headshots Only";
-"aim_setting_random_leg" = "Leg Meta - Randomized";
-"aim_setting_single_leg" = "Leg Meta - Single Leg Only";
-"aim_setting_thorax" = "Thorax Only";
+"aim_setting_headshots" = "Headshots";
+"aim_setting_random_leg" = "Random Leg Meta";
+"aim_setting_single_leg" = "Single Leg Meta";
+"aim_setting_thorax" = "Thorax";
 
 "aim_setting_center_mass_desc" = "All bullets fired will impact the target on a randomly selected limb, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
 "aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
@@ -459,11 +466,11 @@
 "aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
 "aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
 
-"person_type_pmc" = "PMC (USEC or BEAR)";
-"person_type_scav" = "Normal Scav";
-"person_type_raider" = "Labs Raider";
-"person_type_dealmaker" = "Reshala AKA \"Dealmaker\"";
-"person_type_dealmaker_guard" = "Bodyguard for Reshala";
+"person_type_pmc" = "PMC";
+"person_type_scav" = "Scav";
+"person_type_raider" = "Raider";
+"person_type_dealmaker" = "Reshala";
+"person_type_dealmaker_guard" = "Reshala Guard";
 "person_type_killa" = "Killa";
 
 "simulation_result_win" = "Win";

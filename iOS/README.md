@@ -10,22 +10,17 @@
 - [x] Release v1.0.2 
 - [ ] Release v1.1.0  ***In development - see TODO list below***
 
-## <u>v1.1</u>
+## <u>v1.1.0</u>
 - [ ] Face shields
 - [ ] Japenese Localization
-- [ ] Armor - compatible attachments
 - [ ] Combat Simulation
-- [ ] Sound Training Beta
-    - [ ] Start test button
-    - [ ] Commit Answer button shows results on screen
-    - [ ] View will disappear - stop player
-- [x] Earn random bud points
 - [ ] Penetration Calculator Improvements
     - [ ] Helmets/face shields/mods
     - [x] Add a "shoot" button to simulate damage
-- [x] Info on how to earn points
 - [ ] Implement Banner Ads (if setting enabled)
 
+- [x] Info on how to earn points
+- [x] Earn random bud points
 - [x] Health calc buckshot fix
 - [x] Placeholder images for helmets
 - [x] Resize helmet placeholder
@@ -44,8 +39,13 @@
     - [x] Enable Banner ads
 - [x] Language override
 - [x] Loyalty Leaderboard
+- [x] Sound Training Beta
+    - [x] Start test button
+    - [x] Commit Answer button shows results on screen
+    - [x] View will disappear - stop player
 
-## <u>v1.2</u>
+## <u>v1.2.0</u>
+- [ ] Armor - compatible attachments
 - [ ] Placeholder images for accessories
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle

@@ -104,8 +104,15 @@ class SoundTrainingViewController: BaseViewController {
         animationImageView.startAnimating()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        animationImageView.stopAnimating()
+        trainer.stopTest()
+    }
+
     @objc func showHelp() {
-        presentDefaultAlert(title: "sound_training_help_title".local(), message: "sound_training_help_message".local())
+        navigationController?.pushViewController(PostViewController(SoundLocalizationPost()), animated: true)
     }
 
     @objc func handleAction() {

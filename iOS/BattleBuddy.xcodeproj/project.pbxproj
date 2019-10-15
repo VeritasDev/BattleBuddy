@@ -121,6 +121,12 @@
 		EF1945A423510C31007D8242 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945A323510C31007D8242 /* SelectionViewController.swift */; };
 		EF1945A623510E4E007D8242 /* Options List.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945A523510E4E007D8242 /* Options List.swift */; };
 		EF1945A823510FED007D8242 /* DependencyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945A723510FED007D8242 /* DependencyUtils.swift */; };
+		EF1945AA23564555007D8242 /* CombatSimResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945A923564555007D8242 /* CombatSimResultsViewController.swift */; };
+		EF1945AC2356460E007D8242 /* CombatSimSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945AB2356460E007D8242 /* CombatSimSubjectCell.swift */; };
+		EF1945AE2356465C007D8242 /* TestSubjectAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945AD2356465C007D8242 /* TestSubjectAvatar.swift */; };
+		EF1945B0235646F9007D8242 /* CombatSimResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945AF235646F9007D8242 /* CombatSimResultView.swift */; };
+		EF1945B223565388007D8242 /* CombatSimSubjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945B123565388007D8242 /* CombatSimSubjectSummaryView.swift */; };
+		EF1945B423565A3B007D8242 /* CombatSimLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945B323565A3B007D8242 /* CombatSimLabels.swift */; };
 		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
 		EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };
@@ -363,6 +369,12 @@
 		EF1945A323510C31007D8242 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		EF1945A523510E4E007D8242 /* Options List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Options List.swift"; sourceTree = "<group>"; };
 		EF1945A723510FED007D8242 /* DependencyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyUtils.swift; sourceTree = "<group>"; };
+		EF1945A923564555007D8242 /* CombatSimResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimResultsViewController.swift; sourceTree = "<group>"; };
+		EF1945AB2356460E007D8242 /* CombatSimSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimSubjectCell.swift; sourceTree = "<group>"; };
+		EF1945AD2356465C007D8242 /* TestSubjectAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSubjectAvatar.swift; sourceTree = "<group>"; };
+		EF1945AF235646F9007D8242 /* CombatSimResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimResultView.swift; sourceTree = "<group>"; };
+		EF1945B123565388007D8242 /* CombatSimSubjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimSubjectSummaryView.swift; sourceTree = "<group>"; };
+		EF1945B323565A3B007D8242 /* CombatSimLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimLabels.swift; sourceTree = "<group>"; };
 		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -523,6 +535,7 @@
 				6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */,
 				EF166DA3232FF67500A9EF63 /* PostElementCell.swift */,
 				60EA7D2523331D5000EAD566 /* BaseTextfieldCell.swift */,
+				EF1945AB2356460E007D8242 /* CombatSimSubjectCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -811,6 +824,8 @@
 		27A263B722CF63010089830C /* Stack View */ = {
 			isa = PBXGroup;
 			children = (
+				EF1945B123565388007D8242 /* CombatSimSubjectSummaryView.swift */,
+				EF1945AF235646F9007D8242 /* CombatSimResultView.swift */,
 				27A263BC22CF852B0089830C /* BaseStackView.swift */,
 				27A7605C22D1776200861113 /* ItemPreviewCardView.swift */,
 				27A7608D22D230BE00861113 /* ItemPropertyRow.swift */,
@@ -828,6 +843,7 @@
 				27F09ADA22DE97CD00552C35 /* BarGraphView.swift */,
 				2753FE6B22F1C91300B20DAD /* CompatibleModsHeaderView.swift */,
 				27781CE122F72C34007134E2 /* SortableHeaderView.swift */,
+				EF1945B323565A3B007D8242 /* CombatSimLabels.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -951,6 +967,7 @@
 			children = (
 				60EA7D3D23494A0700EAD566 /* CombatSimViewController.swift */,
 				60EA7D3B23472F0900EAD566 /* CombatSimSubjectEditViewController.swift */,
+				EF1945A923564555007D8242 /* CombatSimResultsViewController.swift */,
 			);
 			path = "Combat Sim";
 			sourceTree = "<group>";
@@ -1074,6 +1091,7 @@
 			isa = PBXGroup;
 			children = (
 				EFF2FF4A22D3CB4E00BED024 /* BaseImageView.swift */,
+				EF1945AD2356465C007D8242 /* TestSubjectAvatar.swift */,
 			);
 			path = "Image View";
 			sourceTree = "<group>";
@@ -1403,6 +1421,7 @@
 				60EA7D2A23346CAB00EAD566 /* Armored.swift in Sources */,
 				EFFB10C022F1F76100EE6B6F /* VeritasCell.swift in Sources */,
 				27A4A90522E738C800C5618E /* BaseViewController.swift in Sources */,
+				EF1945AC2356460E007D8242 /* CombatSimSubjectCell.swift in Sources */,
 				27A4A90722E73FE400C5618E /* ItemPreviewConfiguration.swift in Sources */,
 				27A4A90322E738A300C5618E /* BaseItemPreviewViewController.swift in Sources */,
 				60EA7D37233BAF7C00EAD566 /* FirearmBuildViewController.swift in Sources */,
@@ -1415,6 +1434,7 @@
 				27090E2222D9FADA00D97320 /* BaseWebViewController.swift in Sources */,
 				EFF2FF4F22D4DF1F00BED024 /* UIViewUtilities.swift in Sources */,
 				27C0B17A23140061004BCE14 /* BodyZoneHealthButton.swift in Sources */,
+				EF1945B423565A3B007D8242 /* CombatSimLabels.swift in Sources */,
 				27A4A8FF22E6A29E00C5618E /* ThrowableDetailsConfiguration.swift in Sources */,
 				EFACFCA2234537F0003A3624 /* ModificationComparison.swift in Sources */,
 				27781CE422F733D9007134E2 /* SortableTableViewCell.swift in Sources */,
@@ -1422,6 +1442,7 @@
 				EF10CCE1232A9D5700E95A45 /* SoundTrainingViewController.swift in Sources */,
 				27F09ADB22DE97CD00552C35 /* BarGraphView.swift in Sources */,
 				60EA7D2623331D5000EAD566 /* BaseTextfieldCell.swift in Sources */,
+				EF1945B0235646F9007D8242 /* CombatSimResultView.swift in Sources */,
 				279B6C2E22CD4C15006735D3 /* ItemPreviewCell.swift in Sources */,
 				27954E3022A18470000FC0C6 /* AppDelegate.swift in Sources */,
 				EF831FF722E8D29900C6C138 /* ThrowableComparison.swift in Sources */,
@@ -1432,6 +1453,7 @@
 				2771D97A22D370A9009B99F1 /* PreviewMenuCell.swift in Sources */,
 				EFF2FF4622D3C5A200BED024 /* FirebaseManager.swift in Sources */,
 				60EA7D3C23472F0900EAD566 /* CombatSimSubjectEditViewController.swift in Sources */,
+				EF1945AE2356465C007D8242 /* TestSubjectAvatar.swift in Sources */,
 				27F09AD922DCA00D00552C35 /* Theme.swift in Sources */,
 				EFACFCA023453776003A3624 /* ModificationDetailsConfiguration.swift in Sources */,
 				278A76AF2307355E00E0C745 /* InAppPurchaseController.swift in Sources */,
@@ -1458,6 +1480,7 @@
 				27F09ADD22DF50A100552C35 /* MathUtils.swift in Sources */,
 				EFFB10C522F1FC3600EE6B6F /* WebKitUtils.swift in Sources */,
 				27BB49C022FC710B00070427 /* FeedbackManager.swift in Sources */,
+				EF1945B223565388007D8242 /* CombatSimSubjectSummaryView.swift in Sources */,
 				27F09ADF22DFE69100552C35 /* ArmorDetailsConfiguration.swift in Sources */,
 				60EA7D2F2339BA6000EAD566 /* FirearmBuildController.swift in Sources */,
 				EF7AF36B22C3E58100DA1A18 /* BaseStackViewController.swift in Sources */,
@@ -1498,6 +1521,7 @@
 				27793A6022A45B9100378FE3 /* DependencyManagerImpl.swift in Sources */,
 				EF166DA4232FF67500A9EF63 /* PostElementCell.swift in Sources */,
 				27793A6422A45C6F00378FE3 /* AlamofireManager.swift in Sources */,
+				EF1945AA23564555007D8242 /* CombatSimResultsViewController.swift in Sources */,
 				27BF991722C82725003F01C5 /* SectionHeaderView.swift in Sources */,
 				276D916A2310081D00CD61E0 /* BaseItem.swift in Sources */,
 				27A7609622D2F06C00861113 /* PreviewMenuCollectionView.swift in Sources */,

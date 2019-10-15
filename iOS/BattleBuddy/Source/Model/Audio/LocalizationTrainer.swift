@@ -21,7 +21,7 @@ class LocalizationTrainer {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .measurement)
             try AVAudioSession.sharedInstance().setActive(true)
             audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            audioPlayer?.numberOfLoops = 10
+            audioPlayer?.numberOfLoops = 25
         } catch let error {
             print(error.localizedDescription)
         }

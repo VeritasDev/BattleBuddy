@@ -23,7 +23,7 @@ class InmobiManager: NSObject, AdManager {
         super.init()
 
         IMSdk.initWithAccountID(accountId, consentDictionary: consentData)
-        //IMSdk.setLogLevel(IMSDKLogLevel.debug)
+        IMSdk.setLogLevel(IMSDKLogLevel.debug)
     }
 
     func loadVideoAd() {
