@@ -34,6 +34,10 @@ class LocalizationTrainer {
         audioPlayer?.play()
     }
 
+    public func stopTest() {
+        audioPlayer?.stop()
+    }
+
     public func reset() {
         audioPlayer?.stop()
         currentPanOffset = 0.0

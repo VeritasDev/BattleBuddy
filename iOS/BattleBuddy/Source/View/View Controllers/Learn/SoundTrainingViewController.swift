@@ -30,8 +30,14 @@ import UIKit
  * Swipe left or right, just like you would move your mouse, to simulate turning your character in game. Once you
  *
  */
+private enum SoundTrainerState {
+    case idle
+    case training
+}
+
 class SoundTrainingViewController: BaseViewController {
     let trainer = LocalizationTrainer()
+    fileprivate var state: SoundTrainerState = .idle
     lazy var gr: UIPanGestureRecognizer = { UIPanGestureRecognizer(target: self, action: #selector(handlePan)) }()
     var panOffset: CGFloat = 0.0
     let sensitivity: CGFloat = 0.1
@@ -48,12 +54,20 @@ class SoundTrainingViewController: BaseViewController {
         imageView.isUserInteractionEnabled = false
         return imageView
     }()
-    lazy var commitButton: UIButton = {
+    lazy var actionButton: UIButton = {
         let button = UIButton(type: .roundedRect)
-        button.setTitle("sound_training_commit".local(), for: .normal)
-        button.addTarget(self, action: #selector(commit), for: .touchUpInside)
+        button.setTitle("sound_training_start".local(), for: .normal)
+        button.addTarget(self, action: #selector(handleAction), for: .touchUpInside)
         button.applyDefaultStyle()
         return button
+    }()
+    let infoLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.italicSystemFont(ofSize: 28.0)
+        label.textColor = .white
+        label.numberOfLines = 0
+        return label
     }()
 
     override func viewDidLoad() {
@@ -64,11 +78,14 @@ class SoundTrainingViewController: BaseViewController {
         title = "sound_training".local();
 
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .play, target: self, action: #selector(play))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "help"), style: .plain, target: self, action: #selector(showHelp))
 
+        view.addSubview(infoLabel)
         view.addGestureRecognizer(gr)
         view.addSubview(animationImageView)
-        view.addSubview(commitButton)
+        view.addSubview(actionButton)
+
+        infoLabel.pinToTop(xInset: 20.0, yInset: 20.0, height: 30.0)
 
         animationImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -78,7 +95,7 @@ class SoundTrainingViewController: BaseViewController {
             animationImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             ])
 
-        commitButton.pinToBottom(xInset: 25.0, yInset: 20.0, height: 44.0)
+        actionButton.pinToBottom(xInset: 25.0, yInset: 30.0, height: 44.0)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -87,10 +104,42 @@ class SoundTrainingViewController: BaseViewController {
         animationImageView.startAnimating()
     }
 
-    @objc func play() {
+    @objc func showHelp() {
+        presentDefaultAlert(title: "sound_training_help_title".local(), message: "sound_training_help_message".local())
+    }
+
+    @objc func handleAction() {
+        switch state {
+        case .idle: startTest()
+        case .training: handleGuess()
+        }
+    }
+
+    func startTest() {
+        state = .training
         panOffset = 0.0
         animationImageView.transform = .identity
         trainer.startTest()
+        actionButton.setTitle("sound_training_commit".local(), for: .normal)
+        infoLabel.text = nil
+    }
+
+    func stopTest() {
+        state = .idle
+        trainer.stopTest()
+        actionButton.setTitle("sound_training_start".local(), for: .normal)
+    }
+
+    func handleGuess() {
+        let wasCorrect = trainer.commitAnswer()
+        if wasCorrect {
+            infoLabel.text = "sound_training_result_correct".local()
+            infoLabel.textColor = .green
+            stopTest()
+        } else {
+            infoLabel.text = "sound_training_result_wrong".local()
+            infoLabel.textColor = UIColor.init(white: 0.8, alpha: 1.0)
+        }
     }
 
     @objc func handlePan() {

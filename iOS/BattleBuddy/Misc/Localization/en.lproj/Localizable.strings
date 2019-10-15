@@ -348,7 +348,7 @@
 // Being A Bud
 "bud_points" = "Bud Points©";
 "bud_how_to_title" = "How To Be A Bud";
-"bud_how_to_subtitle" = "I developed Battle Buddy, in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies. As a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies. As a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
 
 "bud_how_to_title_1" = "Come Back Often";
 "bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
@@ -371,9 +371,6 @@
 "settings_save_error" = "Unable to save your settings, please try again later.";
 
 // MARK:- Menu Items
-"sound_training" = "Sound Training";
-"sound_training_post" = "";
-"sound_training_commit" = "Commit Answer";
 "main_menu_helmets" = "Helmets";
 "main_menu_mods" = "Modifications";
 "main_menu_combat_sim" = "Combat Simulator";
@@ -413,7 +410,16 @@
 "modificationSightSpecial" = "Sight (Special)";
 "modificationStock" = "Stock";
 
-// MARK: Calculators
+// MARK:- Sound Training
+"sound_training" = "Sound Training Beta";
+"sound_training_start" = "Start Training";
+"sound_training_commit" = "Guess";
+"sound_training_help_title" = "Sound Training Help";
+"sound_training_help_message" = "The sound training tool is currently in beta! Headphones are highly recommended for this feature.\n\nPress the Start Training button to begin, and a tone will play on regular intervals. This tone will be panned to a random direction, somewhere around your character on screen in a 360-degree radius.\n\nSlowly turn your character left and right by sliding your finger across the screen from left to right, just like you would with a trackpack or a mouse. You will hear the volume of the sound get louder in one ear as your character turns towards it.\n\nYour goal is to turn your character towards the source of the sound so they are facing as close as possible to the source of the sound. One you think you're done, press the Guess button to see if you're correct!";
+"sound_training_result_correct" = "Correct!";
+"sound_training_result_wrong" = "Keep Trying!";
+
+// MARK:- Calculators
 "simulate_gunshot_pen" = "Shoot\nw/ Penetration";
 "simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
 

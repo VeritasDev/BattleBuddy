@@ -13,10 +13,8 @@
 ## <u>v1.1</u>
 - [ ] Face shields
 - [ ] Japenese Localization
-- [ ] Firearms - compatible mods
 - [ ] Armor - compatible attachments
 - [ ] Combat Simulation
-- [ ] Placeholder images for accessories
 - [ ] Sound Training Beta
     - [ ] Start test button
     - [ ] Commit Answer button shows results on screen
@@ -46,9 +44,9 @@
     - [x] Enable Banner ads
 - [x] Language override
 - [x] Loyalty Leaderboard
-- [ ] Best Item Calculator
 
-### Maybe later?
+## <u>v1.2</u>
+- [ ] Placeholder images for accessories
 - [ ] Health Calculator Improvements
     - Add fragmentation toggle
     - Armor Zones
@@ -66,10 +64,10 @@
     - [ ] Other
     - [ ] Mods Detail Screen
     - [ ] Mods Comparison
-
-## <u>v1.2</u>
+- [ ] Firearms - compatible mods
 - [ ] Cell label font sizing
 - [ ] Stereo audio post writeup
+- [ ] Best Item Calculator
 - [ ] Real-time community stats updates
 - [ ] Arabic HP fraction order
 - [ ] Arabic Comparison Layout issue

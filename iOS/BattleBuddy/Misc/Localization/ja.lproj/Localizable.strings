@@ -347,7 +347,6 @@
 
 // MARK:- Menu Items
 "sound_training" = "Sound Training";
-"sound_training_post" = "";
 "sound_training_commit" = "Commit Answer";
 "main_menu_helmets" = "Helmets";
 "main_menu_mods" = "Modifications";
