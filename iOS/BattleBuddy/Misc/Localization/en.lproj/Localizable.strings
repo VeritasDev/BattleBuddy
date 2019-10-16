@@ -374,6 +374,7 @@
 "main_menu_helmets" = "Helmets";
 "main_menu_mods" = "Modifications";
 "main_menu_combat_sim" = "Combat Simulator";
+"main_menu_characters" = "Characters";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";
@@ -430,7 +431,7 @@
 "simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
 
 // MARK:- Combat Sim
-"combat_sim_subject_type" = "Subject Type";
+"combat_sim_subject_type" = "Character Type";
 "combat_sim_aim_setting" = "Aim Setting";
 "combat_sim_edit_subject" = "Edit Test Subject";
 "combat_sim_run" = "Run";
@@ -464,13 +465,6 @@
 "aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
 "aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
 "aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
-
-"person_type_pmc" = "PMC";
-"person_type_scav" = "Scav";
-"person_type_raider" = "Raider";
-"person_type_dealmaker" = "Reshala";
-"person_type_dealmaker_guard" = "Reshala Guard";
-"person_type_killa" = "Killa";
 
 "simulation_result_win" = "Win";
 "simulatoin_result_loss" = "Loss";

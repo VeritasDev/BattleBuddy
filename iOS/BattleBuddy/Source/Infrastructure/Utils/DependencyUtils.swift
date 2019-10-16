@@ -45,20 +45,6 @@ extension ChanceSetting: Localizable {
     }
 }
 
-extension PersonType: Localizable {
-    func local(short: Bool = false) -> String {
-        switch self {
-        case .pmc: return "person_type_pmc".local()
-        case .scav: return "person_type_scav".local()
-        case .raider: return "person_type_raider".local()
-        case .killa: return "person_type_killa".local()
-        case .dealmaker: return "person_type_dealmaker".local()
-        case .dealmakerFollower: return "person_type_dealmaker_guard".local()
-        }
-    }
-}
-
-
 extension CombatSimulationResult: Localizable {
     func local(short: Bool = false) -> String {
         switch self {
@@ -83,9 +69,8 @@ extension AimSetting: SelectionOption {
     }
 }
 
-extension PersonType: SelectionOption {
-    var optionTitle: String { return local() }
-
+extension Character: SelectionOption {
+    var optionTitle: String { return name }
     var optionSubtitle: String? { return nil }
 }
 
@@ -101,14 +86,16 @@ extension ChanceSetting: SelectionOption {
     }
 }
 
-extension PersonType {
-    var avatarImage: UIImage {
+extension BodyZoneType {
+    func getStringValue() -> String {
         switch self {
-        case .pmc: return UIImage(named: "avatar_pmc")!
-        case .scav: return UIImage(named: "avatar_scav")!
-        case .raider, .dealmakerFollower: return UIImage(named: "avatar_raider")!
-        case .killa: return UIImage(named: "avatar_killa")!
-        case .dealmaker: return UIImage(named: "avatar_dealmaker")!
+        case .head: return "head"
+        case .thorax: return "thorax"
+        case .stomach: return "stomach"
+        case .rightArm: return "right_arm"
+        case .leftArm: return "left_arm"
+        case .rightLeg: return "right_leg"
+        case .leftLeg: return "left_leg"
         }
     }
 }

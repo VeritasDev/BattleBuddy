@@ -24,12 +24,14 @@ enum FirebaseCollection: String {
     case global = "global"
     case users = "users"
     case compatibility = "compatibility"
+    case character = "character"
 }
 
 enum ImageSize: String {
     case medium = "_medium.jpg"
     case large = "_large.jpg"
     case full = "_full.jpg"
+    case avatar = "_avatar.png"
 }
 
 class FirebaseManager: NSObject {
@@ -45,6 +47,7 @@ class FirebaseManager: NSObject {
     private lazy var tradersImageRef = storageRef.child("traders")
     private lazy var throwableImageRef = storageRef.child("throwables")
     private lazy var meleeImageRef = storageRef.child("melee")
+    private lazy var characterImageRef = storageRef.child("character")
     var sessionDelegate: SessionDelegate
     var userMetadata: BBUser?
     lazy var nextAvailableReward: BudPointsReward = {
@@ -106,6 +109,11 @@ class FirebaseManager: NSObject {
         case .throwable: return throwableImageRef.child(imageId)
         case .melee: return meleeImageRef.child(imageId)
         }
+    }
+
+    func avatarImageReference(characterId: String) -> StorageReference {
+        let imageId = characterId + ImageSize.avatar.rawValue
+        return characterImageRef.child(imageId)
     }
 }
 
@@ -244,6 +252,21 @@ extension FirebaseManager: GlobalMetadataManager {
 }
 
 extension FirebaseManager: DatabaseManager {
+
+    // MARK:- Characters
+    func getCharacters(handler: @escaping (_: [Character]) -> Void) {
+        db.collection(FirebaseCollection.character.rawValue).order(by: "index").getDocuments() { (querySnapshot, err) in
+            if let error = err {
+                print("Failed to get all characters w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
+
+            guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) characters.")
+            handler(snapshot.getCharacters())
+        }
+    }
 
     // MARK:- Item Search
     func getAllItemsWithSearchQuery(_ query: String, handler: @escaping (_: [BaseItem]) -> Void) {
@@ -696,6 +719,7 @@ extension FirebaseManager: DatabaseManager {
 }
 
 extension QuerySnapshot {
+    func getCharacters() -> [Character] { return documents.compactMap{ Character(json: $0.data()) } }
     func getFirearms() -> [Firearm] { return documents.compactMap{ Firearm(json: $0.data()) } }
     func getArmor() -> [Armor] { return documents.compactMap{ Armor(json: $0.data()) } }
     func getAmmo() -> [Ammo] { return documents.compactMap{ Ammo(json: $0.data()) } }

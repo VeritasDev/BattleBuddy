@@ -10,16 +10,22 @@ import UIKit
 import BallisticsEngine
 
 class CombatSimViewController: StaticGroupedTableViewController {
-    let simulation = CombatSimulation()
+    let characters: [Character]
+    lazy var simulation: CombatSimulation = {
+        guard let defaultCharConfig = characters.first else { fatalError() }
+        return CombatSimulation(subject1Config: defaultCharConfig, subject2Config: defaultCharConfig)
+    }()
     lazy var resultsCell: CombatSimResultsCell = CombatSimResultsCell(simulation)
     lazy var resultsSection = GroupedTableViewSection(headerTitle: "combat_sim_tap_to_edit".local(), cells: [resultsCell])
 
-    lazy var subject1EditViewController = CombatSimSubjectEditViewController(self, person: simulation.subject1)
-    lazy var subject2EditViewController = CombatSimSubjectEditViewController(self, person: simulation.subject2)
+    lazy var subject1EditViewController = CombatSimSubjectEditViewController(self, characters: characters, person: simulation.subject1)
+    lazy var subject2EditViewController = CombatSimSubjectEditViewController(self, characters: characters, person: simulation.subject2)
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    override init() {
+    init(characters: [Character]) {
+        self.characters = characters
+
         super.init()
 
         resultsCell.subject1ResultView.subjectSummaryView.avatar.addTarget(self, action: #selector(editSubject1), for: .touchUpInside)
@@ -62,9 +68,11 @@ extension CombatSimViewController: SubjectEditViewControllerDelegate {
         switch subjectEditViewController {
         case subject1EditViewController:
             resultsCell.subject1ResultView.subjectSummaryView.subject = subject
+            resultsCell.result = nil
             simulation.subject1 = subject
         case subject2EditViewController:
             resultsCell.subject2ResultView.subjectSummaryView.subject = subject
+            resultsCell.result = nil
             simulation.subject2 = subject
         default: break
         }

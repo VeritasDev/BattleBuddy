@@ -15,6 +15,21 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         let calc = CombatCalculator()
         return calc
     }()
+    let characters: [Character]
+    var selectedCharacter: Character
+    let avatar = TestSubjectAvatar()
+    let characterNameLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.textColor = UIColor.Theme.primary
+        return label
+    }()
+
+    lazy var subjectTypeSelectionViewController: SelectionViewController = {
+        return SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characters)
+    }()
     var target: Person? {
         didSet {
             guard let newTarget = target else { return }
@@ -27,6 +42,9 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
             leftLegButton.zone = newTarget.leftLeg
             currentHealthLabel.text = String(Int(newTarget.totalCurrentHp))
             maxHealthLabel.text = "/ \(Int(newTarget.totalOriginalHp))"
+            avatar.alpha = (newTarget.totalCurrentHp == 0) ? 0.5 : 1.0
+            avatar.layer.borderColor = UIColor.Theme.primary.cgColor
+            characterNameLabel.text = newTarget.characterConfig.resolvedCharacterName
         }
     }
     let selectionCellId = "ItemSelectionCell"
@@ -89,9 +107,17 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    override init() {
-        self.target = Person()
+    init(characters: [Character]) {
+        self.characters = characters
+
+        guard let character = characters.first else { fatalError() }
+
+        self.selectedCharacter = character
+        self.target = Person(character)
+
         super.init()
+
+        self.avatar.characterId = self.target?.characterConfig.resolvedIdentifier
     }
 
     override func viewDidLoad() {
@@ -104,6 +130,8 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         view.backgroundColor = UIColor(white: 0.07, alpha: 1.0)
 
         view.addSubview(skeletonBackgroundImage)
+        view.addSubview(avatar)
+        view.addSubview(characterNameLabel)
         view.addSubview(headButton)
         view.addSubview(thoraxButton)
         view.addSubview(stomachButton)
@@ -127,6 +155,8 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         settingsButton.addTarget(self, action: #selector(showSettings), for: .touchUpInside)
         reloadButton.addTarget(self, action: #selector(reset), for: .touchUpInside)
 
+        avatar.translatesAutoresizingMaskIntoConstraints = false
+        characterNameLabel.translatesAutoresizingMaskIntoConstraints = false
         currentHealthLabel.translatesAutoresizingMaskIntoConstraints = false
         maxHealthLabel.translatesAutoresizingMaskIntoConstraints = false
         hpIconImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -134,6 +164,15 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         settingsButton.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
+            avatar.topAnchor.constraint(equalTo: view.topAnchor, constant: 15.0),
+            avatar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30.0),
+            avatar.heightAnchor.constraint(equalToConstant: 60.0),
+            avatar.widthAnchor.constraint(equalToConstant: 60.0),
+
+            characterNameLabel.topAnchor.constraint(equalTo: avatar.bottomAnchor, constant: 5.0),
+            characterNameLabel.centerXAnchor.constraint(equalTo: avatar.centerXAnchor),
+            characterNameLabel.widthAnchor.constraint(equalTo: avatar.widthAnchor),
+
             currentHealthLabel.topAnchor.constraint(equalTo: leftLegButton.bottomAnchor, constant: 20.0),
             currentHealthLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             hpIconImageView.trailingAnchor.constraint(equalTo: currentHealthLabel.leadingAnchor, constant: -10.0),
@@ -155,6 +194,8 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
             ])
 
         reset()
+
+        avatar.addTarget(self, action: #selector(showCharacterOptions), for: .touchUpInside)
     }
 
     override func viewWillLayoutSubviews() {
@@ -176,8 +217,14 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         leftLegButton.frame = CGRect(x: leftArmButton.frame.midX - buttonWidth, y: skeletonBackgroundImage.frame.size.height * 0.60, width: buttonWidth, height: buttonHeight)
     }
 
+    @objc func showCharacterOptions() {
+        subjectTypeSelectionViewController.currentSelection = selectedCharacter
+        navigationController?.pushViewController(subjectTypeSelectionViewController, animated: true)
+    }
+
     @objc func reset() {
-        target = Person()
+        guard let currentConfig = target?.characterConfig else { fatalError() }
+        target = Person(currentConfig)
     }
 
     @objc func showSettings() {
@@ -246,5 +293,19 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
 
     func selectionCancelled() {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension HealthCalcViewController: SelectionDelegate {
+    func selectionViewController(_ selectionViewController: SelectionViewController, didMakeSelection selection: SelectionOption) {
+        guard let selection = selection as? Character else { return }
+
+        selectedCharacter = selection
+        target?.characterConfig = selection
+        avatar.characterId = self.target?.characterConfig.resolvedIdentifier
+
+        reset()
+
+        navigationController?.popViewController(animated: true)
     }
 }

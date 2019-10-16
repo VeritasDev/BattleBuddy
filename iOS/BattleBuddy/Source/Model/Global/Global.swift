@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import BallisticsEngine
 
 struct AmmoMetadata {
     let caliber: String

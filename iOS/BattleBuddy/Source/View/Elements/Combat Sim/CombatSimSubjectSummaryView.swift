@@ -10,19 +10,14 @@ import Foundation
 import BallisticsEngine
 
 class CombatSimSubjectSummaryView: BaseStackView {
-    var individualResult: CombatSimulationIndividualResult? {
-        didSet {
-            guard let individualResult = individualResult else { return }
-            avatar.result = individualResult.result
-        }
-    }
+    var individualResult: CombatSimulationIndividualResult? { didSet { avatar.result = individualResult?.result } }
     var subject: Person? {
         didSet {
             guard let subject = subject else { return }
 
             let none = "common_none".local()
-            avatar.personType = subject.type
-            nameLabel.text = subject.type.local()
+            avatar.characterId = subject.characterConfig.resolvedIdentifier
+            nameLabel.text = subject.characterConfig.resolvedCharacterName
             firearmLabel.text = subject.firearmConfig.name
             ammoLabel.text = subject.firearmConfig.ammoConfiguration.isEmpty ? none : subject.firearmConfig.ammoConfiguration.compactMap{$0.resolvedAmmoName}.joined(separator: ", ")
             armorLabel.text = subject.equippedArmor.isEmpty ? none : subject.equippedArmor.compactMap{$0.resolvedArmorName}.joined(separator: ", ")

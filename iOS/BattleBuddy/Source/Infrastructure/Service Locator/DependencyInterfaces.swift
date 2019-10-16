@@ -60,6 +60,8 @@ protocol AccountManager {
 // MARK: - Database
 
 protocol DatabaseManager {
+    func getCharacters(handler: @escaping (_: [Character]) -> Void)
+
     func getAllItemsWithSearchQuery(_ query: String, handler: @escaping (_: [BaseItem]) -> Void)
 
     func getAllFirearms(handler: @escaping (_: [Firearm]) -> Void)

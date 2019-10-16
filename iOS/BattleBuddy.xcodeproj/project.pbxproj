@@ -126,6 +126,7 @@
 		EF1945B0235646F9007D8242 /* CombatSimIndividualResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945AF235646F9007D8242 /* CombatSimIndividualResultView.swift */; };
 		EF1945B223565388007D8242 /* CombatSimSubjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945B123565388007D8242 /* CombatSimSubjectSummaryView.swift */; };
 		EF1945B423565A3B007D8242 /* CombatSimLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945B323565A3B007D8242 /* CombatSimLabels.swift */; };
+		EF1945B7235781A9007D8242 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1945B6235781A9007D8242 /* Character.swift */; };
 		EF4F1FC023215EEF00F20CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */; };
 		EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */; };
 		EF7AF35F22C2A7F800DA1A18 /* Armor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7AF35E22C2A7F800DA1A18 /* Armor.swift */; };
@@ -373,6 +374,7 @@
 		EF1945AF235646F9007D8242 /* CombatSimIndividualResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimIndividualResultView.swift; sourceTree = "<group>"; };
 		EF1945B123565388007D8242 /* CombatSimSubjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimSubjectSummaryView.swift; sourceTree = "<group>"; };
 		EF1945B323565A3B007D8242 /* CombatSimLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimLabels.swift; sourceTree = "<group>"; };
+		EF1945B6235781A9007D8242 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -723,6 +725,7 @@
 		27793A4122A434A600378FE3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF1945B52357819A007D8242 /* Character */,
 				60837423232BC24300AA9D29 /* Global */,
 				60837420232BC0F000AA9D29 /* User */,
 				EF10CCDA232A98FB00E95A45 /* Audio */,
@@ -1001,6 +1004,14 @@
 				EF10CCDE232A9BE800E95A45 /* c6.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		EF1945B52357819A007D8242 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				EF1945B6235781A9007D8242 /* Character.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 		EF7AF36422C2AA7900DA1A18 /* Utils */ = {
@@ -1496,6 +1507,7 @@
 				27C0B178231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift in Sources */,
 				27BB49BA22F9B34400070427 /* PreferencesManager.swift in Sources */,
 				EF1945A623510E4E007D8242 /* Options List.swift in Sources */,
+				EF1945B7235781A9007D8242 /* Character.swift in Sources */,
 				27F2DDC722C245DA00BD9779 /* ItemsMenuViewController.swift in Sources */,
 				60EA7D31233A651200EAD566 /* Modification.swift in Sources */,
 				EF962C7722FB3488009BB397 /* UIKitUtils.swift in Sources */,

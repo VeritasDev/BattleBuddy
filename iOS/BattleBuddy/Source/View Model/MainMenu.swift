@@ -93,8 +93,10 @@ struct MainMenuItem {
             handler(PostViewController(BallisticsPost()))
             return
         case .healthCalc:
-            handler(HealthCalcViewController())
-            return
+            DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
+                handler(HealthCalcViewController(characters: characters))
+                return
+            }
         case .penChanceCalc:
             handler(PenChanceCalcViewController())
             return
@@ -105,8 +107,10 @@ struct MainMenuItem {
             handler(PostViewController(BudPost()))
             return
         case .combatSim:
-            handler(CombatSimViewController())
-            return
+            DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
+                handler(CombatSimViewController(characters: characters))
+                return
+            }
         case .throwables:
             DependencyManagerImpl.shared.databaseManager().getAllThrowables { throwables in
                 handler(BaseItemPreviewViewController(delegate: nil, config: ThrowablesPreviewConfiguration(items: throwables)))

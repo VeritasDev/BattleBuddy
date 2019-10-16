@@ -16,10 +16,8 @@ class CombatSimResultsCell: BaseTableViewCell {
 
     var result: CombatSimulationResultSummary? {
         didSet {
-            guard let result = result else { return }
-
-            subject1ResultView.individualResult = result.subject1Result
-            subject2ResultView.individualResult = result.subject2Result
+            subject1ResultView.individualResult = result?.subject1Result
+            subject2ResultView.individualResult = result?.subject2Result
         }
     }
 

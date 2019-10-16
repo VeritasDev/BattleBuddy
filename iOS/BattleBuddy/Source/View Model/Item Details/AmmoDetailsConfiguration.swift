@@ -141,9 +141,15 @@ class AmmoDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewD
             penChanceCalcVC.ammo = ammo
             delegate?.showViewController(viewController: penChanceCalcVC)
         case damageCalcCell:
-            let damageCalcVC = HealthCalcViewController()
-            damageCalcVC.ammo = ammo
-            delegate?.showViewController(viewController: damageCalcVC)
+            self.delegate?.showLoading(show: true)
+
+            dbManager.getCharacters { characters in
+                self.delegate?.showLoading(show: false)
+
+                let damageCalcVC = HealthCalcViewController(characters: characters)
+                damageCalcVC.ammo = self.ammo
+                self.delegate?.showViewController(viewController: damageCalcVC)
+            }
         default:
             fatalError()
         }

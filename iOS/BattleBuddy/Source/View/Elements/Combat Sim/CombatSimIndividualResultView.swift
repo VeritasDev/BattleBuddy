@@ -12,19 +12,24 @@ import BallisticsEngine
 class CombatSimIndividualResultView: BaseStackView {
     var individualResult: CombatSimulationIndividualResult? {
         didSet {
-            guard let individualResult = individualResult else { return }
+                resultLabel.text = individualResult?.result.local()
 
-            resultLabel.text = individualResult.result.local()
+                switch individualResult?.result {
+                case .win?: resultLabel.textColor = .green
+                case .loss?: resultLabel.textColor = .red
+                case .tie?: resultLabel.textColor = .orange
+                default: break
+                }
 
-            switch individualResult.result {
-            case .win: resultLabel.textColor = .green
-            case .loss: resultLabel.textColor = .red
-            case .tie: resultLabel.textColor = .white
+            if let result = individualResult {
+                winPercentLabel.text = String(result.winPercent) + "%"
+                timeToKillLabel.text = String(result.avtTtk) + "seconds_abbr".local()
+                shotsToKillLabel.text = String(result.avgStk)
+            } else {
+                winPercentLabel.text = nil
+                timeToKillLabel.text = nil
+                shotsToKillLabel.text = nil
             }
-
-            winPercentLabel.text = String(individualResult.winPercent) + "%"
-            timeToKillLabel.text = String(individualResult.avtTtk) + "seconds_abbr".local()
-            shotsToKillLabel.text = String(individualResult.avgStk)
 
             subjectSummaryView.individualResult = individualResult
         }
