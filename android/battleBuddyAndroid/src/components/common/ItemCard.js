@@ -1,8 +1,7 @@
 import React from 'react';
-import styled, {css} from 'styled-components/native';
+import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
-import useStorageImage from '../../hooks/useStorageImage';
-import ImageType from '../../constants/ImageType';
+import StorageImage from './StorageImage';
 
 const StyledItemCard = styled.ImageBackground`
   /* prettier-ignore */
@@ -13,20 +12,6 @@ const StyledItemCard = styled.ImageBackground`
   overflow: hidden;
   display: flex;
   margin-bottom: 20px;
-
-  /* Conditions for positioning texts by textPosition string. */
-  /* e.g.: textProps="bottom left" will include both conditions. */
-  ${(props) =>
-    props.textPosition.includes('right') &&
-    css`
-      align-items: flex-end;
-    `}
-
-  ${(props) =>
-    props.textPosition.includes('bottom') &&
-    css`
-      justify-content: flex-end;
-    `}
 `;
 
 // Increased text-size some
@@ -42,12 +27,10 @@ const Text = styled.Text`
 `;
 
 const ItemCard = ({shortName, ...props}) => {
-  const {image, placeholder} = useStorageImage(props, ImageType.medium);
-
   return (
-    <StyledItemCard source={image ? image : placeholder} {...props}>
+    <StorageImage element={StyledItemCard} doc={props}>
       <Text>{shortName}</Text>
-    </StyledItemCard>
+    </StorageImage>
   );
 };
 

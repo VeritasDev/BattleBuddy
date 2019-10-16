@@ -64,10 +64,10 @@ const useStorageImage = (doc, size) => {
       placeholder = placeholderImages[doc._kind][doc.type];
       break;
     case 'grenade':
-      placeholder = require('../../assets/images/placeholders/melee_placeholders/placeholder_melee.png');
+      placeholder = require('../../assets/images/placeholders/throwable_placeholders/placeholder_throwable.png');
       break;
     case 'melee':
-      placeholder = require('../../assets/images/placeholders/throwable_placeholders/placeholder_throwable.png');
+      placeholder = require('../../assets/images/placeholders/melee_placeholders/placeholder_melee.png');
       break;
   }
 

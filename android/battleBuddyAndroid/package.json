@@ -1,5 +1,10 @@
 {
   "name": "battle-buddy",
+  "description": "Battle Buddy React-Native",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VeritasDev/BattleBuddy"
+  },
   "version": "0.0.1",
   "scripts": {
     "android": "react-native run-android  ",

@@ -153,10 +153,17 @@ export class DatabaseManager extends FirebaseManager {
    */
   async _getAllItemsByCollection(collection) {
     try {
-      const snapshot = await this.db
-        .collection(collection)
-        .get()
-        .then((x) => x.docs.map((d) => d.data()));
+      const snapshot =
+        collection === 'armor'
+          ? await this.db
+              .collection(collection)
+              .where('type', '==', 'body')
+              .get()
+              .then((x) => x.docs.map((d) => d.data()))
+          : await this.db
+              .collection(collection)
+              .get()
+              .then((x) => x.docs.map((d) => d.data()));
 
       console.log(
         `Successfully fetched ${snapshot.length} documents of type "${collection}".`
@@ -302,7 +309,6 @@ export class DatabaseManager extends FirebaseManager {
   }
 
   async getAllArmor() {
-    // return this._getAllItemsByCollection(ItemType.armor);
     try {
       const snapshot = await this.db
         .collection('armor')

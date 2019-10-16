@@ -29,10 +29,7 @@ const HorizontalCardBar = ({title, items, navigation}) => {
       <Text>{localeString(title)}</Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {items.map((item) => (
-          <TouchableOpacity
-            onPress={() => onPressHandler(item)}
-            key={item.name}
-          >
+          <TouchableOpacity onPress={() => onPressHandler(item)} key={item._id}>
             <SmallCard {...item} />
           </TouchableOpacity>
         ))}
