@@ -43,6 +43,7 @@ const DetailSection = ({section}) => (
           bottomDivider
           chevron={!row.hideChevron}
           containerStyle={{backgroundColor: 'black'}}
+          onPress={row.onPress}
         />
       );
     })}

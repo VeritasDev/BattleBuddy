@@ -30,6 +30,7 @@ const Description = styled(Text)`
 
 const ItemDetailScreen = ({navigation}) => {
   const {item, type} = navigation.state.params;
+
   const typeToComponent = {
     firearm: FirearmDetail,
     armor: ArmorDetail,

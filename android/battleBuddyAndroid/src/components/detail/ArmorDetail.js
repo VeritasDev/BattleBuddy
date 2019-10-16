@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import localeString from '../../utils/localeString';
 import DetailSection from './DetailSection';
+import {useNavigation} from 'react-navigation-hooks';
+import ItemType from '../../constants/ItemType';
 
 const ArmorDetail = ({item}) => {
+  const {navigate} = useNavigation();
+
   const data = [
     {
       title: 'Properties',
@@ -51,7 +55,12 @@ const ArmorDetail = ({item}) => {
       title: 'Explore',
       rows: [
         {
-          key: 'Compare'
+          key: 'Compare',
+          onPress: () =>
+            navigate('SelectCompare', {
+              selectedItem: item,
+              itemType: ItemType.armor
+            })
         },
         {
           key: 'Penetration Chance'

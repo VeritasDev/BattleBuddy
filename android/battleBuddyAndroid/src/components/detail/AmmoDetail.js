@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DetailSection from './DetailSection';
+import {useNavigation} from 'react-navigation-hooks';
+import ItemType from '../../constants/ItemType';
 
 const AmmoDetail = ({item}) => {
+  const {navigate} = useNavigation();
+
   const data = [
     {
       title: 'Properties',
@@ -29,7 +33,14 @@ const AmmoDetail = ({item}) => {
     {
       title: 'Explore',
       rows: [
-        {key: 'Compare'},
+        {
+          key: 'Compare',
+          onPress: () =>
+            navigate('SelectCompare', {
+              selectedItem: item,
+              itemType: ItemType.ammo
+            })
+        },
         {key: 'Penetration Chance'},
         {key: 'Damage Calculator'}
       ]

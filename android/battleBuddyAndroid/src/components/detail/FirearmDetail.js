@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import localeString from '../../utils/localeString';
 import DetailSection from './DetailSection';
+import {useNavigation} from 'react-navigation-hooks';
+import ItemType from '../../constants/ItemType';
 
 const FirearmDetail = ({item}) => {
+  const {navigate} = useNavigation();
+
   const data = [
     {
       title: 'Properties',
@@ -31,7 +35,14 @@ const FirearmDetail = ({item}) => {
           value: `${item.effectiveDist}m`,
           hideChevron: true
         },
-        {key: 'Compare Performance'}
+        {
+          key: 'Compare Performance',
+          onPress: () =>
+            navigate('SelectCompare', {
+              selectedItem: item,
+              itemType: ItemType.firearm
+            })
+        }
       ]
     }
   ];
