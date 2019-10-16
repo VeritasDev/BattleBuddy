@@ -10,29 +10,25 @@ import Foundation
 import BallisticsEngine
 
 class CombatSimSubjectSummaryView: BaseStackView {
-    var result: CombatSimulationResultSummary? { didSet { avatar.result = result?.result } }
+    var individualResult: CombatSimulationIndividualResult? {
+        didSet {
+            guard let individualResult = individualResult else { return }
+            avatar.result = individualResult.result
+        }
+    }
     var subject: Person? {
         didSet {
             guard let subject = subject else { return }
 
+            let none = "common_none".local()
             avatar.personType = subject.type
             nameLabel.text = subject.type.local()
             firearmLabel.text = subject.firearmConfig.name
-            ammoLabel.text = subject.firearmConfig.ammoConfiguration.isEmpty ? "common_none".local() : subject.firearmConfig.ammoConfiguration.compactMap{$0.resolvedAmmoName}.joined(separator: ", ")
-            armorLabel.text = subject.equippedArmor.isEmpty ? "common_none".local() : subject.equippedArmor.compactMap{$0.resolvedArmorName}.joined(separator: ", ")
+            ammoLabel.text = subject.firearmConfig.ammoConfiguration.isEmpty ? none : subject.firearmConfig.ammoConfiguration.compactMap{$0.resolvedAmmoName}.joined(separator: ", ")
+            armorLabel.text = subject.equippedArmor.isEmpty ? none : subject.equippedArmor.compactMap{$0.resolvedArmorName}.joined(separator: ", ")
             aimLabel.text = subject.aim.local()
         }
     }
-    var isSubject1: Bool = false { didSet { subjectNumberLabel.text = isSubject1 ? "combat_sim_subject_1".local() : "combat_sim_subject_2".local() } }
-
-    let subjectNumberLabel: UILabel = {
-        let label =  UILabel()
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20.0, weight: .medium)
-        label.textColor = .white
-        return label
-    }()
     let avatar: TestSubjectAvatar = TestSubjectAvatar()
     let nameLabel: UILabel = {
         let label =  UILabel()
@@ -60,7 +56,6 @@ class CombatSimSubjectSummaryView: BaseStackView {
     init() {
         super.init(axis: .vertical, alignment: .center)
 
-        addArrangedSubview(subjectNumberLabel)
         addArrangedSubview(avatar)
         addArrangedSubview(nameLabel)
 

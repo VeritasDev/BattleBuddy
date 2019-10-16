@@ -9,8 +9,8 @@
 import UIKit
 import BallisticsEngine
 
-class TestSubjectAvatar: UIImageView {
-    var personType: PersonType? { didSet { image = personType?.avatarImage } }
+class TestSubjectAvatar: UIButton {
+    var personType: PersonType? { didSet { setImage(personType?.avatarImage, for: .normal) } }
     var result: CombatSimulationResult? {
         didSet {
             switch result {

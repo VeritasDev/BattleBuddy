@@ -10,29 +10,20 @@ import UIKit
 import BallisticsEngine
 
 class CombatSimViewController: StaticGroupedTableViewController {
-    let subject1Cell: CombatSimSubjectCell = CombatSimSubjectCell()
-    let subject2Cell: CombatSimSubjectCell = CombatSimSubjectCell()
-    var subject1Section = GroupedTableViewSection(headerTitle: "combat_sim_subject_1".local(), cells: [])
-    var subject2Section = GroupedTableViewSection(headerTitle: "combat_sim_subject_2".local(), cells: [])
     let simulation = CombatSimulation()
+    lazy var resultsCell: CombatSimResultsCell = CombatSimResultsCell(simulation)
+    lazy var resultsSection = GroupedTableViewSection(headerTitle: "combat_sim_tap_to_edit".local(), cells: [resultsCell])
 
-    lazy var subject1EditViewController: CombatSimSubjectEditViewController = {
-        return CombatSimSubjectEditViewController(self, person: simulation.subject1)
-    }()
-    lazy var subject2EditViewController: CombatSimSubjectEditViewController = {
-        return CombatSimSubjectEditViewController(self, person: simulation.subject2)
-    }()
+    lazy var subject1EditViewController = CombatSimSubjectEditViewController(self, person: simulation.subject1)
+    lazy var subject2EditViewController = CombatSimSubjectEditViewController(self, person: simulation.subject2)
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
     override init() {
         super.init()
 
-        subject1Cell.person = simulation.subject1
-        subject2Cell.person = simulation.subject2
-
-        subject1Section.cells = [subject1Cell]
-        subject2Section.cells = [subject2Cell]
+        resultsCell.subject1ResultView.subjectSummaryView.avatar.addTarget(self, action: #selector(editSubject1), for: .touchUpInside)
+        resultsCell.subject2ResultView.subjectSummaryView.avatar.addTarget(self, action: #selector(editSubject2), for: .touchUpInside)
     }
 
     override func viewDidLoad() {
@@ -43,26 +34,26 @@ class CombatSimViewController: StaticGroupedTableViewController {
     }
 
     override func generateSections() -> [GroupedTableViewSection] {
-        return [subject1Section, subject2Section]
+        return [resultsSection]
     }
 
     @objc func runSim() {
         showLoading()
 
-        simulation.runSimulation { (person1Result, person2Result) in
+        simulation.runSimulation { result in
             self.hideLoading()
 
-            let resultsNC = BaseNavigationController(rootViewController: CombatSimResultsViewController(result: (person1Result, person2Result), subject1: self.simulation.subject1, subject2: self.simulation.subject2))
-            self.navigationController?.present(resultsNC, animated: true, completion: nil)
+            self.resultsCell.result = result
+            self.tableView.reloadData()
         }
     }
 
-    override func handleCellSelected(_ cell: BaseTableViewCell) {
-        switch cell {
-        case subject1Cell: navigationController?.pushViewController(subject1EditViewController, animated: true)
-        case subject2Cell: navigationController?.pushViewController(subject2EditViewController, animated: true)
-        default: fatalError()
-        }
+    @objc func editSubject1() {
+        navigationController?.pushViewController(subject1EditViewController, animated: true)
+    }
+
+    @objc func editSubject2() {
+        navigationController?.pushViewController(subject2EditViewController, animated: true)
     }
 }
 
@@ -70,10 +61,10 @@ extension CombatSimViewController: SubjectEditViewControllerDelegate {
     func combatSimSubjectEditViewController(_ subjectEditViewController: CombatSimSubjectEditViewController, didFinishEditing subject: Person) {
         switch subjectEditViewController {
         case subject1EditViewController:
-            subject1Cell.person = subject
+            resultsCell.subject1ResultView.subjectSummaryView.subject = subject
             simulation.subject1 = subject
         case subject2EditViewController:
-            subject2Cell.person = subject
+            resultsCell.subject2ResultView.subjectSummaryView.subject = subject
             simulation.subject2 = subject
         default: break
         }
