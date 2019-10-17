@@ -14,6 +14,7 @@
 - [ ] Face shields
 - [ ] Japenese Localization
 - [ ] Combat Simulation
+    - [ ] Randomize build feature 
 - [ ] Penetration Calculator Improvements
     - [ ] Helmets/face shields/mods
     - [x] Add a "shoot" button to simulate damage

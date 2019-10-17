@@ -103,7 +103,7 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
         subjectTypeCell.detailTextLabel?.text = subject.characterConfig.resolvedCharacterName
         aimCell.detailTextLabel?.text = subject.aim.local()
         armorCell.detailTextLabel?.text = subject.equippedArmor.isEmpty ? "common_none".local() : subject.equippedArmor.compactMap{$0.resolvedArmorName}.joined(separator: ", ")
-        firearmCell.detailTextLabel?.text = subject.firearmConfig.name
+        firearmCell.detailTextLabel?.text = subject.firearmConfig.getSummary()
     }
 
     func showArmorOptions() {
@@ -153,9 +153,11 @@ extension CombatSimSubjectEditViewController {
             aimSettingSelectionViewController.currentSelection = subject.aim
             navigationController?.pushViewController(aimSettingSelectionViewController, animated: true)
         case firearmCell:
+            let firearmEditVC = CombatSimFirearmEditViewController()
+            navigationController?.pushViewController(firearmEditVC, animated: true)
             break
         case armorCell: showArmorOptions()
-        case armorCell: showAmmoOptions()
+        case ammoCell: showAmmoOptions()
         default: break
         }
     }
@@ -185,10 +187,10 @@ extension CombatSimSubjectEditViewController: SortableItemSelectionDelegate {
     func itemSelected(_ selection: Sortable) {
         switch selection {
         case let selectedArmor as Armor: subject.equippedArmor = [selectedArmor]
-        case let selectedAmmo as Ammo: subject.firearmConfig.ammoConfiguration = [selectedAmmo]
         default: fatalError()
         }
 
+        updateCells()
         navigationController?.popViewController(animated: true)
     }
 

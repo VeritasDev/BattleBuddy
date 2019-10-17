@@ -443,6 +443,7 @@
 "combat_sim_results_win_percent" = "Win Percent";
 "combat_sim_settings" = "Simulation Settings";
 "combat_sim_tap_to_edit" = "Tap Image To Edit Test Subject";
+"combat_sim_edit_firearm" = "Edit Firearm";
 
 "combat_sim_pen_setting" = "Penetration Setting";
 "combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
