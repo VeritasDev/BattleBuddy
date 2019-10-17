@@ -9,7 +9,7 @@
 import Foundation
 import BallisticsEngine
 
-struct Character {
+class Character {
     var json: [String: Any]
     var id: String
     var name: String
@@ -31,9 +31,51 @@ struct Character {
     }
 }
 
-extension Character: CharacterConfig {
-    var resolvedIdentifier: String { get { return id } }
-    var resolvedCharacterName: String { get { return name } }
+class SimulationCharacter: Character {
+    var firearm: SimulationFirearm?
+    var armor: [SimulationArmor] = []
+    var aim: AimSetting = .centerOfMass
+
+    override init?(json: [String : Any]) {
+        super.init(json: json)
+    }
+
+    func firearmSummary() -> String {
+        if let firearm = firearm {
+            if firearm.ammoConfig.isEmpty {
+                return firearm.displayNameShort
+            } else {
+                let ammoConfig = ammoSummary()
+                return firearm.displayNameShort.appending(", ").appending(ammoConfig)
+            }
+        } else {
+            return "common_none".local()
+        }
+    }
+
+    func ammoSummary() -> String {
+        if let firearm = firearm, !firearm.ammoConfig.isEmpty {
+            let separator = ", "
+            return firearm.ammoConfig.compactMap{$0.displayNameShort}.joined(separator: separator)
+        } else {
+            return "common_none".local()
+        }
+    }
+
+    func armorSummary() -> String {
+        return armor.isEmpty ? "common_none".local() : armor.compactMap{$0.displayNameShort}.joined(separator: ", ")
+    }
+}
+
+extension SimulationCharacter: CalculableCharacter {
+    var resolvedArmor: [CalculableArmor] {
+        get { return armor }
+        set(newValue) { for (index, newArmor) in newValue.enumerated() { armor[index].currentDurability = Int(newArmor.resolvedCurrentDurability) } }
+    }
+
+    var resolvedFirearm: CalculableFirearm? { return firearm }
+    var resolvedAimSetting: AimSetting { return aim }
+    
     var resolvedHealthMap: [BodyZoneType : Double] {
         get {
             var convertedMap: [BodyZoneType : Double]  = [:]

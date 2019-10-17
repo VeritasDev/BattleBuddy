@@ -49,8 +49,8 @@ class ArmorSortConfig: SortConfiguration {
             switch (self.ascending, self.currentSortParam.identifier) {
             case (true, ArmorSortableParam.name.rawValue): return $0.displayNameShort < $1.displayNameShort
             case (false, ArmorSortableParam.name.rawValue): return $0.displayNameShort > $1.displayNameShort
-            case (true, ArmorSortableParam.armorClass.rawValue): return $0.resolvedArmorClass < $1.resolvedArmorClass
-            case (false, ArmorSortableParam.armorClass.rawValue): return $0.resolvedArmorClass > $1.resolvedArmorClass
+            case (true, ArmorSortableParam.armorClass.rawValue): return $0.armorClass.rawValue < $1.armorClass.rawValue
+            case (false, ArmorSortableParam.armorClass.rawValue): return $0.armorClass.rawValue > $1.armorClass.rawValue
             case (true, ArmorSortableParam.maxDurability.rawValue): return $0.maxDurability < $1.maxDurability
             case (false, ArmorSortableParam.maxDurability.rawValue): return $0.maxDurability > $1.maxDurability
             default: fatalError()

@@ -9,7 +9,7 @@
 import Foundation
 import BallisticsEngine
 
-struct Armor: BaseItem, Armored {
+class Armor: BaseItem, Armored {
     let json: [String : Any]
     let type: ItemType
     var maxDurability: Int
@@ -21,25 +21,25 @@ struct Armor: BaseItem, Armored {
     var penalties: Penalties { get { return Penalties(ergonomics: ergoPenalty, turnSpeed: turnSpeedPenalty, movementSpeed:  movementSpeedPenalty, hearing: hearingPenalty) } }
     var armorZoneConfig: ArmorZonesConfig { get { return ArmorZonesConfig(topHead: protectsTopHead, eyes: protectsEyes, jaws: protectsJaws, ears: protectsEars, nape: protectsNape, chest: protectsChest, stomach: protectsStomach, leftArm: protectsLeftArm, rightArm: protectsRightArm, leftLeg: protectsLeftLeg, rightLeg: protectsRightLeg) } }
 
-    private var bluntThroughput: Float
-    private var ergoPenalty: Int
-    private var turnSpeedPenalty: Int
-    private var movementSpeedPenalty: Int
-    private var hearingPenalty: HearingPenalty
-    private var richochetX: Float
-    private var richochetY: Float
-    private var richochetZ: Float
-    private var protectsTopHead: Bool
-    private var protectsEyes: Bool
-    private var protectsJaws: Bool
-    private var protectsEars: Bool
-    private var protectsNape: Bool
-    private var protectsChest: Bool
-    private var protectsStomach: Bool
-    private var protectsLeftArm: Bool
-    private var protectsRightArm: Bool
-    private var protectsLeftLeg: Bool
-    private var protectsRightLeg: Bool
+    fileprivate var bluntThroughput: Float
+    fileprivate var ergoPenalty: Int
+    fileprivate var turnSpeedPenalty: Int
+    fileprivate var movementSpeedPenalty: Int
+    fileprivate var hearingPenalty: HearingPenalty
+    fileprivate var richochetX: Float
+    fileprivate var richochetY: Float
+    fileprivate var richochetZ: Float
+    fileprivate var protectsTopHead: Bool
+    fileprivate var protectsEyes: Bool
+    fileprivate var protectsJaws: Bool
+    fileprivate var protectsEars: Bool
+    fileprivate var protectsNape: Bool
+    fileprivate var protectsChest: Bool
+    fileprivate var protectsStomach: Bool
+    fileprivate var protectsLeftArm: Bool
+    fileprivate var protectsRightArm: Bool
+    fileprivate var protectsLeftLeg: Bool
+    fileprivate var protectsRightLeg: Bool
 
     init?(json: [String: Any]) {
         self.json = json
@@ -134,8 +134,14 @@ struct Armor: BaseItem, Armored {
     }
 }
 
+class SimulationArmor: Armor {
+    override init?(json: [String: Any]) {
+        super.init(json: json)
+    }
+}
+
 // MARK: Calculable Armor
-extension Armor: CalculableArmor {
+extension SimulationArmor: CalculableArmor {
     var resolvedArmorName: String { get { return displayName } }
     var resolvedArmorClass: Int { get { return armorClass.rawValue } }
     var resolvedCurrentDurability: Double {

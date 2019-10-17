@@ -52,8 +52,8 @@ class AmmoDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewD
         penetrationCell.detailTextLabel?.text = String(ammo.penetration)
 
         if ammo.projectileCount > 1 {
-            damageCell.detailTextLabel?.text = "\(Int(ammo.resolvedDamage)) (\(ammo.damage)x\(ammo.projectileCount))"
-            armorDamageCell.detailTextLabel?.text = "\(Int(ammo.resolvedArmorDamage)) (\(ammo.armorDamage)x\(ammo.projectileCount))"
+            damageCell.detailTextLabel?.text = "\(Int(ammo.totalDamage)) (\(ammo.damage)x\(ammo.projectileCount))"
+            armorDamageCell.detailTextLabel?.text = "\(Int(ammo.totalArmorDamage)) (\(ammo.armorDamage)x\(ammo.projectileCount))"
         } else {
             damageCell.detailTextLabel?.text = String(ammo.damage)
             armorDamageCell.detailTextLabel?.text = String(ammo.armorDamage)
@@ -138,7 +138,7 @@ class AmmoDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewD
 
         case penChanceCalcCell:
             let penChanceCalcVC = PenChanceCalcViewController()
-            penChanceCalcVC.ammo = ammo
+            penChanceCalcVC.ammo = SimulationAmmo(json: ammo.json)
             delegate?.showViewController(viewController: penChanceCalcVC)
         case damageCalcCell:
             self.delegate?.showLoading(show: true)
@@ -146,8 +146,8 @@ class AmmoDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewD
             dbManager.getCharacters { characters in
                 self.delegate?.showLoading(show: false)
 
-                let damageCalcVC = HealthCalcViewController(characters: characters)
-                damageCalcVC.ammo = self.ammo
+                let damageCalcVC = HealthCalcViewController(characterOptions: characters)
+                damageCalcVC.ammo = SimulationAmmo(json: self.ammo.json)
                 self.delegate?.showViewController(viewController: damageCalcVC)
             }
         default:

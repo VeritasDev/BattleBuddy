@@ -39,8 +39,8 @@ extension Ammo: Sortable {
         switch param.identifier {
         case AmmoSortableParam.name.identifier: return displayNameShort
         case AmmoSortableParam.caliber.identifier: return DependencyManagerImpl.shared.ammoUtilitiesManager().caliberDisplayName(caliber)
-        case AmmoSortableParam.pen.identifier: return String(Int(resolvedPenetration))
-        case AmmoSortableParam.damage.identifier: return String(Int(resolvedDamage))
+        case AmmoSortableParam.pen.identifier: return String(Int(penetration))
+        case AmmoSortableParam.damage.identifier: return String(Int(totalDamage))
         default: fatalError()
         }
     }
@@ -52,7 +52,7 @@ extension Armor: Sortable {
     func valueForParam(_ param: SortableParam) -> String {
         switch param {
         case ArmorSortableParam.name: return displayName
-        case ArmorSortableParam.armorClass: return String(resolvedArmorClass)
+        case ArmorSortableParam.armorClass: return String(armorClass.rawValue)
         case ArmorSortableParam.maxDurability: return String(maxDurability)
         default: fatalError()
         }

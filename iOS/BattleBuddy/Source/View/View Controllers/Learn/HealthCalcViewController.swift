@@ -15,8 +15,8 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         let calc = CombatCalculator()
         return calc
     }()
-    let characters: [Character]
-    var selectedCharacter: Character
+    let characterOptions: [Character]
+    var character: SimulationCharacter
     let avatar = TestSubjectAvatar()
     let characterNameLabel: UILabel = {
         let label = UILabel(frame: .zero)
@@ -28,7 +28,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
     }()
 
     lazy var subjectTypeSelectionViewController: SelectionViewController = {
-        return SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characters)
+        return SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characterOptions)
     }()
     var target: Person? {
         didSet {
@@ -43,8 +43,6 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
             currentHealthLabel.text = String(Int(newTarget.totalCurrentHp))
             maxHealthLabel.text = "/ \(Int(newTarget.totalOriginalHp))"
             avatar.alpha = (newTarget.totalCurrentHp == 0) ? 0.5 : 1.0
-            avatar.layer.borderColor = UIColor.Theme.primary.cgColor
-            characterNameLabel.text = newTarget.characterConfig.resolvedCharacterName
         }
     }
     let selectionCellId = "ItemSelectionCell"
@@ -98,26 +96,28 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         return button
     }()
 
-    var ammo: Ammo? {
+    var ammo: SimulationAmmo? {
         didSet {
             settingsButton.setTitle(ammo?.displayName, for: .normal)
         }
     }
-    var ammoOptions: [Ammo]?
+    var ammoOptions: [SimulationAmmo]?
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    init(characters: [Character]) {
-        self.characters = characters
+    init(characterOptions: [Character]) {
+        self.characterOptions = characterOptions
 
-        guard let character = characters.first else { fatalError() }
+        guard let defaultChar = characterOptions.first, let simChar = SimulationCharacter(json: defaultChar.json) else { fatalError() }
 
-        self.selectedCharacter = character
-        self.target = Person(character)
+        self.character = simChar
+        self.target = Person(simChar)
 
         super.init()
 
-        self.avatar.characterId = self.target?.characterConfig.resolvedIdentifier
+        self.avatar.layer.borderColor = UIColor.Theme.primary.cgColor
+        self.avatar.characterId = character.id
+        self.characterNameLabel.text = character.name
     }
 
     override func viewDidLoad() {
@@ -218,13 +218,12 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
     }
 
     @objc func showCharacterOptions() {
-        subjectTypeSelectionViewController.currentSelection = selectedCharacter
+        subjectTypeSelectionViewController.currentSelection = character
         navigationController?.pushViewController(subjectTypeSelectionViewController, animated: true)
     }
 
     @objc func reset() {
-        guard let currentConfig = target?.characterConfig else { fatalError() }
-        target = Person(currentConfig)
+        target = Person(character)
     }
 
     @objc func showSettings() {
@@ -240,7 +239,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
             DependencyManagerImpl.shared.databaseManager().getAllAmmo { allAmmo in
                 hud.dismiss(animated: false)
 
-                self.ammoOptions = allAmmo
+                self.ammoOptions = allAmmo.compactMap { SimulationAmmo(json: $0.json) }
                 self.showSettings()
             }
         }
@@ -284,7 +283,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
     // MARK: Sort selection delegate
     func itemSelected(_ selection: Sortable) {
         switch selection {
-        case let selectedAmmo as Ammo: ammo = selectedAmmo
+        case let selectedAmmo as SimulationAmmo: ammo = selectedAmmo
         default: fatalError()
         }
 
@@ -298,11 +297,11 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
 
 extension HealthCalcViewController: SelectionDelegate {
     func selectionViewController(_ selectionViewController: SelectionViewController, didMakeSelection selection: SelectionOption) {
-        guard let selection = selection as? Character else { return }
+        guard let selection = selection as? SimulationCharacter else { return }
 
-        selectedCharacter = selection
-        target?.characterConfig = selection
-        avatar.characterId = self.target?.characterConfig.resolvedIdentifier
+        character = selection
+        target = Person(character)
+        avatar.characterId = character.id
 
         reset()
 

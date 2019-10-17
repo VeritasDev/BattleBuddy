@@ -185,7 +185,7 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
             }
         case penChanceCalcCell:
             let penChanceVC = PenChanceCalcViewController()
-            penChanceVC.armor = armor
+            penChanceVC.armor = SimulationArmor(json: armor.json)
             delegate?.showViewController(viewController: penChanceVC)
         default:
             fatalError()

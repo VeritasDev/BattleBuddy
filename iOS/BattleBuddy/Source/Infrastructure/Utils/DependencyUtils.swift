@@ -99,11 +99,3 @@ extension BodyZoneType {
         }
     }
 }
-
-extension FirearmConfig {
-    func getSummary() -> String {
-        let separator = ", "
-        let ammoConfig = ammoConfiguration.compactMap{$0.resolvedAmmoName}.joined(separator: separator)
-        return ammoConfig.appending(separator).appending(ammoConfig)
-    }
-}

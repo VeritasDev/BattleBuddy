@@ -19,6 +19,7 @@
     - [ ] Helmets/face shields/mods
     - [x] Add a "shoot" button to simulate damage
 - [ ] Implement Banner Ads (if setting enabled)
+- [ ] Compare all shortcut
 
 - [x] Info on how to earn points
 - [x] Earn random bud points
@@ -46,6 +47,7 @@
     - [x] View will disappear - stop player
 
 ## <u>v1.2.0</u>
+- [ ] Guess that sound mini-game
 - [ ] Armor - compatible attachments
 - [ ] Placeholder images for accessories
 - [ ] Health Calculator Improvements

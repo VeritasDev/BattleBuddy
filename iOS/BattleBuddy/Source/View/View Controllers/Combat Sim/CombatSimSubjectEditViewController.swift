@@ -7,17 +7,15 @@
 //
 
 import UIKit
-import BallisticsEngine
-
 
 protocol SubjectEditViewControllerDelegate {
-    func combatSimSubjectEditViewController(_ subjectEditViewController: CombatSimSubjectEditViewController, didFinishEditing subject: Person)
+    func combatSimSubjectEditViewControllerDidCancel(_ subjectEditViewController: CombatSimSubjectEditViewController)
+    func combatSimSubjectEditViewController(_ subjectEditViewController: CombatSimSubjectEditViewController, didFinishEditing character: SimulationCharacter)
 }
 
 class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     let characters: [Character]
-    var selectedCharacter: Character
-    var subject: Person
+    var character: SimulationCharacter
     var ammoOptions: [Ammo]?
     var armorOptions: [Armor]?
     let dbManager = dm().databaseManager()
@@ -65,20 +63,21 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
         cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
         return cell
     }()
-    lazy var subjectTypeSelectionViewController: SelectionViewController = {
-        return SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characters)
-    }()
-    lazy var aimSettingSelectionViewController: SelectionViewController = {
-        return SelectionViewController(self, title: "combat_sim_aim_setting".local(), options: [AimSetting.centerOfMass, AimSetting.headshotsOnly, AimSetting.thoraxOnly, AimSetting.randomLegMeta, AimSetting.singleLegMeta])
-    }()
+//    lazy var subjectTypeSelectionViewController: SelectionViewController = {
+//        return SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characters)
+//    }()
+//    lazy var aimSettingSelectionViewController: SelectionViewController = {
+//        return SelectionViewController(self, title: "combat_sim_aim_setting".local(), options: [AimSetting.centerOfMass, AimSetting.headshotsOnly, AimSetting.thoraxOnly, AimSetting.randomLegMeta, AimSetting.singleLegMeta])
+//    }()
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    init(_ subjectEditDelegate: SubjectEditViewControllerDelegate, characters: [Character], person: Person) {
+    init(_ subjectEditDelegate: SubjectEditViewControllerDelegate, characters: [Character], character: SimulationCharacter?) {
+        guard let defaultCharacter = characters.first, let defaultSimChar = SimulationCharacter(json: defaultCharacter.json) else { fatalError() }
+
         self.subjectEditDelegate = subjectEditDelegate
         self.characters = characters
-        self.selectedCharacter = characters.first!
-        self.subject = person
+        self.character = character ?? defaultSimChar
         super.init()
 
         updateCells()
@@ -88,11 +87,16 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
         super.viewDidLoad()
 
         title = "combat_sim_edit_subject".local()
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .save, target: self, action: #selector(save))
     }
 
+    @objc func cancel() {
+        subjectEditDelegate.combatSimSubjectEditViewControllerDidCancel(self)
+    }
+
     @objc func save() {
-        subjectEditDelegate.combatSimSubjectEditViewController(self, didFinishEditing: subject)
+        subjectEditDelegate.combatSimSubjectEditViewController(self, didFinishEditing: character)
     }
 
     override func generateSections() -> [GroupedTableViewSection] {
@@ -100,10 +104,10 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     }
 
     func updateCells() {
-        subjectTypeCell.detailTextLabel?.text = subject.characterConfig.resolvedCharacterName
-        aimCell.detailTextLabel?.text = subject.aim.local()
-        armorCell.detailTextLabel?.text = subject.equippedArmor.isEmpty ? "common_none".local() : subject.equippedArmor.compactMap{$0.resolvedArmorName}.joined(separator: ", ")
-        firearmCell.detailTextLabel?.text = subject.firearmConfig.getSummary()
+        subjectTypeCell.detailTextLabel?.text = character.name
+        aimCell.detailTextLabel?.text = character.aim.local()
+        armorCell.detailTextLabel?.text = character.armorSummary()
+        firearmCell.detailTextLabel?.text = character.firearmSummary()
     }
 
     func showArmorOptions() {
@@ -147,13 +151,15 @@ extension CombatSimSubjectEditViewController {
         let cell = tableView.cellForRow(at: indexPath)
         switch cell {
         case subjectTypeCell:
-            subjectTypeSelectionViewController.currentSelection = selectedCharacter
-            navigationController?.pushViewController(subjectTypeSelectionViewController, animated: true)
+//            subjectTypeSelectionViewController.currentSelection = character
+//            navigationController?.pushViewController(subjectTypeSelectionViewController, animated: true)
+            break
         case aimCell:
-            aimSettingSelectionViewController.currentSelection = subject.aim
-            navigationController?.pushViewController(aimSettingSelectionViewController, animated: true)
+//            aimSettingSelectionViewController.currentSelection = subject.aim
+//            navigationController?.pushViewController(aimSettingSelectionViewController, animated: true)
+            break
         case firearmCell:
-            let firearmEditVC = CombatSimFirearmEditViewController()
+            let firearmEditVC = CombatSimFirearmEditViewController(character.firearm)
             navigationController?.pushViewController(firearmEditVC, animated: true)
             break
         case armorCell: showArmorOptions()
@@ -165,20 +171,20 @@ extension CombatSimSubjectEditViewController {
 
 extension CombatSimSubjectEditViewController: SelectionDelegate {
     func selectionViewController(_ selectionViewController: SelectionViewController, didMakeSelection selection: SelectionOption) {
-        switch selectionViewController {
-        case subjectTypeSelectionViewController:
-            guard let character = selection as? Character else { fatalError() }
-            selectedCharacter = character
-            let newPerson = Person(selectedCharacter, aimSetting: subject.aim, armor: subject.equippedArmor, firearm: subject.firearmConfig)
-            subject = newPerson
-        case aimSettingSelectionViewController:
-            guard let aimSetting = selection as? AimSetting else { fatalError() }
-            subject.aim = aimSetting
-        default:
-            break
-        }
-
-        updateCells()
+//        switch selectionViewController {
+//        case subjectTypeSelectionViewController:
+//            guard let character = selection as? Character else { fatalError() }
+//            selectedCharacter = character
+//            let newPerson = Person(selectedCharacter, aimSetting: subject.aim, armor: subject.equippedArmor, firearm: subject.firearmConfig)
+//            subject = newPerson
+//        case aimSettingSelectionViewController:
+//            guard let aimSetting = selection as? AimSetting else { fatalError() }
+//            subject.aim = aimSetting
+//        default:
+//            break
+//        }
+//
+//        updateCells()
         navigationController?.popViewController(animated: true)
     }
 }
@@ -186,7 +192,7 @@ extension CombatSimSubjectEditViewController: SelectionDelegate {
 extension CombatSimSubjectEditViewController: SortableItemSelectionDelegate {
     func itemSelected(_ selection: Sortable) {
         switch selection {
-        case let selectedArmor as Armor: subject.equippedArmor = [selectedArmor]
+        case let selectedArmor as SimulationArmor: character.armor = [selectedArmor]
         default: fatalError()
         }
 

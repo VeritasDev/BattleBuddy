@@ -334,6 +334,7 @@
 // MARK:- Common
 "firearm" = "Firearm";
 "common_none" = "None";
+"common_refine" = "Refine";
 
 // MARK:- More
 "days_since_wipe" = "%@ days since last wipe...";
