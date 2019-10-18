@@ -102,8 +102,8 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
             updateCalculator()
         }
     }
-    var ammoOptions: [Ammo]?
-    var armorOptions: [Armor]?
+    var ammoOptions: [SimulationAmmo]?
+    var armorOptions: [SimulationArmor]?
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -178,7 +178,7 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
 
             dbManager.getAllAmmo { allAmmo in
                 hud.dismiss(animated: false)
-                self.ammoOptions = allAmmo
+                self.ammoOptions = allAmmo.compactMap { SimulationAmmo(json:$0.json) }
                 self.showAmmoOptions()
             }
         }
@@ -194,9 +194,9 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
             hud.position = .center
             hud.show(in: self.scrollView)
 
-            dbManager.getAllBodyArmor { allArmor in
+            dbManager.getAllArmor { allArmor in
                 hud.dismiss(animated: false)
-                self.armorOptions = allArmor
+                self.armorOptions = allArmor.compactMap { SimulationArmor(json:$0.json) }
                 self.showArmorOptions()
             }
         }
@@ -205,7 +205,7 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
     @objc func updateCalculator() {
         selectionCollectionView.reloadData()
 
-        if var armor = armor, let ammo = ammo {
+        if let armor = armor, let ammo = ammo {
             let durability = Int(durabilitySlider.value)
             armor.currentDurability = durability
 

@@ -73,6 +73,18 @@ class ItemListViewController: BaseStackViewController {
                 self.config.sections = armorSections
                 self.buildStackFromConfig()
             }
+        case .visor:
+            self.dbManager.getAllHelmetArmorByClass { armorMap in
+                hud.dismiss(animated: false)
+                var armorSections: [ItemSection] = []
+                for armorClass in ArmorClass.allCases {
+                    if let items = armorMap[armorClass], items.count > 0 {
+                        armorSections.append(ItemSection(title: armorClass.local(), items: items))
+                    }
+                }
+                self.config.sections = armorSections
+                self.buildStackFromConfig()
+            }
         case .ammo:
             self.dbManager.getAllAmmoByCaliber { ammoMap in
                 hud.dismiss(animated: false)

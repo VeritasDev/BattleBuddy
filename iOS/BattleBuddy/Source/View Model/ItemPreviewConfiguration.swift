@@ -25,7 +25,7 @@ struct ItemListConfig {
 
         switch type {
         case .firearm: cellWidthMultiplier = 1.6
-        case .ammo, .armor, .medical, .helmet, .modification: cellWidthMultiplier = 1.3
+        case .ammo, .armor, .visor, .medical, .helmet, .modification: cellWidthMultiplier = 1.3
         default: fatalError()
         }
     }

@@ -268,7 +268,6 @@
 "damage" = "Damage";
 "rate" = "Rate";
 "range" = "Range";
-
 "stab" = "Stab";
 "stab_dmg" = "Stab Damage";
 "stab_rate" = "Stab Rate";
@@ -349,7 +348,7 @@
 // Being A Bud
 "bud_points" = "Bud Points©";
 "bud_how_to_title" = "How To Be A Bud";
-"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies. As a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies.\n\nAs a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
 
 "bud_how_to_title_1" = "Come Back Often";
 "bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
@@ -376,6 +375,7 @@
 "main_menu_mods" = "Modifications";
 "main_menu_combat_sim" = "Combat Simulator";
 "main_menu_characters" = "Characters";
+"main_menu_visors" = "Visors";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";
@@ -392,6 +392,7 @@
 "speed_penalty_full" = "Speed Penalty";
 "turn_speed_penalty_full" = "Turn Speed Penalty";
 "ergo_penalty_full" = "Ergonomics Penalty";
+"armor_type" = "Type";
 
 // MARK:- Mods
 "modification" = "Modification";

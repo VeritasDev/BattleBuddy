@@ -48,10 +48,11 @@ extension Ammo: Sortable {
 
 extension Armor: Sortable {
     var sortId: String { return id }
-    var params: [SortableParam] { return [ArmorSortableParam.name, ArmorSortableParam.armorClass, ArmorSortableParam.maxDurability] }
+    var params: [SortableParam] { return [ArmorSortableParam.name, ArmorSortableParam.armorType, ArmorSortableParam.armorClass, ArmorSortableParam.maxDurability] }
     func valueForParam(_ param: SortableParam) -> String {
         switch param {
         case ArmorSortableParam.name: return displayName
+        case ArmorSortableParam.armorType: return String(armorType.local())
         case ArmorSortableParam.armorClass: return String(armorClass.rawValue)
         case ArmorSortableParam.maxDurability: return String(maxDurability)
         default: fatalError()

@@ -53,9 +53,9 @@ final class BudPost: PostConfiguration {
             PostElementBodyTitle(title: "bud_how_to_title_2".local()),
             PostElementBody(body: "bud_how_to_body_2".local()),
             PostElementImage(image: UIImage(named: "bud_2")!, height: 200.0),
-            PostElementBodyTitle(title: "bud_how_to_title_3".local()),
-            PostElementBody(body: "bud_how_to_body_3".local()),
-            PostElementImage(image: UIImage(named: "bud_3")!, height: 200.0),
+//            PostElementBodyTitle(title: "bud_how_to_title_3".local()),
+//            PostElementBody(body: "bud_how_to_body_3".local()),
+//            PostElementImage(image: UIImage(named: "bud_3")!, height: 200.0),
             PostElementBodyTitle(title: "bud_how_to_title_4".local()),
             PostElementBody(body: "bud_how_to_body_4".local()),
         ]

@@ -101,7 +101,7 @@ class SettingsViewController: BaseTableViewController {
         }
 
         languageCell.detailTextLabel?.text = localeManager.currentLanguageDisplayName()
-        sections.append(GroupedTableViewSection(headerTitle: "app_settings".local(), cells: [languageCell, enableBannerAdsCell]))
+        sections.append(GroupedTableViewSection(headerTitle: "app_settings".local(), cells: [languageCell]))
         tableView.reloadData()
     }
 

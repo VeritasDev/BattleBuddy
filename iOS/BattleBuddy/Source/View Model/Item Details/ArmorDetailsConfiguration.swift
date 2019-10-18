@@ -44,7 +44,12 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
     lazy var exploreTableView = { BaseTableView(dataSource: self, delegate: self) }()
     let compareCell = BaseTableViewCell(text: Localized("compare"))
     let penChanceCalcCell = BaseTableViewCell(text: Localized("pen_chance"))
-    lazy var exploreCells = { [compareCell, penChanceCalcCell] }()
+    lazy var exploreCells: [BaseTableViewCell] = {
+        switch armor.armorType {
+        case .body, .helmet, .visor, .attachment:
+            return [compareCell, penChanceCalcCell]
+        }
+    }()
 
     init(_ armor: Armor) {
         self.armor = armor
@@ -162,8 +167,6 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
                     self.delegate?.showViewController(viewController: armorVC)
                 }
             }
-
-
         case compareCell:
             self.delegate?.showLoading(show: true)
 
@@ -175,8 +178,15 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
                     let compareOptionsVC = ComparisonOptionsViewController(ArmorComparison(self.armor, allArmor: allArmor))
                     self.delegate?.showViewController(viewController: compareOptionsVC)
                 }
-            case .helmet, .visor, .attachment:
+            case .helmet:
                 dbManager.getAllHelmets() { allArmor in
+                    self.delegate?.showLoading(show: false)
+
+                    let compareOptionsVC = ComparisonOptionsViewController(ArmorComparison(self.armor, allArmor: allArmor))
+                    self.delegate?.showViewController(viewController: compareOptionsVC)
+                }
+            case .visor, .attachment:
+                dbManager.getAllHelmetArmor { allArmor in
                     self.delegate?.showLoading(show: false)
 
                     let compareOptionsVC = ComparisonOptionsViewController(ArmorComparison(self.armor, allArmor: allArmor))
