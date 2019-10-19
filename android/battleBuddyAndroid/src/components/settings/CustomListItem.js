@@ -16,7 +16,7 @@ const CustomListItem = (props) => {
       containerStyle={{backgroundColor: 'black'}}
       titleStyle={{color: 'white'}}
       subtitleStyle={{color: 'white'}}
-      chevron={!item.hideChevron}
+      chevron={!!item.onPress}
       bottomDivider={true}
       {...item}
     />
@@ -29,8 +29,7 @@ CustomListItem.propTypes = {
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
       .isRequired,
     subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-    onPress: PropTypes.func,
-    hideChevron: PropTypes.bool
+    onPress: PropTypes.func
   })
 };
 

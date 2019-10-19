@@ -6,6 +6,7 @@ import styled from 'styled-components/native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {withNavigation} from 'react-navigation';
 import localeString from '../../utils/localeString';
+import ItemType from '../../constants/ItemType';
 
 const Text = styled.Text`
   font-size: 20px;
@@ -25,7 +26,9 @@ const HorizontalCardBar = ({title, items, navigation}) => {
 
   return (
     <View>
-      <Text>{localeString(title)}</Text>
+      <Text>
+        {items[0]._kind === ItemType.ammo ? title : localeString(title)}
+      </Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {items.map((item) => (
           <TouchableOpacity onPress={() => onPressHandler(item)} key={item._id}>

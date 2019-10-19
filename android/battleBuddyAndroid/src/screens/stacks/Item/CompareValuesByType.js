@@ -73,16 +73,24 @@ export default {
     //   property: 'effects.???.duration'
     // },
     {
-      property: 'effects.bloodloss'
+      property: 'effects.bloodloss',
+      onRender: (x) => (x ? 1 : 0),
+      bindValue: {1: 'Yes', 0: 'No'}
     },
     {
-      property: 'effects.fracture'
+      property: 'effects.fracture',
+      onRender: (x) => (x ? 1 : 0),
+      bindValue: {1: 'Yes', 0: 'No'}
     },
     {
-      property: 'effects.pain'
+      property: 'effects.pain',
+      onRender: (x) => (x ? 1 : 0),
+      bindValue: {1: 'Yes', 0: 'No'}
     },
     {
-      property: 'effects.contusion'
+      property: 'effects.contusion',
+      onRender: (x) => (x ? 1 : 0),
+      bindValue: {1: 'Yes', 0: 'No'}
     }
   ],
   [ItemType.melee]: [

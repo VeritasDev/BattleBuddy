@@ -7,6 +7,7 @@ import getDescendantProp from '../../../utils/getDescendantProp';
 import {useNavigation} from 'react-navigation-hooks';
 import calculateRedValue from '../../../utils/calculateRedValue';
 import CompareValuesByType from './CompareValuesByType';
+import localeString from '../../../utils/localeString';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -16,6 +17,7 @@ const Text = styled.Text`
   color: white;
   margin: 10px 0 5px 10px;
   font-size: 20px;
+  text-transform: uppercase;
 `;
 
 const Name = styled.Text`
@@ -45,7 +47,7 @@ const Bar = styled.View`
 const BarContainer = styled.View`
   width: 400px;
   height: 24px;
-  background: blue;
+  background: black;
   margin-bottom: 2px;
   position: relative;
 `;
@@ -111,12 +113,20 @@ const ComparisonScreen = () => {
   // Whilst loading, show Loading indicator
   if (loading) return <LoadingIndicator />;
 
+  const determineValue = (value, {onRender, bindValue}) => {
+    if (bindValue) {
+      return onRender ? bindValue[onRender(value)] : bindValue[value];
+    }
+
+    return onRender ? onRender(value) : value;
+  };
+
   return (
     <ScrollView>
       {graphData &&
         graphData.map((graph) => (
           <React.Fragment key={graph.title}>
-            <Text>{graph.title}</Text>
+            <Text>{localeString(graph.title)}</Text>
             {graph.data
               .filter((d) => selected.includes(d.id))
               .map((d, i) => (
@@ -131,7 +141,7 @@ const ComparisonScreen = () => {
                   />
                   <Value>
                     {graph.prefix && graph.prefix}
-                    {graph.onRender ? graph.onRender(d.value) : d.value}
+                    {determineValue(d.value, graph)}
                     {graph.suffix && graph.suffix}
                   </Value>
                 </BarContainer>

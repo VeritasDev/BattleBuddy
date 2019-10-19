@@ -2,39 +2,43 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import localeString from '../../utils/localeString';
 import DetailSection from './DetailSection';
+import {useNavigation} from 'react-navigation-hooks';
+import ItemType from '../../constants/ItemType';
 
 const ThrowableDetail = ({item}) => {
+  const {navigate} = useNavigation();
+
   const data = [
     {
       title: 'Properties',
       rows: [
         {
           key: 'Type',
-          value: localeString(item.type),
-          hideChevron: true
+          value: localeString(item.type)
         },
         {
           key: 'Fuse Time',
-          value: `${item.delay}s`,
-          hideChevron: true
+          value: `${item.delay}s`
         },
         {
           key: 'Fragment Count',
-          value: item.fragCount,
-          hideChevron: true
+          value: item.fragCount
         },
         {
           key: 'Min Explosion Range',
-          value: `${item.minDistance}m`,
-          hideChevron: true
+          value: `${item.minDistance}m`
         },
         {
           key: 'Max Explosion Range',
-          value: `${item.maxDistance}m`,
-          hideChevron: true
+          value: `${item.maxDistance}m`
         },
         {
-          key: 'Compare'
+          key: 'Compare',
+          onPress: () =>
+            navigate('SelectCompare', {
+              selectedItem: item,
+              itemType: ItemType.throwable
+            })
         }
       ]
     }

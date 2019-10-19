@@ -14,20 +14,17 @@ const ArmorDetail = ({item}) => {
       rows: [
         {
           key: 'Type',
-          value: localeString(item.type),
-          hideChevron: true
+          value: localeString(item.type)
         },
         {key: 'Class', value: `Class ${item.armor.class}`},
         {
           key: 'Durability',
-          value: item.armor.durability,
-          hideChevron: true
+          value: item.armor.durability
         },
         {key: 'Material', value: item.armor.material.name},
         {
           key: 'Zones',
-          value: item.armor.zones.join(', '),
-          hideChevron: true
+          value: item.armor.zones.join(', ')
         }
       ]
     },
@@ -36,18 +33,15 @@ const ArmorDetail = ({item}) => {
       rows: [
         {
           key: 'Speed',
-          value: item.penalties.speed,
-          hideChevron: true
+          value: item.penalties.speed
         },
         {
           key: 'Turn Speed',
-          value: item.penalties.mouse,
-          hideChevron: true
+          value: item.penalties.mouse
         },
         {
           key: 'Ergonomics',
-          value: item.penalties.ergonomics,
-          hideChevron: true
+          value: item.penalties.ergonomics
         }
       ]
     },

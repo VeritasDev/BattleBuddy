@@ -9,6 +9,7 @@ import {useItems} from '../../../context/ItemProvider';
 import {useNavigation} from 'react-navigation-hooks';
 import localeString from '../../../utils/localeString';
 import LoadingIndicator from '../../../components/common/LoadingIndicator';
+import ItemType from '../../../constants/ItemType';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -54,11 +55,36 @@ const SelectCompareScreen = () => {
   return (
     <>
       <ScrollView>
+        {state.params.itemType === ItemType.melee &&
+          docs.map((item) => (
+            <ListItem
+              key={item._id}
+              title={item.name}
+              containerStyle={{backgroundColor: 'black'}}
+              titleStyle={{color: 'white'}}
+              bottomDivider
+              onPress={() => handleSelect(item)}
+              rightElement={
+                <CheckBox
+                  value={selectedItems.includes(item._id)}
+                  onPress={() => handleSelect(item)}
+                  tintColors={{
+                    false: theme.colors.almostBlack,
+                    true: theme.colors.orange
+                  }}
+                />
+              }
+            />
+          ))}
         {Object.entries(docs).map(([type, items]) => {
           if (items.length)
             return (
               <React.Fragment key={type}>
-                <Text>{localeString(type)}</Text>
+                <Text>
+                  {state.params.itemType === ItemType.ammo
+                    ? type
+                    : localeString(type)}
+                </Text>
                 {items.map((item) => (
                   <ListItem
                     key={item._id}
@@ -82,26 +108,6 @@ const SelectCompareScreen = () => {
               </React.Fragment>
             );
         })}
-        {/* {state.map((x, i) => (
-          <ListItem
-            key={i}
-            title={x.text}
-            containerStyle={{backgroundColor: 'black'}}
-            titleStyle={{color: 'white'}}
-            bottomDivider
-            onPress={() => handleSelect(x)}
-            rightElement={
-              <CheckBox
-                value={x.selected}
-                onPress={() => handleSelect(x)}
-                tintColors={{
-                  false: theme.colors.almostBlack,
-                  true: theme.colors.orange
-                }}
-              />
-            }
-          />
-        ))} */}
       </ScrollView>
       <Button
         title="Continue"
