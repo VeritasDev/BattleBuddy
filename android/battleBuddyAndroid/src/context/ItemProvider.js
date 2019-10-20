@@ -67,7 +67,6 @@ const ItemProvider = ({children}) => {
     }
 
     return () => {
-      console.log('unmounting', state.collectionName);
       isMounted = false;
     };
   }, [state.collectionName]);
