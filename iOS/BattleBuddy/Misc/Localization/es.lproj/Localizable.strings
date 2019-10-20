@@ -328,3 +328,160 @@
 "settings" = "Opciones";
 "language_system_default" = "Sistema";
 "language" = "Idioma";
+
+// ----------------------------------------
+// V1.1.0
+
+// MARK:- Common
+"firearm" = "Firearm";
+"common_none" = "None";
+"common_refine" = "Refine";
+
+// MARK:- More
+"days_since_wipe" = "%@ days since last wipe...";
+"bud_leaderboard" = "Bud Leaderboard";
+"total_ads_watched" = "%@ ads watched by the community!";
+"app_version" = "App Version";
+"your_bud_score" = "Your Bud Score";
+"bud_reward" = "Redeem Reward";
+"bud_reward_title" = "Reward Redeemed";
+"bud_reward_message" = "Thanks for being a bud!";
+
+// Being A Bud
+"bud_points" = "Bud Points©";
+"bud_how_to_title" = "How To Be A Bud";
+"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies.\n\nAs a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+
+"bud_how_to_title_1" = "Come Back Often";
+"bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
+
+"bud_how_to_title_2" = "Watch Ads";
+"bud_how_to_body_2" = "Another way to be a bud and earn Bud Points© is by watching video ads. On the main More menu, there's the option to \"Watch an Ad\". If an ad is available from one of our content providers, you will be able to watch a short advertisement and will be rewarded with Bud points showcasing how much of a bud you are. After watching an ad, another will be available after some time, so if you want to be a huge bud, be patient!";
+
+"bud_how_to_title_3" = "Enable Banner Ads";
+"bud_how_to_body_3" = "Enabling banner ads is another amazing way to be a bud! You can enable banner ads from the Settings screen! Don't try to be cheeky though bud, if you disable banner ads the points you earned will be lost until you re-enable them.";
+
+"bud_how_to_title_4" = "More Ways To Be A Bud";
+"bud_how_to_body_4" = "As more features are introduced into Battle Buddy more ways to earn and use your Bud Points© will emerge! Stay tuned buds!";
+
+// MARK:- Settings
+"profile" = "Profile";
+"nickname" = "Nickname";
+"nickname_placeholder" = "Nickname";
+"nickname_anon" = "Anonymous";
+"app_settings" = "App Settings";
+"settings_save_error" = "Unable to save your settings, please try again later.";
+
+// MARK:- Menu Items
+"main_menu_helmets" = "Helmets";
+"main_menu_mods" = "Modifications";
+"main_menu_combat_sim" = "Combat Simulator";
+"main_menu_characters" = "Characters";
+"main_menu_visors" = "Visors";
+
+// MARK:- Attributions
+"attributions_smoooth" = "SmooothBrain";
+"attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbails, album covers and 3D animations - this man is a legend!";
+"attributions_betrix" = "Betrix";
+"attributions_betrix_descr" = "Many of the beautiful menu images and in-game item screenshots were created by Betrix!";
+
+// MARK:- Helmets / Accessories
+"hearing_penalty" = "Hearing";
+"hearing_penalty_high" = "High";
+"hearing_penalty_low" = "Low";
+"hearing_penalty_none" = "None";
+"hearing_penalty_full" = "Hearing Penalty";
+"speed_penalty_full" = "Speed Penalty";
+"turn_speed_penalty_full" = "Turn Speed Penalty";
+"ergo_penalty_full" = "Ergonomics Penalty";
+"armor_type" = "Type";
+
+// MARK:- Mods
+"modification" = "Modification";
+"modificationBarrel" = "Barrel";
+"modificationBipod"  = "Bipod";
+"modificationCharge" = "Charging Handle";
+"modificationDevice" = "Device";
+"modificationForegrip" = "Foregrip";
+"modificationGasblock" = "Gas Block";
+"modificationGoggles" = "Goggles";
+"modificationHandguard" = "Handguard";
+"modificationLauncher" = "Launcher";
+"modificationMount" = "Mount";
+"modificationMuzzle" = "Muzzle";
+"modificationPistolgrip" = "Pistol Grip";
+"modificationReceiver" = "Receiver";
+"modificationSight" = "Sight";
+"modificationSightSpecial" = "Sight (Special)";
+"modificationStock" = "Stock";
+
+// MARK:- Sound Training
+"sound_training" = "Sound Training Beta";
+"sound_training_start" = "Start Training";
+"sound_training_commit" = "Guess";
+"sound_training_result_correct" = "Correct!";
+"sound_training_result_wrong" = "Keep Trying!";
+
+"sound_localization_info_title" = "Learn How To Localize Sound";
+"sound_localization_info_note_1" = "The sound training tool is currently in beta! Headphones are required!";
+"sound_localization_info_body_1" = "Escape from Tarkov currently utilizes your standard stereo sound, which is more than adequate enough for sound localization in most cases. At this point in time, no 5.1 or 7.1 surround sound options are supported, and as such I would HIGHLY recommend against using any virtual audio settings in your headphone software or windows audio settings.\n\nThere's no doubt there are people that swear by these more advanced settings, but they simply are not required, will not give you any more information about distance, location, etc., because they don't have any more information from the game or the engine itself! The game outputs stereo audio - a Left channel and a Right channel, nothing more complex than that. In my experience, enabling these more advanced settings makes sound localization harder, not easier. If you have these settings on and have issues with localizing sound in Tarkov or any other first-person shooter, try turning them off and see if that makes a difference, you might be surprised!";
+"sound_localization_info_subtitle_2" = "How To Play";
+"sound_localization_info_body_2" = "The goal of this mini-game is to locate the direction of sound around your on-screen character. When you begin, and a tone will play at a regular interval, panned to a random direction somewhere around your character on screen in a 360-degree radius.\n\nSwipe left and right on screen to turn your character, just like you would with a trackpad or a mouse. As your character's left or right ears get closer or further away from the source of the sound, the volume will change in each ear accordingly.\n\nWhen the tone is equally loud in both your left and right ears, your character is likely facing towards the sound. Once you think you're done, confirm your choice by pressing the button to see if you're correct!";
+"sound_localization_info_subtitle_3" = "Front and Back Sound The Same?!";
+"sound_localization_info_body_3" = "You may have noticed that sounds that are directly in front of you sound indistinguishable from sounds that are directly behind you. In both cases, the volume of the left and right channels are equal. Ignoring things like context clues based on map knowledge and materials in the environment, all of which are extremely useful in determining the location of sounds occurring around you, the only way to differentiate between sounds in front and behind is by turning your character's head relative to the sound, and paying attention to the direction the sound appears to move when you do. Take a look at this image example below:";
+"sound_localization_info_body_4" = "When you turn your character left or right, or even better turn just your character's silently head using free-look, you should be able to hear the volume of the sound increase or decrease in each ear. If you turn your head to the right and the sound is in front of you, your left ear will be closer to the sound and your right ear will be further from it, so the volume will be louder in your left ear compared to your right. Conversely, if the sound was actually behind you, when you turn right it will get louder in your right ear and softer in your left. Try using the direction that the sound moves when you turn your head as an indication of the location of the sound. The way it works in this tool is exactly like it works in Escape from Tarkov, and most other first-person shooters!";
+
+"simulate_gunshot_pen" = "Shoot\nw/ Penetration";
+"simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
+
+// MARK:- Combat Sim
+"combat_sim_subject_type" = "Character Type";
+"combat_sim_aim_setting" = "Aim Setting";
+"combat_sim_edit_subject" = "Edit Test Subject";
+"combat_sim_run" = "Run";
+"combat_sim_results" = "Simulation Results";
+"combat_sim_results_iterations" = "Iterations";
+"combat_sim_results_winner" = "Winner";
+"combat_sim_results_loser" = "Loser";
+"combat_sim_results_tie" = "Tie";
+"combat_sim_results_win_percent" = "Win Percent";
+"combat_sim_settings" = "Simulation Settings";
+"combat_sim_tap_to_edit" = "Tap Image To Edit Test Subject";
+"combat_sim_edit_firearm" = "Edit Firearm";
+"combat_sim_head_armor" = "Head Armor";
+
+"combat_sim_pen_setting" = "Penetration Setting";
+"combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
+"combat_sim_pen_setting_always_desc" = "Bullets will always penetrate armor as long as there is a non-zero chance. For example, a 1% penetration chance will always penetrate, but a 0% penetration chance will not.";
+"combat_sim_pen_setting_never_desc" = "Bullets will not penetrate any armor unless the armor is at 0% durabilty, at which time the chance becomes 100%";
+
+"combat_sim_frag_setting" = "Fragmentation Setting";
+"combat_sim_frag_setting_realistic_desc" = "Bullets have the same chance to fragment as they do in-game.";
+"combat_sim_frag_setting_always_desc" = "Bullets will always fragment as long as their effective fragmentation chance is non-zero. As of writing this, low-penetration ammo, such as RIP slugs, cannot currently fragment in the game despite it's 100% advertised fragmentation chance.";
+"combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
+
+"aim_setting_upper_body" = "Upper Body";
+"aim_setting_center_mass" = "Center of Mass";
+"aim_setting_headshots" = "Headshots";
+"aim_setting_random_leg" = "Random Leg Meta";
+"aim_setting_single_leg" = "Single Leg Meta";
+"aim_setting_thorax" = "Thorax";
+
+"aim_setting_upper_body_desc" = "All bullets fired will impact the target on their upper-body, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
+"aim_setting_center_mass_desc" = "All bullets fired will impact the target in the center-of-mass, which includes the arms, stomach, and thorax.";
+"aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
+"aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
+"aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
+"aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
+
+"simulation_result_win" = "Win";
+"simulation_result_loss" = "Loss";
+"simulation_result_tie" = "Tie";
+
+"simulation_win_percent" = "Win Percent";
+"simulation_time_to_kill" = "Avg. Time-to-Kill";
+"simulation_win_shots_to_kill" = "Avg. Shots-to-Kill";
+
+// ----------------------------------------
+// V1.1.0 - Changes to existing translations
+"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC. Top-down soldier animation images copyright Riley Gombart.";
