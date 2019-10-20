@@ -25,7 +25,6 @@ const Image = styled.ImageBackground`
 
 const Description = styled(Text)`
   padding: 20px;
-  text-align: justify;
 `;
 
 const ItemDetailScreen = ({navigation}) => {
@@ -41,7 +40,7 @@ const ItemDetailScreen = ({navigation}) => {
   };
 
   const DetailElement = typeToComponent[type];
-
+  console.log(item);
   return (
     <ScrollView>
       <StorageImage doc={item} element={Image} resizeMode="contain" />
