@@ -23,17 +23,23 @@ const Text = styled.Text`
 `;
 
 const SelectCompareScreen = () => {
-  const {state, navigate} = useNavigation();
+  const {state, navigate, ...rest} = useNavigation();
   const [selectedItems, setSelectedItem] = useState([
     state.params.selectedItem._id
   ]);
+
+  console.log(state, rest);
 
   const {loading, data: docs, setCollectionName, clearData} = useItems();
 
   useEffect(() => {
     setCollectionName(state.params.itemType);
 
-    return clearData;
+    return () => {
+      if (state.params.fromSearch) {
+        clearData;
+      }
+    };
   }, []);
 
   const handleSelect = ({_id}) => {

@@ -14,7 +14,7 @@ const SearchScreen = () => {
   if (loading) return <LoadingIndicator />;
 
   const handlePress = (item) => {
-    navigate('Detail', {item, type: item._kind});
+    navigate('Detail', {item, type: item._kind, fromSearch: true});
   };
 
   return (
