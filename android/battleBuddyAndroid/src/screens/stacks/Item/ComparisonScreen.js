@@ -153,14 +153,7 @@ const ComparisonScreen = () => {
 };
 
 ComparisonScreen.navigationOptions = {
-  title: 'Compare',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'Compare'
 };
 
 ComparisonScreen.propTypes = {};

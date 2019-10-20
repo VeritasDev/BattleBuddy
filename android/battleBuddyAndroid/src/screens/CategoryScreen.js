@@ -61,14 +61,7 @@ const CategoryScreen = ({navigation}) => {
 };
 
 CategoryScreen.navigationOptions = (screenProps) => ({
-  title: screenProps.navigation.getParam('text'),
-  headerStyle: {
-    backgroundColor: '#151515'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: screenProps.navigation.getParam('text')
 });
 
 CategoryScreen.propTypes = {

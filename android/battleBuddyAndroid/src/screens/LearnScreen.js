@@ -46,14 +46,7 @@ const LearnScreen = ({navigation}) => {
 };
 
 LearnScreen.navigationOptions = {
-  title: 'Learn',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'Learn'
 };
 
 LearnScreen.propTypes = {

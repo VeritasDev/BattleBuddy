@@ -95,14 +95,7 @@ const VeritasScreen = () => {
 };
 
 VeritasScreen.navigationOptions = {
-  title: 'Veritas',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'Veritas'
 };
 
 export default VeritasScreen;

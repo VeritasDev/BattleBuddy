@@ -4,7 +4,8 @@ import {TouchableOpacity} from 'react-native';
 import {theme} from '../components/Theme';
 import ScrollableContainer from '../components/common/ScrollableContainer';
 import Card from '../components/common/Card';
-import Search from '../components/common/Search';
+// import Search from '../components/common/Search';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // For now until we decide where data/images come from.
 const items = [
@@ -53,7 +54,7 @@ const ItemsScreen = ({navigation}) => {
 
   return (
     <ScrollableContainer>
-      <Search />
+      {/* <Search /> */}
       {items.map((item, index) => (
         <TouchableOpacity key={index} onPress={() => onPressHandler(item)}>
           <Card {...item} />
@@ -65,13 +66,14 @@ const ItemsScreen = ({navigation}) => {
 
 ItemsScreen.navigationOptions = {
   title: 'Items',
-  headerStyle: {
-    backgroundColor: theme.colors.almostBlack
-  },
-  headerTintColor: theme.colors.orange,
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  headerRight: () => (
+    <Icon
+      name="magnify"
+      color={theme.colors.orange}
+      size={28}
+      style={{marginRight: 10}}
+    />
+  )
 };
 
 ItemsScreen.propTypes = {

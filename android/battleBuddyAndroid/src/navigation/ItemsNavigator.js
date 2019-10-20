@@ -7,15 +7,22 @@ import ItemDetailScreen from '../screens/stacks/Item/ItemDetailScreen';
 import SearchScreen from '../screens/SearchScreen';
 import SelectCompareScreen from '../screens/stacks/Item/SelectCompareScreen';
 import ComparisonScreen from '../screens/stacks/Item/ComparisonScreen';
+import defaultNavigationOptions from '../constants/defaultNavigationOptions';
 
-const itemsNavigator = createStackNavigator({
-  Items: ItemsScreen,
-  Compare: ComparisonScreen,
-  SelectCompare: SelectCompareScreen,
-  Category: CategoryScreen,
-  Detail: ItemDetailScreen,
-  Search: SearchScreen
-});
+const itemsNavigator = createStackNavigator(
+  {
+    Items: ItemsScreen,
+    Compare: ComparisonScreen,
+    SelectCompare: SelectCompareScreen,
+    Category: CategoryScreen,
+    Detail: ItemDetailScreen,
+    Search: SearchScreen
+  },
+  {
+    initialRouteName: 'Items',
+    defaultNavigationOptions
+  }
+);
 
 itemsNavigator.navigationOptions = {
   tabBarLabel: 'Items',

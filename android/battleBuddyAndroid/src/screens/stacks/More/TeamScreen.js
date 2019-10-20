@@ -54,14 +54,7 @@ const TeamScreen = () => {
 };
 
 TeamScreen.navigationOptions = {
-  title: 'The Team',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'The Team'
 };
 
 export default TeamScreen;

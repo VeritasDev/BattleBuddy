@@ -5,13 +5,20 @@ import TabBarIcon from '../components/common/TabBarIcon';
 import VeritasScreen from '../screens/stacks/More/VeritasScreen';
 import TeamScreen from '../screens/stacks/More/TeamScreen';
 import AttributionsScreen from '../screens/stacks/More/AttributionsScreen';
+import defaultNavigationOptions from '../constants/defaultNavigationOptions';
 
-const moreNavigator = createStackNavigator({
-  More: MoreScreen,
-  Veritas: VeritasScreen,
-  Team: TeamScreen,
-  Attributions: AttributionsScreen
-});
+const moreNavigator = createStackNavigator(
+  {
+    More: MoreScreen,
+    Veritas: VeritasScreen,
+    Team: TeamScreen,
+    Attributions: AttributionsScreen
+  },
+  {
+    initialRouteName: 'More',
+    defaultNavigationOptions
+  }
+);
 
 moreNavigator.navigationOptions = {
   tabBarLabel: 'More',

@@ -107,14 +107,7 @@ const MoreScreen = ({navigation}) => {
 };
 
 MoreScreen.navigationOptions = {
-  title: 'More',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'More'
 };
 
 MoreScreen.propTypes = {

@@ -52,14 +52,7 @@ const ItemDetailScreen = ({navigation}) => {
 };
 
 ItemDetailScreen.navigationOptions = (screenProps) => ({
-  title: screenProps.navigation.getParam('item').name,
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: screenProps.navigation.getParam('item').name
 });
 
 ItemDetailScreen.propTypes = {
