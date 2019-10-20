@@ -30,7 +30,7 @@ const Name = styled.Text`
 `;
 
 const Value = styled(Name)`
-  right: 20px;
+  right: 10px;
   left: auto;
 `;
 
@@ -45,7 +45,7 @@ const Bar = styled.View`
 `;
 
 const BarContainer = styled.View`
-  width: 400px;
+  width: 100%;
   height: 24px;
   background: black;
   margin-bottom: 2px;
