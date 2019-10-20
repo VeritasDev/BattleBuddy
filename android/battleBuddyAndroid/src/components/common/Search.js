@@ -33,8 +33,10 @@ const Search = () => {
   const [state, setState] = useState(searchTerm);
 
   const handleSubmit = () => {
-    setSearchTerm(state);
-    navigate('Search', {searchTerm: state});
+    if (state.length) {
+      setSearchTerm(state);
+      navigate('Search', {searchTerm: state});
+    }
   };
 
   return (

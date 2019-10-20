@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {ListItem} from 'react-native-elements';
 import CheckBox from '@react-native-community/checkbox';
@@ -28,7 +28,13 @@ const SelectCompareScreen = () => {
     state.params.selectedItem._id
   ]);
 
-  const {loading, data: docs} = useItems();
+  const {loading, data: docs, setCollectionName, clearData} = useItems();
+
+  useEffect(() => {
+    setCollectionName(state.params.itemType);
+
+    return clearData;
+  }, []);
 
   const handleSelect = ({_id}) => {
     if (!selectedItems.includes(_id)) {

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {TouchableOpacity} from 'react-native';
 import {theme} from '../components/Theme';
 import ScrollableContainer from '../components/common/ScrollableContainer';
@@ -43,12 +42,6 @@ SearchScreen.navigationOptions = {
   headerTitleStyle: {
     fontSize: 28
   }
-};
-
-SearchScreen.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired
-  }).isRequired
 };
 
 export default SearchScreen;

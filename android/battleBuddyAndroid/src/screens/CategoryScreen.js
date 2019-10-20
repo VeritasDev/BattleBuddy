@@ -39,7 +39,7 @@ const CategoryScreen = ({navigation}) => {
             }
           }
         );
-        console.log(sortedAmmoMetadata);
+
         Object.keys(globalMetadata.ammoMetadata).map((x) => {
           sorted[x] = data[x];
         });
