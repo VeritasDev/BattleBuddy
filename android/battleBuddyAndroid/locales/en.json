@@ -239,6 +239,7 @@
   "dps_calc": "DPS Calculator",
   "kill_time_calc": "Kill Time Calculator",
   "damage-da14a7168b547f35ea0c6fa9f50de63e": "Damage",
+  "drug": "Painkiller",
   "effects": {
     "bloodloss": "Removes Blood Loss",
     "contusion": "Removes Contusion",

@@ -23,12 +23,10 @@ const Text = styled.Text`
 `;
 
 const SelectCompareScreen = () => {
-  const {state, navigate, ...rest} = useNavigation();
+  const {state, navigate} = useNavigation();
   const [selectedItems, setSelectedItem] = useState([
     state.params.selectedItem._id
   ]);
-
-  console.log(state, rest);
 
   const {loading, data: docs, setCollectionName, clearData} = useItems();
 
@@ -78,8 +76,8 @@ const SelectCompareScreen = () => {
               onPress={() => handleSelect(item)}
               rightElement={
                 <CheckBox
+                  disabled
                   value={selectedItems.includes(item._id)}
-                  onPress={() => handleSelect(item)}
                   tintColors={{
                     false: theme.colors.almostBlack,
                     true: theme.colors.orange
@@ -107,8 +105,8 @@ const SelectCompareScreen = () => {
                     onPress={() => handleSelect(item)}
                     rightElement={
                       <CheckBox
+                        disabled
                         value={selectedItems.includes(item._id)}
-                        onPress={() => handleSelect(item)}
                         tintColors={{
                           false: theme.colors.almostBlack,
                           true: theme.colors.orange
