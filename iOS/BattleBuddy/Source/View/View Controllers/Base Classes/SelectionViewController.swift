@@ -35,11 +35,7 @@ class SelectionViewController: BaseTableViewController {
     let selectionDelegate: SelectionDelegate
     let options: [SelectionOption]
     let titleText: String
-    var currentSelection: SelectionOption? {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var currentSelection: SelectionOption? { didSet { tableView.reloadData() } }
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -47,6 +43,7 @@ class SelectionViewController: BaseTableViewController {
         self.selectionDelegate = selectionDelegate
         self.options = options
         self.titleText = title
+
         super.init(style: .grouped)
     }
 

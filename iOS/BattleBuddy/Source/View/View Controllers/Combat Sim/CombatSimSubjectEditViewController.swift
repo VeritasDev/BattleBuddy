@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BallisticsEngine
 
 protocol SubjectEditViewControllerDelegate {
     func combatSimSubjectEditViewControllerDidCancel(_ subjectEditViewController: CombatSimSubjectEditViewController)
@@ -16,8 +17,9 @@ protocol SubjectEditViewControllerDelegate {
 class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     let characters: [Character]
     var character: SimulationCharacter
-    var ammoOptions: [Ammo]?
-    var armorOptions: [Armor]?
+    var firearmOptions: [SimulationFirearm]?
+    var ammoOptions: [SimulationAmmo]?
+    var armorOptions: [SimulationArmor]?
     let dbManager = dm().databaseManager()
     let subjectEditDelegate: SubjectEditViewControllerDelegate
 
@@ -35,15 +37,15 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
         cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
         return cell
     }()
-    let armorCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell(text: "armor".local())
+    let bodyArmorCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(text: "body_armor".local())
         cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.numberOfLines = 0
         cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
         return cell
     }()
-    let helmetCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell(text: "helmets".local())
+    let headArmorCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(text: "combat_sim_head_armor".local())
         cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.numberOfLines = 0
         cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
@@ -63,12 +65,6 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
         cell.detailTextLabel?.font = UIFont.italicSystemFont(ofSize: 14.0)
         return cell
     }()
-//    lazy var subjectTypeSelectionViewController: SelectionViewController = {
-//        return SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characters)
-//    }()
-//    lazy var aimSettingSelectionViewController: SelectionViewController = {
-//        return SelectionViewController(self, title: "combat_sim_aim_setting".local(), options: [AimSetting.centerOfMass, AimSetting.headshotsOnly, AimSetting.thoraxOnly, AimSetting.randomLegMeta, AimSetting.singleLegMeta])
-//    }()
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -100,35 +96,68 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     }
 
     override func generateSections() -> [GroupedTableViewSection] {
-        return [GroupedTableViewSection(headerTitle: nil, cells: [subjectTypeCell, aimCell, armorCell, firearmCell, ammoCell])]
+        return [GroupedTableViewSection(headerTitle: nil, cells: [subjectTypeCell, aimCell, firearmCell, ammoCell, headArmorCell, bodyArmorCell])]
     }
 
     func updateCells() {
         subjectTypeCell.detailTextLabel?.text = character.name
         aimCell.detailTextLabel?.text = character.aim.local()
-        armorCell.detailTextLabel?.text = character.armorSummary()
-        firearmCell.detailTextLabel?.text = character.firearmSummary()
+        firearmCell.detailTextLabel?.text = character.firearm?.displayNameShort
+        ammoCell.detailTextLabel?.text = character.ammo?.displayName
+        headArmorCell.detailTextLabel?.text = character.headArmor?.displayName
+        bodyArmorCell.detailTextLabel?.text = character.bodyArmor?.displayName
     }
 
-    func showArmorOptions() {
+    func showFirearmOptions() {
+        // TODO: Show type / caliber
+
+
+        if let options = firearmOptions {
+            let selectFirearmVC = SortableTableViewController(selectionDelegate: self, config: FirearmSortConfig(options: options), currentSelection: nil)
+            selectFirearmVC.currentSelection = character.firearm
+            selectFirearmVC.presentedModally = false
+            navigationController?.pushViewController(selectFirearmVC, animated: true)
+        } else {
+            showLoading()
+
+            dbManager.getAllFirearms { allFirearms in
+                self.hideLoading()
+
+                self.firearmOptions = allFirearms.compactMap { SimulationFirearm(json: $0.json) }
+                self.showFirearmOptions()
+            }
+        }
+    }
+
+    func showArmorOptions(armorTypes: [ArmorType]) {
+        // TODO: Show type / caliber
+        
         if let options = armorOptions {
-            let selectArmorVC = SortableTableViewController(selectionDelegate: self, config: ArmorSortConfig(options: options), currentSelection: nil)
+            let filteredOptions = options.filter { armorTypes.contains($0.armorType) }
+            let selectArmorVC = SortableTableViewController(selectionDelegate: self, config: ArmorSortConfig(options: filteredOptions), currentSelection: nil)
+            selectArmorVC.currentSelection = armorTypes.contains(.body) ? character.bodyArmor : character.headArmor
+            selectArmorVC.presentedModally = false
             navigationController?.pushViewController(selectArmorVC, animated: true)
         } else {
             showLoading()
 
-            dbManager.getAllBodyArmor { allArmor in
+            dbManager.getAllArmor { allArmor in
                 self.hideLoading()
 
-                self.armorOptions = allArmor
-                self.showArmorOptions()
+                self.armorOptions = allArmor.compactMap { SimulationArmor(json: $0.json) }
+                self.showArmorOptions(armorTypes: armorTypes)
             }
         }
     }
 
     func showAmmoOptions() {
+        if character.firearm == nil { return }
+
         if let options = ammoOptions {
-            let selectAmmoVC = SortableTableViewController(selectionDelegate: self, config: AmmoSortConfig(options: options), currentSelection: nil)
+            let filteredOptions = options.filter{ $0.caliber == character.firearm?.caliber }
+            let selectAmmoVC = SortableTableViewController(selectionDelegate: self, config: AmmoSortConfig(options: filteredOptions), currentSelection: nil)
+            selectAmmoVC.currentSelection = character.ammo
+            selectAmmoVC.presentedModally = false
             navigationController?.pushViewController(selectAmmoVC, animated: true)
         } else {
             showLoading()
@@ -136,7 +165,7 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
             dbManager.getAllAmmo { allAmmo in
                 self.hideLoading()
 
-                self.ammoOptions = allAmmo
+                self.ammoOptions = allAmmo.compactMap { SimulationAmmo(json: $0.json) }
                 self.showAmmoOptions()
             }
         }
@@ -151,18 +180,18 @@ extension CombatSimSubjectEditViewController {
         let cell = tableView.cellForRow(at: indexPath)
         switch cell {
         case subjectTypeCell:
-//            subjectTypeSelectionViewController.currentSelection = character
-//            navigationController?.pushViewController(subjectTypeSelectionViewController, animated: true)
+            let subjectTypeVC = SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characters)
+            subjectTypeVC.currentSelection = character
+            navigationController?.pushViewController(subjectTypeVC, animated: true)
             break
         case aimCell:
-//            aimSettingSelectionViewController.currentSelection = subject.aim
-//            navigationController?.pushViewController(aimSettingSelectionViewController, animated: true)
+            let aimVC = SelectionViewController(self, title: "combat_sim_aim_setting".local(), options: AimSetting.allCases)
+            aimVC.currentSelection = character.aim
+            navigationController?.pushViewController(aimVC, animated: true)
             break
-        case firearmCell:
-            let firearmEditVC = CombatSimFirearmEditViewController(character.firearm)
-            navigationController?.pushViewController(firearmEditVC, animated: true)
-            break
-        case armorCell: showArmorOptions()
+        case firearmCell: showFirearmOptions()
+        case headArmorCell: showArmorOptions(armorTypes: [.helmet, .attachment, .visor])
+        case bodyArmorCell: showArmorOptions(armorTypes: [.body])
         case ammoCell: showAmmoOptions()
         default: break
         }
@@ -171,20 +200,18 @@ extension CombatSimSubjectEditViewController {
 
 extension CombatSimSubjectEditViewController: SelectionDelegate {
     func selectionViewController(_ selectionViewController: SelectionViewController, didMakeSelection selection: SelectionOption) {
-//        switch selectionViewController {
-//        case subjectTypeSelectionViewController:
-//            guard let character = selection as? Character else { fatalError() }
-//            selectedCharacter = character
-//            let newPerson = Person(selectedCharacter, aimSetting: subject.aim, armor: subject.equippedArmor, firearm: subject.firearmConfig)
-//            subject = newPerson
-//        case aimSettingSelectionViewController:
-//            guard let aimSetting = selection as? AimSetting else { fatalError() }
-//            subject.aim = aimSetting
-//        default:
-//            break
-//        }
-//
-//        updateCells()
+        switch selection {
+        case let aimSelection as AimSetting:
+            character.aim = aimSelection
+        case let newCharacter as Character:
+            let currentAimType = character.aim
+            character = SimulationCharacter(json: newCharacter.json)!
+            character.aim = currentAimType
+        default:
+            fatalError()
+        }
+
+        updateCells()
         navigationController?.popViewController(animated: true)
     }
 }
@@ -192,8 +219,22 @@ extension CombatSimSubjectEditViewController: SelectionDelegate {
 extension CombatSimSubjectEditViewController: SortableItemSelectionDelegate {
     func itemSelected(_ selection: Sortable) {
         switch selection {
-        case let selectedArmor as SimulationArmor: character.armor = [selectedArmor]
-        default: fatalError()
+        case let firearmSelection as Firearm:
+            if firearmSelection.caliber != character.ammo?.caliber {
+                character.ammo = nil
+            }
+
+            character.firearm = SimulationFirearm(json: firearmSelection.json)
+        case let ammoSelection as Ammo:
+            character.ammo = SimulationAmmo(json: ammoSelection.json)
+        case let armorSelection as Armor:
+            if armorSelection.armorType == .body {
+                character.bodyArmor = SimulationArmor(json: armorSelection.json)
+            } else {
+                character.headArmor = SimulationArmor(json: armorSelection.json)
+            }
+        default:
+            fatalError()
         }
 
         updateCells()

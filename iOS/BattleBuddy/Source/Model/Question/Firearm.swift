@@ -71,15 +71,9 @@ class Firearm: BaseItem {
     }
 }
 
-class SimulationFirearm: Firearm {
-    var ammoConfig: [SimulationAmmo] = []
-
-    override init?(json: [String : Any]) {
-        super.init(json: json)
-    }
-}
+class SimulationFirearm: Firearm { }
 
 extension SimulationFirearm: CalculableFirearm {
     var resolvedFireRate: Int { return fireRate }
-    var resolvedAmmoConfig: [CalculableAmmo] { return ammoConfig }
+    var resolvedCaliber: String { return caliber }
 }

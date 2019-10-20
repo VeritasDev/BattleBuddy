@@ -297,13 +297,11 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
 
 extension HealthCalcViewController: SelectionDelegate {
     func selectionViewController(_ selectionViewController: SelectionViewController, didMakeSelection selection: SelectionOption) {
-        guard let selection = selection as? SimulationCharacter else { return }
+        guard let selection = selection as? Character, let newCharacter = SimulationCharacter(json: selection.json) else { return }
 
-        character = selection
+        character = newCharacter
         target = Person(character)
         avatar.characterId = character.id
-
-        reset()
 
         navigationController?.popViewController(animated: true)
     }

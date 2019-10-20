@@ -59,3 +59,16 @@ extension Armor: Sortable {
         }
     }
 }
+
+extension Firearm: Sortable {
+    var sortId: String { return id }
+    var params: [SortableParam] { return [FirearmSortableParam.name, FirearmSortableParam.caliber, FirearmSortableParam.fireRate] }
+    func valueForParam(_ param: SortableParam) -> String {
+        switch param {
+        case FirearmSortableParam.name: return displayNameShort
+        case FirearmSortableParam.caliber: return DependencyManagerImpl.shared.ammoUtilitiesManager().caliberDisplayName(caliber)
+        case FirearmSortableParam.fireRate: return String(fireRate)
+        default: fatalError()
+        }
+    }
+}

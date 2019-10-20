@@ -18,6 +18,7 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
     let config: SortConfiguration
     var currentSelection: Sortable?
     lazy var header: SortableHeaderView = { SortableHeaderView(delegate: self, params: config.params, initialSort: config.defaultSortParam) }()
+    var presentedModally = true
 
     required init?(coder: NSCoder) { fatalError() }
 
@@ -25,15 +26,18 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
         self.selectionDelegate = selectionDelegate
         self.config = config
         self.currentSelection = currentSelection
-        super.init(style: .plain)
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
+        super.init(style: .plain)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = config.sortTitle
+
+        if presentedModally {
+            navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
+        }
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50.0
@@ -81,6 +85,8 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
         selectionDelegate.itemSelected(config.items[indexPath.row])
     }
 }

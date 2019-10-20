@@ -19,8 +19,9 @@ class CombatSimSubjectSummaryView: BaseStackView {
             avatar.characterId = character.id
             nameLabel.text = character.name
             firearmLabel.text = character.firearm?.displayNameShort ?? none
-            ammoLabel.text = character.ammoSummary()
-            armorLabel.text = character.armorSummary()
+            ammoLabel.text = character.ammo?.displayNameShort ?? none
+            headArmorLabel.text = character.headArmor?.displayNameShort ?? none
+            bodyArmorLabel.text = character.bodyArmor?.displayNameShort ?? none
             aimLabel.text = character.aim.local()
         }
     }
@@ -40,8 +41,11 @@ class CombatSimSubjectSummaryView: BaseStackView {
     let ammoKeyLabel = CombatSimResultKeyLabel(key: "ammunition".local())
     let ammoLabel = CombatSimResultValueLabel()
 
-    let armorKeyLabel = CombatSimResultKeyLabel(key: "armor".local())
-    let armorLabel = CombatSimResultValueLabel()
+    let headArmorKeyLabel = CombatSimResultKeyLabel(key: "combat_sim_head_armor".local())
+    let headArmorLabel = CombatSimResultValueLabel()
+
+    let bodyArmorKeyLabel = CombatSimResultKeyLabel(key: "body_armor".local())
+    let bodyArmorLabel = CombatSimResultValueLabel()
 
     let aimKeyLabel = CombatSimResultKeyLabel(key: "combat_sim_aim_setting".local())
     let aimLabel = CombatSimResultValueLabel()
@@ -54,17 +58,20 @@ class CombatSimSubjectSummaryView: BaseStackView {
         addArrangedSubview(avatar)
         addArrangedSubview(nameLabel)
 
+        addArrangedSubview(aimKeyLabel)
+        addArrangedSubview(aimLabel)
+
         addArrangedSubview(firearmKeyLabel)
         addArrangedSubview(firearmLabel)
 
         addArrangedSubview(ammoKeyLabel)
         addArrangedSubview(ammoLabel)
 
-        addArrangedSubview(armorKeyLabel)
-        addArrangedSubview(armorLabel)
+        addArrangedSubview(headArmorKeyLabel)
+        addArrangedSubview(headArmorLabel)
 
-        addArrangedSubview(aimKeyLabel)
-        addArrangedSubview(aimLabel)
+        addArrangedSubview(bodyArmorKeyLabel)
+        addArrangedSubview(bodyArmorLabel)
 
         avatar.constrainWidth(70.0)
         avatar.constrainHeight(70.0)

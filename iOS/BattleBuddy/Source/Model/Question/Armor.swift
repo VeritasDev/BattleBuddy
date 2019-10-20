@@ -142,6 +142,10 @@ class SimulationArmor: Armor {
 
 // MARK: Calculable Armor
 extension SimulationArmor: CalculableArmor {
+    func copy(with zone: NSZone? = nil) -> Any {
+        return SimulationArmor(json: json)!
+    }
+
     var resolvedArmorName: String { get { return displayName } }
     var resolvedArmorClass: Int { get { return armorClass.rawValue } }
     var resolvedCurrentDurability: Double {
@@ -157,11 +161,11 @@ extension SimulationArmor: CalculableArmor {
     var resolvedProtectionZones: [BallisticsEngine.BodyZoneType] {
         var zones: [BallisticsEngine.BodyZoneType] = []
 
-        if protectsTopHead { zones.append(.head) }
-        if protectsEyes { zones.append(.head) }
-        if protectsJaws { zones.append(.head) }
-        if protectsEars { zones.append(.head) }
-        if protectsNape { zones.append(.head) }
+        if protectsTopHead { if !zones.contains(.head) { zones.append(.head) } }
+        if protectsEyes { if !zones.contains(.head) { zones.append(.head) } }
+        if protectsJaws { if !zones.contains(.head) { zones.append(.head) } }
+        if protectsEars { if !zones.contains(.head) { zones.append(.head) } }
+        if protectsNape { if !zones.contains(.head) { zones.append(.head) } }
         if protectsChest { zones.append(.thorax) }
         if protectsStomach { zones.append(.stomach) }
         if protectsLeftArm { zones.append(.leftArm) }

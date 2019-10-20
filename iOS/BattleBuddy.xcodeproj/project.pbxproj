@@ -95,7 +95,6 @@
 		27FDE6C123204CC200CA727B /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; };
 		27FDE6C323204D2A00CA727B /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
-		60595D8223581E17002364B2 /* CombatSimFirearmEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60595D8123581E17002364B2 /* CombatSimFirearmEditViewController.swift */; };
 		6083741D232BBA5F00AA9D29 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */; };
 		6083741F232BBAAE00AA9D29 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */; };
 		60837425232BC24B00AA9D29 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837424232BC24B00AA9D29 /* Global.swift */; };
@@ -104,6 +103,7 @@
 		6083742E232E534E00AA9D29 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083742D232E534E00AA9D29 /* TableViewModel.swift */; };
 		60837430232E546F00AA9D29 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */; };
 		60837432232E564F00AA9D29 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837431232E564F00AA9D29 /* LocaleManager.swift */; };
+		60C65223235A9C0C001E7555 /* FirearmSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C65222235A9C0C001E7555 /* FirearmSort.swift */; };
 		60EA7D2623331D5000EAD566 /* BaseTextfieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2523331D5000EAD566 /* BaseTextfieldCell.swift */; };
 		60EA7D2A23346CAB00EAD566 /* Armored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2923346CAB00EAD566 /* Armored.swift */; };
 		60EA7D2F2339BA6000EAD566 /* FirearmBuildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2E2339BA6000EAD566 /* FirearmBuildController.swift */; };
@@ -333,7 +333,6 @@
 		27FDE6C023204CC100CA727B /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionsViewController.swift; sourceTree = "<group>"; };
 		55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.release.xcconfig"; sourceTree = "<group>"; };
-		60595D8123581E17002364B2 /* CombatSimFirearmEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimFirearmEditViewController.swift; sourceTree = "<group>"; };
 		6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		60837424232BC24B00AA9D29 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -344,6 +343,7 @@
 		6083742D232E534E00AA9D29 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewController.swift; sourceTree = "<group>"; };
 		60837431232E564F00AA9D29 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
+		60C65222235A9C0C001E7555 /* FirearmSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirearmSort.swift; sourceTree = "<group>"; };
 		60EA7D21233239C300EAD566 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		60EA7D22233239C900EAD566 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		60EA7D2323323A2E00EAD566 /* sl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sl; path = sl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -670,6 +670,7 @@
 			children = (
 				27781CDB22F7209D007134E2 /* Sortable.swift */,
 				27BB49B722F8E67300070427 /* ArmorSort.swift */,
+				60C65222235A9C0C001E7555 /* FirearmSort.swift */,
 				27781CDD22F727BF007134E2 /* AmmoSort.swift */,
 			);
 			path = "Item Sorting";
@@ -979,7 +980,6 @@
 			children = (
 				60EA7D3D23494A0700EAD566 /* CombatSimViewController.swift */,
 				60EA7D3B23472F0900EAD566 /* CombatSimSubjectEditViewController.swift */,
-				60595D8123581E17002364B2 /* CombatSimFirearmEditViewController.swift */,
 			);
 			path = "Combat Sim";
 			sourceTree = "<group>";
@@ -1450,6 +1450,7 @@
 				EFD03DC222B2AAE000DE1874 /* ThemeManager.swift in Sources */,
 				27090E2F22DB53C600D97320 /* ItemDetailsConfiguration.swift in Sources */,
 				EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */,
+				60C65223235A9C0C001E7555 /* FirearmSort.swift in Sources */,
 				27090E2222D9FADA00D97320 /* BaseWebViewController.swift in Sources */,
 				EFF2FF4F22D4DF1F00BED024 /* UIViewUtilities.swift in Sources */,
 				27C0B17A23140061004BCE14 /* BodyZoneHealthButton.swift in Sources */,
@@ -1546,7 +1547,6 @@
 				27A7609622D2F06C00861113 /* PreviewMenuCollectionView.swift in Sources */,
 				27BB49D122FCB92000070427 /* Random.swift in Sources */,
 				EF1945A423510C31007D8242 /* SelectionViewController.swift in Sources */,
-				60595D8223581E17002364B2 /* CombatSimFirearmEditViewController.swift in Sources */,
 				60EA7D3E23494A0700EAD566 /* CombatSimViewController.swift in Sources */,
 				EF831FE122DCECB900C6C138 /* Displayable.swift in Sources */,
 				EF831FF822E8D29900C6C138 /* FirearmComparison.swift in Sources */,

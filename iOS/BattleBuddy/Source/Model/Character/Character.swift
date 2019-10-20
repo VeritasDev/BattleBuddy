@@ -32,51 +32,19 @@ class Character {
 }
 
 class SimulationCharacter: Character {
+    var aim: AimSetting = .upperBody
     var firearm: SimulationFirearm?
-    var armor: [SimulationArmor] = []
-    var aim: AimSetting = .centerOfMass
-
-    override init?(json: [String : Any]) {
-        super.init(json: json)
-    }
-
-    func firearmSummary() -> String {
-        if let firearm = firearm {
-            if firearm.ammoConfig.isEmpty {
-                return firearm.displayNameShort
-            } else {
-                let ammoConfig = ammoSummary()
-                return firearm.displayNameShort.appending(", ").appending(ammoConfig)
-            }
-        } else {
-            return "common_none".local()
-        }
-    }
-
-    func ammoSummary() -> String {
-        if let firearm = firearm, !firearm.ammoConfig.isEmpty {
-            let separator = ", "
-            return firearm.ammoConfig.compactMap{$0.displayNameShort}.joined(separator: separator)
-        } else {
-            return "common_none".local()
-        }
-    }
-
-    func armorSummary() -> String {
-        return armor.isEmpty ? "common_none".local() : armor.compactMap{$0.displayNameShort}.joined(separator: ", ")
-    }
+    var ammo: SimulationAmmo?
+    var headArmor: SimulationArmor?
+    var bodyArmor: SimulationArmor?
 }
 
 extension SimulationCharacter: CalculableCharacter {
-    var resolvedArmor: [CalculableArmor] {
-        get { return armor }
-        set(newValue) { for (index, newArmor) in newValue.enumerated() { armor[index].currentDurability = Int(newArmor.resolvedCurrentDurability) } }
+    func copy(with zone: NSZone? = nil) -> Any {
+        return SimulationCharacter(json: json)!
     }
 
-    var resolvedFirearm: CalculableFirearm? { return firearm }
-    var resolvedAimSetting: AimSetting { return aim }
-    
-    var resolvedHealthMap: [BodyZoneType : Double] {
+    var resolvedHealthMap: [BallisticsEngine.BodyZoneType : Double] {
         get {
             var convertedMap: [BodyZoneType : Double]  = [:]
             for zone in BodyZoneType.allCases {
@@ -87,7 +55,39 @@ extension SimulationCharacter: CalculableCharacter {
                     convertedMap[zone] = 0.0
                 }
             }
+
             return convertedMap
+        }
+        set(newValue) {
+            var newHealthMap: [String: NSNumber] = [:]
+            for (key, value) in newValue {
+                newHealthMap[key.getStringValue()] = NSNumber(value: value)
+            }
+            healthMap = newHealthMap
+        }
+
+    }
+    var resolvedAimSetting: BallisticsEngine.AimSetting {
+        get { return aim }
+    }
+    var resolvedFirearm: CalculableFirearm? {
+        get { return firearm }
+    }
+    var resolvedAmmo: CalculableAmmo? {
+        get { return ammo }
+    }
+    var resolvedBodyArmor: CalculableArmor? {
+        get { return bodyArmor }
+        set {
+            guard let newValue = newValue else { return }
+            bodyArmor?.currentDurability = Int(newValue.resolvedCurrentDurability)
+        }
+    }
+    var resolvedHeadArmor: CalculableArmor? {
+        get { return headArmor }
+        set {
+            guard let newValue = newValue else { return }
+            headArmor?.currentDurability = Int(newValue.resolvedCurrentDurability)
         }
     }
 }
