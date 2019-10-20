@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {TouchableOpacity} from 'react-native';
-import {theme} from '../components/Theme';
 import ScrollableContainer from '../components/common/ScrollableContainer';
 import LoadingIndicator from '../components/common/LoadingIndicator';
 import Search from '../components/common/Search';
@@ -16,7 +14,7 @@ const SearchScreen = () => {
   if (loading) return <LoadingIndicator />;
 
   const handlePress = (item) => {
-    navigate('Detail', {item, type: item._kind});
+    navigate('Detail', {item, type: item._kind, fromSearch: true});
   };
 
   return (
@@ -35,20 +33,7 @@ const SearchScreen = () => {
 };
 
 SearchScreen.navigationOptions = {
-  title: 'Items',
-  headerStyle: {
-    backgroundColor: theme.colors.almostBlack
-  },
-  headerTintColor: theme.colors.orange,
-  headerTitleStyle: {
-    fontSize: 28
-  }
-};
-
-SearchScreen.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired
-  }).isRequired
+  title: 'Search'
 };
 
 export default SearchScreen;

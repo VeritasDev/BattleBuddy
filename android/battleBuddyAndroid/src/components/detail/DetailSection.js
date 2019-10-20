@@ -41,8 +41,9 @@ const DetailSection = ({section}) => (
             </Row>
           }
           bottomDivider
-          chevron={!row.hideChevron}
+          chevron={!!row.onPress}
           containerStyle={{backgroundColor: 'black'}}
+          onPress={row.onPress}
         />
       );
     })}
@@ -55,8 +56,7 @@ DetailSection.propTypes = {
     rows: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.any.isRequired,
-        value: PropTypes.any,
-        hideChevron: PropTypes.bool
+        value: PropTypes.any
       })
     ).isRequired
   }).isRequired

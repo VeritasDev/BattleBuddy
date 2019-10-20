@@ -151,7 +151,7 @@ export class DatabaseManager extends FirebaseManager {
    *
    * @returns {Promise}
    */
-  async _getAllItemsByCollection(collection) {
+  async getAllItemsByCollection(collection) {
     try {
       const snapshot =
         collection === 'armor'
@@ -215,7 +215,7 @@ export class DatabaseManager extends FirebaseManager {
    * @param {*} key - Item key like class, caliber, armor.class (supports dot notation)
    */
   async _getAllItemsByProperty(collection, type, key) {
-    const docs = await this._getAllItemsByCollection(collection);
+    const docs = await this.getAllItemsByCollection(collection);
     const map = {};
 
     // eslint-disable-next-line no-unused-vars
@@ -297,15 +297,15 @@ export class DatabaseManager extends FirebaseManager {
   // Get all items
 
   getAllFirearms() {
-    return this._getAllItemsByCollection(ItemType.firearm);
+    return this.getAllItemsByCollection(ItemType.firearm);
   }
 
   getAllMelee() {
-    return this._getAllItemsByCollection(ItemType.melee);
+    return this.getAllItemsByCollection(ItemType.melee);
   }
 
   getAllAmmo() {
-    return this._getAllItemsByCollection(ItemType.ammo);
+    return this.getAllItemsByCollection(ItemType.ammo);
   }
 
   async getAllArmor() {
@@ -331,11 +331,11 @@ export class DatabaseManager extends FirebaseManager {
   }
 
   getAllMedical() {
-    return this._getAllItemsByCollection(ItemType.medical);
+    return this.getAllItemsByCollection(ItemType.medical);
   }
 
   getAllThrowables() {
-    return this._getAllItemsByCollection(ItemType.throwable);
+    return this.getAllItemsByCollection(ItemType.throwable);
   }
 
   // Get by type

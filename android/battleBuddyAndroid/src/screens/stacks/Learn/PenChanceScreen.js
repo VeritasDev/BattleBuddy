@@ -10,14 +10,7 @@ const PenChanceScreen = () => {
 };
 
 PenChanceScreen.navigationOptions = {
-  title: 'Penetration Chance',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'Penetration Chance'
 };
 
 export default PenChanceScreen;

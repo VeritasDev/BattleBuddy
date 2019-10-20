@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import localeString from '../../utils/localeString';
 import DetailSection from './DetailSection';
+import {useNavigation} from 'react-navigation-hooks';
+import ItemType from '../../constants/ItemType';
 
 const FirearmDetail = ({item}) => {
+  const {navigate} = useNavigation();
+
   const data = [
     {
       title: 'Properties',
@@ -12,8 +16,7 @@ const FirearmDetail = ({item}) => {
         {key: 'Caliber', value: item.caliber},
         {
           key: 'Fold/Retract',
-          value: item.foldRectractable ? 'Yes' : 'No',
-          hideChevron: true
+          value: item.foldRectractable ? 'Yes' : 'No'
         }
       ]
     },
@@ -22,16 +25,21 @@ const FirearmDetail = ({item}) => {
       rows: [
         {
           key: 'Fire Modes',
-          value: item.modes.join(', '),
-          hideChevron: true
+          value: item.modes.join(', ')
         },
-        {key: 'Fire Rate', value: `${item.rof}rpm`, hideChevron: true},
+        {key: 'Fire Rate', value: `${item.rof}rpm`},
         {
           key: 'Effective Range',
-          value: `${item.effectiveDist}m`,
-          hideChevron: true
+          value: `${item.effectiveDist}m`
         },
-        {key: 'Compare Performance'}
+        {
+          key: 'Compare Performance',
+          onPress: () =>
+            navigate('SelectCompare', {
+              selectedItem: item,
+              itemType: ItemType.firearm
+            })
+        }
       ]
     }
   ];

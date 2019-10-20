@@ -56,14 +56,7 @@ const AttributionsScreen = () => {
 };
 
 AttributionsScreen.navigationOptions = {
-  title: 'Attributions',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'Attributions'
 };
 
 export default AttributionsScreen;

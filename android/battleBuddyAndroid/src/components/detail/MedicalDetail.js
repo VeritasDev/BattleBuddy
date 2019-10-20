@@ -1,35 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DetailSection from './DetailSection';
+import {useNavigation} from 'react-navigation-hooks';
+import ItemType from '../../constants/ItemType';
 
 const MedicalDetail = ({item}) => {
-  let medicalData = [];
+  const {navigate} = useNavigation();
 
+  let medicalData = [];
   switch (item.type) {
     case 'medkit':
       medicalData = [
         {
           title: 'Properties',
           rows: [
-            {key: 'Type', value: item.type, hideChevron: true},
-            {key: 'Total HP', value: item.resources, hideChevron: true},
-            {key: 'Use Time', value: item.useTime, hideChevron: true},
+            {key: 'Type', value: item.type},
+            {key: 'Total HP', value: item.resources},
+            {key: 'Use Time', value: item.useTime},
             {
               key: 'Removes Blood Loss',
-              value: item.effects.bloodloss ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.bloodloss ? 'Yes' : 'No'
             },
             {
               key: 'Removes Contusion',
-              value: item.effects.contusion ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.contusion ? 'Yes' : 'No'
             },
             {
               key: 'Removes Fracture',
-              value: item.effects.fracture ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.fracture ? 'Yes' : 'No'
             },
-            {key: 'Compare'}
+            {
+              key: 'Compare',
+              onPress: () =>
+                navigate('SelectCompare', {
+                  selectedItem: item,
+                  itemType: ItemType.medical
+                })
+            }
           ]
         }
       ];
@@ -39,35 +46,37 @@ const MedicalDetail = ({item}) => {
         {
           title: 'Properties',
           rows: [
-            {key: 'Type', value: 'Painkiller', hideChevron: true},
-            {key: '# of Uses', value: item.resources, hideChevron: true},
-            {key: 'Use Time', value: item.useTime, hideChevron: true},
+            {key: 'Type', value: 'Painkiller'},
+            {key: '# of Uses', value: item.resources},
+            {key: 'Use Time', value: item.useTime},
             {
               key: 'Effect Duration',
-              value: item.effects.pain.duration,
-              hideChevron: true
+              value: item.effects.pain.duration
             },
             {
               key: 'Removes Pain',
-              value: item.effects.pain ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.pain ? 'Yes' : 'No'
             },
             {
               key: 'Removes Blood Loss',
-              value: item.effects.bloodloss ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.bloodloss ? 'Yes' : 'No'
             },
             {
               key: 'Removes Contusion',
-              value: item.effects.contusion ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.contusion ? 'Yes' : 'No'
             },
             {
               key: 'Removes Fracture',
-              value: item.effects.bloodloss ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.bloodloss ? 'Yes' : 'No'
             },
-            {key: 'Compare'}
+            {
+              key: 'Compare',
+              onPress: () =>
+                navigate('SelectCompare', {
+                  selectedItem: item,
+                  itemType: ItemType.medical
+                })
+            }
           ]
         }
       ];
@@ -77,30 +86,33 @@ const MedicalDetail = ({item}) => {
         {
           title: 'Properties',
           rows: [
-            {key: 'Type', value: 'Painkiller', hideChevron: true},
-            {key: '# of Uses', value: item.resources, hideChevron: true},
-            {key: 'Use Time', value: item.useTime, hideChevron: true},
+            {key: 'Type', value: 'Painkiller'},
+            {key: '# of Uses', value: item.resources},
+            {key: 'Use Time', value: item.useTime},
             {
               key: 'Removes Pain',
-              value: item.effects.pain ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.pain ? 'Yes' : 'No'
             },
             {
               key: 'Removes Blood Loss',
-              value: item.effects.bloodloss ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.bloodloss ? 'Yes' : 'No'
             },
             {
               key: 'Removes Contusion',
-              value: item.effects.contusion ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.contusion ? 'Yes' : 'No'
             },
             {
               key: 'Removes Fracture',
-              value: item.effects.bloodloss ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.bloodloss ? 'Yes' : 'No'
             },
-            {key: 'Compare'}
+            {
+              key: 'Compare',
+              onPress: () =>
+                navigate('SelectCompare', {
+                  selectedItem: item,
+                  itemType: ItemType.medical
+                })
+            }
           ]
         }
       ];
@@ -110,35 +122,37 @@ const MedicalDetail = ({item}) => {
         {
           title: 'Properties',
           rows: [
-            {key: 'Type', value: item.type, hideChevron: true},
-            {key: '# of Uses', value: '1', hideChevron: true},
-            {key: 'Use Time', value: item.useTime, hideChevron: true},
+            {key: 'Type', value: item.type},
+            {key: '# of Uses', value: '1'},
+            {key: 'Use Time', value: item.useTime},
             {
               key: 'Effect Duration',
-              value: item.effects.pain.duration,
-              hideChevron: true
+              value: item.effects.pain.duration
             },
             {
               key: 'Removes Pain',
-              value: item.effects.pain ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.pain ? 'Yes' : 'No'
             },
             {
               key: 'Removes Blood Loss',
-              value: item.effects.bloodloss ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.bloodloss ? 'Yes' : 'No'
             },
             {
               key: 'Removes Contusion',
-              value: item.effects.contusion ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.contusion ? 'Yes' : 'No'
             },
             {
               key: 'Removes Fracture',
-              value: item.effects.bloodloss ? 'Yes' : 'No',
-              hideChevron: true
+              value: item.effects.bloodloss ? 'Yes' : 'No'
             },
-            {key: 'Compare'}
+            {
+              key: 'Compare',
+              onPress: () =>
+                navigate('SelectCompare', {
+                  selectedItem: item,
+                  itemType: ItemType.medical
+                })
+            }
           ]
         }
       ];

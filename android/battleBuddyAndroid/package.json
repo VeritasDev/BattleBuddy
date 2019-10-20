@@ -11,6 +11,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint ./src",
     "format": "npm run prettier -- --write",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
@@ -22,6 +23,7 @@
     }
   },
   "dependencies": {
+    "@react-native-community/checkbox": "^0.2.0",
     "@react-native-firebase/app": "6.0.0",
     "@react-native-firebase/auth": "6.0.0",
     "@react-native-firebase/firestore": "6.0.0",

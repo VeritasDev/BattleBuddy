@@ -1,35 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DetailSection from './DetailSection';
+import {useNavigation} from 'react-navigation-hooks';
+import ItemType from '../../constants/ItemType';
 
 const AmmoDetail = ({item}) => {
+  const {navigate} = useNavigation();
+
   const data = [
     {
       title: 'Properties',
       rows: [
-        {key: 'Caliber', value: item.caliber, hideChevron: true},
+        {key: 'Caliber', value: item.caliber},
         {key: 'Related Firearms'},
-        {key: 'Penetration', value: item.penetration, hideChevron: true},
-        {key: 'Damage', value: item.damage, hideChevron: true},
-        {key: 'Armor Damage', value: item.armorDamage, hideChevron: true},
+        {key: 'Penetration', value: item.penetration},
+        {key: 'Damage', value: item.damage},
+        {key: 'Armor Damage', value: item.armorDamage},
         {
           key: 'Fragmentation Chance',
-          value: item.fragmentation.chance,
-          hideChevron: true
+          value: item.fragmentation.chance
         },
-        {key: 'Muzzle Velocity (m/s)', value: item.velocity, hideChevron: true},
-        {key: 'Tracer', value: item.tracer ? 'Yes' : 'No', hideChevron: true},
+        {key: 'Muzzle Velocity (m/s)', value: item.velocity},
+        {key: 'Tracer', value: item.tracer ? 'Yes' : 'No'},
         {
           key: 'Subsonic',
-          value: item.subsonic ? 'Yes' : 'No',
-          hideChevron: true
+          value: item.subsonic ? 'Yes' : 'No'
         }
       ]
     },
     {
       title: 'Explore',
       rows: [
-        {key: 'Compare'},
+        {
+          key: 'Compare',
+          onPress: () =>
+            navigate('SelectCompare', {
+              selectedItem: item,
+              itemType: ItemType.ammo
+            })
+        },
         {key: 'Penetration Chance'},
         {key: 'Damage Calculator'}
       ]

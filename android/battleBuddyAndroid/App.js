@@ -28,7 +28,7 @@ const App = () => {
         <Theme>
           <StatusBar
             barStyle="light-content"
-            backgroundColor={theme.colors.almostBlack}
+            backgroundColor={theme.colors.black}
           />
           <Container>
             <Navigator />

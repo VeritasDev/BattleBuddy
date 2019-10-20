@@ -1,17 +1,17 @@
 import {useState, useEffect} from 'react';
-import firestore from '@react-native-firebase/firestore';
+import {useDbManager} from '../context/FirebaseProvider';
 
 const useCollection = (collectionName) => {
-  const [state, setState] = useState();
+  const db = useDbManager();
+  const [state, setState] = useState({
+    loading: true,
+    data: null
+  });
 
   const getCollection = async () => {
-    const snapshot = await firestore()
-      .collection(collectionName)
-      .get();
+    const docs = await db.getAllItemsByCollection(collectionName);
 
-    if (snapshot) {
-      setState(snapshot._docs.map((x) => x._data));
-    }
+    setState({loading: false, data: docs});
   };
 
   useEffect(() => {
