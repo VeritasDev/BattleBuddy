@@ -2,6 +2,7 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import itemsNavigator from './ItemsNavigator';
 import learnNavigator from './LearnNavigator';
 import moreNavigator from './MoreNavigator';
+import {theme} from '../components/Theme';
 
 const Items = itemsNavigator;
 const Learn = learnNavigator;
@@ -11,14 +12,14 @@ const tabNavigator = createBottomTabNavigator(
   {Items, Learn, More},
   {
     tabBarOptions: {
-      activeTintColor: '#FF491C',
+      activeTintColor: theme.colors.orange,
       style: {
-        backgroundColor: '#191919'
-      }
+        backgroundColor: theme.colors.black,
+        height: 60
+      },
+      keyboardHidesTabBar: false
     }
   }
 );
-
-tabNavigator.path = '';
 
 export default tabNavigator;

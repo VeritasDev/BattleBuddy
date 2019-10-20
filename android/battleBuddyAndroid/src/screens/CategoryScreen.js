@@ -45,13 +45,13 @@ const CategoryScreen = ({navigation}) => {
         });
 
         return Object.entries(sorted).map(([name, items]) => {
-          if (items.length)
+          if (items && items.length)
             return <HorizontalCardBar title={name} items={items} key={name} />;
         });
       }
       default:
         return Object.entries(data).map(([name, items]) => {
-          if (items.length)
+          if (items && items.length)
             return <HorizontalCardBar title={name} items={items} key={name} />;
         });
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
-import {theme} from '../components/Theme';
 import ScrollableContainer from '../components/common/ScrollableContainer';
 import LoadingIndicator from '../components/common/LoadingIndicator';
 import Search from '../components/common/Search';
@@ -34,14 +33,7 @@ const SearchScreen = () => {
 };
 
 SearchScreen.navigationOptions = {
-  title: 'Items',
-  headerStyle: {
-    backgroundColor: theme.colors.almostBlack
-  },
-  headerTintColor: theme.colors.orange,
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'Search'
 };
 
 export default SearchScreen;

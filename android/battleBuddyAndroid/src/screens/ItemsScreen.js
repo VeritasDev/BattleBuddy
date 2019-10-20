@@ -1,13 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {TouchableOpacity} from 'react-native';
-import {theme} from '../components/Theme';
 import ScrollableContainer from '../components/common/ScrollableContainer';
 import Card from '../components/common/Card';
-// import Search from '../components/common/Search';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Search from '../components/common/Search';
+import {useNavigation} from 'react-navigation-hooks';
 
-// For now until we decide where data/images come from.
 const items = [
   {
     text: 'Firearms',
@@ -47,14 +44,16 @@ const items = [
   }
 ];
 
-const ItemsScreen = ({navigation}) => {
+const ItemsScreen = () => {
+  const {navigate} = useNavigation();
+
   const onPressHandler = (item) => {
-    navigation.navigate('Category', {...item});
+    navigate('Category', {...item});
   };
 
   return (
     <ScrollableContainer>
-      {/* <Search /> */}
+      <Search />
       {items.map((item, index) => (
         <TouchableOpacity key={index} onPress={() => onPressHandler(item)}>
           <Card {...item} />
@@ -65,21 +64,7 @@ const ItemsScreen = ({navigation}) => {
 };
 
 ItemsScreen.navigationOptions = {
-  title: 'Items',
-  headerRight: () => (
-    <Icon
-      name="magnify"
-      color={theme.colors.orange}
-      size={28}
-      style={{marginRight: 10}}
-    />
-  )
-};
-
-ItemsScreen.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired
-  }).isRequired
+  title: 'Items'
 };
 
 export default ItemsScreen;

@@ -6,6 +6,6 @@ export default {
     fontSize: 28
   },
   headerStyle: {
-    backgroundColor: theme.colors.yellow
+    backgroundColor: theme.colors.black
   }
 };
