@@ -14,21 +14,21 @@
 // MARK: - Filter/sort/compare
 "compare" = "قارن";
 "name" = "الإسم";
-"save" = "حفظ";
-"recommended" = "المٌنصح به";
-"similar" = "مماثل";
-"all" = "الكل";
+"save" = "إحفظ";
+"recommended" = "المُنصح به";
+"similar" = "مُماثل";
+"all" = "الكُل";
 "compare_with" = "قارن بـ";
 
 // MARK: - More / Attributions
-"about" = "Battle Buddy عن";
-"dev_by" = "Veritas تم التطوير من قبل";
-"dev_support" = "هل توٌد دعم المطور؟";
-"watch_ad" = "مشاهدة اعلان";
-"enable_banner_ads" = "تفعيل اعلانات البانر";
-"view_on_github" = "اعرض في قِت هب";
-"rate_this_app" = "قيم باتل بَدي";
-"attributions" = "صفات";
+"about" = "عن Battle Buddy";
+"dev_by" = "تم تطوير التطبيق من قِبل Veritas";
+"dev_support" = "هل توُد دعم المطور مادياً؟";
+"watch_ad" = "مُشاهدة إعلان";
+"enable_banner_ads" = "تفعيل إعلانات البانر (Banner) ";
+"view_on_github" = "إعرض في قِت هب";
+"rate_this_app" = "قيّم باتل بَدي";
+"attributions" = "صِفات";
 "check_out_team" = "تعرف على الفريق";
 "team" = "الفريق";
 "twitter" = "تويتر";
@@ -40,18 +40,18 @@
 "website" = "الموقع الإلكتروني";
 "spotify" = "سبوتفاي";
 "social" = "التواصل الإجتماعي";
-"music" = "موسيقاي";
+"music" = "الموسيقى المُنتجه من قِبلي";
 "website_error" = "غير قادر على عرض هذا المتحوى. يرجى التأكد من تثبيت التطبيق ذي الصله";
-"live_now" = "على الهواء المباشر الآن!";
-"feedback_title" = "التغذية الرجعية والأقتراحات";
+"live_now" = "على الهواء المباشر في تويتش الآن!";
+"feedback_title" = "التغذية الرجعية والإقتراحات";
 "feedback_subtitle" = "إنضم الى الدسكورد";
-"upcoming_features" = "مميزات قادمة";
+"upcoming_features" = "مُميزات قادمة";
 
 "twitter_description" = "إبقَ على إطلاع";
 "twitch_description" = "تابع مباشرةً على تويتش";
 "discord_description" = "إنضم إلى دسكورد المجتمع";
 "youtube_description" = "تابعني على يوتيوب";
-"instagram_description" = "الوسائط عبر انستاقرام";
+"instagram_description" = "الوسائط عبر إنستاقرام";
 "soundcloud_description" = "إستمع على ساوند كلاود";
 "spotify_description" = "إستمع على سبوتفاي";
 "website_description" = "المزيد عن فيريتاس";
@@ -67,49 +67,49 @@
 "main_menu_armor" = "دروع البدن";
 "main_menu_ballistics" = "المُنقذفات";
 "main_menu_firearms" = "الأسلحة النارية";
-"main_menu_medical" = "الطب";
-"main_menu_melee" = "اسلحة المشاجرة";
+"main_menu_medical" = "الطِب";
+"main_menu_melee" = "أسلحة المشاجرة";
 "main_menu_throwables" = "القنابل";
 "main_menu_health_calc" = "حاسبة الضرر";
 
 // MARK: - Sub-Categories
 "firearm_types" = "أنواع الأسلحة النارية";
-"calibers" = "العيار";
+"calibers" = "العِيار";
 
 // MARK: - Calculators
-"pen_chance" = "إمكانية الأختراق";
-"no_armor_selected" = "ليس هنالك درع محدد";
-"no_ammo_selected" = "ليس هنالك ذخيرة محددة";
+"pen_chance" = "إمكانية الإختراق";
+"no_armor_selected" = "ليس هنالك درع تم إختياره";
+"no_ammo_selected" = "ليس هنالك ذخيرة تم إختيارها";
 "select_ammo" = "إختيار الذخيرة";
 "select_armor" = "إختيار الدرع";
 "pen_chance_help_title" = "حاسبة إمكانية الأختراق";
-"pen_chance_help_message" = "هذه الأداة تحسب إمكانية إختراق طلقة معينة لدرع معين, عند إختيارك لدرع وطلقه يمكنك تمرير شريط التمرير لمحاكاة متانة درع معين ضد طلقة معينة في مختلف مستويات المتانة";
+"pen_chance_help_message" = "هذه الأداة تحسب إمكانية إختراق طلقة معينة لدرع معين, عند إختيارك لدرع وطلقه معينه, يمكنك تمرير شريط التمرير لمحاكاة متانة درع معين ضد طلقة معينة في مختلف مستويات المتانة";
 
 "health_calc_title" = "حاسبة الضرر";
-"total_hp" = "مجموع نقاط الصحة";
+"total_hp" = "مجموع نقاط الصِحة";
 
 "body_zone_head" = "الرأس";
 "body_zone_thorax" = "الصدر";
 "body_zone_stomach" = "البطن";
-"body_zone_right_arm" = "الذراع اليٌمنى";
-"body_zone_left_arm" = "الذراع اليٌسرى";
-"body_zone_right_leg" = "الساق اليٌمنى";
-"body_zone_left_leg" = "الساق اليٌسرى";
+"body_zone_right_arm" = "الذِراع اليُمنى";
+"body_zone_left_arm" = "الذِراع اليُسرى";
+"body_zone_right_leg" = "الساق اليُمنى";
+"body_zone_left_leg" = "الساق اليُسرى";
 
 // MARK: - Items
 "armor" = "الدروع";
 "helmets" = "الخِوَذ";
 "ballistics" = "المُنقذفات";
-"health" = "الصحة";
+"health" = "الصِحة";
 "firearms" = "الأسلحة النارية";
-"ammunition" = "الذخائر";
+"ammunition" = "الذخائِر";
 "body_armor" = "دروع البدن";
-"medical_items" = "الأدوات الطبية";
+"medical_items" = "الأدوات الطِبية";
 "throwables" = "القنابل";
-"healing_items" = "عناصر الشفاء";
+"healing_items" = "عناصر الشِفاء";
 "pain_management" = "إدارة الألم";
 "status_management" = "إدارة مؤثرات الحالة";
-"stims" = "المٌنشطات";
+"stims" = "المُنشطات";
 "grenades" = "القنابل";
 "properties" = "الخصائص";
 "performance" = "الأداء";
@@ -120,164 +120,164 @@
 "recoil" = "الإرتداد";
 
 // MARK: - Weapons
-"weapon_class" = "الفئة";
+"weapon_class" = "الفِئة";
 "assault_rifle" = "بنادق هجوميه";
-"assault_carbine" = "اسلحة كاراباين";
-"sniper_rifle" = "اسلحة قانصة";
-"designated_marksman_rifle" = "اسلحة مختصٌ الرماية";
+"assault_carbine" = "أسلحة كاراباين";
+"sniper_rifle" = "أسلحة قانصة";
+"designated_marksman_rifle" = "اسلحة مختصُ الرماية";
 "pistol" = "فرود";
 "shotgun" = "شوت قن";
-"sub_machine_gun" = "اسلحة رشاشه قصيره";
-"machine_gun" = "سلاح رشاش ثقيل (خلاط) ";
-"caliber" = "العيار";
-"fire_rate" = "معدل الإطلاق";
-"effective_range" = "نطاق الفعالية";
-"fold_or_retract" = "قابلية الطي";
+"sub_machine_gun" = "أسلحة رشاشه قصيره";
+"machine_gun" = "سِلاح رشاش ثقيل (خلاط) ";
+"caliber" = "العِيار";
+"fire_rate" = "مُعدل الإطلاق";
+"effective_range" = "نِطاق الفعالية";
+"fold_or_retract" = "قابلية الطيّ";
 "retractable" = "قابل لمتابعة الآثر";
 "build_wizard" = "مٌرشد المٌنشئات";
-"gun_build_custom" = "مٌخصص";
-"gun_build_recoil" = "اقل ارتداد";
-"gun_build_ergo" = "اقصى إيرقو";
+"gun_build_custom" = "مُخصص";
+"gun_build_recoil" = "أقل إرتداد";
+"gun_build_ergo" = "أقصى إيرقو";
 "gun_build_random" = "عشوائي";
-"fire_mode" = "وضعية الرماية";
-"fire_modes" = "وضعيات الرماية";
+"fire_mode" = "وضعية الرِماية";
+"fire_modes" = "وضعيات الرِماية";
 "fire_mode_semi" = "نصفي";
-"fire_mode_auto" = "اوتوماتيكي";
-"fire_mode_burst" = "ثلاثي";
-"fire_mode_semi_short" = "نصفي";
-"fire_mode_auto_short" = "اوتوماتيكي";
-"fire_mode_burst_short" = "إطلاق ثلاثي";
+"fire_mode_auto" = "أُوتوماتيكي";
+"fire_mode_burst" = "ثُلاثي";
+"fire_mode_semi_short" = "نِصفي";
+"fire_mode_auto_short" = "أُوتوماتيكي";
+"fire_mode_burst_short" = "إطلاق ثُلاثي";
 "action" = "النوع";
-"action_type_pump" = "بمب-شوت قن";
-"action_type_bolt" = "سلاح بولت قناص";
+"action_type_pump" = "شت قن سحب-يدوي (Pump) ";
+"action_type_bolt" = "سلاح سحب-يدوي قناص (Bolt) ";
 "action_type_pump_short" = "بمب اكشن";
 "action_type_bolt_short" = "بولت";
 "build" = "انشئ";
-"build_this_gun" = "انشئ هذا السلاح";
+"build_this_gun" = "أنشئ هذا السِلاح";
 
-"compare_preset_semi_auto_rifle" = "اسلحة نصف اوتوماتيكية";
-"compare_preset_full_auto_rifles" = "اسلحة اوتوماتيكية";
-"compare_preset_rifles_caliber_match" = "اسلحة بنفس العيار";
+"compare_preset_semi_auto_rifle" = "أسلحة نصف أُوتوماتيكية";
+"compare_preset_full_auto_rifles" = "أسلحة أُوتوماتيكية";
+"compare_preset_rifles_caliber_match" = "أسلحة بنفس العِيار";
 "compare_preset_rifles" = "البنادق";
-"compare_preset_full_auto_caliber_match" = "اسلحة اوتوماتيكية بنفس العيار";
-"compare_preset_semi_auto_pistols" = "فرود نصف اوتوماتيكية";
-"compare_preset_full_auto_pistols" = "فرود اوتوماتيكية";
-"compare_preset_pistols_caliber_match" = "فرود بنفس العيار";
-"compare_preset_pistols" = "الفرود";
+"compare_preset_full_auto_caliber_match" = "أسلحة أُوتوماتيكية بنفس العِيار";
+"compare_preset_semi_auto_pistols" = "فرود نصف أُوتوماتيكية";
+"compare_preset_full_auto_pistols" = "فرود أُوتوماتيكية";
+"compare_preset_pistols_caliber_match" = "فرود بنفس العِيار";
+"compare_preset_pistols" = "الفُرود";
 "compare_preset_manual_shotguns" = "شوت قن يدوي";
-"compare_preset_shotguns" = "اسلحة شت قن";
-"compare_preset_smgs_caliber_match" = "اسلحة اوتوماتيكية قصيرة بنفس العيار";
-"compare_preset_smgs" = "اسلحة اوتوماتيكية قصيرة";
-"compare_preset_bolt_snipers" = "اسلحة بولت قانصة";
+"compare_preset_shotguns" = "اسلحة شوت قن";
+"compare_preset_smgs_caliber_match" = "أسلحة أُوتوماتيكية قصيرة بنفس العِيار";
+"compare_preset_smgs" = "أسلحة أُوتوماتيكية قصيرة";
+"compare_preset_bolt_snipers" = "أسلحة بولت قانصة";
 "compare_preset_snipers_and_dmrs" = "القانصات والراميات";
-"compare_preset_dmrs" = "اسلحة مختصٌ الرماية";
+"compare_preset_dmrs" = "اسلحة مختصُ الرماية";
 
 // MARK: - Ammo
-"guns_for_caliber" = "اسلحة ذو صلة";
-"subsonic" = "عيار دون سرعة الصوت";
-"tracer" = "ترك آثر (تريسر) ";
+"guns_for_caliber" = "أسلحة ذو صلة";
+"subsonic" = "عِيار دون سرعة الصوت";
+"tracer" = "تارك آثر (تريسر) ";
 "muzzle_velocity" = "سرعة الفوهه (م/ث)";
-"compatible_firearms" = "الأسلحة المٌطابقة";
-"rpm" = "طلقة لكل دقيقه";
+"compatible_firearms" = "الأسلحة المُطابقة";
+"rpm" = "طلقة لكُل دقيقه";
 "meters_abbr" = "م";
 "seconds_abbr" = "ث";
 
 // MARK: - Armor
 "armor_class_0" = "لاشئ";
-"armor_class_1" = "فئة 1";
-"armor_class_2" = "فئة 2";
-"armor_class_3" = "فئة 3";
-"armor_class_4" = "فئة 4";
-"armor_class_5" = "فئة 5";
-"armor_class_6" = "فئة 6";
+"armor_class_1" = "فِئة 1";
+"armor_class_2" = "فِئة 2";
+"armor_class_3" = "فِئة 3";
+"armor_class_4" = "فِئة 4";
+"armor_class_5" = "فِئة 5";
+"armor_class_6" = "فِئة 6";
 "armor_type_body" = "درع البدن";
-"armor_type_helmet"= "خوذة";
-"armor_type_visor" = "زجاج مضاد للرصاص";
-"armor_type_attachment" = "مٌرفق";
+"armor_type_helmet"= "خوذَة";
+"armor_type_visor" = "زُجاج مُضاد للرصاص";
+"armor_type_attachment" = "مُرفق";
 "armor_zone_top" = "علوي";
 "armor_zone_eyes" = "العيون";
-"armor_zone_jaws" = "الفك";
+"armor_zone_jaws" = "الفَك";
 "armor_zone_ears" = "الأُذنان";
-"armor_zone_nape" = "مؤخر العنق";
-"armor_zone_chest" = "الصدر";
-"armor_zone_stomach" = "البطن";
-"armor_zone_left_arm" = "الذراع اليُسرى";
-"armor_zone_right_arm" = "الذراع اليُمنى";
-"armor_zone_left_leg" = "الساق اليُسرى";
-"armor_zone_right_leg" = "الساق اليُمنى";
-"armor_mat_ceramic" = "سراميك";
-"armor_mat_armored_steel" = "الفولاذ المُدرّع";
+"armor_zone_nape" = "مؤخر العُنق";
+"armor_zone_chest" = "الصَدر";
+"armor_zone_stomach" = "البَطن";
+"armor_zone_left_arm" = "الذِراع اليُسرى";
+"armor_zone_right_arm" = "الذِراع اليُمنى";
+"armor_zone_left_leg" = "السَاق اليُسرى";
+"armor_zone_right_leg" = "السَاق اليُمنى";
+"armor_mat_ceramic" = "سِراميك";
+"armor_mat_armored_steel" = "الفُولاذ المُدرّع";
 "armor_mat_aramid" = "أَراميد";
 "armor_mat_uhmwpe" = "البولي إثيلين فائق الوزن الجزيئي";
-"armor_mat_combined" = "مٌشترك";
-"armor_mat_aluminum" = "المنيوم";
+"armor_mat_combined" = "مُشترك";
+"armor_mat_aluminum" = "ألِيمنيوم";
 "armor_mat_glass" = "زجاج";
 "armor_mat_titanium" = "تايتينيوم";
 
 "armor_type" = "النوع";
 "armor_material" = "المادة";
-"armor_class" = "الفئة";
-"armor_points" = "المتانة";
-"armor_zones" = "مناطق حمايه الدرع";
+"armor_class" = "الفِئة";
+"armor_points" = "المَتانة";
+"armor_zones" = "مناطق حِمايه الدرع";
 "penalties" = "العواقب";
 "speed_penalty" = "عواقب الحِمل";
-"turn_speed_penalty" = "سرعة الإلتفاف";
+"turn_speed_penalty" = "سُرعة الإلتفاف";
 "ergo_penalty" = "عواقب الإرقنوميات";
 
 "penetration" = "الإختراق";
-"damage" = "الضرر";
-"armor_damage" = "ضرر الدرع";
-"frag_chance" = "نسبة إمكانية التجزئ";
+"damage" = "الضَرر";
+"armor_damage" = "ضَرر الدِرع";
+"frag_chance" = "نِسبة إمكانية التَجزئ";
 
 "explore" = "إستطلع";
-"compare" = "قارن";
-"compare_performance" = "قارن الأداء";
-"dps_calc" = "حاسبة الضرر لكل ثانية";
-"kill_time_calc" = "حاسبة زمن القتل";
+"compare" = "قارِن";
+"compare_performance" = "قارِن الأداء";
+"dps_calc" = "حاسِبة الضَرر لكُل ثانية";
+"kill_time_calc" = "حاسبة زمَن القَتل";
 
 // MARK: - Medical
-"damage" = "ضرر";
-"contusion" = "كدمة";
-"fracture" = "كسر";
-"pain" = "الم";
-"medkit" = "عدد الطب";
-"painkiller" = "المٌسكنات";
-"accessory" = "المٌلحقات";
+"damage" = "ضَرر";
+"contusion" = "كَدمة";
+"fracture" = "كَسر";
+"pain" = "ألَم";
+"medkit" = "عِدد الطِب";
+"painkiller" = "المُسكنات";
+"accessory" = "المُلحقات";
 "stimulator" = "المُنشطات";
-"use_time" = "زمن الإستخدام";
-"effect_duration" = "زمن الأثر";
+"use_time" = "زمَن الإستخدام";
+"effect_duration" = "زمَن الأثر";
 "use_count" = "عدد مرات الإستخدام";
-"hp_resource" = "مجموع نقاط الصحة";
-"removes_bloodloss" = "يزيل النزيف";
-"removes_contusion" = "يزيل الكدمات";
-"removes_fracture" = "يزيل الكسور";
-"removes_pain" = "يزيل الألم";
-"hydration_modifier" = "معدل الإرتواء";
-"energy_modifier" = "معدل الطاقة";
+"hp_resource" = "مجموع نِقاط الصحة";
+"removes_bloodloss" = "يُزيل النَزيف";
+"removes_contusion" = "يُزيل الكَدمات";
+"removes_fracture" = "يُزيل الكُسور";
+"removes_pain" = "يُزيل الألم";
+"hydration_modifier" = "مُعدل الإرتواء";
+"energy_modifier" = "مُعدل الطاقة";
 
 // MARK: - Throwables
-"throwable_frag" = "قنبلة";
-"throwable_flash" = "قنبلة إعماء";
-"throwable_smoke" = "قنبلة دخان";
-"fuse_time" = "زمن الإشعال";
-"explosion_radius_min" = "الحد الأدنى لمدى الإنفجار";
-"explosion_radius_max" = "الحد الأعلى لمدى الإنفجار";
-"fragmentation_count" = "عدد الشظايا";
+"throwable_frag" = "قُنبلة";
+"throwable_flash" = "قُنبلة إعماء";
+"throwable_smoke" = "قُنبلة دخان";
+"fuse_time" = "زمَن الإشعال";
+"explosion_radius_min" = "الحَد الأدنى لمدى الإنفجار";
+"explosion_radius_max" = "الحَد الأعلى لمدى الإنفجار";
+"fragmentation_count" = "عَدد الشظايا";
 
 // MARK: - Melee
-"damage" = "الضرر";
-"rate" = "معدل الضرب";
-"range" = "المدى";
+"damage" = "الضَرر";
+"rate" = "مُعدل الضَرب";
+"range" = "المَدى";
 
-"stab" = "طعن";
-"stab_dmg" = "ضرر الضعن";
-"stab_rate" = "معدل الضعن";
-"stab_range" = "مدى الطعن";
+"stab" = "طَعن";
+"stab_dmg" = "ضَرر الطَعن";
+"stab_rate" = "مُعدل الطَعن";
+"stab_range" = "مَدى الطَعن";
 
 "slash" = "سلاش";
-"slash_dmg" = "ضرر السلاش";
-"slash_rate" = "معدل السلاش";
-"slash_range" = "مدى السلاش";
+"slash_dmg" = "ضَرر السلاش";
+"slash_rate" = "مُعدل السلاش";
+"slash_range" = "مَدى السلاش";
 
 // MARK: - Posts
 "ballistics_title" = "الدروع والمقذوفات: الأساسيات";
@@ -298,33 +298,190 @@
 "ballistics_body_3_title" = "التلخيص";
 "ballistics_body_3" = "نظام المٌنقذفات في تاركوف معقد ويتطلب الخبرة والمعرفة لتتمكن من استخدامها في صالحك, الفديو الذي بالأعلى يشرح أساسيات هذا الجانب من اللعبه";
 
-"health_title" = "حالة وصحة لاعبك";
+"health_title" = "حالة وصِحة لاعبك";
 "health_body_1" = "هذه المعلومات قادمه قريباً";
 
-"upcoming_body_1" = "لدي الكثير من المميزات الرائعة مخططه لهذا التطبيق ولايمكنني الأنتظار لصُنعها, مثل الخرائط التفاعلية, تعديل الأسلحة, الحاسبات, المهام, المهارات, والكثير ولكنني اردت ان اطلق النسخة الأُولى في اسرع وقت ممكن لكي اتلقى التغذية الرجعيه. تطوير تطبيق اندرويد والويب قادم قريباً.";
+"upcoming_body_1" = "لدي الكثير من المُميزات الرائعة مُخططه لهذا التطبيق ولايُمكنني الإنتظار لصُنعها, مِثل الخرائط التفاعلية, تعديل الأسلحة, الحاسبات, المهام, المهارات, والكثير ولكنني أردت أن اطلق النسخة الأُولى في اسرع وقت مُمكن لكي أتلقى التغذية الرجعيه. تطوير تطبيق اندرويد والويب قادم قريباً.";
 
 "attributions_api" = "Morphy2k & قاعدة تاركوف";
 "attributions_nofam" = "NoFoodAfterMidnight";
 "attributions_willerz" = "Willer_Z";
-"attributions_community" = "مجتمع";
+"attributions_community" = "مُجتمع";
 "attributions_bsg" = "Battlestate Games Limited";
-"attributions_misc" = "عناصر قانونية متنوعة";
-"attributions_translations" = "الترجمة";
+"attributions_misc" = "عناصر قانونية مُتنوعة";
+"attributions_translations" = "التَرجمة";
 
 "attributions_api_descr" = "المشروع لم يكن ممكنا ً بدون عمل التطوير الرائع الذي قام به مورفي على قاعدة بيانات تاركوف وواجهة برمجة التطبيقات الأساسية.";
-"attributions_nofam_descr" = "البطل المجهول في مجتمع تاركوف, مصمم مخططات الذخائر, والمتعاونون على اللآلات الحاسبة للمقذوفات والمعلومات ذات الصلة, سفير الذخائر, بارون المقذوفات, استاذ الأختراق!";
-"attributions_willerz_descr" = "الكثير من الحب والتقدير لإبن بلدي لتوفيره الكثير من اللقطات المصورة واعطائي الإذن لإستخدامها في التطبيق, وايضاً احد افضل اللاعبين في العالم.";
-"attributions_community_descr" = "الكثير من الحب لمجتمع الدسكورد لكل عملهم الجاد في اخذ اللقطات والصور الموجودة في التطبيق.";
-"attributions_translations_descr" = "تمت الترجمة لجميع اللغات من قبل اعضاء المجتمع الذين تبرعوا بوقتهم وجهدهم لهذا التطبيق, الجميع في العالم يقدر جهدكم";
+"attributions_nofam_descr" = "البطل المجهول في مجتمع تاركوف, مُصمم مُخططات الذخائِر, والمُتعاونون على اللآلات الحاسبة للمقذوفات والمعلومات ذات الصلة, سفير الذخائِر, بارون المقذوفات, أستاذ الإختراق!";
+"attributions_willerz_descr" = "الكثير من الحُب والتقدير لإبن بلدي, لتوفيره الكثير من اللقطات المُصورة وإعطائي الإذن لإستخدامها في التطبيق, وايضاً احد أفضل اللاعبين في العالم.";
+"attributions_community_descr" = "الكثير من الحُب لمجتمع الدسكورد لكل عملهم الجاد في اخذ اللقطات والصور الموجودة في التطبيق.";
+"attributions_translations_descr" = "تمت الترجمة لجميع اللغات من قِبل اعضاء المجتمع الذين تبرعوا بوقتهم وجهدهم لهذا التطبيق, الجميع في العالم يقدر جهدكم";
 "attributions_bsg_descr" = "شكر خاص لنيكيتا لدعمه هذا التطبيق ولكل العاملين في بي اس جي لكل العمل الجاد الذي خلق افضل لعبة منظور اول حربية في التاريخ!";
-"attributions_misc_descr" = "جميع ايقونات التواصل الإجتماعي صٌنعت من قبل ابشيك بيبالفا من موقع ايكون فايندر بترخيص من سيرجي باتوتن من ناون بروجكت";
+
 
 // Analytics
-"total_users_count" = "%@ باتل باديز المنضمين للمعركة";
+"total_users_count" = "%@ باتل بَدي مُنضمين للمَعركة";
 
 // ----------------------------------------
 // V1.0.1
-"global_stats" = "إحصائيات المجتمع";
+"global_stats" = "إحصائيات المُجتمع";
 "settings" = "الخيارات";
-"language_system_default" = "كالنظام";
-"language" = "اللغة";
+"language_system_default" = "مماثل للنظام";
+"language" = "الُلغة";
+
+// ----------------------------------------
+// V1.1.0
+
+// MARK:- Common
+"firearm" = "سِلاح ناري";
+"common_none" = "لايوجد";
+"common_refine" = "تَحسين";
+
+// MARK:- More
+"days_since_wipe" = "%@ ايام منذ آخر مسح(wipe) ";
+"bud_leaderboard" = "قائمة متصدرين Bud©";
+"total_ads_watched" = "%@ إعلان تمت مشاهدته من قِبل المُجتمع!";
+"app_version" = "نسخة التطبيق";
+"your_bud_score" = "نُقاط Bud©";
+"bud_reward" = "إسترد المُكافئات";
+"bud_reward_title" = "تَم إسترداد المُكافئة";
+"bud_reward_message" = "شكراً لكونَك Bud©";
+
+// Being A Bud
+"bud_points" = "نُقاط Bud©";
+"bud_how_to_title" = "كيفَ تُصبح Bud©";
+"bud_how_to_subtitle" = "لقَد طورت باتل بدي في وقتي الفارغ لإفادة مجتمع تاركوف. لَم أجعل التطبيق مدفوعاً, ولا أُجبر المستخدم على مشاهدة الإعلانات المزعجة, كُل التكاليف المُتعلقة بالخَوادم والتَخزين والصيانة مُتكبده عليّ شخصياً, فَعلم أن أي وكل الدعم مُقدر بشكل كبير! جميع من يقرأ هذا الكلام باتل بدي بالنسبة لي. \n\nAs يُعتبر شئ صغير يعبر عن مدى تقديري لكونَك جزء من تجربة باتل بدي, هناك العديد من الطُرق الذي يمكنك من خِلالها الحصول على نقاط Bud© لكي يمُكنك التعبير عن مدى كونك Bud! لدي الكثير من الأفكار عن كيفية الحصول على هذة النُقاط في المستقبل, لكن حتى هذة اللحظة هي مجرد وسام فخر لإثبات مدى دعمك لمجتمع باتل بدي! ماالذي تسأله؟ كيف يمكنك الحصول على نقاط Bud©؟ التالي بعض الطُرق...";
+
+"bud_how_to_title_1" = "عُد في كثير من الأحيان";
+"bud_how_to_body_1" = "في لحظات عشوائية خلال إستخدامك للتطبيق, ستتمكن من من الحصول على جائزة نقاط Bud© عشوائية. البدي دائماً يكافئ عند ولائه وانسجامه! في أي وقت الخيار \"Receive Reward\" يكون متوفر في قائمة \"المزيد\", انقر ذلك للحصول على نقاط Bud© مجانية ولاتنسى بأن تقوم بالنظرة على قائمة المتصدرين لمعرفة إن كنت البدي الأفضل!";
+
+"bud_how_to_title_2" = "شاهد اعلان";
+"bud_how_to_body_2" = "طريقه أُخرى للحصول على نُقاط Bud© هي مُشاهدة الإعلانات. في الشاشة الرئيسية, هناك خيار مُشاهدة إعلان \"Watch an Ad\. عند توفر إعلان من احد المُعلنين, سيُمكنك مشاهدة إعلان قصير وسيتم مُكافأتك لِعرض مدى كونك بدي. بعد مُشاهدة إعلان, إعلان آخر سيكون متوفر لوقت محدد, إذا كُنت تريد بأن تصبح بدي عظيم, كُن في غاية الصبر!";
+
+"bud_how_to_title_3" = "فعّل إعلانات البانر (Banner) ";
+"bud_how_to_body_3" = "تفعيل إعلانات البانر طريقه أُخرى لتكون بدي رائع! يُمكنك تفعيل إعلانات البانر في قائمة الإعدادات أو الخيارات! ولكن لاتكون بدي مشاكس, إن قُمت بتعطيل إعلانات البانر, النقاط التي كسبتها سيتم تجميدها حتى تقوم بإعادة تفعيلها مُجدداً.";
+
+"bud_how_to_title_4" = "طُرق أُخرى لتكون بدي";
+"bud_how_to_body_4" = "كُلما تمت إضافة مُميزات إلى باتل بدي سيكون هنالك العديد من الطُرق الجديدة لِكَسب وإستخدام نُقاط Bud©! كونوا في الإنتظار!";
+
+// MARK:- Settings
+"profile" = "صفحة التعريف";
+"nickname" = "الإسم المُستعار";
+"nickname_placeholder" = "الإسم المُستعار";
+"nickname_anon" = "مَجهول";
+"app_settings" = "إعدادات التطبيق";
+"settings_save_error" = "لم يتم حِفظ الإعدادات الخاصة بك, الرجاء المُحاولة مرةً أُخرى";
+
+// MARK:- Menu Items
+"main_menu_helmets" = "الخِوَذ";
+"main_menu_mods" = "التعديلات";
+"main_menu_combat_sim" = "مُحاكي المعارك";
+"main_menu_characters" = "الشخصيات";
+"main_menu_visors" = "الواقي الزُجاجي";
+
+// MARK:- Attributions
+"attributions_smoooth" = "SmooothBrain";
+"attributions_smoooth_descr" = "الكثير من التقدير لهذا الرجل لتصميمه وعمله على مدى كل منصة التطبيق متوفر فيها, من العلامات التجارية والى الصور والرسومات الثلاثية الأبعاد! هذا الرجل حقاً اسطورة";
+"attributions_betrix" = "Betrix";
+"attributions_betrix_descr" = "الكثير من الصور الخلابة للخرائظ وصور العناصر تمت من قبل بيتريكس!";
+
+// MARK:- Helmets / Accessories
+"hearing_penalty" = "السَمع";
+"hearing_penalty_high" = "عاليه";
+"hearing_penalty_low" = "قليله";
+"hearing_penalty_none" = "لا شئ";
+"hearing_penalty_full" = "عواقب السَمع";
+"speed_penalty_full" = "عواقب السرعة";
+"turn_speed_penalty_full" = "عواقب الإلتفاف";
+"ergo_penalty_full" = "عواقب الإرقنوميات";
+"armor_type" = "النوع";
+
+// MARK:- Mods
+"modification" = "التعديلات";
+"modificationBarrel" = "انابيب الفُوهه";
+"modificationBipod"  = "النَواصب";
+"modificationCharge" = "مقابض الشحن";
+"modificationDevice" = "الأجهزة";
+"modificationForegrip" = "المقابض";
+"modificationGasblock" = "موانع الغازات";
+"modificationGoggles" = "النظارات الواقية";
+"modificationHandguard" = "مقابض اليد";
+"modificationLauncher" = "قاذِفة";
+"modificationMount" = "القواعد";
+"modificationMuzzle" = "الفُوهات";
+"modificationPistolgrip" = "مقابض المُسدس";
+"modificationReceiver" = "مُستقبل الرصاص";
+"modificationSight" = "أجهزة التسديد";
+"modificationSightSpecial" = "أجهزة التسديد الخاصة";
+"modificationStock" = "دواعم الكتف";
+
+// MARK:- Sound Training
+"sound_training" = "بيتا التدريب الصوتي";
+"sound_training_start" = "إبدأ التدريب";
+"sound_training_commit" = "إحزر";
+"sound_training_result_correct" = "احسنت!";
+"sound_training_result_wrong" = "حاول مرةً أُخرى!";
+
+"sound_localization_info_title" = "تَعلم كيف تُحدد إتجاة الصوت";
+"sound_localization_info_note_1" = "التدريب الصوتي يُعتبر في الطور التجريبي, يٌنصح بإستخدام سماعات الرأس!";
+"sound_localization_info_body_1" = "تاركوف في الوقت الحالي تستخدم النِظام الصوتي (stereo) فقط, والذي يُعتبر أكثر من كافي لتحديد اماكن حدوث الأصوات في أكثر الأحيان. في هذه اللحظة لايوجد دعم حقيقي للصوت المُحيطي ذي نوع 5.1 أو 7.1, فلذلك أنا انصح بشده عدم إستخدام أي برنامج محاكاة الصوت المُحيطي أو الصوت المُحيطي الوهمي في إعدادات سماعات الرأس أو في إعدادات ويندوز .\n\n بلاشك هنالك الكثير من الأشخاص الذين يتمسكون بفاعلية تلك البرامج بشدة, ولكن ببساطه هي ليست أساسيه أو مطلوبه, ولن تعطيك أي معلومات إضافيه عن مدى أو بُعد الصوت. اللعبة تُصدر أصوات (stereo) والتي تكون ذي طابع قناتين صوت يُمنى ويُسرى ليس أكثر, في خلال تجربتي تلك البرامج والإعدادات تجعل تحديد إتجاه الصوت اصعب وليس أسهل. إذا كُنت تواجه مشاكل في تحديد إتجاهات الأصوات قُم بتعطيل هذه الإعدادات وأُنظر هل ذلك سيحدث فرق, قد تكون مُتفاجئاً بالنتائج!";
+"sound_localization_info_subtitle_2" = "كيف تلعب؟";
+"sound_localization_info_body_2" = "الهدف من هذه اللعبة القصيره أن تقوم بمحاولة تحديد إتجاة الصوت الذي يُحيط بشخصيتك التي على الشاشة. عندما تبدأ, ستسمع نغمه تكرر بشكل منتظم, مُتجهه بإتجاه معين في مُحيط الشخصية في مدى 360 درجة. \n\nSwipe مرر إصبعك ليمين أو يسار الشاشة لتحريك لاعبك, كما يمكنك ذلك بالماوس في حاسبك الشخصي. محاكياً تغير بُعد الصوت من اذنيك اليُمنى واليُسرى, الصوت سيتغيّر تِبعاً لذلك. \n\n عندما تكون النغمه ذات قوة صوت مماثله في إذنك اليُمنى واليُسرى, لاعبك سيكون بالأغلب ينظر في مكان مصدر الصوت. عندما تنتهي, أكد ذلك عن طريق ضغط الزر لرؤية إن قُمت بالحزر بشكلٍ صحيح!.";
+"sound_localization_info_subtitle_3" = "الصوت الأمامي والخلفي متشابهان؟";
+"sound_localization_info_body_3" = "ربما قد لاحظت أن الأصوات التي تحدث أمامك أو خلفك مباشرتاً لايُمكن التمييز بينها, في كلا الحالتين, قوة الصوت التي تكون في اذنيك اليُمنى واليُسرى متساويه. بغض النظر عن معرفتك المُسبقة للمسطحات المحيطه بك والأصوات التي تُصدرها,التي تمكنك من معرفه مصدر الصوت, كل ذلك يُعتبر مُفيد جداً لتحديد إتجاهات الأصوات التي تحدث حولك. الطريقه الوحيده لمعرفة الفرق بين الأصوات التي خلفك أو امامك هي بأن تقوم بتحريك رأس لاعبك مع مُلاحظة تغير الصوت, قُم بإلقاء نظره على الصورة التي بالأسفل:";
+"sound_localization_info_body_4" = "عندما تُحرك لاعبك الى اليمين أو اليسار, أو تُحرك رأس لاعبك فقط عند إستخدامك لخاصيه النظر الحر free-look, من المُفترض أن يُمكنك مُلاحظة إرتفاع أو إنخفاص قوة الصوت في كل إذن. عندما تنظر برأس لاعبك إلى اليمين والصوت أمامك مباشرتاً. إذنك اليُسرى ستكون أقرب الى الصوت وإذنك اليُمى أبعد, فلذلك الصوت سيكون أعلى في اذنك اليُسرى عن اليُمنى. والعكس, إذا كان الصوت خلفك, عندما تتحرك لليمين الصوت سيكون أعلى في اذنك اليُمنى أعلى من اليُسرى. حاول تذكر ذلك عن محاولتك لتحديد إتجاه الصوت, هذه الأداة تعمل بالضبط كما يعمل الصوت في تاركوف, وأكثر العاب التصويب بالمنظور الأول.";
+
+"simulate_gunshot_pen" = "Shoot\nw/ بإختراق";
+"simulate_gunshot_no_pen" = "Shoot\n (من دون إختراق) ";
+
+// MARK:- Combat Sim
+"combat_sim_subject_type" = "نوع الشخصية";
+"combat_sim_aim_setting" = "إعداد";
+"combat_sim_edit_subject" = "تعديل مِحور الإختبار";
+"combat_sim_run" = "أُركض";
+"combat_sim_results" = "نتائج المُحاكاة";
+"combat_sim_results_iterations" = "المُتكررات";
+"combat_sim_results_winner" = "فائز";
+"combat_sim_results_loser" = "خاسر";
+"combat_sim_results_tie" = "تعادل";
+"combat_sim_results_win_percent" = "نسبة الفوز";
+"combat_sim_settings" = "خيارات المحاكاة";
+"combat_sim_tap_to_edit" = "أنقر الصورة لتعديل مِحور الإختبار";
+"combat_sim_edit_firearm" = "تعديل السلاح";
+"combat_sim_head_armor" = "دِرع الرأس";
+
+"combat_sim_pen_setting" = "خيارات الإختراق";
+"combat_sim_pen_setting_realistic_desc" = "الطلقات لها نفس فرصةإختراق الدروع التي بداخل تاركوف";
+"combat_sim_pen_setting_always_desc" = "الطلقات دائماً ستخرق الدرع لطالما كانت ليست بالعدد 0, على سبيل المثال إن كانت فرصة الإختراق تساوي %1 فإنها دائماً ستخترق, ولاكن إن كانت %0 لن تخترق. ";
+"combat_sim_pen_setting_never_desc" = "الطلقات لن تخترق أي درع إلا إذا كانت المتانة للدرع تساوي %0, بذلك تكون فرصة الإختراق تساوي %100";
+
+"combat_sim_frag_setting" = "إعداد الشظايا";
+"combat_sim_frag_setting_realistic_desc" = "الرصاص له نفس الفرصة لتجزئة الشظايا كما تكون في اللعبة";
+"combat_sim_frag_setting_always_desc" = "الطلقات ستُحدث شظايا دائماً لطالما كانت فرضة الشظايا ليست تساوي 0. في وقت كتابة هذا المقال, الذخائر دنيئة الأختراق, كذخائر RIP للشوت-قَن, لايمكنها حالياً التشظي في اللعبه بغض النظر عن انها تملك فرصه تشظي بقيمه %100.";
+"combat_sim_frag_setting_never_desc" = "الرصاص لن يَنشر الشظايا ابداً";
+
+"aim_setting_upper_body" = "البدن العُلوي";
+"aim_setting_center_mass" = "مركز الكُتلة";
+"aim_setting_headshots" = "طلقة مباشره في الرأس";
+"aim_setting_random_leg" = "ضربة meta الساق عشوائية";
+"aim_setting_single_leg" = "ضربة meta الساق مفرده";
+"aim_setting_thorax" = "الصدر";
+
+"aim_setting_upper_body_desc" = "كل الطلقات المُطلقة ستصيب الهدف في مُنتصف البدن, ويتضمن ذلك الأذرعه, البطن, والصدر, ونسبة صغيرة لإصابة الرأس.";
+"aim_setting_center_mass_desc" = "كل الطلقات المُطلقة ستصيب الهدف في مُنتصف البدن, ويتضمن ذلك الأذرعه, البطن, والصدر.";
+"aim_setting_headshots_desc" = "كل الطلقات المُطلقه ستصيب الرأس مباشرتاً.";
+"aim_setting_random_leg_desc" = "كل الطلقات المُطلقه لها فُرص متساوية لإصابة أي ساق.";
+"aim_setting_single_leg_desc" = "كل الطلقات التي ستُطلق ستصيب على نفس الساق.";
+"aim_setting_thorax_desc" = "كُل الطلقات التي ستُطلق ستصيب الصدر.";
+
+"simulation_result_win" = "فوز";
+"simulation_result_loss" = "خسارة";
+"simulation_result_tie" = "تعادل";
+
+"simulation_win_percent" = "نسبة الفوز";
+"simulation_time_to_kill" = "مُتوسط زمن القتل";
+"simulation_win_shots_to_kill" = "مُتوسط عدد الرصاص القاتل";
+
+// ----------------------------------------
+// V1.1.0 - Changes to existing translations
+"attributions_misc_descr" = "ايقونات التواصل الإجتماعيه من Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) جميع الحقوق محفوظة. وايقونات (Brain) من قبل Serget Pututin من Noun Project. والtop down animations من قبل Riley Gombart.";

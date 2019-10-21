@@ -328,3 +328,160 @@
 "settings" = "Opciones";
 "language_system_default" = "Sistema";
 "language" = "Idioma";
+
+// ----------------------------------------
+// V1.1.0
+
+// MARK:- Common
+"firearm" = "Arma";
+"common_none" = "Ninguna";
+"common_refine" = "Ajustar";
+
+// MARK:- More
+"days_since_wipe" = "%@ días desde el último formateo...";
+"bud_leaderboard" = "Marcador de Colegas";
+"total_ads_watched" = "¡ %@ de anuncios vistos por la comunidad!";
+"app_version" = "Versión de la app";
+"your_bud_score" = "Tu puntuación Colega";
+"bud_reward" = "Canjear recompensa";
+"bud_reward_title" = "Recompensa canjeada";
+"bud_reward_message" = "Gracias por ser un Colega!";
+
+// Being A Bud
+"bud_points" = "Bud Points©";
+"bud_how_to_title" = "Cómo ser un Colega";
+"bud_how_to_subtitle" = "He desarrollado Battle Buddy en mi tiempo libre para beneficiar a la comunidad de Escape from Tarkov. No cobro por la aplicación, y no trae anuncios por defecto, así que cualquiera puede usarla gratis sin los molestos pop-ups. Todos los costes de desarrollo y apoyo relacionados con servidores, almacenamiento y mantenimiento corren a mi propio cargo, ¡así que cualquier y todo apoyo es enormemente apreciado! Todos los que estáis leyendo esto sois mis.\n\nComo una pequeña muestra de mi aprecio por formar parte de la experiencia Battle Buddy, ¡hay varias maneras de obtener Bud Points© para presumir como de Colega eres! Tengo un montón de ideas de cómo se podrían usar estos puntos en el futuro, ¡pero por ahora son simplemente una medalla de honor para demostrar tu apoyo a la comunidad de Battle Buddy! ¿Qué dices? ¿Cómo consigues Bud Points©? ¡Gran pregunta! Aquí van un par de formas...";
+
+"bud_how_to_title_1" = "Vuelve a menudo";
+"bud_how_to_body_1" = "A intervalos aleatorios mientra usas la app, tendrás la habilidad de reclamar una recompensa de Bud Points©. ¡Mis colegas son siempre recompensados por su lealtad y constancia! En cualquier momento en el que la opción de \"Canjear recompensa\" aparezca en el menú Más, púlsala para conseguir Bud Points© gratis ¡y asegúrate de mirar el marcador de Colegas para ver si eres mi mejor colega!";
+
+"bud_how_to_title_2" = "Mira anuncios";
+"bud_how_to_body_2" = "Otra manera de ser un colego y conseguir Bud Points© es viendo anuncios. En el menú principal Más, hay la opción de \"Mira un anuncio\". Si hay un anuncio disponible de nuestros proveedores de contenido, podrás ver un pequeño anuncio y serás recompensado con Bud points mostrando cómo de colega eres. Después de ver publicidad, habrá otro disponible después de un rato, ¡así que si quieres ser un gran colega, sé paciente!";
+
+"bud_how_to_title_3" = "Activa los anuncios de banner";
+"bud_how_to_body_3" = "¡Activar los anuncios en el banner es otra increíble manera de ser un colega! ¡Puedes activar los anuncios en el banner en la pantalla de Opciones! Sin embargo, no intentes ser un colega tramposete, si desactivas los anuncios de banner, los puntos que hayas conseguido serás perdidos hasta que los reactives.";
+
+"bud_how_to_title_4" = "Más maneras de ser un colega";
+"bud_how_to_body_4" = "¡Cuanto más características se incluyan en Battle Buddy, más opciones para conseguir Bud Points© emergerán! ¡Estad atentos, colegas!";
+
+// MARK:- Settings
+"profile" = "Perfil";
+"nickname" = "Apodo";
+"nickname_placeholder" = "Apodo";
+"nickname_anon" = "Anónimo";
+"app_settings" = "Opciones de la app";
+"settings_save_error" = "No fue posible guardar tus opciones, por favor inténtalo más tarde.";
+
+// MARK:- Menu Items
+"main_menu_helmets" = "Cascos";
+"main_menu_mods" = "Modificaciones";
+"main_menu_combat_sim" = "Simulador de combate";
+"main_menu_characters" = "Personajes";
+"main_menu_visors" = "Visores";
+
+// MARK:- Attributions
+"attributions_smoooth" = "SmooothBrain";
+"attributions_smoooth_descr" = "Felicitaciones a este tío por su diseño a través de todas las plataformas en las que estoy activo, desde logos hasta miniaturas, portadas de álbumes y anmimaciones 3D - ¡este tío es una leyenda!";
+"attributions_betrix" = "Betrix";
+"attributions_betrix_descr" = "¡Muchas de las preciosas imágenes del menú y capturas de pantalla del juego fueron hechas por Betrix!";
+
+// MARK:- Helmets / Accessories
+"hearing_penalty" = "Escucha";
+"hearing_penalty_high" = "Alta";
+"hearing_penalty_low" = "Baja";
+"hearing_penalty_none" = "Ninguna";
+"hearing_penalty_full" = "Penalización a la escucha";
+"speed_penalty_full" = "Penalización a la velocidad";
+"turn_speed_penalty_full" = "Penalización a la velocidad de giro";
+"ergo_penalty_full" = "Penalización a la ergonomía";
+"armor_type" = "Tipo";
+
+// MARK:- Mods
+"modification" = "Modificación";
+"modificationBarrel" = "Barril";
+"modificationBipod"  = "Bípode";
+"modificationCharge" = "Pieza corredera";
+"modificationDevice" = "Dispositivo";
+"modificationForegrip" = "Empuñadura frontal";
+"modificationGasblock" = "Bloqueador de gas";
+"modificationGoggles" = "Gafas";
+"modificationHandguard" = "Guardamanos";
+"modificationLauncher" = "Lanzador";
+"modificationMount" = "Montura";
+"modificationMuzzle" = "Boca de cañón";
+"modificationPistolgrip" = "Empuñadura de pistola";
+"modificationReceiver" = "Receiver";
+"modificationSight" = "Mira";
+"modificationSightSpecial" = "Mira (especial)";
+"modificationStock" = "Culata";
+
+// MARK:- Sound Training
+"sound_training" = "Beta de entrenamiento auditivo";
+"sound_training_start" = "Empezar entrenamiento";
+"sound_training_commit" = "Probar";
+"sound_training_result_correct" = "¡Correcto!";
+"sound_training_result_wrong" = "¡Sigue intentándolo!";
+
+"sound_localization_info_title" = "Aprende a localizar sonido";
+"sound_localization_info_note_1" = "¡La herramienta de entrenamiento auditivo está actualmente en beta! ¡Se necesitan cascos!";
+"sound_localization_info_body_1" = "Escape from Tarkov actualmente utiliza el sonido estéreo estándar, que es más que adecuado para ubicar sonidos la mayoría de veces. Por el momento, no se soporta audio envolvente, ni 5.1 ni 7.1, y por ello recomiento ENCARECIDAMENTE no utilizar ninguna opción de virtualización en el software de tus cascos en las opciones de Windows. \n\nNo hay duda de que hay gente que mata por estas opciones más avanzadas, pero simplemente no se necesitan, no te darán ninguna información sobre distancia, lugar, etc., ¡porque no tienen más información de el juego o el motor en sí! El juego envía sonido estéreo - un canal Izquierdo y un canal Derecho, nada más que eso. En mi experiencia, activar estas opciones más avanzadas hace que la ubicación de sonidos sea más difícil, no más fácil. Si tienes estas opciones activadas y tienes problemas con ubicar sonido en Tarkov o cualquier otro shooter en primera persona, prueba a desactivarlas y mira si hay alguna diferencia, ¡podrías sorprenderte!";
+"sound_localization_info_subtitle_2" = "Cómo jugar";
+"sound_localization_info_body_2" = "El objetivo de este minijuego es localizar la dirección del sonido alrededor de tu presonaje. Cuando empieces, un tono sonará en un intervalo regular, inclinado hacia una dirección cualquiera alrededor de tu personaje en un ángulo de 360 grados.\n\nDesliza hacia la izquierda y derecha de tu pantalla para girar a tu personaje, como si estuvieras con un ratón. A medida que las orejas de tu personaje se acercan y alejan de la fuente del sonido, el volumen cambiará acordemente en cada oreja.\n\nCuando el tono esté equitativamente alto en ambas orejas, tu personaje probablemente está mirando al sonido. Una vez creas que has acabado, ¡confirma tu elección pulsando el botón para ver si es correcto!";
+"sound_localization_info_subtitle_3" = "¡¿Atrás y adelante son lo mismo?!";
+"sound_localization_info_body_3" = "Puede que te hayas dado cuenta de que los sonidos que vienen directamente de frente son indistinguibles de los que vienen directamente de atrás. En ambos casos, el volumen de los canales izquierdo y derecho son iguales. Ignorando cosas como pistas contextuales basadas en conocimientos del mapa y materiales del entorno, que son extremadamente útiles para determinar la ubicación de los sonidos que ocurren en torno a tí, la única manera de diferenciar sonidos desde adelante y atrás es girando la cabeza de tu personaje en relación al sonido, y prestar atención a la dirección en la que el sonido aparece cuando la mueves. Mira la imagen de ejemplo debajo:";
+"sound_localization_info_body_4" = "Cuando giras a tu personaje a izquierda o derecha, o mejor gira sólo la cabeza de tu personaje silenciosamente con vista libre, deberías poder oír el volumen subir o bajar en cada oreja. Si giras la cabeza a la cabeza y el sonido está delante tuya, la oreja izquierda estará más cerca del ruido, y la derecha, más lejos, por lo que el sonido estará más alto en tu oreja izquierda en relación a la derecha. Por otro lado, si el sonido está detrás tuyo, cuando gires a la derecha, estará más alto en la oreja derecha y más suave en la izquierda. Intenta usar la dirección en la que se mueve el sonido mientras giras tu cabeza como indicador de la ubicación del sonido. ¡El audio de esta herramienta funciona igual que el de Escape from Tarkov, y la mayoría de shooters en primera persona!";
+
+"simulate_gunshot_pen" = "Dispara\nw/ Penetración";
+"simulate_gunshot_no_pen" = "Dispara\n(Sin Penetración)";
+
+// MARK:- Combat Sim
+"combat_sim_subject_type" = "Tipo de personaje";
+"combat_sim_aim_setting" = "Opciones de apuntado";
+"combat_sim_edit_subject" = "Editar sujeto de prueba";
+"combat_sim_run" = "Iniciar";
+"combat_sim_results" = "Resultados de la simulación";
+"combat_sim_results_iterations" = "Interacciones";
+"combat_sim_results_winner" = "Ganador";
+"combat_sim_results_loser" = "Perdedor";
+"combat_sim_results_tie" = "Empate";
+"combat_sim_results_win_percent" = "Porcenaje de victorias";
+"combat_sim_settings" = "Opciones de simulación";
+"combat_sim_tap_to_edit" = "Pulsa en la imagen para editar el sujeto de prueba";
+"combat_sim_edit_firearm" = "Editar arma";
+"combat_sim_head_armor" = "Armadura de cabeza";
+
+"combat_sim_pen_setting" = "Opciones de penetración";
+"combat_sim_pen_setting_realistic_desc" = "Las balas tienen las mismas opciones de penetrar armadura que en el juego.";
+"combat_sim_pen_setting_always_desc" = "Las balas siempre penetraran armadura mientras haya una probabilidad no nula. Por ejemplo, una probabilidad de 1% siempre penetrará, pero una de 0% no.";
+"combat_sim_pen_setting_never_desc" = "Las balas no penetrarán armadura a no ser que esta esté a 0 de durabilidad, cuando las probabilidades son de 100%";
+
+"combat_sim_frag_setting" = "Opciones de fragmentación";
+"combat_sim_frag_setting_realistic_desc" = "Las balas tienen las mismas opciones de penetrar que en el juego.";
+"combat_sim_frag_setting_always_desc" = "Las balas siempre se fragmentarás mientras so probabilidad de fragmentación efectiva sea no nula. Mientras escribo esto, munición de poca penetración, como balas RIP, no pueden fragmentarse dentro del juego a pesar de su supuesta probabilidad de 100%.";
+"combat_sim_frag_setting_never_desc" = "Las balas nunca se fragmentarán.";
+
+"aim_setting_upper_body" = "Tronco";
+"aim_setting_center_mass" = "Centro de masa";
+"aim_setting_headshots" = "Tiros a la cabeza";
+"aim_setting_random_leg" = "Pierna aleatoria";
+"aim_setting_single_leg" = "Pierna única";
+"aim_setting_thorax" = "Tórax";
+
+"aim_setting_upper_body_desc" = "Todas las balas disparadas impactarán al objetivo en su tronco, incluyendo brazos, estómago, tórax y una pequeña probabilidad de dar a la cabeza.";
+"aim_setting_center_mass_desc" = "Todas las balas disparadas impactarán al objetivo en su centro de masa, que incluye brazos, estómago y tórax.";
+"aim_setting_headshots_desc" = "Todas las balas disparadas impactarán al objetivo en la cabeza.";
+"aim_setting_random_leg_desc" = "Todas las balas disparadas impactarán indistintamente en las piernas.";
+"aim_setting_single_leg_desc" = "Todas las balas disparadas impactarán en la misma pierna.";
+"aim_setting_thorax_desc" = "Todas las balas disparadas impactarán en el tórax.";
+
+"simulation_result_win" = "Vicoria";
+"simulation_result_loss" = "Derrota";
+"simulation_result_tie" = "Empate";
+
+"simulation_win_percent" = "Porcentaje de vicoria";
+"simulation_time_to_kill" = "Tiempo de muerte medio";
+"simulation_win_shots_to_kill" = "Tiros para matar medios";
+
+// ----------------------------------------
+// V1.1.0 - Changes to existing translations
+"attributions_misc_descr" = "Iconos de redes sociales por Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licenciados bajo CC. Icono 'Brain' por Sergey Patutin de el Noun Project (https://thenounproject.com/bdesign.by/) licenciado bajo CC. Derechos de autor de las imágenes animadas de cuerpo completo de Riley Gombart.";

@@ -328,3 +328,160 @@
 "settings" = "Inställningar";
 "language_system_default" = "System";
 "language" = "Språk";
+
+// ----------------------------------------
+// V1.1.0
+
+// MARK:- Common
+"firearm" = "Handeldvapen";
+"common_none" = "Ingen";
+"common_refine" = "Förfina";
+
+// MARK:- More
+"days_since_wipe" = "%@ sedan senaste profilrensning...";
+"bud_leaderboard" = "Buddy-topplista";
+"total_ads_watched" = "%@ reklamklipp visade till gemenskapen!";
+"app_version" = "Applikationsversion";
+"your_bud_score" = "Din Bud Score";
+"bud_reward" = "Hämta Belöning";
+"bud_reward_title" = "Belöning Hämtad";
+"bud_reward_message" = "Tack för att du är en Bud!";
+
+// Being A Bud
+"bud_points" = "Bud Points©";
+"bud_how_to_title" = "Hur Man Blir en Bud";
+"bud_how_to_subtitle" = "Jag utvecklade Battle Buddy på min fritid för att stödja Escape from Tarkovs gemenskap. Jag tar inte betalt för skapandet av appen, och den kommer inte med reklam som standard, så vem som helst kan använda den utan att behöva bli irriterad över pop-upreklam. All utvecklings- och stödkostnader relaterade till servertrafik, förvar, och underhåll är på min egna bekostnad, så allt stöd du ger mig är högt uppskattat! Alla som läser detta just nu är mina Battle Buddies.\n\nSom ett litet tecken av uppskattning för att du är en del av Battle Buddy-upplevelsen, finns det olika sätt du kan tjäna Bud Points© för att visa upp vilken bra Bud du är! Jag har tonvis med idéer för hur man kan använda dessa i framtiden, men för tillfället är de endast ett hedersmärke för att visa ditt stöd för Battle Buddy-gemenskapen! Vad är det, du frågar? Hur tjänar man Bud Points©? Utmärkt fråga! Här har vi några sätt...";
+
+"bud_how_to_title_1" = "Återkom Ofta";
+"bud_how_to_body_1" = "Vid slumpmässiga tillfällen medan du använder appen, kommer du ha förmågan att hämta in en slumpmässig Bud Points©-belöning. Mina Buds blir alltid belönade för deras lojalitet och deras följdriktighet! När än knappen för \"Hämta Belöning\" är tillgänglig i Mer-menyn, tryck på den för några gratis Bud Points© och var noggrann med att kolla på topplistan för att se om du är min bästa Bud!";
+
+"bud_how_to_title_2" = "Visa Reklam";
+"bud_how_to_body_2" = "Ett annat sätt att vara en Bud och tjäna Bud Points© är genom att kolla på reklamvideor. På Mer-menyn, finns det ett alternativ  \"Visa en Reklam\". Om en reklamvideo är tillgänglig från en av våra innehållsleverantörer, kan du kolla på en kort reklamfilm och bli belönad med Bud Points som visar hur bra av en Bud du är. Efter att ha kollat på en reklamfilm så kommer en till att bli tillgänglig efter en tid, så om du vill vara en riktig Bud, ha lite tålamod!";
+
+"bud_how_to_title_3" = "Aktivera Banner-reklam";
+"bud_how_to_body_3" = "Att aktivera banner-reklam är ett till jättebra sätt att vara en Bud! Du kan aktivera banner-reklam från Inställningsskärmen! Försök däremot inte att vara fräck, om du stänger av banner-reklam kommer poängen du tjänar att försvinna tills du återaktiverar banner-reklam igen.";
+
+"bud_how_to_title_4" = "Fler Sätt Att Vara en Bud";
+"bud_how_to_body_4" = "Allt eftersom att fler funktioner introduceras till Battle Buddy så kommer flera sätt att tjäna och använda Bud Points© att uppstå! Håll tummarna, Buds!";
+
+// MARK:- Settings
+"profile" = "Profil";
+"nickname" = "Användarnamn";
+"nickname_placeholder" = "Användarnamn";
+"nickname_anon" = "Anonym";
+"app_settings" = "Applikationsinställningar";
+"settings_save_error" = "Kan ej för tillfället spara dina inställningar, försök igen senare.";
+
+// MARK:- Menu Items
+"main_menu_helmets" = "Hjälmar";
+"main_menu_mods" = "Modifikationer";
+"main_menu_combat_sim" = "Kampsimulator";
+"main_menu_characters" = "Karaktärer";
+"main_menu_visors" = "Visir";
+
+// MARK:- Attributions
+"attributions_smoooth" = "SmooothBrain";
+"attributions_smoooth_descr" = "Ett stort tack till denna människan för hans designarbete över alla plattformar jag är aktiv på, från märket till mina thumbail-bilder, skivomslag och 3D-animationer - den här mannen är en legend!";
+"attributions_betrix" = "Betrix";
+"attributions_betrix_descr" = "Många av de vackra menybilderna och in-game-skärmdumparna skapades av Betrix!";
+
+// MARK:- Helmets / Accessories
+"hearing_penalty" = "Hörsel";
+"hearing_penalty_high" = "Hög";
+"hearing_penalty_low" = "Låg";
+"hearing_penalty_none" = "Ingen";
+"hearing_penalty_full" = "Hörselhandikapp";
+"speed_penalty_full" = "Hastighetshandikapp";
+"turn_speed_penalty_full" = "Svängningshastighetshandikapp";
+"ergo_penalty_full" = "Ergonomihandikapp";
+"armor_type" = "Typ";
+
+// MARK:- Mods
+"modification" = "Modifikation";
+"modificationBarrel" = "Pipa";
+"modificationBipod"  = "Gevärsstöd";
+"modificationCharge" = "Laddningshandtag";
+"modificationDevice" = "Enhet";
+"modificationForegrip" = "Handtag";
+"modificationGasblock" = "Gasblock";
+"modificationGoggles" = "Glasögon";
+"modificationHandguard" = "Handskydd";
+"modificationLauncher" = "Utskjutningsrör";
+"modificationMount" = "Monteringspunkt";
+"modificationMuzzle" = "Mynning";
+"modificationPistolgrip" = "Pistolhandtag";
+"modificationReceiver" = "Låda";
+"modificationSight" = "Gevärssikte";
+"modificationSightSpecial" = "Gevärssikte (Speciell)";
+"modificationStock" = "Kolv";
+
+// MARK:- Sound Training
+"sound_training" = "Ljudtränings-Beta";
+"sound_training_start" = "Börja Träning";
+"sound_training_commit" = "Gissa";
+"sound_training_result_correct" = "Korrekt!";
+"sound_training_result_wrong" = "Försök igen!";
+
+"sound_localization_info_title" = "Lär dig hur man lokaliserar ljud!";
+"sound_localization_info_note_1" = "Ljudtränings-redskapet är för tillfället i ett beta-stadie! Hörlurar krävs!";
+"sound_localization_info_body_1" = "Escape from Tarkov använder nuvarande standard stereo-ljud, vilket är mer än tillräckligt för att kunna lokalisera ljud i de flesta fall. För tillfället stöds inte 5.1 eller 7.1 surround sound-inställningar, och därför skulle jag HÖGT rekommendera emot att använda några virtuella ljudinställningar i mjukvaran för dina hörlurar eller Windows ljudinställningar.\n\nDet är självklart att det finns folk som svär vid dessa ljudinställningar, men de är helt enkelt inget behov, då de inte kommer ge någon mer information om exempelvis distans, plats, etc., för att de inte får någon mer information från spelet eller spelmotorn själva! Spelet producerar stereo-ljud - en Vänster- och en Högerkanal, inget mer komplext än det. I min egen erfarenhet så gör dessa avancerade inställningar lokalisering av ljud svårare, inte enklare. Om du har dessa inställningar på och upplever att du har svårt att lokalisera ljud i Escape From Tarkov samt andra first-person shooter-spel, testa att stänga av dessa inställningar och se om det blir någon skillnad. Du kan bli positivt överraskad!";
+"sound_localization_info_subtitle_2" = "Hur Man Spelar";
+"sound_localization_info_body_2" = "Målet med detta mini-game är att lokalisera hållet av ljudet runt din karaktär som visas på skärmen. När du börjar, kommer en ton att spelas på ett regelbundet intervall, skiftad till ett slumpmässigt håll någonstans runt din karaktär på skärmen i en 360-graders radie.\n\nSwipea höger och vänster på skärmen för att vända din karaktär, precis som du skulle göra med en styrplatta eller mus. När din karaktärs högra och vänstra öron kommer närmare eller längre ifrån ljudkällan kommer volymen att följaktligen ändras i vardera öra.\n\nNär tonen är lika hög i både höger och vänster öra, så tittar din karaktär sannolikt emot ljudet. När du tror att du är färdig, bekräfta ditt val genom att trycka på knappen för att se om du har rätt!";
+"sound_localization_info_subtitle_3" = "Fram och Bak Låter Likadant?!";
+"sound_localization_info_body_3" = "Du kan ha märkt att ljud som är direkt framför dig låter omöjlig att skilja från ljud som är direkt bakom dig. I båda fallen är volymen i båda av höger- och vänsterkanalerna likadana. Om man ignorerar saker som kontextuella ledtrådar baserade på omgivningskunskap och material i området, alla av vilka är extremt användbara för att bestämma platserna av ljuden som sker omkring dig, är det enda sättet man kan skilja ljud framifrån och bakifrån att vända din karaktärs huvud relativt med ljudet, och därmed märka av hållet som ljudet verkar röra sig i när du vänder. Ta en titt på detta exemplet nedan!:";
+"sound_localization_info_body_4" = "När du vänder din karaktär höger eller vänster, eller ännu bättre bara vänder din karaktärs huvud tyst med hjälp av free-look, så ska du höra volymen av ljudet öka eller minska i vardera öra. Om du vänder huvudet åt höger och ljudet är framför dig, kommer ditt vänstra öra hamna närmare ljudet medan ditt högra öra flyttas längre bort från ljudet, så volymen kommer vara högre i ditt vänstra öra än ditt högra. Omvänt, om ljudet var faktiskt bakom dig, skulle ljudet bli högre i ditt högra öra än ditt vänstra när du vände dig om. Försök använda hållet som ljudet rör sig när du vänder huvudet som en indikator över ljudets plats. Sättet som det fungerar i detta redskap är exakt likadant som det fungerar i Escape from Tarkov, samt de flesta andra first-person shooters!";
+
+"simulate_gunshot_pen" = "Skjut\nm/ Penetration";
+"simulate_gunshot_no_pen" = "Skjut\n(Utan Penetration)";
+
+// MARK:- Combat Sim
+"combat_sim_subject_type" = "Karaktärstyp";
+"combat_sim_aim_setting" = "Siktesinställning";
+"combat_sim_edit_subject" = "Ändra Försöksperson";
+"combat_sim_run" = "Kör";
+"combat_sim_results" = "Simulationsresultat";
+"combat_sim_results_iterations" = "Iterationer";
+"combat_sim_results_winner" = "Vinnare";
+"combat_sim_results_loser" = "Förlorare";
+"combat_sim_results_tie" = "Match";
+"combat_sim_results_win_percent" = "Vinstprocent";
+"combat_sim_settings" = "Simulationsinställningar";
+"combat_sim_tap_to_edit" = "Tryck På Bild För Att Ändra Försöksperson";
+"combat_sim_edit_firearm" = "Ändra Handeldvapen";
+"combat_sim_head_armor" = "Huvudpansar";
+
+"combat_sim_pen_setting" = "Penetrationsinställningar";
+"combat_sim_pen_setting_realistic_desc" = "Ammunition har samma sannolikhet att slå igenom pansar som den har i spelet.";
+"combat_sim_pen_setting_always_desc" = "Ammunition kommer alltid att penetrera så länge chansen är över noll. Till exempel, en 1% penetrationschans kommer alltid att penetrera, men en 0% penetrationschans kommer inte.";
+"combat_sim_pen_setting_never_desc" = "Ammunition kommer aldrig att penetrera pansar om pansaret inte är vid 0% hållbarhet, vid vilket chansen istället blir 100%.";
+
+"combat_sim_frag_setting" = "Fragmentationsinstälnningar";
+"combat_sim_frag_setting_realistic_desc" = "Ammunition har samma chans att fragmentera som de har i spelet.";
+"combat_sim_frag_setting_always_desc" = "Ammunition kommer alltid att fragmentera så länge deras effektiva fragmentationschans är över noll. Vid tidpunkten detta skrivs, så kan låg-penetrationsammunition, som exempelvis RIP-patroner för 12G, inte fragmentera trots dess annonserade 100% fragmentationschans.";
+"combat_sim_frag_setting_never_desc" = "Ammunition kan inte fragmentera.";
+
+"aim_setting_upper_body" = "Överkropp";
+"aim_setting_center_mass" = "Centrummassa";
+"aim_setting_headshots" = "Huvudskott";
+"aim_setting_random_leg" = "Slumpmässigt Leg Meta";
+"aim_setting_single_leg" = "Enbar Leg Meta";
+"aim_setting_thorax" = "Bröstkorg";
+
+"aim_setting_upper_body_desc" = "Alla skott avfyrade kommer träffa målet på den övre kroppen, inkluderande armarna, magen, bröstkorgen, samt en liten chans att träffa huvudet.";
+"aim_setting_center_mass_desc" = "Alla skott avfyrade kommer träffa målet i massans centrum, vilket inkluderar armarna, magen och bröstkorgen.";
+"aim_setting_headshots_desc" = "Alla skott avfyrade kommer träffa målet i huvudet.";
+"aim_setting_random_leg_desc" = "Alla skott avfyrade kommer ha en likadan chans att träffa vardera av benen.";
+"aim_setting_single_leg_desc" = "Alla skott avfyrade kommer träffa samma ben.";
+"aim_setting_thorax_desc" = "Alla skott avfyrade kommer träffa bröstkorgen.";
+
+"simulation_result_win" = "Vinst";
+"simulation_result_loss" = "Förlust";
+"simulation_result_tie" = "Match";
+
+"simulation_win_percent" = "Vinstprocent";
+"simulation_time_to_kill" = "G.snitt Tid-Att-Döda";
+"simulation_win_shots_to_kill" = "G.snitt Skott-Att-Döda";
+
+// ----------------------------------------
+// V1.1.0 - Changes to existing translations
+"attributions_misc_descr" = "Ikoner för sociala medier gjorda av Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licenserat under CC. 'Brain'-ikon av Sergey Patutin från the Noun Project (https://thenounproject.com/bdesign.by/) licenserat under CC. Uppifrån-och-ner soldat animationsbilder copyright Riley Gombart.";

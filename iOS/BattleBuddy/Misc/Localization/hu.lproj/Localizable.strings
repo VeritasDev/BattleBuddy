@@ -328,3 +328,160 @@
 "settings" = "Beállítások";
 "language_system_default" = "Rendszer";
 "language" = "Nyelv";
+
+// ----------------------------------------
+// V1.1.0
+
+// MARK:- Common
+"firearm" = "Lőfegyver";
+"common_none" = "Semmi";
+"common_refine" = "Finomítás";
+
+// MARK:- More
+"days_since_wipe" = "%@ Nap telt el az utolsó wipe óta...";
+"bud_leaderboard" = "Haver rangsor";
+"total_ads_watched" = "%@ Reklám került megtekintésre a közösség által!";
+"app_version" = "Alkalmazás verzió";
+"your_bud_score" = "A haver pontjaid:";
+"bud_reward" = "Jutalmak beváltása";
+"bud_reward_title" = "Jutalom beváltva";
+"bud_reward_message" = "Köszönöm hogy haver vagy!";
+
+// Being A Bud
+"bud_points" = "Haver pontok©";
+"bud_how_to_title" = "Hogyan legyél haver";
+"bud_how_to_subtitle" = "Az alkalmazást a saját szabadidőmben készítettem a közösség javára. Nem kerül semmi pénzbe a felhasználó számára, és alapértelmezetten reklámok se kerülnek megjelenítésre a számodra, hogy idegesítő felugró reklámok nélkül élvezhesd az alkalmazást. Mindenféle alkalmazáshoz köthető költséget én fedezek, szóval mindenféle támogatást rendkívül meghálálok! Mindannyiótok aki jelenleg ezt olvassa a Battle Buddym. Hálám kifejezésének érdekében, hogy megköszönjem hogy résztveszel a Battle Buddy felfedezésében, számos módon szerezhetsz Bud Pontot© hogy megmutathasd mindenkinek hogy mekkora haver vagy! Számos ötletem van ezeknek a pontoknak a hasznosítására a közeljövőben, de egyelőre egy tiszteletbeli jelvényként szolgál hogy megmutathasd a lelkesedésedet és támogatásodat a közösség felé! Hogyan érhetsz el pontokat? Tökéletes kérdés! Jelenleg így gyűjthetsz pontokat:";
+
+"bud_how_to_title_1" = "Nézz vissza gyakran!";
+"bud_how_to_body_1" = "Véletlenszerű időközönként amikor az alkalmazást böngészed, lehetőséged lesz begyűjteni Bud Pontokat. Amikor látod a \"Jutalom begyűjtése\" gombot a \"Több\" menüben, menj rá egy maroknyi Bud Pontért, és nézegesd a ranglistát, hogy kiderítsd hogy a legnagyobb haverom vagy-e!";
+
+"bud_how_to_title_2" = "Reklámok megtekintése";
+"bud_how_to_body_2" = "Egy másik mód arra hogy Bud pontokat gyűjts, az a reklámok megtekintése. A több menüpont alatt találni fogsz egy opciót \"Nézz meg egy reklámot\" néven. Ha van elérhető reklám a tartalom szolgáltatóktól, akkor megnézhetsz egy rövid reklámot, és Bud pontokra tehetsz szert, mellyel kimutathatod hogy mekkora haver vagy. Miután megnéztél egy reklámot, idővel elérhető lesz egy új, szóval ha sok pontot szeretnél gyűjteni, legyél türelmes!";
+
+"bud_how_to_title_3" = "Reklámfelületek engedélyezése";
+"bud_how_to_body_3" = "A reklámfelületek engedélyezése egy másik jó mód Bud pontok gyűjtésére! Ezt az opciót a beállításokban kapcsolhatod be, és ha valamilyen okon fogva kikapcsolod, a megszerzett pontok nem lesznek elérhetőek amíg újra nem engedélyezed ezt a felületet.";
+
+"bud_how_to_title_4" = "Több mód arra hogy haverrá válj";
+"bud_how_to_body_4" = "Ahogyan haladunk előre az alkalmazás fejlesztésével, több lehetőség nyílik majd Bud pontok gyűjtésére, és azoknak beváltására!";
+
+// MARK:- Settings
+"profile" = "Profil";
+"nickname" = "Becenév";
+"nickname_placeholder" = "Becenév";
+"nickname_anon" = "Ismeretlen";
+"app_settings" = "Alkalmazás beállítások";
+"settings_save_error" = "Nem sikerült elmenteni a beállításaidat, kérlek próbáld meg később.";
+
+// MARK:- Menu Items
+"main_menu_helmets" = "Sisakok";
+"main_menu_mods" = "Módosítások";
+"main_menu_combat_sim" = "Harc szimulátor";
+"main_menu_characters" = "Karakterek";
+"main_menu_visors" = "Szemvédők";
+
+// MARK:- Attributions
+"attributions_smoooth" = "SmooothBrain";
+"attributions_smoooth_descr" = "Minden tiszteletem ezé az emberé, aki a borítóképeket és minden egyebet tervezett az alkalmazás, az albumaim, és sok más számára! Ez az ember hatalmas forma!";
+"attributions_betrix" = "Betrix";
+"attributions_betrix_descr" = "Számos gyönyörű fénykép a menükben Betrix által lettek elkészítve!";
+
+// MARK:- Helmets / Accessories
+"hearing_penalty" = "Hallás";
+"hearing_penalty_high" = "Magas";
+"hearing_penalty_low" = "Alacsony";
+"hearing_penalty_none" = "Nincsen";
+"hearing_penalty_full" = "Halláscsökkentés";
+"speed_penalty_full" = "Sebesség büntetés";
+"turn_speed_penalty_full" = "Fordulási sebesség büntetés";
+"ergo_penalty_full" = "Ergonómia büntetés";
+"armor_type" = "Típús";
+
+// MARK:- Mods
+"modification" = "Módosítás";
+"modificationBarrel" = "Cső";
+"modificationBipod"  = "Támasz";
+"modificationCharge" = "Elsütő kar";
+"modificationDevice" = "Eszköz";
+"modificationForegrip" = "Fogó-markolat";
+"modificationGasblock" = "Gáz blokk";
+"modificationGoggles" = "Szemüvegek";
+"modificationHandguard" = "Markolat";
+"modificationLauncher" = "Kivetőszerkezet";
+"modificationMount" = "Állvány";
+"modificationMuzzle" = "Torkolat";
+"modificationPistolgrip" = "Pisztoly markolat";
+"modificationReceiver" = "Vevő";
+"modificationSight" = "Célzó";
+"modificationSightSpecial" = "Célzó (Speciális)";
+"modificationStock" = "Tus";
+
+// MARK:- Sound Training
+"sound_training" = "Hangfelismerés feljesztése";
+"sound_training_start" = "Gyakorlás megkezdése";
+"sound_training_commit" = "Tippelj";
+"sound_training_result_correct" = "Helyes!";
+"sound_training_result_wrong" = "Ne add fel!";
+
+"sound_localization_info_title" = "Hang alapján történő bemérés megtanulása";
+"sound_localization_info_note_1" = "A hangfelismerést fejlesztő eszköz jelenleg Béta fázisban van, és fejhallgató szükséges a használatához!";
+"sound_localization_info_body_1" = "A játék jelenleg alapértelmezett sztereó hangrendszert használ, mely azt jelenti, hogy nem tehet az ember előnyre szert az 5.1 és a 7.1 Hangrendszerek használatával. A játék egyszerűen egy bal és egy jobb hangcsatornát használ a hangeffektek lejátszására, és a rendszer nem ad több információt ezekről, így az 5.1 és a 7.1 használata lényegtelen, sőt, bizonyos esetekben nehezebbé is teheti a hang pontos bemérését. Ha neked be vannak kapcsolva ezek a beállítások, próbálj meg játszani pár meccset nélküle, lehet hogy kellemes meglepetés fog érni!";
+"sound_localization_info_subtitle_2" = "Hogyan kell játszani";
+"sound_localization_info_body_2" = "Ennek a mini-játéknak a célja hogy fejlődj a hangfelismerésben a játékon belül. Egy bizonyos hangtónust fogsz hallani, melyet a karaktered körül egy 360 fokos szögön belül helyezett el a játék, célod pedig hogy bemérd a hang forrásának a helyét, ezt pedig úgy teheted, hogy balra-jobbra húzod az ujjaddal a karakteredet. A hang erősödni fog a bal vagy a jobb füledben, ahogy fordítgatod a karakteredet. Ha mindkét füledben egyező erősséggel hallod a hangot, és biztos vagy abban amit hallasz, erősítsd meg a döntésedet a gombbal a képernyőn, és derítsd ki hogy jól hallottad-e!";
+"sound_localization_info_subtitle_3" = "Az előtted és a mögötted lévő hangok ugyanúgy hangzanak?";
+"sound_localization_info_body_3" = "Észrevehetted, hogy bizonyos esetekben, lehetetlenség megkülömböztetni egy teljesen előtted hallható hangot egy teljesen mögötted hallható hangtól. Ez azért van, mivel mindkét hangcsatornában egyenlő szinten hallhatóak a hangok. Megfelelő pályaismereten kívül úgy tudsz ezen a szituáción felülkerekedni, hogy a karaktered forgatásával kideríted, hogy melyik füledben hallható a zaj, így eldönthetővé válik, hogy előtted, vagy mögötted volt hallható a hang.";
+"sound_localization_info_body_4" = "Amikor a karakteredet, vagy csak a fejét forgatod balra vagy jobbra, az érkező hang helyétől függően jobban lesz hallható a hang az egyik füledben. Használd ezt ki hogy gyorsan be tudd mérni hogy honnan jön a hang. A mini játék működése tökéletesen megegyezik a játékbeli mechanikával, és a legtöbb FPS-el!";
+
+"simulate_gunshot_pen" = "Sikeres átütés";
+"simulate_gunshot_no_pen" = "Nem történt átütés";
+
+// MARK:- Combat Sim
+"combat_sim_subject_type" = "Karakter típusok";
+"combat_sim_aim_setting" = "Célzási beállítások";
+"combat_sim_edit_subject" = "Tesztalany szerkesztése";
+"combat_sim_run" = "Futás";
+"combat_sim_results" = "Szimuláció eredmények";
+"combat_sim_results_iterations" = "Iterációk";
+"combat_sim_results_winner" = "Győztes";
+"combat_sim_results_loser" = "Vesztes";
+"combat_sim_results_tie" = "Döntetlen";
+"combat_sim_results_win_percent" = "Győzelmi esély";
+"combat_sim_settings" = "Szimulációs beállítások";
+"combat_sim_tap_to_edit" = "Nyomd meg az ikont hogy változtass a tesztalanyon.";
+"combat_sim_edit_firearm" = "Lőfegyver módosítása";
+"combat_sim_head_armor" = "Fejpáncélzat";
+
+"combat_sim_pen_setting" = "Penetration Setting";
+"combat_sim_pen_setting_realistic_desc" = "A lőszereknek az átütési esélye megegyezik a játékbeli értékekkel.";
+"combat_sim_pen_setting_always_desc" = "A lőszer át fogja ütni a páncélt, amíg az átütési esély 0 felett van.";
+"combat_sim_pen_setting_never_desc" = "A lőszer soha nem fogja átütni a megadott páncélt, kivéve ha a páncél védelmi értéke 0 ponton van, ebben az esetben garantált az átütés.";
+
+"combat_sim_frag_setting" = "Repeszelődési beállítások";
+"combat_sim_frag_setting_realistic_desc" = "A töltényeknek a játékbeli értékükkel egyező esélye van repeszelődni.";
+"combat_sim_frag_setting_always_desc" = "Minden lövés repeszelődni fog, amíg a repeszelődési értéke több mint 0. Jelenleg, alacsony átütés-értékű lőszertípusok mint a RIP csiga, képtelen repeszelődni, hiába hogy úgy van kimutatva a játékban.";
+"combat_sim_frag_setting_never_desc" = "A töltények soha nem fognak repeszelődni.";
+
+"aim_setting_upper_body" = "Felsőtest";
+"aim_setting_center_mass" = "Test közepe";
+"aim_setting_headshots" = "Fejlövések";
+"aim_setting_random_leg" = "Véletlenszerű láb meta";
+"aim_setting_single_leg" = "Egyetlen láb meta";
+"aim_setting_thorax" = "Mellkas";
+
+"aim_setting_upper_body_desc" = "Minden kilőtt töltény a felső testet fogja eltalálni, melybe beletartoznak a kezek, a gyomor, a mellkas és egy kevés eséllyel a fej is eltalálható.";
+"aim_setting_center_mass_desc" = "Minden kilőtt töltény a test közepét fogja eltalálni, melybe beletartoznak a kezek, a gyomor és a mellkas.";
+"aim_setting_headshots_desc" = "Minden kilőtt töltény a fej testrészt fogja eltalálni.";
+"aim_setting_random_leg_desc" = "Minden kilőtt töltény egyező eséllyel találhatja el bármelyik lábat.";
+"aim_setting_single_leg_desc" = "Minden kilőtt töltény ugyanazt a lábat fogja eltalálni.";
+"aim_setting_thorax_desc" = "Minden kilőtt töltény a mellkast fogja eltalálni.";
+
+"simulation_result_win" = "Győzelem";
+"simulation_result_loss" = "Vereség";
+"simulation_result_tie" = "Döntetlen";
+
+"simulation_win_percent" = "Győzelmi százalék";
+"simulation_time_to_kill" = "Átlagos időmennyiség az öléshez";
+"simulation_win_shots_to_kill" = "Átlagos gyilkossághoz szükséges lövések";
+
+// ----------------------------------------
+// V1.1.0 - Változtatások a fordításban
+"attributions_misc_descr" = "Közösségi média ikonok Abhishek Pipalva által készültek el (https://www.iconfinder.com/abhishekpipalva) CC. alatt vannak licenszelve. 'Brain' ikon Sergey Patutin által készült, a Noun Project-ből (https://thenounproject.com/bdesign.by/) A CC. licensze alatt. Top-down soldier animációs képek jogvédve vannak Riley Gombart által.";

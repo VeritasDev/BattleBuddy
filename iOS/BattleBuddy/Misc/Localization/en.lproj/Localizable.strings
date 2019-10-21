@@ -268,7 +268,6 @@
 "damage" = "Damage";
 "rate" = "Rate";
 "range" = "Range";
-
 "stab" = "Stab";
 "stab_dmg" = "Stab Damage";
 "stab_rate" = "Stab Rate";
@@ -334,6 +333,7 @@
 // MARK:- Common
 "firearm" = "Firearm";
 "common_none" = "None";
+"common_refine" = "Refine";
 
 // MARK:- More
 "days_since_wipe" = "%@ days since last wipe...";
@@ -348,7 +348,7 @@
 // Being A Bud
 "bud_points" = "Bud Points©";
 "bud_how_to_title" = "How To Be A Bud";
-"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies. As a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies.\n\nAs a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
 
 "bud_how_to_title_1" = "Come Back Often";
 "bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
@@ -375,10 +375,11 @@
 "main_menu_mods" = "Modifications";
 "main_menu_combat_sim" = "Combat Simulator";
 "main_menu_characters" = "Characters";
+"main_menu_visors" = "Visors";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";
-"attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbails, album covers and 3D animations - this man is a legend!";
+"attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbnails, album covers and 3D animations - this man is a legend!";
 "attributions_betrix" = "Betrix";
 "attributions_betrix_descr" = "Many of the beautiful menu images and in-game item screenshots were created by Betrix!";
 
@@ -391,6 +392,7 @@
 "speed_penalty_full" = "Speed Penalty";
 "turn_speed_penalty_full" = "Turn Speed Penalty";
 "ergo_penalty_full" = "Ergonomics Penalty";
+"armor_type" = "Type";
 
 // MARK:- Mods
 "modification" = "Modification";
@@ -443,6 +445,8 @@
 "combat_sim_results_win_percent" = "Win Percent";
 "combat_sim_settings" = "Simulation Settings";
 "combat_sim_tap_to_edit" = "Tap Image To Edit Test Subject";
+"combat_sim_edit_firearm" = "Edit Firearm";
+"combat_sim_head_armor" = "Head Armor";
 
 "combat_sim_pen_setting" = "Penetration Setting";
 "combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
@@ -454,20 +458,22 @@
 "combat_sim_frag_setting_always_desc" = "Bullets will always fragment as long as their effective fragmentation chance is non-zero. As of writing this, low-penetration ammo, such as RIP slugs, cannot currently fragment in the game despite it's 100% advertised fragmentation chance.";
 "combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
 
+"aim_setting_upper_body" = "Upper Body";
 "aim_setting_center_mass" = "Center of Mass";
 "aim_setting_headshots" = "Headshots";
 "aim_setting_random_leg" = "Random Leg Meta";
 "aim_setting_single_leg" = "Single Leg Meta";
 "aim_setting_thorax" = "Thorax";
 
-"aim_setting_center_mass_desc" = "All bullets fired will impact the target on a randomly selected limb, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
+"aim_setting_upper_body_desc" = "All bullets fired will impact the target on their upper-body, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
+"aim_setting_center_mass_desc" = "All bullets fired will impact the target in the center-of-mass, which includes the arms, stomach, and thorax.";
 "aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
 "aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
 "aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
 "aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
 
 "simulation_result_win" = "Win";
-"simulatoin_result_loss" = "Loss";
+"simulation_result_loss" = "Loss";
 "simulation_result_tie" = "Tie";
 
 "simulation_win_percent" = "Win Percent";
