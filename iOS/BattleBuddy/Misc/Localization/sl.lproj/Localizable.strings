@@ -328,3 +328,160 @@
 "settings" = "Nastavitve";
 "language_system_default" = "Sistem";
 "language" = "Jezik";
+
+// ----------------------------------------
+// V1.1.0
+
+// MARK:- Common
+"firearm" = "Strelno orožje";
+"common_none" = "Nič";
+"common_refine" = "izboljšati";
+
+// MARK:- More
+"days_since_wipe" = "%@ dni od zadnjega brisanja...";
+"bud_leaderboard" = "Bud Lestvica";
+"total_ads_watched" = "%@ oglasov je pogledala skupnost!!";
+"app_version" = "Različica aplikacije";
+"your_bud_score" = "tvoj Bud rezultat";
+"bud_reward" = "Unovči nagrado";
+"bud_reward_title" = "Nagrada unovčena";
+"bud_reward_message" = "Hvala, ker si buddy!";
+
+// Being A Bud
+"bud_points" = "Bud Točke©";
+"bud_how_to_title" = "Kako postati Bud";
+"bud_how_to_subtitle" = "V prostem času sem razvil Battle Buddy v korist skupnosti Escape from Tarkova. Za aplikacijo ne zaračunavam in privzeto ne prihaja z oglasi, tako da jo lahko vsak uporablja brezplačno brez nenehnega motenja pojavnih oken. Vse stroške razvoja in podpore, povezane s prometom, shranjevanjem in vzdrževanjem strežnika, krijem osebno, zato je vsaka in vsa podpora vedno zelo cenjena! Vsi, ki trenutno berete to, ste moji bojni prijatelji.\n\n Kot majhno darilce, da si del izkušnje Battle Buddy, lahko zaslužite na različne načine Bud Točke© da pokažeš, kako velik si buddy! Imam številne ideje, kako bi te točke lahko uporabili v prihodnosti, a zaenkrat so le častna značka, da dokažete svojo podporo skupnosti Battle Buddy! Kaj sprašujete? Kako zaslužite Bud Točke©? Dobro vprašanje! tukaj je nekaj načinov...";
+
+"bud_how_to_title_1" = "Pogosto se vrnji";
+"bud_how_to_body_1" = "Med uporabo aplikacije boste lahko v naključnih intervalih zbirali naključno Bud Točke© nagrade. Moji buds so vedno nagrajeni za svojo zvestobo in doslednost! Kadar koli možnost, da \"Prevzemi nagrado\" je na voljo v meniju Več, tapnite ga za nekaj brezplačnih Bud Točk© in  prepričajte se da preverite vodilno lestvico in preverite, ali ste najboljši bud!";
+
+"bud_how_to_title_2" = "Oglejte si oglase";
+"bud_how_to_body_2" = "Drug način, kako biti bud in zaslužiti Bud Točke© je z gledanjem video oglasov. V glavnem meniju Več je možnost, da \"Oglejte si oglas\". Če je oglas na voljo pri enem od naših ponudnikov vsebin, si boste lahko ogledali kratek oglas in z njim boste nagrajeni z Bud točkami ki prikazuje koliko ste buddy. Po ogledu oglasa bo čez nekaj časa na voljo drug, tako da če želite biti velik bud, Bodite potrpežljivi!";
+
+"bud_how_to_title_3" = "Omogoči oglasne pasice";
+"bud_how_to_body_3" = "Omogočanje oglasnih pasic je še en neverjeten način, da postanete bud! Oglasne pasice lahko omogočite na zaslonu z nastavitvami! Ne poskušaj biti cheeky bud, če onemogočite oglasne pasice, bodo zaslužene točke izgubljene, dokler jih znova ne omogočite.";
+
+"bud_how_to_title_4" = "Več načinov, kako biti Bud";
+"bud_how_to_body_4" = "Ko bo več funkcij predstavlejnih v Battle Buddy bo več načinov kako pridobiti Bud Točke©! Ostanite obveščeni buds!";
+
+// MARK:- Settings
+"profile" = "Profil";
+"nickname" = "Vzdevek";
+"nickname_placeholder" = "Vzdevek";
+"nickname_anon" = "Anonimni";
+"app_settings" = "Nastavitve aplikacije";
+"settings_save_error" = "Nastavitev ni mogoče shraniti. Poskusite znova pozneje.";
+
+// MARK:- Menu Items
+"main_menu_helmets" = "Čelade";
+"main_menu_mods" = "Modifikacije";
+"main_menu_combat_sim" = "Bojni Simulator";
+"main_menu_characters" = "Characters";
+"main_menu_visors" = "Vizirji";
+
+// MARK:- Attributions
+"attributions_smoooth" = "SmooothBrain";
+"attributions_smoooth_descr" = "Ta moški me podpira z svojim oblikovalskim delom na vseh platformah, na katerih sem aktiven, od blagovne znamke do thumbnailov, slik albumov in 3D-animacij - ta človek je legenda!";
+"attributions_betrix" = "Betrix";
+"attributions_betrix_descr" = "Številne čudovite slike menija in posnetke zaslonov v igri je ustvaril avtor Betrix!";
+
+// MARK:- Helmets / Accessories
+"hearing_penalty" = "Sluh";
+"hearing_penalty_high" = "Visok";
+"hearing_penalty_low" = "Nizek";
+"hearing_penalty_none" = "Nič";
+"hearing_penalty_full" = "Slušna kazen";
+"speed_penalty_full" = "Hitrostna kazen";
+"turn_speed_penalty_full" = "Kazen pri obračanju";
+"ergo_penalty_full" = "Ergonomična kazen";
+"armor_type" = "Tip";
+
+// MARK:- Mods
+"modification" = "Modifikacija";
+"modificationBarrel" = "Cevka";
+"modificationBipod"  = "Bipod";
+"modificationCharge" = "Polnilni ročaj";
+"modificationDevice" = "Naprava";
+"modificationForegrip" = "Sprednji oprijem";
+"modificationGasblock" = "plinski blok";
+"modificationGoggles" = "Očala";
+"modificationHandguard" = "Handguard";
+"modificationLauncher" = "Launcher";
+"modificationMount" = "Mount";
+"modificationMuzzle" = "Muzzle";
+"modificationPistolgrip" = "Pištolni prijem";
+"modificationReceiver" = "Receiver";
+"modificationSight" = "Optika";
+"modificationSightSpecial" = "Specialna Optika";
+"modificationStock" = "Kopito";
+
+// MARK:- Sound Training
+"sound_training" = "Zvočni trening beta";
+"sound_training_start" = "Začnite z treningom";
+"sound_training_commit" = "Ugani";
+"sound_training_result_correct" = "Pravilno!";
+"sound_training_result_wrong" = "Nadaljuj z ugibanjem!";
+
+"sound_localization_info_title" = "Preberite, kako lokalizirati zvok";
+"sound_localization_info_note_1" = "Orodje za zvočni trening je trenutno v beta različici! Potrebne so slušalke!";
+"sound_localization_info_body_1" = "Escape from Tarkov trenutno uporablja svoj standardni stereo zvok, ki je v večini primerov več kot dovolj ustrezen za lokalizacijo zvoka. V tem trenutku niso podprte možnosti 5.1 ali 7.1 prostorskega zvoka, zato bi toplo priporočal, da v nastavitvah programske opreme za slušalke ali v zvočnih nastavitvah za zvok ne uporabite nobenih virtualnih nastavitev zvoka..\n\n Ni dvoma, da obstajajo ljudje, ki prisegajo na te naprednejše nastavitve, vendar jih preprosto ni potrebno, ne bodo vam dali več informacij o razdalji, lokaciji itd., ker nimajo več informacij v igri ali samem sound enginu! Igra oddaja stereo zvok - levi in ​​desni kanal, nič bolj zapletenega od tega. Po mojih izkušnjah omogočanje teh naprednejših nastavitev otežuje lokalizacijo zvoka in ne olajša. Če imate te nastavitve vklopljene in imate težave z lokalizacijo zvoka v Tarkovu ali katerem koli drugem FPS, jih poskusite izklopiti in preverite, ali je to kaj drugače, morda boste presenečeni!";
+"sound_localization_info_subtitle_2" = "Kako igrati";
+"sound_localization_info_body_2" = "Cilj te mini igre je najti smer zvoka okoli vašega zaslonskega znaka. Ko začnete in se bo v rednem intervalu predvajal ton, ki je usmerjen v naključno smer nekje okoli vašega znaka na zaslonu v polmeru 360 stopinj.\n\n Povlecite levo in desno po zaslonu, da spremenite svoj lik, tako kot bi to naredili s sledilno ploščico ali miško. Ko se leva ali desna ušesa vašega lika bližajo ali oddaljujejo od vira zvoka, se bo glasnost v vsakem ušesu ustrezno spreminjala.\n\n Kadar je ton levega in desnega ušesa enako glasen, je vaš lik verjetno obrnjen proti zvoku. Ko se vam zdi, da ste končali, potrdite svojo izbiro s pritiskom na gumb in preverite, ali imate prav!";
+"sound_localization_info_subtitle_3" = "Sprednji in zadnji zvok sta ista?!";
+"sound_localization_info_body_3" = "Morda ste opazili, da zvoki, ki so neposredno pred vami, zvenijo neločljivo od zvokov, ki so neposredno za vami. V obeh primerih sta glasnost levega in desnega kanala enaka. Če zanemarite stvari, kot so kontekstni namigi, ki temeljijo na zemljevidu in materialih v okolju, ki so izjemno koristni pri določanju lokacije zvokov, ki se pojavljajo okoli vas, edini način za razlikovanje med zvoki spredaj in zadaj je tako, da obrnete glavo svojega lika glede na zvok in bodite pozorni na smer, za katero se zdi, da se premika, ko se premikate. Oglejte si spodnji primer slike:";
+"sound_localization_info_body_4" = "Ko svoj lik obrnete v levo ali desno ali še bolje, če samo s tiho glavo zavrtite s prostim vidom, bi morali slišati, da se glasnost poveča ali zmanjša v vsakem ušesu. Če obrnete glavo v desno in je zvok pred vami, bo vaše levo uho bližje zvoku, desno uho pa bo od njega dalje, tako da bo glasnost v levem ušesu glasnejša v primerjavi z desnim . Nasprotno, če je bil zvok dejansko za vami, ko zavijete desno, bo glasnejši v desnem ušesu in mehkejši v levem. Poskusite s smerjo, v katero se zvok premika, ko obrnete glavo, kot znak lokacije zvoka. Način dela v tem orodju je povsem tak, kot deluje v Escape from Tarkov, in večina drugih FPS!";
+
+"simulate_gunshot_pen" = "Streljaj\nw/ Penetracija";
+"simulate_gunshot_no_pen" = "Streljaj\n(Brez penetracije)";
+
+// MARK:- Combat Sim
+"combat_sim_subject_type" = "Tip Characterja";
+"combat_sim_aim_setting" = "Nastavitev merjenja";
+"combat_sim_edit_subject" = "Urejanje preizkusnega predmeta";
+"combat_sim_run" = "Zaženi";
+"combat_sim_results" = "Rezultati simulacije";
+"combat_sim_results_iterations" = "Iteracije";
+"combat_sim_results_winner" = "Zmagovalec";
+"combat_sim_results_loser" = "Premaganec";
+"combat_sim_results_tie" = "Izenačeno";
+"combat_sim_results_win_percent" = "Odstotek zmage";
+"combat_sim_settings" = "Nastavitve simulacije";
+"combat_sim_tap_to_edit" = "Tapnite sliko za urejanje testnega predmeta";
+"combat_sim_edit_firearm" = "Uredi strelno orožje";
+"combat_sim_head_armor" = "Čelada";
+
+"combat_sim_pen_setting" = "Nastavitev penetracije";
+"combat_sim_pen_setting_realistic_desc" = "Metki imajo enako možnosti, da prodrejo v oklep/neprebojni jopič kot v igri.";
+"combat_sim_pen_setting_always_desc" = "Metki bodo vedno prodrli v oklep/neprebojni jopič, dokler obstaja možnost, ki ni nič. Na primer, vedno bo prodrla 1-odstotna možnost prodora, a 0-odstotna možnost penetracije ne bo";
+"combat_sim_pen_setting_never_desc" = "Metki ne bodo prodrli v noben oklep, razen če je oklep na 0% vzdržljivosti, takrat možnost postane 100%";
+
+"combat_sim_frag_setting" = "Nastavitev fragmentacije";
+"combat_sim_frag_setting_realistic_desc" = "Metki imajo enake možnosti za fragmentacijo kot v igri.";
+"combat_sim_frag_setting_always_desc" = "Metki se bodo vedno fragmentirali, dokler njihova učinkovita možnost fragmentacije ni nič. Ob pisanju tega streliva z nizko penetracijo, kot so RIP slugi, trenutno ni mogoče fragmentirati v igri, čeprav ima 100-odstotno oglaševano možnost fragmentacije.";
+"combat_sim_frag_setting_never_desc" = "Metki ne bojo nikoli fragmentirali.";
+
+"aim_setting_upper_body" = "Zgornji del telesa";
+"aim_setting_center_mass" = "središče mase";
+"aim_setting_headshots" = "Headshots";
+"aim_setting_random_leg" = "Naključna Leg Meta";
+"aim_setting_single_leg" = "Enojna Leg Meta";
+"aim_setting_thorax" = "Prsni koš";
+
+"aim_setting_upper_body_desc" = "Vsi metki bodo zadeli tarčo v zgornji del telesa, vključno z rokami, želodcem, prsnim košem in majhnim odstotkom možnosti za zadetek v glavo";
+"aim_setting_center_mass_desc" = "Vsi metki bodo vplivalli središče mase, ki vključuje roke, želodec in prsni koš.";
+"aim_setting_headshots_desc" = "Vsi metki bodo udariti tarčo na glavo.";
+"aim_setting_random_leg_desc" = "Vsi metki bodo imajo enake možnosti, da zadanejo v nogo.";
+"aim_setting_single_leg_desc" = "Vsi metki bodo zadeli nogo.";
+"aim_setting_thorax_desc" = "AVsi metki bodo zadeli prsni koš.";
+
+"simulation_result_win" = "Zmaga";
+"simulation_result_loss" = "Zguba";
+"simulation_result_tie" = "Izenačenost";
+
+"simulation_win_percent" = "Odstotek zmage";
+"simulation_time_to_kill" = "Pov. čas za kill";
+"simulation_win_shots_to_kill" = "Pov. število metkov za kill";
+
+// ----------------------------------------
+// V1.1.0 - Spremembe obstoječih prevodov
+"attributions_misc_descr" = "Avtor Ikon družbenih medijev Abhishek Pipalva https://www.iconfinder.com/abhishekpipalva) z licenco CC. Ikona 'Brain' Sergeja Patutina iz projekta Noun (https://thenounproject.com/bdesign.by/) z licenco CC. Avtorske slike od zgoraj navzdol so prikazane animacije vojaka Riley Gombart.";

@@ -21,6 +21,10 @@ class ItemListViewController: BaseStackViewController {
         super.init(BaseStackView(spacing: 3, xPaddingCompact: 0.0, yPadding: 10.0))
     }
 
+    deinit {
+        print("DSFADFDSFSDADSAFASD")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +42,7 @@ class ItemListViewController: BaseStackViewController {
 
         switch config.type {
         case .firearm:
-            self.dbManager.getAllFirearmsByType { firearmMap in
+            self.dbManager.getAllFirearmsByType { [weak self] firearmMap in
                 hud.dismiss(animated: false)
                 var firearmSections: [ItemSection] = []
                 for firearmType in FirearmType.allCases {
@@ -46,11 +50,11 @@ class ItemListViewController: BaseStackViewController {
                         firearmSections.append(ItemSection(title: firearmType.local(), items: items))
                     }
                 }
-                self.config.sections = firearmSections
-                self.buildStackFromConfig()
+                self?.config.sections = firearmSections
+                self?.buildStackFromConfig()
             }
         case .armor:
-            self.dbManager.getAllBodyArmorByClass { armorMap in
+            self.dbManager.getAllBodyArmorByClass { [weak self] armorMap in
                 hud.dismiss(animated: false)
                 var armorSections: [ItemSection] = []
                 for armorClass in ArmorClass.allCases {
@@ -58,11 +62,11 @@ class ItemListViewController: BaseStackViewController {
                         armorSections.append(ItemSection(title: armorClass.local(), items: items))
                     }
                 }
-                self.config.sections = armorSections
-                self.buildStackFromConfig()
+                self?.config.sections = armorSections
+                self?.buildStackFromConfig()
             }
         case .helmet:
-            self.dbManager.getAllHelmetsByClass { armorMap in
+            self.dbManager.getAllHelmetsByClass { [weak self] armorMap in
                 hud.dismiss(animated: false)
                 var armorSections: [ItemSection] = []
                 for armorClass in ArmorClass.allCases {
@@ -70,11 +74,11 @@ class ItemListViewController: BaseStackViewController {
                         armorSections.append(ItemSection(title: armorClass.local(), items: items))
                     }
                 }
-                self.config.sections = armorSections
-                self.buildStackFromConfig()
+                self?.config.sections = armorSections
+                self?.buildStackFromConfig()
             }
         case .ammo:
-            self.dbManager.getAllAmmoByCaliber { ammoMap in
+            self.dbManager.getAllAmmoByCaliber { [weak self] ammoMap in
                 hud.dismiss(animated: false)
 
                 let allCalibers: [String]
@@ -91,11 +95,11 @@ class ItemListViewController: BaseStackViewController {
                         ammoSections.append(ItemSection(title: caliber, items: items))
                     }
                 }
-                self.config.sections = ammoSections
-                self.buildStackFromConfig()
+                self?.config.sections = ammoSections
+                self?.buildStackFromConfig()
             }
         case .medical:
-            self.dbManager.getAllMedicalByType { medicalMap in
+            self.dbManager.getAllMedicalByType { [weak self] medicalMap in
                 hud.dismiss(animated: false)
                 var medicalSections: [ItemSection] = []
                 for type in MedicalItemType.allCases {
@@ -103,11 +107,11 @@ class ItemListViewController: BaseStackViewController {
                         medicalSections.append(ItemSection(title: type.local(), items: items))
                     }
                 }
-                self.config.sections = medicalSections
-                self.buildStackFromConfig()
+                self?.config.sections = medicalSections
+                self?.buildStackFromConfig()
             }
         case .modification:
-            self.dbManager.getAllModsByType { modMap in
+            self.dbManager.getAllModsByType { [weak self] modMap in
                 hud.dismiss(animated: false)
                 var modSections: [ItemSection] = []
                 for type in ModType.allCases {
@@ -115,11 +119,11 @@ class ItemListViewController: BaseStackViewController {
                         modSections.append(ItemSection(title: type.local(), items: items))
                     }
                 }
-                self.config.sections = modSections
-                self.buildStackFromConfig()
+                self?.config.sections = modSections
+                self?.buildStackFromConfig()
             }
         default:
-            fatalError()
+            break
         }
     }
 
@@ -127,8 +131,21 @@ class ItemListViewController: BaseStackViewController {
         loaded = true
         stackView.removeAllArrangedSubviews()
 
+        let allItems = getAllItems()
+
         for section in config.sections {
-            let sectionHeaderView = SectionHeaderView(headerText: section.title)
+            let sectionHeaderView: SectionHeaderView
+
+            if section.allowCompare {
+                sectionHeaderView = SectionHeaderView(headerText: section.title, actionText: "compare".local()) { [weak self] in
+                    guard let safeSelf = self else { return }
+                    let comparison = safeSelf.createComparisonForType(safeSelf.config.type, allItems: allItems, comparedItems: section.items)
+                    let compareVC = ItemCompareViewController(comparison)
+                    safeSelf.navigationController?.pushViewController(compareVC, animated: true)
+                }
+            } else {
+                sectionHeaderView = SectionHeaderView(headerText: section.title)
+            }
             sectionHeaderView.backgroundColor = UIColor(white: 0.07, alpha: 1.0)
             stackView.addArrangedSubview(sectionHeaderView)
 
@@ -141,6 +158,53 @@ class ItemListViewController: BaseStackViewController {
             NSLayoutConstraint.activate([
                 collectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: sectionHeightMultiplier)
                 ])
+        }
+    }
+
+    private func getAllItems() -> [Displayable] {
+        var allItems: [Displayable] = []
+        for section in config.sections { allItems += section.items }
+        return allItems
+    }
+
+    private func createComparisonForType(_ type: ItemType, allItems: [Displayable], comparedItems: [Displayable]) -> ItemComparison {
+        switch type {
+        case .firearm:
+            let allFirearms = allItems.map { $0 as! Firearm }
+            let comparedFirearms = comparedItems.map { $0 as! Firearm }
+            var comparison = FirearmComparison(allFirearms: allFirearms)
+            comparison.itemsBeingCompared = comparedFirearms
+            return comparison
+        case .melee:
+            let all = allItems.map { $0 as! MeleeWeapon }
+            let compared = comparedItems.map { $0 as! MeleeWeapon }
+            var comparison = MeleeWeaponComparison(all)
+            comparison.itemsBeingCompared = compared
+            return comparison
+        case .ammo:
+            let all = allItems.map { $0 as! Ammo }
+            let compared = comparedItems.map { $0 as! Ammo }
+            var comparison = AmmoComparison(allAmmo: all)
+            comparison.itemsBeingCompared = compared
+            return comparison
+        case .armor, .helmet, .modification:
+            let all = allItems.map { $0 as! Armor }
+            let compared = comparedItems.map { $0 as! Armor }
+            var comparison = ArmorComparison(allArmor: all)
+            comparison.itemsBeingCompared = compared
+            return comparison
+        case .medical:
+            let all = allItems.map { $0 as! Medical }
+            let compared = comparedItems.map { $0 as! Medical }
+            var comparison = MedicalComparison(allMedical: all)
+            comparison.itemsBeingCompared = compared
+            return comparison
+        case .throwable:
+            let all = allItems.map { $0 as! Throwable }
+            let compared = comparedItems.map { $0 as! Throwable }
+            var comparison = ThrowableComparison(all)
+            comparison.itemsBeingCompared = compared
+            return comparison
         }
     }
 }

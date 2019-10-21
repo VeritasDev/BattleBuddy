@@ -11,6 +11,7 @@ import UIKit
 struct ItemSection {
     let title: String
     let items: [Displayable]
+    var allowCompare: Bool { get { return items.count > 1 } }
 }
 
 struct ItemListConfig {
