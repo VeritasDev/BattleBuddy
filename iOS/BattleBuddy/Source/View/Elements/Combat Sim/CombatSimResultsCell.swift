@@ -23,7 +23,7 @@ class CombatSimResultsCell: BaseTableViewCell {
 
     required init?(coder: NSCoder) { fatalError() }
 
-    init(_ simulation: CombatSimulation) {
+    init(_ simulation: CombatSimulation, char1: SimulationCharacter, char2: SimulationCharacter) {
         super.init(style: .default, reuseIdentifier: nil)
 
         selectionStyle = .none
@@ -35,7 +35,7 @@ class CombatSimResultsCell: BaseTableViewCell {
         resultsStackView.addArrangedSubview(subject1ResultView)
         resultsStackView.addArrangedSubview(subject2ResultView)
 
-        subject1ResultView.subjectSummaryView.subject = simulation.subject1
-        subject2ResultView.subjectSummaryView.subject = simulation.subject2
+        subject1ResultView.subjectSummaryView.character = char1
+        subject2ResultView.subjectSummaryView.character = char2
     }
 }

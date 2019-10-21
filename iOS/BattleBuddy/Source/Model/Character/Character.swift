@@ -9,7 +9,7 @@
 import Foundation
 import BallisticsEngine
 
-struct Character {
+class Character {
     var json: [String: Any]
     var id: String
     var name: String
@@ -31,10 +31,20 @@ struct Character {
     }
 }
 
-extension Character: CharacterConfig {
-    var resolvedIdentifier: String { get { return id } }
-    var resolvedCharacterName: String { get { return name } }
-    var resolvedHealthMap: [BodyZoneType : Double] {
+class SimulationCharacter: Character {
+    var aim: AimSetting = .upperBody
+    var firearm: SimulationFirearm?
+    var ammo: SimulationAmmo?
+    var headArmor: SimulationArmor?
+    var bodyArmor: SimulationArmor?
+}
+
+extension SimulationCharacter: CalculableCharacter {
+    func copy(with zone: NSZone? = nil) -> Any {
+        return SimulationCharacter(json: json)!
+    }
+
+    var resolvedHealthMap: [BallisticsEngine.BodyZoneType : Double] {
         get {
             var convertedMap: [BodyZoneType : Double]  = [:]
             for zone in BodyZoneType.allCases {
@@ -45,7 +55,39 @@ extension Character: CharacterConfig {
                     convertedMap[zone] = 0.0
                 }
             }
+
             return convertedMap
+        }
+        set(newValue) {
+            var newHealthMap: [String: NSNumber] = [:]
+            for (key, value) in newValue {
+                newHealthMap[key.getStringValue()] = NSNumber(value: value)
+            }
+            healthMap = newHealthMap
+        }
+
+    }
+    var resolvedAimSetting: BallisticsEngine.AimSetting {
+        get { return aim }
+    }
+    var resolvedFirearm: CalculableFirearm? {
+        get { return firearm }
+    }
+    var resolvedAmmo: CalculableAmmo? {
+        get { return ammo }
+    }
+    var resolvedBodyArmor: CalculableArmor? {
+        get { return bodyArmor }
+        set {
+            guard let newValue = newValue else { return }
+            bodyArmor?.currentDurability = Int(newValue.resolvedCurrentDurability)
+        }
+    }
+    var resolvedHeadArmor: CalculableArmor? {
+        get { return headArmor }
+        set {
+            guard let newValue = newValue else { return }
+            headArmor?.currentDurability = Int(newValue.resolvedCurrentDurability)
         }
     }
 }

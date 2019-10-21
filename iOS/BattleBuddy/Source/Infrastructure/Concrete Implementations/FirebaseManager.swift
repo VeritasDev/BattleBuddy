@@ -44,6 +44,7 @@ class FirebaseManager: NSObject {
     private lazy var medsImageRef = storageRef.child("meds")
     private lazy var armorImageRef = storageRef.child("armor")
     private lazy var helmetImageRef = storageRef.child("armor")
+    private lazy var visorImageRef = storageRef.child("armor")
     private lazy var tradersImageRef = storageRef.child("traders")
     private lazy var throwableImageRef = storageRef.child("throwables")
     private lazy var meleeImageRef = storageRef.child("melee")
@@ -106,6 +107,7 @@ class FirebaseManager: NSObject {
         case .medical: return medsImageRef.child(imageId)
         case .armor: return armorImageRef.child(imageId)
         case .helmet: return helmetImageRef.child(imageId)
+        case .visor: return visorImageRef.child(imageId)
         case .throwable: return throwableImageRef.child(imageId)
         case .melee: return meleeImageRef.child(imageId)
         }
@@ -425,6 +427,16 @@ extension FirebaseManager: DatabaseManager {
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) body armors.")
             handler(snapshot.getArmor())
+        }
+    }
+
+    func getAllHeadArmor(handler: @escaping (_: [Armor]) -> Void) {
+        getAllHelmets { helmets in
+            self.getAllHelmetArmor { helmetArmor in
+                let combinedResults = helmets + helmetArmor
+                print("Successfully fetched \(String(combinedResults.count)) helmets/armor.")
+                handler(combinedResults)
+            }
         }
     }
 

@@ -9,22 +9,38 @@
 import UIKit
 import BallisticsEngine
 
+struct CombatSimPlayerConfiguration {
+    var character: Character
+    var aim: AimSetting
+    var firearm: Firearm
+    var ammoSelections: [Ammo]
+    var helmet: Armor
+    var armor: Armor
+}
+
 class CombatSimViewController: StaticGroupedTableViewController {
     let characters: [Character]
-    lazy var simulation: CombatSimulation = {
-        guard let defaultCharConfig = characters.first else { fatalError() }
-        return CombatSimulation(subject1Config: defaultCharConfig, subject2Config: defaultCharConfig)
-    }()
-    lazy var resultsCell: CombatSimResultsCell = CombatSimResultsCell(simulation)
+    var simCharacter1: SimulationCharacter
+    var simCharacter2: SimulationCharacter
+    let simulation: CombatSimulation
+
+    lazy var resultsCell: CombatSimResultsCell = CombatSimResultsCell(simulation, char1: simCharacter1, char2: simCharacter2)
     lazy var resultsSection = GroupedTableViewSection(headerTitle: "combat_sim_tap_to_edit".local(), cells: [resultsCell])
 
-    lazy var subject1EditViewController = CombatSimSubjectEditViewController(self, characters: characters, person: simulation.subject1)
-    lazy var subject2EditViewController = CombatSimSubjectEditViewController(self, characters: characters, person: simulation.subject2)
+    lazy var subject1EditViewController = CombatSimSubjectEditViewController(self, characters: characters, character: simCharacter1)
+    lazy var subject2EditViewController = CombatSimSubjectEditViewController(self, characters: characters, character: simCharacter2)
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
     init(characters: [Character]) {
+        guard let defaultChar = characters.first,
+            let char1 = SimulationCharacter(json: defaultChar.json),
+            let char2 = SimulationCharacter(json: defaultChar.json) else { fatalError() }
+
         self.characters = characters
+        self.simCharacter1 = char1
+        self.simCharacter2 = char2
+        self.simulation = CombatSimulation(subject1Config: char1, subject2Config: char2)
 
         super.init()
 
@@ -55,28 +71,36 @@ class CombatSimViewController: StaticGroupedTableViewController {
     }
 
     @objc func editSubject1() {
-        navigationController?.pushViewController(subject1EditViewController, animated: true)
+        let nc = BaseNavigationController(rootViewController: subject1EditViewController)
+        navigationController?.present(nc, animated: true, completion: nil)
     }
 
     @objc func editSubject2() {
-        navigationController?.pushViewController(subject2EditViewController, animated: true)
+        let nc = BaseNavigationController(rootViewController: subject2EditViewController)
+        navigationController?.present(nc, animated: true, completion: nil)
     }
 }
 
 extension CombatSimViewController: SubjectEditViewControllerDelegate {
-    func combatSimSubjectEditViewController(_ subjectEditViewController: CombatSimSubjectEditViewController, didFinishEditing subject: Person) {
+    func combatSimSubjectEditViewControllerDidCancel(_ subjectEditViewController: CombatSimSubjectEditViewController) {
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
+
+    func combatSimSubjectEditViewController(_ subjectEditViewController: CombatSimSubjectEditViewController, didFinishEditing character: SimulationCharacter) {
         switch subjectEditViewController {
         case subject1EditViewController:
-            resultsCell.subject1ResultView.subjectSummaryView.subject = subject
+            simCharacter1 = character
+            resultsCell.subject1ResultView.subjectSummaryView.character = character
             resultsCell.result = nil
-            simulation.subject1 = subject
+            simulation.subject1 = Person(character)
         case subject2EditViewController:
-            resultsCell.subject2ResultView.subjectSummaryView.subject = subject
+            simCharacter2 = character
+            resultsCell.subject2ResultView.subjectSummaryView.character = character
             resultsCell.result = nil
-            simulation.subject2 = subject
+            simulation.subject2 = Person(character)
         default: break
         }
 
-        navigationController?.popViewController(animated: true)
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }

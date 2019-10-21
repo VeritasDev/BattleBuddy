@@ -108,8 +108,8 @@ extension Armor: Displayable {
             case (.five, .helmet): return UIImage(named: "class_5_placeholder_helmet")?.withRenderingMode(.alwaysTemplate)
             case (.six, .helmet): return UIImage(named: "class_6_placeholder_helmet")?.withRenderingMode(.alwaysTemplate)
 
-            case (_, .visor): return nil
-            case (_, .attachment): return nil
+            case (_, .visor): return UIImage(named: "placeholder_visor")?.withRenderingMode(.alwaysTemplate)
+            case (_, .attachment): return UIImage(named: "placeholder_helmet_attachment")?.withRenderingMode(.alwaysTemplate)
             }
         }
     }

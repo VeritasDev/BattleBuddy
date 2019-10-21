@@ -10,7 +10,7 @@ import Foundation
 
 class LocaleManagerImpl: LocaleManager {
     let prefsManager = DependencyManagerImpl.shared.prefsManager()
-    let supportedLanguageCodes = ["en", "hu", "sv", "nl", "hr", "es", "es-419", "ru", "sr", "sr-Latn", "it", "pt-BR", "lt", "ar", "fr", "pt-PT", "id", "pl", "zh-Hant", "de", "et", "ko", "nb", "cs", "sl"]
+    let supportedLanguageCodes = ["en", "hu", "sv", "nl", "hr", "es", "es-419", "ru", "sr", "sr-Latn", "it", "pt-BR", "lt", "ar", "fr", "pt-PT", "id", "pl", "zh-Hant", "de", "et", "ko", "nb", "cs", "sl", "ja"]
 
     func supportedLanguages() -> [LanguageSetting] {
         let settings = supportedLanguageCodes.map { LanguageSetting(code: $0, displayName: fallbackDisplayNameForLanguageCode($0)) }
@@ -51,7 +51,8 @@ class LocaleManagerImpl: LocaleManager {
             "ko" : "Korean",
             "nb" : "Norwegian",
             "cs": "Czech",
-            "sl": "Slovenian"
+            "sl": "Slovenian",
+            "ja": "Japanese"
         ]
 
         guard let displayName = map[code] else { fatalError() }

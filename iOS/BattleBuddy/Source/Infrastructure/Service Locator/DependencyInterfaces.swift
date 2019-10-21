@@ -67,6 +67,7 @@ protocol DatabaseManager {
     func getAllFirearms(handler: @escaping (_: [Firearm]) -> Void)
     func getAllArmor(handler: @escaping (_: [Armor]) -> Void)
     func getAllBodyArmor(handler: @escaping (_: [Armor]) -> Void)
+    func getAllHeadArmor(handler: @escaping (_: [Armor]) -> Void)
     func getAllHelmets(handler: @escaping (_: [Armor]) -> Void)
     func getAllHelmetArmor(handler: @escaping (_: [Armor]) -> Void)
     func getAllAmmo(handler: @escaping (_: [Ammo]) -> Void)

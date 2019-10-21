@@ -57,8 +57,8 @@ struct AmmoComparison: ItemComparison {
 
         for case let ammo as Ammo in allItems {
             penRange.updatedRangeIfNeeded(candidateValue: Float(ammo.penetration))
-            damageRange.updatedRangeIfNeeded(candidateValue: Float(ammo.resolvedDamage))
-            armorDamageRange.updatedRangeIfNeeded(candidateValue: Float(ammo.resolvedArmorDamage))
+            damageRange.updatedRangeIfNeeded(candidateValue: Float(ammo.totalDamage))
+            armorDamageRange.updatedRangeIfNeeded(candidateValue: Float(ammo.totalArmorDamage))
             fragChanceRange.updatedRangeIfNeeded(candidateValue: Float(ammo.fragChance))
             muzzleVelRange.updatedRangeIfNeeded(candidateValue: Float(ammo.muzzleVelocity))
         }
@@ -78,8 +78,8 @@ struct AmmoComparison: ItemComparison {
 
         switch property {
         case .penetration: return scaledValue(propertyValue: Float(ammo.penetration), range: range)
-        case .damage: return scaledValue(propertyValue: Float(ammo.resolvedDamage), range: range)
-        case .armorDamage: return scaledValue(propertyValue: Float(ammo.resolvedArmorDamage), range: range)
+        case .damage: return scaledValue(propertyValue: Float(ammo.totalDamage), range: range)
+        case .armorDamage: return scaledValue(propertyValue: Float(ammo.totalArmorDamage), range: range)
         case .fragChance: return scaledValue(propertyValue: Float(ammo.fragChance), range: range)
         case .muzzleVelocity: return scaledValue(propertyValue: Float(ammo.muzzleVelocity), range: range)
         default: fatalError()

@@ -27,6 +27,7 @@ extension AimSetting: Localizable {
     func local(short: Bool = false) -> String {
         switch self {
         case .centerOfMass: return "aim_setting_center_mass".local()
+        case .upperBody: return "aim_setting_upper_body".local()
         case .headshotsOnly: return "aim_setting_headshots".local()
         case .randomLegMeta: return "aim_setting_random_leg".local()
         case .singleLegMeta: return "aim_setting_single_leg".local()
@@ -49,7 +50,7 @@ extension CombatSimulationResult: Localizable {
     func local(short: Bool = false) -> String {
         switch self {
         case .win: return "simulation_result_win".local()
-        case .loss: return "simulatoin_result_loss".local()
+        case .loss: return "simulation_result_loss".local()
         case .tie: return "simulation_result_tie".local()
         }
     }
@@ -61,6 +62,7 @@ extension AimSetting: SelectionOption {
     var optionSubtitle: String? {
         switch self {
         case .centerOfMass: return "aim_setting_center_mass_desc".local()
+        case .upperBody: return "aim_setting_upper_body_desc".local()
         case .headshotsOnly: return "aim_setting_headshots_desc".local()
         case .randomLegMeta: return "aim_setting_random_leg_desc".local()
         case .singleLegMeta: return "aim_setting_single_leg_desc".local()

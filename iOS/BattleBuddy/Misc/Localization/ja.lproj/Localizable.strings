@@ -1,341 +1,367 @@
 // MARK: - General
-"yes" = "Yes";
-"no" = "No";
+"yes" = "はい";
+"no" = "いいえ";
 "ok" = "OK";
-"done" = "Done";
-"soon" = "Soon™";
-"coming_soon" = "Coming Soon™";
-"unknown" = "Unknown";
-"type" = "Type";
-"continue" = "Continue";
+"done" = "完了";
+"soon" =   "公開";
+"coming_soon" =   "公開";
+"unknown" = "不明";
+"type" = "タイプ";
+"continue" = "続行";
 "veritas" = "Veritas";
-"required" = "Required";
+"required" = "必須";
 
 // MARK: - Filter/sort/compare
-"compare" = "Compare";
-"name" = "Name";
-"save" = "Save";
-"recommended" = "Recommended";
-"similar" = "Similar";
-"all" = "All";
-"compare_with" = "Compare to...";
+"compare" = "比較";
+"name" = "名称";
+"save" = "保存";
+"recommended" = "オススメ";
+"similar" = "類似品";
+"all" = "すべて";
+"compare_with" = "選択項目と比較";
 
 // MARK: - More / Attributions
-"about" = "About Battle Buddy";
-"dev_by" = "Developed by Veritas";
-"dev_support" = "Want to Support the Development?";
-"watch_ad" = "Watch an Ad";
-"enable_banner_ads" = "Enable Banner Ads";
-"view_on_github" = "View on GitHub";
-"rate_this_app" = "Rate Battle Buddy";
-"attributions" = "Attributions";
-"check_out_team" = "Check Out The Team";
-"team" = "The Team";
+"about" = "本アプリについて";
+"dev_by" = "by Veritas";
+"dev_support" = "アプリ開発支援";
+"watch_ad" = "広告を見る";
+"enable_banner_ads" = "バナー広告を表示する";
+"view_on_github" = "GitHubで見る";
+"rate_this_app" = "このアプリを評価";
+"attributions" = "謝辞";
+"check_out_team" = "開発陣を見る";
+"team" = "開発陣";
 "twitter" = "Twitter";
 "twitch" = "Twitch";
 "discord" = "Discord";
 "youtube" = "YouTube";
 "instagram" = "Instagram";
-"soundcloud" = "Soundcloud";
-"website" = "veritas.wtf";
+"soundcloud" = "SoundCloud";
+"website" = "Veritasウェブサイト";
 "spotify" = "Spotify";
-"social" = "Social";
+"social" = "SNS";
 "music" = "My Music";
-"website_error" = "Unable to load this content. Please ensure you have the relevant app installed.";
-"live_now" = "Live now!";
-"feedback_title" = "Feedback or Feature Ideas?";
-"feedback_subtitle" = "Join our discord!";
-"upcoming_features" = "Upcoming Features";
+"website_error" = "読み込みに失敗しました。アプリのバージョンが古い可能性があります。";
+"live_now" = "【配信中】";
+"feedback_title" = "フィードバック";
+"feedback_subtitle" = "Discordに参加";
+"upcoming_features" = "実装予定";
 
-"twitter_description" = "Stay Up to Date";
-"twitch_description" = "Watch Live on Twitch";
-"discord_description" = "Join Our Community Discord";
-"youtube_description" = "Watch on YouTube";
-"instagram_description" = "Media on Instagram";
-"soundcloud_description" = "Listen on Soundcloud";
-"spotify_description" = "Listen on Spotify";
-"website_description" = "More about Veritas";
+"twitter_description" = "Twitterで最新情報をゲット！";
+"twitch_description" = "Twitchでストリームを見よう！";
+"discord_description" = "VeritasのDiscordへようこそ！";
+"youtube_description" = "見所満載のYouTubeはコチラ！";
+"instagram_description" = "Instagramのアルバムへ！";
+"soundcloud_description" = "自慢のSoundCloudはコチラ！";
+"spotify_description" = "Spotifyで同じ音楽を聴こう！";
+"website_description" = "Veritasの公式ページへGO！";
 
 // MARK: - Tabs
-"items" = "Items";
-"learn" = "Learn";
-"more" = "More";
-"search" = "Search";
+"items" = "アイテム類";
+"learn" = "詳細情報";
+"more" = "もっと…";
+"search" = "検索";
 
 // MARK: - Main Menu
-"main_menu_ammo" = "Ammunition";
-"main_menu_armor" = "Body Armor";
-"main_menu_ballistics" = "Ballistics";
-"main_menu_firearms" = "Firearms";
-"main_menu_medical" = "Medical";
-"main_menu_melee" = "Melee Weapons";
-"main_menu_throwables" = "Throwables";
-"main_menu_health_calc" = "Damage Calculator";
+"main_menu_ammo" = "弾薬";
+"main_menu_armor" = "防弾ベスト";
+"main_menu_ballistics" = "弾道と貫通";
+"main_menu_firearms" = "銃火器";
+"main_menu_medical" = "薬品類";
+"main_menu_melee" = "近接武器";
+"main_menu_throwables" = "投擲武器";
+"main_menu_health_calc" = "ダメージ計算機";
 
 // MARK: - Sub-Categories
-"firearm_types" = "Firearm Types";
-"calibers" = "Calibers";
+"firearm_types" = "タイプ";
+"calibers" = "使用弾薬";
 
 // MARK: - Calculators
-"pen_chance" = "Penetration Chance";
-"no_armor_selected" = "No Armor Selected";
-"no_ammo_selected" = "No Ammo Selected";
-"select_ammo" = "Select Ammo";
-"select_armor" = "Select Armor";
-"pen_chance_help_title" = "Penetration Chance Calculator";
-"pen_chance_help_message" = "This tool calculates the chance that a chosen bullet will penetrate a given body armor. Once you select a bullet and armor, you can use the slider to adjust the simulated durability of the armor to see how effective different rounds are against armor at various levels of durability!";
+"pen_chance" = "貫通確率";
+"no_armor_selected" = "防弾ベストを選択してください";
+"no_ammo_selected" = "弾薬を選択してください";
+"select_ammo" = "弾薬を選択";
+"select_armor" = "防弾ベストを選択";
+"pen_chance_help_title" = "貫通率計算機";
+"pen_chance_help_message" = "防弾ベストと弾薬を選択すると、貫通確率を自動計算します。防弾ベストの耐久によって確率は変動しますが、スライダーで耐久残量を調整するだけで複雑な計算が簡単にできます。";
 
-"health_calc_title" = "Damage Calculator";
-"total_hp" = "Total HP";
+"health_calc_title" = "ダメージ計算機";
+"total_hp" = "総合HP";
 
-"body_zone_head" = "Head";
-"body_zone_thorax" = "Thorax";
-"body_zone_stomach" = "Stomach";
-"body_zone_right_arm" = "Right Arm";
-"body_zone_left_arm" = "Left Arm";
-"body_zone_right_leg" = "Right Leg";
-"body_zone_left_leg" = "Left Leg";
+"body_zone_head" = "頭部";
+"body_zone_thorax" = "胸部";
+"body_zone_stomach" = "腹部";
+"body_zone_right_arm" = "右腕";
+"body_zone_left_arm" = "左腕";
+"body_zone_right_leg" = "右脚";
+"body_zone_left_leg" = "左脚";
 
 // MARK: - Items
-"armor" = "Armor";
-"helmets" = "Helmets";
-"ballistics" = "Ballistics";
-"health" = "Health";
-"firearms" = "Firearms";
-"ammunition" = "Ammunition";
-"body_armor" = "Body Armor";
-"medical_items" = "Medical Items";
-"throwables" = "Throwables";
-"healing_items" = "Healing Items";
-"pain_management" = "Pain Management";
-"status_management" = "Status Effect Management";
-"stims" = "Stimulants";
-"grenades" = "Grenades";
-"properties" = "Properties";
-"performance" = "Performance";
-"ergonomics" = "Ergonomics";
-"ergo" = "Ergo";
-"vertical_recoil" = "Vertical Recoil";
-"horizontal_recoil" = "Horizontal Recoil";
-"recoil" = "Recoil";
+"armor" = "防弾ベスト";
+"helmets" = "ヘルメット";
+"ballistics" = "弾道と貫通";
+"health" = "HP";
+"firearms" = "銃火器";
+"ammunition" = "弾薬";
+"body_armor" = "防弾ベスト";
+"medical_items" = "医薬品";
+"throwables" = "投擲武器";
+"healing_items" = "HP回復アイテム";
+"pain_management" = "鎮痛系アイテム";
+"status_management" = "負傷治療用アイテム";
+"stims" = "特殊薬品";
+"grenades" = "手榴弾";
+"properties" = "特性";
+"performance" = "性能";
+"ergonomics" = "操作性(Ergo)";
+"ergo" = "エルゴ";
+"vertical_recoil" = "縦リコイル";
+"horizontal_recoil" = "横リコイル";
+"recoil" = "総合リコイル";
 
 // MARK: - Weapons
-"weapon_class" = "Class";
-"assault_rifle" = "Assault Rifle";
-"assault_carbine" = "Assault Carbine";
-"sniper_rifle" = "Sniper Rifle";
-"designated_marksman_rifle" = "DMR";
-"pistol" = "Pistol";
-"shotgun" = "Shotgun";
-"sub_machine_gun" = "Sub Machine Gun";
-"machine_gun" = "Machine Gun";
-"caliber" = "Caliber";
-"fire_rate" = "Fire Rate";
-"effective_range" = "Effective Range";
-"fold_or_retract" = "Fold/Retract";
-"retractable" = "Retractable";
-"build_wizard" = "Build Wizard";
-"gun_build_custom" = "Customize This Gun";
-"gun_build_recoil" = "Minimum Recoil";
-"gun_build_ergo" = "Maximum Ergonomics";
-"gun_build_random" = "Random";
-"fire_mode" = "Fire Mode";
-"fire_modes" = "Fire Modes";
-"fire_mode_semi" = "Semi Auto";
-"fire_mode_auto" = "Full Auto";
-"fire_mode_burst" = "Burst";
-"fire_mode_semi_short" = "Semi";
-"fire_mode_auto_short" = "Auto";
-"fire_mode_burst_short" = "Burst";
-"action" = "Action";
-"action_type_pump" = "Pump Action";
-"action_type_bolt" = "Bolt Action";
-"action_type_pump_short" = "Pump";
-"action_type_bolt_short" = "Bolt";
-"build" = "Build";
-"build_this_gun" = "Build This Gun";
+"weapon_class" = "銃種";
+"assault_rifle" = "アサルトライフル";
+"assault_carbine" = "カービンライフル";
+"sniper_rifle" = "スナイパーライフル";
+"designated_marksman_rifle" = "マークスマンライフル";
+"pistol" = "ハンドガン";
+"shotgun" = "ショットガン";
+"sub_machine_gun" = "サブマシンガン";
+"machine_gun" = "マシンガン";
+"caliber" = "使用弾薬";
+"fire_rate" = "連射速度";
+"effective_range" = "有効射程";
+"fold_or_retract" = "ストック折畳み";
+"retractable" = "可能";
+"build_wizard" = "武器カスタム";
+"gun_build_custom" = "カスタム";
+"gun_build_recoil" = "最低リコイル";
+"gun_build_ergo" = "最高エルゴ";
+"gun_build_random" = "ランダムビルド";
+"fire_mode" = "射撃方式";
+"fire_modes" = "射撃方式";
+"fire_mode_semi" = "単発";
+"fire_mode_auto" = "自動連射";
+"fire_mode_burst" = "バースト";
+"fire_mode_semi_short" = "単発";
+"fire_mode_auto_short" = "自動";
+"fire_mode_burst_short" = "バースト";
+"action" = "操作方法";
+"action_type_pump" = "ポンプアクション";
+"action_type_bolt" = "ボルトアクション";
+"action_type_pump_short" = "ポンプ";
+"action_type_bolt_short" = "ボルト";
+"build" = "ビルド作成";
+"build_this_gun" = "ビルド作成";
 
-"compare_preset_semi_auto_rifle" = "Semi-Auto Rifles";
-"compare_preset_full_auto_rifles" = "Full-Auto Rifles";
-"compare_preset_rifles_caliber_match" = "Rifles w/ Same Caliber";
-"compare_preset_rifles" = "Rifles";
-"compare_preset_full_auto_caliber_match" = "Full-Auto Rifles w/ Same Caliber";
-"compare_preset_semi_auto_pistols" = "Semi-Auto Pistols";
-"compare_preset_full_auto_pistols" = "Full-Auto Pistols";
-"compare_preset_pistols_caliber_match" = "Pistols w/ Same Caliber";
-"compare_preset_pistols" = "Pistols";
-"compare_preset_manual_shotguns" = "Manual-Action Shotguns";
-"compare_preset_shotguns" = "Shotguns";
-"compare_preset_smgs_caliber_match" = "Submachine Guns w/ Same Caliber";
-"compare_preset_smgs" = "Submachine Guns";
-"compare_preset_bolt_snipers" = "Bolt-Action Sniper Rifles";
-"compare_preset_snipers_and_dmrs" = "Sniper Rifles & DMRs";
-"compare_preset_dmrs" = "Designated Marksman Rifles";
+"compare_preset_semi_auto_rifle" = "セミオートライフル";
+"compare_preset_full_auto_rifles" = "フルオートライフル";
+"compare_preset_rifles_caliber_match" = "同弾薬ライフル";
+"compare_preset_rifles" = "ライフル";
+"compare_preset_full_auto_caliber_match" = "同弾薬オートライフル";
+"compare_preset_semi_auto_pistols" = "ハンドガン";
+"compare_preset_full_auto_pistols" = "マシンピストル";
+"compare_preset_pistols_caliber_match" = "同弾薬ハンドガン";
+"compare_preset_pistols" = "ハンドガン";
+"compare_preset_manual_shotguns" = "手動式ショットガン";
+"compare_preset_shotguns" = "ショットガン";
+"compare_preset_smgs_caliber_match" = "同弾薬サブマシンガン";
+"compare_preset_smgs" = "サブマシンガン";
+"compare_preset_bolt_snipers" = "ボルト式スナイパー";
+"compare_preset_snipers_and_dmrs" = "スナイパー・マークスマン";
+"compare_preset_dmrs" = "マークスマンライフル";
 
 // MARK: - Ammo
-"guns_for_caliber" = "Related Firearms";
-"subsonic" = "Subsonic";
-"tracer" = "Tracer";
-"muzzle_velocity" = "Muzzle Velocity (m/s)";
-"compatible_firearms" = "Compatible Firearms";
-"rpm" = "rpm";
+"guns_for_caliber" = "使用可能な武器";
+"subsonic" = "亜音速弾";
+"tracer" = "曳光弾";
+"muzzle_velocity" = "銃口初速";
+"compatible_firearms" = "使用可能な武器";
+"rpm" = "連射速度";
 "meters_abbr" = "m";
 "seconds_abbr" = "s";
 
-// MARK: - Armor
-"armor_class_0" = "None";
-"armor_class_1" = "Class 1";
-"armor_class_2" = "Class 2";
-"armor_class_3" = "Class 3";
-"armor_class_4" = "Class 4";
-"armor_class_5" = "Class 5";
-"armor_class_6" = "Class 6";
-"armor_type_body" = "Body Armor";
-"armor_type_helmet"= "Helmet";
-"armor_type_visor" = "Visor";
-"armor_type_attachment" = "Attachment";
-"armor_zone_top" = "Top";
-"armor_zone_eyes" = "Eyes";
-"armor_zone_jaws" = "Jaws";
-"armor_zone_ears" = "Ears";
-"armor_zone_nape" = "Nape";
-"armor_zone_chest" = "Chest";
-"armor_zone_stomach" = "Stomach";
-"armor_zone_left_arm" = "Left Arm";
-"armor_zone_right_arm" = "Right Arm";
-"armor_zone_left_leg" = "Left Leg";
-"armor_zone_right_leg" = "Right Leg";
-"armor_mat_ceramic" = "Ceramic";
-"armor_mat_armored_steel" = "Armored Steel";
-"armor_mat_aramid" = "Aramid";
-"armor_mat_uhmwpe" = "UHMWPE";
-"armor_mat_combined" = "Combined";
-"armor_mat_aluminum" = "Aluminum";
-"armor_mat_glass" = "Glass";
-"armor_mat_titanium" = "Titanium";
+// MARK: - Armor" = "-
+"armor_class_0" = "非装甲";
+"armor_class_1" = "GOST Lv.1";
+"armor_class_2" = "GOST Lv.2";
+"armor_class_3" = "GOST Lv.3";
+"armor_class_4" = "GOST Lv.4";
+"armor_class_5" = "GOST Lv.5";
+"armor_class_6" = "GOST Lv.6";
+"armor_type_body" = "防弾ベスト";
+"armor_type_helmet= ヘルメット;" = "ヘルメット";
+"armor_type_visor" = "バイザー";
+"armor_type_attachment" = "アタッチメント";
+"armor_zone_top" = "頭頂部";
+"armor_zone_eyes" = "眼球";
+"armor_zone_jaws" = "顎部";
+"armor_zone_ears" = "頭側部";
+"armor_zone_nape" = "後頭部";
+"armor_zone_chest" = "胸部";
+"armor_zone_stomach" = "腹部";
+"armor_zone_left_arm" = "左腕";
+"armor_zone_right_arm" = "右腕";
+"armor_zone_left_leg" = "左脚";
+"armor_zone_right_leg" = "右脚";
+"armor_mat_ceramic" = "セラミック";
+"armor_mat_armored_steel" = "装甲鋼板";
+"armor_mat_aramid" = "アラミド繊維";
+"armor_mat_uhmwpe" = "超重量ポリエチレン";
+"armor_mat_combined" = "複合素材";
+"armor_mat_aluminum" = "アルミニウム";
+"armor_mat_glass" = "強化ガラス";
+"armor_mat_titanium" = "チタニウム";
 
-"armor_type" = "Type";
-"armor_material" = "Material";
-"armor_class" = "Class";
-"armor_points" = "Durability";
-"armor_zones" = "Zones";
-"penalties" = "Penalties";
-"speed_penalty" = "Speed";
-"turn_speed_penalty" = "Turn Speed";
-"ergo_penalty" = "Ergonomics";
+"armor_type" = "タイプ";
+"armor_material" = "防弾素材";
+"armor_class" = "防弾性能";
+"armor_points" = "耐久性能";
+"armor_zones" = "保護部位";
+"penalties" = "トレードオフ";
+"speed_penalty" = "移動速度";
+"turn_speed_penalty" = "旋回速度";
+"ergo_penalty" = "エルゴ低下率";
 
-"penetration" = "Penetration";
-"damage" = "Damage";
-"armor_damage" = "Armor Damage";
-"frag_chance" = "Fragmentation Chance";
+"penetration" = "貫通";
+"damage" = "肉体ダメージ";
+"armor_damage" = "アーマー損壊率";
+"frag_chance" = "破片化発生率";
 
-"explore" = "Explore";
-"compare" = "Compare";
-"compare_performance" = "Compare Performance";
-"dps_calc" = "DPS Calculator";
-"kill_time_calc" = "Kill Time Calculator";
+"explore" = "もっと詳しく…";
+"compare" = "比較する";
+"compare_performance" = "性能を比較";
+"dps_calc" = "DPS計算機";
+"kill_time_calc" = "キルタイム計算機";
 
 // MARK: - Medical
-"damage" = "Damage";
-"contusion" = "Contusion";
-"fracture" = "Fracture";
-"pain" = "Pain";
-"medkit" = "Medkit";
-"painkiller" = "Painkiller";
-"accessory" = "Accessory";
-"stimulator" = "Stimulator";
-"use_time" = "Use Time";
-"effect_duration" = "Effect Duration";
-"use_count" = "# of Uses";
-"hp_resource" = "Total HP";
-"removes_bloodloss" = "Removes Blood Loss";
-"removes_contusion" = "Removes Contusion";
-"removes_fracture" = "Removes Fracture";
-"removes_pain" = "Removes Pain";
-"hydration_modifier" = "Hydration Modifier";
-"energy_modifier" = "Energy Modifier";
+"damage" = "ダメージ";
+"contusion" = "ショック";
+"fracture" = "骨折";
+"pain" = "激痛";
+"medkit" = "治療キット";
+"painkiller" = "鎮痛剤";
+"accessory" = "アクセサリー";
+"stimulator" = "特殊薬品";
+"use_time" = "使用時間";
+"effect_duration" = "効果持続時間";
+"use_count" = "使用回数";
+"hp_resource" = "HP回復総量";
+"removes_bloodloss" = "止血効果";
+"removes_contusion" = "ショック治療";
+"removes_fracture" = "骨折処置";
+"removes_pain" = "鎮痛効果";
+"hydration_modifier" = "水分回復";
+"energy_modifier" = "エネルギー回復";
 
 // MARK: - Throwables
-"throwable_frag" = "Frag";
-"throwable_flash" = "Flash";
-"throwable_smoke" = "Smoke";
-"fuse_time" = "Fuse Time";
-"explosion_radius_min" = "Min Explosion Range";
-"explosion_radius_max" = "Max Explosion Range";
-"fragmentation_count" = "Fragment Count";
+"throwable_frag" = "フラグ";
+"throwable_flash" = "スタン";
+"throwable_smoke" = "スモーク";
+"fuse_time" = "爆破遅延時間";
+"explosion_radius_min" = "最小加害範囲";
+"explosion_radius_max" = "最大加害範囲";
+"fragmentation_count" = "破片散布数";
 
 // MARK: - Melee
-"damage" = "Damage";
-"rate" = "Rate";
-"range" = "Range";
+"damage" = "肉体ダメージ";
+"rate" = "攻撃速度";
+"range" = "攻撃距離";
+"stab" = "突き";
+"stab_dmg" = "突きダメージ";
+"stab_rate" = "突き速度";
+"stab_range" = "突き攻撃距離";
 
-"stab" = "Stab";
-"stab_dmg" = "Stab Damage";
-"stab_rate" = "Stab Rate";
-"stab_range" = "Stab Range";
-
-"slash" = "Slash";
-"slash_dmg" = "Slash Damage";
-"slash_rate" = "Slash Rate";
-"slash_range" = "Slash Range";
+"slash" = "斬り";
+"slash_dmg" = "斬りダメージ";
+"slash_rate" = "斬り速度";
+"slash_range" = "斬り攻撃距離";
 
 // MARK: - Posts
-"ballistics_title" = "Armor & Ballistics: The Basics";
-"ballistics_body_1" = "The ballistics system in Escape from Tarkov is a black box that only a few people have seen the inner-workings of. Due to the complexity of the formulas used to calculate things like surface penetration chances, ricochet angles, and damage to both the armor and bodies of players, as well as the RNG-based elements they employ, there's an often imperceptible difference in the time-to-kill when comparing a fully-geared high-level player wearing the best end-game equipment to a level 1 player holding nothing more than an entry-level pistol. Coupled with the well-known networking and performance issues, bugs, and the ever-increasing number of players with epic gamer socks, the ambiguity of arguably the most important system of the game only serves to amplify the confusion and frustration both new and veteran players feel on a daily basis.";
-"ballistics_body_2" = "Beginning with body armor, how does it work and what should you know? Outside of availability and price, there are five important things you should consider when choosing what armor to buy, sell, repair, equip, or throw away - class, durability, zones of protection, material, and penalties.";
-"ballistics_body_2_1_title" = "1. Armor Class";
-"ballistics_body_2_1" = "Every armored component, from body armor to ballistic helmet attachments, has a specified armor class. Armor class is, in my opinion, the most important aspect of protective body armor. Put simply, the armor class represents how effective the armor is at stopping projectiles with varying levels of ballistic effectiveness. Currently, armor classes range from 1 to 6, and as you may have guessed, the higher the number the better.\n\nLevel 1 armor is capable of protecting you from things like bullet ricochets, shrapnel, and non-armor penetrating rounds pistol-calibers or buckshot. Level 6 armor is capable of protecting you from most projectiles up to and even including the largest caliber rounds in the game. I chose the word \"capable\" here on purpose, because every ballistics impact involves varying degrees of random chance.\n\nWhen it comes to ballistics in Escape from Tarkov, nothing is guaranteed and the things we experience sometimes seem impossible or don’t make sense. So, what does that ultimately mean? What armor will protect me from what projectiles? That’s a complicated question that I’ll get more into that detail later when I discuss the specifics related to the ballistics impact.";
-"ballistics_body_2_2_title" = "2. Durability";
-"ballistics_body_2_2_1" = "When it comes to armor durability, it's important to note the specifics have changed a number of times and are, of course, subject to be changed by BSG at any time in the future. The noteworthy thing to know about armor durability is that its ability to protect the wearer depends on its current durability value compared to the original, maximum durability value when it was new.";
-"ballistics_body_2_2_2" = "For example, if set of armor starts with 50 durability, it provides the best protection when it is 50/50, which is pretty obvious. The less obvious part is that any armor that is damaged and has not yet been repaired, such as armor that is 40/50, is exactly as effective at protecting you as the same armor if it was damaged and then repaired and is currently 40/40.";
-"ballistics_body_2_2_3" = "Knowing the original maximum durability value for the different sets of armor, or looking at the durability bar when inspecting the item, is an important habit to get into. Often times you'll find armor with a lower class than your current set of armor, but if your current set of armor is badly damaged or has been repaired many times, you may actually be increasing your chances of the armor saving your life if you switch to a lower-class armor with a higher current durability percentage. Having a solid understand of the general protection chances for different classes of armor, durability values, and bullet penetration properties can actually be invaluable in some combat situations. Check out the Damage Calculator to start getting a feel for how it all works!";
-"ballistics_body_2_3_title" = "3. Zones of Protection";
-"ballistics_body_2_3" = "There's not a ton of detail that I need to go into detail on this topic, other than you need to remember one simple rule: Armor does not protect what it visually appears to protect! The best example to demonstrate this is looking at the Gen4 Full Protection Armor vs. the Gen4 Assault Kit. The full protection version looks like it covers more of your body, but it protects your body parts exactly the same as the assault kit because it has the same zones of protection. Pay attention to what zones are protected - getting your arms or stomach blacked out can be quite annoying and is often worth some extra protection, if you can afford it!";
-"ballistics_body_2_4_title" = "4. Materials";
-"ballistics_body_2_4" = "Each armor has different materials that it is made from. Currently, materials have no notable effect on the armor's protection ability, instead the armor material becomes relevant when repairing. Some materials are able to be repaired very efficiently and inexpensively, while others take significant losses to their durability when repairing and can often cost more than the original cost of the armor!";
-"ballistics_body_2_5_title" = "5. Penalties";
-"ballistics_body_2_5" = "Generally speaking, additional protection comes at a cost, and this cost can be financial, as well as practical. Each piece of armor comes with a set of penalties. Some slow your movement, some slow your turning speed, and even your overall ergonomics, which effects the speed at which you aim down sights, rate of stamina loss, and even how loud your character is when moving slowly or aiming. Some head protection can limit your hearing in a number of ways, and even obscure your vision. These are the trade-offs you should consider when deciding whether or not you want to go for the more expensive sets of armor or that beefy Killa helmet. Which armor and helmets are worth it? That's for you to decide!";
-"ballistics_body_3_title" = "Summary";
-"ballistics_body_3" = "The ballistics system in Escape from Tarkov is amazingly complex and requires quite a bit of experience and knowledge to be able to use to your advantage. The Armor and Ballistics video above explains some of these concepts in more detail, so be sure to check that out if you're interested in hearing more on the topic. Be safe out there!";
+"ballistics_title" = "弾丸と防弾";
+"ballistics_body_1" = "Escape from Tarkovにおける、弾道や貫通などの弾丸の性質は、その内部機構の正体を知る者がほとんどいない、いわばブラック・ボックスのようなものです。現実的な物理特性を再現するために設計された高度な数学(たとえば貫通、跳弾、ベストの損壊と肉体へのダメージなど)により、最上級の装具を使用しても、初頭序盤の基本的な装具であっても、TTK(キルタイム)についてはさほどの大きな差異が発生しえないほどに複雑に作られています。もちろん、オンライン特有のハードウェア側の特性により、多くのPMCが「今なにが起きたんだ？」と困惑、あるいは憤慨することは、ベテランPMCにもルーキーPMCにとっても日常茶飯事です。";
+"ballistics_body_2" = "具体的に弾丸の特性を考えていくにあたり、まずは防弾ベストが、どのように機能し、何を知っておけば役に立つでしょうか。無論、販売個数や販売時期や値段といった面もありますが、ここでは重要な5つの項目に絞って解説していきます。その5つとは「防弾レベル」「耐久性」「保護部位」「防弾素材」「トレードオフ」です。それぞれを詳しくみていきましょう。";
+"ballistics_body_2_1_title" = "「防弾レベル」";
+"ballistics_body_2_1" = "「防弾レベル」とは、防弾ベストからヘルメット、それぞれに装着する拡張パーツにいたるまで、すべての防弾装備に指定されているパラメーターのことです。Veritas的直感では、防弾装備を選定するにあたり最重要な項目になりえると思われます。端的に言えば、この性能が高い＝弾丸が貫通しにくくなる＝銃撃戦での生存率が高まる、というわけです。現在、ゲーム内ではロシア式防弾基準「GOST基準」に則り、レベル1からレベル6までの6段階が存在し、その数字が高いほど保護性能が高いということになります。\n\nたとえば、レベル1では跳弾してきたエネルギー量の少ない普通弾や、ペレットの小さい散弾……つまりは既に貫通するだけのパワーが残っていないようなものに対してのみ限定的な効果を発揮し、一方レベル6は貫通能力の高い徹甲弾や大口径のライフル弾を含むほとんどの銃弾に対し効果を発揮しうる性能です。ここで『発揮しうる』と濁した理由は、レベル6を着ていればそれで万全ということはなく、このゲームにおける弾丸の挙動は複数の要素(防弾レベル以外の4つの要素も含む)が絡みあった結果ですから、一概単純にこうだ、とは言えません。\n\nこの世界においては、ときに複雑な要素によって引き起こされる不可解な結果に直面することも少なくありません。これを読んでいるPMC諸兄がいま抱えている「どの弾丸にはどのベストがいいんだ？」という疑問については、この続きの弾丸の挙動から、ひとつずつ検討していこうと思います。";
+"ballistics_body_2_2_title" = "「耐久性」";
+"ballistics_body_2_2_1" = "防弾ベストやヘルメットに設定される耐久性は、過去にもそうでしたが、何度も調整が加わってきましたし、今後も調整し続けることになるでしょう。さて、耐久性が高いものほど長期間の戦闘に適するというのは予想されていますが、その耐久性は修繕しても完全には復元されません。特筆すべきは、その基準値は「防弾ベストの本来の最大耐久値」と「現在の耐久値」であることです。";
+"ballistics_body_2_2_2" = "具体的に説明します。とある防弾ベストの最大耐久が50だとして、購入直後の耐久値は「現在値50、現最大値50」となります。当然のことながら、この状態がその防弾ベストが最もよいコンディションであり、最大の保護性能を発揮する条件です。さて、この防弾ベストが戦闘により摩耗し「現在値40、現最大値50」となった場合、もちろん保護性能は残存していますが、これと同じ防弾ベストを修理して「現在値40、現最大値40」となったものと比較しても同じ性能であることは、あまり知られていません。";
+"ballistics_body_2_2_3" = "防弾ベストごとの出荷時の耐久値を知ることや、購入前に事前に耐久値がどれほど残存しているかを確認することが、生存率を高めるステップであることは納得できたことと思います。さて、戦闘行動中には(おそらく着用中のものよりも低いレベルの)防弾ベストを往々にして見かけることになりますが、着替えるべきでしょうか、それとも無視するべきでしょうか。前述の通り、もし修繕を繰り返して耐久値がすり減っている場合、レベルが低くとも耐久の高いベストに着替えたほうが、最終的な生存率につながる可能性もあります。状況次第ではありますが、防弾ベストのレベル、耐久性、弾丸の特性をしっかり把握することは、ほかの知識で代用できない重要テクニックといえるでしょう。より深く理解したいインテリPMC諸兄のために、本アプリの目玉、ダメージ計算機を用意いたしました、是非ご活用ください。";
+"ballistics_body_2_3_title" = "「保護部位」";
+"ballistics_body_2_3" = "これについて覚えておくことは現状一つだけです。防弾ベストというオブジェクトが保護するのではなく、防弾ベストに指定された部位が保護されているだけです。つまり『全面をカバーするように見える』ヘルメットが「頭頂部」とだけ保護指定されていれば、そのヘルメットは頭頂部への保護だけしかありません、たとえヘルメットという物体に当たったとしても、後頭部を撃たれれば即死します。アイテム説明の保護部位(とレベル)は確認しておくべき項目です。腕や腹部を保護する防弾ベストは、その値段に見合った性能を発揮します。戦闘行動中に腕や腹部を損壊させられるのはその後の戦闘や作戦に支障をきたしますから。";
+"ballistics_body_2_4_title" = "「防弾素材」";
+"ballistics_body_2_4" = "防弾ベストとヘルメットには、使用されている素材という概念があります。戦闘中には特別なにも効果がないように思われるパラメーターですが、摩耗したベストを修繕する際には重要になってきます。セラミックプレートを使用したベストはつまり、銃弾によって粉々になった陶器の素材をいちいちつなぎ直すため、コストが嵩張るだけでなく、最大耐久が大幅に減少します。チタニウムプレートならば穴を埋めるだけ、アラミド繊維ならば基本的な裁縫と比較的低価格かつ長寿命に使用できます。";
+"ballistics_body_2_5_title" = "「トレードオフ」";
+"ballistics_body_2_5" = "防弾ベストやヘルメットには、保護というプラス面と同時に、トレードオフとしてのマイナス面が存在します。そのマイナス面とは費用という面もありますが、ここでは戦闘そのものに影響するもうひとつの面について説明します。防弾装備それぞれに固有のトレードオフ、ペナルティーが存在し、たとえば防弾ベストは四肢の動きを妨げるため移動速度が低下したり、方向転換が遅くなったり、武器の操作性が低下したりといったものがあります。武器の操作性(エルゴノミクス)が低い場合、照準までに時間がかかり、照準中にスタミナを消費しやすくなり、また銃を構えたり移動する際に発生する金属音が大きくなります。ヘルメットの中には耳の周辺をカバーする構造のものもあり、これにより音がくぐもったりほとんど聞こえなくなったりもします。顔面への保護のためにフェースシールドを装備するならば、その分ガラス面が曇っていたり、あるいは高い保護性能を発揮しますが装甲鋼板の小さな隙間からしか見えなくなる「Maska 1SCh」ヘルメットといったものもあります。とにかくレベル6のセットで高い耐久性、というのが常に最適解であるとは言えません。作戦や想定できる敵性勢力といった情報をうまく活用し、装備を選定するところから、既に戦闘行動は開始しているのです。";
+"ballistics_body_3_title" = "結論";
+"ballistics_body_3" = "Escape from Tarkovにおける弾丸の特性は、過去どこにもないほど複雑に作られています。単に射撃がうまいだけではなく、知識と経験を活かさなければ、この特性を味方につけることはできません。防弾と弾丸の特性については、ここで解説した以上の検証や詳細をビデオのほうで扱っています。是非ご覧ください。";
 
-"health_title" = "Your PMC's Health & Status";
-"health_body_1" = "This information will be coming soon™";
+"health_title" = "PMCの健康状態について";
+"health_body_1" = "現在調査中です、乞うご期待！";
 
-"upcoming_body_1" = "I have so many awesome features planned for this app that I can't wait to build for the community! Interactive maps, weapon modding, quest guides, more items and calculators, trader info, skills breakdowns, and more! I plan to release features consistently, but I wanted to get version 1.0 shipped to you guys as soon as possible to start gauging interest and gathering feedback. Check back for updates soon!";
+"upcoming_body_1" = "実装予定の機能が多数まだ予定されています。追加機能つきゲーム内マップや、カスタムパーツ、タスクの詳細付きガイドに、各種計算機、トレーダー情報にキャラクタースキル、思いつく限りのあれこれに乞うご期待！コンスタントに開発を続けていきたいと考えています。ただ、まずはアプリバージョンを1.0、正式版としてリリースすることを優先したいと考えています。もちろん、ウェブ版とAndroid版の開発も目下進行中です。SNSで最新情報を見逃さないでください！";
 
 "attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
 "attributions_willerz" = "Willer_Z";
-"attributions_community" = "Community";
+"attributions_community" = "Veritas Discordの仲間たち";
 "attributions_bsg" = "Battlestate Games Limited";
-"attributions_misc" = "Miscellaneous Legal Stuff";
-"attributions_translations" = "Localization";
+"attributions_misc" = "その他コミュニティーのみなさま";
+"attributions_translations" = "アプリ翻訳に携わったみなさま";
 
-"attributions_api_descr" = "This project wouldn't have been possible without the fantastic dev work done by Morphy on the Tarkov Database and the underlying API.";
-"attributions_nofam_descr" = "The unsung hero in the EFT community, the creator of the ammo charts, and collaborator on the ballistics calculators and related information, the Ambassador of Ammunition, the Baron of Ballistics, the Professor of Penetration!";
-"attributions_willerz_descr" = "Much love to my homeboy for providing some of the epic-quality screenshots he gave me permission to use in this app. He also happens to be one of best players in the world.";
-"attributions_community_descr" = "Much love to my community in the Discord for all of the hard work capturing and editing the beautiful photos used in this app!";
-"attributions_translations_descr" = "All translations were done by community members donating their time and effort to the cause. Everyone around the world appreciates your hard work!";
-"attributions_bsg_descr" = "Special thanks to Nikita for his support of this app, and to all the folks at BSG for their hard work and dedication in building the best first-person shooter of all time.";
+"attributions_api_descr" = "Tarkov DatabaseのAPIを提供いただいたMorphy氏に心から感謝を申し上げます。";
+"attributions_nofam_descr" = "Escape from Tarkovコミュニティーの一人一人のサポートにも感謝を述べたいと思います、とくに弾薬チャートの作者様、弾丸特性の計算機開発にかかわった皆様、専門家の皆様には、特別の感謝をささげます。";
+"attributions_willerz_descr" = "本アプリ内部のスクリーンショットを提供していただきました親友に、最愛を捧げます。";
+"attributions_community_descr" = "本アプリで使用しましたテクスチャーやフォトを提供いただきました、Veritas Discordのメンバー皆様に、感謝を述べさせていただきます。";
+"attributions_translations_descr" = "本アプリの各国語翻訳に携わりました、全世界のUSECおよびBEAR PMCならびにScav諸兄に、感謝をささげます。本アプリの日本語翻訳は、Battlestate Games / Escape from Tarkov制式日本語ローカライズチームおよびTarkov Battle Buddy翻訳分室Ds.Ruinの監修によるものです。";
+"attributions_bsg_descr" = "本アプリの開発に際し、快く情報提供いただきました、Battlestate Games CEO Nikita Buyanov氏に、最大限の感謝と尊敬を捧げます。";
+"attributions_misc_descr" = "SNSマークのアイコン作者Abhishek Pipalva氏(ウェブサイト https://www.iconfinder.com/abhishekpipalva クリエイティヴ・コモン・ライセンス)と、「ブレイン」アイコン作者Sergey Patutin氏(Noun Project - ウェブサイト https://thenounproject.com/bdesign.by/ クリエイティヴ・コモン・ライセンス)に、感謝をささげます。";
 
-//MARK:- Analytics
-"total_users_count" = "%@ Battle Buddies have joined the fight!";
+// Analytics
+"total_users_count" = "人のBattle Buddyが世界中にいます。ありがとう！";
 
 // ----------------------------------------
 // V1.0.1
-"global_stats" = "Community Stats";
-"settings" = "Settings";
-"language_system_default" = "System";
-"language" = "Language";
+"global_stats" = "コミュニティー統計";
+"settings" = "設定";
+"language_system_default" = "システム言語";
+"language" = "言語設定";
 
 // ----------------------------------------
 // V1.1.0
 
+// MARK:- Common
+"firearm" = "Firearm";
+"common_none" = "None";
+"common_refine" = "Refine";
+
 // MARK:- More
 "days_since_wipe" = "%@ days since last wipe...";
-"supporter_leaderboard" = "Supporter Leaderboard";
-"leaderboard" = "Leaderboard";
+"bud_leaderboard" = "Bud Leaderboard";
 "total_ads_watched" = "%@ ads watched by the community!";
+"app_version" = "App Version";
+"your_bud_score" = "Your Bud Score";
+"bud_reward" = "Redeem Reward";
+"bud_reward_title" = "Reward Redeemed";
+"bud_reward_message" = "Thanks for being a bud!";
+
+// Being A Bud
+"bud_points" = "Bud Points©";
+"bud_how_to_title" = "How To Be A Bud";
+"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies.\n\nAs a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+
+"bud_how_to_title_1" = "Come Back Often";
+"bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
+
+"bud_how_to_title_2" = "Watch Ads";
+"bud_how_to_body_2" = "Another way to be a bud and earn Bud Points© is by watching video ads. On the main More menu, there's the option to \"Watch an Ad\". If an ad is available from one of our content providers, you will be able to watch a short advertisement and will be rewarded with Bud points showcasing how much of a bud you are. After watching an ad, another will be available after some time, so if you want to be a huge bud, be patient!";
+
+"bud_how_to_title_3" = "Enable Banner Ads";
+"bud_how_to_body_3" = "Enabling banner ads is another amazing way to be a bud! You can enable banner ads from the Settings screen! Don't try to be cheeky though bud, if you disable banner ads the points you earned will be lost until you re-enable them.";
+
+"bud_how_to_title_4" = "More Ways To Be A Bud";
+"bud_how_to_body_4" = "As more features are introduced into Battle Buddy more ways to earn and use your Bud Points© will emerge! Stay tuned buds!";
 
 // MARK:- Settings
 "profile" = "Profile";
@@ -346,10 +372,11 @@
 "settings_save_error" = "Unable to save your settings, please try again later.";
 
 // MARK:- Menu Items
-"sound_training" = "Sound Training";
-"sound_training_commit" = "Commit Answer";
 "main_menu_helmets" = "Helmets";
 "main_menu_mods" = "Modifications";
+"main_menu_combat_sim" = "Combat Simulator";
+"main_menu_characters" = "Characters";
+"main_menu_visors" = "Visors";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";
@@ -366,25 +393,93 @@
 "speed_penalty_full" = "Speed Penalty";
 "turn_speed_penalty_full" = "Turn Speed Penalty";
 "ergo_penalty_full" = "Ergonomics Penalty";
+"armor_type" = "Type";
 
 // MARK:- Mods
-"mod_generic" = "modification";
-"mod_barrel" = "modificationBarrel";
-"mod_bipod"  = "modificationBipod";
-"mod_charge" = "modificationCharge";
-"mod_device" = "modificationDevice";
-"mod_foregrip" = "modificationForegrip";
-"mod_gasBlock" = "modificationGasblock";
-"mod_goggles" = "modificationGoggles";
-"mod_handgaurd" = "modificationHandguard";
-"mod_launcher" = "modificationLauncher";
-"mod_mount" = "modificationMount";
-"mod_muzzle" = "modificationMuzzle";
-"mod_pistolGrip" = "modificationPistolgrip";
-"mod_receiver" = "modificationReceiver";
-"mod_sight" = "modificationSight";
-"mod_sightSpecial" = "modificationSightSpecial";
-"mod_stock" = "modificationStock";
+"modification" = "Modification";
+"modificationBarrel" = "Barrel";
+"modificationBipod"  = "Bipod";
+"modificationCharge" = "Charging Handle";
+"modificationDevice" = "Device";
+"modificationForegrip" = "Foregrip";
+"modificationGasblock" = "Gas Block";
+"modificationGoggles" = "Goggles";
+"modificationHandguard" = "Handguard";
+"modificationLauncher" = "Launcher";
+"modificationMount" = "Mount";
+"modificationMuzzle" = "Muzzle";
+"modificationPistolgrip" = "Pistol Grip";
+"modificationReceiver" = "Receiver";
+"modificationSight" = "Sight";
+"modificationSightSpecial" = "Sight (Special)";
+"modificationStock" = "Stock";
+
+// MARK:- Sound Training
+"sound_training" = "Sound Training Beta";
+"sound_training_start" = "Start Training";
+"sound_training_commit" = "Guess";
+"sound_training_result_correct" = "Correct!";
+"sound_training_result_wrong" = "Keep Trying!";
+
+"sound_localization_info_title" = "Learn How To Localize Sound";
+"sound_localization_info_note_1" = "The sound training tool is currently in beta! Headphones are required!";
+"sound_localization_info_body_1" = "Escape from Tarkov currently utilizes your standard stereo sound, which is more than adequate enough for sound localization in most cases. At this point in time, no 5.1 or 7.1 surround sound options are supported, and as such I would HIGHLY recommend against using any virtual audio settings in your headphone software or windows audio settings.\n\nThere's no doubt there are people that swear by these more advanced settings, but they simply are not required, will not give you any more information about distance, location, etc., because they don't have any more information from the game or the engine itself! The game outputs stereo audio - a Left channel and a Right channel, nothing more complex than that. In my experience, enabling these more advanced settings makes sound localization harder, not easier. If you have these settings on and have issues with localizing sound in Tarkov or any other first-person shooter, try turning them off and see if that makes a difference, you might be surprised!";
+"sound_localization_info_subtitle_2" = "How To Play";
+"sound_localization_info_body_2" = "The goal of this mini-game is to locate the direction of sound around your on-screen character. When you begin, and a tone will play at a regular interval, panned to a random direction somewhere around your character on screen in a 360-degree radius.\n\nSwipe left and right on screen to turn your character, just like you would with a trackpad or a mouse. As your character's left or right ears get closer or further away from the source of the sound, the volume will change in each ear accordingly.\n\nWhen the tone is equally loud in both your left and right ears, your character is likely facing towards the sound. Once you think you're done, confirm your choice by pressing the button to see if you're correct!";
+"sound_localization_info_subtitle_3" = "Front and Back Sound The Same?!";
+"sound_localization_info_body_3" = "You may have noticed that sounds that are directly in front of you sound indistinguishable from sounds that are directly behind you. In both cases, the volume of the left and right channels are equal. Ignoring things like context clues based on map knowledge and materials in the environment, all of which are extremely useful in determining the location of sounds occurring around you, the only way to differentiate between sounds in front and behind is by turning your character's head relative to the sound, and paying attention to the direction the sound appears to move when you do. Take a look at this image example below:";
+"sound_localization_info_body_4" = "When you turn your character left or right, or even better turn just your character's silently head using free-look, you should be able to hear the volume of the sound increase or decrease in each ear. If you turn your head to the right and the sound is in front of you, your left ear will be closer to the sound and your right ear will be further from it, so the volume will be louder in your left ear compared to your right. Conversely, if the sound was actually behind you, when you turn right it will get louder in your right ear and softer in your left. Try using the direction that the sound moves when you turn your head as an indication of the location of the sound. The way it works in this tool is exactly like it works in Escape from Tarkov, and most other first-person shooters!";
+
+"simulate_gunshot_pen" = "Shoot\nw/ Penetration";
+"simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
+
+// MARK:- Combat Sim
+"combat_sim_subject_type" = "Character Type";
+"combat_sim_aim_setting" = "Aim Setting";
+"combat_sim_edit_subject" = "Edit Test Subject";
+"combat_sim_run" = "Run";
+"combat_sim_results" = "Simulation Results";
+"combat_sim_results_iterations" = "Iterations";
+"combat_sim_results_winner" = "Winner";
+"combat_sim_results_loser" = "Loser";
+"combat_sim_results_tie" = "Tie";
+"combat_sim_results_win_percent" = "Win Percent";
+"combat_sim_settings" = "Simulation Settings";
+"combat_sim_tap_to_edit" = "Tap Image To Edit Test Subject";
+"combat_sim_edit_firearm" = "Edit Firearm";
+"combat_sim_head_armor" = "Head Armor";
+
+"combat_sim_pen_setting" = "Penetration Setting";
+"combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
+"combat_sim_pen_setting_always_desc" = "Bullets will always penetrate armor as long as there is a non-zero chance. For example, a 1% penetration chance will always penetrate, but a 0% penetration chance will not.";
+"combat_sim_pen_setting_never_desc" = "Bullets will not penetrate any armor unless the armor is at 0% durabilty, at which time the chance becomes 100%";
+
+"combat_sim_frag_setting" = "Fragmentation Setting";
+"combat_sim_frag_setting_realistic_desc" = "Bullets have the same chance to fragment as they do in-game.";
+"combat_sim_frag_setting_always_desc" = "Bullets will always fragment as long as their effective fragmentation chance is non-zero. As of writing this, low-penetration ammo, such as RIP slugs, cannot currently fragment in the game despite it's 100% advertised fragmentation chance.";
+"combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
+
+"aim_setting_upper_body" = "Upper Body";
+"aim_setting_center_mass" = "Center of Mass";
+"aim_setting_headshots" = "Headshots";
+"aim_setting_random_leg" = "Random Leg Meta";
+"aim_setting_single_leg" = "Single Leg Meta";
+"aim_setting_thorax" = "Thorax";
+
+"aim_setting_upper_body_desc" = "All bullets fired will impact the target on their upper-body, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
+"aim_setting_center_mass_desc" = "All bullets fired will impact the target in the center-of-mass, which includes the arms, stomach, and thorax.";
+"aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
+"aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
+"aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
+"aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
+
+"simulation_result_win" = "Win";
+"simulation_result_loss" = "Loss";
+"simulation_result_tie" = "Tie";
+
+"simulation_win_percent" = "Win Percent";
+"simulation_time_to_kill" = "Avg. Time-to-Kill";
+"simulation_win_shots_to_kill" = "Avg. Shots-to-Kill";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations

@@ -11,14 +11,14 @@
 - [ ] Release v1.1.0  ***In development - see TODO list below***
 
 ## <u>v1.1.0</u>
-- [ ] Face shields
-- [ ] Japenese Localization
 - [ ] Combat Simulation
-- [ ] Penetration Calculator Improvements
-    - [ ] Helmets/face shields/mods
-    - [x] Add a "shoot" button to simulate damage
-- [ ] Implement Banner Ads (if setting enabled)
+    - [ ] Choosing armor, guns, ammo, etc 
 
+- [x] Japenese Localization
+- [x] Penetration Calculator Improvements
+    - [x] Helmets/face shields/mods
+    - [x] Add a "shoot" button to simulate damage
+- [x] Face shields
 - [x] Info on how to earn points
 - [x] Earn random bud points
 - [x] Health calc buckshot fix
@@ -45,6 +45,10 @@
     - [x] View will disappear - stop player
 
 ## <u>v1.2.0</u>
+- [ ] Implement Banner Ads (if setting enabled)
+- [ ] Combat Simulation Randomizer
+- [ ] Compare all shortcut
+- [ ] Guess that sound mini-game
 - [ ] Armor - compatible attachments
 - [ ] Placeholder images for accessories
 - [ ] Health Calculator Improvements

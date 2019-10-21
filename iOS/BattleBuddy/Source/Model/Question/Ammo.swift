@@ -9,12 +9,14 @@
 import Foundation
 import BallisticsEngine
 
-struct Ammo: BaseItem {
+class Ammo: BaseItem {
     let json: [String : Any]
     let type: ItemType
     let caliber: String
     var damage: Int
+    var totalDamage: Int
     var armorDamage: Int
+    var totalArmorDamage: Int
     var penetration: Int
     let fragChance: Float
     let muzzleVelocity: Int
@@ -55,11 +57,20 @@ struct Ammo: BaseItem {
         } else {
             projectileCount = 1
         }
+
+        totalDamage = damage * projectileCount
+        totalArmorDamage = armorDamage * projectileCount
+    }
+}
+
+class SimulationAmmo: Ammo {
+    override init?(json: [String : Any]) {
+        super.init(json: json)
     }
 }
 
 // MARK: Ammo calculable
-extension Ammo: CalculableAmmo {
+extension SimulationAmmo: CalculableAmmo {
     var resolvedAmmoName: String {
         get { return displayName }
     }
@@ -70,12 +81,12 @@ extension Ammo: CalculableAmmo {
     }
 
     var resolvedDamage: Double {
-        get { return Double(damage * projectileCount) }
+        get { return Double(totalDamage) }
         set { damage = Int(newValue) }
     }
 
     var resolvedArmorDamage: Double {
-        get { return Double(armorDamage * projectileCount) }
+        get { return Double(totalArmorDamage) }
         set { armorDamage = Int(newValue) }
     }
 

@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import BallisticsEngine
 
-struct Firearm: BaseItem {
+class Firearm: BaseItem {
     let json: [String : Any]
     let type: ItemType
     let firearmType: FirearmType
@@ -68,4 +69,11 @@ struct Firearm: BaseItem {
         if fullAuto { modes.append("fire_mode_auto_short".local()) }
         return modes.joined(separator: ", ")
     }
+}
+
+class SimulationFirearm: Firearm { }
+
+extension SimulationFirearm: CalculableFirearm {
+    var resolvedFireRate: Int { return fireRate }
+    var resolvedCaliber: String { return caliber }
 }

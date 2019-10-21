@@ -43,7 +43,7 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
     lazy var exploreTableView = { BaseTableView(dataSource: self, delegate: self) }()
     let compareCell = BaseTableViewCell(text: "compare_performance".local())
     let customBuildCell = BaseTableViewCell(text: "gun_build_custom".local())
-    lazy var exploreCells: [BaseTableViewCell] = { return [compareCell, customBuildCell] }()
+    lazy var exploreCells: [BaseTableViewCell] = { return [compareCell] }()
 
     init(_ firearm: Firearm) {
         self.firearm = firearm

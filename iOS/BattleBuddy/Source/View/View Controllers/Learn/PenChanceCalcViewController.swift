@@ -78,7 +78,7 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
         return button
     }()
 
-    var armor: Armor? {
+    var armor: SimulationArmor? {
         didSet {
             if let armor = armor {
                 durabilitySlider.enable(true)
@@ -96,14 +96,14 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
             }
         }
     }
-    var ammo: Ammo? {
+    var ammo: SimulationAmmo? {
         didSet {
             durabilitySlider.value = durabilitySlider.maximumValue
             updateCalculator()
         }
     }
-    var ammoOptions: [Ammo]?
-    var armorOptions: [Armor]?
+    var ammoOptions: [SimulationAmmo]?
+    var armorOptions: [SimulationArmor]?
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -178,7 +178,7 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
 
             dbManager.getAllAmmo { allAmmo in
                 hud.dismiss(animated: false)
-                self.ammoOptions = allAmmo
+                self.ammoOptions = allAmmo.compactMap { SimulationAmmo(json:$0.json) }
                 self.showAmmoOptions()
             }
         }
@@ -194,9 +194,9 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
             hud.position = .center
             hud.show(in: self.scrollView)
 
-            dbManager.getAllBodyArmor { allArmor in
+            dbManager.getAllArmor { allArmor in
                 hud.dismiss(animated: false)
-                self.armorOptions = allArmor
+                self.armorOptions = allArmor.compactMap { SimulationArmor(json:$0.json) }
                 self.showArmorOptions()
             }
         }
@@ -205,7 +205,7 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
     @objc func updateCalculator() {
         selectionCollectionView.reloadData()
 
-        if var armor = armor, let ammo = ammo {
+        if let armor = armor, let ammo = ammo {
             let durability = Int(durabilitySlider.value)
             armor.currentDurability = durability
 
@@ -234,8 +234,8 @@ class PenChanceCalcViewController: BaseCalculatorViewController {
 extension PenChanceCalcViewController: SortableItemSelectionDelegate {
     func itemSelected(_ selection: Sortable) {
         switch selection {
-        case let selectedArmor as Armor: armor = selectedArmor
-        case let selectedAmmo as Ammo: ammo = selectedAmmo
+        case let selectedArmor as SimulationArmor: armor = selectedArmor
+        case let selectedAmmo as SimulationAmmo: ammo = selectedAmmo
         default: fatalError()
         }
 

@@ -39,8 +39,8 @@ extension Ammo: Sortable {
         switch param.identifier {
         case AmmoSortableParam.name.identifier: return displayNameShort
         case AmmoSortableParam.caliber.identifier: return DependencyManagerImpl.shared.ammoUtilitiesManager().caliberDisplayName(caliber)
-        case AmmoSortableParam.pen.identifier: return String(Int(resolvedPenetration))
-        case AmmoSortableParam.damage.identifier: return String(Int(resolvedDamage))
+        case AmmoSortableParam.pen.identifier: return String(Int(penetration))
+        case AmmoSortableParam.damage.identifier: return String(Int(totalDamage))
         default: fatalError()
         }
     }
@@ -48,12 +48,26 @@ extension Ammo: Sortable {
 
 extension Armor: Sortable {
     var sortId: String { return id }
-    var params: [SortableParam] { return [ArmorSortableParam.name, ArmorSortableParam.armorClass, ArmorSortableParam.maxDurability] }
+    var params: [SortableParam] { return [ArmorSortableParam.name, ArmorSortableParam.armorType, ArmorSortableParam.armorClass, ArmorSortableParam.maxDurability] }
     func valueForParam(_ param: SortableParam) -> String {
         switch param {
         case ArmorSortableParam.name: return displayName
-        case ArmorSortableParam.armorClass: return String(resolvedArmorClass)
+        case ArmorSortableParam.armorType: return String(armorType.local())
+        case ArmorSortableParam.armorClass: return String(armorClass.rawValue)
         case ArmorSortableParam.maxDurability: return String(maxDurability)
+        default: fatalError()
+        }
+    }
+}
+
+extension Firearm: Sortable {
+    var sortId: String { return id }
+    var params: [SortableParam] { return [FirearmSortableParam.name, FirearmSortableParam.caliber, FirearmSortableParam.fireRate] }
+    func valueForParam(_ param: SortableParam) -> String {
+        switch param {
+        case FirearmSortableParam.name: return displayNameShort
+        case FirearmSortableParam.caliber: return DependencyManagerImpl.shared.ammoUtilitiesManager().caliberDisplayName(caliber)
+        case FirearmSortableParam.fireRate: return String(fireRate)
         default: fatalError()
         }
     }

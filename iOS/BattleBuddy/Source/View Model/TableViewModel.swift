@@ -13,7 +13,7 @@ struct GroupedTableViewSection {
     let footerTitle: String?
     var cells: [BaseTableViewCell]
 
-    init(headerTitle: String?, footerTitle: String? = nil, cells: [BaseTableViewCell]) {
+    init(headerTitle: String?, footerTitle: String? = nil, cells: [BaseTableViewCell] = []) {
         self.headerTitle = headerTitle
         self.footerTitle = footerTitle
         self.cells = cells
