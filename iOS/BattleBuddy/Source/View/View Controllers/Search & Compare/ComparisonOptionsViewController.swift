@@ -11,7 +11,6 @@ import UIKit
 class ComparisonOptionsViewController: BaseTableViewController {
     var comparison: ItemComparison
     let cellReuseId: String = "OptionCell"
-    var hasShownDefaults: Bool = false
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -30,15 +29,6 @@ class ComparisonOptionsViewController: BaseTableViewController {
         tableView.register(BaseTableViewCell.self, forCellReuseIdentifier: cellReuseId)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        if !hasShownDefaults {
-            hasShownDefaults = true
-            continueWithComparison()
-        }
     }
 
     @objc func continueWithComparison() {

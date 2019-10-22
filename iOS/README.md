@@ -11,9 +11,39 @@
 - [ ] Release v1.1.0  ***In development - see TODO list below***
 
 ## <u>v1.1.0</u>
-- [ ] Combat Simulation
-    - [ ] Choosing armor, guns, ammo, etc 
+- [ ] Search on item list
+- [ ] Ammo, armor, firearms -> link directly to combat sim
+- [ ] Face shield pictures
+- [ ] Localizations
+    - [x] English
+    - [ ] Hungarian
+    - [x] Swedish
+    - [ ] Dutch
+    - [ ] Croatian
+    - [ ] Spanish Latin American
+    - [x] Russian
+    - [ ] Serbian
+    - [ ] Serbian Latin
+    - [x] Spanish Spain
+    - [x] Italian
+    - [ ] Portuguese
+    - [ ] Lithuanian
+    - [x] Arabic
+    - [ ] French
+    - [ ] Portuguese Portugal
+    - [ ] Indonesian
+    - [ ] Polish
+    - [ ] Chinese Traditional
+    - [ ] German
+    - [ ] Estonian
+    - [ ] Korean
+    - [ ] Norwegian Bokmål
+    - [ ] Czech
+    - [x] Slovenian
+    - [ ] Japanese
 
+- [x] Combat Simulation
+    - [x] Choosing armor, guns, ammo, etc
 - [x] Japenese Localization
 - [x] Penetration Calculator Improvements
     - [x] Helmets/face shields/mods

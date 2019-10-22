@@ -199,7 +199,7 @@ class ItemListViewController: BaseStackViewController {
             var comparison = AmmoComparison(allAmmo: all)
             comparison.itemsBeingCompared = compared
             return comparison
-        case .armor, .helmet, .modification:
+        case .armor, .helmet, .visor, .modification:
             let all = allItems.map { $0 as! Armor }
             let compared = comparedItems.map { $0 as! Armor }
             var comparison = ArmorComparison(allArmor: all)
