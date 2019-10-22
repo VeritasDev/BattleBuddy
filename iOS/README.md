@@ -11,12 +11,13 @@
 - [ ] Release v1.1.0  ***In development - see TODO list below***
 
 ## <u>v1.1.0</u>
+
+- [ ] Push notifications for wipe
 - [ ] Search on item list
 - [ ] Ammo, armor, firearms -> link directly to combat sim
-- [ ] Face shield pictures
 - [ ] Localizations
     - [x] English
-    - [ ] Hungarian
+    - [x] Hungarian
     - [x] Swedish
     - [ ] Dutch
     - [ ] Croatian
@@ -42,6 +43,7 @@
     - [x] Slovenian
     - [ ] Japanese
 
+- [x] Face shield pictures
 - [x] Combat Simulation
     - [x] Choosing armor, guns, ammo, etc
 - [x] Japenese Localization

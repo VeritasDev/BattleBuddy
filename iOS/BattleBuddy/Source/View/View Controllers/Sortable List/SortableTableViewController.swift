@@ -19,6 +19,13 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
     var currentSelection: Sortable?
     lazy var header: SortableHeaderView = { SortableHeaderView(delegate: self, params: config.params, initialSort: config.defaultSortParam) }()
     var presentedModally = true
+    var searchText: String? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    var searchResults: [Sortable]?
+    var items: [Sortable] { get { return searchResults ?? config.items } }
 
     required init?(coder: NSCoder) { fatalError() }
 
@@ -51,14 +58,15 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
     func toggleSort(param: SortableParam) {
         config.toggleStateForParam(param)
 
-        if !config.items.isEmpty {
+        if !items.isEmpty {
             tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
             tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
     }
+}
 
-    // MARK: - Table view data source
-
+// MARK: - Table view data source
+extension SortableTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -72,13 +80,13 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return config.items.count
+        return searchResults?.count ?? config.items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SortableTableViewCell.reuseId) ?? SortableTableViewCell(config: config)
         guard let sortableCell = cell as? SortableTableViewCell else { fatalError() }
-        let item = config.items[indexPath.row]
+        let item = items[indexPath.row]
         sortableCell.item = item
         sortableCell.isSelected = (item.sortId == currentSelection?.sortId)
         return sortableCell
@@ -90,4 +98,3 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
         selectionDelegate.itemSelected(config.items[indexPath.row])
     }
 }
-

@@ -29,12 +29,6 @@ class MainMenuCollectionViewController: BaseCollectionViewController {
         collectionView.contentInset = UIEdgeInsets.init(top: 10, left: 10, bottom: 0, right: 10)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        adManager.addBannerToView(view)
-    }
-
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
 
@@ -78,21 +72,16 @@ class MainMenuCollectionViewController: BaseCollectionViewController {
             let height: CGFloat
 
             switch menuItem.compactSize {
-            case .small:
-                height = floor(collectionViewHeight * 0.2)
-            case .medium:
-                height = floor(collectionViewHeight * 0.3)
-            case .large:
-                height = floor(collectionViewHeight * 0.45)
+            case .small: height = floor(collectionViewHeight * 0.2)
+            case .medium: height = floor(collectionViewHeight * 0.3)
+            case .large: height = floor(collectionViewHeight * 0.45)
             }
+
             return CGSize.init(width: width, height: height)
         } else {
             switch menuItem.regularSize {
-            case .small, .medium:
-                fatalError()
-            case .large:
-                let width = totalAvailableWidth / 2.0
-                return CGSize.init(width: width, height: width * 0.56)
+            case .small, .medium: fatalError()
+            case .large: return CGSize.init(width: (totalAvailableWidth / 2.0), height: (totalAvailableWidth / 2.0) * 0.56)
             }
         }
     }
