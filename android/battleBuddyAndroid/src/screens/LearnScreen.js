@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Card from '../components/common/Card';
 import ScrollableContainer from '../components/common/ScrollableContainer';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import BallisticsData from '../../test-data/ballistics';
 
 const items = [
   {
@@ -21,16 +22,17 @@ const items = [
     text: 'Ballistics',
     path: 'Ballistics',
     textPosition: 'bottom left',
+    data: 'temp',
     image: require('../../assets/images/card_heroes/ballistics.png')
   }
 ];
 
 const LearnScreen = ({navigation}) => {
   const onPressHandler = (item) => {
-    if (item.path) {
-      navigation.navigate(item.path);
+    if (item.data) {
+      navigation.navigate(item.path, {data: BallisticsData});
     } else {
-      alert(`${item.text} not yet implemented`);
+      navigation.navigate(item.path);
     }
   };
 
