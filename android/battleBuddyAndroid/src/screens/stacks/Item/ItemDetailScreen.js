@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
-import DetailSection from '../../../components/detail/DetailSection';
-import useStorageImage from '../../../hooks/useStorageImage';
-import ImageType from '../../../constants/ImageType';
-import localeString from '../../../utils/localeString';
+import FirearmDetail from '../../../components/detail/FirearmDetail';
+import ArmorDetail from '../../../components/detail/ArmorDetail';
+import AmmoDetail from '../../../components/detail/AmmoDetail';
+import MedicalDetail from '../../../components/detail/MedicalDetail';
+import ThrowableDetail from '../../../components/detail/ThrowableDetail';
+import MeleeDetail from '../../../components/detail/MeleeDetail';
+import StorageImage from '../../../components/common/StorageImage';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -26,64 +29,30 @@ const Description = styled(Text)`
 `;
 
 const ItemDetailScreen = ({navigation}) => {
-  const {item} = navigation.state.params;
-  // Placeholder data until data comes from backend
-  // TODO: Implement backend data for detail page
+  const {item, type} = navigation.state.params;
 
-  const data = [
-    {
-      title: 'Properties',
-      rows: [
-        {key: 'Class', value: localeString(item.class)},
-        {key: 'Caliber', value: item.caliber},
-        {
-          key: 'Fold/Retract',
-          value: item.foldRectractable ? 'Yes' : 'No',
-          hideChevron: true
-        }
-      ]
-    },
-    {
-      title: 'Performance',
-      rows: [
-        {
-          key: 'Fire Modes',
-          value: item.modes.join(', '),
-          hideChevron: true
-        },
-        {key: 'Fire Rate', value: `${item.rof}rpm`, hideChevron: true},
-        {
-          key: 'Effective Range',
-          value: `${item.effectiveDist}m`,
-          hideChevron: true
-        },
-        {key: 'Compare Performance'}
-      ]
-    }
-  ];
+  const typeToComponent = {
+    firearm: FirearmDetail,
+    armor: ArmorDetail,
+    ammunition: AmmoDetail,
+    medical: MedicalDetail,
+    grenade: ThrowableDetail,
+    melee: MeleeDetail
+  };
 
-  const {placeholder, image} = useStorageImage(item, ImageType.large);
+  const DetailElement = typeToComponent[type];
 
   return (
     <ScrollView>
-      <Image source={image ? image : placeholder} resizeMode="contain" />
+      <StorageImage doc={item} element={Image} resizeMode="contain" />
       <Description>{item.description}</Description>
-      {data.map((d) => (
-        <DetailSection key={d.title} section={d} />
-      ))}
+      <DetailElement item={item} />
     </ScrollView>
   );
 };
 
 ItemDetailScreen.navigationOptions = (screenProps) => ({
-  title: screenProps.navigation.getParam('item').shortName,
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: screenProps.navigation.getParam('item').name
 });
 
 ItemDetailScreen.propTypes = {

@@ -46,14 +46,7 @@ const BallisticsScreen = () => {
 };
 
 BallisticsScreen.navigationOptions = {
-  title: 'Ballistics',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'Ballistics'
 };
 
 export default BallisticsScreen;

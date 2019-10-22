@@ -21,17 +21,58 @@ const ItemProvider = ({children}) => {
     }));
   };
 
-  useEffect(() => {
-    if (state.collectionName) {
-      db.getAllFirearmsByType().then((x) => {
-        console.log(x);
-        setState((prevState) => ({...prevState, data: x, loading: false}));
-      });
+  const clearData = () => {
+    setState({
+      loading: true,
+      error: null,
+      data: null,
+      collectionName: null
+    });
+  };
+
+  const setItemsState = (data, isMounted) => {
+    if (isMounted) {
+      setState((prevState) => ({
+        ...prevState,
+        loading: false,
+        data
+      }));
     }
+  };
+
+  useEffect(() => {
+    let isMounted = true;
+
+    if (state.collectionName) {
+      switch (state.collectionName) {
+        case 'firearm':
+          db.getAllFirearmsByType().then((x) => setItemsState(x, isMounted));
+          break;
+        case 'armor':
+          db.getAllArmorByClass().then((x) => setItemsState(x, isMounted));
+          break;
+        case 'ammunition':
+          db.getAllAmmoByCaliber().then((x) => setItemsState(x, isMounted));
+          break;
+        case 'medical':
+          db.getAllMedicalByType().then((x) => setItemsState(x, isMounted));
+          break;
+        case 'grenade':
+          db.getAllThrowablesByType().then((x) => setItemsState(x, isMounted));
+          break;
+        case 'melee':
+          db.getAllMelee().then((x) => setItemsState(x, isMounted));
+          break;
+      }
+    }
+
+    return () => {
+      isMounted = false;
+    };
   }, [state.collectionName]);
 
   return (
-    <ItemContext.Provider value={{...state, setCollectionName}}>
+    <ItemContext.Provider value={{...state, setCollectionName, clearData}}>
       {children}
     </ItemContext.Provider>
   );

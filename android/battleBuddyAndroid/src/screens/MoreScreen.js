@@ -63,8 +63,7 @@ const MoreScreen = ({navigation}) => {
               Battle Buddies have joined the fight!
             </Text>
           ),
-          image: require('../../assets/images/misc_icons/user_count.png'),
-          hideChevron: true
+          image: require('../../assets/images/misc_icons/user_count.png')
         }
       ]
     },
@@ -84,8 +83,7 @@ const MoreScreen = ({navigation}) => {
         },
         {
           title: 'Watch an Ad',
-          image: require('../../assets/images/misc_icons/watch_ad.png'),
-          hideChevron: true
+          image: require('../../assets/images/misc_icons/watch_ad.png')
         }
       ]
     }
@@ -109,14 +107,7 @@ const MoreScreen = ({navigation}) => {
 };
 
 MoreScreen.navigationOptions = {
-  title: 'More',
-  headerStyle: {
-    backgroundColor: '#191919'
-  },
-  headerTintColor: '#FF491C',
-  headerTitleStyle: {
-    fontSize: 28
-  }
+  title: 'More'
 };
 
 MoreScreen.propTypes = {

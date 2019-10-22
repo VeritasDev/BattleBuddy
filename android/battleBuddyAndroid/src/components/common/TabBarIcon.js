@@ -10,7 +10,7 @@ const Image = styled.Image.attrs(({focused}) => {
   };
 })`
   margin-bottom: 3px;
-  transform: scale(0.5);
+  transform: scale(0.6);
 `;
 
 const TabBarIcon = ({name, ...props}) => {

@@ -6,6 +6,8 @@ import styled from 'styled-components/native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {withNavigation} from 'react-navigation';
 import localeString from '../../utils/localeString';
+import ItemType from '../../constants/ItemType';
+import {useNavigation} from 'react-navigation-hooks';
 
 const Text = styled.Text`
   font-size: 20px;
@@ -18,21 +20,21 @@ const View = styled.View`
   margin-bottom: 16px;
 `;
 
-const HorizontalCardBar = ({title, items, navigation}) => {
+const HorizontalCardBar = ({title, items}) => {
+  const {navigate} = useNavigation();
+
   const onPressHandler = (item) => {
-    // TODO: Revisit when backend is implemented
-    navigation.navigate('Detail', {item});
+    navigate('Detail', {item, type: item._kind});
   };
 
   return (
     <View>
-      <Text>{localeString(title)}</Text>
+      <Text>
+        {items[0]._kind === ItemType.ammo ? title : localeString(title)}
+      </Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {items.map((item) => (
-          <TouchableOpacity
-            onPress={() => onPressHandler(item)}
-            key={item.name}
-          >
+          <TouchableOpacity onPress={() => onPressHandler(item)} key={item._id}>
             <SmallCard {...item} />
           </TouchableOpacity>
         ))}
@@ -43,10 +45,7 @@ const HorizontalCardBar = ({title, items, navigation}) => {
 
 HorizontalCardBar.propTypes = {
   title: PropTypes.string.isRequired,
-  items: PropTypes.array.isRequired,
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired
-  }).isRequired
+  items: PropTypes.array.isRequired
 };
 
 export default withNavigation(HorizontalCardBar);
