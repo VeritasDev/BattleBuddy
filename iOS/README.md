@@ -79,6 +79,7 @@
     - [x] View will disappear - stop player
 
 ## <u>v1.2.0</u>
+- [ ] Community Poll
 - [ ] Implement Banner Ads (if setting enabled)
 - [ ] Combat Simulation Randomizer
 - [ ] Compare all shortcut
