@@ -483,3 +483,7 @@
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
 "attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC. Top-down soldier animation images copyright Riley Gombart.";
+
+// ----------------------------------------
+// V1.1.0 - Later changes
+"push_notifications" = "Push Notifications";

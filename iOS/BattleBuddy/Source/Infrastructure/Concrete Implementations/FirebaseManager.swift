@@ -12,6 +12,8 @@ import FirebaseStorage
 import FirebaseUI
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseMessaging
+import UserNotifications
 
 enum FirebaseCollection: String {
     case firearms = "firearm"
@@ -80,6 +82,8 @@ class FirebaseManager: NSObject {
 
         // Uncomment this out for debugging purposes.
 //        FirebaseConfiguration.shared.setLoggerLevel(.max)
+
+        Messaging.messaging().delegate = self
     }
 
     func updateNextAvailableReward() {
@@ -116,6 +120,28 @@ class FirebaseManager: NSObject {
     func avatarImageReference(characterId: String) -> StorageReference {
         let imageId = characterId + ImageSize.avatar.rawValue
         return characterImageRef.child(imageId)
+    }
+}
+
+extension FirebaseManager: PushNotificationManager, UNUserNotificationCenterDelegate, MessagingDelegate {
+    func enablePushNotifications(enabled: Bool) {
+        UNUserNotificationCenter.current().delegate = self
+
+		UNUserNotificationCenter.current().requestAuthorization( options: [.alert, .badge, .sound], completionHandler: {_, _ in })
+        UIApplication.shared.registerForRemoteNotifications()
+    }
+
+    func pushNotificationsEnabled() -> Bool {
+        return false
+    }
+
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+
+        let dataDict:[String: String] = ["token": fcmToken]
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+        // TODO: If necessary send token to application server.
+        // Note: This callback is fired at each app startup and whenever a new token is generated.
     }
 }
 

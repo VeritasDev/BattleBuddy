@@ -11,6 +11,7 @@ import UIKit
 class DependencyManagerImpl: DependencyManager {
     static let shared: DependencyManager = DependencyManagerImpl()
 
+    var pushNotificationMngr: PushNotificationManager?
     var accountMngr: AccountManager?
     var dbMngr: DatabaseManager?
     var httpRqstr: HttpRequestor?
@@ -27,6 +28,7 @@ class DependencyManagerImpl: DependencyManager {
     func assembleDependencies(_ appDelegate: AppDelegate) {
         // Firebase handles sessions, accounts, storage, and metadata
         let firebase = FirebaseManager(sessionDelegate: appDelegate)
+        pushNotificationMngr = firebase
         firebaseMngr = firebase
         dbMngr = firebase
         accountMngr = firebase
@@ -43,6 +45,7 @@ class DependencyManagerImpl: DependencyManager {
         adMngr = InmobiManager()
     }
 
+    func pushNotificationManager() -> PushNotificationManager { return pushNotificationMngr! }
     func accountManager() -> AccountManager { return accountMngr! }
     func databaseManager() -> DatabaseManager { return dbMngr! }
     func httpRequestor() -> HttpRequestor { return httpRqstr! }

@@ -71,4 +71,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
         dependencyManager.metadataManager().updateGlobalMetadata { (globalMetadata) -> Void in }
     }
 }
-

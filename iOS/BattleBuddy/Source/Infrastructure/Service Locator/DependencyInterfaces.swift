@@ -13,6 +13,7 @@ import UIKit
 protocol DependencyManager {
     static var shared: DependencyManager { get }
     func assembleDependencies(_ appDelegate: AppDelegate)
+    func pushNotificationManager() -> PushNotificationManager
     func accountManager() -> AccountManager
     func databaseManager() -> DatabaseManager
     func httpRequestor() -> HttpRequestor
@@ -158,4 +159,9 @@ struct LanguageSetting {
 protocol LocaleManager {
     func supportedLanguages() -> [LanguageSetting]
     func currentLanguageDisplayName() -> String
+}
+
+protocol PushNotificationManager {
+    func enablePushNotifications(enabled: Bool)
+    func pushNotificationsEnabled() -> Bool
 }

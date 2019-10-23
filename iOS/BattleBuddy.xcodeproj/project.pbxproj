@@ -379,6 +379,7 @@
 		EF1945B123565388007D8242 /* CombatSimSubjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimSubjectSummaryView.swift; sourceTree = "<group>"; };
 		EF1945B323565A3B007D8242 /* CombatSimLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimLabels.swift; sourceTree = "<group>"; };
 		EF1945B6235781A9007D8242 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		EF1945DB2360B64D007D8242 /* BattleBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BattleBuddy.entitlements; sourceTree = "<group>"; };
 		EF4F1FBF23215EEF00F20CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E38E12316F2F50098C4C2 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -807,6 +808,7 @@
 		27954E2E22A18470000FC0C6 /* BattleBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				EF1945DB2360B64D007D8242 /* BattleBuddy.entitlements */,
 				276AFA78231B7F3B00C9DB3A /* README.md */,
 				27793A3E22A4345D00378FE3 /* Source */,
 				27793A3C22A433E200378FE3 /* Misc */,
@@ -1221,6 +1223,9 @@
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -1849,6 +1854,7 @@
 			baseConfigurationReference = 9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BattleBuddy/BattleBuddy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 18;
@@ -1983,6 +1989,7 @@
 			baseConfigurationReference = 55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BattleBuddy/BattleBuddy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 18;

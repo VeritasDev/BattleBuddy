@@ -18,6 +18,7 @@ class SettingsViewController: BaseTableViewController {
     let adManager = dm().adManager()
     let prefsManager = dm().prefsManager()
     let localeManager = dm().localeManager()
+    let pushManager = dm().pushNotificationManager()
     var sections: [GroupedTableViewSection] = []
 
     lazy var nicknameCell: BaseTextfieldCell = {
@@ -43,6 +44,20 @@ class SettingsViewController: BaseTableViewController {
         cell.height = 70.0
         return cell
     }()
+    lazy var pushNotificationsCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell()
+        cell.textLabel?.text = "push_notifications".local()
+        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        cell.accessoryView = {
+            let toggle = UISwitch()
+            toggle.setOn(pushManager.pushNotificationsEnabled(), animated: false)
+            toggle.addTarget(self, action: #selector(togglePushNotifications(sender:)), for: .valueChanged)
+            return toggle
+        }()
+        cell.selectionStyle = .none
+        cell.height = 70.0
+        return cell
+    }()
     lazy var enableBannerAdsCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
         cell.textLabel?.text = "enable_banner_ads".local()
@@ -62,6 +77,11 @@ class SettingsViewController: BaseTableViewController {
     @objc func toggleBannerAds(sender: UISwitch) {
         let adsEnabled = sender.isOn
         adManager.updateBannerAdsSetting(adsEnabled)
+    }
+
+    @objc func togglePushNotifications(sender: UISwitch) {
+        let enabled = sender.isOn
+        pushManager.enablePushNotifications(enabled: enabled)
     }
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
@@ -99,7 +119,7 @@ class SettingsViewController: BaseTableViewController {
         }
 
         languageCell.detailTextLabel?.text = localeManager.currentLanguageDisplayName()
-        sections.append(GroupedTableViewSection(headerTitle: "app_settings".local(), cells: [languageCell]))
+        sections.append(GroupedTableViewSection(headerTitle: "app_settings".local(), cells: [languageCell, pushNotificationsCell]))
         tableView.reloadData()
     }
 
@@ -122,7 +142,18 @@ class SettingsViewController: BaseTableViewController {
         }
     }
 
-    // MARK: - Table view data source
+}
+
+extension SettingsViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let previousText = textField.text as NSString?
+        guard let resultingText = previousText?.replacingCharacters(in: range, with: string) else { return true }
+        return resultingText.count <= 18
+    }
+}
+
+// MARK: - Table view data source
+extension SettingsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -156,13 +187,5 @@ class SettingsViewController: BaseTableViewController {
         case languageCell: navigationController?.pushViewController(LanguageSelectionViewController(), animated: true)
         default: break;
         }
-    }
-}
-
-extension SettingsViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let previousText = textField.text as NSString?
-        guard let resultingText = previousText?.replacingCharacters(in: range, with: string) else { return true }
-        return resultingText.count <= 18
     }
 }
