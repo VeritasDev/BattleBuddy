@@ -51,26 +51,19 @@ class FirebaseManager {
 export class GlobalMetadataManager extends FirebaseManager {
   globalMetadata = null;
 
-  constructor() {
-    super();
-    this.updateGlobalMetadata();
-  }
-
   getGlobalMetadata() {
     return this.globalMetadata;
   }
 
-  async updateGlobalMetadata(handler) {
+  async updateGlobalMetadata() {
     try {
+      console.log('Fetching global metadata...');
       const snapshot = await this.db
         .collection('global')
         .doc('metadata')
         .get();
 
       this.globalMetadata = snapshot.data();
-      if (handler) {
-        handler(this.globalMetadata);
-      }
     } catch (error) {
       console.log('ERROR fetching global metadata: ', error.debugDescription);
     }
@@ -83,11 +76,7 @@ export class AccountManager extends FirebaseManager {
 
     try {
       await this.auth.signInAnonymously();
-
       this.updateAccountProperties({[AccountProperty.lastLogin]: Date.now()});
-      const gmManager = new GlobalMetadataManager();
-      gmManager.updateGlobalMetadata();
-      console.log('Anonymous auth succeeded.');
     } catch (error) {
       console.error('Anonymous auth failed with error: ', error);
     }
@@ -178,7 +167,7 @@ export class DatabaseManager extends FirebaseManager {
   }
 
   /**
-   * Private method to fetch collection by certain type/
+   * Private method to fetch collection by certain type
    *
    * @param {string} collection - Name of collection
    * @param {string} property - Item property
@@ -190,10 +179,10 @@ export class DatabaseManager extends FirebaseManager {
     try {
       const snapshot = await this.db
         .collection(collection)
-        .where('type', '==', 'body')
         .where(property, value)
         .get()
         .then((x) => x.docs.map((d) => d.data()));
+      // .then((d) => );
 
       console.log(
         `Successfully fetched ${snapshot.length} documents of type "${collection}".`

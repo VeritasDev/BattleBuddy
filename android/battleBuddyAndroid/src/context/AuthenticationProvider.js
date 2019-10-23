@@ -1,6 +1,6 @@
 import React, {useState, useContext, createContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {useAuthManager} from './FirebaseProvider';
+import {useAuthManager, useGlobalMetadataManager} from './FirebaseProvider';
 
 const AuthContext = createContext();
 
@@ -10,10 +10,16 @@ const AuthenticationProvider = ({
 }) => {
   const [state, setState] = useState(initialState);
   const auth = useAuthManager();
+  const metadata = useGlobalMetadataManager();
   const isLoggedIn = auth.isLoggedIn();
 
+  const initializeSession = async () => {
+    await auth.initializeSession();
+    await metadata.updateGlobalMetadata();
+  };
+
   useEffect(() => {
-    auth.initializeSession();
+    initializeSession();
   }, []);
 
   useEffect(() => {
