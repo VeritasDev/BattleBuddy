@@ -43,7 +43,8 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
     lazy var exploreTableView = { BaseTableView(dataSource: self, delegate: self) }()
     let compareCell = BaseTableViewCell(text: "compare_performance".local())
     let customBuildCell = BaseTableViewCell(text: "gun_build_custom".local())
-    lazy var exploreCells: [BaseTableViewCell] = { return [compareCell] }()
+    let combatSimCell = BaseTableViewCell(text: "main_menu_combat_sim".local())
+    lazy var exploreCells: [BaseTableViewCell] = { return [compareCell, combatSimCell] }()
 
     init(_ firearm: Firearm) {
         self.firearm = firearm
@@ -154,6 +155,15 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
                 let buildController = FirearmBuildController(config)
                 let buildVC = FirearmBuildViewController(buildController)
                 self.delegate?.showViewController(viewController: buildVC)
+            }
+        case combatSimCell:
+            self.delegate?.showLoading(show: true)
+
+            DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
+                self.delegate?.showLoading(show: false)
+
+                let combatSimVC = CombatSimViewController(characters: characters, initialFirearm: SimulationFirearm(json: self.firearm.json))
+                self.delegate?.showViewController(viewController: combatSimVC)
             }
         default:
             fatalError()

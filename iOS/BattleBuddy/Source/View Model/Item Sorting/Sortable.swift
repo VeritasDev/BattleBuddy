@@ -16,6 +16,7 @@ protocol Sortable {
     var sortId: String { get }
     var params: [SortableParam] { get }
     func valueForParam(_ param: SortableParam) -> String
+    func matchesSearch(_ search: String) -> Bool
 }
 
 struct SortState {
@@ -44,6 +45,9 @@ extension Ammo: Sortable {
         default: fatalError()
         }
     }
+    func matchesSearch(_ search: String) -> Bool {
+        return displayName.containsIgnoringCase(search) || caliber.containsIgnoringCase(search)
+    }
 }
 
 extension Armor: Sortable {
@@ -58,6 +62,9 @@ extension Armor: Sortable {
         default: fatalError()
         }
     }
+    func matchesSearch(_ search: String) -> Bool {
+        return displayName.containsIgnoringCase(search)
+    }
 }
 
 extension Firearm: Sortable {
@@ -70,5 +77,8 @@ extension Firearm: Sortable {
         case FirearmSortableParam.fireRate: return String(fireRate)
         default: fatalError()
         }
+    }
+    func matchesSearch(_ search: String) -> Bool {
+        return displayName.containsIgnoringCase(search) || caliber.containsIgnoringCase(search)
     }
 }

@@ -23,13 +23,13 @@ class SortableTableViewCell: BaseTableViewCell {
     let stackView = BaseStackView(axis: .horizontal)
     var labels: [UILabel] = []
 
-    override var isSelected: Bool {
-        didSet { labels.forEach { $0.textColor = isSelected ? UIColor.Theme.primary : .white } }
-    }
+    var isSelectedOption: Bool { didSet { labels.forEach { $0.textColor = isSelected ? UIColor.Theme.primary : .white } } }
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
     init(config: SortConfiguration) {
+        isSelectedOption = false
+
         super.init(style: .default, reuseIdentifier: AmmoStatsCell.reuseId)
 
         contentView.addSubview(stackView)

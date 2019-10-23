@@ -34,7 +34,8 @@ class AmmoDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewD
     let compareCell = BaseTableViewCell(text: Localized("compare"))
     let penChanceCalcCell = BaseTableViewCell(text: "pen_chance".local())
     let damageCalcCell = BaseTableViewCell(text: "health_calc_title".local())
-    lazy var exploreCells = { [compareCell, penChanceCalcCell, damageCalcCell] }()
+    let combatSimCell = BaseTableViewCell(text: "main_menu_combat_sim".local())
+    lazy var exploreCells = { [compareCell, penChanceCalcCell, damageCalcCell, combatSimCell] }()
 
     init(_ ammo: Ammo) {
         self.ammo = ammo
@@ -149,6 +150,15 @@ class AmmoDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewD
                 let damageCalcVC = HealthCalcViewController(characterOptions: characters)
                 damageCalcVC.ammo = SimulationAmmo(json: self.ammo.json)
                 self.delegate?.showViewController(viewController: damageCalcVC)
+            }
+        case combatSimCell:
+            self.delegate?.showLoading(show: true)
+
+            DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
+                self.delegate?.showLoading(show: false)
+
+                let combatSimVC = CombatSimViewController(characters: characters, initialAmmo: SimulationAmmo(json: self.ammo.json))
+                self.delegate?.showViewController(viewController: combatSimVC)
             }
         default:
             fatalError()

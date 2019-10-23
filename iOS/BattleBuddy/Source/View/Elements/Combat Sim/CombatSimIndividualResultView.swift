@@ -12,23 +12,19 @@ import BallisticsEngine
 class CombatSimIndividualResultView: BaseStackView {
     var individualResult: CombatSimulationIndividualResult? {
         didSet {
-                resultLabel.text = individualResult?.result.local()
+            resultLabel.text = individualResult?.result.local()
 
-                switch individualResult?.result {
-                case .win?: resultLabel.textColor = .green
-                case .loss?: resultLabel.textColor = .red
-                case .tie?: resultLabel.textColor = .orange
-                default: break
-                }
+            switch individualResult?.result {
+            case .win?: resultLabel.textColor = .green
+            case .loss?: resultLabel.textColor = .red
+            case .tie?: resultLabel.textColor = .orange
+            default: break
+            }
 
             if let result = individualResult {
                 winPercentLabel.text = String(result.winPercent) + "%"
                 timeToKillLabel.text = String(result.avtTtk) + "seconds_abbr".local()
                 shotsToKillLabel.text = String(result.avgStk)
-            } else {
-                winPercentLabel.text = nil
-                timeToKillLabel.text = nil
-                shotsToKillLabel.text = nil
             }
 
             subjectSummaryView.individualResult = individualResult
@@ -71,7 +67,9 @@ class CombatSimIndividualResultView: BaseStackView {
         addArrangedSubview(shotsToKillLabel)
 
         separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1.0, constant: 0.0).isActive = true
-        separator.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
+        NSLayoutConstraint.activate([
+            separator.heightAnchor.constraint(equalToConstant: 1.0),
+            separator.widthAnchor.constraint(equalToConstant: 75.0),
+            ])
     }
 }

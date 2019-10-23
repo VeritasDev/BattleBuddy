@@ -142,6 +142,15 @@ class MoreMenuViewController: BaseTableViewController {
         cell.selectionStyle = .gray
         return cell
     }()
+    let bsgTwitterCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell()
+        cell.textLabel?.text = "attributions_bsg".local()
+        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        cell.accessoryType = .disclosureIndicator
+        cell.imageView?.image = UIImage(named: "twitter")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
+        return cell
+    }()
     var sections: [GroupedTableViewSection] = []
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -197,7 +206,7 @@ class MoreMenuViewController: BaseTableViewController {
         sections = []
 
         versionCell.detailTextLabel?.text = DependencyManagerImpl.shared.deviceManager().appVersionString()
-        let aboutCells = [settingsCell, versionCell]
+        let aboutCells = [settingsCell, versionCell, bsgTwitterCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 
@@ -303,6 +312,7 @@ extension MoreMenuViewController {
         case leaderboardCell: navigationController?.pushViewController(LeaderboardViewController(globalMetadata!.loyaltyLeaderboard), animated: true)
         case budScoreCell: navigationController?.pushViewController(PostViewController(BudPost()), animated: true)
         case rewardCell: earnReward()
+        case bsgTwitterCell: navigationController?.pushViewController(BattlestateTwitterViewController(), animated: true)
         default: break
         }
     }

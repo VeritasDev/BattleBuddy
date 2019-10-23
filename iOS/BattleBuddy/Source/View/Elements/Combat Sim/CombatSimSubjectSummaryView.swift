@@ -37,16 +37,12 @@ class CombatSimSubjectSummaryView: BaseStackView {
 
     let firearmKeyLabel = CombatSimResultKeyLabel(key: "firearm".local())
     let firearmLabel = CombatSimResultValueLabel()
-
     let ammoKeyLabel = CombatSimResultKeyLabel(key: "ammunition".local())
     let ammoLabel = CombatSimResultValueLabel()
-
     let headArmorKeyLabel = CombatSimResultKeyLabel(key: "combat_sim_head_armor".local())
     let headArmorLabel = CombatSimResultValueLabel()
-
     let bodyArmorKeyLabel = CombatSimResultKeyLabel(key: "body_armor".local())
     let bodyArmorLabel = CombatSimResultValueLabel()
-
     let aimKeyLabel = CombatSimResultKeyLabel(key: "combat_sim_aim_setting".local())
     let aimLabel = CombatSimResultValueLabel()
 
@@ -57,23 +53,26 @@ class CombatSimSubjectSummaryView: BaseStackView {
 
         addArrangedSubview(avatar)
         addArrangedSubview(nameLabel)
-
         addArrangedSubview(aimKeyLabel)
         addArrangedSubview(aimLabel)
-
         addArrangedSubview(firearmKeyLabel)
         addArrangedSubview(firearmLabel)
-
         addArrangedSubview(ammoKeyLabel)
         addArrangedSubview(ammoLabel)
-
         addArrangedSubview(headArmorKeyLabel)
         addArrangedSubview(headArmorLabel)
-
         addArrangedSubview(bodyArmorKeyLabel)
         addArrangedSubview(bodyArmorLabel)
 
+        avatar.translatesAutoresizingMaskIntoConstraints = false
         avatar.constrainWidth(70.0)
         avatar.constrainHeight(70.0)
+
+//        avatar.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            avatar.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            avatar.heightAnchor.constraint(equalToConstant: 55.0),
+//            avatar.widthAnchor.constraint(equalToConstant: 55.0),
+//            ])
     }
 }

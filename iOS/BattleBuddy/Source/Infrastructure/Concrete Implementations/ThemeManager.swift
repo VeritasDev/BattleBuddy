@@ -25,5 +25,7 @@ class ThemeManager {
 
         let switchAppearance = UISwitch.appearance()
         switchAppearance.onTintColor = UIColor.Theme.primary
+
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }

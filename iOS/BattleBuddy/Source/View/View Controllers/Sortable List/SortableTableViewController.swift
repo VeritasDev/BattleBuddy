@@ -19,13 +19,26 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
     var currentSelection: Sortable?
     lazy var header: SortableHeaderView = { SortableHeaderView(delegate: self, params: config.params, initialSort: config.defaultSortParam) }()
     var presentedModally = true
-    var searchText: String? {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    var searchResults: [Sortable]?
+    var searchResults: [Sortable]? { didSet { tableView.reloadData() } }
     var items: [Sortable] { get { return searchResults ?? config.items } }
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar(frame: .zero)
+        searchBar.barStyle = .black
+        searchBar.delegate = self
+        searchBar.placeholder = Localized("search")
+        searchBar.tintColor = UIColor.Theme.primary
+
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50.0))
+        toolbar.items = [
+            UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelSearch)),
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        ]
+        toolbar.barStyle = .blackTranslucent
+        toolbar.tintColor = UIColor.Theme.primary
+        searchBar.inputAccessoryView = toolbar
+
+        return searchBar
+    }()
 
     required init?(coder: NSCoder) { fatalError() }
 
@@ -46,13 +59,21 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
             navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
         }
 
+        navigationItem.titleView = searchBar
+
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50.0
         tableView.tableFooterView = UIView()
     }
 
+    @objc func cancelSearch() {
+        searchBar.text = nil
+        searchResults = nil
+        searchBar.resignFirstResponder()
+    }
+
     @objc func handleCancel() {
-        self.selectionDelegate.selectionCancelled()
+        selectionDelegate.selectionCancelled()
     }
 
     func toggleSort(param: SortableParam) {
@@ -65,7 +86,14 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
     }
 }
 
-// MARK: - Table view data source
+// MARK:- Search
+extension SortableTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchResults = searchText.isEmpty ? nil : config.items.filter { $0.matchesSearch(searchText) }
+    }
+}
+
+// MARK:- Table view data source
 extension SortableTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -88,13 +116,14 @@ extension SortableTableViewController {
         guard let sortableCell = cell as? SortableTableViewCell else { fatalError() }
         let item = items[indexPath.row]
         sortableCell.item = item
-        sortableCell.isSelected = (item.sortId == currentSelection?.sortId)
+        sortableCell.isSelectedOption = (item.sortId == currentSelection?.sortId)
         return sortableCell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        selectionDelegate.itemSelected(config.items[indexPath.row])
+        let item = items[indexPath.row]
+        selectionDelegate.itemSelected(item)
     }
 }

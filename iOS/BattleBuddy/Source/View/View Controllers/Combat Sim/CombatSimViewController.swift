@@ -32,14 +32,25 @@ class CombatSimViewController: StaticGroupedTableViewController {
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    init(characters: [Character]) {
+    init(characters: [Character], initialFirearm: SimulationFirearm? = nil, initialAmmo: SimulationAmmo? = nil, initialHeadArmor: SimulationArmor? = nil, initialBodyArmor: SimulationArmor? = nil) {
         guard let defaultChar = characters.first,
             let char1 = SimulationCharacter(json: defaultChar.json),
             let char2 = SimulationCharacter(json: defaultChar.json) else { fatalError() }
 
         self.characters = characters
+
         self.simCharacter1 = char1
+        self.simCharacter1.firearm = initialFirearm
+        self.simCharacter1.ammo = initialAmmo
+        self.simCharacter1.headArmor = initialHeadArmor
+        self.simCharacter1.bodyArmor = initialBodyArmor
+
         self.simCharacter2 = char2
+        self.simCharacter2.firearm = initialFirearm
+        self.simCharacter2.ammo = initialAmmo
+        self.simCharacter2.headArmor = initialHeadArmor
+        self.simCharacter2.bodyArmor = initialBodyArmor
+
         self.simulation = CombatSimulation(subject1Config: char1, subject2Config: char2)
 
         super.init()
@@ -55,9 +66,7 @@ class CombatSimViewController: StaticGroupedTableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "combat_sim_run".local(), style: .plain, target: self, action: #selector(runSim))
     }
 
-    override func generateSections() -> [GroupedTableViewSection] {
-        return [resultsSection]
-    }
+    override func generateSections() -> [GroupedTableViewSection] { return [resultsSection] }
 
     @objc func runSim() {
         showLoading()

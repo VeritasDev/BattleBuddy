@@ -31,7 +31,6 @@ class ItemsMenuViewController: MainMenuCollectionViewController {
             MainMenuItem(type: .visors, compactSize: .medium, regularSize: .large),
             MainMenuItem(type: .medical, compactSize: .medium, regularSize: .large),
 
-//            MainMenuItem(type: .mods, compactSize: .medium, regularSize: .large),
             MainMenuItem(type: .melee, compactSize: .medium, regularSize: .large),
             MainMenuItem(type: .throwables, compactSize: .medium, regularSize: .large),
             ])

@@ -30,5 +30,6 @@ class CombatSimResultValueLabel: UILabel {
         textAlignment = .center
         font = UIFont.boldSystemFont(ofSize: 16.0)
         textColor = .white
+        text = "-"
     }
 }

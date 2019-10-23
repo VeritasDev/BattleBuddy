@@ -44,12 +44,8 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
     lazy var exploreTableView = { BaseTableView(dataSource: self, delegate: self) }()
     let compareCell = BaseTableViewCell(text: Localized("compare"))
     let penChanceCalcCell = BaseTableViewCell(text: Localized("pen_chance"))
-    lazy var exploreCells: [BaseTableViewCell] = {
-        switch armor.armorType {
-        case .body, .helmet, .visor, .attachment:
-            return [compareCell, penChanceCalcCell]
-        }
-    }()
+    let combatSimCell = BaseTableViewCell(text: "main_menu_combat_sim".local())
+    lazy var exploreCells: [BaseTableViewCell] = { return [compareCell, penChanceCalcCell, combatSimCell] }()
 
     init(_ armor: Armor) {
         self.armor = armor
@@ -197,6 +193,20 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
             let penChanceVC = PenChanceCalcViewController()
             penChanceVC.armor = SimulationArmor(json: armor.json)
             delegate?.showViewController(viewController: penChanceVC)
+        case combatSimCell:
+            self.delegate?.showLoading(show: true)
+
+            DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
+                self.delegate?.showLoading(show: false)
+
+                let combatSimVC: CombatSimViewController
+                switch self.armor.armorType {
+                case .helmet, .visor, .attachment: combatSimVC = CombatSimViewController(characters: characters, initialHeadArmor: SimulationArmor(json: self.armor.json))
+                default: combatSimVC = CombatSimViewController(characters: characters, initialBodyArmor: SimulationArmor(json: self.armor.json))
+                }
+
+                self.delegate?.showViewController(viewController: combatSimVC)
+            }
         default:
             fatalError()
         }

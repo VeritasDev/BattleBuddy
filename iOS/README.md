@@ -13,8 +13,7 @@
 ## <u>v1.1.0</u>
 
 - [ ] Push notifications for wipe
-- [ ] Search on item list
-- [ ] Ammo, armor, firearms -> link directly to combat sim
+- [ ] Fix constraint issues on combat sim
 - [ ] Localizations
     - [x] English
     - [x] Hungarian
@@ -43,6 +42,9 @@
     - [x] Slovenian
     - [ ] Japanese
 
+- [x] Ammo, armor, firearms -> link directly to combat sim
+- [x] BSG Twitter Feed
+- [x] Search on item list
 - [x] Face shield pictures
 - [x] Combat Simulation
     - [x] Choosing armor, guns, ammo, etc
