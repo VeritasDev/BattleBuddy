@@ -64,10 +64,10 @@
 
 // MARK: - Main Menu
 "main_menu_ammo" = "Munice";
-"main_menu_armor" = "Armory";
+"main_menu_armor" = "Zbroje";
 "main_menu_ballistics" = "Balistika";
 "main_menu_firearms" = "Střelné zbraně";
-"main_menu_medical" = "Léčení";
+"main_menu_medical" = "Léčivé předměty";
 "main_menu_melee" = "Sečné zbraně";
 "main_menu_throwables" = "Granáty";
 "main_menu_health_calc" = "Kalkulačna poranění";
@@ -77,13 +77,13 @@
 "calibers" = "Ráže";
 
 // MARK: - Calculators
-"pen_chance" = "Šance průstřelu";
+"pen_chance" = "Šance průrazu";
 "no_armor_selected" = "Není zvolena žádná zbroj";
 "no_ammo_selected" = "Není zvolena žádná munice";
 "select_ammo" = "Vybrat munici";
 "select_armor" = "Vybrat zbroj";
-"pen_chance_help_title" = "Kalkulačna šance průstřelu";
-"pen_chance_help_message" = "Tento nástroj počítá šanci průstřelu zvolené zbroje zvolenou municí. Jakmile zvolíte munici a zbroj, můžete využít posuvník pro úpravu simulované výdrže zbroje pro zobrazení efektivity různých munící s různými úrovněmi výdrže zbroje!";
+"pen_chance_help_title" = "Kalkulačna šance průrazu";
+"pen_chance_help_message" = "Tento nástroj počítá šanci průrazu zvolené zbroje zvolenou municí. Jakmile zvolíte munici a zbroj, můžete využít posuvník pro úpravu simulované výdrže zbroje pro zobrazení efektivity různých munící s různými úrovněmi výdrže zbroje!";
 
 "health_calc_title" = "Kalkulačka poškození";
 "total_hp" = "Total HP";
@@ -121,14 +121,14 @@
 
 // MARK: - Weapons
 "weapon_class" = "Třída";
-"assault_rifle" = "Útočná puška";
-"assault_carbine" = "Útočná karabina";
-"sniper_rifle" = "Odstřelovací puška";
-"designated_marksman_rifle" = "Puška pro přesnou střelbu";
+"assault_rifle" = "Útočné pušky";
+"assault_carbine" = "Útočné karabiny";
+"sniper_rifle" = "Odstřelovací pušky";
+"designated_marksman_rifle" = "Pušky pro přesnou střelbu";
 "pistol" = "Pistole";
 "shotgun" = "Brokovnice";
-"sub_machine_gun" = "Samopal";
-"machine_gun" = "Kulomet";
+"sub_machine_gun" = "Samopaly";
+"machine_gun" = "Kulomety";
 "caliber" = "Ráže";
 "fire_rate" = "Kadence";
 "effective_range" = "Efektivní vzdálenost";
@@ -212,7 +212,7 @@
 "armor_mat_combined" = "Kombinovaný";
 "armor_mat_aluminum" = "Hliník";
 "armor_mat_glass" = "Sklo";
-"armor_mat_titanium" = "Titanium";
+"armor_mat_titanium" = "Titan";
 
 "armor_type" = "Typ";
 "armor_material" = "Materiál";
@@ -240,10 +240,10 @@
 "contusion" = "Pohmoždění";
 "fracture" = "Zlomenina";
 "pain" = "Bolest";
-"medkit" = "Medkit";
-"painkiller" = "Lék proti bolesti";
-"accessory" = "Doplněk";
-"stimulator" = "Stimulátor";
+"medkit" = "Medkity";
+"painkiller" = "Léky proti bolesti";
+"accessory" = "Doplňky";
+"stimulator" = "Stimulátory";
 "use_time" = "Čas užití";
 "effect_duration" = "Doba trvání účinku";
 "use_count" = "Počet použití";
@@ -281,7 +281,7 @@
 
 // MARK: - Posts
 "ballistics_title" = "Zbroj a balistika: Základy";
-"ballistics_body_1" = "Systém balistiky v Escape from Tarkov je černou skříňkou a pouze malé množství lidí má možnost nahlédnout na jeho pozadí. Vzhledem ke složitosti vzorců používaných k výpočtu hodnot, jako jsou šance průstřelu, úhly odrazu a poškození jak zbroje a těl hráčů, tak i prvků založených na RNG, které jsou zahrnuty, existuje často nepostřehnutelný rozdíl v čase pro zabití při porovnání plně vybaveného hráče na vysoké úrovni, který nosí nejlepší vybavení pro koncovou hru, s hráčem na úrovni 1, který nemá nic jiného než základní pistoli. Ve spojení s dobře známými problémy v oblasti networkingu a výkonu, bugy a stále rostoucím počtem hráčů, dvojznačnost pravděpodobně nejdůležitějšího systému hry slouží pouze k zesílení zmatku a frustrace jak nových hráčů tak veteránu na denní bázi.";
+"ballistics_body_1" = "Systém balistiky v Escape from Tarkov je černou skříňkou a pouze malé množství lidí má možnost nahlédnout na jeho pozadí. Vzhledem ke složitosti vzorců používaných k výpočtu hodnot, jako jsou šance průrazu, úhly odrazu a poškození jak zbroje a těl hráčů, tak i prvků založených na RNG, které jsou zahrnuty, existuje často nepostřehnutelný rozdíl v čase pro zabití při porovnání plně vybaveného hráče na vysoké úrovni, který nosí nejlepší vybavení pro koncovou hru, s hráčem na úrovni 1, který nemá nic jiného než základní pistoli. Ve spojení s dobře známými problémy v oblasti networkingu a výkonu, bugy a stále rostoucím počtem hráčů, dvojznačnost pravděpodobně nejdůležitějšího systému hry slouží pouze k zesílení zmatku a frustrace jak nových hráčů tak veteránu na denní bázi.";
 "ballistics_body_2" = "Začínáme se zbrojí, jak to funguje a co byste měli vědět? Kromě dostupnosti a ceny existuje pět důležitých věcí, které byste měli zvážit při úvaze jakou zbroj koupit, prodat, opravit, použít nebo zahodit - třída, výdrž, ochranné zóny, materiál a znevýhodnění.";
 "ballistics_body_2_1_title" = "1. Třída zbroje";
 "ballistics_body_2_1" = "Každá část pancéřování, od vestavěných částí těla po části připevnitené k balistické helmě, má stanovenou třídu zbroje. Třída zbroje je podle mého názoru nejdůležitějším aspektem ochranné zbroj. Jednoduše řečeno, třída zbroje představuje její účinnost při zastavení projektilů s různou úrovní balistické účinnosti. V současné době se zbrojní třídy pohybují od 1 do 6, a jak jste možná uhodli, čím vyšší číslo, tím lepší.\n\nZbroje 1. třídy Vás mohou ochránit před věcmi, jako jsou odražené střely, šrapnely a pistolové nepenetrující munice nebo buckshoty. Zbroje úrovně 6 Vás mohou ochránit od většiny projektilů až po největší ráže ve hře. Zvolil jsem zde slovo „schopný“ úmyslně, protože každý balistický dopad zahrnuje různé stupně náhodné šance.\n\nPokud jde o balistiku v Escape from Tarkov, není zaručeno nic a věci, které zažíváme, se někdy zdají nemožné nebo nedávají smysl. Co to tedy v konečném důsledku znamená? Jaká zbroj mě ochrání před jakým projektilem? To je složitá otázka, ke které se podrobněji dostanu později, až budu diskutovat o specifikách souvisejících s balistickým dopadem.";
@@ -333,155 +333,155 @@
 // V1.1.0
 
 // MARK:- Common
-"firearm" = "Firearm";
-"common_none" = "None";
-"common_refine" = "Refine";
+"firearm" = "Zbraň";
+"common_none" = "Žádný";
+"common_refine" = "Vylepšit";
 
 // MARK:- More
-"days_since_wipe" = "%@ days since last wipe...";
-"bud_leaderboard" = "Bud Leaderboard";
-"total_ads_watched" = "%@ ads watched by the community!";
-"app_version" = "App Version";
-"your_bud_score" = "Your Bud Score";
-"bud_reward" = "Redeem Reward";
-"bud_reward_title" = "Reward Redeemed";
-"bud_reward_message" = "Thanks for being a bud!";
+"days_since_wipe" = "%@ dnů od posledního wipu...";
+"bud_leaderboard" = "Žebříček kámošů";
+"total_ads_watched" = "%@ reklam shlédnuto aplikací!";
+"app_version" = "Verze aplikace";
+"your_bud_score" = "Tvoje Bud skóre";
+"bud_reward" = "Vyzvednout odměnu";
+"bud_reward_title" = "Vyzvednutí odměny";
+"bud_reward_message" = "Díky že jsi Bud!";
 
 // Being A Bud
 "bud_points" = "Bud Points©";
-"bud_how_to_title" = "How To Be A Bud";
-"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies.\n\nAs a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+"bud_how_to_title" = "Jak být Bud";
+"bud_how_to_subtitle" = "Vyvinul jsem Battle Buddy ve svém volném čase abych obohatil komunitu Escape from Tarkov. Za aplikaci se neplatí a ve výchozím nastavení se reklamy nezobrazují, takže ji může kdokoli používat zdarma bez neustálého obtěžování vyskakovacích oken.. Veškeré náklady na vývoj a podporu související s provozem serveru, úložištěm a údržbou jdou za mnou, takže veškerá podpora je vždy velmi ceněna! Všichni, kteří toto čtete, jste moji \"Battle Buddies\".\n\nJako malý projev mého uznání za to, že jste součástí Battle Buddy, existují různé způsoby, jak můžete získat Bud Points©, abyste předvedli, jak velký jste na Bud! Mám spoustu nápadů, jak by se tyto body mohly v budoucnu použít, ale prozatím jsou to jen čestné odznaky, které dokazují vaši podporu komunitě Battle Buddy! Na co se ptáš? Jak získávat Bud Points©? Skvělá otázka! Zde je několik způsobů...";
 
-"bud_how_to_title_1" = "Come Back Often";
-"bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
+"bud_how_to_title_1" = "Vracejte se často";
+"bud_how_to_body_1" = "V náhodných intervalech při používání aplikace budete mít možnost získávat náhodné Bud Points© odměny. Moji Buds jsou vždy odměněni za jejich loajalitu a konzistenci! Kdykoliv bude v menu Více dostupná položka \"Vyzvednout odměnu\", klepni na ni a získej nějaké volné Bud Points© a nezapomeň zkontrolovat žebříček a zjisti jestli jsi můj nejlepší bud!";
 
-"bud_how_to_title_2" = "Watch Ads";
-"bud_how_to_body_2" = "Another way to be a bud and earn Bud Points© is by watching video ads. On the main More menu, there's the option to \"Watch an Ad\". If an ad is available from one of our content providers, you will be able to watch a short advertisement and will be rewarded with Bud points showcasing how much of a bud you are. After watching an ad, another will be available after some time, so if you want to be a huge bud, be patient!";
+"bud_how_to_title_2" = "Sleduj reklamy";
+"bud_how_to_body_2" = "Další možnost jak získat Bud Points© je sledování reklam. V menu více je možnost \"Zhlédnout reklamu\". Pokud je k dispozici reklama od některého z našich poskytovatelů obsahu, budeš si moci prohlédnout krátkou reklamu a budeš odměněn Bud Points, které ukazují, jak velký bud jsi. Po zhlédnutí reklamy bude po nějaké době k dispozici další, takže pokud chceš být velký bud, buď trpělivý!";
 
-"bud_how_to_title_3" = "Enable Banner Ads";
-"bud_how_to_body_3" = "Enabling banner ads is another amazing way to be a bud! You can enable banner ads from the Settings screen! Don't try to be cheeky though bud, if you disable banner ads the points you earned will be lost until you re-enable them.";
+"bud_how_to_title_3" = "Zapnout bannerové reklamy";
+"bud_how_to_body_3" = "Zapnutí bannerových reklam je další úžaznou cestou jak být bud! Lze je zapnout v nastavení! Nesnaž se být drzý bud, pokud bannerové reklamy zakážeš, získané body budou ztraceny, dokud je znovu neaktivuješ.";
 
-"bud_how_to_title_4" = "More Ways To Be A Bud";
-"bud_how_to_body_4" = "As more features are introduced into Battle Buddy more ways to earn and use your Bud Points© will emerge! Stay tuned buds!";
+"bud_how_to_title_4" = "Více způsobů jak být Bud";
+"bud_how_to_body_4" = "Jakmile se do Battle Buddy zavede více funkcí, objeví se další způsoby, jak vydělat a používat Tvé Bud Points©! Zůstaňte naladěni Buds!";
 
 // MARK:- Settings
-"profile" = "Profile";
-"nickname" = "Nickname";
-"nickname_placeholder" = "Nickname";
+"profile" = "Profil";
+"nickname" = "Přezdívka";
+"nickname_placeholder" = "Přezdívka";
 "nickname_anon" = "Anonymous";
-"app_settings" = "App Settings";
-"settings_save_error" = "Unable to save your settings, please try again later.";
+"app_settings" = "Nastavení aplikace";
+"settings_save_error" = "Nelze uložit Tvé nastavení, zkus to prosím později.";
 
 // MARK:- Menu Items
-"main_menu_helmets" = "Helmets";
-"main_menu_mods" = "Modifications";
-"main_menu_combat_sim" = "Combat Simulator";
-"main_menu_characters" = "Characters";
-"main_menu_visors" = "Visors";
+"main_menu_helmets" = "Helmy";
+"main_menu_mods" = "Modifikace";
+"main_menu_combat_sim" = "Bojový Simulátor";
+"main_menu_characters" = "Charactery";
+"main_menu_visors" = "Hledí";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";
-"attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbails, album covers and 3D animations - this man is a legend!";
+"attributions_smoooth_descr" = "Reference pro tohoto muže pro jeho návrhářskou práci na všech platformách, na kterých jsem aktivní, od brandingu po thumbails, covery alb a 3D animace - tento muž je legenda!";
 "attributions_betrix" = "Betrix";
-"attributions_betrix_descr" = "Many of the beautiful menu images and in-game item screenshots were created by Betrix!";
+"attributions_betrix_descr" = "Mnoho krásných obrazů menu a screenshotů položek ve hře vytvořil Betrix!";
 
 // MARK:- Helmets / Accessories
-"hearing_penalty" = "Hearing";
-"hearing_penalty_high" = "High";
-"hearing_penalty_low" = "Low";
-"hearing_penalty_none" = "None";
-"hearing_penalty_full" = "Hearing Penalty";
-"speed_penalty_full" = "Speed Penalty";
-"turn_speed_penalty_full" = "Turn Speed Penalty";
-"ergo_penalty_full" = "Ergonomics Penalty";
-"armor_type" = "Type";
+"hearing_penalty" = "Sluch";
+"hearing_penalty_high" = "Vysoké";
+"hearing_penalty_low" = "Nízké";
+"hearing_penalty_none" = "Žádný";
+"hearing_penalty_full" = "Sluchové znevýhodnění";
+"speed_penalty_full" = "Rychlostní znevýhodnění";
+"turn_speed_penalty_full" = "Znevýhodnění rychlosti otáčení";
+"ergo_penalty_full" = "Znevýhodnění ergonomiky";
+"armor_type" = "Typ";
 
 // MARK:- Mods
-"modification" = "Modification";
-"modificationBarrel" = "Barrel";
+"modification" = "Modifikace";
+"modificationBarrel" = "Hlaveň";
 "modificationBipod"  = "Bipod";
-"modificationCharge" = "Charging Handle";
-"modificationDevice" = "Device";
-"modificationForegrip" = "Foregrip";
-"modificationGasblock" = "Gas Block";
-"modificationGoggles" = "Goggles";
-"modificationHandguard" = "Handguard";
+"modificationCharge" = "Nabíjecí rukojeť";
+"modificationDevice" = "Zařízení";
+"modificationForegrip" = "Předpažbí";
+"modificationGasblock" = "Plynový násadec";
+"modificationGoggles" = "Zařízení pro noční vidění";
+"modificationHandguard" = "Předpažbí";
 "modificationLauncher" = "Launcher";
-"modificationMount" = "Mount";
-"modificationMuzzle" = "Muzzle";
-"modificationPistolgrip" = "Pistol Grip";
-"modificationReceiver" = "Receiver";
-"modificationSight" = "Sight";
-"modificationSightSpecial" = "Sight (Special)";
-"modificationStock" = "Stock";
+"modificationMount" = "Držák/Rail";
+"modificationMuzzle" = "Ústí";
+"modificationPistolgrip" = "Pistolová rukojeť";
+"modificationReceiver" = "Závěr";
+"modificationSight" = "Zaměřovač";
+"modificationSightSpecial" = "Zaměřovač (Speciální)";
+"modificationStock" = "Pažba";
 
 // MARK:- Sound Training
-"sound_training" = "Sound Training Beta";
-"sound_training_start" = "Start Training";
-"sound_training_commit" = "Guess";
-"sound_training_result_correct" = "Correct!";
-"sound_training_result_wrong" = "Keep Trying!";
+"sound_training" = "Beta zvokového tréninku";
+"sound_training_start" = "Spustit Trénink";
+"sound_training_commit" = "Hádat";
+"sound_training_result_correct" = "Správně!";
+"sound_training_result_wrong" = "Zkoušej to dál!";
 
-"sound_localization_info_title" = "Learn How To Localize Sound";
-"sound_localization_info_note_1" = "The sound training tool is currently in beta! Headphones are required!";
-"sound_localization_info_body_1" = "Escape from Tarkov currently utilizes your standard stereo sound, which is more than adequate enough for sound localization in most cases. At this point in time, no 5.1 or 7.1 surround sound options are supported, and as such I would HIGHLY recommend against using any virtual audio settings in your headphone software or windows audio settings.\n\nThere's no doubt there are people that swear by these more advanced settings, but they simply are not required, will not give you any more information about distance, location, etc., because they don't have any more information from the game or the engine itself! The game outputs stereo audio - a Left channel and a Right channel, nothing more complex than that. In my experience, enabling these more advanced settings makes sound localization harder, not easier. If you have these settings on and have issues with localizing sound in Tarkov or any other first-person shooter, try turning them off and see if that makes a difference, you might be surprised!";
-"sound_localization_info_subtitle_2" = "How To Play";
-"sound_localization_info_body_2" = "The goal of this mini-game is to locate the direction of sound around your on-screen character. When you begin, and a tone will play at a regular interval, panned to a random direction somewhere around your character on screen in a 360-degree radius.\n\nSwipe left and right on screen to turn your character, just like you would with a trackpad or a mouse. As your character's left or right ears get closer or further away from the source of the sound, the volume will change in each ear accordingly.\n\nWhen the tone is equally loud in both your left and right ears, your character is likely facing towards the sound. Once you think you're done, confirm your choice by pressing the button to see if you're correct!";
-"sound_localization_info_subtitle_3" = "Front and Back Sound The Same?!";
-"sound_localization_info_body_3" = "You may have noticed that sounds that are directly in front of you sound indistinguishable from sounds that are directly behind you. In both cases, the volume of the left and right channels are equal. Ignoring things like context clues based on map knowledge and materials in the environment, all of which are extremely useful in determining the location of sounds occurring around you, the only way to differentiate between sounds in front and behind is by turning your character's head relative to the sound, and paying attention to the direction the sound appears to move when you do. Take a look at this image example below:";
-"sound_localization_info_body_4" = "When you turn your character left or right, or even better turn just your character's silently head using free-look, you should be able to hear the volume of the sound increase or decrease in each ear. If you turn your head to the right and the sound is in front of you, your left ear will be closer to the sound and your right ear will be further from it, so the volume will be louder in your left ear compared to your right. Conversely, if the sound was actually behind you, when you turn right it will get louder in your right ear and softer in your left. Try using the direction that the sound moves when you turn your head as an indication of the location of the sound. The way it works in this tool is exactly like it works in Escape from Tarkov, and most other first-person shooters!";
+"sound_localization_info_title" = "Nauč se, jak lokalizovat zvuk";
+"sound_localization_info_note_1" = "Zvukový tréninkový nástroj je v současné době ve verzi beta! Jsou vyžadována sluchátka!";
+"sound_localization_info_body_1" = "Escape from Tarkov v současné době využívá standardní stereofonní zvuk, který je ve většině případů dostačující pro lokalizaci zvuku. V tuto chvíli nejsou podporovány žádné možnosti prostorového zvuku 5.1 nebo 7.1, a proto velmi doporučuji, abyste nepoužívali jakákoli nastavení virtuálního zvuku v softwaru sluchátek nebo v nastavení zvuku Windows..\n\nNení pochyb o tom, že jsou lidé, kteří přísahají, že s pokročilejšími nastaveními je lokalizace jednodušší, nicméně tato nastavení nejsou vyžadována a nebudou Ti poskytovat žádné další informace o vzdálenosti, poloze atd., protože nemají žádné další informace ze hry nebo samotného enginu! Ze hry vychází stereofonní zvuk - levý a pravý kanál, nic složitějšího. Podle mých zkušeností je lokalizace zvuku díky povolení těchto pokročilejších nastavení obtížnější, ne snadnější. Pokud máte tato nastavení zapnutá a máte problémy s lokalizací zvuku v Tarkově nebo jiné střílečce z první osoby, zkuste je vypnout a uvidítě, jestli to něco změní, možná budete překvapeni!";
+"sound_localization_info_subtitle_2" = "Jak hrát";
+"sound_localization_info_body_2" = "Cílem této mini-hry je lokalizovat směr z jakého vychází zvuk kolem vaší postavy na obrazovce. Když začnete bude se v pravidelných intervalech přehrávat zvuk, který se posouvá náhodným směrem kolem vaší postavy na obrazovce v okruhu 360 stupňů.\n\nPřejeďte prstem doleva a doprava po obrazovce a otočte svoji postavu, stejně jako pomocí trackpadu nebo myši. Jak se levé nebo pravé ucho vaší postavy přibliží nebo vzdálí od zdroje zvuku, hlasitost se v každém uchu odpovídajícím způsobem změní.\n\nKdyž je tón stejně hlasitý jak v levém, tak v pravém uchu, vaše postava pravděpodobně směřuje ke zvuku. Jakmile si myslíš, že jsi hotov, potvrď výběr stisknutím tlačítka a zkontroluj, zda máš pravdu!";
+"sound_localization_info_subtitle_3" = "Stejný zvuk zepředu a vzadu?!";
+"sound_localization_info_body_3" = "Možná sis všiml, že zvuky, které jsou přímo před Tebou, jsou nerozeznatelné od zvuků, které jsou přímo za Tebou. V obou případech je hlasitost levého a pravého kanálu stejná. Ignorujeme-li věci, jako jsou kontextová vodítka založená na znalostech mapy a materiálech v prostředí, která jsou velmi užitečná při určování umístění zvuků vyskytujících se kolem Tebe, jediný způsob, jak rozlišit zvuky vpředu a vzadu, je otočit hlavu Tvé postavy vzhledem ke zvuku a věnovat pozornost směru, kterým se zvuk pohybuje, když to děláš. Podívej se na tento obrázkový příklad níže:";
+"sound_localization_info_body_4" = "Když otočíš svou postavu doleva nebo doprava, nebo ještě lépe pouze otočíš tiše hlavu Tvé postavy pomocí volného vzhledu, měl bys být schopen slyšet zvýšení nebo snížení hlasitosti zvuku v každém uchu. Pokud otočíš hlavu doprava a zvuk je před Tebou, Tvé levé ucho bude blíže zvuku a pravé ucho bude od něj dále, takže hlasitost bude v levém uchu hlasitější než v pravém. A naopak, pokud byl zvuk skutečně za Tebou, když otočís hlavu doprava, bude hlasitější v pravém uchu a tišší v levém. Zkus použít směr, kterým se zvuk pohybuje, když otočíš hlavu, jako indikaci umístění zvuku. Způsob, jakým pracuje v tomto nástroji, je stejný jako v Escape z Tarkov a ve většině ostatních stříleček z první osoby!";
 
-"simulate_gunshot_pen" = "Shoot\nw/ Penetration";
-"simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
+"simulate_gunshot_pen" = "Vystřelit\ns průrazem";
+"simulate_gunshot_no_pen" = "Vystřelit\n(Bez průrazu)";
 
 // MARK:- Combat Sim
-"combat_sim_subject_type" = "Character Type";
-"combat_sim_aim_setting" = "Aim Setting";
-"combat_sim_edit_subject" = "Edit Test Subject";
-"combat_sim_run" = "Run";
-"combat_sim_results" = "Simulation Results";
-"combat_sim_results_iterations" = "Iterations";
-"combat_sim_results_winner" = "Winner";
-"combat_sim_results_loser" = "Loser";
-"combat_sim_results_tie" = "Tie";
-"combat_sim_results_win_percent" = "Win Percent";
-"combat_sim_settings" = "Simulation Settings";
-"combat_sim_tap_to_edit" = "Tap Image To Edit Test Subject";
-"combat_sim_edit_firearm" = "Edit Firearm";
-"combat_sim_head_armor" = "Head Armor";
+"combat_sim_subject_type" = "Typ charakteru";
+"combat_sim_aim_setting" = "Nastavení míření";
+"combat_sim_edit_subject" = "Upravit testovací subjekt";
+"combat_sim_run" = "Spustit";
+"combat_sim_results" = "Výsledky simulace";
+"combat_sim_results_iterations" = "Opakování";
+"combat_sim_results_winner" = "Vítěz";
+"combat_sim_results_loser" = "Poražený";
+"combat_sim_results_tie" = "Remíza";
+"combat_sim_results_win_percent" = "Procento výhry";
+"combat_sim_settings" = "Nastavení simulace";
+"combat_sim_tap_to_edit" = "Klepni na obrázek pro úpravu testovacího subjektu";
+"combat_sim_edit_firearm" = "Upravit střelnou zbraň";
+"combat_sim_head_armor" = "Helma";
 
-"combat_sim_pen_setting" = "Penetration Setting";
-"combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
-"combat_sim_pen_setting_always_desc" = "Bullets will always penetrate armor as long as there is a non-zero chance. For example, a 1% penetration chance will always penetrate, but a 0% penetration chance will not.";
-"combat_sim_pen_setting_never_desc" = "Bullets will not penetrate any armor unless the armor is at 0% durabilty, at which time the chance becomes 100%";
+"combat_sim_pen_setting" = "Nastavení průrazu";
+"combat_sim_pen_setting_realistic_desc" = "Kulky mají stejnou šanci prorazit zbroj jako ve hře.";
+"combat_sim_pen_setting_always_desc" = "Kulky prorazí brnění, pokud nebudou mít nulovou šanci průrazu. Například 1% šance na průrazu vždy pronikne, ale 0% šance průrazu ne.";
+"combat_sim_pen_setting_never_desc" = "Kulky neprorazí žádný pancíř, pokud zbroj nebude mít 0% trvanlivost, kdy se šance průrazu bude 100%";
 
-"combat_sim_frag_setting" = "Fragmentation Setting";
-"combat_sim_frag_setting_realistic_desc" = "Bullets have the same chance to fragment as they do in-game.";
-"combat_sim_frag_setting_always_desc" = "Bullets will always fragment as long as their effective fragmentation chance is non-zero. As of writing this, low-penetration ammo, such as RIP slugs, cannot currently fragment in the game despite it's 100% advertised fragmentation chance.";
-"combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
+"combat_sim_frag_setting" = "Nastavení fragmentace";
+"combat_sim_frag_setting_realistic_desc" = "Kulky mají stejnou šanci roztříštění jako ve hře.";
+"combat_sim_frag_setting_always_desc" = "Kulky se budou vždy tříštit, dokud nebude jejich efektivní šance na roztříštění nenulová. V době psaní tohoto článku se munice s nízkou penetrací, jako jsou RIP slugy, nemohou v současné době ve hře fragmentovat, přestože je uváděna 100% šance na roztříštění.";
+"combat_sim_frag_setting_never_desc" = "Kulky se nikdy neroztříští.";
 
-"aim_setting_upper_body" = "Upper Body";
-"aim_setting_center_mass" = "Center of Mass";
-"aim_setting_headshots" = "Headshots";
-"aim_setting_random_leg" = "Random Leg Meta";
-"aim_setting_single_leg" = "Single Leg Meta";
-"aim_setting_thorax" = "Thorax";
+"aim_setting_upper_body" = "Horní část těla";
+"aim_setting_center_mass" = "Střední část těla";
+"aim_setting_headshots" = "Headshoty";
+"aim_setting_random_leg" = "Náhodná Leg Meta";
+"aim_setting_single_leg" = "Jednotná Leg Meta";
+"aim_setting_thorax" = "Hrudník";
 
-"aim_setting_upper_body_desc" = "All bullets fired will impact the target on their upper-body, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
-"aim_setting_center_mass_desc" = "All bullets fired will impact the target in the center-of-mass, which includes the arms, stomach, and thorax.";
-"aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
-"aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
-"aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
-"aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
+"aim_setting_upper_body_desc" = "Všechny vypálené střely trefí cíl do horní části těla, včetně paží, žaludku a hrudníku s malým procentem šance trefit hlavu.";
+"aim_setting_center_mass_desc" = "Všechny vypálené střely trefí cíl do střední části těla, která zahrnuje ruce, žaludek a hrudník.";
+"aim_setting_headshots_desc" = "Všechny vypálené střely trefí hlavu.";
+"aim_setting_random_leg_desc" = "Všechny vypálené střely budou mít stejnou šanci trefit obě nohy.";
+"aim_setting_single_leg_desc" = "Všechny vypálené střely trefí stejnou nohu.";
+"aim_setting_thorax_desc" = "Všechny vypálené střely trefí hrudník.";
 
-"simulation_result_win" = "Win";
-"simulation_result_loss" = "Loss";
-"simulation_result_tie" = "Tie";
+"simulation_result_win" = "Vítězství";
+"simulation_result_loss" = "Prohra";
+"simulation_result_tie" = "Remíza";
 
-"simulation_win_percent" = "Win Percent";
-"simulation_time_to_kill" = "Avg. Time-to-Kill";
-"simulation_win_shots_to_kill" = "Avg. Shots-to-Kill";
+"simulation_win_percent" = "Procento výhry";
+"simulation_time_to_kill" = "Průměrný čas na zabití";
+"simulation_win_shots_to_kill" = "Průměrné počet výstřelů pro zabití";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
-"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC. Top-down soldier animation images copyright Riley Gombart.";
+"attributions_misc_descr" = "Ikony sociálních médií vytvořil Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licencováno pod CC. Ikona mozku od Sergeye Patutina z Noun Project (https://thenounproject.com/bdesign.by/) licencováno pod CC. Animované obrázky vojáků shora dolů chráněné autorskými právy Rileyho Gombarta.";
