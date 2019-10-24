@@ -11,12 +11,9 @@ import BallisticsEngine
 import JGProgressHUD
 
 class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegate {
-    lazy var calculator: CombatCalculator = {
-        let calc = CombatCalculator()
-        return calc
-    }()
+    let calculator = CombatCalculator()
     let characterOptions: [Character]
-    var character: SimulationCharacter
+    var character: SimulationCharacter { didSet { characterNameLabel.text = character.name } }
     let avatar = TestSubjectAvatar()
     let characterNameLabel: UILabel = {
         let label = UILabel(frame: .zero)
@@ -96,11 +93,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         return button
     }()
 
-    var ammo: SimulationAmmo? {
-        didSet {
-            settingsButton.setTitle(ammo?.displayName, for: .normal)
-        }
-    }
+    var ammo: SimulationAmmo? { didSet { settingsButton.setTitle(ammo?.displayName, for: .normal) } }
     var ammoOptions: [SimulationAmmo]?
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
