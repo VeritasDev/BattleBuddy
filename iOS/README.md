@@ -22,8 +22,8 @@
     - [ ] Croatian
     - [ ] Spanish Latin American
     - [x] Russian
-    - [ ] Serbian
-    - [ ] Serbian Latin
+    - [x] Serbian
+    - [x] Serbian Latin
     - [x] Spanish Spain
     - [x] Italian
     - [ ] Portuguese
@@ -38,7 +38,7 @@
     - [ ] Estonian
     - [ ] Korean
     - [ ] Norwegian Bokmål
-    - [ ] Czech
+    - [x] Czech
     - [x] Slovenian
     - [ ] Japanese
 

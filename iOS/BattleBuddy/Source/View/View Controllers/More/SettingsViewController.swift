@@ -50,7 +50,7 @@ class SettingsViewController: BaseTableViewController {
         cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         cell.accessoryView = {
             let toggle = UISwitch()
-            toggle.setOn(pushManager.pushNotificationsEnabled(), animated: false)
+            pushManager.pushNotificationsEnabled { enabled in toggle.setOn(enabled, animated: false) }
             toggle.addTarget(self, action: #selector(togglePushNotifications(sender:)), for: .valueChanged)
             return toggle
         }()

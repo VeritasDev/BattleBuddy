@@ -131,8 +131,15 @@ extension FirebaseManager: PushNotificationManager, UNUserNotificationCenterDele
         UIApplication.shared.registerForRemoteNotifications()
     }
 
-    func pushNotificationsEnabled() -> Bool {
-        return false
+    func pushNotificationsEnabled(handler: @escaping (_ : Bool) -> Void) {
+        let current = UNUserNotificationCenter.current()
+
+        current.getNotificationSettings(completionHandler: { settings in
+            switch settings.authorizationStatus {
+            case .authorized: handler(true)
+            default: handler(false)
+            }
+        })
     }
 
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {

@@ -163,5 +163,5 @@ protocol LocaleManager {
 
 protocol PushNotificationManager {
     func enablePushNotifications(enabled: Bool)
-    func pushNotificationsEnabled() -> Bool
+    func pushNotificationsEnabled(handler: @escaping (_ : Bool) -> Void)
 }
