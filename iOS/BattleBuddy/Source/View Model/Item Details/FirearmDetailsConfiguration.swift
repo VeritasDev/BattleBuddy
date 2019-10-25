@@ -42,7 +42,6 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
     let exploreHeaderView = SectionHeaderView(headerText: "explore".local())
     lazy var exploreTableView = { BaseTableView(dataSource: self, delegate: self) }()
     let compareCell = BaseTableViewCell(text: "compare_performance".local())
-    let customBuildCell = BaseTableViewCell(text: "gun_build_custom".local())
     let combatSimCell = BaseTableViewCell(text: "main_menu_combat_sim".local())
     lazy var exploreCells: [BaseTableViewCell] = { return [compareCell, combatSimCell] }()
 
@@ -145,16 +144,6 @@ class FirearmDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
 
                 let comparisonVC = ComparisonOptionsViewController(FirearmComparison(self.firearm, allFirearms: firearms))
                 self.delegate?.showViewController(viewController: comparisonVC)
-            }
-        case customBuildCell:
-            self.delegate?.showLoading(show: true)
-
-            dbManager.getCompatibleItemsForFirearm(firearm) { config in
-                self.delegate?.showLoading(show: false)
-
-                let buildController = FirearmBuildController(config)
-                let buildVC = FirearmBuildViewController(buildController)
-                self.delegate?.showViewController(viewController: buildVC)
             }
         case combatSimCell:
             self.delegate?.showLoading(show: true)

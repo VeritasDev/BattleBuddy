@@ -71,8 +71,11 @@ class SortableHeaderView: UIView {
         delegate.toggleSort(param: params[index])
 
         for button in buttons {
-            let weight = (button == sender) ? UIFont.Weight.bold : UIFont.Weight.thin
+            let selected = (button == sender)
+            let weight = selected ? UIFont.Weight.black : UIFont.Weight.thin
+            let color = selected ? UIColor(white: 1.0, alpha: 1.0) : UIColor(white: 0.8, alpha: 1.0)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0, weight: weight)
+            button.setTitleColor(color, for: .normal)
         }
     }
 }

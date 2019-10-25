@@ -219,7 +219,7 @@
 "armor_class" = "Klasse";
 "armor_points" = "Haltbarkeit";
 "armor_zones" = "Zonen";
-"penalties" = "Nachteile";
+"penalties" = "Einschränkungen";
 "speed_penalty" = "Bewegungsgeschwindigkeit";
 "turn_speed_penalty" = "Drehgeschwindingkeit";
 "ergo_penalty" = "Ergonomie";
@@ -333,155 +333,155 @@
 // V1.1.0
 
 // MARK:- Common
-"firearm" = "Firearm";
-"common_none" = "None";
-"common_refine" = "Refine";
+"firearm" = "Waffe";
+"common_none" = "Keine Auswahl";
+"common_refine" = "Filtern";
 
 // MARK:- More
-"days_since_wipe" = "%@ days since last wipe...";
+"days_since_wipe" = "%@ Tage seit dem letzen Wipe...";
 "bud_leaderboard" = "Bud Leaderboard";
-"total_ads_watched" = "%@ ads watched by the community!";
+"total_ads_watched" = "%@ Werbespots von der Community geschaut!";
 "app_version" = "App Version";
-"your_bud_score" = "Your Bud Score";
-"bud_reward" = "Redeem Reward";
-"bud_reward_title" = "Reward Redeemed";
-"bud_reward_message" = "Thanks for being a bud!";
+"your_bud_score" = "Dein Bud Score";
+"bud_reward" = "Belohnung erhalten";
+"bud_reward_title" = "Belohnung erhalten";
+"bud_reward_message" = "Danke dass du ein Bud bist!";
 
 // Being A Bud
 "bud_points" = "Bud Points©";
-"bud_how_to_title" = "How To Be A Bud";
-"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies.\n\nAs a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+"bud_how_to_title" = "Wie man ein Bud wird";
+"bud_how_to_subtitle" = "Ich entwickel Battle Buddy in meiner Freizeit um der Escape from Tarkov Community zu helfen. Ich verlange kein Geld für die App und habe Werbung standardmäßig deaktiviert, damit jeder diese ohne ständig aufploppende und nerfende Werbung kostenlos nutzen kann. Alle Entwicklungsarbeiten und Ausgaben durch Serverkosten, Wartungen und Datenspeicherung werden von mir persönlich getragen. Daher ist jede Art von Unterstützung gerne sehen! Alle die dies gerade lesen sind meine Battle Buddies. \n\nAls eine kleine Anerkennung deines Beitrages zu Battle Buddy gibt es verschiedene Möglichkeiten Bud Points© zu verdienen um zu zeigen was für ein Bud du bist! Ich haben unfassbar viele Ideen wie diese Punkte in der Zukunft genutzt werden könnten, doch aktuell sind sie einzig ein Abzeichen um deine Unterstützung für die Battle Buddy Community zu beweisen. Was das ist? Wie du Bud Points© verdienst? Großartige Frage! Hier ein paar Möglichkeiten...";
 
-"bud_how_to_title_1" = "Come Back Often";
-"bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
+"bud_how_to_title_1" = "Nutz die App regelmäßig";
+"bud_how_to_body_1" = "Zu zufälligen Zeiten wirst du die Möglichkeit haben eine zufällige Menge an Bud Points© zu Sammeln. Meine Buds werden immer für ihre Beständigkeit und Loyalität belohnt! Wann immer die Option \"Receive Reward\" im Menü verfügbar ist kannst auf diese klicken um ein paar gratis Bud Points© zu erhalten. Schau auf dem Leaderboard nach, um zu sehen ob du mein bester Bud bist!";
 
-"bud_how_to_title_2" = "Watch Ads";
-"bud_how_to_body_2" = "Another way to be a bud and earn Bud Points© is by watching video ads. On the main More menu, there's the option to \"Watch an Ad\". If an ad is available from one of our content providers, you will be able to watch a short advertisement and will be rewarded with Bud points showcasing how much of a bud you are. After watching an ad, another will be available after some time, so if you want to be a huge bud, be patient!";
+"bud_how_to_title_2" = "Werbung schauen";
+"bud_how_to_body_2" = "Ein andere Weg ein Bud zu sein und Bud Points© zu verdienen, ist es Werbungen zu schauen. Im Hauptmenü gibt es die Option \"Werbung ansehen\". Sollte einer Verfügbar sein kannst du einen kurzen Werbespot anschauen und wirst dafür mit Bud points belohnt, um zu zeigen was für ein Bud du bist. Nach dem schauen eines Werbespots wird ein neuer meist erst nach einiger Zeit verfügbar sein. Wenn du ein großartiger Bud sein möchtest sollte du daher geduldig bleiben!";
 
-"bud_how_to_title_3" = "Enable Banner Ads";
-"bud_how_to_body_3" = "Enabling banner ads is another amazing way to be a bud! You can enable banner ads from the Settings screen! Don't try to be cheeky though bud, if you disable banner ads the points you earned will be lost until you re-enable them.";
+"bud_how_to_title_3" = "Werbebanner einschalten";
+"bud_how_to_body_3" = "Werbebanner sind eine großartige Möglichkeit ein Bud zu sein! Du kannst Werbebanner in den Einstellungen aktivieren! Aber versuch nicht zu schummeln Bud, solltest du die Werbebanner deaktivieren verschwinden die Punkte solange, bis du diese wieder aktivierst.";
 
-"bud_how_to_title_4" = "More Ways To Be A Bud";
-"bud_how_to_body_4" = "As more features are introduced into Battle Buddy more ways to earn and use your Bud Points© will emerge! Stay tuned buds!";
+"bud_how_to_title_4" = "Neue Möglichkeiten ein Bud zu sein";
+"bud_how_to_body_4" = "Sowie neuen Funktionen für Battle Buddy erscheinen werden, so wird es auch neue Möglichkeiten geben Bud Points© zu sammeln! Bleib auf dem Laufenden Bud!";
 
 // MARK:- Settings
-"profile" = "Profile";
+"profile" = "Profil";
 "nickname" = "Nickname";
 "nickname_placeholder" = "Nickname";
-"nickname_anon" = "Anonymous";
-"app_settings" = "App Settings";
-"settings_save_error" = "Unable to save your settings, please try again later.";
+"nickname_anon" = "Anonym";
+"app_settings" = "App-Einstellungen";
+"settings_save_error" = "Deine Einstellungen konnten nicht gespeichert werden. Bitte versuche es später erneut.";
 
 // MARK:- Menu Items
-"main_menu_helmets" = "Helmets";
-"main_menu_mods" = "Modifications";
-"main_menu_combat_sim" = "Combat Simulator";
-"main_menu_characters" = "Characters";
-"main_menu_visors" = "Visors";
+"main_menu_helmets" = "Helme";
+"main_menu_mods" = "Modifikationen";
+"main_menu_combat_sim" = "Kampf-Simulation";
+"main_menu_characters" = "Charaktere";
+"main_menu_visors" = "Visiere";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";
-"attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbails, album covers and 3D animations - this man is a legend!";
+"attributions_smoooth_descr" = "Vielen Dank an diesen Mann für seine künsterliche Arbeit auf allen Plattformen, die ich nutze. Von Logos über Thumbnails, Album Covern und 3D Animationen - Dieser Mann ist eine Legende!";
 "attributions_betrix" = "Betrix";
-"attributions_betrix_descr" = "Many of the beautiful menu images and in-game item screenshots were created by Betrix!";
+"attributions_betrix_descr" = "Viele der wunderschönen Bilder im Menü und von Spielgegenständen wurden von Betrix erstellt!";
 
 // MARK:- Helmets / Accessories
-"hearing_penalty" = "Hearing";
-"hearing_penalty_high" = "High";
-"hearing_penalty_low" = "Low";
-"hearing_penalty_none" = "None";
-"hearing_penalty_full" = "Hearing Penalty";
-"speed_penalty_full" = "Speed Penalty";
-"turn_speed_penalty_full" = "Turn Speed Penalty";
-"ergo_penalty_full" = "Ergonomics Penalty";
-"armor_type" = "Type";
+"hearing_penalty" = "Gehör";
+"hearing_penalty_high" = "Stark";
+"hearing_penalty_low" = "Gering";
+"hearing_penalty_none" = "Keine";
+"hearing_penalty_full" = "Gehöreinschränkung";
+"speed_penalty_full" = "Bewegungsgeschwindigkeit";
+"turn_speed_penalty_full" = "Drehgeschwindigkeit";
+"ergo_penalty_full" = "Ergonomie";
+"armor_type" = "Typ";
 
 // MARK:- Mods
-"modification" = "Modification";
-"modificationBarrel" = "Barrel";
-"modificationBipod"  = "Bipod";
-"modificationCharge" = "Charging Handle";
-"modificationDevice" = "Device";
-"modificationForegrip" = "Foregrip";
-"modificationGasblock" = "Gas Block";
+"modification" = "Modifikationen";
+"modificationBarrel" = "Lauf";
+"modificationBipod"  = "Zweibein";
+"modificationCharge" = "Ladehebel";
+"modificationDevice" = "Gerät";
+"modificationForegrip" = "Vordergriff";
+"modificationGasblock" = "Gasblock";
 "modificationGoggles" = "Goggles";
-"modificationHandguard" = "Handguard";
-"modificationLauncher" = "Launcher";
-"modificationMount" = "Mount";
-"modificationMuzzle" = "Muzzle";
-"modificationPistolgrip" = "Pistol Grip";
-"modificationReceiver" = "Receiver";
-"modificationSight" = "Sight";
-"modificationSightSpecial" = "Sight (Special)";
-"modificationStock" = "Stock";
+"modificationHandguard" = "Handschutz";
+"modificationLauncher" = "Granatwerfer";
+"modificationMount" = "Adapter";
+"modificationMuzzle" = "Mündungsaufsatz";
+"modificationPistolgrip" = "Pistolengriff";
+"modificationReceiver" = "Verschlussgehäuse";
+"modificationSight" = "Optik";
+"modificationSightSpecial" = "Optik";
+"modificationStock" = "Schulterstütze";
 
 // MARK:- Sound Training
-"sound_training" = "Sound Training Beta";
-"sound_training_start" = "Start Training";
-"sound_training_commit" = "Guess";
-"sound_training_result_correct" = "Correct!";
-"sound_training_result_wrong" = "Keep Trying!";
+"sound_training" = "Geräusch-Training Beta";
+"sound_training_start" = "Training beginnen";
+"sound_training_commit" = "Tipp";
+"sound_training_result_correct" = "Richtig!";
+"sound_training_result_wrong" = "Versuch es erneut!";
 
-"sound_localization_info_title" = "Learn How To Localize Sound";
-"sound_localization_info_note_1" = "The sound training tool is currently in beta! Headphones are required!";
-"sound_localization_info_body_1" = "Escape from Tarkov currently utilizes your standard stereo sound, which is more than adequate enough for sound localization in most cases. At this point in time, no 5.1 or 7.1 surround sound options are supported, and as such I would HIGHLY recommend against using any virtual audio settings in your headphone software or windows audio settings.\n\nThere's no doubt there are people that swear by these more advanced settings, but they simply are not required, will not give you any more information about distance, location, etc., because they don't have any more information from the game or the engine itself! The game outputs stereo audio - a Left channel and a Right channel, nothing more complex than that. In my experience, enabling these more advanced settings makes sound localization harder, not easier. If you have these settings on and have issues with localizing sound in Tarkov or any other first-person shooter, try turning them off and see if that makes a difference, you might be surprised!";
-"sound_localization_info_subtitle_2" = "How To Play";
-"sound_localization_info_body_2" = "The goal of this mini-game is to locate the direction of sound around your on-screen character. When you begin, and a tone will play at a regular interval, panned to a random direction somewhere around your character on screen in a 360-degree radius.\n\nSwipe left and right on screen to turn your character, just like you would with a trackpad or a mouse. As your character's left or right ears get closer or further away from the source of the sound, the volume will change in each ear accordingly.\n\nWhen the tone is equally loud in both your left and right ears, your character is likely facing towards the sound. Once you think you're done, confirm your choice by pressing the button to see if you're correct!";
-"sound_localization_info_subtitle_3" = "Front and Back Sound The Same?!";
-"sound_localization_info_body_3" = "You may have noticed that sounds that are directly in front of you sound indistinguishable from sounds that are directly behind you. In both cases, the volume of the left and right channels are equal. Ignoring things like context clues based on map knowledge and materials in the environment, all of which are extremely useful in determining the location of sounds occurring around you, the only way to differentiate between sounds in front and behind is by turning your character's head relative to the sound, and paying attention to the direction the sound appears to move when you do. Take a look at this image example below:";
-"sound_localization_info_body_4" = "When you turn your character left or right, or even better turn just your character's silently head using free-look, you should be able to hear the volume of the sound increase or decrease in each ear. If you turn your head to the right and the sound is in front of you, your left ear will be closer to the sound and your right ear will be further from it, so the volume will be louder in your left ear compared to your right. Conversely, if the sound was actually behind you, when you turn right it will get louder in your right ear and softer in your left. Try using the direction that the sound moves when you turn your head as an indication of the location of the sound. The way it works in this tool is exactly like it works in Escape from Tarkov, and most other first-person shooters!";
+"sound_localization_info_title" = "Lerne Geräusche zu orten.";
+"sound_localization_info_note_1" = "Das Geräusch-Training befindet sich noch im Beta-Stadium! Kopfhörer sind notwendig!";
+"sound_localization_info_body_1" = "Escape from Tarkov verwendet derzeit deinen Standard-Stereoklang, der in den meisten Fällen für die Lokalisierung des Klangs mehr als ausreichend ist. Zu diesem Zeitpunkt werden keine 5.1- oder 7.1-Surround-Sound-Optionen unterstützt. Daher würde ich dringend davon abraten virtuelle Audioeinstellungen in den Kopfhörersoftware oder Windows-Audioeinstellungen zu verwenden. \n\n Die Benutzer schwören zweifellos auf diese erweiterten Einstellungen. Sie sind jedoch nicht erforderlich. Sie geben keine weiteren Informationen zu Entfernung, Standort usw. an, da sie keine weiteren Informationen zum Spiel oder zur Engine selbst haben! Das Spiel gibt Stereo-Audio aus - einen linken und einen rechten Kanal, nichts komplexeres. Nach meiner Erfahrung ist die Klanglokalisierung schwieriger und nicht einfacher. Wenn du diese Optionen verwendest und Probleme damit hast Geräusche zu lokalisieren, sowohl in Tarkov als auch anderen Ego-Shooter, versuche diese zu deaktivieren und festzustellen, ob du einen Unterschied merkst. Du könntest überrascht werden!";
+"sound_localization_info_subtitle_2" = "Wie man Spielt";
+"sound_localization_info_body_2" = "Das Ziel dieses Minispiels ist es, die Schallrichtung um den Bildschirmcharakter herum zu lokalisieren. Wenn du beginnst, ertönt in regelmäßigen Abständen ein Ton, der in einem 360-Grad-Radius in eine zufällige Richtung um deinen Charakter geschwenkt wird. \n\n Wische auf dem Bildschirm nach links und rechts, um deinen Charakter wie mit einem Trackpad oder einer Maus zu drehen. Wenn das linke oder rechte Ohr deines Charakters näher, oder weiter von der Schallquelle entfernt ist, ändert sich die Lautstärke im jeweiligen Ohr entsprechend. \n\n Wenn der Ton sowohl in deinem linken als auch in deinem rechten Ohr gleich laut ist, ist dein Charakter wahrscheinlich der Klangrichtung zugewandt. Sobald du glaubst, dass du fertig bist, bestätige deine Auswahl durch Drücken der Taste, um zu überprüfen, ob du richtig liegst!";
+"sound_localization_info_subtitle_3" = "Vorder- und Rückseite klingen gleich ?!";
+"sound_localization_info_body_3" = "Möglicherweise hast du bemerkt, dass Geräusche, die direkt vor dir sind, nicht von Geräuschen zu unterscheiden sind, die direkt hinter dir liegen. In beiden Fällen ist die Lautstärke des linken und rechten Kanals identisch. Wenn du Dinge wie Kontexthinweise auf der Grundlage von Kartenwissen und Materialien in der Umgebung, die äußerst nützlich sind, um die Position von Geräuschen zu bestimmen, die um Sie herum auftreten, außer Acht lassen, kannst du nur dann zwischen Geräuschen von vorne und hinten unterscheiden, wenn du den Kopf deines Charakters relativ zum Ton drehst. Achte dabei auf die Richtung, in die sich der Ton zu bewegen scheint. Schaue dir dieses Bildbeispiel unten an:";
+"sound_localization_info_body_4" = "Wenn du deinen Charakter nach links oder rechts drehst solltest du in der Lage sein, die Lautstärke des Klangs im jeweiligen Ohr zu erhöhen oder zu verringern. Hierfür kannst du auch die Funktion der freien Sicht verwenden, denn diese verursacht keine Geräusche. Wenn du den Kopf nach rechts drehst und das Geräusch vor dir liegt, ist dein linkes Ohr näher am Geräusch und dein rechtes Ohr weiter entfernt, sodass die Lautstärke in deinem linken Ohr im Vergleich zu deinem rechten lauter ist . Umgekehrt, wenn das Geräusch tatsächlich hinter dir liegt, wird es in deinem rechten Ohr lauter und in deinem linken leiser. Verwende die Richtung, in die sich der Ton bewegt, wenn du den Kopf drehst, als Hinweis auf die Position des Tons. Die Arbeitsweise in diesem Tool ist genau so wie in Escape from Tarkov und den meisten anderen Ego-Shootern!";
 
-"simulate_gunshot_pen" = "Shoot\nw/ Penetration";
-"simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
+"simulate_gunshot_pen" = "Shoot\nw/ Durchschlag";
+"simulate_gunshot_no_pen" = "Shoot\n(kein Durchschlag)";
 
 // MARK:- Combat Sim
-"combat_sim_subject_type" = "Character Type";
-"combat_sim_aim_setting" = "Aim Setting";
-"combat_sim_edit_subject" = "Edit Test Subject";
-"combat_sim_run" = "Run";
-"combat_sim_results" = "Simulation Results";
-"combat_sim_results_iterations" = "Iterations";
-"combat_sim_results_winner" = "Winner";
-"combat_sim_results_loser" = "Loser";
-"combat_sim_results_tie" = "Tie";
-"combat_sim_results_win_percent" = "Win Percent";
-"combat_sim_settings" = "Simulation Settings";
-"combat_sim_tap_to_edit" = "Tap Image To Edit Test Subject";
-"combat_sim_edit_firearm" = "Edit Firearm";
-"combat_sim_head_armor" = "Head Armor";
+"combat_sim_subject_type" = "Charakter-Typ";
+"combat_sim_aim_setting" = "Zeileinstellungen";
+"combat_sim_edit_subject" = "Testobjekt bearbeiten";
+"combat_sim_run" = "Start";
+"combat_sim_results" = "Simulations-Ergebnisse";
+"combat_sim_results_iterations" = "Durchläufe";
+"combat_sim_results_winner" = "Gewinner";
+"combat_sim_results_loser" = "Verlierer";
+"combat_sim_results_tie" = "Unentschieden";
+"combat_sim_results_win_percent" = "Siegeschance";
+"combat_sim_settings" = "Simulations-Einstellungen";
+"combat_sim_tap_to_edit" = "Klicke auf das Bild um das Testobjekt zu bearbeiten";
+"combat_sim_edit_firearm" = "Waffe ändern";
+"combat_sim_head_armor" = "Helm";
 
-"combat_sim_pen_setting" = "Penetration Setting";
-"combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
-"combat_sim_pen_setting_always_desc" = "Bullets will always penetrate armor as long as there is a non-zero chance. For example, a 1% penetration chance will always penetrate, but a 0% penetration chance will not.";
-"combat_sim_pen_setting_never_desc" = "Bullets will not penetrate any armor unless the armor is at 0% durabilty, at which time the chance becomes 100%";
+"combat_sim_pen_setting" = "Durchschlags-Einstellungen";
+"combat_sim_pen_setting_realistic_desc" = "Kugeln haben die gleiche Chance zu penetrieren, wie sie im Spiel gegeben ist.";
+"combat_sim_pen_setting_always_desc" = "Kugeln werden immer penetrieren, solange sie eine Chance von mehr als 0% haben. Beispielsweise wird eine Kugel mit einer 1% Chance immer penetrieren, während bei einer mit 0% dies nicht passieren wird.";
+"combat_sim_pen_setting_never_desc" = "Kugeln werden Rüstungen nicht durchschlagen bis die Rüstung 0% Haltbarkeit erreicht hat. Ab diesem Zeitpunkt beträgt die Chance 100%.";
 
-"combat_sim_frag_setting" = "Fragmentation Setting";
-"combat_sim_frag_setting_realistic_desc" = "Bullets have the same chance to fragment as they do in-game.";
-"combat_sim_frag_setting_always_desc" = "Bullets will always fragment as long as their effective fragmentation chance is non-zero. As of writing this, low-penetration ammo, such as RIP slugs, cannot currently fragment in the game despite it's 100% advertised fragmentation chance.";
-"combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
+"combat_sim_frag_setting" = "Fragmentierungs-Einstellungen";
+"combat_sim_frag_setting_realistic_desc" = "Kugeln haben die gleiche Chance zu fragmentieren, wie sie im Spiel gegeben ist.";
+"combat_sim_frag_setting_always_desc" = "Kugeln werden immer fragmentieren, solange sie dies im Spiel können. Zum jetzigen Zeitpunkt kann Munition mit einer niedrigen Durchschlagskraft, wie z.B. RIP Slug Munition, trotz ihrer im Spiel angegeben 100% Fragmentierungs-Chance nicht fragmentieren.";
+"combat_sim_frag_setting_never_desc" = "Kugeln werden nie fragmentieren.";
 
-"aim_setting_upper_body" = "Upper Body";
-"aim_setting_center_mass" = "Center of Mass";
-"aim_setting_headshots" = "Headshots";
-"aim_setting_random_leg" = "Random Leg Meta";
-"aim_setting_single_leg" = "Single Leg Meta";
+"aim_setting_upper_body" = "Oberkörper";
+"aim_setting_center_mass" = "Körpermasse";
+"aim_setting_headshots" = "Kopfschuss";
+"aim_setting_random_leg" = "Leg-Meta (willkürlich)";
+"aim_setting_single_leg" = "Leg-Meta (einzelnes Bein)";
 "aim_setting_thorax" = "Thorax";
 
-"aim_setting_upper_body_desc" = "All bullets fired will impact the target on their upper-body, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
-"aim_setting_center_mass_desc" = "All bullets fired will impact the target in the center-of-mass, which includes the arms, stomach, and thorax.";
-"aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
-"aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
-"aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
-"aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
+"aim_setting_upper_body_desc" = "Alle Schüsse werden das Ziel im Oberkörper treffen, welcher aus Armen, Thorax und Magen besteht, sowie einer kleinen Chance den Kopf zu treffen.";
+"aim_setting_center_mass_desc" = "Alle schüsse werden das in die Körpermasse, welche aus Armen, Thorax und Magen besteht.";
+"aim_setting_headshots_desc" = "Alle Schüsse werden den Kopf treffen.";
+"aim_setting_random_leg_desc" = "Alle Schüsse werden mit gleichen Wahrscheinlichkeit je eines der Beine treffen.";
+"aim_setting_single_leg_desc" = "Alle Schüsse werden das selbe Bein treffen.";
+"aim_setting_thorax_desc" = "Alle Schüsse werden den Thorax treffen.";
 
-"simulation_result_win" = "Win";
-"simulation_result_loss" = "Loss";
-"simulation_result_tie" = "Tie";
+"simulation_result_win" = "Sieg";
+"simulation_result_loss" = "Niederlage";
+"simulation_result_tie" = "Unentschieden";
 
-"simulation_win_percent" = "Win Percent";
-"simulation_time_to_kill" = "Avg. Time-to-Kill";
-"simulation_win_shots_to_kill" = "Avg. Shots-to-Kill";
+"simulation_win_percent" = "Sieges Prozent";
+"simulation_time_to_kill" = "Durchschnittliche Zeit zu Kill";
+"simulation_win_shots_to_kill" = "Durchschnittliche Schuss zu Kill";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
-"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC. Top-down soldier animation images copyright Riley Gombart.";
+"attributions_misc_descr" = "Unter CC lizenzierte Social-Media-Icons von Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva). 'Brain'-Symbol von Sergey Patutin aus dem Noun Project (https://thenounproject.com/bdesign.by/), lizenziert unter CC. Top-down-Soldatenanimationsbilder Copyright Riley Gombart";

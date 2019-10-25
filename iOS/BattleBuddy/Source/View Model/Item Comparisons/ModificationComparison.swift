@@ -35,19 +35,21 @@ struct ModificationComparison: ItemComparison {
         possibleOptions = []
     }
 
+    // TODO: Implement
     func getPercentValue(item: Comparable, property: ComparableProperty, traitCollection: UITraitCollection) -> Float {
-        guard let throwable = item as? Throwable else { fatalError() }
-        let range = getComparedItemsSummaryMap()[property]!
-
-        switch property {
-        default: fatalError()
-        }
+//        guard let throwable = item as? Throwable else { fatalError() }
+//        let range = getComparedItemsSummaryMap()[property]!
+//
+//        switch property {
+//        default: fatalError()
+//        }
+        return 1.0
     }
 
     func getComparedItemsSummaryMap() -> [ComparableProperty: PropertyRange] {
-
-        for case let mod as Modification in allItems {
-        }
+//
+//        for case let mod as Modification in allItems {
+//        }
 
         return [:]
     }

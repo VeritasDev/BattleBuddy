@@ -109,12 +109,8 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     }
 
     func showFirearmOptions() {
-        // TODO: Show type / caliber
-
-
         if let options = firearmOptions {
-            let selectFirearmVC = SortableTableViewController(selectionDelegate: self, config: FirearmSortConfig(options: options), currentSelection: nil)
-            selectFirearmVC.currentSelection = character.firearm
+            let selectFirearmVC = SortableTableViewController(selectionDelegate: self, config: FirearmSortConfig(options: options), currentSelection: character.firearm)
             selectFirearmVC.presentedModally = false
             navigationController?.pushViewController(selectFirearmVC, animated: true)
         } else {
@@ -122,7 +118,6 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
 
             dbManager.getAllFirearms { allFirearms in
                 self.hideLoading()
-
                 self.firearmOptions = allFirearms.compactMap { SimulationFirearm(json: $0.json) }
                 self.showFirearmOptions()
             }
@@ -130,12 +125,10 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
     }
 
     func showArmorOptions(armorTypes: [ArmorType]) {
-        // TODO: Show type / caliber
-        
         if let options = armorOptions {
             let filteredOptions = options.filter { armorTypes.contains($0.armorType) }
-            let selectArmorVC = SortableTableViewController(selectionDelegate: self, config: ArmorSortConfig(options: filteredOptions), currentSelection: nil)
-            selectArmorVC.currentSelection = armorTypes.contains(.body) ? character.bodyArmor : character.headArmor
+            let currentSelection = armorTypes.contains(.body) ? character.bodyArmor : character.headArmor
+            let selectArmorVC = SortableTableViewController(selectionDelegate: self, config: ArmorSortConfig(options: filteredOptions), currentSelection: currentSelection)
             selectArmorVC.presentedModally = false
             navigationController?.pushViewController(selectArmorVC, animated: true)
         } else {
@@ -143,7 +136,6 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
 
             dbManager.getAllArmor { allArmor in
                 self.hideLoading()
-
                 self.armorOptions = allArmor.compactMap { SimulationArmor(json: $0.json) }
                 self.showArmorOptions(armorTypes: armorTypes)
             }
@@ -155,8 +147,7 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
 
         if let options = ammoOptions {
             let filteredOptions = options.filter{ $0.caliber == character.firearm?.caliber }
-            let selectAmmoVC = SortableTableViewController(selectionDelegate: self, config: AmmoSortConfig(options: filteredOptions), currentSelection: nil)
-            selectAmmoVC.currentSelection = character.ammo
+            let selectAmmoVC = SortableTableViewController(selectionDelegate: self, config: AmmoSortConfig(options: filteredOptions), currentSelection: character.ammo)
             selectAmmoVC.presentedModally = false
             navigationController?.pushViewController(selectAmmoVC, animated: true)
         } else {
@@ -164,7 +155,6 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
 
             dbManager.getAllAmmo { allAmmo in
                 self.hideLoading()
-
                 self.ammoOptions = allAmmo.compactMap { SimulationAmmo(json: $0.json) }
                 self.showAmmoOptions()
             }

@@ -62,20 +62,5 @@ class ModificationDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITa
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        let cell = tableView.cellForRow(at: indexPath)
-
-        let dbManager = DependencyManagerImpl.shared.databaseManager()
-
-        switch cell {
-        case compareCell:
-            self.delegate?.showLoading(show: true)
-
-            dbManager.getAllMods { mods in
-                self.delegate?.showLoading(show: false)
-                self.delegate?.showViewController(viewController: ComparisonOptionsViewController(ModificationComparison(mods)))
-            }
-        default: fatalError()
-        }
     }
 }

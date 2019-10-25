@@ -34,8 +34,7 @@ protocol HttpRequestor {
     func sendGetRequest(url: String, headers: [String: String], completion: @escaping (_ : [String: Any]?) -> Void)
 }
 
-// MARK:- Session
-
+// MARK:- Account
 enum AccountProperty: String {
     case lastLogin = "lastLogin"
     case loyalty = "loyalty"
@@ -59,7 +58,6 @@ protocol AccountManager {
 }
 
 // MARK: - Database
-
 protocol DatabaseManager {
     func getCharacters(handler: @escaping (_: [Character]) -> Void)
 
@@ -93,12 +91,6 @@ protocol DatabaseManager {
     func getAllHelmetsWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
     func getAllHelmetArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void)
     func getAllHelmetArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void)
-
-    func getAllMods(handler: @escaping (_: [Modification]) -> Void)
-    func getAllModsByType(handler: @escaping ([ModType: [Modification]]) -> Void)
-    func getAllModsOfType(_ type: ModType, handler: @escaping ([Modification]) -> Void)
-
-    func getCompatibleItemsForFirearm(_ firearm: Firearm, handler: @escaping (FirearmBuildConfig) -> Void)
 }
 
 // MARK:- Ads

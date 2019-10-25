@@ -69,9 +69,16 @@ class FirebaseManager: NSObject {
 
         return BudPointsReward(nextAvailableDate: nextRewardDate, pointValue: nextRewardPoints)
     }()
-
     private lazy var prefsManager = DependencyManagerImpl.shared.prefsManager()
     var globalMetadata: GlobalMetadata?
+
+    private var cachedCharacters: [Character]?
+    private var cachedFirearms: [Firearm]?
+    private var cachedAmmo: [Ammo]?
+    private var cachedArmor: [Armor]?
+    private var cachedMedical: [Medical]?
+    private var cachedThrowables: [Throwable]?
+    private var cachedMelee: [MeleeWeapon]?
 
     init(sessionDelegate: SessionDelegate) {
         self.sessionDelegate = sessionDelegate
@@ -79,10 +86,6 @@ class FirebaseManager: NSObject {
         super.init()
 
         FirebaseApp.configure()
-
-        // Uncomment this out for debugging purposes.
-//        FirebaseConfiguration.shared.setLoggerLevel(.max)
-
         Messaging.messaging().delegate = self
     }
 
@@ -290,6 +293,11 @@ extension FirebaseManager: DatabaseManager {
 
     // MARK:- Characters
     func getCharacters(handler: @escaping (_: [Character]) -> Void) {
+        if let cache = cachedCharacters {
+            handler(cache)
+            return
+        }
+
         db.collection(FirebaseCollection.character.rawValue).order(by: "index").getDocuments() { (querySnapshot, err) in
             if let error = err {
                 print("Failed to get all characters w/ error: ", error.localizedDescription)
@@ -299,7 +307,9 @@ extension FirebaseManager: DatabaseManager {
 
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) characters.")
-            handler(snapshot.getCharacters())
+            let characters = snapshot.getCharacters()
+            self.cachedCharacters = characters
+            handler(characters)
         }
     }
 
@@ -308,20 +318,17 @@ extension FirebaseManager: DatabaseManager {
         var allResults: [BaseItem] = []
         self.getFirearmsWithSearchQuery(query) { (firearms) in
             allResults += firearms
-            self.getBodyArmorWithSearchQuery(query) { armor in
+            self.getAllArmorWithSearchQuery(query) { armor in
                 allResults += armor
-                self.getHelmetsWithSearchQuery(query) { armor in
-                    allResults += armor
-                    self.getAmmoWithSearchQuery(query) { ammo in
-                        allResults += ammo
-                        self.getMedicalWithSearchQuery(query) { medical in
-                            allResults += medical
-                            self.getThrowablesWithSearchQuery(query) { throwables in
-                                allResults += throwables
-                                self.getMeleeWithSearchQuery(query) { melee in
-                                    allResults += melee
-                                    handler(allResults)
-                                }
+                self.getAmmoWithSearchQuery(query) { ammo in
+                    allResults += ammo
+                    self.getMedicalWithSearchQuery(query) { medical in
+                        allResults += medical
+                        self.getThrowablesWithSearchQuery(query) { throwables in
+                            allResults += throwables
+                            self.getMeleeWithSearchQuery(query) { melee in
+                                allResults += melee
+                                handler(allResults)
                             }
                         }
                     }
@@ -339,6 +346,20 @@ extension FirebaseManager: DatabaseManager {
                     || $0.displayNameShort.containsIgnoringCase(query)
                     || $0.caliber.containsIgnoringCase(query)
                     || $0.firearmType.rawValue.containsIgnoringCase(query)
+            }
+
+            handler(filteredResults)
+        }
+    }
+
+    func getAllArmorWithSearchQuery(_ query: String, handler: @escaping (_: [Armor]) -> Void) {
+        getAllArmor { armor in
+            let filteredResults = armor.filter {
+                $0.displayDescription.containsIgnoringCase(query)
+                    || $0.displayName.containsIgnoringCase(query)
+                    || $0.displayNameShort.containsIgnoringCase(query)
+                    || $0.material.rawValue.containsIgnoringCase(query)
+                    || $0.armorType.rawValue.containsIgnoringCase(query)
             }
 
             handler(filteredResults)
@@ -424,6 +445,11 @@ extension FirebaseManager: DatabaseManager {
 
     // MARK:- All items
     func getAllFirearms(handler: @escaping (_: [Firearm]) -> Void) {
+        if let cache = cachedFirearms {
+            handler(cache)
+            return
+        }
+
         db.collection(FirebaseCollection.firearms.rawValue).getDocuments() { (querySnapshot, err) in
             if let error = err {
                 print("Failed to get all firearms w/ error: ", error.localizedDescription)
@@ -432,11 +458,18 @@ extension FirebaseManager: DatabaseManager {
             }
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) firearms.")
-            handler(snapshot.getFirearms())
+            let firearms = snapshot.getFirearms()
+            self.cachedFirearms = firearms
+            handler(firearms)
         }
     }
 
     func getAllArmor(handler: @escaping (_: [Armor]) -> Void) {
+        if let cache = cachedArmor {
+            handler(cache)
+            return
+        }
+
         db.collection(FirebaseCollection.armor.rawValue).getDocuments() { (querySnapshot, err) in
             if let error = err {
                 print("Failed to get all armor w/ error: ", error.localizedDescription)
@@ -445,77 +478,38 @@ extension FirebaseManager: DatabaseManager {
             }
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) armors.")
-            handler(snapshot.getArmor())
+            let armor = snapshot.getArmor()
+            self.cachedArmor = armor
+            handler(armor)
         }
+    }
+
+    internal func getAllArmor(withTypes types: [ArmorType], handler: @escaping (_: [Armor]) -> Void) {
+        getAllArmor { results in handler(results.filter { types.contains($0.armorType) }) }
     }
 
     func getAllBodyArmor(handler: @escaping (_: [Armor]) -> Void) {
-        let bodyArmorRef = db.collection(FirebaseCollection.armor.rawValue).whereField("type", isEqualTo: "body")
-        bodyArmorRef.getDocuments() { (querySnapshot, err) in
-            if let error = err {
-                print("Failed to get all body armor w/ error: ", error.localizedDescription)
-                handler([]);
-                return
-            }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            print("Successfully fetched \(String(snapshot.documents.count)) body armors.")
-            handler(snapshot.getArmor())
-        }
+        getAllArmor(withTypes: [.body], handler: handler)
     }
 
     func getAllHeadArmor(handler: @escaping (_: [Armor]) -> Void) {
-        getAllHelmets { helmets in
-            self.getAllHelmetArmor { helmetArmor in
-                let combinedResults = helmets + helmetArmor
-                print("Successfully fetched \(String(combinedResults.count)) helmets/armor.")
-                handler(combinedResults)
-            }
-        }
+        getAllArmor(withTypes: [.attachment, .visor, .helmet], handler: handler)
     }
 
     func getAllHelmets(handler: @escaping ([Armor]) -> Void) {
-        let helmetRef = db.collection(FirebaseCollection.armor.rawValue).whereField("type", isEqualTo: "helmet")
-        helmetRef.getDocuments() { (querySnapshot, err) in
-            if let error = err {
-                print("Failed to get all helmets w/ error: ", error.localizedDescription)
-                handler([]);
-                return
-            }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            print("Successfully fetched \(String(snapshot.documents.count)) helmets.")
-            handler(snapshot.getArmor())
-        }
+        getAllArmor(withTypes: [.helmet], handler: handler)
     }
 
     func getAllHelmetArmor(handler: @escaping (_: [Armor]) -> Void) {
-        let visorRef = db.collection(FirebaseCollection.armor.rawValue).whereField("type", isEqualTo: "visor")
-        let attachmentRef = db.collection(FirebaseCollection.armor.rawValue).whereField("type", isEqualTo: "attachment")
-        visorRef.getDocuments() { (querySnapshot, err) in
-            if let error = err {
-                print("Failed to get all visors w/ error: ", error.localizedDescription)
-                handler([]);
-                return
-            }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            let visors = snapshot.getArmor()
-
-            attachmentRef.getDocuments() { (querySnapshot, err) in
-                if let error = err {
-                    print("Failed to get all helmet attachments w/ error: ", error.localizedDescription)
-                    handler([]);
-                    return
-                }
-                guard let snapshot = querySnapshot else { handler([]); return }
-
-                let attachments = snapshot.getArmor()
-                let combinedResults = visors + attachments
-                print("Successfully fetched \(String(combinedResults.count)) helmet armor.")
-                handler(combinedResults)
-            }
-        }
+        getAllArmor(withTypes: [.visor,. attachment], handler: handler)
     }
 
     func getAllAmmo(handler: @escaping (_: [Ammo]) -> Void) {
+        if let cache = cachedAmmo {
+            handler(cache)
+            return
+        }
+
         db.collection(FirebaseCollection.ammo.rawValue).getDocuments() { (querySnapshot, err) in
             if let error = err {
                 print("Failed to get all ammo w/ error: ", error.localizedDescription)
@@ -525,11 +519,17 @@ extension FirebaseManager: DatabaseManager {
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) ammo.")
             let allAmmo = snapshot.getAmmo().sorted(by: { $0.penetration > $1.penetration })
+            self.cachedAmmo = allAmmo
             handler(allAmmo)
         }
     }
 
     func getAllMedical(handler: @escaping (_: [Medical]) -> Void) {
+        if let cache = cachedMedical {
+            handler(cache)
+            return
+        }
+
         db.collection(FirebaseCollection.medical.rawValue).getDocuments() { (querySnapshot, err) in
             if let error = err {
                 print("Failed to get all medical w/ error: ", error.localizedDescription)
@@ -538,11 +538,18 @@ extension FirebaseManager: DatabaseManager {
             }
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) medical items.")
-            handler(snapshot.getMedical())
+            let medical = snapshot.getMedical()
+            self.cachedMedical = medical
+            handler(medical)
         }
     }
 
     func getAllThrowables(handler: @escaping (_: [Throwable]) -> Void) {
+        if let cache = cachedThrowables {
+            handler(cache)
+            return
+        }
+
         db.collection(FirebaseCollection.throwables.rawValue).getDocuments() { (querySnapshot, err) in
             if let error = err {
                 print("Failed to get all throwables w/ error: ", error.localizedDescription)
@@ -551,11 +558,18 @@ extension FirebaseManager: DatabaseManager {
             }
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) throwables.")
-            handler(snapshot.getThrowables())
+            let throwables = snapshot.getThrowables()
+            self.cachedThrowables = throwables
+            handler(throwables)
         }
     }
 
     func getAllMelee(handler: @escaping (_: [MeleeWeapon]) -> Void) {
+        if let cache = cachedMelee {
+            handler(cache)
+            return
+        }
+
         db.collection(FirebaseCollection.melee.rawValue).getDocuments() { (querySnapshot, err) in
             if let error = err {
                 print("Failed to get all melee w/ error: ", error.localizedDescription)
@@ -565,7 +579,9 @@ extension FirebaseManager: DatabaseManager {
 
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) melee weapons.")
-            handler(snapshot.getMelee())
+            let melee = snapshot.getMelee()
+            self.cachedMelee = melee
+            handler(melee)
         }
     }
 
@@ -636,130 +652,41 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
-    // MARK:- By category
+    // MARK:- Subtype queries
     func getAllFirearmsOfType(type: FirearmType, handler: @escaping ([Firearm]) -> Void) {
-        db.collection(FirebaseCollection.firearms.rawValue).whereField("class", isEqualTo: type.rawValue).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            handler(querySnapshot?.getFirearms() ?? [])
-        }
+        getAllFirearms { results in handler(results.filter { $0.firearmType == type } ) }
     }
 
     func getAllFirearmsOfCaliber(caliber: String, handler: @escaping ([Firearm]) -> Void) {
-        db.collection(FirebaseCollection.firearms.rawValue).whereField("caliber", isEqualTo: caliber).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            handler(querySnapshot?.getFirearms() ?? [])
-        }
+        getAllFirearms { results in handler(results.filter { $0.caliber == caliber } ) }
     }
 
     func getAllAmmoOfCaliber(caliber: String, handler: @escaping ([Ammo]) -> Void) {
-        db.collection(FirebaseCollection.ammo.rawValue).whereField("caliber", isEqualTo: caliber).getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            handler(querySnapshot?.getAmmo() ?? [])
-        }
+        getAllAmmo { results in handler(results.filter { $0.caliber == caliber } ) }
     }
 
     func getAllBodyArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void) {
-        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "body").getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            handler(snapshot.getArmor())
-        }
+        getAllBodyArmor { results in handler(results.filter { $0.armorClass == armorClass } ) }
     }
 
     func getAllHelmetsOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void) {
-        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "helmet").getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            handler(snapshot.getArmor())
-        }
+        getAllHelmets { results in handler(results.filter { $0.armorClass == armorClass } ) }
     }
 
     func getAllHelmetArmorOfClass(armorClass: ArmorClass, handler: @escaping ([Armor]) -> Void) {
-        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "visor").getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            let visors = snapshot.getArmor()
-
-            self.db.collection(FirebaseCollection.armor.rawValue).whereField("armor.class", isEqualTo: armorClass.rawValue).whereField("type", isEqualTo: "attachment").getDocuments() { (querySnapshot, err) in
-                if err != nil { handler([]); return }
-                guard let snapshot = querySnapshot else { handler([]); return }
-
-                let attachments = snapshot.getArmor()
-                handler(visors + attachments)
-            }
-        }
+        getAllHelmetArmor { results in handler(results.filter { $0.armorClass == armorClass } ) }
     }
 
     func getAllBodyArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void) {
-        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "body").getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            handler(snapshot.getArmor())
-        }
+        getAllBodyArmor { results in handler(results.filter { $0.material == material } ) }
     }
 
     func getAllHelmetsWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void) {
-        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "helmet").getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            handler(snapshot.getArmor())
-        }
+        getAllHelmets { results in handler(results.filter { $0.material == material } ) }
     }
 
     func getAllHelmetArmorWithMaterial(material: ArmorMaterial, handler: @escaping ([Armor]) -> Void) {
-        db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "visor").getDocuments() { (querySnapshot, err) in
-            if err != nil { handler([]); return }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            let visors = snapshot.getArmor()
-
-            self.db.collection(FirebaseCollection.armor.rawValue).whereField("armor.material.name", isEqualTo: material.rawValue).whereField("type", isEqualTo: "attachment").getDocuments() { (querySnapshot, err) in
-                if err != nil { handler([]); return }
-                guard let snapshot = querySnapshot else { handler([]); return }
-
-                let attachments = snapshot.getArmor()
-                handler(visors + attachments)
-            }
-        }
-    }
-
-    // MARK:- Mods
-    func getAllMods(handler: @escaping (_: [Modification]) -> Void) {
-        db.collection(FirebaseCollection.mods.rawValue).getDocuments() { (querySnapshot, err) in
-            if let error = err {
-                print("Failed to get all mods w/ error: ", error.localizedDescription)
-                handler([]);
-                return
-            }
-            guard let snapshot = querySnapshot else { handler([]); return }
-            print("Successfully fetched \(String(snapshot.documents.count)) mods.")
-            let allMods = snapshot.getMods().sorted(by: { $0.ergonomics > $1.ergonomics })
-            handler(allMods)
-        }
-    }
-
-    func getAllModsByType(handler: @escaping ([ModType: [Modification]]) -> Void) {
-        getAllMods { mods in
-            var map: [ModType: [Modification]] = [:]
-            for type in ModType.allCases { map[type] = [] }
-            for mod in mods { map[mod.modType]?.append(mod) }
-            handler(map)
-        }
-    }
-
-    func getAllModsOfType(_ type: ModType, handler: @escaping ([Modification]) -> Void) {
-
-    }
-
-    func getCompatibleItemsForFirearm(_ firearm: Firearm, handler: @escaping (FirearmBuildConfig) -> Void) {
-        db.collection(FirebaseCollection.compatibility.rawValue).document(firearm.id).getDocument { (document, error) in
-            if let document = document, document.exists {
-                guard let data = document.data(), let ids = data["items"] as? [String] else { return }
-                let config = FirearmBuildConfig(firearm: firearm, allCompatibleModIds:ids)
-                handler(config)
-            } else {
-
-            }
-        }
+        getAllHelmetArmor { results in handler(results.filter { $0.material == material } ) }
     }
 }
 

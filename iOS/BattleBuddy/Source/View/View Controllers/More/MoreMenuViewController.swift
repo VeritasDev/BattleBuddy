@@ -194,7 +194,6 @@ class MoreMenuViewController: BaseTableViewController {
         super.viewWillAppear(animated)
 
         globalMetadata = globalMetadataManager.getGlobalMetadata()
-        currentUserMetadata = accountManager.currentUserMetadata()
         updateCells()
     }
 
@@ -204,9 +203,10 @@ class MoreMenuViewController: BaseTableViewController {
 
     func updateCells() {
         sections = []
+        currentUserMetadata = accountManager.currentUserMetadata()
 
         versionCell.detailTextLabel?.text = DependencyManagerImpl.shared.deviceManager().appVersionString()
-        let aboutCells = [settingsCell, versionCell, bsgTwitterCell]
+        let aboutCells = [settingsCell, versionCell, veritasCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 
@@ -234,7 +234,7 @@ class MoreMenuViewController: BaseTableViewController {
 
             rewardCell.detailTextLabel?.text = String(nextAvailableReward.points)
 
-            let statsCells = [userCountCell, budScoreCell, leaderboardCell, rewardCell, watchAdCell, daysSinceWipeCell]
+            let statsCells = [userCountCell, budScoreCell, leaderboardCell, rewardCell, watchAdCell, daysSinceWipeCell, bsgTwitterCell]
             let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
             sections.append(globalStatsSection)
         }
@@ -245,7 +245,7 @@ class MoreMenuViewController: BaseTableViewController {
 
         watchAdCell.videoAdState = adManager.currentVideoAdState
 
-        let supportCells = feedbackManager.canAskForReview() ? [veritasCell, rateCell, feedbackCell, githubCell, theTeamCell, attributionsCell] : [veritasCell, feedbackCell, githubCell, theTeamCell, attributionsCell]
+        let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, githubCell, theTeamCell, attributionsCell] : [feedbackCell, githubCell, theTeamCell, attributionsCell]
         let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), cells: supportCells)
         sections.append(supportSection)
         tableView.reloadData()
@@ -256,8 +256,8 @@ class MoreMenuViewController: BaseTableViewController {
 
         accountManager.redeemBudPoints {
             self.hideLoading()
-            self.showAlert(title: "bud_reward_title".local(), message: "bud_reward_message".local())
             self.updateCells()
+            self.showAlert(title: "bud_reward_title".local(), message: "bud_reward_message".local())
         }
     }
 }

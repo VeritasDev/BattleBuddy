@@ -15,32 +15,33 @@
 - [ ] Push notifications for wipe
 - [ ] Fix constraint issues on combat sim
 - [ ] Localizations
-    - [x] English
-    - [x] Hungarian
-    - [x] Swedish
     - [ ] Dutch
     - [ ] Croatian
     - [ ] Spanish Latin American
-    - [x] Russian
-    - [x] Serbian
-    - [x] Serbian Latin
-    - [x] Spanish Spain
-    - [x] Italian
+    - [ ] Japanese
     - [ ] Portuguese
     - [ ] Lithuanian
-    - [x] Arabic
     - [ ] French
     - [ ] Portuguese Portugal
     - [ ] Indonesian
     - [ ] Polish
     - [ ] Chinese Traditional
-    - [ ] German
     - [ ] Estonian
     - [ ] Korean
     - [ ] Norwegian Bokmål
+    - [x] English
+    - [x] German
+    - [x] Hungarian
+    - [x] Swedish
     - [x] Czech
+    - [x] Arabic
     - [x] Slovenian
-    - [ ] Japanese
+    - [x] Russian
+    - [x] Serbian
+    - [x] Serbian Latin
+    - [x] Spanish Spain
+    - [x] Italian
+
 
 - [x] Ammo, armor, firearms -> link directly to combat sim
 - [x] BSG Twitter Feed
@@ -77,21 +78,19 @@
     - [x] Start test button
     - [x] Commit Answer button shows results on screen
     - [x] View will disappear - stop player
+- [x] Stereo audio post writeup
 
 ## <u>v1.2.0</u>
+- [ ] Anything and everything 0.12 related!
+- [ ] News / announcements (translated server side?)
 - [ ] STK/TTK Calculator
 - [ ] Community Poll
 - [ ] Implement Banner Ads (if setting enabled)
 - [ ] Combat Simulation Randomizer
-- [ ] Compare all shortcut
 - [ ] Guess that sound mini-game
 - [ ] Armor - compatible attachments
 - [ ] Placeholder images for accessories
-- [ ] Health Calculator Improvements
-    - Add fragmentation toggle
-    - Armor Zones
-- [ ] Improve search
-- [ ] Filter selection lists
+- [ ] Optimize search - move to individual lists
 - [ ] Mods List
     - [ ] Optics
     - [ ] Introduce array of images - 1 of item image and `n` for different modes
@@ -104,37 +103,17 @@
     - [ ] Other
     - [ ] Mods Detail Screen
     - [ ] Mods Comparison
-- [ ] Firearms - compatible mods
-- [ ] Cell label font sizing
-- [ ] Stereo audio post writeup
-- [ ] Best Item Calculator
 - [ ] Real-time community stats updates
-- [ ] Arabic HP fraction order
-- [ ] Arabic Comparison Layout issue
-- [ ] Pen chance cell text size
-- [ ] Info page on how to earn points
 - [ ] Loyalty points
     - [ ] Random bonus loyalty points % chance
     - [ ] Points for launching app
     - [ ] Points for opening up each day
     - [ ] Points for enabling push notifications
     - [ ] Interstitial
-- Display shot result
-- News/changelog
-- IAP
-- BSG Twitter Feed
-- Skills and how to level them
-- [ ] Add ? info to health calculator
-- [ ] Add ? info to comparison screen
-- [ ] Additional Info to Existing Items:
-    - Compatible Mods on Firearms
-    - Related items feed
-- Comparison Screen Improvements
-    - Revisit range again
-    - Color scheme preference, gradient, black/white, highlight best/worst?
-- Favoriting Items
+- [ ] In app purchase
+- [ ] Skills and how to level them
+- [ ] Favoriting Items
 - [ ] Reduce image sizes in Firebase storage
-- [ ] Known issues post
 - Firearm building
     - Custom
     - Max ergo
@@ -146,21 +125,12 @@
     - Show sliders to value each item by its importance to you
     - Slider value applies multiplier score to stat
     - Take all items and rank
-- Strat Roulette
-- Task item checklist / shopping list
-- Gun building help + random build + UI
+- [ ] Strat Roulette
+- [ ] Task item checklist / shopping list
 - [ ] Survival rate calculator
     - Survival rate
     - Investment per run
     - Total earned per run
-- [ ] Change upcoming features blog post to news / updates
-- [ ] Push notification support v1.0
-- [ ] Shots to kill calculator
-    - Choose target
-    - Choose armor
-    - Choose aim type (thorax only, headshots only, leg meta)
-    - Choose fragmentation type (never - worst case, always - best case, ammo specific - realistic)
-    - Calculate
 - [ ] Add New Item Types
     - Rigs
     - Helmets and accessories
@@ -171,7 +141,8 @@
     - See all mods it conflicts with 
     
 ## <u>Backlog</u>
-- [ ] Logging / tags / debugging / etc
+- Logging / tags / debugging / etc
+- Related items feed on existing Items:
 - Nuke UIKit to the ground; Foundation FTW
 - Surveys
 - Crowdsourced images + gallery for items + fullscreen images
