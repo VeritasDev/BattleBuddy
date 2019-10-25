@@ -12,8 +12,7 @@
 
 ## <u>v1.1.0</u>
 
-- [ ] Push notifications for wipe
-- [ ] Fix constraint issues on combat sim
+- [ ] Push notifications
 - [ ] Localizations
     - [ ] Dutch
     - [ ] Croatian
@@ -42,7 +41,7 @@
     - [x] Spanish Spain
     - [x] Italian
 
-
+- [x] Fix constraint issues on combat sim
 - [x] Ammo, armor, firearms -> link directly to combat sim
 - [x] BSG Twitter Feed
 - [x] Search on item list

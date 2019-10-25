@@ -67,12 +67,5 @@ class CombatSimSubjectSummaryView: BaseStackView {
         avatar.translatesAutoresizingMaskIntoConstraints = false
         avatar.constrainWidth(70.0)
         avatar.constrainHeight(70.0)
-
-//        avatar.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            avatar.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            avatar.heightAnchor.constraint(equalToConstant: 55.0),
-//            avatar.widthAnchor.constraint(equalToConstant: 55.0),
-//            ])
     }
 }

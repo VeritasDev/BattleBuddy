@@ -14,11 +14,16 @@ class TestSubjectAvatar: UIButton {
     var characterId: String? {
         didSet {
             guard let characterId = characterId else { return }
-            imageView?.sd_setImage(with: firebaseManager.avatarImageReference(characterId: characterId), placeholderImage: imageView?.image, completion: { (image, error, cacheType, storageRef) in
-                self.setImage(image, for: .normal)
-            })
+            characterImageView.sd_setImage(with: firebaseManager.avatarImageReference(characterId: characterId), placeholderImage: characterImageView.image)
         }
     }
+    let characterImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.tintColor = UIColor(white: 0.6, alpha: 1.0)
+        imageView.image = UIImage(named: "placeholder_avatar")?.withRenderingMode(.alwaysTemplate)
+        imageView.isUserInteractionEnabled = true
+        return imageView
+    }()
     var result: CombatSimulationResult? {
         didSet {
             switch result {
@@ -45,9 +50,9 @@ class TestSubjectAvatar: UIButton {
         layer.borderWidth = 2.0
         layer.borderColor = UIColor.white.cgColor
 
-        let placeholderImage = UIImage(named: "placeholder_avatar")?.withRenderingMode(.alwaysTemplate)
-        setImage(placeholderImage, for: .normal)
-        imageView?.tintColor = UIColor(white: 0.6, alpha: 1.0)
+        addSubview(characterImageView)
+
+        characterImageView.pinToContainer()
     }
 
     override func layoutSubviews() {
