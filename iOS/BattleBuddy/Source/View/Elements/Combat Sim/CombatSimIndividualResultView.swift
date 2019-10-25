@@ -25,8 +25,11 @@ class CombatSimIndividualResultView: BaseStackView {
                 winPercentLabel.text = String(result.winPercent) + "%"
                 timeToKillLabel.text = String(result.avtTtk) + "seconds_abbr".local()
                 shotsToKillLabel.text = String(result.avgStk)
+            } else {
+                winPercentLabel.text = "-"
+                timeToKillLabel.text = "-"
+                shotsToKillLabel.text = "-"
             }
-
             subjectSummaryView.individualResult = individualResult
         }
     }

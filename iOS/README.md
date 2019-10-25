@@ -79,6 +79,7 @@
     - [x] View will disappear - stop player
 
 ## <u>v1.2.0</u>
+- [ ] STK/TTK Calculator
 - [ ] Community Poll
 - [ ] Implement Banner Ads (if setting enabled)
 - [ ] Combat Simulation Randomizer
