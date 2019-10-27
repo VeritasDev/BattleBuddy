@@ -333,154 +333,154 @@
 // V1.1.0
 
 // MARK:- Common
-"firearm" = "Firearm";
-"common_none" = "None";
-"common_refine" = "Refine";
+"firearm" = "Ginklas";
+"common_none" = "Neišrinkta";
+"common_refine" = "Patobulinti";
 
 // MARK:- More
-"days_since_wipe" = "%@ days since last wipe...";
-"bud_leaderboard" = "Bud Leaderboard";
-"total_ads_watched" = "%@ ads watched by the community!";
-"app_version" = "App Version";
-"your_bud_score" = "Your Bud Score";
-"bud_reward" = "Redeem Reward";
-"bud_reward_title" = "Reward Redeemed";
-"bud_reward_message" = "Thanks for being a bud!";
+"days_since_wipe" = "%@ dienos praejo nuo paskutinio Wipe...";
+"bud_leaderboard" = "Bud Lyderių Lentelė";
+"total_ads_watched" = "Bendruomenė peržiūrėjo %@ skelbimus!";
+"app_version" = "Versija";
+"your_bud_score" = "Tavo Bud Balas";
+"bud_reward" = "Išpirkti Atlyginima";
+"bud_reward_title" = "Atlyginimas Gautas";
+"bud_reward_message" = "Ačiū kad esate Bud!";
 
 // Being A Bud
-"bud_points" = "Bud Points©";
-"bud_how_to_title" = "How To Be A Bud";
-"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies.\n\nAs a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+"bud_points" = "Bud Taškai©";
+"bud_how_to_title" = "Kaip būti Bud";
+"bud_how_to_subtitle" = "Aš padariau Battle Buddy kai turejau laisva laika kadpadeti Escape From Tarkov bendruomenėi. Ši programa nemokama ir skelbimai nesirodo kol pats neisijungi, todėl betkas gali naudoti šia programa nemokamai be jokiu erzinančiu skelbimus. Visi mokesčiai šiai programai sumoketi iš manes personaliai, todėl betkokia pagalba būtų labai malonu. Visi jūs, skaitantys tai dabar, esate mano Battle Buddies. \n\Todėl kad jūs padedate man su Battle Buddy, aš padariau Bud Points© kad parodyti kiek daug jus man padedat! Aš turiu labai daug idėjos kaip šie taškai gali buti naudojami, bet dabar jie tik rodo kiek tu padejiai Battle Buddy bendruomenėi! Kas? Kaip uždirbiti šios Bud Points©? Geras klausimas! Štai keli būdai...";
 
-"bud_how_to_title_1" = "Come Back Often";
-"bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
+"bud_how_to_title_1" = "Naudokit Dažnai";
+"bud_how_to_body_1" = "Kai naudojant programa, Bud Points© astiranda atsitiktinai kurios tu gali surinkti. Mano Buds visada yra apdovanojami kai jie ištikimi ir nuosekli. Kai yra \"Receive Reward\" terp More meniu, paspauskit kad gauti Bud Points© nemokamai ir pažvelkitė i Bud Lyderių Lentelė kad pažiureti ar jus gerausias Bud!";
 
-"bud_how_to_title_2" = "Watch Ads";
-"bud_how_to_body_2" = "Another way to be a bud and earn Bud Points© is by watching video ads. On the main More menu, there's the option to \"Watch an Ad\". If an ad is available from one of our content providers, you will be able to watch a short advertisement and will be rewarded with Bud points showcasing how much of a bud you are. After watching an ad, another will be available after some time, so if you want to be a huge bud, be patient!";
+"bud_how_to_title_2" = "Žiūrėti Skelbimus";
+"bud_how_to_body_2" = "Kitas būdas kad būti Bud ir gauti Bud Points© yra žiūrėti skelbimus. Terp More meniu yra \"Watch An Ad\". Jeigu yra pasiekiamas skelbimas, tu galesi žiureti trumpa skelbima ir gausi Bud Points. Po žiurint viena skelbima, po kažkiek laiko būs dar vienas pasiekiamas skelbimas. Tai jeigu nori būti geriausias Bud, būk kantrus!";
 
-"bud_how_to_title_3" = "Enable Banner Ads";
-"bud_how_to_body_3" = "Enabling banner ads is another amazing way to be a bud! You can enable banner ads from the Settings screen! Don't try to be cheeky though bud, if you disable banner ads the points you earned will be lost until you re-enable them.";
+"bud_how_to_title_3" = "Įgalinti Reklamjuostės Skelbimus";
+"bud_how_to_body_3" = "Įgalinti reklamjuostės skelbimus yra labai geras metodas buti Bud! Tu gali įjungti šius skelbimus terp Settings! Bet jeigu jus įšjungsit šius skelbimus, tie taškai kurie suringti su šita metoda bus prarasti iki kol tu viel įgalinsi tos skelbimus.";
 
-"bud_how_to_title_4" = "More Ways To Be A Bud";
-"bud_how_to_body_4" = "As more features are introduced into Battle Buddy more ways to earn and use your Bud Points© will emerge! Stay tuned buds!";
+"bud_how_to_title_4" = "Daugiau Būdai buti Bud";
+"bud_how_to_body_4" = "Įdiegus daugiau funkcijų į Battle Buddy, atsiras daugiau būdų užsidirbti ir naudoti savo Bud Points©.";
 
 // MARK:- Settings
-"profile" = "Profile";
-"nickname" = "Nickname";
-"nickname_placeholder" = "Nickname";
-"nickname_anon" = "Anonymous";
-"app_settings" = "App Settings";
-"settings_save_error" = "Unable to save your settings, please try again later.";
+"profile" = "Profilis";
+"nickname" = "Pravardė";
+"nickname_placeholder" = "Pravardė";
+"nickname_anon" = "Anoniminis";
+"app_settings" = "Programos Nustatymai";
+"settings_save_error" = "Neįmanoma išsaugoti nustatymų, bandykite dar kartą vėliau.";
 
 // MARK:- Menu Items
-"main_menu_helmets" = "Helmets";
-"main_menu_mods" = "Modifications";
-"main_menu_combat_sim" = "Combat Simulator";
-"main_menu_characters" = "Characters";
-"main_menu_visors" = "Visors";
+"main_menu_helmets" = "Šalmai";
+"main_menu_mods" = "Modifikacijos";
+"main_menu_combat_sim" = "Kovos Simuliatorius";
+"main_menu_characters" = "Characteriai";
+"main_menu_visors" = "Visoriai";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";
-"attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbails, album covers and 3D animations - this man is a legend!";
+"attributions_smoooth_descr" = "Ačiu šitam vyrui už jo projektavimo darbui kiekvienoje platformoje, kurioje aš esu aktyvus. Jo miniatiūros, ablumo nuotraukos ir 3D animacijos. Šis vyras yra legendinis!";
 "attributions_betrix" = "Betrix";
-"attributions_betrix_descr" = "Many of the beautiful menu images and in-game item screenshots were created by Betrix!";
+"attributions_betrix_descr" = "Daugybę šios programos gražių meniu vaizdų sukūrė Betrix!";
 
 // MARK:- Helmets / Accessories
-"hearing_penalty" = "Hearing";
-"hearing_penalty_high" = "High";
-"hearing_penalty_low" = "Low";
-"hearing_penalty_none" = "None";
-"hearing_penalty_full" = "Hearing Penalty";
-"speed_penalty_full" = "Speed Penalty";
-"turn_speed_penalty_full" = "Turn Speed Penalty";
-"ergo_penalty_full" = "Ergonomics Penalty";
-"armor_type" = "Type";
+"hearing_penalty" = "Klausa";
+"hearing_penalty_high" = "Didelis";
+"hearing_penalty_low" = "Mažas";
+"hearing_penalty_none" = "Joks";
+"hearing_penalty_full" = "Klausos Poveikis";
+"speed_penalty_full" = "Greičio Poveikis";
+"turn_speed_penalty_full" = "Sukimo Greičio Poveikis";
+"ergo_penalty_full" = "Ergonomikos Poveikis";
+"armor_type" = "Tipas";
 
 // MARK:- Mods
-"modification" = "Modification";
-"modificationBarrel" = "Barrel";
-"modificationBipod"  = "Bipod";
-"modificationCharge" = "Charging Handle";
-"modificationDevice" = "Device";
-"modificationForegrip" = "Foregrip";
-"modificationGasblock" = "Gas Block";
-"modificationGoggles" = "Goggles";
-"modificationHandguard" = "Handguard";
-"modificationLauncher" = "Launcher";
-"modificationMount" = "Mount";
-"modificationMuzzle" = "Muzzle";
-"modificationPistolgrip" = "Pistol Grip";
-"modificationReceiver" = "Receiver";
-"modificationSight" = "Sight";
-"modificationSightSpecial" = "Sight (Special)";
-"modificationStock" = "Stock";
+"modification" = "Modifikacija";
+"modificationBarrel" = "Vamzdis";
+"modificationBipod"  = "Kojelės";
+"modificationCharge" = "Ginklo spyna";
+"modificationDevice" = "Prietaisas";
+"modificationForegrip" = "Apsodas";
+"modificationGasblock" = "Grąžinimo spyruoklė";
+"modificationGoggles" = "Akiniai";
+"modificationHandguard" = "Rankinis";
+"modificationLauncher" = "Paleidimo priemonė";
+"modificationMount" = "Aptaisas";
+"modificationMuzzle" = "Vamzdžio žiotys";
+"modificationPistolgrip" = "Pistoletinė Rankena";
+"modificationReceiver" = "Uoksas";
+"modificationSight" = "Kryptukas";
+"modificationSightSpecial" = "Kryptukas (Ypatinga)";
+"modificationStock" = "Buožė";
 
 // MARK:- Sound Training
-"sound_training" = "Sound Training Beta";
-"sound_training_start" = "Start Training";
-"sound_training_commit" = "Guess";
-"sound_training_result_correct" = "Correct!";
-"sound_training_result_wrong" = "Keep Trying!";
+"sound_training" = "Garso Treniruotės Beta";
+"sound_training_start" = "Pradėti Treniruotis";
+"sound_training_commit" = "Atspėti";
+"sound_training_result_correct" = "Teisingai!";
+"sound_training_result_wrong" = "Bandyk toliau!";
 
-"sound_localization_info_title" = "Learn How To Localize Sound";
-"sound_localization_info_note_1" = "The sound training tool is currently in beta! Headphones are required!";
-"sound_localization_info_body_1" = "Escape from Tarkov currently utilizes your standard stereo sound, which is more than adequate enough for sound localization in most cases. At this point in time, no 5.1 or 7.1 surround sound options are supported, and as such I would HIGHLY recommend against using any virtual audio settings in your headphone software or windows audio settings.\n\nThere's no doubt there are people that swear by these more advanced settings, but they simply are not required, will not give you any more information about distance, location, etc., because they don't have any more information from the game or the engine itself! The game outputs stereo audio - a Left channel and a Right channel, nothing more complex than that. In my experience, enabling these more advanced settings makes sound localization harder, not easier. If you have these settings on and have issues with localizing sound in Tarkov or any other first-person shooter, try turning them off and see if that makes a difference, you might be surprised!";
-"sound_localization_info_subtitle_2" = "How To Play";
-"sound_localization_info_body_2" = "The goal of this mini-game is to locate the direction of sound around your on-screen character. When you begin, and a tone will play at a regular interval, panned to a random direction somewhere around your character on screen in a 360-degree radius.\n\nSwipe left and right on screen to turn your character, just like you would with a trackpad or a mouse. As your character's left or right ears get closer or further away from the source of the sound, the volume will change in each ear accordingly.\n\nWhen the tone is equally loud in both your left and right ears, your character is likely facing towards the sound. Once you think you're done, confirm your choice by pressing the button to see if you're correct!";
-"sound_localization_info_subtitle_3" = "Front and Back Sound The Same?!";
-"sound_localization_info_body_3" = "You may have noticed that sounds that are directly in front of you sound indistinguishable from sounds that are directly behind you. In both cases, the volume of the left and right channels are equal. Ignoring things like context clues based on map knowledge and materials in the environment, all of which are extremely useful in determining the location of sounds occurring around you, the only way to differentiate between sounds in front and behind is by turning your character's head relative to the sound, and paying attention to the direction the sound appears to move when you do. Take a look at this image example below:";
-"sound_localization_info_body_4" = "When you turn your character left or right, or even better turn just your character's silently head using free-look, you should be able to hear the volume of the sound increase or decrease in each ear. If you turn your head to the right and the sound is in front of you, your left ear will be closer to the sound and your right ear will be further from it, so the volume will be louder in your left ear compared to your right. Conversely, if the sound was actually behind you, when you turn right it will get louder in your right ear and softer in your left. Try using the direction that the sound moves when you turn your head as an indication of the location of the sound. The way it works in this tool is exactly like it works in Escape from Tarkov, and most other first-person shooters!";
+"sound_localization_info_title" = "Sužinokite Kaip Lokalizuoti Garsą";
+"sound_localization_info_note_1" = "Šis įrankis dar tik beta versija! Būtina turėti ausines!";
+"sound_localization_info_body_1" = "Escape From Tarkov dabar naudojia Stereo garsa, kuris užtenka daugeliu atvejų. Šiuo metu, 5.1 ir 7.1 Surround Sound esa palaikomos, bet aš LABAI rekomenduojiu nenaudoti šius nustatymus.\n\nYra žmonės kur saka kad šie nustatymai yra privalomi, bet juos nereikia. Jie tau neduoda daugiau informacija apie toluma, posicija kt., nes jie negauna daugiau informacijos iš žaidimo palyginus su Stereo! Šis žaidimas tik naudoja Stereo - Kairysis ir Dešinysis kanalai. Su mano patirtimė, naudojant tuos sudėtingesnius nustatymus padara lokalizuoti garsa daug sunkiau. Jei turite šiuos nustatymus ir turite problemų dėl garso lokalizavimo terp Tarkov arba betkoki kita žaidyma, pabandykit išjungti ir pažiurekit ar tas kažka pakeis!";
+"sound_localization_info_subtitle_2" = "Kaip Žaisti";
+"sound_localization_info_body_2" = "Šio mini žaidimo tikslas yra bandyti surasti garso originalaus vietos. Kai pradesi, garsas pradės groti reguliariai ir gali atsitiktinai judėti aplink tavė, 360 laipsnius.\n\nEkranu braukite kairėn ir dešinėn, jei norite judinti savo characteri. Taip pat kaip su pėlė. Kai tavo characterio ausys arteja arba toleja nuo garso, tuo garso garsumas keisis.\n\nKai tono garsumas toks pat terp keirės ir desinės ausysė, jūs ziurit tiesiai į garsa. Kai jūs isitikinė su savo išsirinkyma, spauskyt mygtuką kad pažiurėti ar jūs teisingi!";
+"sound_localization_info_subtitle_3" = "Garsas Priekyje Ir Gale Yra Tas Pats?!";
+"sound_localization_info_body_3" = "Jūs tikrausiai jau supratot kad garsai nuo priekio tokie pat kaip garsai nuo nugaros. Abiem atvejais, garsumas kairej ir desinej yra toks pat. Bė jokio konteksto, labai sunku suprasti iš kur tie garsai randasi. Vienintelis būdas atskirti garsus priekyje ir užpakalyje yra judinti savo characteri ir klausyti kaip garsas jūda. Pažvelkite į šįo paveikslėlio pavyzdį žemiau:";
+"sound_localization_info_body_4" = "Kai pasukate savo characteri į kairę arba į dešinę, arba net sukant savo galva su Free-Look, jūs turit girdeti kad kaip pasykeičia garsumai ausysė. Jeigu suksi galva į kairė ir garsas priekyje, garsas būs garsesnis dešinėj ausysė. Jeigu garsas už nugaros, garsas terp dešinės ausies bus tilesnis jeigu suksi galva kairė. Tai, kaip garsai veikia šiame įrankyje, yra lygiai tokia pati kaip garsai veikia terp Escape From Tarkov!";
 
-"simulate_gunshot_pen" = "Shoot\nw/ Penetration";
-"simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
+"simulate_gunshot_pen" = "Šaudyti\nsu Skverbti";
+"simulate_gunshot_no_pen" = "Šaudyti\n(Be Skverbti)";
 
 // MARK:- Combat Sim
-"combat_sim_subject_type" = "Character Type";
-"combat_sim_aim_setting" = "Aim Setting";
-"combat_sim_edit_subject" = "Edit Test Subject";
-"combat_sim_run" = "Run";
-"combat_sim_results" = "Simulation Results";
-"combat_sim_results_iterations" = "Iterations";
-"combat_sim_results_winner" = "Winner";
-"combat_sim_results_loser" = "Loser";
-"combat_sim_results_tie" = "Tie";
-"combat_sim_results_win_percent" = "Win Percent";
-"combat_sim_settings" = "Simulation Settings";
-"combat_sim_tap_to_edit" = "Tap Image To Edit Test Subject";
-"combat_sim_edit_firearm" = "Edit Firearm";
-"combat_sim_head_armor" = "Head Armor";
+"combat_sim_subject_type" = "Characterio Tipas";
+"combat_sim_aim_setting" = "Tikslo nustatymas";
+"combat_sim_edit_subject" = "Pakeisti Testo Subjekta";
+"combat_sim_run" = "Pradėti";
+"combat_sim_results" = "Modeliavimo rezultatai";
+"combat_sim_results_iterations" = "Pakartojimai";
+"combat_sim_results_winner" = "Nugalėtojas";
+"combat_sim_results_loser" = "Pralošęs";
+"combat_sim_results_tie" = "Lygus Rezultatas";
+"combat_sim_results_win_percent" = "Laimėjimo šansai";
+"combat_sim_settings" = "Modeliavimo Nustatymai";
+"combat_sim_tap_to_edit" = "Paspauskite Vaizdą Kad Pakeisti";
+"combat_sim_edit_firearm" = "Pakeisti Ginklą";
+"combat_sim_head_armor" = "Galvos Šarvai";
 
-"combat_sim_pen_setting" = "Penetration Setting";
-"combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
-"combat_sim_pen_setting_always_desc" = "Bullets will always penetrate armor as long as there is a non-zero chance. For example, a 1% penetration chance will always penetrate, but a 0% penetration chance will not.";
-"combat_sim_pen_setting_never_desc" = "Bullets will not penetrate any armor unless the armor is at 0% durabilty, at which time the chance becomes 100%";
+"combat_sim_pen_setting" = "Skverbties Nustatymai";
+"combat_sim_pen_setting_realistic_desc" = "Kulkos turi tokią pačią galimybę įsiskverbti į šarvus, kaip ir žaidime.";
+"combat_sim_pen_setting_always_desc" = "Kulkos visada prasiskverbs pro šarvus, jei šansai bus lygi nuliui. Pavyzdžiui, 1% įsiskverbimo šansai visada įsiskverbs, bet 0% įsiskverbimo šansai nebus.";
+"combat_sim_pen_setting_never_desc" = "Kulkos neįsiskverbs į jokius šarvus, nebent šarvai būtų atsparūs 0%, tuo metu šansai tampa 100%.";
 
-"combat_sim_frag_setting" = "Fragmentation Setting";
-"combat_sim_frag_setting_realistic_desc" = "Bullets have the same chance to fragment as they do in-game.";
-"combat_sim_frag_setting_always_desc" = "Bullets will always fragment as long as their effective fragmentation chance is non-zero. As of writing this, low-penetration ammo, such as RIP slugs, cannot currently fragment in the game despite it's 100% advertised fragmentation chance.";
-"combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
+"combat_sim_frag_setting" = "Suskaidymo Nustatymai";
+"combat_sim_frag_setting_realistic_desc" = "Kulkos turi tokią pačią galimybę suskaidyti, kaip ir žaidime.";
+"combat_sim_frag_setting_always_desc" = "Kulkos visada suskaidys jeigu jų suskaidymo šansai bus lygi nuliui. Dabar rašant tai, mažus skvarbūmo šoviniai, tokie kaip RIP Slug kulka, šiuo metu negali suskaidyti terp žaidima, nepaisant reklamuota 100% suskaidymo šansai.";
+"combat_sim_frag_setting_never_desc" = "Kulkos niekada nebus suskaidytos.";
 
-"aim_setting_upper_body" = "Upper Body";
-"aim_setting_center_mass" = "Center of Mass";
-"aim_setting_headshots" = "Headshots";
-"aim_setting_random_leg" = "Random Leg Meta";
-"aim_setting_single_leg" = "Single Leg Meta";
-"aim_setting_thorax" = "Thorax";
+"aim_setting_upper_body" = "Viršutinė Kūno Dalis";
+"aim_setting_center_mass" = "Masės centras";
+"aim_setting_headshots" = "Headshotai";
+"aim_setting_random_leg" = "Betkokiės kojos šuviai";
+"aim_setting_single_leg" = "Vienos kojos šuviai";
+"aim_setting_thorax" = "Krūtinė";
 
-"aim_setting_upper_body_desc" = "All bullets fired will impact the target on their upper-body, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
-"aim_setting_center_mass_desc" = "All bullets fired will impact the target in the center-of-mass, which includes the arms, stomach, and thorax.";
-"aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
-"aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
-"aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
-"aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
+"aim_setting_upper_body_desc" = "Visos kulkos pataika į viršutinę kūno dalį, įskaitant rankas, skrandį, krūtinę ir nedidelę procentinę galimybę trenkti į galvą.";
+"aim_setting_center_mass_desc" = "Visos kulkos pataika į masės centra, kuri apima rankos, pilva, ir krūtinė";
+"aim_setting_headshots_desc" = "Visos kulkos pataika į galva";
+"aim_setting_random_leg_desc" = "Visos kulkos turi tokius pačius šansus pataikyti į betkokia kojė.";
+"aim_setting_single_leg_desc" = "Visos kulkos pataika į viena koje.";
+"aim_setting_thorax_desc" = "Visos kulkos pataika į rūtinė";
 
-"simulation_result_win" = "Win";
-"simulation_result_loss" = "Loss";
-"simulation_result_tie" = "Tie";
+"simulation_result_win" = "Nugalėtas";
+"simulation_result_loss" = "Pralošta";
+"simulation_result_tie" = "Lygus Rezultatas";
 
-"simulation_win_percent" = "Win Percent";
-"simulation_time_to_kill" = "Avg. Time-to-Kill";
-"simulation_win_shots_to_kill" = "Avg. Shots-to-Kill";
+"simulation_win_percent" = "Nugalėti Procentas";
+"simulation_time_to_kill" = "Vidutinis Laikas žudyti";
+"simulation_win_shots_to_kill" = "Vidutinis numerio Šūviu į Nužudymą";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations

@@ -21,3 +21,7 @@ extension String {
         return attributedString
     }
 }
+
+
+// Command to validate Strings files...
+// plutil -lint Localizable.strings

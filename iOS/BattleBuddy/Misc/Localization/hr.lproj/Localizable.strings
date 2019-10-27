@@ -2,9 +2,9 @@
 "yes" = "Da";
 "no" = "Ne";
 "ok" = "OK";
-"done" = "Gotovo";
+"done" = "Završeno";
 "soon" = "Uskoro™";
-"coming_soon" = "Dolazi Uskoro™";
+"coming_soon" = "Dolazi uskoro™";
 "unknown" = "Nepoznato";
 "type" = "Tip";
 "continue" = "Nastavi";
@@ -12,25 +12,25 @@
 "required" = "Potrebno";
 
 // MARK: - Filter/sort/compare
-"compare" = "Usporedi";
+"compare" = "Uporedi";
 "name" = "Ime";
-"save" = "Spremi";
+"save" = "Sačuvaj";
 "recommended" = "Preporučeno";
-"similar" = "slično";
+"similar" = "Slično";
 "all" = "Sve";
-"compare_with" = "Usporedi sa...";
+"compare_with" = "Uporedi sa...";
 
 // MARK: - More / Attributions
 "about" = "O Battle Buddy-u";
-"dev_by" = "Razvijen od Veritas";
-"dev_support" = "Želite podržati razvoj?";
+"dev_by" = "Napravio Veritas";
+"dev_support" = "Zelis podržati razvoj aplikacije?";
 "watch_ad" = "Pogledaj reklamu";
-"enable_banner_ads" = "Omoguci banerne oglase";
-"view_on_github" = "Pogledaj na GitHub-u";
-"rate_this_app" = "Ocijeni Battle Buddy";
-"attributions" = "Atribucije";
-"check_out_team" = "Pogledaj tim";
-"team" = "Tim";
+"enable_banner_ads" = "Uključi reklame";
+"view_on_github" = "Pogledaj na GitHub";
+"rate_this_app" = "Rejtuj Betl Badi";
+"attributions" = "Zasluge";
+"check_out_team" = "Pogledaj naš tim";
+"team" = "Naš tim";
 "twitter" = "Twitter";
 "twitch" = "Twitch";
 "discord" = "Discord";
@@ -39,177 +39,177 @@
 "soundcloud" = "Soundcloud";
 "website" = "veritas.wtf";
 "spotify" = "Spotify";
-"social" = "Social";
-"music" = "My Music";
-"website_error" = "Nije moguće učitati ovaj sadržaj. Provjerite imate li instaliranu odgovarajuću aplikaciju.";
-"live_now" = "Uzivo sada!";
-"feedback_title" = "Ideje za povratne informacije ili značajke?";
-"feedback_subtitle" = "Pridruzite se discordu!";
-"upcoming_features" = "Predstojece znacajke";
+"social" = "Socijalno";
+"music" = "Moja glazba";
+"website_error" = "Neusjpešno učitavanje sadržaja. Molimo vas provjerite da vam je instalirana potrebna aplikacija.";
+"live_now" = "Live sad!";
+"feedback_title" = "Ideje za dodatke?";
+"feedback_subtitle" = "Uđite u naš Discord!";
+"upcoming_features" = "Budući dodaci";
 
-"twitter_description" = "Ostani u toku";
-"twitch_description" = "Gledaj uzivo na Twitch-u";
-"discord_description" = "Pridruzi se nasoj zajednici na Discordu";
+"twitter_description" = "Prati nas";
+"twitch_description" = "Gledaj uživo na Twitch";
+"discord_description" = "Uđite u naš društveni Discord";
 "youtube_description" = "Gledaj na YouTube";
-"instagram_description" = "Mediji na Instagramu";
-"soundcloud_description" = "Slusaj na Soundcloud";
-"spotify_description" = "Slusaj na Spotify";
-"website_description" = "Vise O Veritas";
+"instagram_description" = "Mediji na Instagram-u";
+"soundcloud_description" = "Slušaj na Soundcloud";
+"spotify_description" = "Slušaj na Spotify";
+"website_description" = "Više o Veritas-u";
 
 // MARK: - Tabs
-"items" = "Stavke";
-"learn" = "Nauci";
-"more" = "Vise";
-"search" = "Pretrazivanje";
+"items" = "Stvari";
+"learn" = "Nauči";
+"more" = "Više";
+"search" = "Pretraži";
 
 // MARK: - Main Menu
 "main_menu_ammo" = "Municija";
 "main_menu_armor" = "Oklop";
 "main_menu_ballistics" = "Balistika";
-"main_menu_firearms" = "Vatrena Oruzja";
+"main_menu_firearms" = "Vatreno oružje";
 "main_menu_medical" = "Medicina";
-"main_menu_melee" = "Melee Oruzja";
-"main_menu_throwables" = "Rucne granate";
+"main_menu_melee" = "Hladno oružje";
+"main_menu_throwables" = "Bacaljke";
 "main_menu_health_calc" = "Kalkulator oštećenja";
 
 // MARK: - Sub-Categories
-"firearm_types" = "Vrste vatrenog oružja";
+"firearm_types" = "Tipovi vatrenog oružja";
 "calibers" = "Kalibri";
 
 // MARK: - Calculators
-"pen_chance" = "Šansa za penetraciju";
-"no_armor_selected" = "Nije odabran nikakav oklop";
-"no_ammo_selected" = "Nijedna municija nije odabrana";
-"select_ammo" = "Odaberite streljivo";
-"select_armor" = "Odaberite oklop";
-"pen_chance_help_title" = "Kalkulator šanse za penetraciju";
-"pen_chance_help_message" = "Ovaj alat izračunava šansu da odabrani metak prodre u određeni oklop tijela. Jednom kada odaberete metak i oklop, pomoću klizača možete prilagoditi simuliranu trajnost oklopa da biste vidjeli koliko su različite runde u odnosu na oklop na različitim razinama trajnosti!";
+"pen_chance" = "Šansa penetracije";
+"no_armor_selected" = "Oklop nije izabran";
+"no_ammo_selected" = "Municija nije izabrana";
+"select_ammo" = "Izaberi tip municije";
+"select_armor" = "Izaberi oklop";
+"pen_chance_help_title" = "Kalkulator šanse penetracije";
+"pen_chance_help_message" = "Ovaj alat kalkulira šansu da će izabrani metak prodrati kroz dani oklop. Nakon što izaberete metak i oklop, možete koristiti slider da namestite simuliranu durabilnost oklopa, nakon čega možete videti efektivnost različite municije protiv oklopa sa različitim levelima durabilnosti!";
 
 "health_calc_title" = "Kalkulator oštećenja";
-"total_hp" = "Ukupan HP";
+"total_hp" = "Totalni HP";
 
 "body_zone_head" = "Glava";
-"body_zone_thorax" = "Grudni koš";
+"body_zone_thorax" = "Grudi";
 "body_zone_stomach" = "Trbuh";
-"body_zone_right_arm" = "Desna Ruka";
-"body_zone_left_arm" = "Lijeva Ruka";
-"body_zone_right_leg" = "Desna Noga";
-"body_zone_left_leg" = "Lijeva Noga";
+"body_zone_right_arm" = "Desna ruka";
+"body_zone_left_arm" = "Lijeva ruka";
+"body_zone_right_leg" = "Desna noga";
+"body_zone_left_leg" = "Lijeva noga";
 
 // MARK: - Items
 "armor" = "Oklop";
 "helmets" = "Kaciga";
 "ballistics" = "Balistika";
 "health" = "Zdravlje";
-"firearms" = "Vatreno oruzje";
+"firearms" = "Vatreno oružje";
 "ammunition" = "Municija";
 "body_armor" = "Oklop";
-"medical_items" = "Medicina";
-"throwables" = "Rucne granate";
-"healing_items" = "Ljekoviti predmeti";
-"pain_management" = "Upravljanje bolovima";
-"status_management" = "Upravljanje učincima statusa";
-"stims" = "Stimulansi";
-"grenades" = "Granate";
-"properties" = "Svojstva";
-"performance" = "izvodjenje";
+"medical_items" = "Medicinski predmeti";
+"throwables" = "Bacaljke";
+"healing_items" = "Medicina";
+"pain_management" = "Analgetik";
+"status_management" = "Status";
+"stims" = "Stimulanti";
+"grenades" = "Ručne bombe";
+"properties" = "Atributi";
+"performance" = "Performansa";
 "ergonomics" = "Ergonomija";
 "ergo" = "Ergo";
-"vertical_recoil" = "Okomiti trzaj";
-"horizontal_recoil" = "Vodoravni trzaj";
+"vertical_recoil" = "Vertikalni trzaj";
+"horizontal_recoil" = "Horizontalni trzaj";
 "recoil" = "Trzaj";
 
 // MARK: - Weapons
 "weapon_class" = "Klasa";
-"assault_rifle" = "Jurišna Puška";
-"assault_carbine" = "Jurišna karabina";
-"sniper_rifle" = "Snajperska puška";
-"designated_marksman_rifle" = "DMR";
+"assault_rifle" = "Automatska puška";
+"assault_carbine" = "Napadni Karabin";
+"sniper_rifle" = "Snajper";
+"designated_marksman_rifle" = "Streljačka puška";
 "pistol" = "Pištolj";
-"shotgun" = "Puška";
-"sub_machine_gun" = "Strojnica";
+"shotgun" = "Sacmarica";
+"sub_machine_gun" = "Puskomitraljez";
 "machine_gun" = "Mitraljez";
 "caliber" = "Kalibar";
-"fire_rate" = "Stopa vatre";
-"effective_range" = "Učinkoviti raspon";
-"fold_or_retract" = "Struko / Povuci";
-"retractable" = "Uvlačiv";
-"build_wizard" = "Čarobnjak za izgradnju";
-"gun_build_custom" = "Prilagođen";
+"fire_rate" = "Vrzina paljbe";
+"effective_range" = "Efektivna udaljenost";
+"fold_or_retract" = "Sklopi/Povuci";
+"retractable" = "Uvlacivo";
+"build_wizard" = "Čarobnjak za sastavljanje";
+"gun_build_custom" = "Poručen";
 "gun_build_recoil" = "Minimalni trzaj";
 "gun_build_ergo" = "Maksimalna ergonomija";
-"gun_build_random" = "Slučajan odabir";
-"fire_mode" = "Način vatre";
-"fire_modes" = "Načini vatre";
-"fire_mode_semi" = "Polu Auto";
-"fire_mode_auto" = "Potpuno automatsko";
-"fire_mode_burst" = "Rasprskavajući";
-"fire_mode_semi_short" = "Polu automatski";
-"fire_mode_auto_short" = "Automatski";
-"fire_mode_burst_short" = "Rasprskavajući";
-"action" = "Radnja";
-"action_type_pump" = "Radnja pumpe";
-"action_type_bolt" = "Repetiranje";
-"action_type_pump_short" = "Pumpa";
-"action_type_bolt_short" = "Repetiraj";
-"build" = "Gradnja";
-"build_this_gun" = "Izgradi ovu pusku";
+"gun_build_random" = "Slucajno";
+"fire_mode" = "Tip paljbe";
+"fire_modes" = "Tipovi paljbe";
+"fire_mode_semi" = "Poluautomatsko";
+"fire_mode_auto" = "Automatsko";
+"fire_mode_burst" = "Prasak";
+"fire_mode_semi_short" = "Polu";
+"fire_mode_auto_short" = "Puno";
+"fire_mode_burst_short" = "Prasak";
+"action" = "Akcija";
+"action_type_pump" = "Pumpna akcija";
+"action_type_bolt" = "Repetiračka akcija";
+"action_type_pump_short" = "Pumpno";
+"action_type_bolt_short" = "Repetiračko";
+"build" = "Sastav";
+"build_this_gun" = "Sastavi pušku";
 
-"compare_preset_semi_auto_rifle" = "Polu-automatske puške";
-"compare_preset_full_auto_rifles" = "Pune automatske puške";
-"compare_preset_rifles_caliber_match" = "Puške sa istim kalibrom";
-"compare_preset_rifles" = "Vatreno Oružje";
-"compare_preset_full_auto_caliber_match" = "Pune automatske puške sa istim kalibrom";
-"compare_preset_semi_auto_pistols" = "Polu-automatske pištolje";
-"compare_preset_full_auto_pistols" = "Puni automatski pištolji";
-"compare_preset_pistols_caliber_match" = "Pištolji sa istim kalibrom";
+"compare_preset_semi_auto_rifle" = "Poluautomatske puške";
+"compare_preset_full_auto_rifles" = "Automatske puške";
+"compare_preset_rifles_caliber_match" = "Puške istog kalibra";
+"compare_preset_rifles" = "Puške";
+"compare_preset_full_auto_caliber_match" = "Automatske puške istog kalibra";
+"compare_preset_semi_auto_pistols" = "Poluautomatski pištolji";
+"compare_preset_full_auto_pistols" = "Automatski pištolji";
+"compare_preset_pistols_caliber_match" = "Pištolji istog kalibra";
 "compare_preset_pistols" = "Pištolji";
-"compare_preset_manual_shotguns" = "Ručne akcijske puške";
+"compare_preset_manual_shotguns" = "Sačmarice ručne akcije";
 "compare_preset_shotguns" = "Sačmarice";
-"compare_preset_smgs_caliber_match" = "Puškomitraljezi istog kalibra";
-"compare_preset_smgs" = " Saznajte kako izgovarati Puškomitraljezi";
-"compare_preset_bolt_snipers" = "Bolt-Action snajperske puške";
-"compare_preset_snipers_and_dmrs" = "Snajperske puške i DMR-ovi";
-"compare_preset_dmrs" = "Označene puške Marksman";
+"compare_preset_smgs_caliber_match" = "Podautomatske puške istog kalibra";
+"compare_preset_smgs" = "Podautomatske puške";
+"compare_preset_bolt_snipers" = "Snajperi repetiračke akcije";
+"compare_preset_snipers_and_dmrs" = "Snajperi i streljačke puške";
+"compare_preset_dmrs" = "Streljačke puške";
 
 // MARK: - Ammo
-"guns_for_caliber" = "Srodno vatreno oružje";
-"subsonic" = "Podzvučni";
-"tracer" = "Tragač";
-"muzzle_velocity" = "Brzina njuške/cijevi (m/s)";
-"compatible_firearms" = "Kompatibilno vatreno oružje";
-"rpm" = "rpm";
+"guns_for_caliber" = "Slično vatreno oružje";
+"subsonic" = "Podzvučna";
+"tracer" = "Tragačka";
+"muzzle_velocity" = "Brzina projektila (m/s)";
+"compatible_firearms" = "Kompatibilno oružje";
+"rpm" = "met/min";
 "meters_abbr" = "m";
 "seconds_abbr" = "s";
 
 // MARK: - Armor
-"armor_class_0" = "Nijedan";
+"armor_class_0" = "Prazno";
 "armor_class_1" = "Klasa 1";
 "armor_class_2" = "Klasa 2";
 "armor_class_3" = "Klasa 3";
 "armor_class_4" = "Klasa 4";
 "armor_class_5" = "Klasa 5";
 "armor_class_6" = "Klasa 6";
-"armor_type_body" = "Oklop";
-"armor_type_helmet"= "Kaciga";
+"armor_type_body" = "Tjelesni oklop";
+"armor_type_helmet"= "Šlem";
 "armor_type_visor" = "Vizir";
-"armor_type_attachment" = "Nadodatak";
+"armor_type_attachment" = "Dodatak";
 "armor_zone_top" = "Vrh";
-"armor_zone_eyes" = "Oci";
-"armor_zone_jaws" = "Vilica";
-"armor_zone_ears" = "Usi";
-"armor_zone_nape" = "Zatiljak";
-"armor_zone_chest" = "Prsa";
+"armor_zone_eyes" = "Oči";
+"armor_zone_jaws" = "Čeljusti";
+"armor_zone_ears" = "Uši";
+"armor_zone_nape" = "Potiljak";
+"armor_zone_chest" = "Grudi";
 "armor_zone_stomach" = "Trbuh";
-"armor_zone_left_arm" = "Lijeva Ruka";
-"armor_zone_right_arm" = "Desna Ruka";
-"armor_zone_left_leg" = "Lijeva Noga";
-"armor_zone_right_leg" = "Desna Noga";
-"armor_mat_ceramic" = "Keramički";
+"armor_zone_left_arm" = "Leva ruka";
+"armor_zone_right_arm" = "Desna ruka";
+"armor_zone_left_leg" = "Leva noga";
+"armor_zone_right_leg" = "Desna noga";
+"armor_mat_ceramic" = "Keramika";
 "armor_mat_armored_steel" = "Blindirani čelik";
-"armor_mat_aramid" = "Aramidnih";
-"armor_mat_uhmwpe" = "Polietilen ultra visoke molekulske težine";
-"armor_mat_combined" = "kombinirana";
+"armor_mat_aramid" = "Aramid";
+"armor_mat_uhmwpe" = "UVMTPE";
+"armor_mat_combined" = "Kombinovano";
 "armor_mat_aluminum" = "Aluminijum";
 "armor_mat_glass" = "Staklo";
 "armor_mat_titanium" = "Titanij";
@@ -217,270 +217,270 @@
 "armor_type" = "Tip";
 "armor_material" = "Materijal";
 "armor_class" = "Klasa";
-"armor_points" = "Izdržljivost";
+"armor_points" = "Durabilnost";
 "armor_zones" = "Zone";
-"penalties" = "Kazne";
+"penalties" = "Penali";
 "speed_penalty" = "Brzina";
-"turn_speed_penalty" = "Brzina skretanja";
+"turn_speed_penalty" = "Brzina okretanja";
 "ergo_penalty" = "Ergonomija";
 
 "penetration" = "Penetracija";
-"damage" = "Šteta";
-"armor_damage" = "Oštećenja oklopa";
-"frag_chance" = "Mogućnost fragmentacije";
+"damage" = "Oštećenje";
+"armor_damage" = "Oštećenje oklopa";
+"frag_chance" = "Šansa fragmentacije";
 
-"explore" = "Istraži";
-"compare" = "Usporedi";
-"compare_performance" = "Usporedite izvedbu";
-"dps_calc" = "ŠPS kalkulator";
-"kill_time_calc" = "Kalkulator vremena ubojstva";
+"explore" = "Istražuj";
+"compare" = "Uporedi";
+"compare_performance" = "Uporedi performansu";
+"dps_calc" = "Kalkulator OPS";
+"kill_time_calc" = "Kalkulator vremena za ubistvo";
 
 // MARK: - Medical
-"damage" = "Šteta";
+"damage" = "Oštećenje";
 "contusion" = "Ozljeda";
-"fracture" = "Prijelom";
+"fracture" = "Fraktura";
 "pain" = "Bol";
-"medkit" = "Medkit";
+"medkit" = "Prva pomoć";
 "painkiller" = "Analgetik";
-"accessory" = "Oprema";
-"stimulator" = "Stimulator";
-"use_time" = "Vrijeme koristenja";
-"effect_duration" = "Trajanje učinaka";
-"use_count" = "Broj korištenja";
-"hp_resource" = "Ukupan HP";
-"removes_bloodloss" = "Uklanja gubitak krvi";
-"removes_contusion" = "Uklanja kontuziju";
-"removes_fracture" = "Uklanja lom";
-"removes_pain" = "Uklanja bol";
-"hydration_modifier" = "Modifikator hidratacije";
+"accessory" = "Periferija";
+"stimulator" = "Stimulant";
+"use_time" = "Vrijeme korištenja";
+"effect_duration" = "Trajanje efekta";
+"use_count" = "# korištenja";
+"hp_resource" = "Totalni HP";
+"removes_bloodloss" = "Mice gubitak krvi";
+"removes_contusion" = "Mice kontuziju";
+"removes_fracture" = "Mice frakturu";
+"removes_pain" = "Mice bol";
+"hydration_modifier" = "Modifikator hidracije";
 "energy_modifier" = "Modifikator energije";
 
 // MARK: - Throwables
-"throwable_frag" = "Frag";
-"throwable_flash" = "Flash";
-"throwable_smoke" = "Dim";
-"fuse_time" = "Vrijeme osigurača";
-"explosion_radius_min" = "Min. Domet eksplozije";
-"explosion_radius_max" = "Maks. Domet eksplozije";
-"fragmentation_count" = "Broj fragmenatat";
+"throwable_frag" = "Eksplozivna";
+"throwable_flash" = "Fleška";
+"throwable_smoke" = "Dimna";
+"fuse_time" = "Trajanje osiguraca";
+"explosion_radius_min" = "Minimalna daljina eksplozije";
+"explosion_radius_max" = "Maksimalna daljina eksplozije";
+"fragmentation_count" = "Broj gelera";
 
 // MARK: - Melee
-"damage" = "Šteta";
-"rate" = "Stopa";
-"range" = "Opseg";
+"damage" = "Oštećenje";
+"rate" = "Brzina";
+"range" = "Daljina";
 
 "stab" = "Ubod";
-"stab_dmg" = "Oštećenja od uboda";
-"stab_rate" = "Stopa uboda";
-"stab_range" = "Raspon uboda";
+"stab_dmg" = "Oštećenje uboda";
+"stab_rate" = "Brzina uboda";
+"stab_range" = "Daljina uboda";
 
-"slash" = "Slash";
-"slash_dmg" = "Slash Šteta";
-"slash_rate" = "Slash Stopa";
-"slash_range" = "Slash Raspon";
+"slash" = "Porez";
+"slash_dmg" = "Oštećenje poreza";
+"slash_rate" = "Brzina poreza";
+"slash_range" = "Daljina poreza";
 
 // MARK: - Posts
-"ballistics_title" = "Oklop i balistika:Osnove";
-"ballistics_body_1" = "Balistički sustav u Escape from Tarkov crna je kutija koju su samo rijetki ljudi vidjeli kako radi. Zbog složenosti formula koje se koriste za izračunavanje stvari poput površinskih šansi za prodor, ricochet kutova i oštećenja kako oklopa i tijela igrača, tako i elemenata koji se temelje na RNG-u koriste, često je neprimjetna razlika u vremenu za ubiti kad uspoređujete potpuno opremljenog igrača na visokoj razini koji nosi najbolju opremu za krajnju igru ​​sa igračem prvog nivoa koji ne drži ništa više od pištolja početne razine. Zajedno s poznatim problemima umrežavanja i performansi, greškama i sve većim brojem igrača s epskim čarapama za igrače, nejasnoća vjerojatno najvažnijeg sustava igre služi samo tome da pojača zbrku i frustraciju kako novih tako i veterana, na svakodnevnoj bazi.";
-"ballistics_body_2" = "Počevši od tjelesnog oklopa, kako to djeluje i što biste trebali znati? Izvan dostupnosti i cijene pet je stvari koje biste trebali uzeti u obzir pri odabiru oklopa koji ćete kupiti, prodati, popraviti, opremiti ili baciti - klasa, trajnost, zone zaštite, materijal i kazne.";
-"ballistics_body_2_1_title" = "1. Klasa oklopa";
-"ballistics_body_2_1" = "Svaka oklopna komponenta, od karoserije do balističkih dodataka kaciga, ima određenu klasu oklopa. Klasa oklopa je, po mom mišljenju, najvažniji aspekt zaštitnog oklopa tijela. Jednostavno rečeno, klasa oklopa predstavlja koliko je oklop učinkovit u zaustavljanju projektila s različitim razinama balističke učinkovitosti. Trenutačno se klase oklopa kreću u rasponu od 1 do 6, a kao što ste mogli pretpostaviti, što je veći broj to je bolje. \ N \ nOklop oklop 1 može vas zaštititi od stvari poput odbijanja metaka, šrapnela i pištolja koji prodire kroz oklop -kalibri ili grickalice. Oklop okruga 6 može vas zaštititi od većine projektila do čak i uključivanja krugova najvećeg kalibra u igru. Namjerno sam odabrao riječ \"sposoban\", jer svaki balistički utjecaj uključuje različite stupnjeve slučajnih prilika. \ N \ nKada je u Escape from Tarkovu u pitanju balistika, ništa nije zajamčeno, a stvari koje doživljavamo ponekad izgledaju nemoguće ili nemaju smisla. Dakle, što to u konačnici znači? Koji će me oklop zaštititi od kakvih projektila? To je složeno pitanje o kojem ću detaljnije govoriti kasnije kada raspravljam o specifičnostima balističkog utjecaja.";
-"ballistics_body_2_2_title" = "2. Trajnost";
-"ballistics_body_2_2_1" = "Kad je u pitanju izdržljivost oklopa, važno je napomenuti da su se specifičnosti više puta mijenjale i, naravno, podložne su promjeni od strane BSG-a u bilo kojem trenutku u budućnosti. Valja napomenuti o trajnosti oklopa da njegova sposobnost zaštite nositelja ovisi o njegovoj trenutnoj vrijednosti trajnosti u odnosu na izvornu, maksimalnu vrijednost trajnosti kada je bila nova.";
-"ballistics_body_2_2_2" = "Na primjer, ako set oklopa počinje s 50 izdržljivosti, pruža najbolju zaštitu kada iznosi 50/50, što je prilično očito. Manje očit dio je da je svaki oklop koji je oštećen i još nije popravljen, poput oklopa 40/50, jednako je učinkovit u zaštiti vas kao isti oklop ako je oštećen i zatim popravljen, a trenutno je 40 / 40.";
-"ballistics_body_2_2_3" = "Poznavanje izvorne maksimalne vrijednosti izdržljivosti za različite setove oklopa ili gledanje trake izdržljivosti prilikom pregleda predmeta je važna navika da se upadnete u njega. Često puta oklop nađete niže klase od vašeg trenutni set oklopa, ali ako je vaš trenutni oklop jako oštećen ili je popravljen više puta, možda povećavate svoje šanse za oklop koji će vam spasiti život ako pređete na oklop niže klase s većim postotkom trenutne izdržljivosti Imajući dobro razumijevanje općih šansi za zaštitu za različite klase oklopa, vrijednosti izdržljivosti i svojstva prodiranja metaka, u nekim je borbenim situacijama zapravo neprocjenjivo znanje.";
-"ballistics_body_2_3_title" = "3. Zone zaštite";
-"ballistics_body_2_3" = "Ne moram detaljno govoriti o ovoj temi, osim što morate zapamtiti jedno jednostavno pravilo: Oklop ne štiti ono što vizualno izgleda da štiti! Najbolji primjer da se to pokaže je gledanje oklopa Gen4 s punom zaštitom naspram Gen4 napada. Verzija pune zaštite izgleda kao da pokriva više vašeg tijela, ali štiti vaše dijelove tijela potpuno isto kao i pribor za napad, jer ima iste zone zaštite. Obratite pažnju na to što su zaštićene zone - izvlačenje ruku ili želuca može biti neugodno i često vrijedi dodatnu zaštitu, ako si to možete priuštiti!";
+"ballistics_title" = "Oklop i municija: Osnove";
+"ballistics_body_1" = "Sistem balistike u Escape from Tarkov je crna kutija čiju su unutrašnjost samo nekoliko ljudi vidjeli. Zbog visoke složenosti formula koje se koriste za kalkulacije stvari kao što su penetracije površina, uglova odskocka metka, oštećenja oklopu i tijelu igrača, kao i random elemente koje prave, često postoji neprimjetna razlika kada se usporedi vrijeme ubojstva potpuno opremljenog igrača, koji nosi najbolju opremu u igrici i igrača prvog nivoa, koji ne nosi ništa više nego početnički pištolj. Zajedno sa poznatim problemima vezanim za networking i performansom, bugovima i sve više rastućim brojem igrača sa epskim gejmer čarapama, anonimnost ovog najvažnijeg sistema igrice jedino služi da poveća konfuziju i frustracije koje i novi, i veteranski igrači igrice osećaju na dnevnoj bazi.";
+"ballistics_body_2" = "Počeći od oklopa, kako funkcionira i šta bi trebali znati? Izvan dostupnosti i cijene, postoji 5 važnih stavki koje biste trebali uzeti u obzir prilikom biranja koji oklop da kupite, prodate, popravite, obučete, ili bacite - klasa, durabilnost, zone zaštite, materijal, i penale.";
+"ballistics_body_2_1_title" = "1. Oklopna klasa";
+"ballistics_body_2_1" = "Svaki oklopni komponent, od tjelesnog oklopa do dodataka balističnih šlemova, ima specifičnu oklopnu klasu. Oklopna klasa je, po mom mišljenju, najvažniji aspekt zaštitnog oklopa. Jednostavno rečeno, oklopna klasa predstavlja efektivnost oklopa u stopiranju projektila sa raznim nivoima balistične efektivnosti. Trenutno, oklopne klase rangiraju od 1 do 6, i kako ste mogli pogoditi, što je veći broj to bolje.\n\nOklop prve klase je sposoban da štiti protiv stvari kao što su odbijeni meci, fragmenti i neprobojnih pištoljskih kalibara ili krupne sačme. Oklop šeste klase je sposoban da štiti od većine projektila sve do pa čak i uključujući metke najvećeg kalibra u igrici. Izabrao sam rijec 'sposoban' ovdje namjerno, jer svaki balistički udarac zavisi i od variranih stupnjeva randomizovane šanse.\n\nKad dolazi do balistike u Escape from Tarkov, ništa nije garantirano i one stvari koje iskusimo ponekad izgledaju nemoguće ili nemaju smisla. Pa, što to znači na kraju krajeva? Koji oklop će me štititi od kojih projektila? To je komplicirano pitanje u koje ću detaljnije ući kad budem pričao o specifičnostima vezanim za balistički udarac.";
+"ballistics_body_2_2_title" = "2. Durabilnost";
+"ballistics_body_2_2_1" = "Kad se radi o durabilnosti oklopa, važno je istaći da su njene specifičnosti menjane više puta i da su, naravno, podložne da ih BSG promene bilo kad u buduće. Stvar vredna pažnje što se tiče durabilnosti oklopa jeste da njena sposobnost da štiti nositelja zavisi na trenutnu vrednost durabilnosti upoređenom sa originalnom, maksimalnom vrednošću oklopa kad je bio nov.";
+"ballistics_body_2_2_2" = "Na primer, ako novi oklop počinje sa 50 durabilnosti, daje najbolju zaštitu kada je 50/50, što je prilično očigledno. Manje očigledno je to da bilo koji oklop koji je oštećen, a nije popravljen, kao što je oklop durabilnosti 40/50, ima identičnu efektivnost kao isti oklop koji je bio oštećen pa onda popravljen i trenutno je 40/40.";
+"ballistics_body_2_2_3" = "Znanje originalne durabilnosti za različite oklope, ili gledanje table za durabilnost prilikom inspekcije oklopa, je važna navika u kojoj se treba ući. Često ćete naći oklop sa manjom klasom nego vaš trenutni oklop, ali ako je vaš trenutni oklop puno oštećen ili je popravljen mnogo puta, možda biste u stvari povećavali svoje šanse preživljavanja ako pređete na oklop manje klase, a veći trenutni procenat durabilnosti. Imati solidno razumevanje generalnih zaštitnih mogućnosti oklopa različitih klasa, vrijednosti durabilnosti, i atributa penetracije može biti od nevjerovatne pomoći u pojedinim situacijama. Pogledajte Kalkulator oštećenja da počnete dobijati osećaj za kako sve funkcioniše.";
+"ballistics_body_2_3_title" = "3. Zaštitne zone";
+"ballistics_body_2_3" = "Ovde nema puno detalja u koje trebam da ulazim što se tiče ove teme, jedino što treba trebate zapamtiti jedno jednostavno pravilo: Oklop ne štiti ono što vizuelno izgleda da štiti! Najbolji primer koji ovo demonstrira jeste razlika između Gen4 oklopa potpune zaštite i Gen4 Napadnog oklopa. Verzija potpune zaštite izgleda kao da pokriva više delova tela, međutim ono pokriva potpuno iste delove tela kao i Napadni oklop jer ima iste zaštitne zone. Obraćajte pažnju koje zone su zaštićene - ako vam pocrne ruke ili stomak, možete se naći u veoma lošu situaciju i često se isplati koristiti bolju zaštitu, ako je možete priuštiti!.";
 "ballistics_body_2_4_title" = "4. Materijali";
-"ballistics_body_2_4" = "Svaki oklop ima različite materijale od kojih je izrađen. Trenutno materijali nemaju značajan utjecaj na sposobnost zaštite oklopa, umjesto toga, materijal oklopa postaje važan prilikom popravka. Neke materijale je moguće popraviti vrlo učinkovito i jeftino, dok drugi uzimaju značajne gubitke njihove trajnosti prilikom popravka i često mogu koštati više od originalnih troškova oklopa!";
-"ballistics_body_2_5_title" = "5. Kazne";
-"ballistics_body_2_5" = "Općenito govoreći, dodatna zaštita dolazi uz cijenu, a troškovi mogu biti financijski i praktični. Svaki komad oklopa dolazi s nizom kazne. Neki usporavaju vaše kretanje, neki usporavaju vašu brzinu skretanja, pa čak i vašu ukupnu ergonomiju, što utječe na brzinu kojom ciljate prema dolje, na stopu gubitka izdržljivosti, pa čak i na to kako je glas glasan kad se polako krećete ili ciljate. Neke zaštite glave mogu vam na više načina ograničiti sluh, pa čak i zasjenjeti vaš vid. Ovo su kompromisi koje bi trebali uzeti u obzir pri odlučivanju želite li ili ne za skuplje oklope ili onu plemenitu Killa kacigu. Koji oklop i kaciga vrijede? To morate odlučiti!";
-"ballistics_body_3_title" = "Sažetak";
-"ballistics_body_3" = "Balistički sustav u Escape from Tarkov nevjerojatno je složen i zahtijeva prilično malo iskustva i znanja da biste mogli koristiti u svoju korist. Gornji videozapis o oklopu i balistici objašnjava neke od tih pojmova detaljnije, stoga svakako provjerite jeste li zanimljivi ako slušate više o ovoj temi. Budite sigurni tamo vani!";
+"ballistics_body_2_4" = "Svaki oklop ima različite materijale od kojih je konstruisan. Trenutno, materijali nemaju nikakav poseban uticaj na zaštitnu sposobnost oklopa, već postaju važni kada se radi o popravki oklopa. Neki materijali se mogu veoma efikasno i jeftino popraviti, dok drugi primaju značajne gubitke njihovoj durabilnosti prilikom popravljanja i često koštaju više popraviti nego originalna cijena oklopa!";
+"ballistics_body_2_5_title" = "5. Penali";
+"ballistics_body_2_5" = "Generalno, dodatna zaštita ima svoju cenu, i ova cena može biti i finansijska, a i praktična. Svaki oklop ima sopstveni set penala. Neki usporavaju kretanje, neki usporovaju brzinu okretanja, pa čak i vašu ukupnu ergonomiju, koja ima uticaj na brzinu kojom nišanite, brzinu kojom guvite izdržljivost, pa čak i koliko zvuka pravi vaš lik dok se kreće ili nišani. Pojedini šlemovi vam mogu ograničiti sluh na više načina, i isto tako zamračiti vid. Ovo su kompromisi koje trebate uzeti u obzir kad odlučujete da li da koristite skuplje oklope ili onaj jaki Kila šlem. Koji oklop i šlemovi se isplate? To je za vas da odlučite!";
+"ballistics_body_3_title" = "Zaključak";
+"ballistics_body_3" = "Sistem balistike u Pobjegu iz Tarkova je nevjerovatno kompleksan i potrebno je dosta iskustva i znanja da biste mogli da ga koristite u svoju prednost. Video za oklop i balistiku iznad objašnjava ove koncepte u većem detalju, tako da je preporučeno da ga pogledate ako ste zainteresovani da čujete još o ovoj temi. Pazite se!";
 
 "health_title" = "Zdravlje i status vašeg PMC-a";
-"health_body_1" = "Te će informacije uskoro stići™";
+"health_body_1" = "Ove informacije će doći uskoro™";
 
-"upcoming_body_1" = "Toliko je fantastičnih značajki planirano za ovu aplikaciju da mogu čekati da izgradim za zajednicu! Interaktivne karte, moduliranje oružja, vodiči potrage, više predmeta i kalkulatora, informacije o trgovcima, raščlanjivanje vještina i još mnogo toga! Planiram stalno objavljivati ​​značajke, ali htio sam što prije isporučiti verziju 1.0 vama dečkima kako biste započeli mjeriti interes i prikupljati povratne informacije. Uskoro potražite ažuriranja!";
+"upcoming_body_1" = "Imam toliko puno super dodataka planiranih za aplikaciju i ne mogu čekati da je izgradim za ovu zajednicu! Interaktivne mape, sastavljanje oružja, pomoć za misije, više stavki i kalkulatora, informacije o prodavcima, informacije o veštinama, i još! Planiram da izbacujem nove verzije redovno, ali sam htio da izbacim 1.0 vama što prije da počnem posmatrati interest i primati recenzije. Gradnja Android aplikacije je već počelo, dođite opet za novosti uskoro!";
 
-"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_api" = "Morphy2k i Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
 "attributions_willerz" = "Willer_Z";
-"attributions_community" = "Community";
+"attributions_community" = "Zajednica";
 "attributions_bsg" = "Battlestate Games Limited";
-"attributions_misc" = "Miscellaneous Legal Stuff";
-"attributions_translations" = "Localization";
+"attributions_misc" = "Razne legalne stvari";
+"attributions_translations" = "Lokalizacija";
 
-"attributions_api_descr" = "Ovaj projekt ne bi bio moguć bez fantastičnog razvojnog posla koji je učinio Morphy na bazi podataka Tarkov i na API-ju.";
-"attributions_nofam_descr" = "Neopjevani junak u EFT zajednici, tvorac karte streljiva i suradnik na balističkim kalkulatorima i povezanim podacima, veleposlanik za municiju, barun baliste, profesor prodora!";
-"attributions_willerz_descr" = "Mnogo ljubavi prema mom dobrom prijatelju zbog pružanja nekih epskih snimaka ekrana dao mi je dopuštenje za upotrebu u ovoj aplikaciji. Također se događa da je jedan od najboljih igrača na svijetu.";
-"attributions_community_descr" = "Mnogo ljubavi prema mojoj zajednici u Diskordu za sav naporan rad snimanja i uređivanja prelijepih fotografija korištenih u ovoj aplikaciji!";
-"attributions_translations_descr" = "Sve su prijevode učinili članovi zajednice donirajući svoje vrijeme i trud za taj posao. Svi širom svijeta cijene vaš naporan rad!";
-"attributions_bsg_descr" = "Posebna zahvala Nikiti na podršci ovoj aplikaciji, kao i svim ljudima iz BSG-a na njihovom napornom radu i zalaganju u izgradnji najboljeg prvog lica strijelca svih vremena.";
-"attributions_misc_descr" = "Ikone društvenih medija Abhisheka Pipalva (https://www.iconfinder.com/abhishekpipalva) licencirane pod CC. Ikona 'Brain' Sergeja Patutina iz projekta Noun (https://thenounproject.com/bdesign.by/) licencirani pod CC.";
+"attributions_api_descr" = "Ovaj projekat ne bi bio moguć bez fantastičnog rada od strane Morphy-a na Tarkov Database i na temeljni API.";
+"attributions_nofam_descr" = "Neopevani heroj u EFT zajednici, autor tabela municije, i saradnik kod kalkulatora balistike i vezane informacije, Ambasador Municije, Baron Balistike, Profesor Penetracije!";
+"attributions_willerz_descr" = "Mnogo ljubavi mom prijatelju za skrinšotove epskog kvaliteta za koje mi je dao dozvolu da koristim u ovoj aplikaciji. On je takođe jedan od najboljih igrača na svijetu.";
+"attributions_community_descr" = "Mnogo ljubavi mojoj zajednici na Discord-u za sav trud na slikanje i montiranje prelepih slika korišćenih u ovoj aplikaciji!";
+"attributions_translations_descr" = "Sve prevode su napravili članovi zajednice koji su poklonili svoje vreme i trud. Svi oko sveta su zahvalni za vaš veliki rad! (Hvala, V. :D)";
+"attributions_bsg_descr" = "Posebna hvala Nikiti za njegovu podršku aplikacije, i svima u BSG za njihov trud i upornost u pravljenju najbolje pucačine u prvom licu ikada.";
+"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC.";
 
 // Analytics
-"total_users_count" = "%@ Bojni prijatelji su se pridruzili bitci!";
+"total_users_count" = "%@ Betl Badijeva je ušlo u borbu!";
 
 // ----------------------------------------
 // V1.0.1
-"global_stats" = "Statistike Zajednice";
-"settings" = "Postavke";
-"language_system_default" = "Sustav";
+"global_stats" = "Društvene statistike";
+"settings" = "Podešavanja";
+"language_system_default" = "Sistem";
 "language" = "Jezik";
 
 // ----------------------------------------
 // V1.1.0
 
 // MARK:- Common
-"firearm" = "Firearm";
-"common_none" = "None";
-"common_refine" = "Refine";
+"firearm" = "Vatreno oružje";
+"common_none" = "Ništa";
+"common_refine" = "Usavrši";
 
 // MARK:- More
-"days_since_wipe" = "%@ days since last wipe...";
-"bud_leaderboard" = "Bud Leaderboard";
-"total_ads_watched" = "%@ ads watched by the community!";
-"app_version" = "App Version";
-"your_bud_score" = "Your Bud Score";
-"bud_reward" = "Redeem Reward";
-"bud_reward_title" = "Reward Redeemed";
-"bud_reward_message" = "Thanks for being a bud!";
+"days_since_wipe" = "%@ dana prošlo od zadnjeg wipe-a...";
+"bud_leaderboard" = "Bud bodovna tabla";
+"total_ads_watched" = "%@ reklama je pogledala zajednica!";
+"app_version" = "Verzija aplikacije";
+"your_bud_score" = "Vaši bud bodovi";
+"bud_reward" = "Ispuni nagradu";
+"bud_reward_title" = "Nagrada ispunjena";
+"bud_reward_message" = "Hvala ti što si postao bud!";
 
 // Being A Bud
 "bud_points" = "Bud Points©";
-"bud_how_to_title" = "How To Be A Bud";
-"bud_how_to_subtitle" = "I developed Battle Buddy in my free time to benefit the Escape from Tarkov community. I don't charge for the app, and it does not come with ads on by default, so anyone can use it free of charge without the constant annoyance of pop-ups. All development and support expenses related to server traffic, storage, and maintenance are incurred by me personally, so any and all support is always hugely appreciated! All of you reading this right now are my Battle Buddies.\n\nAs a small token of my appreciation for being a part of the Battle Buddy experience, there are various ways you can earn Bud Points© to show off how big of a bud you are! I have tons of ideas for how these points could be used in the future, but for now they are merely a badge of honor to prove your support for the Battle Buddy community! What's that you ask? How do you earn Bud Points©? Great question! Here's a few ways...";
+"bud_how_to_title" = "Kako postati bud";
+"bud_how_to_subtitle" = "Napravio sam Betl Badi u svoje slobodno vreme da pomognem zajednici Escape from Tarkov-a. Ne naplaćujem za ovu aplikaciju, i ona ne dolazi sa reklamama uključenim po defaultu, tako da je bilo ko može koristiti bez plaćanja i bez konstantne smetnje pop-apova. Svi troškovi vezani za saobraćaj servera, skladištenje, i popravki sam ja lično otplatio, pa bilo kakva podrška je uvijek puno cenjena! Svi koji trenutno ovo čitate ste moji Betl Badijevi. \n\nKao mali znak moje zahvalnosti što ste dio Betl Badi iskustva, ima različitih načina na koje možete zaraditi Bud Points© da pokažete koliko ste veliki Bad! Imam puno ideja kako bi se ovi poeni mogli koristiti ubuduće, ali za sad su časne medalje da se dokaže vaša podrška Betl Badi zajednici! Pitate se šta su Bud Points©? Kako ih zaraditi? Dobro pitanje! Evo nekoliko načina...";
 
-"bud_how_to_title_1" = "Come Back Often";
-"bud_how_to_body_1" = "At random intervals while using the app, you'll have the ability to collect a random Bud Points© reward. My buds are always rewarded for their loyalty and consistency! Any time the option to \"Receive Reward\" is available in the More menu, tap it for some free Bud Points© and be sure to check the leaderboard to see if you're my best bud!";
+"bud_how_to_title_1" = "Vraćaj se često";
+"bud_how_to_body_1" = "Po raznim intervalima ćeš moći da sakupiš randomizovanu Bud Points© nagradu. Moji badovi su uvek nagrađeni za njihovu lojalnost i redovnost! Bilo kada opcija \"Sakupi nagradu\" je dostupna u 'Više' stavki, pritisnite je za neke besplatne Bud Points© i provjerite bodovnu tabelu da vidite da li ste moj najbolji bad!";
 
-"bud_how_to_title_2" = "Watch Ads";
-"bud_how_to_body_2" = "Another way to be a bud and earn Bud Points© is by watching video ads. On the main More menu, there's the option to \"Watch an Ad\". If an ad is available from one of our content providers, you will be able to watch a short advertisement and will be rewarded with Bud points showcasing how much of a bud you are. After watching an ad, another will be available after some time, so if you want to be a huge bud, be patient!";
+"bud_how_to_title_2" = "Gledaj reklame";
+"bud_how_to_body_2" = "Drugi način da postanete bad i zaradite Bud Points© jeste gledanje video reklama. Na glavnoj 'Više' stavki, postoji opcija \"Gledaj reklamu\". Ako je reklama dostupna od jednog od naših provajdera, moćete da gledate kratku reklamu i bićete nagrađeni Bud Points© koje pokazuju koliki ste bad. Posle gledanja reklame, nova će biti dostupna posle nekog vremena, pa ako želiš biti veliki bad, budi strpljiv!";
 
-"bud_how_to_title_3" = "Enable Banner Ads";
-"bud_how_to_body_3" = "Enabling banner ads is another amazing way to be a bud! You can enable banner ads from the Settings screen! Don't try to be cheeky though bud, if you disable banner ads the points you earned will be lost until you re-enable them.";
+"bud_how_to_title_3" = "Uključi reklame";
+"bud_how_to_body_3" = "Uključivanje reklama je još jedan super način da postaneš bad! Možeš ih uključiti u 'Postavkama'! Nemoj pokušati biti lukav, ako isključiš reklame izgubit ces bodove koje si zaradio dok ih ne uključiš ponovo.";
 
-"bud_how_to_title_4" = "More Ways To Be A Bud";
-"bud_how_to_body_4" = "As more features are introduced into Battle Buddy more ways to earn and use your Bud Points© will emerge! Stay tuned buds!";
+"bud_how_to_title_4" = "Više načina biti bad";
+"bud_how_to_body_4" = "Kako se Battle Buddy razvija, bit će još načina da zaradite i koristite vaše Bud Points©! Budite spremni, budovi!";
 
 // MARK:- Settings
-"profile" = "Profile";
-"nickname" = "Nickname";
-"nickname_placeholder" = "Nickname";
-"nickname_anon" = "Anonymous";
-"app_settings" = "App Settings";
-"settings_save_error" = "Unable to save your settings, please try again later.";
+"profile" = "Profil";
+"nickname" = "Nadimak";
+"nickname_placeholder" = "Nadimak";
+"nickname_anon" = "Anonimno";
+"app_settings" = "Postavke";
+"settings_save_error" = "Neuspješno spremanje postavki, molimo vas pokušajte kasnije.";
 
 // MARK:- Menu Items
-"main_menu_helmets" = "Helmets";
-"main_menu_mods" = "Modifications";
-"main_menu_combat_sim" = "Combat Simulator";
-"main_menu_characters" = "Characters";
-"main_menu_visors" = "Visors";
+"main_menu_helmets" = "Kacige";
+"main_menu_mods" = "Modifikacije";
+"main_menu_combat_sim" = "Simulator borbe";
+"main_menu_characters" = "Karakteri";
+"main_menu_visors" = "Viziri";
 
 // MARK:- Attributions
 "attributions_smoooth" = "SmooothBrain";
-"attributions_smoooth_descr" = "Props to this man for his design work across every platform I'm active on, from branding to thumbails, album covers and 3D animations - this man is a legend!";
+"attributions_smoooth_descr" = "Mnogo hvala ovom čovjeku za njegov dizajnerski rad na svakoj platformi na kojoj sam aktivan, od žigosanja do naslovnih slika, slika za albume i 3D animacija - ovaj lik je legenda!";
 "attributions_betrix" = "Betrix";
-"attributions_betrix_descr" = "Many of the beautiful menu images and in-game item screenshots were created by Betrix!";
+"attributions_betrix_descr" = "Veliki dio prelepih meni slika i skrinšotova iz igrice je napravio Betrix!";
 
 // MARK:- Helmets / Accessories
-"hearing_penalty" = "Hearing";
-"hearing_penalty_high" = "High";
-"hearing_penalty_low" = "Low";
-"hearing_penalty_none" = "None";
-"hearing_penalty_full" = "Hearing Penalty";
-"speed_penalty_full" = "Speed Penalty";
-"turn_speed_penalty_full" = "Turn Speed Penalty";
-"ergo_penalty_full" = "Ergonomics Penalty";
-"armor_type" = "Type";
+"hearing_penalty" = "Sluh";
+"hearing_penalty_high" = "Veliki";
+"hearing_penalty_low" = "Mali";
+"hearing_penalty_none" = "Nema";
+"hearing_penalty_full" = "Penal sluhu";
+"speed_penalty_full" = "Penal brzini";
+"turn_speed_penalty_full" = "Penal brzini okretanja";
+"ergo_penalty_full" = "Penal ergonomiji";
+"armor_type" = "Tip";
 
 // MARK:- Mods
-"modification" = "Modification";
-"modificationBarrel" = "Barrel";
-"modificationBipod"  = "Bipod";
-"modificationCharge" = "Charging Handle";
-"modificationDevice" = "Device";
-"modificationForegrip" = "Foregrip";
-"modificationGasblock" = "Gas Block";
-"modificationGoggles" = "Goggles";
-"modificationHandguard" = "Handguard";
-"modificationLauncher" = "Launcher";
-"modificationMount" = "Mount";
-"modificationMuzzle" = "Muzzle";
-"modificationPistolgrip" = "Pistol Grip";
-"modificationReceiver" = "Receiver";
-"modificationSight" = "Sight";
-"modificationSightSpecial" = "Sight (Special)";
-"modificationStock" = "Stock";
+"modification" = "Modifikacija";
+"modificationBarrel" = "Cijev";
+"modificationBipod"  = "Dvonožac";
+"modificationCharge" = "Ručka zatvarača";
+"modificationDevice" = "Uređaj";
+"modificationForegrip" = "Hvataljka";
+"modificationGasblock" = "Gasni blok";
+"modificationGoggles" = "Okulari";
+"modificationHandguard" = "Rukohvat";
+"modificationLauncher" = "Bacač";
+"modificationMount" = "Montaža";
+"modificationMuzzle" = "Otvor";
+"modificationPistolgrip" = "Drška";
+"modificationReceiver" = "Prihvatnik";
+"modificationSight" = "Nišan";
+"modificationSightSpecial" = "Nišan (Specijalni)";
+"modificationStock" = "Kundak";
 
 // MARK:- Sound Training
-"sound_training" = "Sound Training Beta";
-"sound_training_start" = "Start Training";
-"sound_training_commit" = "Guess";
-"sound_training_result_correct" = "Correct!";
-"sound_training_result_wrong" = "Keep Trying!";
+"sound_training" = "Treniranje zvuka beta";
+"sound_training_start" = "Započni trening";
+"sound_training_commit" = "Pogodi";
+"sound_training_result_correct" = "Tačno!";
+"sound_training_result_wrong" = "Još pokušaj!";
 
-"sound_localization_info_title" = "Learn How To Localize Sound";
-"sound_localization_info_note_1" = "The sound training tool is currently in beta! Headphones are required!";
-"sound_localization_info_body_1" = "Escape from Tarkov currently utilizes your standard stereo sound, which is more than adequate enough for sound localization in most cases. At this point in time, no 5.1 or 7.1 surround sound options are supported, and as such I would HIGHLY recommend against using any virtual audio settings in your headphone software or windows audio settings.\n\nThere's no doubt there are people that swear by these more advanced settings, but they simply are not required, will not give you any more information about distance, location, etc., because they don't have any more information from the game or the engine itself! The game outputs stereo audio - a Left channel and a Right channel, nothing more complex than that. In my experience, enabling these more advanced settings makes sound localization harder, not easier. If you have these settings on and have issues with localizing sound in Tarkov or any other first-person shooter, try turning them off and see if that makes a difference, you might be surprised!";
-"sound_localization_info_subtitle_2" = "How To Play";
-"sound_localization_info_body_2" = "The goal of this mini-game is to locate the direction of sound around your on-screen character. When you begin, and a tone will play at a regular interval, panned to a random direction somewhere around your character on screen in a 360-degree radius.\n\nSwipe left and right on screen to turn your character, just like you would with a trackpad or a mouse. As your character's left or right ears get closer or further away from the source of the sound, the volume will change in each ear accordingly.\n\nWhen the tone is equally loud in both your left and right ears, your character is likely facing towards the sound. Once you think you're done, confirm your choice by pressing the button to see if you're correct!";
-"sound_localization_info_subtitle_3" = "Front and Back Sound The Same?!";
-"sound_localization_info_body_3" = "You may have noticed that sounds that are directly in front of you sound indistinguishable from sounds that are directly behind you. In both cases, the volume of the left and right channels are equal. Ignoring things like context clues based on map knowledge and materials in the environment, all of which are extremely useful in determining the location of sounds occurring around you, the only way to differentiate between sounds in front and behind is by turning your character's head relative to the sound, and paying attention to the direction the sound appears to move when you do. Take a look at this image example below:";
-"sound_localization_info_body_4" = "When you turn your character left or right, or even better turn just your character's silently head using free-look, you should be able to hear the volume of the sound increase or decrease in each ear. If you turn your head to the right and the sound is in front of you, your left ear will be closer to the sound and your right ear will be further from it, so the volume will be louder in your left ear compared to your right. Conversely, if the sound was actually behind you, when you turn right it will get louder in your right ear and softer in your left. Try using the direction that the sound moves when you turn your head as an indication of the location of the sound. The way it works in this tool is exactly like it works in Escape from Tarkov, and most other first-person shooters!";
+"sound_localization_info_title" = "Nauči locirati zvukove";
+"sound_localization_info_note_1" = "Alatka za treniranje zvuka je trenutno u beti! Slušalice su neophodne!";
+"sound_localization_info_body_1" = "Pobeg iz Tarkova trenutno koristi tvoj standardni stereo zvuk, koji je više nego dovoljno adekvatan za lociranje zvukova u većini slučajeva. Trenutno, ne postoji podrška za bilo kakav 5.1 ili 7.1 okružujući zvuk, i zbog toga bih JAKO preporučio da ne koristite ikakva virtuelna audio podešavanja u vašem Windows softveru ili softveru vaših slušalica. \n\nNema sumnje da postoje ljudi koji stvarno vjeruju u ovim više naprednim podešavanjima, ali ona jednostavno nisu potrebna, neće vam dati više informacija o daljini, lokaciji, itd., jer uopšte ne dobijaju više informacija od igrice ili samog endžina igrice! Igrica izbacuje stereo zvuk - levi kanal i desni kanal, ništa složenije od toga. U mom iskustvu, uključivanje ovih naprednih podešavanja čini lokalizaciju zvuka težom, ne lakšom. Ako su vam ova podešavanja uključena i imate problema kod lociranja zvuka u Pobegu iz Tarkova ili u bilo kojoj drugoj pucačini prvog lica, probajte ih isključiti i vidite ako ima razlike, bili biste iznenađeni!";
+"sound_localization_info_subtitle_2" = "Kako igrati";
+"sound_localization_info_body_2" = "Cilj ove mini-igre jeste da locirate pravac zvuka oko vašeg lika na ekranu. Kada započnete, čućete ton po regularnim intervalima, usmeren u nekom pravcu oko vašeg lika u radijusu od 360 stepeni.\n\nPovucite levo ili desno na ekran da okrenete lika, isto kao kako biste sa trekpedom ili mišem. Kako se levo ili desno uho vašeg lika približe ili udalje od izvora zvuka, glasnoća će se menjati prema tome.\n\nKada je ton jednako glasan u oba uha, vaš lik je najverovatnije usmeren prema izvoru. Kada smatrate da ste locirali izvor, potvrdite vašu odluku tako što pritisnete dugme da vidite da li ste tačno pogodili!";
+"sound_localization_info_subtitle_3" = "Napred i nazad zvuče isto?!";
+"sound_localization_info_body_3" = "Možda ste primetili da zvuci koji su direktno ispred lika zvuče identični zvukovima koji su direktno iza. U oba slučaja, glasnoća levog i desnog kanala je jednaka. Kad ignorišemo stvari kao što su kontekstni znaci koji su bazirani na znanje mape i materijala u okolini, jedini način da se razlikuju zvukovi koji su ispred i oni koji su iza jeste da okrećete glavu vašeg lika relativno zvukovima, i obraćati pažnju na smer u kojem se zvuk pomera zajedno s vašim karakterom. Pogledajte ovaj primer ispod:";
+"sound_localization_info_body_4" = "Kada okrenete lika levo ili desno, ili još bolje samo tiho okrenete glavu lika koristeći slobodni pogled, trebali biste da čujete kako se glasnoća zvukova smanjuje ili povećava u oba uha. Ako okrenete glavu desno dok je izvor zvuka ispred, vaše levo uho će biti bliže zvuku nego desno, pa će i time glasnoća biti veća u levom nego u desnom uhu. Suprotno, ako bi izvor zvuka bio iza vas, kada se okrenete desno biće glasnije u desnom nego u levom uhu. Pokušaj koristiti smer u kome se zvuk pomera kada okrećeš glavu kao indikator lokacije zvuka. Način na koji funkcioniše u ovoj alatki je isti kao u Pobegu iz Tarkova, i većini ostalih pucačina u prvom licu!";
 
-"simulate_gunshot_pen" = "Shoot\nw/ Penetration";
-"simulate_gunshot_no_pen" = "Shoot\n(No Penetration)";
+"simulate_gunshot_pen" = "Pucaj\nsa penetracijom";
+"simulate_gunshot_no_pen" = "Pucaj\n(bez penetracije)";
 
 // MARK:- Combat Sim
-"combat_sim_subject_type" = "Character Type";
-"combat_sim_aim_setting" = "Aim Setting";
-"combat_sim_edit_subject" = "Edit Test Subject";
-"combat_sim_run" = "Run";
-"combat_sim_results" = "Simulation Results";
-"combat_sim_results_iterations" = "Iterations";
-"combat_sim_results_winner" = "Winner";
-"combat_sim_results_loser" = "Loser";
-"combat_sim_results_tie" = "Tie";
-"combat_sim_results_win_percent" = "Win Percent";
-"combat_sim_settings" = "Simulation Settings";
-"combat_sim_tap_to_edit" = "Tap Image To Edit Test Subject";
-"combat_sim_edit_firearm" = "Edit Firearm";
-"combat_sim_head_armor" = "Head Armor";
+"combat_sim_subject_type" = "Tip karaktera";
+"combat_sim_aim_setting" = "Podešavanje ciljanja";
+"combat_sim_edit_subject" = "Edituj test subjekta";
+"combat_sim_run" = "Pokreni";
+"combat_sim_results" = "Rezultati simulacije";
+"combat_sim_results_iterations" = "Iteracije";
+"combat_sim_results_winner" = "Pobednik";
+"combat_sim_results_loser" = "Gubitnik";
+"combat_sim_results_tie" = "Neriješeno";
+"combat_sim_results_win_percent" = "Procenat pobede";
+"combat_sim_settings" = "Podešavanja simulacije";
+"combat_sim_tap_to_edit" = "Pritisni sliku da edituješ test subjekta";
+"combat_sim_edit_firearm" = "Edituj oružje";
+"combat_sim_head_armor" = "Zaštita glave";
 
-"combat_sim_pen_setting" = "Penetration Setting";
-"combat_sim_pen_setting_realistic_desc" = "Bullets have the same chance to penetrate armor as they do in-game.";
-"combat_sim_pen_setting_always_desc" = "Bullets will always penetrate armor as long as there is a non-zero chance. For example, a 1% penetration chance will always penetrate, but a 0% penetration chance will not.";
-"combat_sim_pen_setting_never_desc" = "Bullets will not penetrate any armor unless the armor is at 0% durabilty, at which time the chance becomes 100%";
+"combat_sim_pen_setting" = "Podešavanje penetracije";
+"combat_sim_pen_setting_realistic_desc" = "Meci imaju istu šansu da probiju kroz oklop kao i u igrici.";
+"combat_sim_pen_setting_always_desc" = "Meci će uvek probiti kroz oklop sve dok ima šansa penetracije koja nije nula. Na primer, 1% šanse penetracije će uvek probiti, ali 0% šanse neće.";
+"combat_sim_pen_setting_never_desc" = "Meci neće probiti kroz bilo kakav oklop osim ako je taj oklop na 0% durabilnosti, a tada šansa penetracije postane 100%.";
 
-"combat_sim_frag_setting" = "Fragmentation Setting";
-"combat_sim_frag_setting_realistic_desc" = "Bullets have the same chance to fragment as they do in-game.";
-"combat_sim_frag_setting_always_desc" = "Bullets will always fragment as long as their effective fragmentation chance is non-zero. As of writing this, low-penetration ammo, such as RIP slugs, cannot currently fragment in the game despite it's 100% advertised fragmentation chance.";
-"combat_sim_frag_setting_never_desc" = "Bullets will never fragment.";
+"combat_sim_frag_setting" = "Podešavanje fragmentacije";
+"combat_sim_frag_setting_realistic_desc" = "Meci imaju istu šansu fragmentacije kao i u igrici.";
+"combat_sim_frag_setting_always_desc" = "Meci će uvek fragmentisati ukoliko njihova efektivna fragmentacija nije jednaka nuli. U vreme pisanja, municija niske penetracije, kao što su RIP puščana zrna, ne mogu da fragmentuju u igrici iako imaju reklamirano 100% šansu fragmentacije.";
+"combat_sim_frag_setting_never_desc" = "Meci neće nikad fragmentisati.";
 
-"aim_setting_upper_body" = "Upper Body";
-"aim_setting_center_mass" = "Center of Mass";
-"aim_setting_headshots" = "Headshots";
-"aim_setting_random_leg" = "Random Leg Meta";
-"aim_setting_single_leg" = "Single Leg Meta";
-"aim_setting_thorax" = "Thorax";
+"aim_setting_upper_body" = "Gornje telo";
+"aim_setting_center_mass" = "Maseni centar";
+"aim_setting_headshots" = "Hedšotovi";
+"aim_setting_random_leg" = "Randomizovana leg meta";
+"aim_setting_single_leg" = "Pojedinačna leg meta";
+"aim_setting_thorax" = "Grudi";
 
-"aim_setting_upper_body_desc" = "All bullets fired will impact the target on their upper-body, including the arms, stomach, thorax, and a small percentage chance to hit the head.";
-"aim_setting_center_mass_desc" = "All bullets fired will impact the target in the center-of-mass, which includes the arms, stomach, and thorax.";
-"aim_setting_headshots_desc" = "All bullets fired will impact the target on their head.";
-"aim_setting_random_leg_desc" = "All bullets fired will have an equal chance to impact either leg.";
-"aim_setting_single_leg_desc" = "All bullets fired will impact the same leg.";
-"aim_setting_thorax_desc" = "All bullets fired will impact the thorax.";
+"aim_setting_upper_body_desc" = "Svi otpaljeni meci će pogoditi metu u gornjem delu tela, uključujući ruke, stomak, grudi, i malu šansu da pogode glavu.";
+"aim_setting_center_mass_desc" = "Svi otpaljeni meci će pogoditi metu u centru mase, uključujući ruke, stomak i grudi.";
+"aim_setting_headshots_desc" = "Svi otpaljeni meci će pogoditi metu u glavu.";
+"aim_setting_random_leg_desc" = "Svi otpaljeni meci će imati jednaku šansu da pogode jednu ili drugu nogu.";
+"aim_setting_single_leg_desc" = "Svi otpaljeni meci će pogoditi istu nogu.";
+"aim_setting_thorax_desc" = "Svi otpaljeni meci će pogoditi metu u grudi.";
 
-"simulation_result_win" = "Win";
-"simulation_result_loss" = "Loss";
-"simulation_result_tie" = "Tie";
+"simulation_result_win" = "Pobijeda";
+"simulation_result_loss" = "Gubitak";
+"simulation_result_tie" = "Nerješeno";
 
-"simulation_win_percent" = "Win Percent";
-"simulation_time_to_kill" = "Avg. Time-to-Kill";
-"simulation_win_shots_to_kill" = "Avg. Shots-to-Kill";
+"simulation_win_percent" = "Procenat pobede";
+"simulation_time_to_kill" = "Prosečno vreme ubistva";
+"simulation_win_shots_to_kill" = "Prosečan broj metaka za ubistvo";
 
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
