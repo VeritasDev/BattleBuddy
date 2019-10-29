@@ -219,10 +219,21 @@ export class DatabaseManager extends FirebaseManager {
         );
         break;
       case ItemType.ammo:
-        docs.forEach((x) => map[x[key]].push(x));
+        docs.forEach((x) => {
+          if (!map[x[key]]) {
+            map[x[key]] = [];
+          }
+
+          map[x[key]].push(x);
+        });
         break;
       default:
-        docs.forEach((x) => map[getDescendantProp(x, key)].push(x));
+        docs.forEach((x) => {
+          if (!map[getDescendantProp(x, key)]) {
+            map[getDescendantProp(x, key)] = [];
+          }
+          map[getDescendantProp(x, key)].push(x);
+        });
         break;
     }
 

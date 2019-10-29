@@ -1,17 +1,16 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import ScrollableContainer from '../components/common/ScrollableContainer';
 import HorizontalCardBar from '../components/common/HorizontalCardBar';
 import LoadingIndicator from '../components/common/LoadingIndicator';
 import {useItems} from '../context/ItemProvider';
 import ItemType from '../constants/ItemType';
 import MeleeItemList from '../components/common/MeleeItemList';
 import {useGlobalMetadataManager} from '../context/FirebaseProvider';
+import ScrollableContainer from '../components/common/ScrollableContainer';
 
 const CategoryScreen = ({navigation}) => {
   const {loading, data: docs, setCollectionName, clearData} = useItems();
   const {globalMetadata} = useGlobalMetadataManager();
-  // console.log(globalMetadata);
   const {collection} = navigation.state.params;
 
   useEffect(() => {
@@ -57,7 +56,7 @@ const CategoryScreen = ({navigation}) => {
     }
   };
 
-  return <ScrollableContainer>{renderList(docs)}</ScrollableContainer>;
+  return <ScrollableContainer fluid>{renderList(docs)}</ScrollableContainer>;
 };
 
 CategoryScreen.navigationOptions = (screenProps) => ({

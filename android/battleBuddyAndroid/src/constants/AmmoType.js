@@ -12,5 +12,9 @@ export default {
   '.366 TKM': '.366 TKM',
   '9x18mm Makarov': '9x18mm Makarov',
   '9x21mm Gyurza': '9x21mm Gyurza',
-  '7.62x25mm Tokarev': '7.62x25mm Tokarev'
+  '7.62x25mm Tokarev': '7.62x25mm Tokarev',
+  '30x29 mm VOG-30': '30x29 mm VOG-30',
+  '12.7x108 mm': '12.7x108 mm',
+  '5.7x28mm': '5.7x28mm',
+  '12.7x55mm STs-130': '12.7x55mm STs-130'
 };

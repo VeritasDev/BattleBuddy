@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {TouchableOpacity} from 'react-native';
 import ItemCard from './ItemCard';
 import {useNavigation} from 'react-navigation-hooks';
+import styled from 'styled-components/native';
+
+const TouchableOpacity = styled.TouchableOpacity`
+  padding: 0 20px;
+`;
 
 const MeleeItemList = ({items}) => {
   const {navigate} = useNavigation();

@@ -8,12 +8,14 @@ import {useNavigation} from 'react-navigation-hooks';
 const items = [
   {
     text: 'Firearms',
+    path: 'Firearms',
     collection: 'firearm',
     textPosition: 'bottom left',
     image: require('../../assets/images/card_heroes/firearms.png')
   },
   {
     text: 'Ammunition',
+    path: 'Ammunition',
     collection: 'ammunition',
     textPosition: 'bottom left',
     image: require('../../assets/images/card_heroes/ammo.jpg')
@@ -48,7 +50,7 @@ const ItemsScreen = () => {
   const {navigate} = useNavigation();
 
   const onPressHandler = (item) => {
-    navigate('Category', {...item});
+    navigate(item.path || 'Category', {...item});
   };
 
   return (

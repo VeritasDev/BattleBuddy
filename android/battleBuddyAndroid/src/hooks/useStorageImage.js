@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import {useFirebase} from '../context/FirebaseProvider';
+import {useCache} from '../context/CacheProvider';
 
 const placeholderImages = {
   firearm: {
@@ -70,6 +71,7 @@ const useStorageImage = (doc, size) => {
       placeholder = require('../../assets/images/placeholders/melee_placeholders/placeholder_melee.png');
       break;
   }
+  const {cache, updateCache} = useCache();
 
   const firebase = useFirebase();
   const [state, setState] = useState({
@@ -79,17 +81,32 @@ const useStorageImage = (doc, size) => {
   });
 
   const loadImageFromRef = async () => {
-    try {
-      const uri = await firebase
-        .itemImageReference(doc._id, doc._kind, size)
-        .getDownloadURL();
+    const cachedImage = cache.images.find((x) => x.id === doc._id);
 
+    if (cachedImage) {
       setState((prevState) => ({
         ...prevState,
-        image: {uri}
+        image: {uri: cachedImage.uri}
       }));
-    } catch (error) {
-      console.log('somthing went wrong', doc._id);
+    } else {
+      try {
+        const uri = await firebase
+          .itemImageReference(doc._id, doc._kind, size)
+          .getDownloadURL();
+
+        if (uri) {
+          updateCache('images', (prevState) => {
+            return [...prevState, {id: doc._id, uri}];
+          });
+        }
+
+        setState((prevState) => ({
+          ...prevState,
+          image: {uri}
+        }));
+      } catch (error) {
+        console.log('somthing went wrong', doc._id);
+      }
     }
   };
 

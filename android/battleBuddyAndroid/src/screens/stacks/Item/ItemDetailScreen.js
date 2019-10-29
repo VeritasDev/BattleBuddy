@@ -40,7 +40,7 @@ const ItemDetailScreen = ({navigation}) => {
   };
 
   const DetailElement = typeToComponent[type];
-  console.log(item);
+
   return (
     <ScrollView>
       <StorageImage doc={item} element={Image} resizeMode="contain" />
