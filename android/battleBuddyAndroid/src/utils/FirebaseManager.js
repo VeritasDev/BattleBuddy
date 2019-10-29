@@ -205,34 +205,47 @@ export class DatabaseManager extends FirebaseManager {
    */
   async _getAllItemsByProperty(collection, type, key) {
     const docs = await this.getAllItemsByCollection(collection);
-    const map = {};
-
-    // eslint-disable-next-line no-unused-vars
-    for (const [_, value] of Object.entries(type)) {
-      map[value] = [];
-    }
+    // eslint-disable-next-line
+    const map = Object.entries(type).map(([_, value]) => ({
+      title: value,
+      data: []
+    }));
 
     switch (collection) {
       case ItemType.armor:
-        docs.forEach((x) =>
-          map[`armor_class_${getDescendantProp(x, key)}`].push(x)
-        );
+        docs.forEach((x) => {
+          const title = `armor_class_${getDescendantProp(x, key)}`;
+          const index = map.findIndex((t) => t.title === title);
+
+          if (index === -1) {
+            map.push({title, data: [x]});
+          } else {
+            map[index].data.push(x);
+          }
+        });
         break;
       case ItemType.ammo:
         docs.forEach((x) => {
-          if (!map[x[key]]) {
-            map[x[key]] = [];
-          }
+          const title = x[key];
+          const index = map.findIndex((t) => t.title === title);
 
-          map[x[key]].push(x);
+          if (index === -1) {
+            map.push({title, data: [x]});
+          } else {
+            map[index].data.push(x);
+          }
         });
         break;
       default:
         docs.forEach((x) => {
-          if (!map[getDescendantProp(x, key)]) {
-            map[getDescendantProp(x, key)] = [];
+          const title = getDescendantProp(x, key);
+          const index = map.findIndex((t) => t.title === title);
+
+          if (index === -1) {
+            map.push({title, data: [x]});
+          } else {
+            map[index].data.push(x);
           }
-          map[getDescendantProp(x, key)].push(x);
         });
         break;
     }

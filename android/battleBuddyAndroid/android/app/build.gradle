@@ -190,6 +190,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-firebaseui')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-splash-screen')
     implementation fileTree(dir: "libs", include: ["*.jar"])

@@ -6,7 +6,6 @@ const CacheContext = createContext([{}, () => {}]);
 
 const CacheProvider = ({children}) => {
   const [state, setState] = useState({
-    images: [],
     [ItemType.firearm]: {},
     [ItemType.ammo]: {}
   });

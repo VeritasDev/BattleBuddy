@@ -39,6 +39,8 @@ target 'BattleBuddy' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'react-native-firebaseui', :path => '../node_modules/react-native-firebaseui'
+
   target 'BattleBuddyTests' do
     inherit! :search_paths
     # Pods for testing

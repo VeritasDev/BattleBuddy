@@ -46,6 +46,7 @@ const AmmunitionProvider = ({children}) => {
     }));
   };
 
+  // eslint-disable-next-line
   const sortAmmoByMetadata = (data) => {
     const {ammoMetadata} = globalMetadata;
     const sortedAmmoMetadata = [];
@@ -66,6 +67,7 @@ const AmmunitionProvider = ({children}) => {
   const getAmmoByCaliber = async () => {
     _setLoading();
     let data;
+
     if (ammoCache && ammoCache.byCaliber) {
       data = ammoCache.byCaliber;
     } else {
@@ -76,7 +78,7 @@ const AmmunitionProvider = ({children}) => {
     setState((prevState) => ({
       ...prevState,
       loading: false,
-      data: sortAmmoByMetadata(data)
+      data
     }));
   };
 

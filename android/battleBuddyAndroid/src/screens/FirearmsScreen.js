@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react';
-import ScrollableContainer from '../components/common/ScrollableContainer';
 import FirearmsProvider, {useFirearms} from '../context/FirearmsProvider';
 import LoadingIndicator from '../components/common/LoadingIndicator';
-import HorizontalCardBar from '../components/common/HorizontalCardBar';
+import ItemSectionList from '../components/common/ItemSectionList';
 
 const FirearmsScreen = () => {
   const {loading, getFirearmsByClass, data} = useFirearms();
@@ -13,14 +12,7 @@ const FirearmsScreen = () => {
 
   if (loading) return <LoadingIndicator />;
 
-  return (
-    <ScrollableContainer fluid>
-      {data &&
-        Object.entries(data).map(([title, items]) => (
-          <HorizontalCardBar key={title} title={title} items={items} />
-        ))}
-    </ScrollableContainer>
-  );
+  return <ItemSectionList data={data} localized />;
 };
 
 const Wrapper = () => (

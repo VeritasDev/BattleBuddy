@@ -30,13 +30,13 @@ const FirearmsProvider = ({children}) => {
 
   const getFirearmsByClass = async () => {
     _setLoading();
-    let data = null;
+    let data;
 
     if (fireArmCache && fireArmCache.byClass) {
       data = fireArmCache.byClass;
-      _updateCache('byClass', data);
     } else {
       data = await db.getAllFirearmsByType();
+      _updateCache('byClass', data);
     }
 
     setState((prevState) => ({
