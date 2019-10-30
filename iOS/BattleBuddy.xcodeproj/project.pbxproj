@@ -163,6 +163,7 @@
 		EFD03DD222B3FAAA00DE1874 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03DD122B3FAAA00DE1874 /* BaseTabBarController.swift */; };
 		EFD03DD522B3FAEA00DE1874 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03DD322B3FAEA00DE1874 /* LoadingViewController.swift */; };
 		EFD03DD622B3FAEA00DE1874 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD03DD422B3FAEA00DE1874 /* LoadingViewController.xib */; };
+		EFDB0747236A041B00B8EBE7 /* Rig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDB0746236A041B00B8EBE7 /* Rig.swift */; };
 		EFDD387422C26BAF00B66E13 /* MoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDD387322C26BAF00B66E13 /* MoreMenuViewController.swift */; };
 		EFF2FF4222D3BB2D00BED024 /* StaticGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF4122D3BB2C00BED024 /* StaticGridCollectionViewCell.swift */; };
 		EFF2FF4622D3C5A200BED024 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF2FF4522D3C5A200BED024 /* FirebaseManager.swift */; };
@@ -428,6 +429,7 @@
 		EFD03DD122B3FAAA00DE1874 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		EFD03DD322B3FAEA00DE1874 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		EFD03DD422B3FAEA00DE1874 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		EFDB0746236A041B00B8EBE7 /* Rig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rig.swift; sourceTree = "<group>"; };
 		EFDD387322C26BAF00B66E13 /* MoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuViewController.swift; sourceTree = "<group>"; };
 		EFF2FF4122D3BB2C00BED024 /* StaticGridCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFF2FF4522D3C5A200BED024 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 				276D916F23100FE600CD61E0 /* Firearm.swift */,
 				EF7AF36222C2A8D300DA1A18 /* Ammo.swift */,
 				EF7AF35E22C2A7F800DA1A18 /* Armor.swift */,
+				EFDB0746236A041B00B8EBE7 /* Rig.swift */,
 				EF831FE522DF78A300C6C138 /* Medical.swift */,
 				27A4A8FC22E69BCD00C5618E /* Throwable.swift */,
 				27BF991822C839EB003F01C5 /* MeleeWeapon.swift */,
@@ -1504,6 +1507,7 @@
 				EF7AF37A22C66B0C00DA1A18 /* StaticGridCollectionView.swift in Sources */,
 				27D2105D23194185005A538F /* WatchAdCell.swift in Sources */,
 				EF1945A823510FED007D8242 /* DependencyUtils.swift in Sources */,
+				EFDB0747236A041B00B8EBE7 /* Rig.swift in Sources */,
 				EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */,
 				276D917E231033C200CD61E0 /* MedicalEnums.swift in Sources */,
 				27F09ADD22DF50A100552C35 /* MathUtils.swift in Sources */,
