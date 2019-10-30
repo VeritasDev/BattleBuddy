@@ -5,6 +5,7 @@ import {Linking} from 'react-native';
 import CustomListItem from '../components/settings/CustomListItem';
 import Socials from '../constants/Socials';
 import {useGlobalMetadataManager} from '../context/FirebaseProvider';
+import packageJson from '../../package.json';
 
 const SectionTitle = styled.Text`
   color: ${({theme}) => theme.colors.gray};
@@ -82,28 +83,27 @@ const MoreScreen = ({navigation}) => {
           title: 'Check Out The Team!',
           image: require('../../assets/images/branding_and_logos/the_team_logo.png'),
           onPress: () => navigation.navigate('Team')
-        },
-        {
-          title: 'Watch an Ad',
-          image: require('../../assets/images/misc_icons/watch_ad.png')
         }
+        // TODO: Implement ad.
+        // {
+        //   title: 'Watch an Ad',
+        //   image: require('../../assets/images/misc_icons/watch_ad.png')
+        // }
       ]
     }
   ];
 
   return (
     <ScrollView>
-      {DATA.map((section) => {
-        return (
-          <React.Fragment key={section.title}>
-            <SectionTitle>{section.title}</SectionTitle>
-            {section.items.map((item) => (
-              <CustomListItem item={item} key={item.title} />
-            ))}
-          </React.Fragment>
-        );
-      })}
-      <SectionTitle>v 0.0.1</SectionTitle>
+      {DATA.map((section) => (
+        <React.Fragment key={section.title}>
+          <SectionTitle>{section.title}</SectionTitle>
+          {section.items.map((item) => (
+            <CustomListItem item={item} key={item.title} />
+          ))}
+        </React.Fragment>
+      ))}
+      <SectionTitle>v {packageJson.version}</SectionTitle>
     </ScrollView>
   );
 };
