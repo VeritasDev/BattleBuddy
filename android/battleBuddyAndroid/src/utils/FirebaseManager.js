@@ -133,6 +133,11 @@ export class AccountManager extends FirebaseManager {
 }
 
 export class DatabaseManager extends FirebaseManager {
+  constructor() {
+    super();
+    this.db.settings({persistence: true});
+  }
+
   /**
    * Private method to fetch all items by collection name.
    *
