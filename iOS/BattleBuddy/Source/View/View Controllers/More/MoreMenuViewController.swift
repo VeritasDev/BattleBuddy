@@ -18,6 +18,16 @@ class MoreMenuViewController: BaseTableViewController {
     var currentUserMetadata: BBUser?
     var userCount = 0
 
+    let newsCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell()
+        cell.textLabel?.text = "battle_buddy_news".local()
+        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        cell.textLabel?.numberOfLines = 0
+        cell.accessoryType = .disclosureIndicator
+        cell.imageView?.image = UIImage(named: "battle_buddy_news")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.height = 70.0
+        return cell
+    }()
     let veritasCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
         cell.textLabel?.text = "dev_by".local()
@@ -206,7 +216,7 @@ class MoreMenuViewController: BaseTableViewController {
         currentUserMetadata = accountManager.currentUserMetadata()
 
         versionCell.detailTextLabel?.text = DependencyManagerImpl.shared.deviceManager().appVersionString()
-        let aboutCells = [settingsCell, versionCell, veritasCell]
+        let aboutCells = [newsCell, settingsCell, versionCell, veritasCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 
@@ -301,6 +311,7 @@ extension MoreMenuViewController {
         let cell = tableView.cellForRow(at: indexPath)
 
         switch cell {
+//        case newsCell: navigationController?.pushViewController(PostViewController(NewsPost()), animated: true)
         case settingsCell: navigationController?.pushViewController(SettingsViewController(), animated: true)
         case veritasCell: navigationController?.pushViewController(VeritasInfoViewController(), animated: true)
         case githubCell: handleLink(VeritasSocial.github)

@@ -44,20 +44,20 @@ class SettingsViewController: BaseTableViewController {
         cell.height = 70.0
         return cell
     }()
-    lazy var pushNotificationsCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell()
-        cell.textLabel?.text = "push_notifications".local()
-        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-        cell.accessoryView = {
-            let toggle = UISwitch()
-            pushManager.pushNotificationsEnabled { enabled in toggle.setOn(enabled, animated: false) }
-            toggle.addTarget(self, action: #selector(togglePushNotifications(sender:)), for: .valueChanged)
-            return toggle
-        }()
-        cell.selectionStyle = .none
-        cell.height = 70.0
-        return cell
-    }()
+//    lazy var pushNotificationsCell: BaseTableViewCell = {
+//        let cell = BaseTableViewCell()
+//        cell.textLabel?.text = "push_notifications".local()
+//        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+//        cell.accessoryView = {
+//            let toggle = UISwitch()
+//            pushManager.pushNotificationsEnabled { enabled in toggle.setOn(enabled, animated: false) }
+//            toggle.addTarget(self, action: #selector(togglePushNotifications(sender:)), for: .valueChanged)
+//            return toggle
+//        }()
+//        cell.selectionStyle = .none
+//        cell.height = 70.0
+//        return cell
+//    }()
     lazy var enableBannerAdsCell: BaseTableViewCell = {
         let cell = BaseTableViewCell()
         cell.textLabel?.text = "enable_banner_ads".local()
@@ -119,7 +119,7 @@ class SettingsViewController: BaseTableViewController {
         }
 
         languageCell.detailTextLabel?.text = localeManager.currentLanguageDisplayName()
-        sections.append(GroupedTableViewSection(headerTitle: "app_settings".local(), cells: [languageCell, pushNotificationsCell]))
+        sections.append(GroupedTableViewSection(headerTitle: "app_settings".local(), cells: [languageCell]))
         tableView.reloadData()
     }
 

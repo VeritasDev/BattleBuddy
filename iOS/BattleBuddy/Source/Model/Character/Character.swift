@@ -41,7 +41,13 @@ class SimulationCharacter: Character {
 
 extension SimulationCharacter: CalculableCharacter {
     func copy(with zone: NSZone? = nil) -> Any {
-        return SimulationCharacter(json: json)!
+        let copy = SimulationCharacter(json: json)!
+        copy.aim = aim
+        if let headArmor = headArmor { copy.headArmor = SimulationArmor(json: headArmor.json) }
+        if let bodyArmor = bodyArmor { copy.bodyArmor = SimulationArmor(json: bodyArmor.json) }
+        if let firearm = firearm { copy.firearm = SimulationFirearm(json: firearm.json) }
+        if let ammo = ammo { copy.ammo = SimulationAmmo(json: ammo.json) }
+        return copy
     }
 
     var resolvedHealthMap: [BallisticsEngine.BodyZoneType : Double] {

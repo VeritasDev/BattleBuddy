@@ -27,6 +27,7 @@ enum FirebaseCollection: String {
     case users = "users"
     case compatibility = "compatibility"
     case character = "character"
+    case news = "news"
 }
 
 enum ImageSize: String {
@@ -100,9 +101,7 @@ class FirebaseManager: NSObject {
         prefsManager.update(.nextRewardAmount, value: newPointValue)
     }
 
-    func randomPointValue() -> Int {
-        return Int.random(in: 5...100)
-    }
+    func randomPointValue() -> Int { return Int.random(in: 5...100) }
 
     // MARK:- Images
     func itemImageReference(itemId: String, itemType: ItemType, size: ImageSize) -> StorageReference {
@@ -126,6 +125,7 @@ class FirebaseManager: NSObject {
     }
 }
 
+// TODO: v1.2.0...
 extension FirebaseManager: PushNotificationManager, UNUserNotificationCenterDelegate, MessagingDelegate {
     func enablePushNotifications(enabled: Bool) {
         UNUserNotificationCenter.current().delegate = self
@@ -172,13 +172,8 @@ extension FirebaseManager: AccountManager {
         }
     }
 
-    func isLoggedIn() -> Bool {
-        return currentUser() != nil
-    }
-
-    func currentUser() -> User? {
-        return Auth.auth().currentUser
-    }
+    func isLoggedIn() -> Bool { return currentUser() != nil }
+    func currentUser() -> User? { return Auth.auth().currentUser }
 
     func getValueForAccountProperty(_ property: AccountProperty, completion: @escaping (Any?) -> Void) {
         guard let currentUser = currentUser() else { return }
@@ -259,13 +254,10 @@ extension FirebaseManager: AccountManager {
         }
     }
 
-    func currentUserMetadata() -> BBUser? {
-        return userMetadata
-    }
+    func currentUserMetadata() -> BBUser? { return userMetadata }
 }
 
 // MARK:- Global Metadata
-
 extension FirebaseManager: GlobalMetadataManager {
     func getGlobalMetadata() -> GlobalMetadata? { return globalMetadata }
 
@@ -289,7 +281,31 @@ extension FirebaseManager: GlobalMetadataManager {
     }
 }
 
+/*
+ News Post
+
+ Title
+  12/2/12
+ body
+ */
+
+// MARK:- Database
 extension FirebaseManager: DatabaseManager {
+//    func getAppNews(handler: @escaping (_: NewsPost?) -> Void) {
+//        db.collection(FirebaseCollection.news.rawValue).order(by: "index").getDocuments() { (querySnapshot, err) in
+//            if let error = err {
+//                print("Failed to get all news w/ error: ", error.localizedDescription)
+//                handler(nil)
+//                return
+//            }
+//
+//            guard let snapshot = querySnapshot else { handler(nil); return }
+//            print("Successfully fetched \(String(snapshot.documents.count)) news.")
+//        }
+//
+//        let post = NewsPost(json: json)
+//        handler(post)
+//    }
 
     // MARK:- Characters
     func getCharacters(handler: @escaping (_: [Character]) -> Void) {

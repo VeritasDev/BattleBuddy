@@ -12,14 +12,11 @@
 
 ## <u>v1.1.0</u>
 
-- [ ] Push notifications
 - [ ] Localizations
     - [ ] Dutch
-    - [ ] Croatian
     - [ ] Spanish Latin American
     - [ ] Japanese
     - [ ] Portuguese
-    - [ ] Lithuanian
     - [ ] French
     - [ ] Portuguese Portugal
     - [ ] Indonesian
@@ -28,6 +25,8 @@
     - [ ] Estonian
     - [ ] Korean
     - [ ] Norwegian Bokmål
+    - [x] Lithuanian
+    - [x] Croatian
     - [x] English
     - [x] German
     - [x] Hungarian
@@ -80,6 +79,7 @@
 - [x] Stereo audio post writeup
 
 ## <u>v1.2.0</u>
+- [ ] Push notifications
 - [ ] Anything and everything 0.12 related!
 - [ ] News / announcements (translated server side?)
 - [ ] STK/TTK Calculator

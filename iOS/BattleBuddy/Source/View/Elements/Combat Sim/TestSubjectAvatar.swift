@@ -21,7 +21,7 @@ class TestSubjectAvatar: UIButton {
         let imageView = UIImageView()
         imageView.tintColor = UIColor(white: 0.6, alpha: 1.0)
         imageView.image = UIImage(named: "placeholder_avatar")?.withRenderingMode(.alwaysTemplate)
-        imageView.isUserInteractionEnabled = true
+        imageView.isUserInteractionEnabled = false
         return imageView
     }()
     var result: CombatSimulationResult? {

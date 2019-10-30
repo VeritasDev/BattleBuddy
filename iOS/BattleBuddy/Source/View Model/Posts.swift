@@ -39,6 +39,49 @@ final class BallisticsPost: PostConfiguration {
     }
 }
 
+//enum JsonPostKey: String, CaseIterable {
+//    case contents = "contents"
+//    case author = "author"
+//    case subtitle = "subtitle"
+//    case timestamp = "timestamp"
+//    case header = "header"
+//    case image = "image"
+//    case body = "body"
+//}
+//
+//struct NewsPost {
+//    let title: String
+//    let author: String
+//    let timestamp: Double
+//    let body: String
+//
+//
+//    init(json: [String: Any]) {
+//        title = ""
+//    }
+//}
+//
+//struct NewsElement {
+//
+//}
+//
+//final class JsonPost: PostConfiguration {
+//    var title: String?
+//    var jsonPostElements : [PostElement] = []
+//
+//    init(newsPosts: [NewsPost]) {
+//        var postElements: [PostElement] = []
+//
+//        for post in newsPosts {
+//
+//        }
+//
+//        jsonPostElements = postElements
+//    }
+//
+//    var elements: [PostElement] { return jsonPostElements }
+//}
+
 final class BudPost: PostConfiguration {
     var title: String? = Localized("bud_points")
 

@@ -59,6 +59,7 @@ protocol AccountManager {
 
 // MARK: - Database
 protocol DatabaseManager {
+//    func getAppNews(handler: @escaping (_: NewsPost?) -> Void)
     func getCharacters(handler: @escaping (_: [Character]) -> Void)
 
     func getAllItemsWithSearchQuery(_ query: String, handler: @escaping (_: [BaseItem]) -> Void)

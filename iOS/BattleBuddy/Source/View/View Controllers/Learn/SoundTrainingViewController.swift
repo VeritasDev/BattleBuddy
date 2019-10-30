@@ -8,28 +8,6 @@
 
 import UIKit
 
-/**
- * [?] Button
- * What is this?
- * Have you ever had trouble locating where footsteps or gunshots were coming from? The sound training tool provides a way for you to practice your sound localization skills and get feedback in real time! Imagine you're blindfolded and can hear a sound nearby. The goal of this excercise is to pinpoint the location of the sound only by turning your head until you think the sound is directly in front of you.
- * How to use:
- * 1. Put on headphones
- * 2. Press "Start Training"
- * 3. You will hear a tone being played at a random location somewhere around you.
- * 3. Swipe left or right, just like you would move your mouse while playing the game, to simulate turning your character around.
- * 4. As you turn, you will hear the volume of the sound in each ear change as the position of the sound relative to your left and right ears will change accordingly.
- * 5. When the volume of the sound appears to be the same in both ears
- *
- * Why not footsteps or gun shot sounds?
- *
- * In front or behind?
- *
- *
- * UI:
- * Start training
- * Swipe left or right, just like you would move your mouse, to simulate turning your character in game. Once you
- *
- */
 private enum SoundTrainerState {
     case idle
     case training
@@ -39,8 +17,20 @@ class SoundTrainingViewController: BaseViewController {
     let trainer = LocalizationTrainer()
     fileprivate var state: SoundTrainerState = .idle
     lazy var gr: UIPanGestureRecognizer = { UIPanGestureRecognizer(target: self, action: #selector(handlePan)) }()
-    var panOffset: CGFloat = 0.0
-    let sensitivity: CGFloat = 0.1
+    var currentPanAngle: CGFloat = 0.0
+    let sensitivity: CGFloat = 0.5
+    let soundSourceImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "star")?.withRenderingMode(.alwaysTemplate))
+        imageView.tintColor = UIColor.gray
+        imageView.isHidden = false // TODO
+        return imageView
+    }()
+    let currentViewDirectionImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "star")?.withRenderingMode(.alwaysTemplate))
+        imageView.tintColor = UIColor.Theme.primary
+        imageView.isHidden = false // TODO
+        return imageView
+    }()
     lazy var animationImageView: UIImageView = {
         let imageView = UIImageView()
 
@@ -69,6 +59,12 @@ class SoundTrainingViewController: BaseViewController {
         label.numberOfLines = 0
         return label
     }()
+    let reloadButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "reload")?.imageScaled(toFit: CGSize(width: 35.0, height: 35.0)).withRenderingMode(.alwaysTemplate), for: .normal)
+        button.tintColor = UIColor.Theme.primary
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +92,20 @@ class SoundTrainingViewController: BaseViewController {
             ])
 
         actionButton.pinToBottom(xInset: 25.0, yInset: 30.0, height: 44.0)
+
+        view.addSubview(soundSourceImageView)
+        view.addSubview(currentViewDirectionImageView)
+
+        view.addSubview(reloadButton)
+        reloadButton.addTarget(self, action: #selector(reset), for: .touchUpInside)
+        reloadButton.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            reloadButton.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -20.0),
+            reloadButton.trailingAnchor.constraint(equalTo: actionButton.trailingAnchor),
+            reloadButton.widthAnchor.constraint(equalToConstant: 50.0),
+            reloadButton.heightAnchor.constraint(equalTo: reloadButton.widthAnchor),
+            ])
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -122,58 +132,73 @@ class SoundTrainingViewController: BaseViewController {
         }
     }
 
+    func updateSoundSourceImage() {
+        if soundSourceImageView.isHidden {
+            return
+        }
+
+        print("Initial angle: ", trainer.initialPanAngle)
+
+        let circleRadius: CGFloat = view.frame.width * 0.4
+        var xOffset = circleRadius * sin(CGFloat(trainer.initialPanAngle))
+        var yOffset = circleRadius * cos(CGFloat(trainer.initialPanAngle))
+        let size: CGFloat = 50.0
+        var xPos = animationImageView.center.x + xOffset
+        var yPos = animationImageView.center.y + yOffset
+        soundSourceImageView.frame = CGRect.init(x: 0.0, y: 0.0, width: size, height: size)
+        soundSourceImageView.center = CGPoint(x: xPos, y: yPos)
+
+
+        xOffset = circleRadius * sin(CGFloat(trainer.currentPanAngle))
+        yOffset = circleRadius * cos(CGFloat(trainer.currentPanAngle))
+        xPos = animationImageView.center.x + xOffset// - (size / 2.0)
+        yPos = animationImageView.center.y + yOffset// - (size / 2.0)
+        currentViewDirectionImageView.frame = CGRect.init(x: 0.0, y: 0.0, width: size, height: size)
+        currentViewDirectionImageView.center = CGPoint(x: xPos, y: yPos)
+    }
+
     func startTest() {
         state = .training
-        panOffset = 0.0
+        currentPanAngle = 0.0
         animationImageView.transform = .identity
         trainer.startTest()
         actionButton.setTitle("sound_training_commit".local(), for: .normal)
         infoLabel.text = nil
-    }
-
-    func stopTest() {
-        state = .idle
-        trainer.stopTest()
-        actionButton.setTitle("sound_training_start".local(), for: .normal)
+        updateSoundSourceImage()
     }
 
     func handleGuess() {
-        let wasCorrect = trainer.commitAnswer()
-        if wasCorrect {
+        if trainer.isCurrentAngleCorrect() {
             infoLabel.text = "sound_training_result_correct".local()
             infoLabel.textColor = .green
-            stopTest()
+            reset()
         } else {
             infoLabel.text = "sound_training_result_wrong".local()
             infoLabel.textColor = UIColor.init(white: 0.8, alpha: 1.0)
         }
     }
 
+    @objc func reset() {
+        state = .idle
+        trainer.stopTest()
+        actionButton.setTitle("sound_training_start".local(), for: .normal)
+    }
+
     @objc func handlePan() {
         // Get the translation of the pan gesture relative to our view
-        let xTranslation = gr.translation(in: view).x
+        let xTranslation = -gr.translation(in: view).x
 
         // Calculate the offset with an arbitrary sensitivity multiplier.
         let offset = xTranslation / view.frame.width * sensitivity
 
-        // Adjust our pan by applying the calculated offset. We subtract, rather than add, because
-        // we're moving our head rather than the sound source, so it's technically inverted.
-        panOffset -= offset
+        // Adjust our pan by applying the calculated offset.
+        currentPanAngle -= offset
 
         // The inverse of the pan offset is the direction our character should now be looking.
-        animationImageView.transform = CGAffineTransform(rotationAngle: -panOffset)
+        animationImageView.transform = CGAffineTransform(rotationAngle: -currentPanAngle)
 
-        // Toss our pan offset value into the sin function, which will do the hard work of simulating
-        // the sound moving from in front, to the side, behind, and back around again.
-        trainer.offsetPan(Float(offset))
-    }
+        trainer.updatePanAngle(Float(currentPanAngle))
 
-    @objc func commit() {
-        let wasCorrect = trainer.commitAnswer()
-        if wasCorrect {
-            showOkAlert(message: "CORRECT")
-        } else {
-            showOkAlert(message: "WRONG")
-        }
+        updateSoundSourceImage()
     }
 }

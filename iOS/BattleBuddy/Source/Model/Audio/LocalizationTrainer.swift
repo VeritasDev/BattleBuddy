@@ -12,7 +12,11 @@ import AVFoundation
 class LocalizationTrainer {
     private var audioPlayer: AVAudioPlayer?
     private let accuracyThreshhold: Float = 0.1
-    private var currentPanOffset: Float = 0.0
+    public var currentPanAngle: Float = 0.0 { didSet {
+        audioPlayer?.pan = sin(currentPanAngle)
+        print(audioPlayer?.pan)
+        } }
+    public var initialPanAngle: Float = 0.0
 
     init() {
         guard let url = Bundle.main.url(forResource: "c6", withExtension: "mp3") else { return }
@@ -29,9 +33,13 @@ class LocalizationTrainer {
 
     public func startTest() {
         audioPlayer?.stop()
-        currentPanOffset = Float.random(in: -1.0...1.0)
-        updateAudioPlayerPan()
+        initialPanAngle = randomizedAngle()
+        currentPanAngle = 0.0
         audioPlayer?.play()
+    }
+
+    private func randomizedAngle() -> Float {
+        return Float.random(in: 0.0...360.0)
     }
 
     public func stopTest() {
@@ -40,23 +48,32 @@ class LocalizationTrainer {
 
     public func reset() {
         audioPlayer?.stop()
-        currentPanOffset = 0.0
-        updateAudioPlayerPan()
+        currentPanAngle = 0.0
+        initialPanAngle = 0.0
     }
 
-    private func updateAudioPlayerPan() {
-        audioPlayer?.pan = sin(currentPanOffset)
+    public func updatePanAngle(_ panAngle: Float) {
+        currentPanAngle = panAngle
     }
 
-    public func offsetPan(_ offset: Float) {
-        currentPanOffset += offset
-        updateAudioPlayerPan()
-    }
+    public func isCurrentAngleCorrect() -> Bool {
+        let targetAngle = sin(initialPanAngle)
+        let currentAngle = sin(currentPanAngle)
+        let diff = abs(targetAngle - currentAngle)
 
-    public func commitAnswer() -> Bool {
-        guard let ap = audioPlayer else { fatalError() }
-        let correct = (-0.3...0.3).contains(ap.pan)
-        if correct { reset() }
-        return correct
+        let targetAngle2 = cos(initialPanAngle)
+        let currentAngle2 = cos(currentPanAngle)
+        let diff2 = abs(targetAngle2 - currentAngle2)
+
+        print("Target: ", targetAngle)
+        print("Current: ", currentAngle)
+        print("Diff: ", diff)
+
+        print("Target2: ", targetAngle2)
+        print("Current2: ", currentAngle2)
+        print("Diff2: ", diff2)
+
+
+        return diff < 0.25 && diff2 < 0.25
     }
 }
