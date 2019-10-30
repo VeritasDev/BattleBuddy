@@ -1,8 +1,7 @@
 import styled from 'styled-components/native';
 
 const ScrollableContainer = styled.ScrollView`
-  padding: 10px 20px;
-  /* padding-top: 10px; */
+  padding: 10px ${({fluid}) => (fluid ? 0 : 20)}px;
   background: ${(props) => props.theme.colors.background};
 `;
 

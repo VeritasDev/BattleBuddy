@@ -8,6 +8,7 @@ import MedicalDetail from '../../../components/detail/MedicalDetail';
 import ThrowableDetail from '../../../components/detail/ThrowableDetail';
 import MeleeDetail from '../../../components/detail/MeleeDetail';
 import StorageImage from '../../../components/common/StorageImage';
+import ImageType from '../../../constants/ImageType';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -17,15 +18,19 @@ const Text = styled.Text`
   color: white;
 `;
 
-const Image = styled.ImageBackground`
+const View = styled.View`
   /* prettier-ignore */
   aspectRatio: 1.77;
   width: 100%;
 `;
 
+const Image = styled(StorageImage)`
+  width: 100%;
+  height: 100%;
+`;
+
 const Description = styled(Text)`
   padding: 20px;
-  text-align: justify;
 `;
 
 const ItemDetailScreen = ({navigation}) => {
@@ -44,7 +49,9 @@ const ItemDetailScreen = ({navigation}) => {
 
   return (
     <ScrollView>
-      <StorageImage doc={item} element={Image} resizeMode="contain" />
+      <View>
+        <Image doc={item} size={ImageType.large} />
+      </View>
       <Description>{item.description}</Description>
       <DetailElement item={item} />
     </ScrollView>

@@ -51,26 +51,19 @@ class FirebaseManager {
 export class GlobalMetadataManager extends FirebaseManager {
   globalMetadata = null;
 
-  constructor() {
-    super();
-    this.updateGlobalMetadata();
-  }
-
   getGlobalMetadata() {
     return this.globalMetadata;
   }
 
-  async updateGlobalMetadata(handler) {
+  async updateGlobalMetadata() {
     try {
+      console.log('Fetching global metadata...');
       const snapshot = await this.db
         .collection('global')
         .doc('metadata')
         .get();
 
       this.globalMetadata = snapshot.data();
-      if (handler) {
-        handler(this.globalMetadata);
-      }
     } catch (error) {
       console.log('ERROR fetching global metadata: ', error.debugDescription);
     }
@@ -83,11 +76,7 @@ export class AccountManager extends FirebaseManager {
 
     try {
       await this.auth.signInAnonymously();
-
       this.updateAccountProperties({[AccountProperty.lastLogin]: Date.now()});
-      const gmManager = new GlobalMetadataManager();
-      gmManager.updateGlobalMetadata();
-      console.log('Anonymous auth succeeded.');
     } catch (error) {
       console.error('Anonymous auth failed with error: ', error);
     }
@@ -144,6 +133,11 @@ export class AccountManager extends FirebaseManager {
 }
 
 export class DatabaseManager extends FirebaseManager {
+  constructor() {
+    super();
+    this.db.settings({persistence: true});
+  }
+
   /**
    * Private method to fetch all items by collection name.
    *
@@ -178,7 +172,7 @@ export class DatabaseManager extends FirebaseManager {
   }
 
   /**
-   * Private method to fetch collection by certain type/
+   * Private method to fetch collection by certain type
    *
    * @param {string} collection - Name of collection
    * @param {string} property - Item property
@@ -190,10 +184,10 @@ export class DatabaseManager extends FirebaseManager {
     try {
       const snapshot = await this.db
         .collection(collection)
-        .where('type', '==', 'body')
         .where(property, value)
         .get()
         .then((x) => x.docs.map((d) => d.data()));
+      // .then((d) => );
 
       console.log(
         `Successfully fetched ${snapshot.length} documents of type "${collection}".`
@@ -216,24 +210,48 @@ export class DatabaseManager extends FirebaseManager {
    */
   async _getAllItemsByProperty(collection, type, key) {
     const docs = await this.getAllItemsByCollection(collection);
-    const map = {};
-
-    // eslint-disable-next-line no-unused-vars
-    for (const [_, value] of Object.entries(type)) {
-      map[value] = [];
-    }
+    // eslint-disable-next-line
+    const map = Object.entries(type).map(([_, value]) => ({
+      title: value,
+      data: []
+    }));
 
     switch (collection) {
       case ItemType.armor:
-        docs.forEach((x) =>
-          map[`armor_class_${getDescendantProp(x, key)}`].push(x)
-        );
+        docs.forEach((x) => {
+          const title = `armor_class_${getDescendantProp(x, key)}`;
+          const index = map.findIndex((t) => t.title === title);
+
+          if (index === -1) {
+            map.push({title, data: [x]});
+          } else {
+            map[index].data.push(x);
+          }
+        });
         break;
       case ItemType.ammo:
-        docs.forEach((x) => map[x[key]].push(x));
+        docs.forEach((x) => {
+          const title = x[key];
+          const index = map.findIndex((t) => t.title === title);
+
+          if (index === -1) {
+            map.push({title, data: [x]});
+          } else {
+            map[index].data.push(x);
+          }
+        });
         break;
       default:
-        docs.forEach((x) => map[getDescendantProp(x, key)].push(x));
+        docs.forEach((x) => {
+          const title = getDescendantProp(x, key);
+          const index = map.findIndex((t) => t.title === title);
+
+          if (index === -1) {
+            map.push({title, data: [x]});
+          } else {
+            map[index].data.push(x);
+          }
+        });
         break;
     }
 

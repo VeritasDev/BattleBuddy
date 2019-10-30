@@ -1,30 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImageType from '../../constants/ImageType';
-import {Image} from 'react-native';
-import useStorageImage from '../../hooks/useStorageImage';
+import {useFirebase} from '../../context/FirebaseProvider';
+import {ImageView} from 'react-native-firebaseui';
+import getPlaceholder from '../../utils/getPlaceholderImage';
 
-const StorageImage = ({doc, size, element, children, ...props}) => {
-  const Element = element;
-  const {image, placeholder} = useStorageImage(doc, size);
+const StorageImage = ({doc, size, ...props}) => {
+  const firebase = useFirebase();
+  const {path} = firebase.itemImageReference(doc._id, doc._kind, size);
 
   return (
-    <Element source={image ? image : placeholder} {...props}>
-      {children && children}
-    </Element>
+    <ImageView path={path} {...props} defaultSource={getPlaceholder(doc)} />
   );
 };
 
 StorageImage.propTypes = {
   doc: PropTypes.object.isRequired,
-  size: PropTypes.oneOf([ImageType.full, ImageType.large, ImageType.medium]),
-  element: PropTypes.any,
-  children: PropTypes.node
+  size: PropTypes.oneOf([ImageType.full, ImageType.large, ImageType.medium])
 };
 
 StorageImage.defaultProps = {
-  size: ImageType.medium,
-  element: Image
+  size: ImageType.medium
 };
 
 export default StorageImage;

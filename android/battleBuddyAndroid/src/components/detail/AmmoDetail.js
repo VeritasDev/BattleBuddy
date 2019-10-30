@@ -12,7 +12,7 @@ const AmmoDetail = ({item}) => {
       title: 'Properties',
       rows: [
         {key: 'Caliber', value: item.caliber},
-        {key: 'Related Firearms'},
+        // TODO: implements {key: 'Related Firearms'},
         {key: 'Penetration', value: item.penetration},
         {key: 'Damage', value: item.damage},
         {key: 'Armor Damage', value: item.armorDamage},

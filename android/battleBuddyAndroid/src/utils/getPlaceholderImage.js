@@ -1,6 +1,3 @@
-import {useState, useEffect} from 'react';
-import {useFirebase} from '../context/FirebaseProvider';
-
 const placeholderImages = {
   firearm: {
     assaultRifle: require('../../assets/images/placeholders/weapon_placeholders/placeholder_ar.png'),
@@ -44,24 +41,24 @@ const placeholderImages = {
   }
 };
 
-const useStorageImage = (doc, size) => {
+const getPlaceholder = (item) => {
   let placeholder;
 
   // TODO: Fuck this system.
-  switch (doc._kind) {
+  switch (item._kind) {
     case 'firearm':
-      placeholder = placeholderImages[doc._kind][doc.class];
+      placeholder = placeholderImages[item._kind][item.class];
       break;
     case 'armor':
       // TODO: Fix armor placeholder as sometimes it returns undefined.
       placeholder = placeholderImages.armor[1];
-      // placeholder = placeholderImages[doc._kind][doc.armor]['class'];
+      // placeholder = placeholderImages[item._kind][item.armor]['class'];
       break;
     case 'ammunition':
-      placeholder = placeholderImages[doc._kind][doc.caliber];
+      placeholder = placeholderImages[item._kind][item.caliber];
       break;
     case 'medical':
-      placeholder = placeholderImages[doc._kind][doc.type];
+      placeholder = placeholderImages[item._kind][item.type];
       break;
     case 'grenade':
       placeholder = require('../../assets/images/placeholders/throwable_placeholders/placeholder_throwable.png');
@@ -71,33 +68,7 @@ const useStorageImage = (doc, size) => {
       break;
   }
 
-  const firebase = useFirebase();
-  const [state, setState] = useState({
-    loading: true,
-    image: null,
-    placeholder
-  });
-
-  const loadImageFromRef = async () => {
-    try {
-      const uri = await firebase
-        .itemImageReference(doc._id, doc._kind, size)
-        .getDownloadURL();
-
-      setState((prevState) => ({
-        ...prevState,
-        image: {uri}
-      }));
-    } catch (error) {
-      console.log('somthing went wrong', doc._id);
-    }
-  };
-
-  useEffect(() => {
-    loadImageFromRef();
-  }, []);
-
-  return state;
+  return placeholder;
 };
 
-export default useStorageImage;
+export default getPlaceholder;

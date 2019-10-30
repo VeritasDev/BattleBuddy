@@ -45,7 +45,6 @@ export const useDbManager = () => {
 
 export const useGlobalMetadataManager = () => {
   const {globalMetadata} = useFirebaseManager();
-
   return globalMetadata;
 };
 

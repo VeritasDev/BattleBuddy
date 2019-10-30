@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {ScrollView} from 'react-native';
 import SmallCard from './SmallCard';
 import styled from 'styled-components/native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -14,10 +13,18 @@ const Text = styled.Text`
   font-weight: bold;
   color: white;
   margin-bottom: 16px;
+  padding: 0 20px;
 `;
 
 const View = styled.View`
   margin-bottom: 16px;
+`;
+
+const HorizontalScrollView = styled.ScrollView.attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false
+})`
+  padding: 0 20px;
 `;
 
 const HorizontalCardBar = ({title, items}) => {
@@ -32,13 +39,13 @@ const HorizontalCardBar = ({title, items}) => {
       <Text>
         {items[0]._kind === ItemType.ammo ? title : localeString(title)}
       </Text>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+      <HorizontalScrollView>
         {items.map((item) => (
           <TouchableOpacity onPress={() => onPressHandler(item)} key={item._id}>
             <SmallCard {...item} />
           </TouchableOpacity>
         ))}
-      </ScrollView>
+      </HorizontalScrollView>
     </View>
   );
 };

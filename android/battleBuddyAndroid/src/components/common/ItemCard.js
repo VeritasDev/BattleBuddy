@@ -3,21 +3,9 @@ import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
 import StorageImage from './StorageImage';
 
-const StyledItemCard = styled.ImageBackground`
-  /* prettier-ignore */
-  aspectRatio: 1.77;
-  width: 100%;
-  padding: 16px;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  margin-bottom: 20px;
-`;
-
-// Increased text-size some
-// Added text shadow prop so text would stand out more
 const Text = styled.Text`
-  font-size: 35px;
+  padding: 16px;
+  font-size: 24px;
   color: white;
   font-weight: bold;
   /* prettier-ignore */
@@ -26,21 +14,34 @@ const Text = styled.Text`
   textShadowRadius: 10;
 `;
 
-const ItemCard = ({shortName, ...props}) => {
+const View = styled.View`
+  position: relative;
+  /* prettier-ignore */
+  aspectRatio: 1.77;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
+`;
+
+const Image = styled(StorageImage)`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+`;
+
+const ItemCard = ({shortName, ...item}) => {
   return (
-    <StorageImage element={StyledItemCard} doc={props}>
+    <View>
+      <Image doc={item} />
       <Text>{shortName}</Text>
-    </StorageImage>
+    </View>
   );
 };
 
-ItemCard.defaultProps = {
-  text: 'ItemCard Text',
-  textPosition: ''
-};
-
 ItemCard.propTypes = {
-  shortName: PropTypes.string.isRequired
+  shortName: PropTypes.string.isRequired,
+  _id: PropTypes.string.isRequired
 };
 
 export default ItemCard;

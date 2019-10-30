@@ -23,12 +23,10 @@ const Text = styled.Text`
 `;
 
 const SelectCompareScreen = () => {
-  const {state, navigate, ...rest} = useNavigation();
+  const {state, navigate} = useNavigation();
   const [selectedItems, setSelectedItem] = useState([
     state.params.selectedItem._id
   ]);
-
-  console.log(state, rest);
 
   const {loading, data: docs, setCollectionName, clearData} = useItems();
 
@@ -63,63 +61,63 @@ const SelectCompareScreen = () => {
   };
 
   if (loading) return <LoadingIndicator />;
-
+  console.log(docs);
   return (
     <>
       <ScrollView>
-        {state.params.itemType === ItemType.melee &&
-          docs.map((item) => (
-            <ListItem
-              key={item._id}
-              title={item.name}
-              containerStyle={{backgroundColor: 'black'}}
-              titleStyle={{color: 'white'}}
-              bottomDivider
-              onPress={() => handleSelect(item)}
-              rightElement={
-                <CheckBox
-                  value={selectedItems.includes(item._id)}
-                  onPress={() => handleSelect(item)}
-                  tintColors={{
-                    false: theme.colors.almostBlack,
-                    true: theme.colors.orange
-                  }}
-                />
-              }
-            />
-          ))}
-        {Object.entries(docs).map(([type, items]) => {
-          if (items.length)
-            return (
-              <React.Fragment key={type}>
-                <Text>
-                  {state.params.itemType === ItemType.ammo
-                    ? type
-                    : localeString(type)}
-                </Text>
-                {items.map((item) => (
-                  <ListItem
-                    key={item._id}
-                    title={item.name}
-                    containerStyle={{backgroundColor: 'black'}}
-                    titleStyle={{color: 'white'}}
-                    bottomDivider
-                    onPress={() => handleSelect(item)}
-                    rightElement={
-                      <CheckBox
-                        value={selectedItems.includes(item._id)}
-                        onPress={() => handleSelect(item)}
-                        tintColors={{
-                          false: theme.colors.almostBlack,
-                          true: theme.colors.orange
-                        }}
-                      />
-                    }
+        {state.params.itemType === ItemType.melee
+          ? docs.map((item) => (
+              <ListItem
+                key={item._id}
+                title={item.name}
+                containerStyle={{backgroundColor: 'black'}}
+                titleStyle={{color: 'white'}}
+                bottomDivider
+                onPress={() => handleSelect(item)}
+                rightElement={
+                  <CheckBox
+                    disabled
+                    value={selectedItems.includes(item._id)}
+                    tintColors={{
+                      false: theme.colors.almostBlack,
+                      true: theme.colors.orange
+                    }}
                   />
-                ))}
-              </React.Fragment>
-            );
-        })}
+                }
+              />
+            ))
+          : docs.map((section) => {
+              if (section.data.length)
+                return (
+                  <React.Fragment key={section.title}>
+                    <Text>
+                      {state.params.itemType === ItemType.ammo
+                        ? section.title
+                        : localeString(section.title)}
+                    </Text>
+                    {section.data.map((item) => (
+                      <ListItem
+                        key={item._id}
+                        title={item.name}
+                        containerStyle={{backgroundColor: 'black'}}
+                        titleStyle={{color: 'white'}}
+                        bottomDivider
+                        onPress={() => handleSelect(item)}
+                        rightElement={
+                          <CheckBox
+                            disabled
+                            value={selectedItems.includes(item._id)}
+                            tintColors={{
+                              false: theme.colors.almostBlack,
+                              true: theme.colors.orange
+                            }}
+                          />
+                        }
+                      />
+                    ))}
+                  </React.Fragment>
+                );
+            })}
       </ScrollView>
       <Button
         title="Continue"
