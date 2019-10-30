@@ -15,9 +15,8 @@ const ItemSectionList = ({data, localized}) => {
 
   return (
     <SectionList
-      initialNumToRender={4}
       sections={filteredData.map((x) => ({...x, data: [x.data]}))}
-      keyExtractor={(item, index) => index}
+      keyExtractor={(_, index) => index}
       renderItem={({item}) => <SectionItems items={item} />}
       renderSectionHeader={({section: {title}}) => (
         <SectionHeader>{localized ? localeString(title) : title}</SectionHeader>

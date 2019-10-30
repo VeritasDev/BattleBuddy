@@ -20,7 +20,7 @@ export const SectionItem = ({item, onPress}) => {
 
 SectionItem.propTypes = {
   item: PropTypes.object.isRequired,
-  onPress: PropTypes.object.isRequired
+  onPress: PropTypes.func.isRequired
 };
 
 const SectionItems = ({items}) => {
