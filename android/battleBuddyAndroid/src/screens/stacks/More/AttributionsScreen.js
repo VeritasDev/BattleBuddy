@@ -23,15 +23,19 @@ const SubTitle = styled.Text`
 const AttributionsScreen = () => {
   return (
     <ScrollView>
-      {Attributions.map((attr) => (
+      {Attributions.map((attr, index) => (
         <ListItem
           key={attr.title}
           title={<Title>{localeString(attr.title)}</Title>}
           subtitle={<SubTitle>{localeString(attr.description)}</SubTitle>}
-          containerStyle={{backgroundColor: 'black', marginBottom: 10}}
+          containerStyle={{
+            backgroundColor: 'black',
+            marginBottom: index === Attributions.length - 1 ? 0 : 10
+          }}
           titleStyle={{color: 'white'}}
           subtitleStyle={{color: 'white'}}
           chevron={!!attr.link}
+          topDivider={index === 0}
           onPress={() => Linking.openURL(attr.link)}
         />
       ))}
