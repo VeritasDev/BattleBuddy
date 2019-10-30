@@ -1,21 +1,16 @@
 import React, {useContext, useState, createContext} from 'react';
 import PropTypes from 'prop-types';
 import {useDbManager} from './FirebaseProvider';
-import {useCache} from './CacheProvider';
-import ItemType from '../constants/ItemType';
 
 const FirearmsContext = createContext();
 
 const FirearmsProvider = ({children}) => {
   const db = useDbManager();
-  const {cache, updateCache} = useCache();
   const [state, setState] = useState({
     data: null,
     loading: true,
     error: null
   });
-
-  const fireArmCache = cache[ItemType.firearm];
 
   const _setLoading = () => {
     setState((prevState) => ({
@@ -24,20 +19,10 @@ const FirearmsProvider = ({children}) => {
     }));
   };
 
-  const _updateCache = (key, value) => {
-    updateCache(ItemType.firearm, {[key]: value});
-  };
-
   const getFirearmsByClass = async () => {
     _setLoading();
-    let data;
 
-    if (fireArmCache && fireArmCache.byClass) {
-      data = fireArmCache.byClass;
-    } else {
-      data = await db.getAllFirearmsByType();
-      _updateCache('byClass', data);
-    }
+    const data = await db.getAllFirearmsByType();
 
     setState((prevState) => ({
       ...prevState,
@@ -48,14 +33,8 @@ const FirearmsProvider = ({children}) => {
 
   const getAllFirearms = async () => {
     _setLoading();
-    let data = null;
 
-    if (fireArmCache && fireArmCache.all) {
-      data = fireArmCache.all;
-    } else {
-      data = await db.getAllFirearms();
-      _updateCache('all', data);
-    }
+    const data = await db.getAllFirearms();
 
     setState((prevState) => ({
       ...prevState,

@@ -1,14 +1,10 @@
 import React, {useContext, useEffect, useState, createContext} from 'react';
 import PropTypes from 'prop-types';
-import ItemType from '../constants/ItemType';
 
 const CacheContext = createContext([{}, () => {}]);
 
 const CacheProvider = ({children}) => {
-  const [state, setState] = useState({
-    [ItemType.firearm]: {},
-    [ItemType.ammo]: {}
-  });
+  const [state, setState] = useState();
 
   useEffect(() => {
     return destroyCache;
@@ -23,8 +19,6 @@ const CacheProvider = ({children}) => {
 
     if (isFunction) {
       setState((prevState) => {
-        console.log('ISFUNCTION', key, prevState[key]);
-
         return {
           ...prevState,
           [key]: value(prevState[key])

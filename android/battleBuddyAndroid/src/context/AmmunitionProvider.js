@@ -1,22 +1,17 @@
 import React, {useContext, useState, createContext} from 'react';
 import PropTypes from 'prop-types';
 import {useDbManager, useGlobalMetadataManager} from './FirebaseProvider';
-import {useCache} from './CacheProvider';
-import ItemType from '../constants/ItemType';
 
 const AmmunitionContext = createContext();
 
 const AmmunitionProvider = ({children}) => {
   const db = useDbManager();
   const {globalMetadata} = useGlobalMetadataManager();
-  const {cache, updateCache} = useCache();
   const [state, setState] = useState({
     data: null,
     loading: true,
     error: null
   });
-
-  const ammoCache = cache[ItemType.ammo];
 
   const _setLoading = () => {
     setState((prevState) => ({
@@ -25,19 +20,10 @@ const AmmunitionProvider = ({children}) => {
     }));
   };
 
-  const _updateCache = (key, value) => {
-    updateCache(ItemType.ammo, {[key]: value});
-  };
-
   const getAllAmmo = async () => {
     _setLoading();
-    let data;
-    if (ammoCache && ammoCache.all) {
-      data = ammoCache.all;
-    } else {
-      data = await db.getAllAmmo();
-      _updateCache('all', data);
-    }
+
+    const data = await db.getAllAmmo();
 
     setState((prevState) => ({
       ...prevState,
@@ -46,6 +32,7 @@ const AmmunitionProvider = ({children}) => {
     }));
   };
 
+  // TODO: reimplement sorting AMMO with new data structure
   // eslint-disable-next-line
   const sortAmmoByMetadata = (data) => {
     const {ammoMetadata} = globalMetadata;
@@ -66,14 +53,8 @@ const AmmunitionProvider = ({children}) => {
 
   const getAmmoByCaliber = async () => {
     _setLoading();
-    let data;
 
-    if (ammoCache && ammoCache.byCaliber) {
-      data = ammoCache.byCaliber;
-    } else {
-      data = await db.getAllAmmoByCaliber();
-      _updateCache('byCaliber', data);
-    }
+    const data = await db.getAllAmmoByCaliber();
 
     setState((prevState) => ({
       ...prevState,
