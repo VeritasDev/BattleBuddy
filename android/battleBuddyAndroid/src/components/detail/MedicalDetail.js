@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import DetailSection from './DetailSection';
 import {useNavigation} from 'react-navigation-hooks';
 import ItemType from '../../constants/ItemType';
+import localeString from '../../utils/localeString';
 
 const MedicalDetail = ({item}) => {
   const {navigate} = useNavigation();
@@ -14,7 +15,7 @@ const MedicalDetail = ({item}) => {
         {
           title: 'Properties',
           rows: [
-            {key: 'Type', value: item.type},
+            {key: 'Type', value: localeString(item.type)},
             {key: 'Total HP', value: item.resources},
             {key: 'Use Time', value: item.useTime},
             {
@@ -47,7 +48,7 @@ const MedicalDetail = ({item}) => {
           title: 'Properties',
           rows: [
             {key: 'Type', value: 'Painkiller'},
-            {key: '# of Uses', value: item.resources},
+            {key: '# of Uses', value: item.resources || 1},
             {key: 'Use Time', value: item.useTime},
             {
               key: 'Effect Duration',
@@ -86,8 +87,8 @@ const MedicalDetail = ({item}) => {
         {
           title: 'Properties',
           rows: [
-            {key: 'Type', value: 'Painkiller'},
-            {key: '# of Uses', value: item.resources},
+            {key: 'Type', value: localeString(item.type)},
+            {key: '# of Uses', value: item.resources || 1},
             {key: 'Use Time', value: item.useTime},
             {
               key: 'Removes Pain',
@@ -122,8 +123,8 @@ const MedicalDetail = ({item}) => {
         {
           title: 'Properties',
           rows: [
-            {key: 'Type', value: item.type},
-            {key: '# of Uses', value: '1'},
+            {key: 'Type', value: localeString(item.type)},
+            {key: '# of Uses', value: item.resources || 1},
             {key: 'Use Time', value: item.useTime},
             {
               key: 'Effect Duration',

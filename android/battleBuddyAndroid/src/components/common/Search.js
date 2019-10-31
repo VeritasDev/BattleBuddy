@@ -16,7 +16,6 @@ const Input = styled.TextInput.attrs({
 const Container = styled.View`
   position: relative;
   padding-left: 8px;
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
   border-radius: 10px;
   margin-bottom: 10px;
   flex: 1;
@@ -45,7 +44,7 @@ const Search = () => {
   return (
     <Container>
       <Input
-        placeholder="Search"
+        placeholder="Search..."
         onChangeText={(text) => setState(text)}
         value={state}
         autoCorrect={false}

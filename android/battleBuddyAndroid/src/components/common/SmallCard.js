@@ -3,17 +3,8 @@ import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
 import StorageImage from './StorageImage';
 
-const StyledSmallCard = styled.ImageBackground`
-  /* prettier-ignore */
-  aspectRatio: 1.77;
-  height: 120px;
-  padding: 16px;
-  overflow: hidden;
-  border-radius: 8px;
-  margin-right: 20px;
-`;
-
 const Text = styled.Text`
+  padding: 16px;
   font-size: 24px;
   color: white;
   font-weight: bold;
@@ -23,11 +14,28 @@ const Text = styled.Text`
   textShadowRadius: 10;
 `;
 
+const View = styled.View`
+  position: relative;
+  /* prettier-ignore */
+  aspectRatio: 1.77;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-right: 20px;
+`;
+
+const Image = styled(StorageImage)`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+`;
+
 const SmallCard = ({shortName, ...item}) => {
   return (
-    <StorageImage doc={item} element={StyledSmallCard}>
+    <View>
+      <Image doc={item} />
       <Text>{shortName}</Text>
-    </StorageImage>
+    </View>
   );
 };
 

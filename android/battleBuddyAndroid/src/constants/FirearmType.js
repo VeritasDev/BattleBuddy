@@ -6,5 +6,6 @@ export default {
   sniperRifle: 'sniperRifle',
   assaultCarbine: 'assaultCarbine',
   pistol: 'pistol',
-  shotgun: 'shotgun'
+  shotgun: 'shotgun',
+  grenadeLauncher: 'grenadeLauncher'
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import AuthenticationProvider from './src/context/AuthenticationProvider';
 import App from './App';
+import AuthenticationProvider from './src/context/AuthenticationProvider';
 import FirebaseProvider from './src/context/FirebaseProvider';
 
 const AppProviders = () => {

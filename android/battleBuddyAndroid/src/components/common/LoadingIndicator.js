@@ -11,20 +11,20 @@ const Container = styled.View`
   background: ${(props) => props.theme.colors.background};
 `;
 
-const Loader = ({size, color}) => (
+const LoadingIndicator = ({size, color}) => (
   <Container>
     <ActivityIndicator size={size} color={color} />
   </Container>
 );
 
-Loader.propTypes = {
+LoadingIndicator.propTypes = {
   size: PropTypes.oneOf(['small', 'large']),
   color: PropTypes.string
 };
 
-Loader.defaultProps = {
+LoadingIndicator.defaultProps = {
   size: 'large',
   color: theme.colors.orange
 };
 
-export default Loader;
+export default LoadingIndicator;
