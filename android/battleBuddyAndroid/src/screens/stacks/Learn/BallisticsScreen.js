@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
 import ScrollableContainer from '../../../components/common/ScrollableContainer';
 import Image from '../../../components/learn/Image';
-import WebView from '../../../components/learn/WebView';
+import localeString from '../../../utils/localeString';
+import YTVideo from '../../../components/common/YTVideo';
 
 const Text = styled.Text`
   color: ${({theme}) => theme.colors.white};
@@ -13,6 +14,7 @@ const Text = styled.Text`
 
 const MainTitle = styled(Text)`
   font-size: 35;
+  font-weight: 300;
 `;
 
 const SubTitle = styled(Text)`
@@ -33,46 +35,45 @@ const ScrollView = styled(ScrollableContainer)`
   padding: 0 0;
 `;
 
-const BallisticsScreen = ({navigation}) => {
-  const {data} = navigation.state.params;
-
+const BallisticsScreen = () => {
   return (
     <ScrollView>
-      {data.map((post, index) => {
-        if (post.maintitle) {
-          return (
-            <React.Fragment key={index}>
-              <Image name={post.key} />
-              <MainTitle>{post.maintitle}</MainTitle>
-              <SubTitle>{post.subtitle}</SubTitle>
-              <Body>{post.text}</Body>
-            </React.Fragment>
-          );
-        } else if (post.video) {
-          return (
-            <React.Fragment key={index}>
-              <WebView name={post.key} />
-              <Bold>{post.title}</Bold>
-              <Body>{post.text}</Body>
-            </React.Fragment>
-          );
-        } else if (post.image) {
-          return (
-            <React.Fragment key={index}>
-              <Image name={post.key} />
-              <Bold>{post.title}</Bold>
-              <Body>{post.text}</Body>
-            </React.Fragment>
-          );
-        } else {
-          return (
-            <React.Fragment key={index}>
-              <Bold>{post.title}</Bold>
-              <Body>{post.text}</Body>
-            </React.Fragment>
-          );
-        }
-      })}
+      <MainTitle>{localeString('ballistics_title')}</MainTitle>
+      <SubTitle>Veritas - 13/07/2019</SubTitle>
+      <Body>{localeString('ballistics_body_1')}</Body>
+      <Body>{localeString('ballistics_body_2')}</Body>
+      <Image name="1" />
+
+      {/* ARMOR CLASS */}
+      <Bold>{localeString('ballistics_body_2_1_title')}</Bold>
+      <Body>{localeString('ballistics_body_2_1')}</Body>
+
+      {/* DURABILITY */}
+      <Bold>{localeString('ballistics_body_2_2_title')}</Bold>
+      <Body>{localeString('ballistics_body_2_2_1')}</Body>
+      <YTVideo videoId="3KbFMHp4NOE" />
+      <Body>{localeString('ballistics_body_2_2_2')}</Body>
+      <Body>{localeString('ballistics_body_2_2_3')}</Body>
+
+      <Image name="3" />
+
+      {/* ZONES OF PROTECTION */}
+      <Bold>{localeString('ballistics_body_2_3_title')}</Bold>
+      <Text>{localeString('ballistics_body_2_3')}</Text>
+
+      {/* MATERIALS */}
+      <Bold>{localeString('ballistics_body_2_4_title')}</Bold>
+      <Text>{localeString('ballistics_body_2_4')}</Text>
+
+      {/* PENALTIES */}
+      <Bold>{localeString('ballistics_body_2_5_title')}</Bold>
+      <Text>{localeString('ballistics_body_2_5')}</Text>
+
+      <YTVideo videoId="XDK-aLkGvkA" />
+
+      {/* SUMMARY */}
+      <Bold>{localeString('ballistics_body_3_title')}</Bold>
+      <Text>{localeString('ballistics_body_3')}</Text>
     </ScrollView>
   );
 };

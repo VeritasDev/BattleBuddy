@@ -18,19 +18,16 @@ const ButtonText = styled.Text`
   text-align: center;
 `;
 
-const Button = ({title}) => {
-  const onPressHandler = (title) => {
-    alert(`${title} not yet implemented`);
-  };
+const PenChanceButton = ({title, ...props}) => {
   return (
-    <ButtonContainer onPress={() => onPressHandler(title)}>
+    <ButtonContainer {...props}>
       <ButtonText>{title}</ButtonText>
     </ButtonContainer>
   );
 };
 
-Button.propTypes = {
+PenChanceButton.propTypes = {
   title: PropTypes.string.isRequired
 };
 
-export default Button;
+export default PenChanceButton;

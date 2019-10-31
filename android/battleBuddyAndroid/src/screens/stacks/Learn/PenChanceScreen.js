@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import Button from '../../../components/learn/Button';
+import PenChanceButton from '../../../components/learn/PenChanceButton';
 
 const View = styled.View`
   background: ${({theme}) => theme.colors.background};
@@ -30,8 +30,8 @@ const PenChanceScreen = () => {
         <PenChance>_</PenChance>
       </HorizontalView>
       <HorizontalView>
-        <Button title="Select Ammo" />
-        <Button title="Select Armor" />
+        <PenChanceButton title="Select Ammo" />
+        <PenChanceButton title="Select Armor" />
       </HorizontalView>
     </View>
   );
