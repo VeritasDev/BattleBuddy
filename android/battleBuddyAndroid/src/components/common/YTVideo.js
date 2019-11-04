@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import YouTube from 'react-native-youtube';
 import styled from 'styled-components/native';
 import {Viewport} from '@skele/components';
+import {YOUTUBE_API_KEY} from 'react-native-dotenv';
 
 /**
  * Because of Android's limited Youtube API we can only have
@@ -31,7 +32,7 @@ const YTVideo = ({videoId}) => {
     >
       {show && (
         <YouTube
-          apiKey="AIzaSyBKtolM-loj-u-AIEh6HCH0BaL8UminqVI"
+          apiKey={YOUTUBE_API_KEY}
           videoId={videoId}
           style={{alignSelf: 'stretch', aspectRatio: 1.77}}
         />

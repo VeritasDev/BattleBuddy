@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react';
 import TheTeam from '../constants/TheTeam';
+import {TWITCH_CLIENT_ID} from 'react-native-dotenv';
 
 // TODO: Export both to environment file
 const url = 'https://api.twitch.tv/helix/streams';
-const clientId = '4fgs4wy7qqlk01ju7ad7vr3skcskqi';
+const clientId = TWITCH_CLIENT_ID;
 
 const useStreams = (channelNames) => {
   const [state, setState] = useState({
