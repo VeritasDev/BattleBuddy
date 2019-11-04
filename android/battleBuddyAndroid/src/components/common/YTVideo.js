@@ -34,6 +34,7 @@ const YTVideo = ({videoId}) => {
         <YouTube
           apiKey={YOUTUBE_API_KEY}
           videoId={videoId}
+          resumePlayAndroid={false}
           style={{alignSelf: 'stretch', aspectRatio: 1.77}}
         />
       )}
