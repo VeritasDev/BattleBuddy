@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
 import {ImageBackground} from 'react-native';
+
+const hpColors = ['#0B6319', '#5A680A', '#666101', '#664500', '#FF0100'];
 
 const Text = styled.Text`
   color: white;
@@ -11,30 +13,59 @@ const Text = styled.Text`
   padding: 3px 3px 3px 5px;
 `;
 
-const Container = styled.View`
+const Container = styled.TouchableOpacity`
   width: 100px;
 `;
 
 const HPBarContainer = styled.View`
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid ${({blacked}) => (blacked ? 'red' : 'white')};
   text-align: center;
-  padding: 1px;
+  position: relative;
 `;
 
 const HPText = styled.Text`
-  color: white;
+  color: ${({blacked}) => (blacked ? 'red' : 'white')};
   text-align: center;
   font-size: 10px;
 `;
 
 const Bar = styled.View`
-  width: 100%;
-  background: ${({theme}) => theme.colors.green};
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: ${({color}) => color};
 `;
 
 const BodyZone = ({name, hp, maxHp, ...props}) => {
+  const [state, setState] = useState(hp);
+  const hpPercentage = (state / maxHp) * 100;
+  const blacked = hpPercentage === 0;
+  let color;
+
+  useEffect(() => {
+    setState(hp);
+  }, [hp]);
+
+  if (hpPercentage >= 60) {
+    color = hpColors[0];
+  } else if (hpPercentage >= 40) {
+    color = hpColors[1];
+  } else if (hpPercentage >= 30) {
+    color = hpColors[2];
+  } else if (hpPercentage >= 10) {
+    color = hpColors[3];
+  } else if (hpPercentage < 10) {
+    color = hpColors[4];
+  } else if (blacked) {
+    color = 'black';
+  }
+
   return (
-    <Container {...props}>
+    <Container
+      {...props}
+      onPress={() => setState((prevState) => prevState - 10)}
+    >
       <ImageBackground
         resizeMode="contain"
         style={{width: 'auto', flexGrow: 0}}
@@ -42,12 +73,11 @@ const BodyZone = ({name, hp, maxHp, ...props}) => {
       >
         <Text>{name}</Text>
       </ImageBackground>
-      <HPBarContainer hp={hp} maxHp={maxHp}>
-        <Bar>
-          <HPText>
-            {hp}/{maxHp}
-          </HPText>
-        </Bar>
+      <HPBarContainer blacked={blacked} hp={hp} maxHp={maxHp}>
+        <Bar color={color} width={`${hpPercentage}%`} />
+        <HPText blacked={blacked}>
+          {state}/{maxHp}
+        </HPText>
       </HPBarContainer>
     </Container>
   );

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Card from '../components/common/Card';
 import ScrollableContainer from '../components/common/ScrollableContainer';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import BallisticsData from '../../test-data/ballistics';
 
 const items = [
   {
@@ -29,11 +28,7 @@ const items = [
 
 const LearnScreen = ({navigation}) => {
   const onPressHandler = (item) => {
-    if (item.data) {
-      navigation.navigate(item.path, {data: BallisticsData});
-    } else {
-      navigation.navigate(item.path);
-    }
+    navigation.navigate(item.path);
   };
 
   return (

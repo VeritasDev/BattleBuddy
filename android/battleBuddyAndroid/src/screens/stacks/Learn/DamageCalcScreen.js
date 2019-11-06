@@ -43,7 +43,7 @@ const BtnLabel = styled.Text`
 `;
 
 const DamageCalcScreen = () => {
-  const {selectedAmmo, clearState} = useBallistics();
+  const {ammo, clearState} = useBallistics();
   const {navigate} = useNavigation();
 
   useEffect(() => {
@@ -118,9 +118,7 @@ const DamageCalcScreen = () => {
             }}
           >
             <Button onPress={() => navigate('Ammo')}>
-              <BtnLabel>
-                {(selectedAmmo && selectedAmmo.shortName) || 'Select Ammo'}
-              </BtnLabel>
+              <BtnLabel>{(ammo && ammo.shortName) || 'Select Ammo'}</BtnLabel>
             </Button>
             <Icon name="refresh" color={theme.colors.orange} size={36} />
           </View>

@@ -6,6 +6,7 @@ import DamageCalcScreen from '../screens/stacks/Learn/DamageCalcScreen';
 import BallisticsScreen from '../screens/stacks/Learn/BallisticsScreen';
 import PenChanceScreen from '../screens/stacks/Learn/PenChanceScreen';
 import AmmoTableScreen from '../screens/stacks/Learn/AmmoTableScreen';
+import ArmorTableScreen from '../screens/stacks/Learn/ArmorTableScreen';
 import defaultNavigationOptions from '../constants/defaultNavigationOptions';
 
 const learnNavigator = createStackNavigator(
@@ -14,7 +15,8 @@ const learnNavigator = createStackNavigator(
     PenChance: PenChanceScreen,
     DamageCalc: DamageCalcScreen,
     Ballistics: BallisticsScreen,
-    Ammo: AmmoTableScreen
+    Ammo: AmmoTableScreen,
+    Armor: ArmorTableScreen
   },
   {
     initialRouteName: 'Learn',
