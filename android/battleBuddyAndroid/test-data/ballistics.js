@@ -1,8 +1,8 @@
 const ballisticsdata = [
   {
+    key: '0',
     maintitle: `Armor & Ballistics: \nThe Basics`,
     subtitle: 'Veritas - 7/13/19',
-    image: require('../assets/images/card_heroes/ballistics.png'),
     text:
       'The ballistics system in Escape from Tarkov is a black box that only a few people have seen the inner-workings of.' +
       ' Due to the complexity of the formulas used to calculate things like surface penetration chances, ricochet angles, ' +
@@ -16,8 +16,9 @@ const ballisticsdata = [
       'protection, material, and penalties.'
   },
   {
+    key: '1',
     title: '1. Armor Class',
-    image: require('../assets/images/card_heroes/armor.jpg'),
+    image: 'armor.jpg',
     text:
       'Every armored component, from body armor, ballistic helmet ' +
       'attachments, has a specified armor class. Armor class is, in my ' +
@@ -40,7 +41,9 @@ const ballisticsdata = [
       'specifics related to the ballistics impact.'
   },
   {
+    key: '2',
     title: '2. Durability',
+    video: 'armor and ballistics',
     text:
       "When it coems to armor durability, it's important to note the " +
       'specifics changed a number of times and are, of course, subject to ' +
@@ -64,11 +67,12 @@ const ballisticsdata = [
       'solid understanding of the general protection chances of different classes ' +
       'of armor, durability values, and bullet penetration properties can actually ' +
       'be invaluable in some combat situations. Check out the Damage Calculator to ' +
-      'start getting a feel for how it all works!'
+      'start getting a feel for how it all works!\n'
   },
   {
+    key: '3',
     title: '3. Zones of Protection',
-    image: require('../assets/images/card_heroes/gen4.png'),
+    image: 'gen4.png',
     text:
       "There's not a ton of detail that I need to go into on this topic, " +
       'other than you need to remember one simple rule: Armor does not protect ' +
@@ -78,9 +82,10 @@ const ballisticsdata = [
       'it protects your body parts exactly the same as the assault kit because ' +
       'it has the same zones of protection. Pay attention to what zones are ' +
       'protected - getting your arms or stomach blacked out can be quite annoying ' +
-      'and is often worth some extra protection, if you can afford it!\n'
+      'and is often worth some extra protection, if you can afford it!'
   },
   {
+    key: '4',
     title: '4. Materials',
     text:
       'Each armor has different materials that it is made from. Currently, ' +
@@ -91,6 +96,7 @@ const ballisticsdata = [
       'cost more than the original cost of the armor!'
   },
   {
+    key: '5',
     title: '5. Penalties',
     text:
       'Generally speaking, additional protection comes at a cost, and this ' +
@@ -105,7 +111,9 @@ const ballisticsdata = [
       "and helmets are worth it? That's for you to decide!"
   },
   {
+    key: '6',
     title: 'Summary',
+    video: 'helmets and face shields',
     text:
       'The ballistics system in Escape from Tarkov is amazingly complex and ' +
       'requires quite a bit of experience and knowledge to be able to use to your ' +

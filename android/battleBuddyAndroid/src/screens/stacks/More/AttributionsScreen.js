@@ -36,7 +36,7 @@ const AttributionsScreen = () => {
           subtitleStyle={{color: 'white'}}
           chevron={!!attr.link}
           topDivider={index === 0}
-          onPress={() => Linking.openURL(attr.link)}
+          onPress={() => attr.link && Linking.openURL(attr.link)}
         />
       ))}
     </ScrollView>

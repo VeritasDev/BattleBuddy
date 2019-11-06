@@ -28,6 +28,7 @@
     "@react-native-firebase/auth": "6.0.0",
     "@react-native-firebase/firestore": "6.0.0",
     "@react-native-firebase/storage": "6.0.0",
+    "@skele/components": "^1.0.0-alpha.40",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-native": "0.61.2",
@@ -38,6 +39,8 @@
     "react-native-screens": "^1.0.0-alpha.23",
     "react-native-splash-screen": "^3.2.0",
     "react-native-vector-icons": "^6.6.0",
+    "react-native-webview": "^7.4.2",
+    "react-native-youtube": "^2.0.0",
     "react-navigation": "^4.0.10",
     "react-navigation-hooks": "^1.1.0",
     "react-navigation-stack": "^1.9.3",
@@ -65,6 +68,7 @@
     "lint-staged": "^9.2.5",
     "metro-react-native-babel-preset": "^0.56.0",
     "prettier": "^1.18.2",
+    "react-native-dotenv": "^0.2.0",
     "react-test-renderer": "16.9.0"
   },
   "jest": {

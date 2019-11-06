@@ -1,3 +1,5 @@
+import getDescendantProp from './getDescendantProp';
+
 const placeholderImages = {
   firearm: {
     assaultRifle: require('../../assets/images/placeholders/weapon_placeholders/placeholder_ar.png'),
@@ -7,7 +9,8 @@ const placeholderImages = {
     pistol: require('../../assets/images/placeholders/weapon_placeholders/placeholder_pistol.png'),
     shotgun: require('../../assets/images/placeholders/weapon_placeholders/placeholder_shotty.png'),
     smg: require('../../assets/images/placeholders/weapon_placeholders/placeholder_smg.png'),
-    sniperRifle: require('../../assets/images/placeholders/weapon_placeholders/placeholder_sniper.png')
+    sniperRifle: require('../../assets/images/placeholders/weapon_placeholders/placeholder_sniper.png'),
+    default: require('../../assets/images/placeholders/weapon_placeholders/placeholder_ar.png')
   },
   ammunition: {
     '5.45x39mm': require('../../assets/images/placeholders/ammo_placeholders/545_medium.png'),
@@ -23,7 +26,8 @@ const placeholderImages = {
     '.366 TKM': require('../../assets/images/placeholders/ammo_placeholders/366_medium.png'),
     '9x18mm Makarov': require('../../assets/images/placeholders/ammo_placeholders/918_medium.png'),
     '9x21mm Gyurza': require('../../assets/images/placeholders/ammo_placeholders/921_medium.png'),
-    '7.62x25mm Tokarev': require('../../assets/images/placeholders/ammo_placeholders/76225_medium.png')
+    '7.62x25mm Tokarev': require('../../assets/images/placeholders/ammo_placeholders/76225_medium.png'),
+    default: require('../../assets/images/placeholders/ammo_placeholders/545_medium.png')
   },
   armor: {
     '1': require('../../assets/images/placeholders/armor_placeholders/class_2.png'),
@@ -31,40 +35,45 @@ const placeholderImages = {
     '3': require('../../assets/images/placeholders/armor_placeholders/class_3.png'),
     '4': require('../../assets/images/placeholders/armor_placeholders/class_4.png'),
     '5': require('../../assets/images/placeholders/armor_placeholders/class_5.png'),
-    '6': require('../../assets/images/placeholders/armor_placeholders/class_6.png')
+    '6': require('../../assets/images/placeholders/armor_placeholders/class_6.png'),
+    default: require('../../assets/images/placeholders/armor_placeholders/class_2.png')
   },
   medical: {
     medkit: require('../../assets/images/placeholders/medical_placeholders/medkit_placeholder.png'),
     drug: require('../../assets/images/placeholders/medical_placeholders/painkiller_placeholder.png'),
     accessory: require('../../assets/images/placeholders/medical_placeholders/medical_placeholder.png'),
-    stimulator: require('../../assets/images/placeholders/medical_placeholders/stim_placeholder.png')
-  }
+    stimulator: require('../../assets/images/placeholders/medical_placeholders/stim_placeholder.png'),
+    default: require('../../assets/images/placeholders/medical_placeholders/medkit_placeholder.png')
+  },
+  grenade: require('../../assets/images/placeholders/throwable_placeholders/placeholder_throwable.png'),
+  melee: require('../../assets/images/placeholders/melee_placeholders/placeholder_melee.png')
 };
 
 const getPlaceholder = (item) => {
   let placeholder;
+  const placeholderKind = placeholderImages[item._kind];
 
   // TODO: Fuck this system.
   switch (item._kind) {
     case 'firearm':
-      placeholder = placeholderImages[item._kind][item.class];
+      placeholder = placeholderKind[item.class] || placeholderKind.default;
       break;
     case 'armor':
-      // TODO: Fix armor placeholder as sometimes it returns undefined.
-      placeholder = placeholderImages.armor[1];
-      // placeholder = placeholderImages[item._kind][item.armor]['class'];
+      placeholder =
+        placeholderKind[getDescendantProp(item, 'armor.class')] ||
+        placeholderKind.armor.default;
       break;
     case 'ammunition':
-      placeholder = placeholderImages[item._kind][item.caliber];
+      placeholder = placeholderKind[item.caliber] || placeholderKind.default;
       break;
     case 'medical':
-      placeholder = placeholderImages[item._kind][item.type];
+      placeholder = placeholderKind[item.type] || placeholderKind.default;
       break;
     case 'grenade':
-      placeholder = require('../../assets/images/placeholders/throwable_placeholders/placeholder_throwable.png');
+      placeholder = placeholderKind;
       break;
     case 'melee':
-      placeholder = require('../../assets/images/placeholders/melee_placeholders/placeholder_melee.png');
+      placeholder = placeholderKind;
       break;
   }
 

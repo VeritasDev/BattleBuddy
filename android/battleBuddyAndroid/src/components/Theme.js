@@ -24,11 +24,12 @@ export const theme = {
     black: '#000',
     lightGray: '#ccc',
     gray: '#5C5C5C',
-    orange: '#FF491C',
+    orange: '#FB463B',
     red: 'red',
     white: '#fff',
     yellow: '#EAEB5E',
-    olive: '#666804'
+    olive: '#666804',
+    green: '#0B6319'
   },
   layout: {
     device: {
