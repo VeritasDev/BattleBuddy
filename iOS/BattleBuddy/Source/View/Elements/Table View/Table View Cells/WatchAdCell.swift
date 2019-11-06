@@ -9,7 +9,16 @@
 import UIKit
 
 class WatchAdCell: BaseTableViewCell {
-    var videoAdState: VideoAdState = .unavailable { didSet { updateVideoAdState() } }
+    var videoAdState: VideoAdState = .unavailable {
+        willSet {
+            // Check if the value changed before updating video ad
+            // state, otherwise we might be needlessly refreshing
+            // a pre-loaded ad.
+            if videoAdState != newValue {
+                updateVideoAdState()
+            }
+        }
+    }
     let accessory = UIActivityIndicatorView(style: .whiteLarge)
 
     required init?(coder: NSCoder) { fatalError() }

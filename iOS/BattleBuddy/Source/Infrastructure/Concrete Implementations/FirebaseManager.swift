@@ -113,7 +113,7 @@ class FirebaseManager: NSObject {
         case .ammo: return ammoImageRef.child(imageId)
         case .medical: return medsImageRef.child(imageId)
         case .armor: return armorImageRef.child(imageId)
-        case .rig: return rigImageRef.child(imageId)
+//        case .rig: return rigImageRef.child(imageId)
         case .helmet: return helmetImageRef.child(imageId)
         case .visor: return visorImageRef.child(imageId)
         case .throwable: return throwableImageRef.child(imageId)

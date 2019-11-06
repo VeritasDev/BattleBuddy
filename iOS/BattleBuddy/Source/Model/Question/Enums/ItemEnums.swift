@@ -13,7 +13,7 @@ enum ItemType: String {
     case melee = "melee"
     case ammo = "ammunition"
     case armor = "armor"
-    case rig = "tacticalrig"
+//    case rig = "tacticalrig"
     case medical = "medical"
     case throwable = "grenade"
     case helmet = "helmet"
@@ -26,7 +26,7 @@ enum ItemType: String {
         case .melee: return "main_menu_melee".local()
         case .ammo: return "main_menu_ammo".local()
         case .armor: return "main_menu_armor".local()
-        case .rig: return "main_menu_rig".local()
+//        case .rig: return "main_menu_rig".local()
         case .visor: return "main_menu_visors".local()
         case .medical: return "main_menu_medical".local()
         case .throwable: return "main_menu_throwables".local()

@@ -22,6 +22,32 @@ extension String {
     }
 }
 
-
 // Command to validate Strings files...
 // plutil -lint Localizable.strings
+
+extension CGFloat {
+    func valueInRadians() -> CGFloat {
+        return self * .pi / 180.0
+    }
+
+    func valueInDegrees() -> CGFloat {
+        return self * 180.0 / .pi
+    }
+}
+
+extension Float {
+    func valueInRadians() -> Float {
+        return self * .pi / 180.0
+    }
+
+    func valueInDegrees() -> Float {
+        return self * 180.0 / .pi
+    }
+
+    func roundedToDecimalPlaces(_ decimalPlaces: Int) -> Float {
+        let multiplier = Int(pow(CGFloat(10), CGFloat(decimalPlaces)))
+        let multipliedAndRoundedOff = Int(self * Float(multiplier))
+        let convertedBack = Float(multipliedAndRoundedOff)
+        return convertedBack / Float(multiplier)
+    }
+}

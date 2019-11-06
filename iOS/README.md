@@ -1,7 +1,5 @@
 #  Battle Buddy iOS App
 
-***THIS REPO IS CURRENTLY A WORK IN PROGRESS! I WILL BE ADDING MUCH MORE DOCUMENTATION AFTER THE INITIAL RELEASE!***
-
 ## <u>Roadmap</u>
 
 - [x] Submit v1.0
@@ -12,7 +10,8 @@
 
 ## <u>v1.1.0</u>
 
-- [ ] Localizations
+- [ ] Fix combat sim
+- [ ] All Localizations
     - [ ] Dutch
     - [ ] Spanish Latin American
     - [ ] Japanese
@@ -40,6 +39,8 @@
     - [x] Spanish Spain
     - [x] Italian
 
+- [X] Fix ad reloading on more screen
+- [X] Fix UI for sound trainer
 - [x] Fix constraint issues on combat sim
 - [x] Ammo, armor, firearms -> link directly to combat sim
 - [x] BSG Twitter Feed

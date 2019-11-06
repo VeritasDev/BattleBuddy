@@ -43,8 +43,8 @@ extension SimulationCharacter: CalculableCharacter {
     func copy(with zone: NSZone? = nil) -> Any {
         let copy = SimulationCharacter(json: json)!
         copy.aim = aim
-        if let headArmor = headArmor { copy.headArmor = SimulationArmor(json: headArmor.json) }
-        if let bodyArmor = bodyArmor { copy.bodyArmor = SimulationArmor(json: bodyArmor.json) }
+        if let headArmor = headArmor?.copy() as? SimulationArmor { copy.headArmor = headArmor }
+        if let bodyArmor = bodyArmor?.copy() as? SimulationArmor { copy.bodyArmor = bodyArmor }
         if let firearm = firearm { copy.firearm = SimulationFirearm(json: firearm.json) }
         if let ammo = ammo { copy.ammo = SimulationAmmo(json: ammo.json) }
         return copy

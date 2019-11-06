@@ -17,18 +17,25 @@ class SoundTrainingViewController: BaseViewController {
     let trainer = LocalizationTrainer()
     fileprivate var state: SoundTrainerState = .idle
     lazy var gr: UIPanGestureRecognizer = { UIPanGestureRecognizer(target: self, action: #selector(handlePan)) }()
-    var currentPanAngle: CGFloat = 0.0
-    let sensitivity: CGFloat = 0.5
+    let radianOffset: CGFloat = 2 * .pi
+    var currentPanAngleRadians: CGFloat = 2 * .pi {
+        didSet {
+            // The inverse of the pan offset is the direction our character should now be looking.
+            animationImageView.transform = CGAffineTransform(rotationAngle: currentPanAngleRadians)
+            updateLookDirectionImage()
+        }
+    }
+    let sensitivity: CGFloat = 0.05
     let soundSourceImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "star")?.withRenderingMode(.alwaysTemplate))
-        imageView.tintColor = UIColor.gray
-        imageView.isHidden = false // TODO
+        imageView.tintColor = UIColor.yellow
+        imageView.isHidden = true
         return imageView
     }()
     let currentViewDirectionImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "star")?.withRenderingMode(.alwaysTemplate))
         imageView.tintColor = UIColor.Theme.primary
-        imageView.isHidden = false // TODO
+        imageView.isHidden = true
         return imageView
     }()
     lazy var animationImageView: UIImageView = {
@@ -65,6 +72,10 @@ class SoundTrainingViewController: BaseViewController {
         button.tintColor = UIColor.Theme.primary
         return button
     }()
+//    lazy var helpSwitch: UISwitch = {
+//        let helpSwitch = UISwitch(frame: .zero)
+////        helpSwitch.thumbTintColor = uic
+//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,46 +143,51 @@ class SoundTrainingViewController: BaseViewController {
         }
     }
 
-    func updateSoundSourceImage() {
-        if soundSourceImageView.isHidden {
-            return
-        }
-
-        print("Initial angle: ", trainer.initialPanAngle)
-
-        let circleRadius: CGFloat = view.frame.width * 0.4
-        var xOffset = circleRadius * sin(CGFloat(trainer.initialPanAngle))
-        var yOffset = circleRadius * cos(CGFloat(trainer.initialPanAngle))
+    func updateLookDirectionImage() {
         let size: CGFloat = 50.0
-        var xPos = animationImageView.center.x + xOffset
-        var yPos = animationImageView.center.y + yOffset
-        soundSourceImageView.frame = CGRect.init(x: 0.0, y: 0.0, width: size, height: size)
-        soundSourceImageView.center = CGPoint(x: xPos, y: yPos)
-
-
-        xOffset = circleRadius * sin(CGFloat(trainer.currentPanAngle))
-        yOffset = circleRadius * cos(CGFloat(trainer.currentPanAngle))
-        xPos = animationImageView.center.x + xOffset// - (size / 2.0)
-        yPos = animationImageView.center.y + yOffset// - (size / 2.0)
+        let circleRadius: CGFloat = view.frame.width * 0.4
+        let angle = currentPanAngleRadians
+        let xOffset = circleRadius * sin(angle)
+        let yOffset = circleRadius * cos(-angle + .pi)
+        let xPos = animationImageView.center.x + xOffset
+        let yPos = animationImageView.center.y + yOffset
         currentViewDirectionImageView.frame = CGRect.init(x: 0.0, y: 0.0, width: size, height: size)
         currentViewDirectionImageView.center = CGPoint(x: xPos, y: yPos)
     }
 
+    func updateSoundSourceImage() {
+        let size: CGFloat = 50.0
+        let circleRadius: CGFloat = view.frame.width * 0.4
+        let initialAngle = CGFloat(trainer.initialPanAngle)
+        let xOffset = circleRadius * sin(initialAngle)
+        let yOffset = circleRadius * cos(-initialAngle + .pi)
+        let xPos = animationImageView.center.x + xOffset
+        let yPos = animationImageView.center.y + yOffset
+        soundSourceImageView.frame = CGRect.init(x: 0.0, y: 0.0, width: size, height: size)
+        soundSourceImageView.center = CGPoint(x: xPos, y: yPos)
+    }
+
     func startTest() {
+        currentViewDirectionImageView.isHidden = true
+        soundSourceImageView.isHidden = true
         state = .training
-        currentPanAngle = 0.0
-        animationImageView.transform = .identity
+
+        currentPanAngleRadians = radianOffset
+
         trainer.startTest()
-        actionButton.setTitle("sound_training_commit".local(), for: .normal)
-        infoLabel.text = nil
         updateSoundSourceImage()
+
+        infoLabel.text = nil
+        actionButton.setTitle("sound_training_commit".local(), for: .normal)
     }
 
     func handleGuess() {
         if trainer.isCurrentAngleCorrect() {
             infoLabel.text = "sound_training_result_correct".local()
             infoLabel.textColor = .green
-            reset()
+            trainer.stopTest()
+            actionButton.setTitle("sound_training_start".local(), for: .normal)
+            state = .idle
         } else {
             infoLabel.text = "sound_training_result_wrong".local()
             infoLabel.textColor = UIColor.init(white: 0.8, alpha: 1.0)
@@ -179,8 +195,17 @@ class SoundTrainingViewController: BaseViewController {
     }
 
     @objc func reset() {
+        currentViewDirectionImageView.isHidden = true
+        soundSourceImageView.isHidden = true
+        infoLabel.text = nil
+
         state = .idle
-        trainer.stopTest()
+
+        currentPanAngleRadians = -radianOffset
+
+        trainer.reset()
+        updateSoundSourceImage()
+
         actionButton.setTitle("sound_training_start".local(), for: .normal)
     }
 
@@ -192,13 +217,10 @@ class SoundTrainingViewController: BaseViewController {
         let offset = xTranslation / view.frame.width * sensitivity
 
         // Adjust our pan by applying the calculated offset.
-        currentPanAngle -= offset
+        currentPanAngleRadians = currentPanAngleRadians - offset
 
-        // The inverse of the pan offset is the direction our character should now be looking.
-        animationImageView.transform = CGAffineTransform(rotationAngle: -currentPanAngle)
-
-        trainer.updatePanAngle(Float(currentPanAngle))
-
+        trainer.updateLookDirectionAngle(radians: Float(currentPanAngleRadians))
         updateSoundSourceImage()
     }
+
 }
