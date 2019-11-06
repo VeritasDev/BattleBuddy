@@ -4,6 +4,7 @@ import YouTube from 'react-native-youtube';
 import styled from 'styled-components/native';
 import {Viewport} from '@skele/components';
 import {YOUTUBE_API_KEY} from 'react-native-dotenv';
+import {useIsFocused} from 'react-navigation-hooks';
 
 /**
  * Because of Android's limited Youtube API we can only have
@@ -23,6 +24,7 @@ const ViewportAwareView = Viewport.Aware(View);
 
 const YTVideo = ({videoId}) => {
   const [show, setShow] = useState(false);
+  const isFocused = useIsFocused();
 
   return (
     <ViewportAwareView
@@ -30,7 +32,7 @@ const YTVideo = ({videoId}) => {
       onViewportEnter={() => setShow(true)}
       onViewportLeave={() => setShow(false)}
     >
-      {show && (
+      {isFocused && show && (
         <YouTube
           apiKey={YOUTUBE_API_KEY}
           videoId={videoId}
