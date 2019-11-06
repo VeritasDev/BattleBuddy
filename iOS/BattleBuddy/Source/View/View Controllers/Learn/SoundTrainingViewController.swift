@@ -72,10 +72,12 @@ class SoundTrainingViewController: BaseViewController {
         button.tintColor = UIColor.Theme.primary
         return button
     }()
-//    lazy var helpSwitch: UISwitch = {
-//        let helpSwitch = UISwitch(frame: .zero)
-////        helpSwitch.thumbTintColor = uic
-//    }()
+    lazy var helpSwitch: UISwitch = {
+        let helpSwitch = UISwitch(frame: .zero)
+        helpSwitch.tintColor = UIColor.Theme.primary
+        helpSwitch.thumbTintColor = UIColor(white: 0.85, alpha: 1.0)
+        return helpSwitch
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,11 +113,20 @@ class SoundTrainingViewController: BaseViewController {
         reloadButton.addTarget(self, action: #selector(reset), for: .touchUpInside)
         reloadButton.translatesAutoresizingMaskIntoConstraints = false
 
+        view.addSubview(helpSwitch)
+        helpSwitch.addTarget(self, action: #selector(toggleHelp), for: .touchUpInside)
+        helpSwitch.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
             reloadButton.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -20.0),
             reloadButton.trailingAnchor.constraint(equalTo: actionButton.trailingAnchor),
             reloadButton.widthAnchor.constraint(equalToConstant: 50.0),
             reloadButton.heightAnchor.constraint(equalTo: reloadButton.widthAnchor),
+
+            helpSwitch.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -20.0),
+            helpSwitch.leadingAnchor.constraint(equalTo: actionButton.leadingAnchor),
+            helpSwitch.widthAnchor.constraint(equalToConstant: 70.0),
+            helpSwitch.heightAnchor.constraint(equalToConstant: 50.0),
             ])
     }
 
@@ -123,6 +134,13 @@ class SoundTrainingViewController: BaseViewController {
         super.viewWillAppear(animated)
 
         animationImageView.startAnimating()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        updateSoundSourceImage()
+        updateLookDirectionImage()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -156,7 +174,7 @@ class SoundTrainingViewController: BaseViewController {
     }
 
     func updateSoundSourceImage() {
-        let size: CGFloat = 50.0
+        let size: CGFloat = 60.0
         let circleRadius: CGFloat = view.frame.width * 0.4
         let initialAngle = CGFloat(trainer.initialPanAngle)
         let xOffset = circleRadius * sin(initialAngle)
@@ -168,8 +186,6 @@ class SoundTrainingViewController: BaseViewController {
     }
 
     func startTest() {
-        currentViewDirectionImageView.isHidden = true
-        soundSourceImageView.isHidden = true
         state = .training
 
         currentPanAngleRadians = radianOffset
@@ -195,8 +211,6 @@ class SoundTrainingViewController: BaseViewController {
     }
 
     @objc func reset() {
-        currentViewDirectionImageView.isHidden = true
-        soundSourceImageView.isHidden = true
         infoLabel.text = nil
 
         state = .idle
@@ -207,6 +221,12 @@ class SoundTrainingViewController: BaseViewController {
         updateSoundSourceImage()
 
         actionButton.setTitle("sound_training_start".local(), for: .normal)
+    }
+
+    @objc func toggleHelp() {
+        let helpOn = helpSwitch.isOn
+        currentViewDirectionImageView.isHidden = !helpOn
+        soundSourceImageView.isHidden = !helpOn
     }
 
     @objc func handlePan() {
