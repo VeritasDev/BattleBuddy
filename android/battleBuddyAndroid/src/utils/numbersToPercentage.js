@@ -12,10 +12,6 @@ const numbersToPercentages = (array) => {
   const minAllowed = 0;
   const maxAllowed = 100;
 
-  if (isNaN(min) || isNaN(max)) {
-    console.log(array);
-  }
-
   const formula = (num) => {
     return minAllowed + ((num - min) / (max - min)) * (maxAllowed - minAllowed);
   };

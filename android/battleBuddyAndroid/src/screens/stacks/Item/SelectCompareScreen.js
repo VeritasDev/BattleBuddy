@@ -61,7 +61,7 @@ const SelectCompareScreen = () => {
   };
 
   if (loading) return <LoadingIndicator />;
-  console.log(docs);
+
   return (
     <>
       <ScrollView>

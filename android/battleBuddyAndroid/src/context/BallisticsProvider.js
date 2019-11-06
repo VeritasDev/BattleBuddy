@@ -5,23 +5,29 @@ const BallisticsContext = createContext([{}, () => {}]);
 
 const BallisticsProvider = ({children}) => {
   const [state, setState] = useState({
-    selectedAmmo: null,
-    selectedArmor: null
+    armor: null,
+    ammo: null
   });
 
   const setAmmo = (ammo) => {
-    setState((prevState) => ({...prevState, selectedAmmo: ammo}));
+    setState((prevState) => ({...prevState, ammo}));
+  };
+
+  const setArmor = (armor) => {
+    setState((prevState) => ({...prevState, armor}));
   };
 
   const clearState = () => {
     setState({
-      selectedAmmo: null,
-      selectedArmor: null
+      armor: null,
+      ammo: null
     });
   };
 
   return (
-    <BallisticsContext.Provider value={{...state, setAmmo, clearState}}>
+    <BallisticsContext.Provider
+      value={{...state, setAmmo, setArmor, clearState}}
+    >
       {children}
     </BallisticsContext.Provider>
   );
