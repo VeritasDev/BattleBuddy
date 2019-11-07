@@ -71,6 +71,10 @@ class SimulationAmmo: Ammo {
 
 // MARK: Ammo calculable
 extension SimulationAmmo: CalculableAmmo {
+    func copy(with zone: NSZone? = nil) -> Any {
+        return SimulationAmmo(json: json)!
+    }
+
     var resolvedAmmoName: String {
         get { return displayName }
     }
