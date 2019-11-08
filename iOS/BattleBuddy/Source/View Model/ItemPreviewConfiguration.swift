@@ -26,7 +26,7 @@ struct ItemListConfig {
 
         switch type {
         case .firearm: cellWidthMultiplier = 1.6
-        case .ammo, .armor, .visor, .medical, .helmet, .modification: cellWidthMultiplier = 1.3
+        case .ammo, .armor, .rig, .visor, .medical, .helmet, .modification: cellWidthMultiplier = 1.3
         default: fatalError()
         }
     }
@@ -93,6 +93,16 @@ struct AmmoPreviewConfiguration: ItemPreviewConfiguration {
 struct ArmorPreviewConfiguration: ItemPreviewConfiguration {
     let dbManager = DependencyManagerImpl.shared.databaseManager()
     let title: String = Localized("armor")
+    var items: [Displayable]
+    let scrollDirection: UICollectionView.ScrollDirection = .vertical
+    let staticDimensionCompact: Int = 2
+    let staticDimensionRegular: Int = 4
+    let aspectRatioMultipler: Float = 1.3
+}
+
+struct RigPreviewConfiguration: ItemPreviewConfiguration {
+    let dbManager = DependencyManagerImpl.shared.databaseManager()
+    let title: String = Localized("chest_rig")
     var items: [Displayable]
     let scrollDirection: UICollectionView.ScrollDirection = .vertical
     let staticDimensionCompact: Int = 2

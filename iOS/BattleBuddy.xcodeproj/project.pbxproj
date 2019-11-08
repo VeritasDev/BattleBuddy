@@ -95,6 +95,7 @@
 		27FDE6C123204CC200CA727B /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; };
 		27FDE6C323204D2A00CA727B /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE6C023204CC100CA727B /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
+		601BACF02375ADF20080493F /* RigDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */; };
 		6083741D232BBA5F00AA9D29 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */; };
 		6083741F232BBAAE00AA9D29 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */; };
 		60837425232BC24B00AA9D29 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837424232BC24B00AA9D29 /* Global.swift */; };
@@ -335,6 +336,7 @@
 		27FDE6C023204CC100CA727B /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionsViewController.swift; sourceTree = "<group>"; };
 		55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RigDetailsConfiguration.swift; sourceTree = "<group>"; };
 		6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		60837424232BC24B00AA9D29 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 				27090E3322DB54A900D97320 /* AmmoDetailsConfiguration.swift */,
 				EF831FE922DFA89E00C6C138 /* MedicalDetailsConfiguration.swift */,
 				27F09ADE22DFE69100552C35 /* ArmorDetailsConfiguration.swift */,
+				601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */,
 				EF831FF022E8C56D00C6C138 /* MeleeDetailsConfiguration.swift */,
 				EFACFC9F23453775003A3624 /* ModificationDetailsConfiguration.swift */,
 				27A4A8FE22E6A29E00C5618E /* ThrowableDetailsConfiguration.swift */,
@@ -1463,6 +1466,7 @@
 				27090E2F22DB53C600D97320 /* ItemDetailsConfiguration.swift in Sources */,
 				EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */,
 				60C65223235A9C0C001E7555 /* FirearmSort.swift in Sources */,
+				601BACF02375ADF20080493F /* RigDetailsConfiguration.swift in Sources */,
 				27090E2222D9FADA00D97320 /* BaseWebViewController.swift in Sources */,
 				EFF2FF4F22D4DF1F00BED024 /* UIViewUtilities.swift in Sources */,
 				27C0B17A23140061004BCE14 /* BodyZoneHealthButton.swift in Sources */,

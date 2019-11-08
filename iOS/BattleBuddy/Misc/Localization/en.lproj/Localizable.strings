@@ -488,3 +488,7 @@
 // V1.1.0 - Later changes
 "push_notifications" = "Push Notifications";
 "battle_buddy_news" = "Battle Buddy News";
+"chest_rig" = "Chest Rig";
+"chest_rig_armored" = "Armored Chest Rig";
+"armor_properties" = "Armor Properties";
+"main_menu_chest_rigs" = "Chest Rigs";

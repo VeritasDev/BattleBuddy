@@ -117,6 +117,18 @@ extension Armor: Displayable {
     var iconImage: UIImage? { get { return nil } }
 }
 
+extension Rig: Displayable {
+    var identifier: String { get { return id } }
+    var title: String { get { return displayName } }
+    var subtitle: String? { get { return nil } }
+    var shortTitle: String { get { return displayNameShort } }
+    var tint: UIColor? { get { return UIColor(white: 0.7, alpha: 1.0) } }
+    var titleFont: UIFont { get { return UIFont.systemFont(ofSize: 21.0, weight: .bold) } }
+    var placeholderImage: UIImage? { get { return UIImage(named: "chest_rig_placeholder")?.withRenderingMode(.alwaysTemplate) } }
+    var remoteImageUrl: URL? { get { return URL(string: "https://static.tarkov-database.com/image/icon/\(id).png") } }
+    var iconImage: UIImage? { get { return nil } }
+}
+
 extension Medical: Displayable {
     var identifier: String { get { return id } }
     var title: String { get { return displayName } }

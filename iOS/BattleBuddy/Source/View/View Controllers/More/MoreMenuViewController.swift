@@ -216,7 +216,7 @@ class MoreMenuViewController: BaseTableViewController {
         currentUserMetadata = accountManager.currentUserMetadata()
 
         versionCell.detailTextLabel?.text = DependencyManagerImpl.shared.deviceManager().appVersionString()
-        let aboutCells = [newsCell, settingsCell, versionCell, veritasCell]
+        let aboutCells = [settingsCell, versionCell, veritasCell]
         let aboutSection = GroupedTableViewSection(headerTitle: "about".local(), cells: aboutCells)
         sections.append(aboutSection)
 

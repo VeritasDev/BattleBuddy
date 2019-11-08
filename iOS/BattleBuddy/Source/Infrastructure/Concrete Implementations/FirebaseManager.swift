@@ -19,6 +19,7 @@ enum FirebaseCollection: String {
     case firearms = "firearm"
     case mods = "modification"
     case armor = "armor"
+    case rig = "tacticalrig"
     case ammo = "ammunition"
     case medical = "medical"
     case throwables = "grenade"
@@ -78,6 +79,7 @@ class FirebaseManager: NSObject {
     private var cachedFirearms: [Firearm]?
     private var cachedAmmo: [Ammo]?
     private var cachedArmor: [Armor]?
+    private var cachedRigs: [Rig]?
     private var cachedMedical: [Medical]?
     private var cachedThrowables: [Throwable]?
     private var cachedMelee: [MeleeWeapon]?
@@ -113,7 +115,7 @@ class FirebaseManager: NSObject {
         case .ammo: return ammoImageRef.child(imageId)
         case .medical: return medsImageRef.child(imageId)
         case .armor: return armorImageRef.child(imageId)
-//        case .rig: return rigImageRef.child(imageId)
+        case .rig: return rigsImageRef.child(imageId)
         case .helmet: return helmetImageRef.child(imageId)
         case .visor: return visorImageRef.child(imageId)
         case .throwable: return throwableImageRef.child(imageId)
@@ -283,14 +285,6 @@ extension FirebaseManager: GlobalMetadataManager {
     }
 }
 
-/*
- News Post
-
- Title
-  12/2/12
- body
- */
-
 // MARK:- Database
 extension FirebaseManager: DatabaseManager {
 //    func getAppNews(handler: @escaping (_: NewsPost?) -> Void) {
@@ -338,15 +332,18 @@ extension FirebaseManager: DatabaseManager {
             allResults += firearms
             self.getAllArmorWithSearchQuery(query) { armor in
                 allResults += armor
-                self.getAmmoWithSearchQuery(query) { ammo in
-                    allResults += ammo
-                    self.getMedicalWithSearchQuery(query) { medical in
-                        allResults += medical
-                        self.getThrowablesWithSearchQuery(query) { throwables in
-                            allResults += throwables
-                            self.getMeleeWithSearchQuery(query) { melee in
-                                allResults += melee
-                                handler(allResults)
+                self.getAllChestRigs { rigs in
+                    allResults += rigs
+                    self.getAmmoWithSearchQuery(query) { ammo in
+                        allResults += ammo
+                        self.getMedicalWithSearchQuery(query) { medical in
+                            allResults += medical
+                            self.getThrowablesWithSearchQuery(query) { throwables in
+                                allResults += throwables
+                                self.getMeleeWithSearchQuery(query) { melee in
+                                    allResults += melee
+                                    handler(allResults)
+                                }
                             }
                         }
                     }
@@ -378,6 +375,18 @@ extension FirebaseManager: DatabaseManager {
                     || $0.displayNameShort.containsIgnoringCase(query)
                     || $0.material.rawValue.containsIgnoringCase(query)
                     || $0.armorType.rawValue.containsIgnoringCase(query)
+            }
+
+            handler(filteredResults)
+        }
+    }
+
+    func getAllChestRigsWithSearchQuery(_ query: String, handler: @escaping (_: [Rig]) -> Void) {
+        getAllChestRigs { rigs in
+            let filteredResults = rigs.filter {
+                $0.displayDescription.containsIgnoringCase(query)
+                    || $0.displayName.containsIgnoringCase(query)
+                    || $0.displayNameShort.containsIgnoringCase(query)
             }
 
             handler(filteredResults)
@@ -510,6 +519,34 @@ extension FirebaseManager: DatabaseManager {
         getAllArmor(withTypes: [.body], handler: handler)
     }
 
+    func getAllChestRigs(handler: @escaping (_: [Rig]) -> Void) {
+        if let cache = cachedRigs {
+            handler(cache)
+            return
+        }
+
+        db.collection(FirebaseCollection.rig.rawValue).getDocuments() { (querySnapshot, err) in
+            if let error = err {
+                print("Failed to get all rigs w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
+            guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) rigs.")
+            let rigs = snapshot.getRigs()
+            self.cachedRigs = rigs
+            handler(rigs)
+        }
+    }
+
+    func getAllArmoredChestRigs(handler: @escaping (_: [Rig]) -> Void) {
+        getAllChestRigs { rigs in
+            let filteredResults = rigs.filter { $0.armorConfig != nil }
+            handler(filteredResults)
+            return
+        }
+    }
+
     func getAllHeadArmor(handler: @escaping (_: [Armor]) -> Void) {
         getAllArmor(withTypes: [.attachment, .visor, .helmet], handler: handler)
     }
@@ -631,6 +668,15 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
+    func getAllChestRigsByClass(handler: @escaping ([ArmorClass: [Rig]]) -> Void) {
+        getAllArmoredChestRigs { allRigs in
+            var map: [ArmorClass: [Rig]] = [:]
+            for type in ArmorClass.allCases { map[type] = [] }
+            for rig in allRigs { map[rig.armorConfig!.armorClass]?.append(rig) }
+            handler(map)
+        }
+    }
+
     func getAllHelmetsByClass(handler: @escaping ([ArmorClass : [Armor]]) -> Void) {
         getAllHelmets { allArmor in
             var map: [ArmorClass: [Armor]] = [:]
@@ -712,6 +758,7 @@ extension QuerySnapshot {
     func getCharacters() -> [Character] { return documents.compactMap{ Character(json: $0.data()) } }
     func getFirearms() -> [Firearm] { return documents.compactMap{ Firearm(json: $0.data()) } }
     func getArmor() -> [Armor] { return documents.compactMap{ Armor(json: $0.data()) } }
+    func getRigs() -> [Rig] { return documents.compactMap{ Rig(json: $0.data()) } }
     func getAmmo() -> [Ammo] { return documents.compactMap{ Ammo(json: $0.data()) } }
     func getMedical() -> [Medical] { return documents.compactMap{ Medical(json: $0.data()) } }
     func getMelee() -> [MeleeWeapon] { return documents.compactMap{ MeleeWeapon(json: $0.data()) } }

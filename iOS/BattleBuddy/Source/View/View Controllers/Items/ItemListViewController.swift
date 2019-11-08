@@ -21,10 +21,6 @@ class ItemListViewController: BaseStackViewController {
         super.init(BaseStackView(spacing: 3, xPaddingCompact: 0.0, yPadding: 10.0))
     }
 
-    deinit {
-        print("DSFADFDSFSDADSAFASD")
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +55,18 @@ class ItemListViewController: BaseStackViewController {
                 var armorSections: [ItemSection] = []
                 for armorClass in ArmorClass.allCases {
                     if let items = armorMap[armorClass], items.count > 0 {
+                        armorSections.append(ItemSection(title: armorClass.local(), items: items))
+                    }
+                }
+                self?.config.sections = armorSections
+                self?.buildStackFromConfig()
+            }
+        case .rig:
+            self.dbManager.getAllChestRigsByClass { [weak self] rigMap in
+                hud.dismiss(animated: false)
+                var armorSections: [ItemSection] = []
+                for armorClass in ArmorClass.allCases {
+                    if let items = rigMap[armorClass], items.count > 0 {
                         armorSections.append(ItemSection(title: armorClass.local(), items: items))
                     }
                 }
@@ -205,6 +213,8 @@ class ItemListViewController: BaseStackViewController {
             var comparison = ThrowableComparison(all)
             comparison.itemsBeingCompared = compared
             return comparison
+        case .rig:
+            return ArmorComparison(allArmor: []) // TODO
         }
     }
 }

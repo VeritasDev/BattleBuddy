@@ -10,7 +10,7 @@
 
 ## <u>v1.1.0</u>
 
-- [ ] Fix combat sim
+- [ ] Chest rigs
 - [ ] All Localizations
     - [ ] Dutch
     - [ ] Spanish Latin American
@@ -39,6 +39,7 @@
     - [x] Spanish Spain
     - [x] Italian
 
+- [x] Fix combat sim
 - [X] Fix ad reloading on more screen
 - [X] Fix UI for sound trainer
 - [x] Fix constraint issues on combat sim

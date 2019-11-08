@@ -27,6 +27,7 @@ class ItemsMenuViewController: MainMenuCollectionViewController {
             MainMenuItem(type: .ammunition, compactSize: .medium, regularSize: .large),
 
             MainMenuItem(type: .armor, compactSize: .medium, regularSize: .large),
+            MainMenuItem(type: .rig, compactSize: .medium, regularSize: .large),
             MainMenuItem(type: .helmets, compactSize: .medium, regularSize: .large),
             MainMenuItem(type: .visors, compactSize: .medium, regularSize: .large),
             MainMenuItem(type: .medical, compactSize: .medium, regularSize: .large),

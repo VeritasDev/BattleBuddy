@@ -114,7 +114,7 @@ final class SoundLocalizationPost: PostConfiguration {
             PostElementHeader(localizedTitle: "sound_localization_info_title".local(), authorName: "Veritas", publishDate: Date(timeIntervalSince1970: 1571151087)),
             PostElementNote(note: "sound_localization_info_note_1".local()),
             PostElementBody(body: "sound_localization_info_body_1".local()),
-            PostElementYouTube(videoId: "-_JpAyWMeiQ", height: 260.0),
+            PostElementYouTube(videoId: "EszSnWldA0I", height: 260.0),
             PostElementBodyTitle(title: "sound_localization_info_subtitle_2".local()),
             PostElementBody(body: "sound_localization_info_body_2".local()),
             PostElementBodyTitle(title: "sound_localization_info_subtitle_3".local()),
