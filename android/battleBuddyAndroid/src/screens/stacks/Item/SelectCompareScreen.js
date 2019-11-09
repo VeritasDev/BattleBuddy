@@ -33,11 +33,7 @@ const SelectCompareScreen = () => {
   useEffect(() => {
     setCollectionName(state.params.itemType);
 
-    return () => {
-      if (state.params.fromSearch) {
-        clearData;
-      }
-    };
+    return clearData;
   }, []);
 
   const handleSelect = ({_id}) => {
