@@ -4,9 +4,11 @@ import localeString from '../../utils/localeString';
 import DetailSection from './DetailSection';
 import {useNavigation} from 'react-navigation-hooks';
 import ItemType from '../../constants/ItemType';
+import {useBallistics} from '../../context/BallisticsProvider';
 
 const ArmorDetail = ({item}) => {
   const {navigate} = useNavigation();
+  const {setArmor} = useBallistics();
 
   const data = [
     {
@@ -57,7 +59,11 @@ const ArmorDetail = ({item}) => {
             })
         },
         {
-          key: 'Penetration Chance'
+          key: 'Penetration Chance',
+          onPress: () => {
+            setArmor(item);
+            navigate('PenChance');
+          }
         }
       ]
     }
