@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 import DetailSection from './DetailSection';
 import {useNavigation} from 'react-navigation-hooks';
 import ItemType from '../../constants/ItemType';
+import {useBallistics} from '../../context/BallisticsProvider';
 
 const AmmoDetail = ({item}) => {
   const {navigate} = useNavigation();
+  const {setAmmo} = useBallistics();
 
   const data = [
     {
       title: 'Properties',
       rows: [
         {key: 'Caliber', value: item.caliber},
-        // TODO: implements {key: 'Related Firearms'},
+        // TODO: implement {key: 'Related Firearms'},
         {key: 'Penetration', value: item.penetration},
         {key: 'Damage', value: item.damage},
         {key: 'Armor Damage', value: item.armorDamage},
@@ -39,8 +41,20 @@ const AmmoDetail = ({item}) => {
               itemType: ItemType.ammo
             })
         },
-        {key: 'Penetration Chance'},
-        {key: 'Damage Calculator'}
+        {
+          key: 'Penetration Chance',
+          onPress: () => {
+            setAmmo(item);
+            navigate('PenChance');
+          }
+        },
+        {
+          key: 'Damage Calculator',
+          onPress: () => {
+            setAmmo(item);
+            navigate('DamageCalc');
+          }
+        }
       ]
     }
   ];

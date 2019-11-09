@@ -68,7 +68,7 @@ const MedicalDetail = ({item}) => {
             },
             {
               key: 'Removes Fracture',
-              value: item.effects.bloodloss ? 'Yes' : 'No'
+              value: item.effects.fracture ? 'Yes' : 'No'
             },
             {
               key: 'Compare',
@@ -104,7 +104,7 @@ const MedicalDetail = ({item}) => {
             },
             {
               key: 'Removes Fracture',
-              value: item.effects.bloodloss ? 'Yes' : 'No'
+              value: item.effects.fracture ? 'Yes' : 'No'
             },
             {
               key: 'Compare',
@@ -144,7 +144,7 @@ const MedicalDetail = ({item}) => {
             },
             {
               key: 'Removes Fracture',
-              value: item.effects.bloodloss ? 'Yes' : 'No'
+              value: item.effects.fracture ? 'Yes' : 'No'
             },
             {
               key: 'Compare',

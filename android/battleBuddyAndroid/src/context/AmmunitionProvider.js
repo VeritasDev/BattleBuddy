@@ -1,12 +1,13 @@
 import React, {useContext, useState, createContext} from 'react';
 import PropTypes from 'prop-types';
-import {useDbManager, useGlobalMetadataManager} from './FirebaseProvider';
+import {useDbManager} from './FirebaseProvider';
+import useAmmoMetadata from '../hooks/useAmmoMetadata';
 
 const AmmunitionContext = createContext();
 
 const AmmunitionProvider = ({children}) => {
   const db = useDbManager();
-  const {globalMetadata} = useGlobalMetadataManager();
+  const ammoMetadata = useAmmoMetadata();
   const [state, setState] = useState({
     data: null,
     loading: true,
@@ -32,34 +33,21 @@ const AmmunitionProvider = ({children}) => {
     }));
   };
 
-  // TODO: reimplement sorting AMMO with new data structure
-  // eslint-disable-next-line
-  const sortAmmoByMetadata = (data) => {
-    const {ammoMetadata} = globalMetadata;
-    const sortedAmmoMetadata = [];
-
-    Object.entries(ammoMetadata).map(([key, {index}]) => {
-      sortedAmmoMetadata[index] = key;
-    });
-
-    const sortedData = {};
-
-    sortedAmmoMetadata.map((x) => {
-      sortedData[x] = data[x];
-    });
-
-    return sortedData;
-  };
-
   const getAmmoByCaliber = async () => {
     _setLoading();
-
     const data = await db.getAllAmmoByCaliber();
+    const sorted = [];
+
+    if (ammoMetadata) {
+      ammoMetadata.map((x) =>
+        sorted.push(data.find((d) => d.title === x.name))
+      );
+    }
 
     setState((prevState) => ({
       ...prevState,
       loading: false,
-      data
+      data: sorted || data
     }));
   };
 
