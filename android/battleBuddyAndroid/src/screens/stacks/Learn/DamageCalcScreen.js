@@ -78,9 +78,14 @@ const DamageCalcScreen = () => {
         selectedAmmo,
         bodyZone,
         (value) => {
-          console.log('Ammo', selectedAmmo);
-          console.log('Current Person', person);
-          console.log('New Person', value);
+          console.log(
+            JSON.stringify({
+              impactedBodyZone: bodyZone,
+              currentHealthMap: person,
+              newHealthMap: value,
+              ammo: selectedAmmo
+            })
+          );
           setPerson(value);
         }
       );
