@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
 import StorageImage from './StorageImage';
+import ImageType from '../../constants/ImageType';
 
 const Text = styled.Text`
   padding: 16px;
@@ -33,7 +34,7 @@ const Image = styled(StorageImage)`
 const ItemCard = ({shortName, ...item}) => {
   return (
     <View>
-      <Image doc={item} />
+      <Image resizeMode="cover" size={ImageType.large} doc={item} />
       <Text>{shortName}</Text>
     </View>
   );

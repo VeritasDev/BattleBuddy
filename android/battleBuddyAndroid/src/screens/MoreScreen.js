@@ -59,9 +59,9 @@ const MoreScreen = ({navigation}) => {
           title: (
             <Text>
               <Bold>
-                {globalMetadata.totalUserCount
-                  .toLocaleString()
-                  .replace(',', '.')}
+                {globalMetadata &&
+                  globalMetadata.totalUserCount &&
+                  globalMetadata.totalUserCount.toLocaleString('nl-NL')}
               </Bold>{' '}
               Battle Buddies have joined the fight!
             </Text>

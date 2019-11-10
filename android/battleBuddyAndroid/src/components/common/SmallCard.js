@@ -33,7 +33,7 @@ const Image = styled(StorageImage)`
 const SmallCard = ({shortName, ...item}) => {
   return (
     <View>
-      <Image doc={item} />
+      <Image resizeMode="cover" doc={item} />
       <Text>{shortName}</Text>
     </View>
   );

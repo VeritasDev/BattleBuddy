@@ -31,6 +31,7 @@ const Image = styled(StorageImage)`
 
 const Description = styled(Text)`
   padding: 20px;
+  text-align: justify;
 `;
 
 const ItemDetailScreen = ({navigation}) => {
