@@ -74,29 +74,17 @@ const DamageCalcScreen = () => {
       };
 
       ballisticsEngine.damageCalculator(
-        roundObject(person),
+        person,
         selectedAmmo,
         bodyZone,
         (value) => {
-          setPerson(roundObject(value));
+          console.log('Ammo', selectedAmmo);
+          console.log('Current Person', person);
+          console.log('New Person', value);
+          setPerson(value);
         }
       );
     }
-  };
-
-  const roundObject = (obj) => {
-    const rounded = {};
-
-    Object.entries(obj).map(([key, value]) => {
-      if (typeof value === 'number') {
-        rounded[key] = Math.round(value * 100) / 100;
-      } else {
-        rounded[key] = value;
-      }
-    });
-    console.log('normal', obj);
-    console.log('rounded', rounded);
-    return rounded;
   };
 
   return (
