@@ -6,6 +6,7 @@ import CustomListItem from '../components/settings/CustomListItem';
 import Socials from '../constants/Socials';
 import {useGlobalMetadataManager} from '../context/FirebaseProvider';
 import packageJson from '../../package.json';
+import insertThousandsSeperators from '../utils/insertThousandsSeperators';
 
 const SectionTitle = styled.Text`
   color: ${({theme}) => theme.colors.gray};
@@ -61,7 +62,7 @@ const MoreScreen = ({navigation}) => {
               <Bold>
                 {globalMetadata &&
                   globalMetadata.totalUserCount &&
-                  globalMetadata.totalUserCount.toLocaleString('nl-NL')}
+                  insertThousandsSeperators(globalMetadata.totalUserCount)}
               </Bold>{' '}
               Battle Buddies have joined the fight!
             </Text>
