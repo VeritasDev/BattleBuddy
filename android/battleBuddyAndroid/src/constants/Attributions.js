@@ -10,6 +10,11 @@ export default [
     link: 'https://tarkov-database.com/'
   },
   {
+    title: 'attributions_android',
+    description: 'attributions_android_descr',
+    link: 'https://github.com/jordykoppen'
+  },
+  {
     title: 'attributions_nofam',
     description: 'attributions_nofam_descr'
   },

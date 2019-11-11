@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components/native';
 import {View, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -6,6 +6,8 @@ import {theme} from '../../../components/Theme';
 import BodyZone from '../../../components/learn/BodyZone';
 import {useBallistics} from '../../../context/BallisticsProvider';
 import {useNavigation} from 'react-navigation-hooks';
+import {NativeModules} from 'react-native';
+import Ammo from '../../../models/Ammo';
 
 const ImageBg = styled.ImageBackground`
   position: relative;
@@ -42,13 +44,53 @@ const BtnLabel = styled.Text`
   font-size: 12px;
 `;
 
+const initialState = {
+  head: 35,
+  thorax: 80,
+  rightArm: 60,
+  stomach: 70,
+  leftArm: 60,
+  rightLeg: 65,
+  leftLeg: 65,
+  isAlive: true,
+  totalHp: 435
+};
+
 const DamageCalcScreen = () => {
   const {ammo, clearState} = useBallistics();
+  const [person, setPerson] = useState(initialState);
   const {navigate} = useNavigation();
+  const ballisticsEngine = NativeModules.BallisticsEngine;
 
   useEffect(() => {
     return clearState;
   }, []);
+
+  const processImpact = (bodyZone) => {
+    if (ammo && person.isAlive) {
+      const selectedAmmo = {
+        ...new Ammo(ammo),
+        didFrag: false
+      };
+
+      ballisticsEngine.damageCalculator(
+        person,
+        selectedAmmo,
+        bodyZone,
+        (value) => {
+          console.log(
+            JSON.stringify({
+              impactedBodyZone: bodyZone,
+              currentHealthMap: person,
+              newHealthMap: value,
+              ammo: selectedAmmo
+            })
+          );
+          setPerson(value);
+        }
+      );
+    }
+  };
 
   return (
     <ImageBg
@@ -57,7 +99,13 @@ const DamageCalcScreen = () => {
       source={require('../../../../assets/images/damage_calculator/health_calc_skeleton.imageset/skeleton.png')}
     >
       <View style={{flex: 1, height: '100%'}}>
-        <BodyZone name="Head" hp={35} maxHp={35} style={{marginLeft: 'auto'}} />
+        <BodyZone
+          name="Head"
+          hp={Math.round(person.head)}
+          maxHp={35}
+          onPress={() => processImpact('HEAD')}
+          style={{marginLeft: 'auto'}}
+        />
         <View
           style={{
             flex: 1,
@@ -73,7 +121,12 @@ const DamageCalcScreen = () => {
               justifyContent: 'center'
             }}
           >
-            <BodyZone name="Thorax" hp={80} maxHp={80} />
+            <BodyZone
+              name="Thorax"
+              hp={Math.round(person.thorax)}
+              maxHp={80}
+              onPress={() => processImpact('THORAX')}
+            />
           </View>
           <View
             style={{
@@ -82,9 +135,24 @@ const DamageCalcScreen = () => {
               justifyContent: 'space-around'
             }}
           >
-            <BodyZone name="Right Arm" hp={60} maxHp={60} />
-            <BodyZone name="Stomach" hp={70} maxHp={70} />
-            <BodyZone name="Left Arm" hp={60} maxHp={60} />
+            <BodyZone
+              name="Right Arm"
+              hp={Math.round(person.rightArm)}
+              maxHp={60}
+              onPress={() => processImpact('RIGHTARM')}
+            />
+            <BodyZone
+              name="Stomach"
+              hp={Math.round(person.stomach)}
+              maxHp={70}
+              onPress={() => processImpact('STOMACH')}
+            />
+            <BodyZone
+              name="Left Arm"
+              hp={Math.round(person.leftArm)}
+              maxHp={60}
+              onPress={() => processImpact('LEFTARM')}
+            />
           </View>
           <View
             style={{
@@ -95,11 +163,17 @@ const DamageCalcScreen = () => {
           >
             <BodyZone
               name="Right Leg"
-              hp={65}
+              hp={Math.round(person.rightLeg)}
               maxHp={65}
+              onPress={() => processImpact('RIGHTLEG')}
               style={{marginRight: 20}}
             />
-            <BodyZone name="Left Leg" hp={65} maxHp={65} />
+            <BodyZone
+              name="Left Leg"
+              hp={Math.round(person.leftLeg)}
+              maxHp={65}
+              onPress={() => processImpact('LEFTLEG')}
+            />
           </View>
         </View>
         <View style={{marginTop: 'auto'}}>
@@ -107,7 +181,8 @@ const DamageCalcScreen = () => {
             <Image
               source={require('../../../../assets/images/damage_calculator/health_star.imageset/health_star.png')}
             />
-            435<Small> /435</Small>
+            {Math.round(person.totalHp)}
+            <Small> /435</Small>
           </HealthText>
           <View
             style={{
@@ -120,7 +195,12 @@ const DamageCalcScreen = () => {
             <Button onPress={() => navigate('Ammo')}>
               <BtnLabel>{(ammo && ammo.shortName) || 'Select Ammo'}</BtnLabel>
             </Button>
-            <Icon name="refresh" color={theme.colors.orange} size={36} />
+            <Icon
+              name="refresh"
+              color={theme.colors.orange}
+              size={36}
+              onPress={() => setPerson(initialState)}
+            />
           </View>
         </View>
       </View>

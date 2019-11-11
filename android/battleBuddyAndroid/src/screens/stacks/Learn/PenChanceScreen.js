@@ -4,6 +4,9 @@ import PenChanceButton from '../../../components/learn/PenChanceButton';
 import {useNavigation} from 'react-navigation-hooks';
 import {useBallistics} from '../../../context/BallisticsProvider';
 import {Slider} from 'react-native-elements';
+import {NativeModules} from 'react-native';
+import Ammo from '../../../models/Ammo';
+import Armor from '../../../models/Armor';
 
 const View = styled.View`
   background: ${({theme}) => theme.colors.background};
@@ -46,16 +49,35 @@ const PenChance = styled.Text`
 const PenChanceScreen = () => {
   const {navigate} = useNavigation();
   const {ammo, armor, clearState} = useBallistics();
-  const [durability, setDurability] = useState();
-  const penChance = 95.7;
+  const [durability, setDurability] = useState(0);
+  const [penChance, setPenChance] = useState(null);
+  const ballisticsEngine = NativeModules.BallisticsEngine;
 
   useEffect(() => {
     if (armor) setDurability(armor.armor.durability);
   }, [armor]);
 
+  const calculatePenChance = () => {
+    if (armor && ammo) {
+      const selectedAmmo = {
+        ...new Ammo(ammo),
+        didFrag: false
+      };
+
+      const selectedArmor = {
+        ...new Armor(armor),
+        currentDurability: durability
+      };
+
+      ballisticsEngine.penetrationChance(selectedArmor, selectedAmmo, (val) =>
+        setPenChance(Math.round(val * 10) / 10)
+      );
+    }
+  };
+
   useEffect(() => {
-    // TODO: Add Ballistics Engine implementation.
-  }, [durability]);
+    calculatePenChance();
+  }, [durability, armor, ammo]);
 
   useEffect(() => {
     return clearState;

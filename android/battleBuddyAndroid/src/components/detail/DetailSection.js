@@ -25,6 +25,7 @@ const Row = styled.View`
 
 const Value = styled(Text)`
   font-weight: bold;
+  text-transform: capitalize;
 `;
 
 const DetailSection = ({section}) => (

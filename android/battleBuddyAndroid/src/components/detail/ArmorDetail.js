@@ -5,10 +5,13 @@ import DetailSection from './DetailSection';
 import {useNavigation} from 'react-navigation-hooks';
 import ItemType from '../../constants/ItemType';
 import {useBallistics} from '../../context/BallisticsProvider';
+import Armor from '../../models/Armor';
 
 const ArmorDetail = ({item}) => {
   const {navigate} = useNavigation();
   const {setArmor} = useBallistics();
+
+  const armor = new Armor(item);
 
   const data = [
     {
@@ -16,17 +19,17 @@ const ArmorDetail = ({item}) => {
       rows: [
         {
           key: 'Type',
-          value: localeString(item.type)
+          value: localeString(armor.armorType)
         },
-        {key: 'Class', value: `Class ${item.armor.class}`},
+        {key: 'Class', value: `Class ${armor.armorClass}`},
         {
           key: 'Durability',
-          value: item.armor.durability
+          value: armor.durability
         },
-        {key: 'Material', value: item.armor.material.name},
+        {key: 'Material', value: armor.materialName},
         {
           key: 'Zones',
-          value: item.armor.zones.join(', ')
+          value: armor.zones
         }
       ]
     },
@@ -35,15 +38,15 @@ const ArmorDetail = ({item}) => {
       rows: [
         {
           key: 'Speed',
-          value: item.penalties.speed
+          value: armor.speedPen
         },
         {
           key: 'Turn Speed',
-          value: item.penalties.mouse
+          value: armor.mousePen
         },
         {
           key: 'Ergonomics',
-          value: item.penalties.ergonomics
+          value: armor.ergoPen
         }
       ]
     },

@@ -17,7 +17,7 @@ const Header = styled.View`
   background: ${({theme}) => theme.colors.black};
   display: flex;
   flex-direction: row;
-  padding: 20px 0;
+  padding: 20px 10px;
 `;
 
 const HeaderText = styled.Text`
@@ -40,6 +40,7 @@ const ListItem = styled.TouchableOpacity`
   text-align: center;
   border-bottom-color: rgba(255, 255, 255, 0.1);
   border-bottom-width: 1px;
+  padding: 0 10px;
 `;
 
 const ArmorTableScreen = () => {
@@ -119,7 +120,7 @@ const ArmorTableScreen = () => {
         keyExtractor={(item) => item._id}
         renderItem={({item}) => (
           <ListItem onPress={() => onPressHandler(item)}>
-            <ItemText>{item.shortName}</ItemText>
+            <ItemText>{item.name}</ItemText>
             <ItemText>{item.armor.class}</ItemText>
             <ItemText>{item.armor.durability}</ItemText>
           </ListItem>

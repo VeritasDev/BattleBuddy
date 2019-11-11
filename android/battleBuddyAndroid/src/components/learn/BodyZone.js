@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
 import {ImageBackground} from 'react-native';
-
-const hpColors = ['#0B6319', '#5A680A', '#666101', '#664500', '#FF0100'];
 
 const Text = styled.Text`
   color: white;
@@ -38,34 +36,27 @@ const Bar = styled.View`
 `;
 
 const BodyZone = ({name, hp, maxHp, ...props}) => {
-  const [state, setState] = useState(hp);
-  const hpPercentage = (state / maxHp) * 100;
+  const hpPercentage = (hp / maxHp) * 100;
+  const hpDec = hpPercentage / 100;
   const blacked = hpPercentage === 0;
   let color;
 
-  useEffect(() => {
-    setState(hp);
-  }, [hp]);
-
-  if (hpPercentage >= 60) {
-    color = hpColors[0];
-  } else if (hpPercentage >= 40) {
-    color = hpColors[1];
-  } else if (hpPercentage >= 30) {
-    color = hpColors[2];
-  } else if (hpPercentage >= 10) {
-    color = hpColors[3];
-  } else if (hpPercentage < 10) {
-    color = hpColors[4];
+  if (hpDec >= 0.7) {
+    color = '#0C6316';
+  } else if (hpDec >= 0.5) {
+    color = '#596816';
+  } else if (hpDec >= 0.3) {
+    color = '#666100';
+  } else if (hpDec >= 0.1) {
+    color = '#664500';
+  } else if (hpDec > 0) {
+    color = '#FF0100';
   } else if (blacked) {
     color = 'black';
   }
 
   return (
-    <Container
-      {...props}
-      onPress={() => setState((prevState) => prevState - 10)}
-    >
+    <Container {...props}>
       <ImageBackground
         resizeMode="contain"
         style={{width: 'auto', flexGrow: 0}}
@@ -76,7 +67,7 @@ const BodyZone = ({name, hp, maxHp, ...props}) => {
       <HPBarContainer blacked={blacked} hp={hp} maxHp={maxHp}>
         <Bar color={color} width={`${hpPercentage}%`} />
         <HPText blacked={blacked}>
-          {state}/{maxHp}
+          {hp}/{maxHp}
         </HPText>
       </HPBarContainer>
     </Container>

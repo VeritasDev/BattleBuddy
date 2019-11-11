@@ -7,6 +7,7 @@ import AmmunitionProvider, {
 import LoadingIndicator from '../../../components/common/LoadingIndicator';
 import {useBallistics} from '../../../context/BallisticsProvider';
 import {useNavigation} from 'react-navigation-hooks';
+import Ammo from '../../../models/Ammo';
 
 const View = styled.View`
   background: ${({theme}) => theme.colors.almostBlack};
@@ -77,7 +78,10 @@ const AmmoTableScreen = () => {
         if (typeof a[type] === 'string') {
           return a[type].localeCompare(b[type]);
         } else {
-          return a[type] - b[type];
+          const aAmmo = new Ammo(a);
+          const bAmmo = new Ammo(b);
+
+          return aAmmo[type] - bAmmo[type];
         }
       });
     } else {
@@ -85,7 +89,10 @@ const AmmoTableScreen = () => {
         if (typeof a[type] === 'string') {
           return b[type].localeCompare(a[type]);
         } else {
-          return b[type] - a[type];
+          const aAmmo = new Ammo(a);
+          const bAmmo = new Ammo(b);
+
+          return bAmmo[type] - aAmmo[type];
         }
       });
     }
@@ -97,7 +104,7 @@ const AmmoTableScreen = () => {
     {label: 'Name', type: 'shortName'},
     {label: 'Caliber', type: 'caliber'},
     {label: 'Penetration', type: 'penetration'},
-    {label: 'Damage', type: 'damage'}
+    {label: 'Damage', type: 'totalDamage'}
   ];
 
   return (
@@ -118,14 +125,22 @@ const AmmoTableScreen = () => {
       <FlatList
         data={sorted.data || data}
         keyExtractor={(item) => item._id}
-        renderItem={({item}) => (
-          <ListItem onPress={() => onPressHandler(item)}>
-            <ItemText>{item.shortName}</ItemText>
-            <ItemText>{item.caliber}</ItemText>
-            <ItemText>{item.penetration}</ItemText>
-            <ItemText>{item.damage}</ItemText>
-          </ListItem>
-        )}
+        renderItem={({item}) => {
+          const ammo = new Ammo(item);
+
+          return (
+            <ListItem onPress={() => onPressHandler(item)}>
+              <ItemText>{item.shortName}</ItemText>
+              <ItemText>{ammo.caliber}</ItemText>
+              <ItemText>{ammo.penetration}</ItemText>
+              <ItemText>
+                {ammo.totalDamage}{' '}
+                {ammo.projectileCount !== 1 &&
+                  `(${ammo.damage}x${ammo.projectileCount})`}
+              </ItemText>
+            </ListItem>
+          );
+        }}
       />
     </View>
   );

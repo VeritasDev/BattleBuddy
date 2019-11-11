@@ -10,7 +10,7 @@ const StorageImage = ({doc, size, ...props}) => {
   const {path} = firebase.itemImageReference(doc._id, doc._kind, size);
 
   return (
-    <ImageView path={path} {...props} defaultSource={getPlaceholder(doc)} />
+    <ImageView path={path} defaultSource={getPlaceholder(doc)} {...props} />
   );
 };
 
@@ -20,7 +20,8 @@ StorageImage.propTypes = {
 };
 
 StorageImage.defaultProps = {
-  size: ImageType.medium
+  size: ImageType.medium,
+  resizeMode: 'cover'
 };
 
 export default StorageImage;
