@@ -232,6 +232,9 @@ extension ItemListViewController: PreviewMenuSelectionDelegate {
         case .armor:
             let armorVC = ItemDetailsViewController(ArmorDetailsConfiguration(displayable as! Armor))
             navigationController?.pushViewController(armorVC, animated: true)
+        case .rig:
+            let rigVC = ItemDetailsViewController(ChestRigDetailsConfiguration(displayable as! ChestRig))
+            navigationController?.pushViewController(rigVC, animated: true)
         case .medical:
             let medVC = ItemDetailsViewController(MedicalDetailsConfiguration(displayable as! Medical))
             navigationController?.pushViewController(medVC, animated: true)

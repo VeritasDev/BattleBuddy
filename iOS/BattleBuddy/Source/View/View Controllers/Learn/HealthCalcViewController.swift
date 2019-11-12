@@ -142,9 +142,9 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         thoraxButton.addTarget(self, action: #selector(handleThoraxShot), for: .touchUpInside)
         stomachButton.addTarget(self, action: #selector(handleStomachShot), for: .touchUpInside)
         leftArmButton.addTarget(self, action: #selector(handleLeftArmShot), for: .touchUpInside)
-        rightArmButton.addTarget(self, action: #selector(handleRightArmShot), for: .touchUpInside)
+        rightArmButton.addTarget(self, action: #selector(handleChestRightArmShot), for: .touchUpInside)
         leftLegButton.addTarget(self, action: #selector(handleLeftLegShot), for: .touchUpInside)
-        rightLegButton.addTarget(self, action: #selector(handleRightLegShot), for: .touchUpInside)
+        rightLegButton.addTarget(self, action: #selector(handleChestRightLegShot), for: .touchUpInside)
         settingsButton.addTarget(self, action: #selector(showSettings), for: .touchUpInside)
         reloadButton.addTarget(self, action: #selector(reset), for: .touchUpInside)
 
@@ -254,7 +254,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         handleImpact(.leftArm)
     }
 
-    @objc func handleRightArmShot() {
+    @objc func handleChestRightArmShot() {
         handleImpact(.rightArm)
     }
 
@@ -262,7 +262,7 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         handleImpact(.leftLeg)
     }
 
-    @objc func handleRightLegShot() {
+    @objc func handleChestRightLegShot() {
         handleImpact(.rightLeg)
     }
 

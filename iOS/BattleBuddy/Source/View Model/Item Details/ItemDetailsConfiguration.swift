@@ -26,7 +26,7 @@ class ItemDetailsConfigurationFactory {
         case .modification: return ItemDetailsViewController(FirearmDetailsConfiguration(displayable as! Firearm)) // TODO
         case .ammo: return ItemDetailsViewController(AmmoDetailsConfiguration(displayable as! Ammo))
         case .armor, .helmet, .visor: return ItemDetailsViewController(ArmorDetailsConfiguration(displayable as! Armor))
-        case .rig: return ItemDetailsViewController(RigDetailsConfiguration(displayable as! Rig))
+        case .rig: return ItemDetailsViewController(ChestRigDetailsConfiguration(displayable as! ChestRig))
         case .medical: return ItemDetailsViewController(MedicalDetailsConfiguration(displayable as! Medical))
         case .throwable: return ItemDetailsViewController(ThrowableDetailsConfiguration(displayable as! Throwable))
         case .melee: return ItemDetailsViewController(MeleeWeaponDetailsConfiguration(displayable as! MeleeWeapon))

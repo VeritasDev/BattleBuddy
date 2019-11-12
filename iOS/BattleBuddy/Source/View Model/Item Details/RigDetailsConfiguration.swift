@@ -1,5 +1,5 @@
 //
-//  RigDetailsConfiguration.swift
+//  ChestRigDetailsConfiguration.swift
 //  BattleBuddy
 //
 //  Created by Mike on 7/17/19.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class RigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewDelegate, UITableViewDataSource {
-    var rig: Rig
+class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewDelegate, UITableViewDataSource {
+    var rig: ChestRig
     var item: BaseItem
     var delegate: ItemDetailsSectionDelegate?
 
@@ -51,7 +51,7 @@ class RigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableViewDe
         }
     }()
 
-    init(_ rig: Rig) {
+    init(_ rig: ChestRig) {
         self.rig = rig
         self.item = rig
 

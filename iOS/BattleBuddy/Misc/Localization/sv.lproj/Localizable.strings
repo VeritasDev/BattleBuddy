@@ -485,3 +485,12 @@
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
 "attributions_misc_descr" = "Ikoner för sociala medier gjorda av Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licenserat under CC. 'Brain'-ikon av Sergey Patutin från the Noun Project (https://thenounproject.com/bdesign.by/) licenserat under CC. Uppifrån-och-ner soldat animationsbilder copyright Riley Gombart.";
+
+// ----------------------------------------
+// V1.1.0 - Later changes
+"push_notifications" = "Push Notifications";
+"battle_buddy_news" = "Battle Buddy News";
+"chest_rig" = "Chest Rig";
+"chest_rig_armored" = "Armored Chest Rig";
+"armor_properties" = "Armor Properties";
+"main_menu_chest_rigs" = "Chest Rigs";

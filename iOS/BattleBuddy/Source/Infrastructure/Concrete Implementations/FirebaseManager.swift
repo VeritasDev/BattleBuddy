@@ -79,7 +79,7 @@ class FirebaseManager: NSObject {
     private var cachedFirearms: [Firearm]?
     private var cachedAmmo: [Ammo]?
     private var cachedArmor: [Armor]?
-    private var cachedRigs: [Rig]?
+    private var cachedChestRigs: [ChestRig]?
     private var cachedMedical: [Medical]?
     private var cachedThrowables: [Throwable]?
     private var cachedMelee: [MeleeWeapon]?
@@ -381,7 +381,7 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
-    func getAllChestRigsWithSearchQuery(_ query: String, handler: @escaping (_: [Rig]) -> Void) {
+    func getAllChestRigsWithSearchQuery(_ query: String, handler: @escaping (_: [ChestRig]) -> Void) {
         getAllChestRigs { rigs in
             let filteredResults = rigs.filter {
                 $0.displayDescription.containsIgnoringCase(query)
@@ -519,8 +519,8 @@ extension FirebaseManager: DatabaseManager {
         getAllArmor(withTypes: [.body], handler: handler)
     }
 
-    func getAllChestRigs(handler: @escaping (_: [Rig]) -> Void) {
-        if let cache = cachedRigs {
+    func getAllChestRigs(handler: @escaping (_: [ChestRig]) -> Void) {
+        if let cache = cachedChestRigs {
             handler(cache)
             return
         }
@@ -533,13 +533,13 @@ extension FirebaseManager: DatabaseManager {
             }
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) rigs.")
-            let rigs = snapshot.getRigs()
-            self.cachedRigs = rigs
+            let rigs = snapshot.getChestRigs()
+            self.cachedChestRigs = rigs
             handler(rigs)
         }
     }
 
-    func getAllArmoredChestRigs(handler: @escaping (_: [Rig]) -> Void) {
+    func getAllArmoredChestRigs(handler: @escaping (_: [ChestRig]) -> Void) {
         getAllChestRigs { rigs in
             let filteredResults = rigs.filter { $0.armorConfig != nil }
             handler(filteredResults)
@@ -668,11 +668,17 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
-    func getAllChestRigsByClass(handler: @escaping ([ArmorClass: [Rig]]) -> Void) {
-        getAllArmoredChestRigs { allRigs in
-            var map: [ArmorClass: [Rig]] = [:]
+    func getAllChestRigsByClass(handler: @escaping ([ArmorClass: [ChestRig]]) -> Void) {
+        getAllChestRigs { allChestRigs in
+            var map: [ArmorClass: [ChestRig]] = [:]
             for type in ArmorClass.allCases { map[type] = [] }
-            for rig in allRigs { map[rig.armorConfig!.armorClass]?.append(rig) }
+            for rig in allChestRigs {
+                if let armorConfig = rig.armorConfig {
+                    map[armorConfig.armorClass]?.append(rig)
+                } else {
+                    map[ArmorClass.none]?.append(rig)
+                }
+            }
             handler(map)
         }
     }
@@ -758,7 +764,7 @@ extension QuerySnapshot {
     func getCharacters() -> [Character] { return documents.compactMap{ Character(json: $0.data()) } }
     func getFirearms() -> [Firearm] { return documents.compactMap{ Firearm(json: $0.data()) } }
     func getArmor() -> [Armor] { return documents.compactMap{ Armor(json: $0.data()) } }
-    func getRigs() -> [Rig] { return documents.compactMap{ Rig(json: $0.data()) } }
+    func getChestRigs() -> [ChestRig] { return documents.compactMap{ ChestRig(json: $0.data()) } }
     func getAmmo() -> [Ammo] { return documents.compactMap{ Ammo(json: $0.data()) } }
     func getMedical() -> [Medical] { return documents.compactMap{ Medical(json: $0.data()) } }
     func getMelee() -> [MeleeWeapon] { return documents.compactMap{ MeleeWeapon(json: $0.data()) } }

@@ -100,7 +100,7 @@ struct ArmorPreviewConfiguration: ItemPreviewConfiguration {
     let aspectRatioMultipler: Float = 1.3
 }
 
-struct RigPreviewConfiguration: ItemPreviewConfiguration {
+struct ChestRigPreviewConfiguration: ItemPreviewConfiguration {
     let dbManager = DependencyManagerImpl.shared.databaseManager()
     let title: String = Localized("chest_rig")
     var items: [Displayable]

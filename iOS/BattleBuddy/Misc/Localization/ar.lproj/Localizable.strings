@@ -485,3 +485,12 @@
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
 "attributions_misc_descr" = "ايقونات التواصل الإجتماعيه من Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) جميع الحقوق محفوظة. وايقونات (Brain) من قبل Serget Pututin من Noun Project. والtop down animations من قبل Riley Gombart.";
+
+// ----------------------------------------
+// V1.1.0 - Later changes
+"push_notifications" = "Push Notifications";
+"battle_buddy_news" = "Battle Buddy News";
+"chest_rig" = "Chest Rig";
+"chest_rig_armored" = "Armored Chest Rig";
+"armor_properties" = "Armor Properties";
+"main_menu_chest_rigs" = "Chest Rigs";

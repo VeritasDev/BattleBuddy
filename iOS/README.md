@@ -133,7 +133,7 @@
     - Investment per run
     - Total earned per run
 - [ ] Add New Item Types
-    - Rigs
+    - ChestRigs
     - Helmets and accessories
     - Headphones
     - Mods

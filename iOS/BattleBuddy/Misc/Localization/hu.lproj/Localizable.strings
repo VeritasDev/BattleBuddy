@@ -485,3 +485,12 @@
 // ----------------------------------------
 // V1.1.0 - Változtatások a fordításban
 "attributions_misc_descr" = "Közösségi média ikonok Abhishek Pipalva által készültek el (https://www.iconfinder.com/abhishekpipalva) CC. alatt vannak licenszelve. 'Brain' ikon Sergey Patutin által készült, a Noun Project-ből (https://thenounproject.com/bdesign.by/) A CC. licensze alatt. Top-down soldier animációs képek jogvédve vannak Riley Gombart által.";
+
+// ----------------------------------------
+// V1.1.0 - Later changes
+"push_notifications" = "Push Notifications";
+"battle_buddy_news" = "Battle Buddy News";
+"chest_rig" = "Chest Rig";
+"chest_rig_armored" = "Armored Chest Rig";
+"armor_properties" = "Armor Properties";
+"main_menu_chest_rigs" = "Chest Rigs";

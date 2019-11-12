@@ -485,3 +485,12 @@
 // ----------------------------------------
 // V1.1.0 - Changes to existing translations
 "attributions_misc_descr" = "Iconos de redes sociales por Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licenciados bajo CC. Icono 'Brain' por Sergey Patutin de el Noun Project (https://thenounproject.com/bdesign.by/) licenciado bajo CC. Derechos de autor de las imágenes animadas de cuerpo completo de Riley Gombart.";
+
+// ----------------------------------------
+// V1.1.0 - Later changes
+"push_notifications" = "Push Notifications";
+"battle_buddy_news" = "Battle Buddy News";
+"chest_rig" = "Chest Rig";
+"chest_rig_armored" = "Armored Chest Rig";
+"armor_properties" = "Armor Properties";
+"main_menu_chest_rigs" = "Chest Rigs";

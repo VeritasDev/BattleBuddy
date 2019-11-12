@@ -485,3 +485,12 @@
 // ----------------------------------------
 // V1.1.0 - Spremembe obstoječih prevodov
 "attributions_misc_descr" = "Avtor Ikon družbenih medijev Abhishek Pipalva https://www.iconfinder.com/abhishekpipalva) z licenco CC. Ikona 'Brain' Sergeja Patutina iz projekta Noun (https://thenounproject.com/bdesign.by/) z licenco CC. Avtorske slike od zgoraj navzdol so prikazane animacije vojaka Riley Gombart.";
+
+// ----------------------------------------
+// V1.1.0 - Later changes
+"push_notifications" = "Push Notifications";
+"battle_buddy_news" = "Battle Buddy News";
+"chest_rig" = "Chest Rig";
+"chest_rig_armored" = "Armored Chest Rig";
+"armor_properties" = "Armor Properties";
+"main_menu_chest_rigs" = "Chest Rigs";

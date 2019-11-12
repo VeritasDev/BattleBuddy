@@ -1,5 +1,5 @@
 //
-//  Rig.swift
+//  ChestRig.swift
 //  BattleBuddy
 //
 //  Created by Mike on 6/25/19.
@@ -9,7 +9,7 @@
 import Foundation
 import BallisticsEngine
 
-class Rig: BaseItem {
+class ChestRig: BaseItem {
     let json: [String : Any]
     let type: ItemType
     let armorConfig: Armor?
@@ -19,10 +19,12 @@ class Rig: BaseItem {
         self.type = .rig
 
         guard BaseItemUtils.baseItemJsonValid(json) else {
-            print("ERROR: Rig missing required parameters in json: \(json)")
+            print("ERROR: ChestRig missing required parameters in json: \(json)")
             return nil
         }
 
-        armorConfig = Armor(json: json)
+        var updatedJson = json
+        updatedJson["type"] = "body"
+        self.armorConfig = Armor(json: updatedJson)
     }
 }
