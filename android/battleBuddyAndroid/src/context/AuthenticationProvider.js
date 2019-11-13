@@ -1,6 +1,7 @@
 import React, {useState, useContext, createContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {useAuthManager, useGlobalMetadataManager} from './FirebaseProvider';
+import SplashScreen from 'react-native-splash-screen';
 
 const AuthContext = createContext();
 
@@ -9,27 +10,30 @@ const AuthenticationProvider = ({
   initialState = {authenticated: false, user: null}
 }) => {
   const [state, setState] = useState(initialState);
+  const {updateGlobalMetadata} = useGlobalMetadataManager();
   const auth = useAuthManager();
-  const metadata = useGlobalMetadataManager();
   const isLoggedIn = auth.isLoggedIn();
 
   const initializeSession = async () => {
     await auth.initializeSession();
-    await metadata.updateGlobalMetadata();
+    await updateGlobalMetadata();
+    setAuthenticated();
   };
 
-  useEffect(() => {
-    initializeSession();
-  }, []);
-
-  useEffect(() => {
+  const setAuthenticated = () => {
     if (isLoggedIn) {
       setState({
         authenticated: true,
         user: auth.currentUser()
       });
+
+      SplashScreen.hide();
     }
-  }, [isLoggedIn]);
+  };
+
+  useEffect(() => {
+    initializeSession();
+  }, []);
 
   return (
     <AuthContext.Provider value={{...state}}>{children}</AuthContext.Provider>

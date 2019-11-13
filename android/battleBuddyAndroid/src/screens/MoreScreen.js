@@ -29,7 +29,8 @@ const ScrollView = styled.ScrollView`
 `;
 
 const MoreScreen = ({navigation}) => {
-  const {globalMetadata} = useGlobalMetadataManager();
+  const {getGlobalMetadata} = useGlobalMetadataManager();
+  const metadata = getGlobalMetadata();
 
   const DATA = [
     {
@@ -59,11 +60,7 @@ const MoreScreen = ({navigation}) => {
         {
           title: (
             <Text>
-              <Bold>
-                {globalMetadata &&
-                  globalMetadata.totalUserCount &&
-                  insertThousandsSeperators(globalMetadata.totalUserCount)}
-              </Bold>{' '}
+              <Bold>{insertThousandsSeperators(metadata.totalUserCount)}</Bold>{' '}
               Battle Buddies have joined the fight!
             </Text>
           ),

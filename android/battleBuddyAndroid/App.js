@@ -1,7 +1,6 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components/native';
 import {StatusBar} from 'react-native';
-import SplashScreen from 'react-native-splash-screen';
 import {createAppContainer} from 'react-navigation';
 import tabNavigator from './src/navigation/MainTabNavigator';
 import Theme, {theme} from './src/components/Theme';
@@ -15,12 +14,6 @@ const Container = styled.View`
 
 const App = () => {
   const {authenticated} = useAuthentication();
-
-  useEffect(() => {
-    if (authenticated) {
-      SplashScreen.hide();
-    }
-  }, [authenticated]);
 
   if (authenticated) {
     return (
