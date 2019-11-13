@@ -1,10 +1,11 @@
 import {useGlobalMetadataManager} from '../context/FirebaseProvider';
 
 const useAmmoMetadata = () => {
-  const {globalMetadata} = useGlobalMetadataManager();
+  const {getGlobalMetadata} = useGlobalMetadataManager();
+  const metadata = getGlobalMetadata();
 
-  if (globalMetadata) {
-    const ammoMd = globalMetadata.ammoMetadata;
+  if (metadata) {
+    const ammoMd = metadata.ammoMetadata;
 
     const sorted = [];
     Object.entries(ammoMd)

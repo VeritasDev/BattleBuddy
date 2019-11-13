@@ -51,11 +51,11 @@ class FirebaseManager {
 export class GlobalMetadataManager extends FirebaseManager {
   globalMetadata = null;
 
-  getGlobalMetadata() {
+  getGlobalMetadata = () => {
     return this.globalMetadata;
-  }
+  };
 
-  async updateGlobalMetadata() {
+  updateGlobalMetadata = async () => {
     try {
       console.log('Fetching global metadata...');
       const snapshot = await this.db
@@ -65,9 +65,9 @@ export class GlobalMetadataManager extends FirebaseManager {
 
       this.globalMetadata = snapshot.data();
     } catch (error) {
-      console.log('ERROR fetching global metadata: ', error.debugDescription);
+      console.log('ERROR fetching global metadata: ', error);
     }
-  }
+  };
 }
 
 export class AccountManager extends FirebaseManager {
@@ -76,7 +76,9 @@ export class AccountManager extends FirebaseManager {
 
     try {
       await this.auth.signInAnonymously();
-      this.updateAccountProperties({[AccountProperty.lastLogin]: Date.now()});
+      await this.updateAccountProperties({
+        [AccountProperty.lastLogin]: Date.now()
+      });
     } catch (error) {
       console.error('Anonymous auth failed with error: ', error);
     }

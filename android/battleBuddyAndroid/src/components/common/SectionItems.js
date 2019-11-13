@@ -5,18 +5,16 @@ import {TouchableOpacity} from 'react-native';
 import SmallCard from './SmallCard';
 import {useNavigation} from 'react-navigation-hooks';
 
-const FlatList = styled.FlatList`
+const View = styled.ScrollView`
   padding: 0 20px;
   margin-bottom: 20px;
 `;
 
-export const SectionItem = ({item, onPress}) => {
-  return (
-    <TouchableOpacity onPress={onPress}>
-      <SmallCard {...item} />
-    </TouchableOpacity>
-  );
-};
+export const SectionItem = ({item, onPress}) => (
+  <TouchableOpacity onPress={onPress}>
+    <SmallCard {...item} />
+  </TouchableOpacity>
+);
 
 SectionItem.propTypes = {
   item: PropTypes.object.isRequired,
@@ -31,16 +29,15 @@ const SectionItems = ({items}) => {
   };
 
   return (
-    <FlatList
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      initialNumToRender={2}
-      data={items}
-      renderItem={({item}) => (
-        <SectionItem item={item} onPress={() => onPressHandler(item)} />
-      )}
-      keyExtractor={(item) => item._id}
-    />
+    <View horizontal showsHorizontalScrollIndicator={false}>
+      {items.map((item) => (
+        <SectionItem
+          key={item._id}
+          item={item}
+          onPress={() => onPressHandler(item)}
+        />
+      ))}
+    </View>
   );
 };
 
