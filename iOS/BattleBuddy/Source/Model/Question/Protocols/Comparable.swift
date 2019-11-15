@@ -36,6 +36,13 @@ enum ComparableProperty: Localizable {
     case ergoPenalty
     case hearingPenalty
 
+    // Chest Rig
+    case capacity
+    case oneByOneSlots
+    case oneByTwoSlots
+    case oneByThreeSlots
+    case twoByTwoSlots
+
     // Medical
     case useCount
     case useTime
@@ -71,6 +78,11 @@ enum ComparableProperty: Localizable {
         case .armorDamage: return Localized("armor_damage")
         case .fragChance: return Localized("frag_chance")
         case .muzzleVelocity: return Localized("muzzle_velocity")
+        case .capacity: return Localized("total_capacity")
+        case .oneByOneSlots: return "oneByOneSlots".local()
+        case .oneByTwoSlots: return "oneByTwoSlots".local()
+        case .oneByThreeSlots: return "oneByThreeSlots".local()
+        case .twoByTwoSlots : return "twoByTwoSlots".local()
         case .armorClass: return Localized("armor_class")
         case .armorDurability: return Localized("armor_points")
         case .armorZones: return Localized("armor_zones")
@@ -103,6 +115,7 @@ enum ComparableProperty: Localizable {
         case .firearm: return [.fireRate, .ergonomics, .verticalRecoil, .horizontalRecoil, .effectiveRange]
         case .ammo: return [.penetration, .damage, .armorDamage, .fragChance, .muzzleVelocity]
         case .armor: return [.armorClass, .armorDurability, .armorZones, .speedPenalty, .turnSpeedPenalty, .ergoPenalty]
+        case .chestRig: return [.capacity, .oneByOneSlots, .oneByTwoSlots, .oneByThreeSlots, .twoByTwoSlots]
         case .medical: return [.useCount, .useTime, .effectDuration, .removesBloodloss, .removesFracture, .removesPain, .removesContusion]
         case .throwable: return [.fuseTime, .fragmentationCount, .explosionRadiusMin, explosionRadiusMax]
         case .melee: return [.stabDamage, .stabRate, stabRange, .slashDamage, slashRate, .slashRange]
@@ -138,6 +151,17 @@ extension Ammo: Comparable {
 
 extension Armor: Comparable {
     func getValueStringForProperty(_ property: ComparableProperty) -> String {
+        if let rig = self as? ChestRig {
+            switch property {
+            case .capacity: return String(rig.totalCapacity)
+            case .oneByOneSlots: return String(rig.oneByOneSlots)
+            case .oneByTwoSlots: return String(rig.oneByTwoSlots)
+            case .oneByThreeSlots: return String(rig.oneByThreeSlots)
+            case .twoByTwoSlots: return String(rig.twoByTwoSlots)
+            default: break
+            }
+        }
+
         switch property {
         case .armorClass: return String(armorClass.local())
         case .armorDurability: return String(maxDurability)

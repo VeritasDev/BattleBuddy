@@ -214,7 +214,8 @@ class ItemListViewController: BaseStackViewController {
             comparison.itemsBeingCompared = compared
             return comparison
         case .rig:
-            return ArmorComparison(allArmor: []) // TODO
+            let allRigs = allItems.map { $0 as! ChestRig }
+            return ChestRigComparison(allChestRigs: allRigs)
         }
     }
 }

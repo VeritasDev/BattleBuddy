@@ -492,3 +492,10 @@
 "chest_rig_armored" = "Armored Chest Rig";
 "armor_properties" = "Armor Properties";
 "main_menu_chest_rigs" = "Chest Rigs";
+"total_capacity" = "Total Capacity";
+"compare_armored_rigs" = "Compare Armor";
+"compare_rigs" = "Compare Chest Rigs";
+"oneByOneSlots" = "1x1 Slots";
+"oneByTwoSlots" = "1x2 Slots";
+"oneByThreeSlots" = "1x3 Slots";
+"twoByTwoSlots" = "2x2 Slots";

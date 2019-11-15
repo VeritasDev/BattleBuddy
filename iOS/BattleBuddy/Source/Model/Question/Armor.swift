@@ -41,9 +41,9 @@ class Armor: BaseItem, Armored {
     fileprivate var protectsLeftLeg: Bool
     fileprivate var protectsChestRightLeg: Bool
 
-    init?(json: [String: Any]) {
+    init?(type: ItemType = .armor, json: [String: Any]) {
         self.json = json
-        self.type = .armor
+        self.type = type
 
         guard BaseItemUtils.baseItemJsonValid(json),
             let rawType = json["type"] as? String,
@@ -58,8 +58,31 @@ class Armor: BaseItem, Armored {
             let rawZones = armorProperties["zones"] as? [String],
             let rawBluntTp = armorProperties["bluntThroughput"] as? NSNumber,
             let penalties = json["penalties"] as? [String: Any] else {
-                print("ERROR: Armor missing required parameters in json: \(json)")
-                return nil
+                armorType = .body
+                material = .aluminium
+                armorClass = .none
+                maxDurability = 0
+                currentDurability = 0
+                protectsTopHead = false
+                protectsEyes = false
+                protectsJaws = false
+                protectsEars = false
+                protectsNape = false
+                protectsChest = false
+                protectsStomach = false
+                protectsLeftArm = false
+                protectsChestRightArm = false
+                protectsLeftLeg = false
+                protectsChestRightLeg = false
+                bluntThroughput = 0.0
+                movementSpeedPenalty = 0
+                ergoPenalty = 0
+                turnSpeedPenalty = 0
+                hearingPenalty = HearingPenalty.none
+                richochetX = 0
+                richochetY = 0
+                richochetZ = 0
+                return
         }
 
         armorType = resolvedType
@@ -135,7 +158,7 @@ class Armor: BaseItem, Armored {
 }
 
 class SimulationArmor: Armor {
-    override init?(json: [String: Any]) {
+    override init?(type: ItemType = .armor, json: [String: Any]) {
         super.init(json: json)
     }
 }

@@ -105,6 +105,7 @@
 		60837430232E546F00AA9D29 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */; };
 		60837432232E564F00AA9D29 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837431232E564F00AA9D29 /* LocaleManager.swift */; };
 		60A2E9D0235FD157007B53D1 /* BattlestateTwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A2E9CF235FD157007B53D1 /* BattlestateTwitterViewController.swift */; };
+		60BE38A3237E5D5400DBAEDF /* ChestRigComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE38A2237E5D5400DBAEDF /* ChestRigComparison.swift */; };
 		60C65223235A9C0C001E7555 /* FirearmSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C65222235A9C0C001E7555 /* FirearmSort.swift */; };
 		60EA7D2623331D5000EAD566 /* BaseTextfieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2523331D5000EAD566 /* BaseTextfieldCell.swift */; };
 		60EA7D2A23346CAB00EAD566 /* Armored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D2923346CAB00EAD566 /* Armored.swift */; };
@@ -348,6 +349,7 @@
 		6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewController.swift; sourceTree = "<group>"; };
 		60837431232E564F00AA9D29 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
 		60A2E9CF235FD157007B53D1 /* BattlestateTwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlestateTwitterViewController.swift; sourceTree = "<group>"; };
+		60BE38A2237E5D5400DBAEDF /* ChestRigComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestRigComparison.swift; sourceTree = "<group>"; };
 		60C65222235A9C0C001E7555 /* FirearmSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirearmSort.swift; sourceTree = "<group>"; };
 		60EA7D21233239C300EAD566 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		60EA7D22233239C900EAD566 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1052,6 +1054,7 @@
 				EF831FF622E8D29900C6C138 /* FirearmComparison.swift */,
 				EF831FFA22E8D2A200C6C138 /* AmmoComparison.swift */,
 				EF831FF922E8D2A200C6C138 /* ArmorComparison.swift */,
+				60BE38A2237E5D5400DBAEDF /* ChestRigComparison.swift */,
 				EF831FFD22E8D46F00C6C138 /* MedicalComparison.swift */,
 				EF831FF322E8D29600C6C138 /* MeleeWeaponComparison.swift */,
 				EFACFCA1234537F0003A3624 /* ModificationComparison.swift */,
@@ -1431,6 +1434,7 @@
 				EF831FFB22E8D2A200C6C138 /* AmmoComparison.swift in Sources */,
 				EF831FE422DE328A00C6C138 /* ComparisonOptionsViewController.swift in Sources */,
 				27BF990422C705AD003F01C5 /* BaseCardCell.swift in Sources */,
+				60BE38A3237E5D5400DBAEDF /* ChestRigComparison.swift in Sources */,
 				EF166DA2232FEAB200A9EF63 /* InmobiManager.swift in Sources */,
 				27C0B1742311FA3B004BCE14 /* ItemListViewController.swift in Sources */,
 				60A2E9D0235FD157007B53D1 /* BattlestateTwitterViewController.swift in Sources */,

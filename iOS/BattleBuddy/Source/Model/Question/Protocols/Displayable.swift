@@ -91,6 +91,15 @@ extension Armor: Displayable {
     var titleFont: UIFont { get { return UIFont.systemFont(ofSize: 21.0, weight: .bold) } }
     var placeholderImage: UIImage? {
         get {
+            if let _ = self as? ChestRig {
+                switch armorClass {
+                case .none: return UIImage(named: "class_0_placeholder_rig")?.withRenderingMode(.alwaysTemplate)
+                case .three: return UIImage(named: "class_3_placeholder_rig")?.withRenderingMode(.alwaysTemplate)
+                case .four: return UIImage(named: "class_4_placeholder_rig")?.withRenderingMode(.alwaysTemplate)
+                default: return UIImage(named: "class_3_placeholder_rig")?.withRenderingMode(.alwaysTemplate)
+                }
+            }
+
             switch (armorClass, armorType) {
             case (.none, .body): return nil
             case (.one, .body): return UIImage(named: "class_1_placeholder")?.withRenderingMode(.alwaysTemplate)
@@ -110,30 +119,6 @@ extension Armor: Displayable {
 
             case (_, .visor): return UIImage(named: "placeholder_visor")?.withRenderingMode(.alwaysTemplate)
             case (_, .attachment): return UIImage(named: "placeholder_helmet_attachment")?.withRenderingMode(.alwaysTemplate)
-            }
-        }
-    }
-    var remoteImageUrl: URL? { get { return URL(string: "https://static.tarkov-database.com/image/icon/\(id).png") } }
-    var iconImage: UIImage? { get { return nil } }
-}
-
-extension ChestRig: Displayable {
-    var identifier: String { get { return id } }
-    var title: String { get { return displayName } }
-    var subtitle: String? { get { return nil } }
-    var shortTitle: String { get { return displayNameShort } }
-    var tint: UIColor? { get { return UIColor(white: 0.7, alpha: 1.0) } }
-    var titleFont: UIFont { get { return UIFont.systemFont(ofSize: 21.0, weight: .bold) } }
-    var placeholderImage: UIImage? {
-        get {
-            if let armorConfig = armorConfig {
-                switch armorConfig.armorClass {
-                case .three: return UIImage(named: "class_3_placeholder_rig")?.withRenderingMode(.alwaysTemplate)
-                case .four: return UIImage(named: "class_4_placeholder_rig")?.withRenderingMode(.alwaysTemplate)
-                default: return UIImage(named: "class_3_placeholder_rig")?.withRenderingMode(.alwaysTemplate)
-                }
-            } else {
-                return UIImage(named: "class_0_placeholder_rig")?.withRenderingMode(.alwaysTemplate)
             }
         }
     }

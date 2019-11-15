@@ -12,6 +12,7 @@ enum ComparablePropertyType {
     case firearm
     case ammo
     case armor
+    case chestRig
     case medical
     case throwable
     case melee

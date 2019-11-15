@@ -17,7 +17,12 @@ class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableV
     let propertiesHeaderView = SectionHeaderView(headerText: Localized("properties"))
     lazy var propertiesTableView = { BaseTableView(dataSource: self, delegate: self) }()
     let typeCell = BaseTableViewCell(text: Localized("type"), accessory: .none, selection: .none)
-    lazy var propertiesCells = { [typeCell] }()
+    let capacityCell = BaseTableViewCell(text: Localized("total_capacity"), accessory: .none, selection: .none)
+    let oneByOneSlotsCell = BaseTableViewCell(text: Localized("oneByOneSlots"), accessory: .none, selection: .none)
+    let oneByTwoSlotsCell = BaseTableViewCell(text: Localized("oneByTwoSlots"), accessory: .none, selection: .none)
+    let oneByThreeSlotsCell = BaseTableViewCell(text: Localized("oneByThreeSlots"), accessory: .none, selection: .none)
+    let twoByTwoSlotsCell = BaseTableViewCell(text: Localized("twoByTwoSlots"), accessory: .none, selection: .none)
+    lazy var propertiesCells = { [typeCell, capacityCell, oneByOneSlotsCell, oneByTwoSlotsCell, oneByThreeSlotsCell, twoByTwoSlotsCell] }()
 
     let armorPropertiesStackView = BaseStackView(xPaddingCompact: 0.0)
     let armorPropertiesHeaderView = SectionHeaderView(headerText: Localized("armor_properties"))
@@ -40,12 +45,13 @@ class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableV
     let exploreStackView = BaseStackView(xPaddingCompact: 0.0)
     let exploreHeaderView = SectionHeaderView(headerText: Localized("explore"))
     lazy var exploreTableView = { BaseTableView(dataSource: self, delegate: self) }()
-    let compareCell = BaseTableViewCell(text: Localized("compare"))
+    let compareCell = BaseTableViewCell(text: Localized("compare_rigs"))
+    let compareArmorCell = BaseTableViewCell(text: Localized("compare_armored_rigs"))
     let penChanceCalcCell = BaseTableViewCell(text: Localized("pen_chance"))
     let combatSimCell = BaseTableViewCell(text: "main_menu_combat_sim".local())
     lazy var exploreCells: [BaseTableViewCell] = {
-        if let _ = rig.armorConfig {
-            return [compareCell, penChanceCalcCell, combatSimCell]
+        if rig.isArmored {
+            return [compareArmorCell, compareCell, penChanceCalcCell, combatSimCell]
         } else {
             return [compareCell]
         }
@@ -60,6 +66,9 @@ class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableV
         propertiesStackView.addArrangedSubview(propertiesHeaderView)
         propertiesStackView.addArrangedSubview(propertiesTableView)
 
+        armorPropertiesStackView.addArrangedSubview(armorPropertiesHeaderView)
+        armorPropertiesStackView.addArrangedSubview(armorPropertiesTableView)
+
         penaltiesStackView.addArrangedSubview(penaltiesHeaderView)
         penaltiesStackView.addArrangedSubview(penaltiesTableView)
         penaltiesStackView.addArrangedSubview(UIView())
@@ -67,19 +76,25 @@ class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableV
         exploreStackView.addArrangedSubview(exploreHeaderView)
         exploreStackView.addArrangedSubview(exploreTableView)
 
-        let armored = rig.armorConfig != nil
+        capacityCell.detailTextLabel?.text = String(rig.totalCapacity)
+        oneByOneSlotsCell.detailTextLabel?.text = String(rig.oneByOneSlots)
+        oneByTwoSlotsCell.detailTextLabel?.text = String(rig.oneByTwoSlots)
+        oneByThreeSlotsCell.detailTextLabel?.text = String(rig.oneByThreeSlots)
+        twoByTwoSlotsCell.detailTextLabel?.text = String(rig.twoByTwoSlots)
 
-        typeCell.detailTextLabel?.text = armored ? "chest_rig_armored".local() : "chest_rig".local()
+        if rig.isArmored {
+            typeCell.detailTextLabel?.text = "chest_rig_armored".local()
 
-        if let armor = rig.armorConfig {
-            armorClassCell.detailTextLabel?.text = armor.armorClass.local()
-            armorPointsCell.detailTextLabel?.text = String(armor.maxDurability)
-            armorZonesCell.detailTextLabel?.text = armor.localizedArmorZonesDisplayString()
-            armorMaterialCell.detailTextLabel?.text = armor.material.local()
+            armorClassCell.detailTextLabel?.text = rig.armorClass.local()
+            armorPointsCell.detailTextLabel?.text = String(rig.maxDurability)
+            armorZonesCell.detailTextLabel?.text = rig.localizedArmorZonesDisplayString()
+            armorMaterialCell.detailTextLabel?.text = rig.material.local()
 
-            speedPenaltyCell.detailTextLabel?.text = String(armor.penalties.movementSpeed)
-            turnSpeedPenaltyCell.detailTextLabel?.text = String(armor.penalties.turnSpeed)
-            ergoPenaltyCell.detailTextLabel?.text = String(armor.penalties.ergonomics)
+            speedPenaltyCell.detailTextLabel?.text = String(rig.penalties.movementSpeed)
+            turnSpeedPenaltyCell.detailTextLabel?.text = String(rig.penalties.turnSpeed)
+            ergoPenaltyCell.detailTextLabel?.text = String(rig.penalties.ergonomics)
+        } else {
+            typeCell.detailTextLabel?.text = "chest_rig".local()
         }
 
         setupConstraints()
@@ -89,6 +104,10 @@ class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableV
         let propertyTableViewHeight = CGFloat(propertiesCells.count) * propertiesTableView.rowHeight
         let totalPropertyCardHeight: CGFloat = propertiesHeaderView.height() + propertyTableViewHeight + propertiesStackView.totalPadding
         propertiesStackView.constrainHeight(totalPropertyCardHeight)
+
+        let armorPropertiesTableViewHeight = CGFloat(armorPropertiesCells.count) * armorPropertiesTableView.rowHeight
+        let totalArmorPropertiesCardHeight: CGFloat = armorPropertiesHeaderView.height() + armorPropertiesTableViewHeight + armorPropertiesStackView.totalPadding
+        armorPropertiesStackView.constrainHeight(totalArmorPropertiesCardHeight)
 
         let penaltiesTableViewHeight = CGFloat(penaltiesCells.count) * penaltiesTableView.rowHeight
         let totalPenaltiesCardHeight: CGFloat = penaltiesHeaderView.height() + penaltiesTableViewHeight + penaltiesStackView.totalPadding
@@ -100,7 +119,7 @@ class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableV
     }
 
     func getArrangedSubviews() -> [UIView] {
-        if let _ = rig.armorConfig {
+        if rig.isArmored {
             return [propertiesStackView, armorPropertiesStackView, penaltiesStackView, exploreStackView]
         } else {
             return [propertiesStackView, exploreStackView]
@@ -138,35 +157,44 @@ class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableV
         case armorClassCell:
             self.delegate?.showLoading(show: true)
 
-            dbManager.getAllBodyArmorOfClass(armorClass: rig.armorConfig!.armorClass) { allArmor in
+            dbManager.getAllBodyArmorOfClass(armorClass: rig.armorClass) { allArmor in
                 self.delegate?.showLoading(show: false)
 
                 let armorClassVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
-                armorClassVC.title = self.rig.armorConfig!.armorClass.local()
+                armorClassVC.title = self.rig.armorClass.local()
                 self.delegate?.showViewController(viewController: armorClassVC)
             }
         case armorMaterialCell:
             self.delegate?.showLoading(show: true)
 
-            dbManager.getAllBodyArmorWithMaterial(material: rig.armorConfig!.material) { allArmor in
+            dbManager.getAllBodyArmorWithMaterial(material: rig.material) { allArmor in
                 self.delegate?.showLoading(show: false)
 
                 let armorVC = BaseItemPreviewViewController(delegate: nil, config: ArmorPreviewConfiguration(items: allArmor))
-                armorVC.title = self.rig.armorConfig!.material.local()
+                armorVC.title = self.rig.material.local()
                 self.delegate?.showViewController(viewController: armorVC)
+            }
+        case compareArmorCell:
+            self.delegate?.showLoading(show: true)
+
+            dbManager.getAllBodyArmor { allResults in
+                self.delegate?.showLoading(show: false)
+
+                let compareOptionsVC = ComparisonOptionsViewController(ArmorComparison(self.rig, allArmor: allResults))
+                self.delegate?.showViewController(viewController: compareOptionsVC)
             }
         case compareCell:
             self.delegate?.showLoading(show: true)
 
-            dbManager.getAllBodyArmor() { allArmor in
+            dbManager.getAllChestRigs () { allRigs in
                 self.delegate?.showLoading(show: false)
 
-                let compareOptionsVC = ComparisonOptionsViewController(ArmorComparison(self.rig.armorConfig!, allArmor: allArmor))
+                let compareOptionsVC = ComparisonOptionsViewController(ChestRigComparison(allChestRigs: allRigs))
                 self.delegate?.showViewController(viewController: compareOptionsVC)
             }
         case penChanceCalcCell:
             let penChanceVC = PenChanceCalcViewController()
-            penChanceVC.armor = SimulationArmor(json: rig.armorConfig!.json)
+            penChanceVC.armor = SimulationArmor(json: rig.json)
             delegate?.showViewController(viewController: penChanceVC)
         case combatSimCell:
             self.delegate?.showLoading(show: true)
@@ -174,7 +202,7 @@ class ChestRigDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableV
             DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
                 self.delegate?.showLoading(show: false)
 
-                let combatSimVC = CombatSimViewController(characters: characters, initialBodyArmor: SimulationArmor(json: self.rig.armorConfig!.json))
+                let combatSimVC = CombatSimViewController(characters: characters, initialBodyArmor: SimulationArmor(json: self.rig.json))
                 self.delegate?.showViewController(viewController: combatSimVC)
             }
         default:

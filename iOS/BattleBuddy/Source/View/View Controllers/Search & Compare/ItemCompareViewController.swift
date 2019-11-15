@@ -79,6 +79,7 @@ class ItemCompareViewController: BaseTableViewController {
         switch item {
         case let firearm as Firearm: itemDetailsConfig = FirearmDetailsConfiguration(firearm)
         case let ammo as Ammo: itemDetailsConfig = AmmoDetailsConfiguration(ammo)
+        case let chestRig as ChestRig: itemDetailsConfig = ChestRigDetailsConfiguration(chestRig)
         case let armor as Armor: itemDetailsConfig = ArmorDetailsConfiguration(armor)
         case let med as Medical: itemDetailsConfig = MedicalDetailsConfiguration(med)
         case let throwable as Throwable: itemDetailsConfig = ThrowableDetailsConfiguration(throwable)

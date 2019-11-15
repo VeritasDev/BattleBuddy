@@ -506,8 +506,12 @@ extension FirebaseManager: DatabaseManager {
             guard let snapshot = querySnapshot else { handler([]); return }
             print("Successfully fetched \(String(snapshot.documents.count)) armors.")
             let armor = snapshot.getArmor()
-            self.cachedArmor = armor
-            handler(armor)
+
+            self.getAllChestRigs { allRigs in
+                let allArmor = armor + allRigs
+                self.cachedArmor = allArmor
+                handler(allArmor)
+            }
         }
     }
 
@@ -541,7 +545,7 @@ extension FirebaseManager: DatabaseManager {
 
     func getAllArmoredChestRigs(handler: @escaping (_: [ChestRig]) -> Void) {
         getAllChestRigs { rigs in
-            let filteredResults = rigs.filter { $0.armorConfig != nil }
+            let filteredResults = rigs.filter { $0.armorClass != .none }
             handler(filteredResults)
             return
         }
@@ -673,11 +677,7 @@ extension FirebaseManager: DatabaseManager {
             var map: [ArmorClass: [ChestRig]] = [:]
             for type in ArmorClass.allCases { map[type] = [] }
             for rig in allChestRigs {
-                if let armorConfig = rig.armorConfig {
-                    map[armorConfig.armorClass]?.append(rig)
-                } else {
-                    map[ArmorClass.none]?.append(rig)
-                }
+                map[rig.armorClass]?.append(rig)
             }
             handler(map)
         }
