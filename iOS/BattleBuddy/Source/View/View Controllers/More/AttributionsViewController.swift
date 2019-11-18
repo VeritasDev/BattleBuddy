@@ -68,6 +68,29 @@ class AttributionsViewController: BaseTableViewController {
         cell.selectionStyle = .gray
         return cell
     }()
+    lazy var betrixCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.textLabel?.text = "attributions_betrix".local()
+        cell.textLabel?.font = .systemFont(ofSize: 22, weight: .medium)
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.text = "attributions_betrix_descr".local()
+        cell.detailTextLabel?.font = .systemFont(ofSize: 14, weight: .light)
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.isUserInteractionEnabled = false
+        return cell
+    }()
+    lazy var smooothCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.textLabel?.text = "attributions_smoooth".local()
+        cell.textLabel?.font = .systemFont(ofSize: 22, weight: .medium)
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.text = "attributions_smoooth_descr".local()
+        cell.detailTextLabel?.font = .systemFont(ofSize: 14, weight: .light)
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .gray
+        return cell
+    }()
     lazy var translationsCell: BaseTableViewCell = {
         let cell = BaseTableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = "attributions_translations".local()
@@ -92,7 +115,7 @@ class AttributionsViewController: BaseTableViewController {
         return cell
     }()
 
-    lazy var cells: [BaseTableViewCell] = [bsgCell, restApiCell, nofamCell, willerzCell, translationsCell, communityCell, miscCell]
+    lazy var cells: [BaseTableViewCell] = [bsgCell, restApiCell, nofamCell, smooothCell, willerzCell, translationsCell, betrixCell, communityCell, miscCell]
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -130,6 +153,7 @@ class AttributionsViewController: BaseTableViewController {
         case nofamCell: handleUrlString("https://www.twitch.tv/nofoodaftermidnight")
         case willerzCell: handleUrlString("https://www.twitch.tv/willer_z")
         case bsgCell: handleUrlString("https://www.battlestategames.com/")
+        case smooothCell: handleUrlString("https://www.twitch.tv/smooothbrain")
         case translationsCell: navigationController?.pushViewController(LocalizationTeamViewController(), animated: true)
         default: break
         }

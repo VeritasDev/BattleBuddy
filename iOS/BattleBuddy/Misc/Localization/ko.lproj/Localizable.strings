@@ -1,0 +1,323 @@
+// MARK: - General
+"yes" = "øπ";
+"no" = "æ∆¥œø¿";
+"ok" = "≥◊";
+"done" = "øœ∑·";
+"soon" = "Soon??";
+"coming_soon" = "∞ √‚Ω√??";
+"unknown" = "æÀ∑¡¡ˆ¡ˆ æ ¿Ω";
+"type" = "≈∏¿‘";
+"continue" = "∞Ëº”";
+"veritas" = "Veritas";
+"required" = "« ºˆ";
+
+// MARK: - Filter/sort/compare
+"compare" = "∫Ò±≥";
+"name" = "¿Ã∏ß";
+"save" = "¿˙¿Â";
+"recommended" = "√ﬂ√µ";
+"similar" = "∫ÒΩ¡«—";
+"all" = "∏µÁ";
+"compare_with" = "...øÕ ∫Ò±≥";
+
+// MARK: - More / Attributions
+"about" = "πË∆≤ πˆµ º“∞≥";
+"dev_by" = "Veritasø° ¿««ÿ ∞≥πﬂ";
+"dev_support" = "∞≥πﬂ ¡ˆø¯¿ª «œ∞Ì ΩÕ≥™ø‰?";
+"watch_ad" = "±§∞Ì∏¶ ∫¡¡÷ººø‰";
+"enable_banner_ads" = "πË≥  ±§∞Ì »∞º∫»≠";
+"view_on_github" = "±Í«Èø°º≠ ∫∏±‚";
+"rate_this_app" = "πË∆≤πˆµ ∆Ú∞°";
+"attributions" = "±‚ø©";
+"check_out_team" = "The Team »Æ¿Œ";
+"team" = "The Team";
+"twitter" = "∆Æ¿ß≈Õ";
+"twitch" = "∆Æ¿ßƒ°";
+"discord" = "µΩ∫ƒ⁄µÂ";
+"youtube" = "¿Ø∆©∫Í";
+"instagram" = "¿ŒΩ∫≈∏±◊∑•";
+"soundcloud" = "ªÁøÓµÂ≈¨∂ÛøÏµÂ";
+"website" = "veritas.wtf";
+"spotify" = "Ω∫∆˜∆º∆ƒ¿Ã";
+"social" = "º“º»";
+"music" = "≥ª ¿Ωæ«";
+"website_error" = "¿Ã ƒ‹≈Ÿ√˜∏¶ ∑ŒµÂ «“ ºˆ æ¯Ω¿¥œ¥Ÿ. ∞¸∑√ æ€¿Ã º≥ƒ°µ«æÓ ¿÷¥¬¡ˆ »Æ¿Œ«œΩ Ω√ø¿.";
+"live_now" = "«ˆ¿Á πÊº€¡ﬂ!";
+"feedback_title" = "««µÂπÈ ∂«¥¬ √ﬂ∞° ±‚¥… æ∆¿ÃµæÓ?";
+"feedback_subtitle" = "¿˙»Ò µΩ∫ƒ⁄µÂø° ¬¸∞°«ÿ¡÷ººø‰!";
+"upcoming_features" = "ªı∑Œ≥™ø√ ±‚¥…µÈ";
+
+"twitter_description" = "√÷Ω≈ ªÛ≈¬∏¶ ¿Ø¡ˆ«œººø‰";
+"twitch_description" = "∆Æ¿ßƒ°ø°º≠ ª˝πÊº€ ∫∏±‚";
+"discord_description" = "øÏ∏Æ ƒøπ¬¥œ∆º µΩ∫ƒ⁄µÂø° ¬¸∞°«œººø‰";
+"youtube_description" = "¿Ø∆©∫Íø°º≠ ∫∏±‚";
+"instagram_description" = "¿ŒΩ∫≈∏±◊∑• πÃµæÓ";
+"soundcloud_description" = "ªÁøÓµÂ ≈¨∂ÛøÏµÂø°º≠ µË±‚";
+"spotify_description" = "Ω∫∆˜∆º∆ƒ¿Ãø°º≠ µË±‚";
+"website_description" = "∫£∏Æ≈∏Ω∫ø° ¥Î«— √ﬂ∞° ¡§∫∏";
+
+// MARK: - Tabs
+"items" = "æ∆¿Ã≈€";
+"learn" = "πËøÏ±‚";
+"more" = "¥ı";
+"search" = "∞Àªˆ";
+
+// MARK: - Main Menu
+"main_menu_ammo" = "≈∫æ‡";
+"main_menu_armor" = "πÊ≈∫∫π";
+"main_menu_ballistics" = "≈∫µµ«–";
+"main_menu_firearms" = "√—±‚";
+"main_menu_medical" = "¿«∑·";
+"main_menu_melee" = "±Ÿ¡¢ π´±‚";
+"main_menu_throwables" = "≈ı√¥ π´±‚";
+"main_menu_health_calc" = "µ•πÃ¡ˆ ∞ËªÍ±‚";
+
+// MARK: - Sub-Categories
+"firearm_types" = "√—±‚ ¿Ø«¸";
+"calibers" = "±∏∞Ê";
+
+// MARK: - Calculators
+"pen_chance" = "∞¸≈Î »Æ∑¸";
+"no_armor_selected" = "º±≈√µ» πÊ≈∫∫π æ¯¿Ω";
+"no_ammo_selected" = "º±≈√µ» ≈∫æ‡ æ¯¿Ω";
+"select_ammo" = "≈∫æ‡ º±≈√";
+"select_armor" = "πÊ≈∫∫π º±≈√";
+"pen_chance_help_title" = "∞¸≈Î »Æ∑¸ ∞ËªÍ±‚";
+"pen_chance_help_message" = "¿Ã µµ±∏¥¬ º±≈√«— ≈∫æ‡¿Ã ¡÷æÓ¡¯ πÊ≈∫∫π¿ª ∞¸≈Î «“ »Æ∑¸¿ª ∞ËªÍ«’¥œ¥Ÿ. ≈∫æ‡∞˙ πÊ≈∫∫π¿ª º±≈√«œ∏È ΩΩ∂Û¿Ã¥ı∏¶ ªÁøÎ«œø© πÊ≈∫∫π¿« ≥ª±∏µµ∏¶ ¡∂¡§«“ºˆ ¿÷¿∏∏Á ¿Ã∏¶ ≈Î«ÿ ¥Ÿ∏• ≈∫æ‡µÈ¿Ã ¥ŸæÁ«— ≥ª±∏µµ ºˆ¡ÿ¿« πÊ≈∫∫πø° ¥Î«ÿº≠ æÛ∏∂≥™ »ø∞˙¿˚¿Œ¡ˆ »Æ¿Œ«“ ºˆ ¿÷Ω¿¥œ¥Ÿ!";
+
+"health_calc_title" = "µ•πÃ¡ˆ ∞ËªÍ±‚";
+"total_hp" = "√— HP";
+
+"body_zone_head" = "∏”∏Æ";
+"body_zone_thorax" = "»‰∫Œ";
+"body_zone_stomach" = "∫π∫Œ";
+"body_zone_right_arm" = "ø¿∏•∆»";
+"body_zone_left_arm" = "øﬁ∆»";
+"body_zone_right_leg" = "ø¿∏•¥Ÿ∏Æ";
+"body_zone_left_leg" = "øﬁ¥Ÿ∏Æ";
+
+// MARK: - Items
+"armor" = "πÊ≈∫(armor)";
+"helmets" = "«Ô∏‰";
+"ballistics" = "≈∫µµ«–";
+"health" = "√º∑¬";
+"firearms" = "√—±‚";
+"ammunition" = "≈∫æ‡";
+"body_armor" = "πÊ≈∫∫π";
+"medical_items" = "¿«∑· æ∆¿Ã≈€";
+"throwables" = "≈ı√¥π∞";
+"healing_items" = "ƒ°∑· æ∆¿Ã≈€";
+"pain_management" = "≈Î¡ı ∞¸∏Æ(pain management)";
+"status_management" = "ªÛ≈¬ »ø∞˙ ∞¸∏Æ(Status Effect Management)";
+"stims" = "¿⁄±ÿ¡¶";
+"grenades" = "ºˆ∑˘≈∫";
+"properties" = "º”º∫";
+"performance" = "º∫¥…";
+"ergonomics" = "¿Œ√º∞¯«–";
+"ergo" = "¿Œ√º(Ergo)";
+"vertical_recoil" = "ºˆ¡˜ π›µø";
+"horizontal_recoil" = "ºˆ∆Ú π›µø";
+"recoil" = "π›µø";
+
+// MARK: - Weapons
+"weapon_class" = "≈¨∑°Ω∫";
+"assault_rifle" = "µπ∞› º“√—";
+"assault_carbine" = "æÓΩ‰∆Æ ƒ´∫Û";
+"sniper_rifle" = "¿˙∞›√—";
+"designated_marksman_rifle" = "DMR";
+"pistol" = "±«√—";
+"shotgun" = "º¶∞«";
+"sub_machine_gun" = "±‚∞¸¥‹√—";
+"machine_gun" = "±‚∞¸√—";
+"caliber" = "±∏∞Ê";
+"fire_rate" = "πﬂªÁ º”µµ";
+"effective_range" = "¿Ø»ø ªÁ∞≈∏Æ";
+"fold_or_retract" = "¡¢±‚/∆Ï±‚";
+"retractable" = "¡¢¿«Ωƒ ∞≥∏”∏Æ∆«";
+"build_wizard" = "∫ÙµÂ ∏∂π˝ªÁ";
+"gun_build_custom" = "ªÁøÎ¿⁄ ¡§¿«";
+"gun_build_recoil" = "√÷º“ π›µø";
+"gun_build_ergo" = "√÷¥Î ¿Œ√º ∞¯«–";
+"gun_build_random" = "∑£¥˝";
+"fire_mode" = "πﬂªÁ ∏µÂ";
+"fire_modes" = "πﬂªÁ ∏µÂµÈ";
+"fire_mode_semi" = "¥‹πﬂ";
+"fire_mode_auto" = "ø¨ªÁ";
+"fire_mode_burst" = "¡°ªÁ";
+"fire_mode_semi_short" = "¥‹πﬂ";
+"fire_mode_auto_short" = "ø¨πﬂ";
+"fire_mode_burst_short" = "¡°ªÁ";
+"action" = "æ◊º«";
+"action_type_pump" = "∆ﬂ«¡ æ◊º«";
+"action_type_bolt" = "∫º∆Æ æ◊º«";
+"action_type_pump_short" = "∆ﬂ«¡";
+"action_type_bolt_short" = "∫º∆Æ";
+"build" = "∏∏µÈ±‚";
+"build_this_gun" = "¿Ã √— ∏∏µÈ±‚";
+
+"compare_preset_semi_auto_rifle" = "¥‹πﬂ º“√—";
+"compare_preset_full_auto_rifles" = "ø¨ªÁ º“√—";
+"compare_preset_rifles_caliber_match" = "∞∞¿∫ ±∏∞Ê ªÁøÎ«œ¥¬ º“√—";
+"compare_preset_rifles" = "º“√—";
+"compare_preset_full_auto_caliber_match" = "∞∞¿∫ ±∏∞Ê ªÁøÎ«œ¥¬ ø¨ªÁ º“√—";
+"compare_preset_semi_auto_pistols" = "¥‹πﬂ ±«√—";
+"compare_preset_full_auto_pistols" = "ø¨ªÁ ±«√—";
+"compare_preset_pistols_caliber_match" = "∞∞¿∫ ±∏∞ÊªÁøÎ«œ¥¬ ±«√—";
+"compare_preset_pistols" = "±«√—";
+"compare_preset_manual_shotguns" = "ºˆµø º¶∞«";
+"compare_preset_shotguns" = "º¶∞«";
+"compare_preset_smgs_caliber_match" = "∞∞¿∫ ±∏∞Ê ªÁøÎ«œ¥¬ ±‚∞¸¥‹√—";
+"compare_preset_smgs" = "±‚∞¸¥‹√—";
+"compare_preset_bolt_snipers" = "∫º∆Ææ◊º« ¿˙∞›√—";
+"compare_preset_snipers_and_dmrs" = "¿˙∞›√— & DMRs";
+"compare_preset_dmrs" = "¡ˆ¡§ªÁºˆ º“√—";
+
+// MARK: - Ammo
+"guns_for_caliber" = "∞¸∑√ »≠±‚";
+"subsonic" = "º“¿Ω";
+"tracer" = "øπ±§";
+"muzzle_velocity" = "≈∫º” (m/s)";
+"compatible_firearms" = "»£»Ø »≠±‚";
+"rpm" = "rpm";
+"meters_abbr" = "m";
+"seconds_abbr" = "s";
+
+// MARK: - Armor
+"armor_class_0" = "πÊ≈∫∑π∫ß æ¯¿Ω";
+"armor_class_1" = "πÊ≈∫∑π∫ß 1 ";
+"armor_class_2" = "πÊ≈∫∑π∫ß 2";
+"armor_class_3" = "πÊ≈∫∑π∫ß 3";
+"armor_class_4" = "πÊ≈∫∑π∫ß 4";
+"armor_class_5" = "πÊ≈∫∑π∫ß 5";
+"armor_class_6" = "πÊ≈∫∑π∫ß 6";
+"armor_type_body" = "πÊ≈∫∫π";
+"armor_type_helmet"= "«Ô∏‰";
+"armor_type_visor" = "πŸ¿Ã¿˙";
+"armor_type_attachment" = "∫Œ¬¯π∞";
+"armor_zone_top" = "∏”∏Æ ¿≠∫Œ∫–";
+"armor_zone_eyes" = "¥´";
+"armor_zone_jaws" = "≈Œ";
+"armor_zone_ears" = "±Õ";
+"armor_zone_nape" = "∏Ò µ⁄¬ ";
+"armor_zone_chest" = "∞°Ωø";
+"armor_zone_stomach" = "∫π∫Œ";
+"armor_zone_left_arm" = "øﬁ∆»";
+"armor_zone_right_arm" = "ø¿∏•∆»";
+"armor_zone_left_leg" = "øﬁ¥Ÿ∏Æ";
+"armor_zone_right_leg" = "ø¿∏•¥Ÿ∏Æ";
+"armor_mat_ceramic" = "ºº∂ÛπÕ";
+"armor_mat_armored_steel" = "¿Â∞© ∞≠√∂";
+"armor_mat_aramid" = "æ∆∂ÛπÃµÂ";
+"armor_mat_uhmwpe" = "UHMWPE";
+"armor_mat_combined" = "∫π«’";
+"armor_mat_aluminum" = "æÀ∑ÁπÃ¥Ω";
+"armor_mat_glass" = "¿Ø∏Æ";
+"armor_mat_titanium" = "∆º≈∏¥Ω";
+
+"armor_type" = "¿Ø«¸";
+"armor_material" = "¿Á∑·";
+"armor_class" = "≈¨∑°Ω∫";
+"armor_points" = "≥ª±∏µµ";
+"armor_zones" = "æ∆∏” ±∏ø™";
+"penalties" = "∆‰≥Œ∆º";
+"speed_penalty" = "º”µµ";
+"turn_speed_penalty" = "»∏¿¸ º”µµ";
+"ergo_penalty" = "¿Œ√º∞¯«–";
+
+"penetration" = "∞¸≈Î";
+"damage" = "µ•πÃ¡ˆ";
+"armor_damage" = "πÊ≈∫ µ•πÃ¡ˆ";
+"frag_chance" = "∆ƒº‚ ∞°¥…º∫";
+
+"explore" = "≈Ωªˆ";
+"compare" = "∫Ò±≥";
+"compare_performance" = "º∫¥… ∫Ò±≥";
+"dps_calc" = "DPS ∞ËªÍ±‚";
+"kill_time_calc" = "≈≥≈∏¿” ∞ËªÍ±‚";
+
+// MARK: - Medical
+"damage" = "µ•πÃ¡ˆ";
+"contusion" = "≈∏π⁄ªÛ";
+"fracture" = "∞Ò¿˝";
+"pain" = "∞Ì≈Î";
+"medkit" = "∏ﬁµÂ≈∂";
+"painkiller" = "∆‰¿Œ≈≥∑Ø";
+"accessory" = "æ◊ººº≠∏Æ";
+"stimulator" = "¿⁄±ÿ¡¶";
+"use_time" = "ªÁøÎ Ω√∞£";
+"effect_duration" = "»ø∞˙ ¡ˆº” Ω√∞£";
+"use_count" = "# ≥≤¿∫ »Ωºˆ";
+"hp_resource" = "√— HP";
+"removes_bloodloss" = "«˜æ◊ º’Ω« ¡¶∞≈";
+"removes_contusion" = "≈∏π⁄ªÛ ¡¶∞≈";
+"removes_fracture" = "∞Ò¿˝ ¡¶∞≈";
+"removes_pain" = "≈Î¡ı ¡¶∞≈";
+"hydration_modifier" = "∞•¡ı ºˆ¡§ƒ°";
+"energy_modifier" = "ø°≥ ¡ˆ ºˆ¡§ƒ°";
+
+// MARK: - Throwables
+"throwable_frag" = "ººø≠";
+"throwable_flash" = "º∂±§";
+"throwable_smoke" = "ø¨∏∑";
+"fuse_time" = "±‚∆¯ Ω√∞£";
+"explosion_radius_min" = "√÷º“ ∆¯πﬂ π¸¿ß";
+"explosion_radius_max" = "√÷¥Î ∆¯πﬂ π¸¿ß";
+"fragmentation_count" = "¡∂∞¢ ∞≥ºˆ";
+
+// MARK: - Melee
+"damage" = "µ•πÃ¡ˆ";
+"rate" = "∫Ò¿≤";
+"range" = "π¸¿ß";
+
+"stab" = "¬Ó∏£±‚";
+"stab_dmg" = "¬Ó∏£±‚ «««ÿ";
+"stab_rate" = "¬Ó∏£±‚ º”µµ";
+"stab_range" = "¬Ó∏£±‚ π¸¿ß";
+
+"slash" = "∫£±‚";
+"slash_dmg" = "∫£±‚ µ•πÃ¡ˆ";
+"slash_rate" = "∫£±‚ º”µµ";
+"slash_range" = "∫£±‚ π¸¿ß";
+
+// MARK: - Posts
+"ballistics_title" = "πÊ≈∫ & ≈∫µµ«–: ±‚∫ªªÁ«◊";
+"ballistics_body_1" = "Escape from Tarkovø°º≠¿« ≈∫µµ«– Ω√Ω∫≈€¿∫ º“ºˆ¿« ªÁ∂˜µÈ∏∏¿Ã »Æ¿Œ«— ∫Ì∑¢π⁄Ω∫∂Û ∫ººˆ¿÷Ω¿¥œ¥Ÿ. ¿Ã¥¬ EFT∞° «•∏È ∞¸≈Î »Æ∑¸, µµ≈∫ ∞¢µµ, πÊ≈∫∞˙ ∏ˆ ∞¢∞¢ø° ¿˚øÎµ«¥¬ µ•πÃ¡ˆ, RNG ±‚π› ø‰º“µÓ ∫π¿‚«— ∞ËªÍΩƒ¿ª « ø‰∑Œ «œ±‚ ∂ßπÆ¿‘¥œ¥Ÿ. ¿Ã∑Œ¿Œ«ÿ √ Ω… π´±‚¿Œ ∏∂ƒ´∑Œ«¡∏¶ µÁ ∑π∫ß 1 «√∑π¿ÃæÓøÕ «Æπ´¿Â¿ª «— ∞Ì∑π∫ß «√∑π¿ÃæÓøÕ Time-To-Kill¿ª ∞ËªÍ«œ¥¬µ•ø°¥¬ ¥´ø° ∫∏¿Ã¡ˆ æ ¥¬ ¬˜¿Ã∞° ¿÷Ω¿¥œ¥Ÿ. ¿Ãø° √ﬂ∞°∑Œ ≥◊∆Æøˆ≈©øÕ ∆€∆˜∏’Ω∫ πÆ¡¶, πˆ±◊µÈ, ¡¡¿∫ ¿Â∫Ò∏¶ º“¡ˆ«œ¥¬ «√∑π¿ÃæÓµÈ, ∞‘¿”ø°º≠ ∞°¿Â ¡ﬂø‰«— Ω√Ω∫≈€¿« ∏»£º∫¿∏∑Œ ¿Œ«ÿ ªı∑ŒøÓ «√∑π¿ÃæÓµÈ∞˙ ∫£≈◊∂˚µÈ¿Ã ∏≈¿œ ¥¿≥¢¥¬ »•∂ı∞˙ ¡¬¿˝∞®¿ª ¡ı∆¯Ω√≈∞∞‘ µÀ¥œ¥Ÿ.";
+"ballistics_body_2" = "πÊ≈∫∫π∫Œ≈Õ Ω√¿€«ÿº≠, æÓ∂ª∞‘ ¿€µø«œ∏Á π´æ˘¿ª æÀæ∆æﬂ «“±Óø‰? ∞°∞›∞˙ ∞°øÎº∫ø‹ø° æÓ∂≤ πÊ≈∫∫π¿ª ªÁ∞≈≥™, ∆»∞≈≥™, ºˆ∏Æ«œ∞≈≥™ , ¬¯øÎ«œ∞≈≥™ ∂«¥¬ πˆ∏Æ∞≈≥™ «“∂ß ∞Ì∑¡«ÿæﬂ«“ 5∞°¡ˆ¿« ¡ﬂø‰ ªÁ«◊¿Ã ¿÷Ω¿¥œ¥Ÿ. ¿Ã¥¬ πÊ≈∫ µÓ±ﬁ, ≥ª±∏µµ, πÊæÓ ∫Œ¿ß, ¿Á¡˙ ±◊∏Æ∞Ì ∆–≥Œ∆º¿‘¥œ¥Ÿ.";
+"ballistics_body_2_1_title" = "1. πÊ≈∫ µÓ±ﬁ";
+"ballistics_body_2_1" = "πÊ≈∫∫πø°º≠ πÊ≈∫ «Ô∏‰ ∫Œ¬¯π∞±Ó¡ˆ, ∆Ø¡§«— πÊ≈∫ µÓ±ﬁ¿Ã ¿÷Ω¿¥œ¥Ÿ. ∞≥¿Œ¿˚¿Œ º“∞ﬂ¿∏∑Œ, πÊ≈∫ µÓ±ﬁ¿∫ πÊ≈∫∫πø°º≠ ∞°¿Â ¡ﬂø‰«— ø‰º“∏¶ ¬˜¡ˆ«—¥Ÿ∞Ì ∫æ¥œ¥Ÿ. ∞£¥‹»˜ ∏ª«ÿ, πÊ≈∫ µÓ±ﬁ¿∫ ¥ŸæÁ«— ºˆ¡ÿ¿« ≈∫µµ »ø∞˙∏¶ ∞°¡¯ πﬂªÁ√º∏¶ ∏ÿ√ﬂ¥¬µ• æÛ∏∂≥™ »ø∞˙¿˚¿Œ¡ˆ∏¶ ≥™≈∏≥¿¥œ¥Ÿ. «ˆ¿Á πÊ≈∫ µÓ±ﬁ¿∫ 1∫Œ≈Õ 6±Ó¡ˆ∑Œ, ¡¸¿€«ﬂµÌ¿Ã º˝¿⁄∞° ≥Ù¿ªºˆ∑œ ¡¡Ω¿¥œ¥Ÿ. \n\n∑π∫ß¿« 1 πÊ≈∫¿∫ √—æÀ µµ≈∫, ∆ƒ∆Ì ±◊∏Æ∞Ì ∫Ò∞¸≈Î ≈∫ øπ∏¶µÈæÓ ±«√—≈∫¿Ã≥™ π˜º¶ø°º≠ πÊæÓ«ÿ¡›¥œ¥Ÿ. ∑π∫ß 6 æ∆∏”¥¬ ∞‘¿”≥ª ∞°¿Â≈´ ±∏∞Ê¿« ≈∫¿ª ∆˜«‘«ÿº≠ ¥Î∫Œ∫–¿« πﬂªÁ√º∏¶ ∏∑æ∆¡Ÿºˆ ¿÷Ω¿¥œ¥Ÿ. ¥Ÿ∏∏ ≈∏∏£ƒ⁄«¡ ≥ªø°º≠ ≈∫µµ«–¿∫ ø©∑Ø ∞°¡ˆ¿« π´¿€¿ß ∞°¥…º∫¿ª ºˆπ›«œ±‚ø° æÓ∂≤∞Õµµ ∫∏¿Âµ«æÓ¿÷¡ˆ æ ∞Ì, ∞°≤˚¿∫ ∏ªµµ æ»µ«¥¬ ªÛ»≤¿Ã πﬂª˝«œ∞‘µÀ¥œ¥Ÿ. .\n\n ±◊∑°º≠ ∞·∑–¿∫ π´æ˘¿Œ∞°? æÓ∂≤ πÊæÓ±∏∞° æÓ∂≤ ≈∫¿ª ∏∑æ∆¡÷¥¬∞°? ¿Ã¥¬ ∫π¿‚«— ¡˙πÆ¿∏∑Œ ≈∫µµ øµ«‚(ballistics impact)ø°º≠ ¡ª¥ı ¥Ÿ∑Áµµ∑œ «œ∞⁄Ω¿¥œ¥Ÿ.";
+"ballistics_body_2_2_title" = "2. ≥ª±∏µµ";
+"ballistics_body_2_2_1" = "πÊ≈∫ ≥ª±∏º∫ø° ∞¸«ÿº≠¥¬ BSGø° ¿««ÿº≠ ø©∑Øπ¯ ∫Ø∞Êµ«æ˙∞Ì πÃ∑°ø°µµ æ¡¶µÁ ∫Ø∞Ê µ… ºˆ ¿÷¥Ÿ¥¬∞Õ¿ª ¿Œ¡ˆ«œ¥¬∞Õ¿Ã ¡ﬂø‰«’¥œ¥Ÿ. πÊ≈∫ ≥ª±∏º∫ø° ¥Î«ÿ æÀæ∆æﬂ «“ ¡°µÈ¡ﬂ ¡÷∏Ò«“ ¡°¿∫ ¬¯øÎ¿⁄∏¶ ∫∏»£«œ¥¬ ¥…∑¬¿Ã ø¯∑°¿« √÷¥Î ≥ª±∏º∫ ∞™∞˙ ∫Ò±≥ «ﬂ¿ª ∂ß «ˆ¿Á ≥ª±∏º∫ ∞™ø° ¥ﬁ∑¡ ¿÷¥Ÿ¥¬ ¡°¿‘¥œ¥Ÿ.";
+"ballistics_body_2_2_2" = "øπ∏¶ µÈæÓ, πÊ≈∫ ≥ª±∏µµ∞° 50 ≥ª±∏º∫¿∏∑Œ Ω√¿€«œ¥¬ ∞ÊøÏ, 50/50¿œ ∂ß √÷ªÛ¿« ∫∏»£∏¶ ¡¶∞¯«’¥œ¥Ÿ. ∂««— º’ªÛµ«æÓ 40/50¿ª ∞°¡¯ πÊ≈∫∫π∞˙ º’ªÛµ«æ˙¿∏≥™ ºˆ∏Æµ«æÓ 40/40¿« ≥ª±∏º∫¿ª ∞°¡¯ πÊ≈∫∫π∞˙ ∞∞¿∫ º∫¥…¿ª ∞°¡˝¥œ¥Ÿ. ";
+"ballistics_body_2_2_3" = "¥ŸæÁ«— πÊæÓ±∏¿« √÷¥Î ≥ª±∏º∫¿ª æÀ∞≈≥™ ≥ª±∏µµ πŸ∏¶ »Æ¿Œ«œ¥¬∞Õ¿∫ ¡ﬂø‰«— Ω¿∞¸¿‘¥œ¥Ÿ. ¡æ¡æ «ˆ¿Á πÊ≈∫∫π∫∏¥Ÿ ≥∑¿∫ µÓ±ﬁ¿« πÊ≈∫∫π¿ª √£¿ª ºˆ ¿÷¡ˆ∏∏ «ˆ¿Á πÊ≈∫∫π¿Ã Ω…«œ∞‘ º’ªÛ µ«æ˙∞≈≥™ ø©∑Øπ¯ ºˆ∏Æ µ» ∞ÊøÏ ¥ı ≥Ù¿∫ ≥ª±∏º∫¿ª ∞°¡¯ ≥∑¿∫ πÊ≈∫ µÓ±ﬁ¿« πÊæÓ±∏∏¶ ¬¯øÎ«œ¥¬∞Õ¿Ã ∫ª¿Œ¿« ∏Òº˚¿ª ªÏ∏Æ¥¬µ• ¥ı µµøÚ¿Ã µ…ºˆµµ ¿÷Ω¿¥œ¥Ÿ. ¿œ∫Œ ¿¸≈ı ªÛ»≤ø°º≠ ∞¢ µÓ±ﬁø° µ˚∏• πÊ≈∫∫π¿« πÊ≈∫ ∞°¥…º∫, ≥ª±∏µµ, ∞¸≈Î ∞°¥…º∫¿∫ ≈©∞‘ µµøÚµ…ºˆ ¿÷Ω¿¥œ¥Ÿ. µ•πÃ¡ˆ ∞ËªÍ±‚∏¶ ¿ÃøÎ«ÿº≠ ¿€µø πÊΩƒø° ¥Î«ÿ æÀæ∆∫∏Ω Ω√ø¿.";
+"ballistics_body_2_3_title" = "3. πÊæÓ ∫Œ¿ß";
+"ballistics_body_2_3" = "«œ≥™¿« ∞£¥‹«— ±‘ƒ¢¿ª ±‚æÔ«ÿæﬂ «“∞Õ ø‹ø°¥¬ ¿Ã ¡÷¡¶ø° ¥Î«ÿ ¿⁄ºº»˜ º≥∏Ì «“ ºº∫Œ ªÁ«◊¿Ã æ¯Ω¿¥œ¥Ÿ. ∞©ø ¿∫ Ω√∞¢¿˚¿∏∑Œ ∫∏»£ «œ¥¬ ∞Õ¿∏∑Œ ∫∏¿Ã¥¬ ∞Õ¿ª ∫∏»£«œ¡ˆ æ Ω¿¥œ¥Ÿ! ¿Ã∏¶ ¿‘¡ı«œ¥¬ ∞°¿Â ¡¡¿∫ øπ¥¬ Gen4 Full Protection ArmorøÕ Gen4 Assault kit∏¶ ∫Ò±≥«œ¥¬ ∞Õ¿‘¥œ¥Ÿ. ¿¸√º ∫∏»£ πˆ¿¸¿∫ ¥ı ∏π¿∫ Ω≈√º∏¶ µ§¥¬ ∞Õ√≥∑≥ ∫∏¿Ã¡ˆ∏∏ ∫∏»£ øµø™¿Ã µø¿œ«œ±‚ ∂ßπÆø° æÓΩ‰∆Æ ≈∞∆ÆøÕ µø¿œ«— Ω≈√º ∫Œ¿ß∏¶ ∫∏«œ«’¥œ¥Ÿ. ∫∏»£∫Œ¿ßø° ¥Î«ÿ Ω·æﬂ«’¥œ¥Ÿ. ∆»¿Ã≥™ ∫π∫Œ∞° ∫Ì∑¢ æ∆øÙ µ«¥¬ ∞ÊøÏ ªÛ¥Á»˜ ««∞Ô«ÿ¡˙ºˆ ¿÷¿∏∏Á, ø©¿Ø∞° ¿÷¥Ÿ∏È √ﬂ∞° ∫∏»£∞° « ø‰«’¥œ¥Ÿ!";
+"ballistics_body_2_4_title" = "4. ¿Á∑·";
+"ballistics_body_2_4" = "∞¢ πÊ≈∫∫π¿« ¿Á¡˙¿∫ ∏∏µÁ ¿Á∑·∏∂¥Ÿ ¥Ÿ∏®¥œ¥Ÿ. «ˆ¿Á∑Œº≠¥¬ πÊ≈∫ ¿Á∑·∞° πÊ≈∫ »ø∞˙ø° ≈©∞‘ øµ«‚¿ª ≥¢ƒ°¡ˆ¥¬ æ Ω¿¥œ¥Ÿ. «ˆ¿Á¥¬ πÊ≈∫∫π¿ª ºˆ∏Æ«“∂ß øµ«‚¿ª ≥¢ƒ°¥¬µ• æÓ∂≤ ¿Á∑·µÈ¿∫ Ω±∞Ì ΩŒ∞‘ ºˆ∏Æ«“ºˆ ¿÷¥¬ π›∏È æÓ∂≤ ¿Á∑·µÈ¿∫ ≥ª±∏µµø° ≈©∞‘ øµ«‚¿ª ≥¢ƒ°∏Á æÓ∂≥∂ß¥¬ ªÏ∂ß∫∏¥Ÿ ¥ı ∫ÒΩŒ∞‘ ºˆ∏Æ«ÿæﬂ «“∂ßµµ ¿÷∞‘ µÀ¥œ¥Ÿ.";
+"ballistics_body_2_5_title" = "5. ∆–≥Œ∆º";
+"ballistics_body_2_5" = "¿œπ›¿˚¿∏∑Œ √ﬂ∞° ∫∏»£¥¬ ∫ÒøÎ¿Ã ¥ı µÈæÓ∞©¥œ¥Ÿ, ¿Ã ∞°∞›¿∫ ¿Á¡§¿˚¿œºˆµµ ¿÷¿∏∏Á Ω«øÎ¿˚¿œºˆµµ ¿÷Ω¿¥œ¥Ÿ. ∞¢ πÊ≈∫∫π¿∫ ¿œ∑√¿« ∆–≥Œ∆º∞° µ˚∏®¥œ¥Ÿ. ¿œ∫Œ¥¬ øÚ¡˜¿”¿ª ¥ √ﬂ∞Ì, ¿œ∫Œ¥¬ º±»∏ º”µµ∏¶ ¥ √ﬂ∞Ì Ω…¡ˆæÓ ¿¸√º¿˚¿Œ ¿Œ√º ∞¯«– ∑π∫ß¿ª ≥∑√Á, ¡∂¡ÿº”µµ, Ω∫≈¬πÃ≥™ ¡÷¥¬ º”µµ, √µ√µ»˜ øÚ¡˜¿Ã∞≈≥™ ¡∂¡ÿΩ√ º“∏Æ∏¶ ≈©∞‘ ∏∏µÏ¥œ¥Ÿ. ¿œ∫Œ «Ô∏‰¿∫  √ª∑¬¿ª ¡¶«—«“ºˆ ¿÷¿∏∏Á Ω…¡ˆæÓ Ω√æﬂ∏¶ ∞°∏±ºˆµµ ¿÷Ω¿¥œ¥Ÿ. ¿Ã¥¬ ∫ª¿Œ¿Ã ≈≥∂Û «Ô∏‰∞˙ ∞∞¿∫ ∫ÒΩ— πÊæÓ±∏µÈ¿ª ¬¯øÎ«“∂ß ∞Ì∑¡«ÿæﬂ«œ¥¬ ¿˝√Ê¡°µÈ¿‘¥œ¥Ÿ. ";
+"ballistics_body_3_title" = "ø‰æ‡";
+"ballistics_body_3" = "≈∏∏£ƒ⁄«¡ø°º≠ ≈∫µµ«–¿∫ ≥Ó∂ÛøÔ¡§µµ∑Œ ∫π¿‚«œ∞Ì ¿Ã¡°¿∏∑Œ ªÔ∞Ì ¿Ã«ÿ«œ±‚ ¿ß«ÿº≠¥¬ æ‡∞£¿« ∞Ê«Ë∞˙ ¡ˆΩƒ¿Ã « ø‰«’¥œ¥Ÿ. ¿ß øµªÛ The Armor and Ballistics ∫Òµø¿¥¬ ¿Ã∑Ø«— ∞≥≥‰¡ﬂ ¿œ∫Œ∞° ¿⁄ºº»˜ º≥∏Ìµ«æÓ ¿÷¿∏π«∑Œ ¡÷¡¶ø° ¥Î«ÿ ¥ı ∏π¿Ã æÀ∞Ì ΩÕ¥Ÿ∏È »Æ¿Œ«ÿ∫∏Ω Ω√ø¿.";
+
+"health_title" = "PMC¿« ∞«∞≠ π◊ ªÛ≈¬";
+"health_body_1" = "¿Ã ¡§∫∏¥¬ √ﬂ»ƒø° √ﬂ∞°µ… øπ¡§??";
+
+"upcoming_body_1" = "ƒøπ¬¥œ∆º∏¶ ¿ß«ÿ ¿Ã æ€ø° √ﬂ∞°µ… ∏π¿∫ ∏⁄¡¯ ±‚¥…µÈ¿ª ±‚»π«ﬂΩ¿¥œ¥Ÿ. øπ∏¶µÈæÓ ªÛ»£¿€øÎ µ«¥¬ ∏ , π´±‚ ∏µ˘, ƒ˘Ω∫∆Æ ∞°¿ÃµÂ, ¥ı∏π¿∫ æ∆¿Ã≈€∞˙ ∞‘ªÍ±‚, ∆Æ∑π¿Ã¥ı ¡§∫∏, ±‚º˙ ∫–ºÆ µÓ! ¿˙¥¬ ¿Ã ±‚¥…µÈ¿ª ¡ˆº”¿˚¿∏∑Œ æ˜µ•¿Ã∆Æ «“ ∞Ë»π¿Ã¡ˆ∏∏, 1.0 πˆ¿¸¿ª √÷¥Î«— ø©∑Ø∫–µÈø°∞‘ ¿¸¥ﬁ«œ∞Ì ΩÕæ˙Ω¿¥œ¥Ÿ. æ»µÂ∑Œ¿ÃµÂøÕ ¿• ¡ˆø¯ ∞≥πﬂ¿∫ ¿ÃπÃ ¡¯«‡¡ﬂ¿‘¥œ¥Ÿ. ";
+
+"attributions_api" = "Morphy2k & Tarkov Database";
+"attributions_nofam" = "NoFoodAfterMidnight";
+"attributions_willerz" = "Willer_Z";
+"attributions_community" = "Community";
+"attributions_bsg" = "Battlestate Games Limited";
+"attributions_misc" = "Miscellaneous Legal Stuff";
+"attributions_translations" = "Localization";
+
+"attributions_api_descr" = "≈∏∏£ƒ⁄«¡ µ•¿Ã≈Õ ∫£¿ÃΩ∫ π◊ ±‚∫ª APIø° ¥Î«— Morphy¿« »ØªÛ¿˚¿Œ ∞≥πﬂ ¿€æ˜¿Ã æ¯æ˙¥Ÿ∏È ¿Ã «¡∑Œ¡ß∆Æ¥¬ ∫“∞°¥…«ﬂ¿ª ∞Õ¿‘¥œ¥Ÿ.";
+"attributions_nofam_descr" = "ƒøπ¬¥œ∆º¿« ¿Ã∏ß æ¯¥¬ øµøı, ≈∫æ‡ ¬˜∆Æ ¡¶¿€¿⁄, ≈∫µµ ∞‘ªÍ±‚ π◊ ∞¸∑√ ¡§∫∏, ≈∫æ‡¿« ¿¸µµªÁ!";
+"attributions_willerz_descr" = "¿Ã æ€ø°º≠ ªÁøÎ«“ ∞Ì«∞¡˙¿« ªÁ¡¯¿ª ¡¶∞¯«ÿ¡÷Ω≈ ∞Ì∏∂øÓ ∫–. ∂««— ºº∞Ë √÷∞Ì¿« «√∑π¿ÃæÓ¡ﬂ «—∏Ì¿‘¥œ¥Ÿ.";
+"attributions_community_descr" = "¿Ã æ€ø° ªÁøÎµ» æ∆∏ß¥ŸøÓ ªÁ¡¯¿ª ƒ∏√ƒ«œ∞Ì ∆Ì¡˝«ÿ¡ÿ ∏µÁ ≥Î∑¬ø° ¥Î«ÿ µΩ∫ƒ⁄µÂ ƒøπ¬¥œ∆ºø° ∞®ªÁ¿« ∏ªæ∏¿∫ ¿¸«’¥œ¥Ÿ!";
+"attributions_translations_descr" = "∏µÁ π¯ø™¿∫ ƒøπ¬¥œ∆º »∏ø¯µÈ¿Ã ¿⁄Ω≈¿« Ω√∞£∞˙ ≥Î∑¬¿ª ±‚¡ı«‘¿∏∑ŒΩ· ¿Ã∑ÁæÓ¡≥Ω¿¥œ¥Ÿ. ¿¸ ºº∞Ë¿« ∏µÁ ªÁ∂˜¿Ã ø©∑Ø∫–¿« ≥Î∞Ìø° ∞®ªÁ«’¥œ¥Ÿ! ";
+"attributions_bsg_descr" = "¿Ã æ€¿ª ¡ˆø¯«ÿ¡ÿ NikitaøÕ BSG¿« ∏µÁ ¡˜ø¯µÈø°∞‘ √÷∞Ì¿« 1¿Œƒ™ Ω¥∆√ ∞‘¿”¿ª ¡¶¿€«ÿ¡÷æÓ ∆Ø∫∞»˜ ∞®ªÁ∏¶ «•«’¥œ¥Ÿ.";
+"attributions_misc_descr" = "Social media icons by Abhishek Pipalva (https://www.iconfinder.com/abhishekpipalva) licensed under CC. 'Brain' icon by Sergey Patutin from the Noun Project (https://thenounproject.com/bdesign.by/) licensed under CC.";
+
+// Analytics
+"total_users_count" = "%@ πË∆≤πˆµ∞° ¿¸≈ıø° ¬¸∞°«œø¥Ω¿¥œ¥Ÿ!";

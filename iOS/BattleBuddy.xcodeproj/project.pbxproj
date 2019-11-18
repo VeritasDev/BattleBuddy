@@ -314,6 +314,8 @@
 		60837424232BC24B00AA9D29 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		60837427232BCB6000AA9D29 /* BBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUser.swift; sourceTree = "<group>"; };
 		60837429232D0BEE00AA9D29 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6083742B232E3A5500AA9D29 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6083742C232E3A5600AA9D29 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
@@ -1139,6 +1141,7 @@
 				"zh-Hant",
 				de,
 				et,
+				ko,
 			);
 			mainGroup = 27954E2322A18470000FC0C6;
 			productRefGroup = 27954E2D22A18470000FC0C6 /* Products */;
@@ -1453,6 +1456,7 @@
 				276AFA9D231C668200C9DB3A /* zh-Hant */,
 				EF94581B231EC7ED00C88609 /* de */,
 				27B2003C23266EBA00EE16BC /* et */,
+				6083742B232E3A5500AA9D29 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1481,6 +1485,7 @@
 				276AFA9E231C668200C9DB3A /* zh-Hant */,
 				EF94581C231EC7EE00C88609 /* de */,
 				27B2003D23266EBA00EE16BC /* et */,
+				6083742C232E3A5600AA9D29 /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
