@@ -10,7 +10,7 @@ const AmmoDetail = ({item}) => {
   const {navigate} = useNavigation();
   const {setAmmo} = useBallistics();
   const ammo = new Ammo(item);
-
+  console.log(ammo);
   const data = [
     {
       title: 'Properties',
@@ -34,7 +34,7 @@ const AmmoDetail = ({item}) => {
         },
         {
           key: 'Fragmentation Chance',
-          value: item.fragmentation.chance
+          value: `${item.fragmentation.chance * 100}%`
         },
         {key: 'Muzzle Velocity (m/s)', value: item.velocity},
         {key: 'Tracer', value: item.tracer ? 'Yes' : 'No'},
