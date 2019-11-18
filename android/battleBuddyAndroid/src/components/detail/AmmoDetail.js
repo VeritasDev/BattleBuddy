@@ -10,7 +10,7 @@ const AmmoDetail = ({item}) => {
   const {navigate} = useNavigation();
   const {setAmmo} = useBallistics();
   const ammo = new Ammo(item);
-  console.log(ammo);
+
   const data = [
     {
       title: 'Properties',
