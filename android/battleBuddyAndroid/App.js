@@ -6,11 +6,15 @@ import tabNavigator from './src/navigation/MainTabNavigator';
 import Theme, {theme} from './src/components/Theme';
 import {useAuthentication} from './src/context/AuthenticationProvider';
 import AuthenticatedAppProviders from './src/components/AuthenticatedAppProviders';
+import {fontFix} from './src/utils/fontFix';
 
 const Navigator = createAppContainer(tabNavigator);
+
 const Container = styled.View`
   flex: 1;
 `;
+
+fontFix();
 
 const App = () => {
   const {authenticated} = useAuthentication();
