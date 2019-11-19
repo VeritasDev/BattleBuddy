@@ -11,6 +11,7 @@ import StorageImage from '../../../components/common/StorageImage';
 import ImageType from '../../../constants/ImageType';
 import ChestRigDetail from '../../../components/detail/ChestRigDetail';
 import HelmetDetail from '../../../components/detail/HelmetDetail';
+import VisorDetail from '../../../components/detail/VisorDetail';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -47,7 +48,8 @@ const ItemDetailScreen = ({navigation}) => {
     grenade: ThrowableDetail,
     melee: MeleeDetail,
     helmet: HelmetDetail,
-    tacticalrig: ChestRigDetail
+    tacticalrig: ChestRigDetail,
+    visor: VisorDetail
   };
 
   const DetailElement = typeToComponent[type];

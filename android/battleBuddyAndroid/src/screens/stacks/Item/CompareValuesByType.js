@@ -83,6 +83,28 @@ export default {
       property: 'ergoPen'
     }
   ],
+  [ItemType.visor]: [
+    {
+      property: 'armorClass',
+      prefix: 'Class '
+    },
+    {
+      property: 'durability'
+    },
+    {
+      property: 'rawZones',
+      onRender: (x) => x.length
+    },
+    {
+      property: 'speedPen'
+    },
+    {
+      property: 'mousePen'
+    },
+    {
+      property: 'ergoPen'
+    }
+  ],
   [ItemType.chestRig]: [
     {
       property: 'totalCapacity'

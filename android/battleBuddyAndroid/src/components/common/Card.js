@@ -33,6 +33,7 @@ const Text = styled.Text`
   font-size: 35px;
   color: white;
   font-weight: bold;
+  text-transform: capitalize;
   /* prettier-ignore */
   textShadowColor: black;
   /* prettier-ignore */

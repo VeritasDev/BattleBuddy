@@ -21,6 +21,7 @@ const useCollection = (collectionName) => {
         break;
       case ItemType.armor:
       case ItemType.helmet:
+      case ItemType.visor:
         normalized = docs.map((x) => new Armor(x));
         break;
       default:

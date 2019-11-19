@@ -48,6 +48,12 @@ const placeholderImages = {
     '6': require('../../assets/images/placeholders/helmet_placeholders/class_6.png'),
     default: require('../../assets/images/placeholders/helmet_placeholders/class_2.png')
   },
+  visor: {
+    default: require('../../assets/images/placeholders/visor_placeholders/visor.png')
+  },
+  attachment: {
+    default: require('../../assets/images/placeholders/helmet_attachment_placeholders/attachment.png')
+  },
   tacticalrig: {
     '0': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
     '1': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
@@ -71,8 +77,22 @@ const placeholderImages = {
 
 const getPlaceholder = (item) => {
   let placeholder;
-  const placeholderKind =
-    placeholderImages[item.type === 'helmet' ? 'helmet' : item._kind];
+  let placeholderKind;
+
+  switch (item.type) {
+    case 'helmet':
+      placeholderKind = placeholderImages['helmet'];
+      break;
+    case 'visor':
+      placeholderKind = placeholderImages['visor'];
+      break;
+    case 'attachment':
+      placeholderKind = placeholderImages['attachment'];
+      break;
+    default:
+      placeholderKind = placeholderImages[item._kind];
+      break;
+  }
 
   // TODO: Fuck this system.
   switch (item._kind) {
