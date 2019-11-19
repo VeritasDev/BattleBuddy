@@ -25,7 +25,11 @@ const SectionItems = ({items}) => {
   const {navigate} = useNavigation();
 
   const onPressHandler = (item) => {
-    navigate('Detail', {item, type: item._kind});
+    if (item.type === 'helmet') {
+      navigate('Detail', {item, type: 'helmet'});
+    } else {
+      navigate('Detail', {item, type: item._kind});
+    }
   };
 
   return (

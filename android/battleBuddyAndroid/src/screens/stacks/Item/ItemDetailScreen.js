@@ -10,6 +10,7 @@ import MeleeDetail from '../../../components/detail/MeleeDetail';
 import StorageImage from '../../../components/common/StorageImage';
 import ImageType from '../../../constants/ImageType';
 import ChestRigDetail from '../../../components/detail/ChestRigDetail';
+import HelmetDetail from '../../../components/detail/HelmetDetail';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -45,6 +46,7 @@ const ItemDetailScreen = ({navigation}) => {
     medical: MedicalDetail,
     grenade: ThrowableDetail,
     melee: MeleeDetail,
+    helmet: HelmetDetail,
     tacticalrig: ChestRigDetail
   };
 

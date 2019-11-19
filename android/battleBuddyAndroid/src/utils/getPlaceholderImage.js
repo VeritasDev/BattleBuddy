@@ -39,6 +39,15 @@ const placeholderImages = {
     '6': require('../../assets/images/placeholders/armor_placeholders/class_6.png'),
     default: require('../../assets/images/placeholders/armor_placeholders/class_2.png')
   },
+  helmet: {
+    '1': require('../../assets/images/placeholders/helmet_placeholders/class_1.png'),
+    '2': require('../../assets/images/placeholders/helmet_placeholders/class_2.png'),
+    '3': require('../../assets/images/placeholders/helmet_placeholders/class_3.png'),
+    '4': require('../../assets/images/placeholders/helmet_placeholders/class_4.png'),
+    '5': require('../../assets/images/placeholders/helmet_placeholders/class_5.png'),
+    '6': require('../../assets/images/placeholders/helmet_placeholders/class_6.png'),
+    default: require('../../assets/images/placeholders/helmet_placeholders/class_2.png')
+  },
   tacticalrig: {
     '0': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
     '1': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
@@ -62,7 +71,8 @@ const placeholderImages = {
 
 const getPlaceholder = (item) => {
   let placeholder;
-  const placeholderKind = placeholderImages[item._kind];
+  const placeholderKind =
+    placeholderImages[item.type === 'helmet' ? 'helmet' : item._kind];
 
   // TODO: Fuck this system.
   switch (item._kind) {
@@ -72,12 +82,12 @@ const getPlaceholder = (item) => {
     case 'armor':
       placeholder =
         placeholderKind[getDescendantProp(item, 'armor.class')] ||
-        placeholderKind.armor.default;
+        placeholderKind.default;
       break;
     case 'tacticalrig':
       placeholder =
         placeholderKind[getDescendantProp(new ChestRig(item), 'armorClass')] ||
-        placeholderKind.armor.default;
+        placeholderKind.default;
       break;
     case 'ammunition':
       placeholder = placeholderKind[item.caliber] || placeholderKind.default;

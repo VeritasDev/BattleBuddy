@@ -7,6 +7,12 @@ import {useNavigation} from 'react-navigation-hooks';
 
 const items = [
   {
+    text: 'Helmets',
+    path: 'Helmets',
+    textPosition: 'bottom left',
+    image: require('../../assets/images/card_heroes/chest_rigs.png')
+  },
+  {
     text: 'Firearms',
     path: 'Firearms',
     collection: 'firearm',

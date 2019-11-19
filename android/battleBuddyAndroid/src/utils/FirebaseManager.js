@@ -39,6 +39,8 @@ class FirebaseManager {
         return this.meleeImageRef.child(imageId);
       case ItemType.ammo:
         return this.ammoImageRef.child(imageId);
+      case ItemType.helmet:
+        return this.armorImageRef.child(imageId);
       case ItemType.armor:
         return this.armorImageRef.child(imageId);
       case ItemType.chestRig:
@@ -152,17 +154,35 @@ export class DatabaseManager extends FirebaseManager {
    */
   async getAllItemsByCollection(collection) {
     try {
-      const snapshot =
-        collection === 'armor'
-          ? await this.db
-              .collection(collection)
-              .where('type', '==', 'body')
-              .get()
-              .then((x) => x.docs.map((d) => d.data()))
-          : await this.db
-              .collection(collection)
-              .get()
-              .then((x) => x.docs.map((d) => d.data()));
+      let snapshot;
+      switch (collection) {
+        case 'armor':
+          snapshot = await this.db
+            .collection(collection)
+            .where('type', '==', 'body')
+            .get()
+            .then((x) => x.docs.map((d) => d.data()));
+          break;
+        case 'helmet':
+          snapshot = await this.db
+            .collection('armor')
+            .where('type', '==', 'helmet')
+            .get()
+            .then((x) => x.docs.map((d) => d.data()));
+          break;
+        case 'allArmor':
+          snapshot = await this.db
+            .collection('armor')
+            .get()
+            .then((x) => x.docs.map((d) => d.data()));
+          break;
+        default:
+          snapshot = await this.db
+            .collection(collection)
+            .get()
+            .then((x) => x.docs.map((d) => d.data()));
+          break;
+      }
 
       console.log(
         `Successfully fetched ${snapshot.length} documents of type "${collection}".`
@@ -214,6 +234,7 @@ export class DatabaseManager extends FirebaseManager {
    */
   async _getAllItemsByProperty(collection, type, key) {
     const docs = await this.getAllItemsByCollection(collection);
+
     // eslint-disable-next-line
     const map = Object.entries(type).map(([_, value]) => ({
       title: value,
@@ -235,6 +256,7 @@ export class DatabaseManager extends FirebaseManager {
         });
 
         break;
+      case ItemType.helmet:
       case ItemType.armor:
         docs.forEach((x) => {
           const title = `armor_class_${getDescendantProp(x, key)}`;
@@ -286,6 +308,12 @@ export class DatabaseManager extends FirebaseManager {
     const armor = await this.getAllArmor();
 
     return armor.filter((x) => checkDocQueryMatch(x, 'armor', query));
+  }
+
+  async getHelmetsWithSearchQuery(query) {
+    const helmets = await this.getAllHelmets();
+
+    return helmets.filter((x) => checkDocQueryMatch(x, 'helmets', query));
   }
 
   async getChestRigsWithSearchQuery(query) {
@@ -353,25 +381,11 @@ export class DatabaseManager extends FirebaseManager {
   }
 
   async getAllArmor() {
-    try {
-      const snapshot = await this.db
-        .collection('armor')
-        .where('type', '==', 'body')
-        .get()
-        .then((x) => x.docs.map((d) => d.data()));
+    return this.getAllItemsByCollection(ItemType.armor);
+  }
 
-      console.log(
-        `Successfully fetched ${
-          snapshot.length
-        } documents of type "${'armor'}".`
-      );
-      return snapshot;
-    } catch (error) {
-      console.error(
-        `Failed to get all items of type ${'armor'} w/ error:`,
-        error
-      );
-    }
+  async getAllHelmets() {
+    return this.getAllItemsByCollection(ItemType.helmet);
   }
 
   getAllChestRigs() {
@@ -394,6 +408,14 @@ export class DatabaseManager extends FirebaseManager {
   getAllArmorByClass() {
     return this._getAllItemsByProperty(
       ItemType.armor,
+      ArmorClass,
+      'armor.class'
+    );
+  }
+
+  getAllHelmetsByClass() {
+    return this._getAllItemsByProperty(
+      ItemType.helmet,
       ArmorClass,
       'armor.class'
     );

@@ -5,7 +5,6 @@ import LoadingIndicator from '../../../components/common/LoadingIndicator';
 import {useBallistics} from '../../../context/BallisticsProvider';
 import {useNavigation} from 'react-navigation-hooks';
 import useCollection from '../../../hooks/useCollection';
-import ItemType from '../../../constants/ItemType';
 import getDescendantProp from '../../../utils/getDescendantProp';
 
 const View = styled.View`
@@ -23,14 +22,15 @@ const Header = styled.View`
 const HeaderText = styled.Text`
   color: ${({active}) => (active ? 'white' : 'rgba(255, 255, 255, 0.5)')};
   text-align: center;
-  width: 33%;
+  width: 25%;
 `;
 
 const ItemText = styled.Text`
   color: white;
   text-align: center;
-  width: 33%;
+  width: 25%;
   padding: 14px 0;
+  text-transform: capitalize;
 `;
 
 const ListItem = styled.TouchableOpacity`
@@ -46,7 +46,7 @@ const ListItem = styled.TouchableOpacity`
 const ArmorTableScreen = () => {
   const {setArmor} = useBallistics();
   const navigation = useNavigation();
-  const {loading, data} = useCollection(ItemType.armor);
+  const {loading, data} = useCollection('allArmor');
   const [sorted, setSorted] = useState({
     data: null,
     type: null,
@@ -96,6 +96,7 @@ const ArmorTableScreen = () => {
 
   const types = [
     {label: 'Name', type: 'shortName'},
+    {label: 'Type', type: 'type'},
     {label: 'Class', type: 'armor.class'},
     {label: 'Durability', type: 'armor.durability'}
   ];
@@ -121,6 +122,7 @@ const ArmorTableScreen = () => {
         renderItem={({item}) => (
           <ListItem onPress={() => onPressHandler(item)}>
             <ItemText>{item.name}</ItemText>
+            <ItemText>{item.type}</ItemText>
             <ItemText>{item.armor.class}</ItemText>
             <ItemText>{item.armor.durability}</ItemText>
           </ListItem>
