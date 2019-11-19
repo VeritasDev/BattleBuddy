@@ -3,6 +3,7 @@ import getDescendantProp from './getDescendantProp';
 const compareValues = {
   firearm: ['description', 'name', 'shortName', 'class', 'caliber'],
   armor: ['description', 'name', 'shortName', 'armor.material.name', 'type'],
+  tacticalrig: ['description', 'name', 'shortName'],
   ammo: ['name', 'shortName', 'caliber'],
   medical: ['name', 'shortName'],
   grenade: ['name'],

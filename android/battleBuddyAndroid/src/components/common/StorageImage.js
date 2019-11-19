@@ -7,10 +7,16 @@ import getPlaceholder from '../../utils/getPlaceholderImage';
 
 const StorageImage = ({doc, size, ...props}) => {
   const firebase = useFirebase();
-  const {path} = firebase.itemImageReference(doc._id, doc._kind, size);
+  const storageRef = firebase.itemImageReference(doc._id, doc._kind, size);
+  const placeholder = getPlaceholder(doc);
 
   return (
-    <ImageView path={path} defaultSource={getPlaceholder(doc)} {...props} />
+    <ImageView
+      path={storageRef.path}
+      defaultSource={placeholder}
+      {...props}
+      progressiveRenderingEnabled
+    />
   );
 };
 

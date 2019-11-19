@@ -9,6 +9,7 @@ import ThrowableDetail from '../../../components/detail/ThrowableDetail';
 import MeleeDetail from '../../../components/detail/MeleeDetail';
 import StorageImage from '../../../components/common/StorageImage';
 import ImageType from '../../../constants/ImageType';
+import ChestRigDetail from '../../../components/detail/ChestRigDetail';
 
 const ScrollView = styled.ScrollView`
   background: ${({theme}) => theme.colors.background};
@@ -43,7 +44,8 @@ const ItemDetailScreen = ({navigation}) => {
     ammunition: AmmoDetail,
     medical: MedicalDetail,
     grenade: ThrowableDetail,
-    melee: MeleeDetail
+    melee: MeleeDetail,
+    tacticalrig: ChestRigDetail
   };
 
   const DetailElement = typeToComponent[type];

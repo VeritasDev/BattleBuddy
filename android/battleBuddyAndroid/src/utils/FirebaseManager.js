@@ -9,6 +9,7 @@ import AmmoType from '../constants/AmmoType';
 import MedicalItemType from '../constants/MedicalItemType';
 import checkDocQueryMatch from './checkDocQueryMatch';
 import ThrowableType from '../constants/ThrowableType';
+import ChestRig from '../models/ChestRig';
 
 const AccountProperty = {
   lastLogin: 'lastLogin',
@@ -24,13 +25,13 @@ class FirebaseManager {
   ammoImageRef = this.storageRef.child('ammo');
   medsImageRef = this.storageRef.child('meds');
   armorImageRef = this.storageRef.child('armor');
+  chestRigImageRef = this.storageRef.child('rigs');
   tradersImageRef = this.storageRef.child('traders');
   throwableImageRef = this.storageRef.child('throwables');
   meleeImageRef = this.storageRef.child('melee');
 
   itemImageReference(itemId, itemType, size) {
     const imageId = itemId + size;
-
     switch (itemType) {
       case ItemType.firearm:
         return this.firearmsImageRef.child(imageId);
@@ -40,6 +41,8 @@ class FirebaseManager {
         return this.ammoImageRef.child(imageId);
       case ItemType.armor:
         return this.armorImageRef.child(imageId);
+      case ItemType.chestRig:
+        return this.chestRigImageRef.child(imageId);
       case ItemType.medical:
         return this.medsImageRef.child(imageId);
       case ItemType.throwable:
@@ -189,7 +192,6 @@ export class DatabaseManager extends FirebaseManager {
         .where(property, value)
         .get()
         .then((x) => x.docs.map((d) => d.data()));
-      // .then((d) => );
 
       console.log(
         `Successfully fetched ${snapshot.length} documents of type "${collection}".`
@@ -219,6 +221,20 @@ export class DatabaseManager extends FirebaseManager {
     }));
 
     switch (collection) {
+      case ItemType.chestRig:
+        docs.forEach((x) => {
+          const chestRig = new ChestRig(x);
+          const title = `armor_class_${getDescendantProp(chestRig, key)}`;
+          const index = map.findIndex((t) => t.title === title);
+
+          if (index === -1) {
+            map.push({title, data: [x]});
+          } else {
+            map[index].data.push(x);
+          }
+        });
+
+        break;
       case ItemType.armor:
         docs.forEach((x) => {
           const title = `armor_class_${getDescendantProp(x, key)}`;
@@ -272,6 +288,12 @@ export class DatabaseManager extends FirebaseManager {
     return armor.filter((x) => checkDocQueryMatch(x, 'armor', query));
   }
 
+  async getChestRigsWithSearchQuery(query) {
+    const chestRigs = await this.getAllChestRigs();
+
+    return chestRigs.filter((x) => checkDocQueryMatch(x, 'tacticalrig', query));
+  }
+
   async getAmmoWithSearchQuery(query) {
     const ammo = await this.getAllAmmo();
 
@@ -300,6 +322,7 @@ export class DatabaseManager extends FirebaseManager {
     const firearms = await this.getFirearmsWithSearchQuery(query);
     const armor = await this.getArmorWithSearchQuery(query);
     const ammo = await this.getAmmoWithSearchQuery(query);
+    const chestRigs = await this.getChestRigsWithSearchQuery(query);
     const medical = await this.getMedicalWithSearchQuery(query);
     const throwables = await this.getThrowablesWithSearchQuery(query);
     const melee = await this.getMeleeWithSearchQuery(query);
@@ -307,6 +330,7 @@ export class DatabaseManager extends FirebaseManager {
     return [
       ...firearms,
       ...armor,
+      ...chestRigs,
       ...ammo,
       ...medical,
       ...throwables,
@@ -350,6 +374,10 @@ export class DatabaseManager extends FirebaseManager {
     }
   }
 
+  getAllChestRigs() {
+    return this.getAllItemsByCollection(ItemType.chestRig);
+  }
+
   getAllMedical() {
     return this.getAllItemsByCollection(ItemType.medical);
   }
@@ -368,6 +396,14 @@ export class DatabaseManager extends FirebaseManager {
       ItemType.armor,
       ArmorClass,
       'armor.class'
+    );
+  }
+
+  getAllChestRigsByClass() {
+    return this._getAllItemsByProperty(
+      ItemType.chestRig,
+      ArmorClass,
+      'armorClass'
     );
   }
 

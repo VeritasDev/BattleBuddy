@@ -1,4 +1,5 @@
 import getDescendantProp from './getDescendantProp';
+import ChestRig from '../models/ChestRig';
 
 const placeholderImages = {
   firearm: {
@@ -38,6 +39,16 @@ const placeholderImages = {
     '6': require('../../assets/images/placeholders/armor_placeholders/class_6.png'),
     default: require('../../assets/images/placeholders/armor_placeholders/class_2.png')
   },
+  tacticalrig: {
+    '0': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
+    '1': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
+    '2': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
+    '3': require('../../assets/images/placeholders/chest_rig_placeholders/class_3.png'),
+    '4': require('../../assets/images/placeholders/chest_rig_placeholders/class_4.png'),
+    '5': require('../../assets/images/placeholders/chest_rig_placeholders/class_4.png'),
+    '6': require('../../assets/images/placeholders/chest_rig_placeholders/class_4.png'),
+    default: require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png')
+  },
   medical: {
     medkit: require('../../assets/images/placeholders/medical_placeholders/medkit_placeholder.png'),
     drug: require('../../assets/images/placeholders/medical_placeholders/painkiller_placeholder.png'),
@@ -63,6 +74,11 @@ const getPlaceholder = (item) => {
         placeholderKind[getDescendantProp(item, 'armor.class')] ||
         placeholderKind.armor.default;
       break;
+    case 'tacticalrig':
+      placeholder =
+        placeholderKind[getDescendantProp(new ChestRig(item), 'armorClass')] ||
+        placeholderKind.armor.default;
+      break;
     case 'ammunition':
       placeholder = placeholderKind[item.caliber] || placeholderKind.default;
       break;
@@ -74,6 +90,9 @@ const getPlaceholder = (item) => {
       break;
     case 'melee':
       placeholder = placeholderKind;
+      break;
+    default:
+      placeholder = placeholderImages.armor.default;
       break;
   }
 

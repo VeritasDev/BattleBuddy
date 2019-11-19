@@ -61,6 +61,23 @@ export default {
       property: 'penalties.ergonomics'
     }
   ],
+  [ItemType.chestRig]: [
+    {
+      property: 'totalCapacity'
+    },
+    {
+      property: 'oneByOneSlots'
+    },
+    {
+      property: 'oneByTwoSlots'
+    },
+    {
+      property: 'oneByThreeSlots'
+    },
+    {
+      property: 'twoByTwoSlots'
+    }
+  ],
   [ItemType.medical]: [
     {
       property: 'resources'

@@ -27,6 +27,12 @@ const items = [
     image: require('../../assets/images/card_heroes/armor.jpg')
   },
   {
+    text: 'Chest rigs',
+    path: 'ChestRigs',
+    textPosition: 'bottom left',
+    image: require('../../assets/images/card_heroes/chest_rigs.png')
+  },
+  {
     text: 'Medical',
     collection: 'medical',
     textPosition: 'bottom left',
