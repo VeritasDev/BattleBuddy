@@ -133,8 +133,8 @@ android {
         applicationId "com.veritas.battlebuddy"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 9
-        versionName "Release 1.0.1"
+        versionCode 10
+        versionName "Release 1.0.2"
         multiDexEnabled true
     }
     splits {
