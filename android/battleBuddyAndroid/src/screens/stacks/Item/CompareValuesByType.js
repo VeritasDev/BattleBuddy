@@ -41,24 +41,85 @@ export default {
   ],
   [ItemType.armor]: [
     {
-      property: 'armor.class',
+      property: 'armorClass',
       prefix: 'Class '
     },
     {
-      property: 'armor.durability'
+      property: 'durability'
     },
     {
-      property: 'armor.zones',
+      property: 'rawZones',
       onRender: (x) => x.length
     },
     {
-      property: 'penalties.speed'
+      property: 'speedPen'
     },
     {
-      property: 'penalties.mouse'
+      property: 'mousePen'
     },
     {
-      property: 'penalties.ergonomics'
+      property: 'ergoPen'
+    }
+  ],
+  [ItemType.helmet]: [
+    {
+      property: 'armorClass',
+      prefix: 'Class '
+    },
+    {
+      property: 'durability'
+    },
+    {
+      property: 'rawZones',
+      onRender: (x) => x.length
+    },
+    {
+      property: 'speedPen'
+    },
+    {
+      property: 'mousePen'
+    },
+    {
+      property: 'ergoPen'
+    }
+  ],
+  [ItemType.visor]: [
+    {
+      property: 'armorClass',
+      prefix: 'Class '
+    },
+    {
+      property: 'durability'
+    },
+    {
+      property: 'rawZones',
+      onRender: (x) => x.length
+    },
+    {
+      property: 'speedPen'
+    },
+    {
+      property: 'mousePen'
+    },
+    {
+      property: 'ergoPen'
+    }
+  ],
+  [ItemType.chestRig]: [
+    {
+      property: 'totalCapacity'
+    },
+    {
+      property: 'oneByOneSlots'
+    },
+    {
+      property: 'oneByTwoSlots'
+    },
+    {
+      property: 'oneByThreeSlots'
+    },
+    {
+      property: 'twoByTwoSlots'
     }
   ],
   [ItemType.medical]: [

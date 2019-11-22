@@ -1,4 +1,5 @@
 import getDescendantProp from './getDescendantProp';
+import ChestRig from '../models/ChestRig';
 
 const placeholderImages = {
   firearm: {
@@ -38,6 +39,31 @@ const placeholderImages = {
     '6': require('../../assets/images/placeholders/armor_placeholders/class_6.png'),
     default: require('../../assets/images/placeholders/armor_placeholders/class_2.png')
   },
+  helmet: {
+    '1': require('../../assets/images/placeholders/helmet_placeholders/class_1.png'),
+    '2': require('../../assets/images/placeholders/helmet_placeholders/class_2.png'),
+    '3': require('../../assets/images/placeholders/helmet_placeholders/class_3.png'),
+    '4': require('../../assets/images/placeholders/helmet_placeholders/class_4.png'),
+    '5': require('../../assets/images/placeholders/helmet_placeholders/class_5.png'),
+    '6': require('../../assets/images/placeholders/helmet_placeholders/class_6.png'),
+    default: require('../../assets/images/placeholders/helmet_placeholders/class_2.png')
+  },
+  visor: {
+    default: require('../../assets/images/placeholders/visor_placeholders/visor.png')
+  },
+  attachment: {
+    default: require('../../assets/images/placeholders/helmet_attachment_placeholders/attachment.png')
+  },
+  tacticalrig: {
+    '0': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
+    '1': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
+    '2': require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png'),
+    '3': require('../../assets/images/placeholders/chest_rig_placeholders/class_3.png'),
+    '4': require('../../assets/images/placeholders/chest_rig_placeholders/class_4.png'),
+    '5': require('../../assets/images/placeholders/chest_rig_placeholders/class_4.png'),
+    '6': require('../../assets/images/placeholders/chest_rig_placeholders/class_4.png'),
+    default: require('../../assets/images/placeholders/chest_rig_placeholders/class_0.png')
+  },
   medical: {
     medkit: require('../../assets/images/placeholders/medical_placeholders/medkit_placeholder.png'),
     drug: require('../../assets/images/placeholders/medical_placeholders/painkiller_placeholder.png'),
@@ -51,7 +77,22 @@ const placeholderImages = {
 
 const getPlaceholder = (item) => {
   let placeholder;
-  const placeholderKind = placeholderImages[item._kind];
+  let placeholderKind;
+
+  switch (item.type) {
+    case 'helmet':
+      placeholderKind = placeholderImages['helmet'];
+      break;
+    case 'visor':
+      placeholderKind = placeholderImages['visor'];
+      break;
+    case 'attachment':
+      placeholderKind = placeholderImages['attachment'];
+      break;
+    default:
+      placeholderKind = placeholderImages[item._kind];
+      break;
+  }
 
   // TODO: Fuck this system.
   switch (item._kind) {
@@ -61,7 +102,12 @@ const getPlaceholder = (item) => {
     case 'armor':
       placeholder =
         placeholderKind[getDescendantProp(item, 'armor.class')] ||
-        placeholderKind.armor.default;
+        placeholderKind.default;
+      break;
+    case 'tacticalrig':
+      placeholder =
+        placeholderKind[getDescendantProp(new ChestRig(item), 'armorClass')] ||
+        placeholderKind.default;
       break;
     case 'ammunition':
       placeholder = placeholderKind[item.caliber] || placeholderKind.default;
@@ -74,6 +120,9 @@ const getPlaceholder = (item) => {
       break;
     case 'melee':
       placeholder = placeholderKind;
+      break;
+    default:
+      placeholder = placeholderImages.armor.default;
       break;
   }
 

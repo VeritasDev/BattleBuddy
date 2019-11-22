@@ -25,7 +25,18 @@ const SectionItems = ({items}) => {
   const {navigate} = useNavigation();
 
   const onPressHandler = (item) => {
-    navigate('Detail', {item, type: item._kind});
+    switch (item.type) {
+      case 'helmet':
+        navigate('Detail', {item, type: 'helmet'});
+        break;
+      case 'attachment':
+      case 'visor':
+        navigate('Detail', {item, type: 'visor'});
+        break;
+      default:
+        navigate('Detail', {item, type: item._kind});
+        break;
+    }
   };
 
   return (

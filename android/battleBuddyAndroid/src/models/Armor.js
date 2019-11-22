@@ -13,6 +13,7 @@ export default class Armor extends BaseItem {
     this.zones = this.rawZones.join(', ');
     this.bluntTp = this.armorProperties.bluntTroughput;
     this.penalties = armor.penalties;
+    this.type = armor.type;
 
     this.armorType = armor.type;
     this.protectsTopHead = this.rawZones.includes('top');

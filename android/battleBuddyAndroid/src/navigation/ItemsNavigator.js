@@ -10,12 +10,18 @@ import ComparisonScreen from '../screens/stacks/Item/ComparisonScreen';
 import defaultNavigationOptions from '../constants/defaultNavigationOptions';
 import FirearmsScreen from '../screens/FirearmsScreen';
 import AmmunitionScreen from '../screens/AmmunitionScreen';
+import ChestRigsScreen from '../screens/ChestRigsScreen';
+import HelmetsScreen from '../screens/HelmetsScreen';
+import VisorsScreen from '../screens/VisorsScreen';
 
 const itemsNavigator = createStackNavigator(
   {
     Items: ItemsScreen,
     Firearms: FirearmsScreen,
     Ammunition: AmmunitionScreen,
+    ChestRigs: ChestRigsScreen,
+    Helmets: HelmetsScreen,
+    Visors: VisorsScreen,
     Compare: ComparisonScreen,
     SelectCompare: SelectCompareScreen,
     Category: CategoryScreen,

@@ -31,23 +31,27 @@ const Value = styled(Text)`
 const DetailSection = ({section}) => (
   <Section>
     <Title>{section.title}</Title>
-    {section.rows.map((row) => {
-      return (
-        <ListItem
-          key={row.key}
-          title={
-            <Row>
-              <Text>{row.key}</Text>
-              <Value>{row.value}</Value>
-            </Row>
-          }
-          bottomDivider
-          chevron={!!row.onPress}
-          containerStyle={{backgroundColor: 'black'}}
-          onPress={row.onPress}
-        />
-      );
-    })}
+    {section.rows
+      .filter(
+        (row) => row.value !== null || row.value !== undefined || row.onPress
+      )
+      .map((row) => {
+        return (
+          <ListItem
+            key={row.key}
+            title={
+              <Row>
+                <Text>{row.key}</Text>
+                <Value>{row.value}</Value>
+              </Row>
+            }
+            bottomDivider
+            chevron={!!row.onPress}
+            containerStyle={{backgroundColor: 'black'}}
+            onPress={row.onPress}
+          />
+        );
+      })}
   </Section>
 );
 

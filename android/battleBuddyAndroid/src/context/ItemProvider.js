@@ -51,6 +51,15 @@ const ItemProvider = ({children}) => {
         case 'armor':
           db.getAllArmorByClass().then((x) => setItemsState(x, isMounted));
           break;
+        case 'helmet':
+          db.getAllHelmetsByClass().then((x) => setItemsState(x, isMounted));
+          break;
+        case 'visor':
+          db.getAllVisorsByClass().then((x) => setItemsState(x, isMounted));
+          break;
+        case 'tacticalrig':
+          db.getAllChestRigsByClass().then((x) => setItemsState(x, isMounted));
+          break;
         case 'ammunition':
           db.getAllAmmoByCaliber().then((x) => setItemsState(x, isMounted));
           break;
