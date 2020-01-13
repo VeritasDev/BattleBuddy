@@ -133,7 +133,7 @@ android {
         applicationId "com.veritas.battlebuddy"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 10
+        versionCode 13
         versionName "Release 1.0.2"
         multiDexEnabled true
     }
@@ -216,6 +216,12 @@ dependencies {
 task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
+}
+
+configurations.all {
+     resolutionStrategy {
+       force "com.facebook.soloader:soloader:0.8.0"
+     }
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
