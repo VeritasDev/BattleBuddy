@@ -31,7 +31,7 @@
     "@skele/components": "^1.0.0-alpha.40",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
-    "react-native": "0.61.2",
+    "react-native": "^0.61.4",
     "react-native-elements": "^1.2.5",
     "react-native-firebaseui": "^0.2.0",
     "react-native-gesture-handler": "^1.4.1",
