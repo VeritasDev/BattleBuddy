@@ -252,6 +252,7 @@
 "removes_contusion" = "Removes Contusion";
 "removes_fracture" = "Removes Fracture";
 "removes_pain" = "Removes Pain";
+"removes_blackout" = "Removes Blackout";
 "hydration_modifier" = "Hydration Modifier";
 "energy_modifier" = "Energy Modifier";
 

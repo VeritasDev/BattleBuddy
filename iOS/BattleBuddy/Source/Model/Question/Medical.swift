@@ -19,6 +19,7 @@ struct Medical: BaseItem {
     let removesContusion: Bool
     let removesFracture: Bool
     let removesPain: Bool
+    let removesBlackout: Bool
     let medicalItemType: MedicalItemType
 
     init?(json: [String: Any]) {
@@ -28,9 +29,10 @@ struct Medical: BaseItem {
         guard BaseItemUtils.baseItemJsonValid(json),
             let rawType = json["type"] as? String,
             let resolvedType = MedicalItemType(rawValue: rawType),
-            let rawMaxResource = json["resources"] as? NSNumber, let rawResourseRate = json["resourceRate"] as? NSNumber,
+            let rawMaxResource = json["resources"] as? NSNumber,
+            let rawResourseRate = json["resourceRate"] as? NSNumber,
             let rawUseTime = json["useTime"] as? NSNumber,
-            let rawEffects = json["effects"] as? [String: [String: NSNumber]] else {
+            let rawEffects = json["effects"] as? [String: Any] else {
                 print("ERROR: Medical missing required parameters in json: \(json)")
                 return nil
         }
@@ -47,10 +49,43 @@ struct Medical: BaseItem {
         }
 
         useTime = rawUseTime.intValue
-        removesBloodloss = rawEffects["bloodloss"]?["removes"]?.boolValue ?? false
-        removesContusion = rawEffects["contusion"]?["removes"]?.boolValue ?? false
-        removesFracture = rawEffects["fracture"]?["removes"]?.boolValue ?? false
-        removesPain = rawEffects["pain"]?["removes"]?.boolValue ?? false
-        effectDuration = rawEffects["pain"]?["duration"]?.intValue ?? 0
+
+        if let blackoutEffets = rawEffects["destroyedPart"] as? [String: Any],
+            let removes = blackoutEffets["removes"] as? NSNumber {
+            removesBlackout = removes.boolValue
+        } else {
+            removesBlackout = false
+        }
+
+        if let fractureEffets = rawEffects["fracture"] as? [String: Any],
+            let removes = fractureEffets["removes"] as? NSNumber {
+            removesFracture = removes.boolValue
+        } else {
+            removesFracture = false
+        }
+
+        if let contusionEffets = rawEffects["contusion"] as? [String: Any],
+            let removes = contusionEffets["removes"] as? NSNumber {
+            removesContusion = removes.boolValue
+        } else {
+            removesContusion = false
+        }
+
+        if let painEffets = rawEffects["pain"] as? [String: Any],
+            let removes = painEffets["removes"] as? NSNumber,
+            let duration = painEffets["duration"] as? NSNumber {
+            removesPain = removes.boolValue
+            effectDuration = duration.intValue
+        } else {
+            removesPain = false
+            effectDuration = 0
+        }
+
+        if let bloodlossEffets = rawEffects["bloodloss"] as? [String: Any],
+            let removes = bloodlossEffets["removes"] as? NSNumber {
+            removesBloodloss = removes.boolValue
+        } else {
+            removesBloodloss = false
+        }
     }
 }

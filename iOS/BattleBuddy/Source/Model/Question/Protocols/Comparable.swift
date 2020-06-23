@@ -51,6 +51,7 @@ enum ComparableProperty: Localizable {
     case removesContusion
     case removesFracture
     case removesPain
+    case removesBlackout
 
     // Throwables
     case fuseTime
@@ -97,6 +98,7 @@ enum ComparableProperty: Localizable {
         case .removesContusion: return Localized("removes_contusion")
         case .removesFracture: return Localized("removes_fracture")
         case .removesPain: return Localized("removes_pain")
+        case .removesBlackout: return Localized("removes_blackout")
         case .fuseTime: return Localized("fuse_time")
         case .explosionRadiusMin: return Localized("explosion_radius_min")
         case .explosionRadiusMax: return Localized("explosion_radius_max")
@@ -116,7 +118,7 @@ enum ComparableProperty: Localizable {
         case .ammo: return [.penetration, .damage, .armorDamage, .fragChance, .muzzleVelocity]
         case .armor: return [.armorClass, .armorDurability, .armorZones, .speedPenalty, .turnSpeedPenalty, .ergoPenalty]
         case .chestRig: return [.capacity, .oneByOneSlots, .oneByTwoSlots, .oneByThreeSlots, .twoByTwoSlots]
-        case .medical: return [.useCount, .useTime, .effectDuration, .removesBloodloss, .removesFracture, .removesPain, .removesContusion]
+        case .medical: return [.useCount, .useTime, .effectDuration, .removesBloodloss, .removesFracture, .removesPain, .removesContusion, .removesBlackout]
         case .throwable: return [.fuseTime, .fragmentationCount, .explosionRadiusMin, explosionRadiusMax]
         case .melee: return [.stabDamage, .stabRate, stabRange, .slashDamage, slashRate, .slashRange]
         }
@@ -185,6 +187,7 @@ extension Medical: Comparable {
         case .removesContusion: return removesContusion ? Localized("yes") : Localized("no")
         case .removesFracture: return removesFracture ? Localized("yes") : Localized("no")
         case .removesPain: return removesPain ? Localized("yes") : Localized("no")
+        case .removesBlackout: return removesBlackout ? Localized("yes") : Localized("no")
         default: fatalError()
         }
     }

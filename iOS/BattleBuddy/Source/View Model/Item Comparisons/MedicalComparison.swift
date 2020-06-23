@@ -62,7 +62,8 @@ struct MedicalComparison: ItemComparison {
             .removesBloodloss: PropertyRange(minValue: 0, maxValue: 1),
             .removesPain: PropertyRange(minValue: 0, maxValue: 1),
             .removesFracture: PropertyRange(minValue: 0, maxValue: 1),
-            .removesContusion: PropertyRange(minValue: 0, maxValue: 1)
+            .removesContusion: PropertyRange(minValue: 0, maxValue: 1),
+            .removesBlackout: PropertyRange(minValue: 0, maxValue: 1)
         ]
     }
 
@@ -78,6 +79,7 @@ struct MedicalComparison: ItemComparison {
         case .removesPain: return scaledValue(boolValue: med.removesPain, range: range)
         case .removesFracture: return scaledValue(boolValue: med.removesFracture, range: range)
         case .removesContusion: return scaledValue(boolValue: med.removesContusion, range: range)
+        case .removesBlackout: return scaledValue(boolValue: med.removesBlackout, range: range)
         default: fatalError()
         }
     }

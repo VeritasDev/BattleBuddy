@@ -30,17 +30,18 @@ class MedicalDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
     let removesBloodlossCell = BaseTableViewCell(text: Localized("removes_bloodloss"), accessory: .none, selection: .none)
     let removesContusionCell = BaseTableViewCell(text: Localized("removes_contusion"), accessory: .none, selection: .none)
     let removesFractureCell = BaseTableViewCell(text: Localized("removes_fracture"), accessory: .none, selection: .none)
+    let removesBlackoutCell = BaseTableViewCell(text: Localized("removes_blackout"), accessory: .none, selection: .none)
     let compareCell = BaseTableViewCell(text: Localized("compare"))
     lazy var propertiesCells: [BaseTableViewCell] = {
         switch medicalItem.medicalItemType {
         case .medkit:
-            return [typeCell, resourceAmountCell, useTimeCell, removesBloodlossCell, removesContusionCell, removesFractureCell, compareCell]
+            return [typeCell, resourceAmountCell, useTimeCell, removesBloodlossCell, removesContusionCell, removesFractureCell, removesBlackoutCell, compareCell]
         case .painkiller:
-            return [typeCell, resourceAmountCell, useTimeCell, effectDurationCell, removesPainCell, removesBloodlossCell, removesContusionCell, removesFractureCell, compareCell]
+            return [typeCell, resourceAmountCell, useTimeCell, effectDurationCell, removesPainCell, removesBloodlossCell, removesContusionCell, removesFractureCell, removesBlackoutCell, compareCell]
         case .accessory:
-            return [typeCell, resourceAmountCell, useTimeCell, removesPainCell, removesBloodlossCell, removesContusionCell, removesFractureCell, compareCell]
+            return [typeCell, resourceAmountCell, useTimeCell, removesPainCell, removesBloodlossCell, removesContusionCell, removesFractureCell, removesBlackoutCell, compareCell]
         case .stimulator:
-            return [typeCell, resourceAmountCell, useTimeCell, effectDurationCell, removesPainCell, removesBloodlossCell, removesContusionCell, removesFractureCell, compareCell]
+            return [typeCell, resourceAmountCell, useTimeCell, effectDurationCell, removesPainCell, removesBloodlossCell, removesContusionCell, removesFractureCell, removesBlackoutCell, compareCell]
         }
     }()
 
@@ -70,6 +71,7 @@ class MedicalDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableVi
         removesBloodlossCell.detailTextLabel?.text = medicalItem.removesBloodloss ? Localized("yes") : Localized("no")
         removesContusionCell.detailTextLabel?.text = medicalItem.removesContusion ? Localized("yes") : Localized("no")
         removesFractureCell.detailTextLabel?.text = medicalItem.removesFracture ? Localized("yes") : Localized("no")
+        removesBlackoutCell.detailTextLabel?.text = medicalItem.removesBlackout ? Localized("yes") : Localized("no")
 
         setupConstraints()
     }
