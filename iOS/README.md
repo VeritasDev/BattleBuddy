@@ -6,15 +6,19 @@
 - [x] Release v1.0
 - [x] Release v1.0.1
 - [x] Release v1.0.2 
-- [x] Release v1.1.0  ***Submitted to iOS App Store***
-- [ ] Release v1.2.0  ***In development - see TODO list below***
+- [x] Release v1.1.0  ***Live in the App Store***
+- [ ] Release v1.1.1  ***In development - see TODO list below***
 
+## <u>v1.1.1</u>
+- [ ] STK/TTK Calculator
+- [ ] Add Sigma to The Team list
+- [ ] Fix medical list bug
+- [ ] First iteration of Customs map
 
 ## <u>v1.2.0</u>
 - [ ] Update translations process
 - [ ] Push notifications
 - [ ] News / announcements (translated server side?)
-- [ ] STK/TTK Calculator
 - [ ] Community Poll
 - [ ] Implement Banner Ads (if setting enabled)
 - [ ] Combat Simulation Randomizer

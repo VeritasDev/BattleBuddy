@@ -24,10 +24,10 @@ class TwitchManager {
     }
 
     private func getInfoForChannels(_ channels: [TwitchChannel]) {
-        var url = baseUrl + "streams?"
+        var url = baseUrl + streamsRoute
 
         for channel in channels {
-            url += (channel == channels.first) ? "user_id=\(channel.userId())" : "&user_id=\(channel.userId())"
+            url += (channel == channels.first) ? "?user_id=\(channel.userId())" : "&user_id=\(channel.userId())"
         }
 
         requestor.sendGetRequest(url: url, headers: headers) { response in

@@ -67,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SessionDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        dependencyManager.twitchManager().refreshTwitchInfo()
+        // dependencyManager.twitchManager().refreshTwitchInfo() TODO: UPDATE FOR NEW TWITCH API
         dependencyManager.metadataManager().updateGlobalMetadata { (globalMetadata) -> Void in }
     }
 }

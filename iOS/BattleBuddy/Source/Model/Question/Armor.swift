@@ -19,7 +19,7 @@ class Armor: BaseItem, Armored {
     let armorClass: ArmorClass
     var richochetParams: RichochetParams { get { return RichochetParams(x: richochetX, y: richochetY, z: richochetZ) } }
     var penalties: Penalties { get { return Penalties(ergonomics: ergoPenalty, turnSpeed: turnSpeedPenalty, movementSpeed:  movementSpeedPenalty, hearing: hearingPenalty) } }
-    var armorZoneConfig: ArmorZonesConfig { get { return ArmorZonesConfig(topHead: protectsTopHead, eyes: protectsEyes, jaws: protectsJaws, ears: protectsEars, nape: protectsNape, chest: protectsChest, stomach: protectsStomach, leftArm: protectsLeftArm, rightArm: protectsChestRightArm, leftLeg: protectsLeftLeg, rightLeg: protectsChestRightLeg) } }
+    var armorZoneConfig: ArmorZonesConfig { get { return ArmorZonesConfig(topHead: protectsTopHead, eyes: protectsEyes, jaws: protectsJaws, ears: protectsEars, nape: protectsNape, chest: protectsChest, stomach: protectsStomach, leftArm: protectsLeftArm, rightArm: protectsRightArm, leftLeg: protectsLeftLeg, rightLeg: protectsChestRightLeg) } }
 
     fileprivate var bluntThroughput: Float
     fileprivate var ergoPenalty: Int
@@ -37,7 +37,7 @@ class Armor: BaseItem, Armored {
     fileprivate var protectsChest: Bool
     fileprivate var protectsStomach: Bool
     fileprivate var protectsLeftArm: Bool
-    fileprivate var protectsChestRightArm: Bool
+    fileprivate var protectsRightArm: Bool
     fileprivate var protectsLeftLeg: Bool
     fileprivate var protectsChestRightLeg: Bool
 
@@ -71,7 +71,7 @@ class Armor: BaseItem, Armored {
                 protectsChest = false
                 protectsStomach = false
                 protectsLeftArm = false
-                protectsChestRightArm = false
+                protectsRightArm = false
                 protectsLeftLeg = false
                 protectsChestRightLeg = false
                 bluntThroughput = 0.0
@@ -98,7 +98,7 @@ class Armor: BaseItem, Armored {
         protectsChest = rawZones.contains("chest")
         protectsStomach = rawZones.contains("stomach")
         protectsLeftArm = rawZones.contains("leftarm")
-        protectsChestRightArm = rawZones.contains("rightarm")
+        protectsRightArm = rawZones.contains("rightarm")
         protectsLeftLeg = rawZones.contains("leftleg")
         protectsChestRightLeg = rawZones.contains("rightleg")
         bluntThroughput = rawBluntTp.floatValue
@@ -149,7 +149,7 @@ class Armor: BaseItem, Armored {
         if protectsChest { components.append("armor_zone_chest".local()) }
         if protectsStomach { components.append("armor_zone_stomach".local()) }
         if protectsLeftArm { components.append("armor_zone_left_arm".local()) }
-        if protectsChestRightArm { components.append("armor_zone_right_arm".local()) }
+        if protectsRightArm { components.append("armor_zone_right_arm".local()) }
         if protectsLeftLeg { components.append("armor_zone_left_leg".local()) }
         if protectsChestRightLeg { components.append("armor_zone_right_leg".local()) }
 
@@ -192,7 +192,7 @@ extension SimulationArmor: CalculableArmor {
         if protectsChest { zones.append(.thorax) }
         if protectsStomach { zones.append(.stomach) }
         if protectsLeftArm { zones.append(.leftArm) }
-        if protectsChestRightArm { zones.append(.rightArm) }
+        if protectsRightArm { zones.append(.rightArm) }
         if protectsLeftLeg { zones.append(.leftLeg) }
         if protectsChestRightLeg { zones.append(.rightLeg) }
 

@@ -14,6 +14,7 @@ enum TwitchChannel: String, Linkable, CaseIterable {
     case slushpuppy = "slushpuppy"
     case pestily = "pestily"
     case anton = "anton"
+    case sigma = "sigma"
 
     func name() -> String {
         switch self {
@@ -22,6 +23,7 @@ enum TwitchChannel: String, Linkable, CaseIterable {
         case .slushpuppy: return "Slushpuppy"
         case .pestily: return "Pestily"
         case .anton: return "Anton"
+        case .sigma: return "Sigma"
         }
     }
 
@@ -32,6 +34,7 @@ enum TwitchChannel: String, Linkable, CaseIterable {
         case .slushpuppy: return "145233973"
         case .pestily: return "106013742"
         case .anton: return "63880003"
+        case .sigma: return "181938671"//38849267328" //or 181938671
         }
     }
 
@@ -42,6 +45,7 @@ enum TwitchChannel: String, Linkable, CaseIterable {
         case .slushpuppy: return UIImage(named: "slushpuppy")!
         case .pestily: return UIImage(named: "pestily")!
         case .anton: return UIImage(named: "anton")!
+        case .sigma: return UIImage(named: "sigma")!
         }
     }
 

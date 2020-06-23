@@ -93,9 +93,9 @@
 		27F09AE822E3875600552C35 /* PenChanceCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F09AE722E3875600552C35 /* PenChanceCalcViewController.swift */; };
 		27F2DDC722C245DA00BD9779 /* ItemsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2DDC622C245DA00BD9779 /* ItemsMenuViewController.swift */; };
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
+		601822A724A2CABC00A624A4 /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601822A524A2CAB900A624A4 /* BallisticsEngine.framework */; };
+		601822A824A2CABC00A624A4 /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 601822A524A2CAB900A624A4 /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		601BACF02375ADF20080493F /* RigDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */; };
-		60415B9824A2941B00658686 /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60415B9624A28EC900658686 /* BallisticsEngine.framework */; };
-		60415B9924A2941B00658686 /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60415B9624A28EC900658686 /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6083741D232BBA5F00AA9D29 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */; };
 		6083741F232BBAAE00AA9D29 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */; };
 		60837425232BC24B00AA9D29 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837424232BC24B00AA9D29 /* Global.swift */; };
@@ -207,7 +207,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				60415B9924A2941B00658686 /* BallisticsEngine.framework in Embed Frameworks */,
+				601822A824A2CABC00A624A4 /* BallisticsEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,8 +336,8 @@
 		27F2DDC622C245DA00BD9779 /* ItemsMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsMenuViewController.swift; sourceTree = "<group>"; };
 		27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionsViewController.swift; sourceTree = "<group>"; };
 		55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		601822A524A2CAB900A624A4 /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RigDetailsConfiguration.swift; sourceTree = "<group>"; };
-		60415B9624A28EC900658686 /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		60837424232BC24B00AA9D29 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -469,7 +469,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60415B9824A2941B00658686 /* BallisticsEngine.framework in Frameworks */,
+				601822A724A2CABC00A624A4 /* BallisticsEngine.framework in Frameworks */,
 				AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,7 +480,7 @@
 		16562AA740BE87B8AB0FCB7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60415B9624A28EC900658686 /* BallisticsEngine.framework */,
+				601822A524A2CAB900A624A4 /* BallisticsEngine.framework */,
 				DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */,
 			);
 			name = Frameworks;
@@ -1228,7 +1228,7 @@
 					};
 					27954E2B22A18470000FC0C6 = {
 						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1150;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -1866,6 +1866,7 @@
 			baseConfigurationReference = 9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_ENTITLEMENTS = BattleBuddy/BattleBuddy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -2001,6 +2002,7 @@
 			baseConfigurationReference = 55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_ENTITLEMENTS = BattleBuddy/BattleBuddy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
