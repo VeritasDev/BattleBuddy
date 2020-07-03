@@ -45,7 +45,8 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
     let compareCell = BaseTableViewCell(text: Localized("compare"))
     let penChanceCalcCell = BaseTableViewCell(text: Localized("pen_chance"))
     let combatSimCell = BaseTableViewCell(text: "main_menu_combat_sim".local())
-    lazy var exploreCells: [BaseTableViewCell] = { return [compareCell, penChanceCalcCell, combatSimCell] }()
+    let shootingRangeCell = BaseTableViewCell(text: "main_menu_shooting_range".local())
+    lazy var exploreCells: [BaseTableViewCell] = { return [compareCell, shootingRangeCell, penChanceCalcCell, combatSimCell] }()
 
     init(_ armor: Armor) {
         self.armor = armor
@@ -207,6 +208,23 @@ class ArmorDetailsConfiguration: NSObject, ItemDetailsConfiguration, UITableView
 
                 self.delegate?.showViewController(viewController: combatSimVC)
             }
+
+            case shootingRangeCell:
+                self.delegate?.showLoading(show: true)
+
+                DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
+                    self.delegate?.showLoading(show: false)
+
+                    guard let defaultChar = characters.first else { return }
+                    let shootingRangeVC = ShootingRangeViewController(defaultCharacter: defaultChar)
+
+                    switch self.armor.armorType {
+                    case .body: shootingRangeVC.bodyArmor = self.armor
+                    default: shootingRangeVC.helmet = self.armor
+                    }
+
+                    self.delegate?.showViewController(viewController: shootingRangeVC)
+                }
         default:
             fatalError()
         }

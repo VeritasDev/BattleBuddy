@@ -10,12 +10,19 @@
 - [ ] Release v1.1.1  ***In development - see TODO list below***
 
 ## <u>v1.1.1</u>
-- [ ] STK/TTK Calculator
-- [ ] Add Sigma to The Team list
-- [ ] Fix medical list bug
-- [ ] First iteration of Customs map
+- [x] Add Sigma to The Team list
+- [x] Fix medical list bug
+- [ ] Flea market price check
+    - [x] Search
+    - [ ] Favorite / unfavorite
+    - [x] Style results
+    - [ ] Top 25 price per slot
+- AVG PPS
 
 ## <u>v1.2.0</u>
+- [ ] Currency Converter
+- [ ] First iteration of Customs map
+- [ ] STK/TTK Calculator
 - [ ] Update translations process
 - [ ] Push notifications
 - [ ] News / announcements (translated server side?)

@@ -290,7 +290,7 @@
 "ballistics_body_2_2_2" = "For example, if set of armor starts with 50 durability, it provides the best protection when it is 50/50, which is pretty obvious. The less obvious part is that any armor that is damaged and has not yet been repaired, such as armor that is 40/50, is exactly as effective at protecting you as the same armor if it was damaged and then repaired and is currently 40/40.";
 "ballistics_body_2_2_3" = "Knowing the original maximum durability value for the different sets of armor, or looking at the durability bar when inspecting the item, is an important habit to get into. Often times you'll find armor with a lower class than your current set of armor, but if your current set of armor is badly damaged or has been repaired many times, you may actually be increasing your chances of the armor saving your life if you switch to a lower-class armor with a higher current durability percentage. Having a solid understand of the general protection chances for different classes of armor, durability values, and bullet penetration properties can actually be invaluable in some combat situations. Check out the Damage Calculator to start getting a feel for how it all works!";
 "ballistics_body_2_3_title" = "3. Zones of Protection";
-"ballistics_body_2_3" = "There's not a ton of detail that I need to go into detail on this topic, other than you need to remember one simple rule: Armor does not protect what it visually appears to protect! The best example to demonstrate this is looking at the Gen4 Full Protection Armor vs. the Gen4 Assault Kit. The full protection version looks like it covers more of your body, but it protects your body parts exactly the same as the assault kit because it has the same zones of protection. Pay attention to what zones are protected - getting your arms or stomach blacked out can be quite annoying and is often worth some extra protection, if you can afford it!";
+"ballistics_body_2_3" = "There's not a ton of detail that I need to go into on this topic, other than you need to remember one simple rule: Armor does not protect what it visually appears to protect! The best example to demonstrate this is looking at the Gen4 Full Protection Armor vs. the Gen4 Assault Kit. The full protection version looks like it covers more of your body, but it protects your body parts exactly the same as the assault kit because it has the same zones of protection. Pay attention to what zones are protected - getting your arms or stomach blacked out can be quite annoying and is often worth some extra protection, if you can afford it!";
 "ballistics_body_2_4_title" = "4. Materials";
 "ballistics_body_2_4" = "Each armor has different materials that it is made from. Currently, materials have no notable effect on the armor's protection ability, instead the armor material becomes relevant when repairing. Some materials are able to be repaired very efficiently and inexpensively, while others take significant losses to their durability when repairing and can often cost more than the original cost of the armor!";
 "ballistics_body_2_5_title" = "5. Penalties";
@@ -305,7 +305,7 @@
 
 "attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
-"attributions_willerz" = "Willer_Z";
+"attributions_willerz" = "WillerZ";
 "attributions_community" = "Community";
 "attributions_bsg" = "Battlestate Games Limited";
 "attributions_misc" = "Miscellaneous Legal Stuff";
@@ -415,7 +415,7 @@
 "modificationStock" = "Stock";
 
 // MARK:- Sound Training
-"sound_training" = "Sound Training Beta";
+"sound_training" = "Sound Training";
 "sound_training_start" = "Start Training";
 "sound_training_commit" = "Guess";
 "sound_training_result_correct" = "Correct!";
@@ -500,3 +500,24 @@
 "oneByTwoSlots" = "1x2 Slots";
 "oneByThreeSlots" = "1x3 Slots";
 "twoByTwoSlots" = "2x2 Slots";
+
+"main_menu_shooting_range" = "Shooting Range";
+"shooting_range_target_settings" = "Target Settings";
+
+
+// ----------------------------------------
+// Flea Market
+"main_menu_currency_converter" = "Currency Converter";
+"main_menu_price_check" = "Price Check";
+"prices" = "Prices";
+"price_check" = "Price Check";
+"market" = "Market";
+"price_per_slot" = "Per Slot";
+
+"attributions_market_api" = "Tarkov Market";
+"attributions_market_api_descr" = "Flea market price data courtesy of the Tarkov Market API.";
+
+"price_check_sort_all" = "All";
+"price_check_sort_favorites" = "Favorites";
+"price_check_sort_top" = "Top";
+"price_check_sort_trending" = "Trending";

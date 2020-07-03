@@ -21,6 +21,10 @@ enum MenuItemType: CaseIterable, Localizable {
     case melee
     case throwables
 
+    // Market
+    case priceCheck
+    case currencyConverter
+
     // Learn
     case ballistics
     case healthCalc
@@ -28,6 +32,7 @@ enum MenuItemType: CaseIterable, Localizable {
     case soundTraining
     case budPoints
     case combatSim
+    case shootingRange
 
     func local(short: Bool = false) -> String {
         switch self {
@@ -47,6 +52,9 @@ enum MenuItemType: CaseIterable, Localizable {
         case .soundTraining: return Localized("sound_training")
         case .budPoints: return Localized("bud_points")
         case .combatSim: return "main_menu_combat_sim".local()
+        case .shootingRange: return "main_menu_shooting_range".local()
+        case .currencyConverter: return "main_menu_currency_converter".local()
+        case .priceCheck: return "main_menu_price_check".local()
         }
     }
 }
@@ -121,6 +129,12 @@ struct MainMenuItem {
                 handler(CombatSimViewController(characters: characters))
                 return
             }
+        case .shootingRange:
+            DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
+                guard let defaultChar = characters.first else { return }
+                handler(ShootingRangeViewController(defaultCharacter: defaultChar))
+                return
+            }
         case .throwables:
             DependencyManagerImpl.shared.databaseManager().getAllThrowables { throwables in
                 handler(BaseItemPreviewViewController(delegate: nil, config: ThrowablesPreviewConfiguration(items: throwables)))
@@ -131,6 +145,13 @@ struct MainMenuItem {
                 handler(BaseItemPreviewViewController(delegate: nil, config: MeleePreviewConfiguration(items: melee)))
                 return
             }
+        case .priceCheck:
+            DependencyManagerImpl.shared.databaseManager().getAllMarketItems { marketItems in
+                handler(PriceCheckViewController(marketItems))
+                return
+            }
+        case .currencyConverter:
+            break
         }
     }
 
@@ -152,6 +173,9 @@ struct MainMenuItem {
         case .soundTraining: return UIImage(named: "card_hero_sound_training")
         case .budPoints: return UIImage(named: "card_hero_bud_points")
         case .combatSim: return UIImage(named: "card_hero_combat_sim")
+        case .shootingRange: return UIImage(named: "card_hero_combat_sim")
+        case .priceCheck: return UIImage(named: "card_hero_price_check")
+        case .currencyConverter: return UIImage(named: "card_hero_currency_converter")
         }
     }
 

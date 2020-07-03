@@ -306,7 +306,7 @@
 
 "attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
-"attributions_willerz" = "Willer_Z";
+"attributions_willerz" = "WillerZ";
 "attributions_community" = "社群"; 
 "attributions_bsg" = "Battlestate Games Limited";
 "attributions_misc" = "其他法律事務"; 
@@ -416,7 +416,7 @@
 "modificationStock" = "Stock";
 
 // MARK:- Sound Training
-"sound_training" = "Sound Training Beta";
+"sound_training" = "Sound Training";
 "sound_training_start" = "Start Training";
 "sound_training_commit" = "Guess";
 "sound_training_result_correct" = "Correct!";

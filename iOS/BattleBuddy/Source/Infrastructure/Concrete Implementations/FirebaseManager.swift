@@ -29,6 +29,7 @@ enum FirebaseCollection: String {
     case compatibility = "compatibility"
     case character = "character"
     case news = "news"
+    case market = "market"
 }
 
 enum ImageSize: String {
@@ -83,6 +84,7 @@ class FirebaseManager: NSObject {
     private var cachedMedical: [Medical]?
     private var cachedThrowables: [Throwable]?
     private var cachedMelee: [MeleeWeapon]?
+    private var cachedMarketItems: [MarketItem]?
 
     init(sessionDelegate: SessionDelegate) {
         self.sessionDelegate = sessionDelegate
@@ -644,6 +646,41 @@ extension FirebaseManager: DatabaseManager {
         }
     }
 
+    // Mark:- Market Items
+
+    func getAllMarketItems(handler: @escaping (_: [MarketItem]) -> Void) {
+        if let cache = cachedMarketItems {
+            handler(cache)
+            return
+        }
+
+        db.collection(FirebaseCollection.market.rawValue).getDocuments() { (querySnapshot, err) in
+            if let error = err {
+                print("Failed to get all market items w/ error: ", error.localizedDescription)
+                handler([]);
+                return
+            }
+
+            guard let snapshot = querySnapshot else { handler([]); return }
+            print("Successfully fetched \(String(snapshot.documents.count)) market items.")
+
+            var marketItems: [MarketItem] = []
+            for doc in snapshot.documents {
+                let data = doc.data()
+                guard let valuesArray = Array(data.values) as? [[String: Any]] else { return }
+                for itemJson in valuesArray {
+                    if let marketItem = MarketItem(json: itemJson) {
+                        marketItems.append(marketItem)
+                    }
+                }
+            }
+
+            marketItems.sort { (a, b) -> Bool in return a.pricePerSlot > b.pricePerSlot }
+            self.cachedMarketItems = marketItems
+            handler(marketItems)
+        }
+    }
+
     // MARK:- Mapped by category
     func getAllFirearmsByType(handler: @escaping ([FirearmType: [Firearm]]) -> Void) {
         getAllFirearms { firearms in
@@ -770,4 +807,5 @@ extension QuerySnapshot {
     func getMelee() -> [MeleeWeapon] { return documents.compactMap{ MeleeWeapon(json: $0.data()) } }
     func getThrowables() -> [Throwable] { return documents.compactMap{ Throwable(json: $0.data()) } }
     func getMods() -> [Modification] { return documents.compactMap{ Modification(json: $0.data()) } }
+    func getMarketItems() -> [MarketItem] { return documents.compactMap{ MarketItem(json: $0.data()) } }
 }

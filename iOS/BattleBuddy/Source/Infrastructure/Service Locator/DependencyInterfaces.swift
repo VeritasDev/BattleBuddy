@@ -77,6 +77,8 @@ protocol DatabaseManager {
     func getAllThrowables(handler: @escaping (_: [Throwable]) -> Void)
     func getAllMelee(handler: @escaping (_: [MeleeWeapon]) -> Void)
 
+    func getAllMarketItems(handler: @escaping (_: [MarketItem]) -> Void)
+
     func getAllFirearmsByType(handler: @escaping ([FirearmType: [Firearm]]) -> Void)
     func getAllArmorByClass(handler: @escaping ([ArmorClass: [Armor]]) -> Void)
     func getAllBodyArmorByClass(handler: @escaping ([ArmorClass: [Armor]]) -> Void)

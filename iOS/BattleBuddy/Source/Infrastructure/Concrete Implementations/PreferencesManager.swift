@@ -15,6 +15,7 @@ enum Preference: String {
     case languageOverride = "prefs_language_override"
     case nextRewardDate = "next_reward_date"
     case nextRewardAmount = "next_reward_amount"
+    case favoriteMarketItems = "favorite_market_items"
 }
 
 // TODO: Make this a concrete implementation of a more generic interface!
@@ -28,6 +29,7 @@ class PreferencesManager {
     func valueForDoublePref(_ pref: Preference) -> Double { return defaults.double(forKey: pref.rawValue) }
     func valueForBoolPref(_ pref: Preference) -> Bool { return defaults.bool(forKey: pref.rawValue) }
     func valueForIntPref(_ pref: Preference) -> Int { return defaults.integer(forKey: pref.rawValue) }
+    func valueForArrayPref(_ pref: Preference) -> [Any]? { return defaults.array(forKey: pref.rawValue) }
 
     // MARK: - Write
     func update(_ pref: Preference, value: Any?) { defaults.set(value, forKey: pref.rawValue) }

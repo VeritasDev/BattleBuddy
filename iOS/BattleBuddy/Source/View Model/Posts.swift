@@ -15,6 +15,7 @@ final class BallisticsPost: PostConfiguration {
         return [
             PostElementImage(image: UIImage(named: "card_hero_ballistics")!, height: 200.0),
             PostElementHeader(localizedTitle: Localized("ballistics_title"), authorName: "Veritas", publishDate: Date(timeIntervalSince1970: 1563025929)),
+            PostElementYouTube(videoId: "Gv02lcptroo", height: 260.0),
             PostElementBody(body: "ballistics_body_1".local()),
             PostElementBody(body: "ballistics_body_2".local()),
             PostElementImage(image: UIImage(named: "card_hero_armor")!, height: 200.0),

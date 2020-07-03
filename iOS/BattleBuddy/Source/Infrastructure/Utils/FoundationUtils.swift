@@ -51,3 +51,11 @@ extension Float {
         return convertedBack / Float(multiplier)
     }
 }
+
+extension Double {
+    func percentString() -> String? {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .percent
+        return numberFormatter.string(from: NSNumber(value: self))
+    }
+}

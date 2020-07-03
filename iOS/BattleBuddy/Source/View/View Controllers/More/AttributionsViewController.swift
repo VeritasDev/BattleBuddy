@@ -68,6 +68,18 @@ class AttributionsViewController: BaseTableViewController {
         cell.selectionStyle = .gray
         return cell
     }()
+    lazy var marketApiCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.textLabel?.text = "attributions_market_api".local()
+        cell.textLabel?.font = .systemFont(ofSize: 22, weight: .medium)
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.text = "attributions_market_api_descr".local()
+        cell.detailTextLabel?.font = .systemFont(ofSize: 14, weight: .light)
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .gray
+        return cell
+    }()
     lazy var betrixCell: BaseTableViewCell = {
         let cell = BaseTableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = "attributions_betrix".local()
@@ -115,7 +127,7 @@ class AttributionsViewController: BaseTableViewController {
         return cell
     }()
 
-    lazy var cells: [BaseTableViewCell] = [bsgCell, restApiCell, nofamCell, smooothCell, willerzCell, translationsCell, betrixCell, communityCell, miscCell]
+    lazy var cells: [BaseTableViewCell] = [bsgCell, restApiCell, nofamCell, marketApiCell, smooothCell, willerzCell, translationsCell, betrixCell, communityCell, miscCell]
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
@@ -150,8 +162,9 @@ class AttributionsViewController: BaseTableViewController {
         let cell = tableView.cellForRow(at: indexPath)
         switch cell {
         case restApiCell: handleUrlString("https://tarkov-database.com/about")
+        case marketApiCell: handleUrlString("https://tarkov-market.com/dev/api")
         case nofamCell: handleUrlString("https://www.twitch.tv/nofoodaftermidnight")
-        case willerzCell: handleUrlString("https://www.twitch.tv/willer_z")
+        case willerzCell: handleUrlString("https://www.twitch.tv/willerz")
         case bsgCell: handleUrlString("https://www.battlestategames.com/")
         case smooothCell: handleUrlString("https://www.twitch.tv/smooothbrain")
         case translationsCell: navigationController?.pushViewController(LocalizationTeamViewController(), animated: true)

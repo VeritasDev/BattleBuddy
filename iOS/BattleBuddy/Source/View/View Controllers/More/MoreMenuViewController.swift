@@ -244,7 +244,7 @@ class MoreMenuViewController: BaseTableViewController {
 
             rewardCell.detailTextLabel?.text = String(nextAvailableReward.points)
 
-            let statsCells = [userCountCell, budScoreCell, leaderboardCell, rewardCell, watchAdCell, daysSinceWipeCell, bsgTwitterCell]
+            let statsCells = [userCountCell, daysSinceWipeCell, bsgTwitterCell]
             let globalStatsSection = GroupedTableViewSection(headerTitle: "global_stats".local(), cells: statsCells)
             sections.append(globalStatsSection)
         }

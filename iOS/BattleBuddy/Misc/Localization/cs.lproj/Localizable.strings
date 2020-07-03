@@ -305,7 +305,7 @@
 
 "attributions_api" = "Morphy2k & Tarkov Database";
 "attributions_nofam" = "NoFoodAfterMidnight";
-"attributions_willerz" = "Willer_Z";
+"attributions_willerz" = "WillerZ";
 "attributions_community" = "Komunita";
 "attributions_bsg" = "Battlestate Games Limited";
 "attributions_misc" = "Miscellaneous Legal Stuff";
@@ -313,7 +313,7 @@
 
 "attributions_api_descr" = "Tento projekt by nebyl možný bez fantastické vývojové práce Morphyho na Tarkovské databázi a na základním API.";
 "attributions_nofam_descr" = "Nezraněný hrdina v komunitě EFT, tvůrce muničních map a spolupracovník na balistických kalkulačkách a souvisejících informacích, velvyslanec munice, baron balistiky, profesor penetrace!";
-"attributions_willerz_descr" = "Spoustu lásky pro Willer_Z za poskytnutí některých snímků v epické kvalitě, které mi dovolil použít v této aplikaci. Také je jedním z nejlepších hráčů na světě.";
+"attributions_willerz_descr" = "Spoustu lásky pro WillerZ za poskytnutí některých snímků v epické kvalitě, které mi dovolil použít v této aplikaci. Také je jedním z nejlepších hráčů na světě.";
 "attributions_community_descr" = "Spoustu lásky mé komunitě na Discordu za veškerou těžkou práci, zachycení a úpravy krásných fotografií použitých v této aplikaci!";
 "attributions_translations_descr" = "Všechny překlady byly provedeny členy komunity, kteří věci věnovali svůj čas a úsilí. Všichni na celém světě oceňují vaši tvrdou práci!";
 "attributions_bsg_descr" = "Zvláštní poděkování patří Nikitovu za podporu této aplikace a všem lidem v BSG za jejich tvrdou práci a odhodlání při budování nejlepší FPS všech dob.";

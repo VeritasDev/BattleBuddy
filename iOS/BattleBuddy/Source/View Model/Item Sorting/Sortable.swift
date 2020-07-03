@@ -12,10 +12,14 @@ protocol SortableParam: Localizable {
     var identifier: String { get }
 }
 
-protocol Sortable {
+protocol Sortable: Searchable {
     var sortId: String { get }
     var params: [SortableParam] { get }
     func valueForParam(_ param: SortableParam) -> String
+
+}
+
+protocol Searchable {
     func matchesSearch(_ search: String) -> Bool
 }
 
