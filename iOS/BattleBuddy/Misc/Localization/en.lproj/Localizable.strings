@@ -516,8 +516,3 @@
 
 "attributions_market_api" = "Tarkov Market";
 "attributions_market_api_descr" = "Flea market price data courtesy of the Tarkov Market API.";
-
-"price_check_sort_all" = "All";
-"price_check_sort_favorites" = "Favorites";
-"price_check_sort_top" = "Top";
-"price_check_sort_trending" = "Trending";

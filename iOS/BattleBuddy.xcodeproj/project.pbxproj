@@ -97,6 +97,7 @@
 		601822B024A39F8900A624A4 /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 601822AD24A39F8600A624A4 /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		601822B324A3B92700A624A4 /* ShootingRangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601822B224A3B92700A624A4 /* ShootingRangeViewController.swift */; };
 		601BACF02375ADF20080493F /* RigDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */; };
+		602F41F124AF792C00403E87 /* PriceCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602F41F024AF792C00403E87 /* PriceCheckController.swift */; };
 		6083741D232BBA5F00AA9D29 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */; };
 		6083741F232BBAAE00AA9D29 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */; };
 		60837425232BC24B00AA9D29 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837424232BC24B00AA9D29 /* Global.swift */; };
@@ -344,6 +345,7 @@
 		601822AD24A39F8600A624A4 /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		601822B224A3B92700A624A4 /* ShootingRangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingRangeViewController.swift; sourceTree = "<group>"; };
 		601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RigDetailsConfiguration.swift; sourceTree = "<group>"; };
+		602F41F024AF792C00403E87 /* PriceCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCheckController.swift; sourceTree = "<group>"; };
 		6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		60837424232BC24B00AA9D29 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -1116,6 +1118,7 @@
 			children = (
 				60EA7D2D2339B9BE00EAD566 /* Weapon Building */,
 				278A76AD2307354A00E0C745 /* In App Purchase */,
+				602F41F024AF792C00403E87 /* PriceCheckController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1491,6 +1494,7 @@
 				27A7608E22D230BE00861113 /* ItemPropertyRow.swift in Sources */,
 				60EA7D2A23346CAB00EAD566 /* Armored.swift in Sources */,
 				EFFB10C022F1F76100EE6B6F /* VeritasCell.swift in Sources */,
+				602F41F124AF792C00403E87 /* PriceCheckController.swift in Sources */,
 				27A4A90522E738C800C5618E /* BaseViewController.swift in Sources */,
 				60BB44B124AA605D0052F836 /* PriceCheckViewController.swift in Sources */,
 				EF1945AC2356460E007D8242 /* CombatSimResultsCell.swift in Sources */,

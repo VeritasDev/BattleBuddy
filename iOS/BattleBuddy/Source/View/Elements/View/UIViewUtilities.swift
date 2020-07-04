@@ -61,6 +61,18 @@ extension UIView {
             bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -yInset),
             ])
     }
+
+    func pinToTopLeft(xInset: CGFloat = 0.0, yInset: CGFloat = 0.0, width: CGFloat, height: CGFloat) {
+        guard let superview = superview else { fatalError() }
+
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: xInset),
+            topAnchor.constraint(equalTo: superview.topAnchor, constant: yInset),
+            widthAnchor.constraint(equalToConstant: width),
+            heightAnchor.constraint(equalToConstant: height),
+            ])
+    }
 }
 
 extension NSLayoutConstraint {

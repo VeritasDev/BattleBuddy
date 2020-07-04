@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MarketItem {
+struct MarketItem: Hashable {
     let itemId: String
     let name: String
     let shortName: String
@@ -16,6 +16,7 @@ struct MarketItem {
     let slots: Int
     let pricePerSlot: Int
     let diff24h: Double
+    var isFavorite: Bool = false
 
     init?(json: [String: Any]) {
         guard let id = json["_id"] as? String,

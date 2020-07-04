@@ -669,9 +669,8 @@ extension FirebaseManager: DatabaseManager {
                 let data = doc.data()
                 guard let valuesArray = Array(data.values) as? [[String: Any]] else { return }
                 for itemJson in valuesArray {
-                    if let marketItem = MarketItem(json: itemJson) {
-                        marketItems.append(marketItem)
-                    }
+                    guard let marketItem = MarketItem(json: itemJson) else { continue }
+                    marketItems.append(marketItem)
                 }
             }
 

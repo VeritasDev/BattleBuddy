@@ -8,24 +8,8 @@
 
 import UIKit
 
-enum PriceCheckCategory: Localizable {
-    case all
-    case favorites
-    case top
-    case trending
-
-    func local(short: Bool = false) -> String {
-        switch self {
-        case .all: return "price_check_sort_all".local()
-        case .favorites: return "price_check_sort_favorites".local()
-        case .top: return "price_check_sort_top".local()
-        case .trending: return "price_check_sort_trending".local()
-        }
-    }
-}
-
 class PriceCheckViewController: BaseTableViewController {
-    let prefs = DependencyManagerImpl.shared.prefsManager()
+    let controller: PriceCheckController
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar(frame: .zero)
         searchBar.barStyle = .black
@@ -35,37 +19,13 @@ class PriceCheckViewController: BaseTableViewController {
         if #available(iOS 13.0, *) { searchBar.searchTextField.clearButtonMode = .always }
         return searchBar
     }()
-    let allMarketItems: [MarketItem]
-    var favorites: [MarketItem] = []
-    var searchResults: [MarketItem] = [] { didSet { tableView.reloadData() } }
-    let categoryPicker: UISegmentedControl = {
-        let segmentedControl =  UISegmentedControl(items: [PriceCheckCategory.all.local(), PriceCheckCategory.favorites.local(), PriceCheckCategory.top.local()])
-        segmentedControl.backgroundColor = UIColor.Theme.background
-        segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
-
-        if #available(iOS 13.0, *) {
-            segmentedControl.selectedSegmentTintColor = UIColor.Theme.primary
-        } else {
-            segmentedControl.tintColor = UIColor.Theme.primary
-        }
-        return segmentedControl
-    }()
-    lazy var headerStackView: BaseStackView = {
-        let stackView = BaseStackView(axis: .vertical)
-        stackView.addArrangedSubview(searchBar)
-        stackView.addArrangedSubview(categoryPicker)
-        return stackView
-    }()
 
     required init?(coder: NSCoder) { fatalError() }
 
-    init(_ marketItems: [MarketItem]) {
-        allMarketItems = marketItems
+    init(_ controller: PriceCheckController) {
+        self.controller = controller
         super.init(style: .plain)
-
-        updateFavorites()
+        self.controller.delegate = self
     }
 
     override func viewDidLoad() {
@@ -73,6 +33,8 @@ class PriceCheckViewController: BaseTableViewController {
 
         navigationItem.title = "price_check".local()
         navigationItem.titleView = searchBar
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named:"favorites_off"), style: .plain, target: self, action: #selector(toggleFavorites))
+
         tableView.estimatedRowHeight = 80.0
         tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
@@ -80,54 +42,56 @@ class PriceCheckViewController: BaseTableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        updateResults(with: nil)
     }
 
-    private func updateResults(with searchText: String?) {
-        if let search = searchText {
-            searchResults = allMarketItems.filter { $0.matchesSearch(search) }
-        } else {
-            searchResults = []
-        }
-    }
+    @objc func toggleFavorites() {
+        controller.toggleFavorites()
 
-    private func updateFavorites() {
+        let newImage = controller.isShowingFavorites ? UIImage(named:"favorites_on") : UIImage(named:"favorites_off")
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: newImage, style: .plain, target: self, action: #selector(toggleFavorites))
     }
 }
 
 // MARK: Table view data source
 extension PriceCheckViewController {
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-////        if !favorites.isEmpty && section == 0 { return "price_check_sort_favorites".local() }
-////        else { return searchResults == 0 ? "price_check_sort_" : searchResults.count }
-//    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResults.count
+        return controller.results.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PriceCheckCell.ReuseIdentifier) as? PriceCheckCell ?? PriceCheckCell()
-
-        cell.marketItem = searchResults[indexPath.row]
+        let marketItem = controller.results[indexPath.row]
+        cell.marketItem = marketItem
+        cell.isFavorite = controller.isFavorite(marketItem)
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        let marketItem = searchResults[indexPath.row]
-
+        let marketItem = controller.results[indexPath.row]
+        controller.toggleFavorite(marketItem)
+        tableView.reloadRows(at: [indexPath], with: .fade)
     }
 }
 
 extension PriceCheckViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        updateResults(with: searchText)
+        controller.updateSearchText(searchText)
+    }
+}
+
+extension PriceCheckViewController: PriceCheckControllerDelegate {
+    func resultsDidChange() {
+        tableView.reloadData()
+    }
+
+    func enableSearchBar(_ enabled: Bool) {
+        searchBar.isUserInteractionEnabled = enabled
+        searchBar.text = nil
+        searchBar.alpha = enabled ? 1.0 : 0.2
     }
 }

@@ -147,7 +147,8 @@ struct MainMenuItem {
             }
         case .priceCheck:
             DependencyManagerImpl.shared.databaseManager().getAllMarketItems { marketItems in
-                handler(PriceCheckViewController(marketItems))
+                let controller = PriceCheckController(marketItems)
+                handler(PriceCheckViewController(controller))
                 return
             }
         case .currencyConverter:

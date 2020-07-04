@@ -46,7 +46,7 @@ class PriceCheckCell: BaseTableViewCell {
     var marketItem: MarketItem? {
         didSet {
             guard let marketItem = marketItem else { return }
-            nameLabel.text = marketItem.name
+
             priceLabel.text = marketItem.avgPrice24.roublesString()
             pricePerSlotLabel.text =  marketItem.slots > 1 ? "\(marketItem.pricePerSlot.roublesString()) / slot" : nil
             trendingPriceLabel.text = marketItem.diff24h.percentString()
@@ -59,6 +59,27 @@ class PriceCheckCell: BaseTableViewCell {
                 trendingPriceLabel.textColor = UIColor.red
                 trendingImageView.tintColor = UIColor.red
                 trendingImageView.image = UIImage(named: "trending_down")?.withRenderingMode(.alwaysTemplate)
+            }
+
+            nameLabel.text = nil
+            nameLabel.attributedText = nil
+        }
+    }
+    var isFavorite: Bool = false {
+        didSet {
+            guard let marketItem = self.marketItem else { return }
+            if isFavorite {
+                let attachment = NSTextAttachment()
+                attachment.image = UIImage(named: "favorites_on")?.withRenderingMode(.alwaysTemplate)
+                attachment.bounds = CGRect(x: 0, y: 0, width: 15.0, height: 15.0)
+                let attachmentString = NSAttributedString(attachment: attachment)
+                let attributedString = NSMutableAttributedString(attributedString: attachmentString)
+                attributedString.addAttributes([.foregroundColor: UIColor.Theme.primary], range: NSRange(location: 0, length: attributedString.length))
+                attributedString.append(NSAttributedString(string: " "))
+                attributedString.append(NSAttributedString(string: marketItem.name))
+                nameLabel.attributedText = attributedString
+            } else {
+                nameLabel.text = marketItem.name
             }
         }
     }
