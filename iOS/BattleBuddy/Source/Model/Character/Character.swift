@@ -61,7 +61,6 @@ extension SimulationCharacter: CalculableCharacter {
                     convertedMap[zone] = 0.0
                 }
             }
-
             return convertedMap
         }
         set(newValue) {

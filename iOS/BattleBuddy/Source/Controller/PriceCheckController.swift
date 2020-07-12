@@ -72,7 +72,6 @@ class PriceCheckController: NSObject {
     }
 
     private func updateResults() {
-
         if let search = searchText, !search.isEmpty {
             results = results.filter({ (item) -> Bool in matchesSearch(item, search: search) })
         }

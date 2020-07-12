@@ -6,20 +6,18 @@
 - [x] Release v1.0
 - [x] Release v1.0.1
 - [x] Release v1.0.2 
-- [x] Release v1.1.0  ***Live in the App Store***
-- [ ] Release v1.1.1  ***In development - see TODO list below***
-
-## <u>v1.1.1</u>
-- [x] Add Sigma to The Team list
-- [x] Fix medical list bug
-- [ ] Flea market price check
-    - [x] Search
-    - [ ] Favorite / unfavorite
-    - [x] Style results
-    - [ ] Top 25 price per slot
-- AVG PPS
+- [x] Release v1.1.0
+- [x] Release v1.2.0  ***Live in the App Store***
 
 ## <u>v1.2.0</u>
+- [x] Add Sigma to The Team list
+- [x] Fix medical list bug
+- [x] Flea market price check
+    - [x] Search
+    - [x] Favorite / unfavorite
+    - [x] Style results
+
+## <u>v1.2.1</u>
 - [ ] Currency Converter
 - [ ] First iteration of Customs map
 - [ ] STK/TTK Calculator

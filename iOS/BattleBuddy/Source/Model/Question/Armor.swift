@@ -19,7 +19,7 @@ class Armor: BaseItem, Armored {
     let armorClass: ArmorClass
     var richochetParams: RichochetParams { get { return RichochetParams(x: richochetX, y: richochetY, z: richochetZ) } }
     var penalties: Penalties { get { return Penalties(ergonomics: ergoPenalty, turnSpeed: turnSpeedPenalty, movementSpeed:  movementSpeedPenalty, hearing: hearingPenalty) } }
-    var armorZoneConfig: ArmorZonesConfig { get { return ArmorZonesConfig(topHead: protectsTopHead, eyes: protectsEyes, jaws: protectsJaws, ears: protectsEars, nape: protectsNape, chest: protectsChest, stomach: protectsStomach, leftArm: protectsLeftArm, rightArm: protectsRightArm, leftLeg: protectsLeftLeg, rightLeg: protectsChestRightLeg) } }
+    var armorZoneConfig: ArmorZonesConfig { get { return ArmorZonesConfig(topHead: protectsTopHead, eyes: protectsEyes, jaws: protectsJaws, ears: protectsEars, nape: protectsNape, chest: protectsChest, stomach: protectsStomach, leftArm: protectsLeftArm, rightArm: protectsRightArm, leftLeg: protectsLeftLeg, rightLeg: protectsRightLeg) } }
 
     fileprivate var bluntThroughput: Float
     fileprivate var ergoPenalty: Int
@@ -39,7 +39,7 @@ class Armor: BaseItem, Armored {
     fileprivate var protectsLeftArm: Bool
     fileprivate var protectsRightArm: Bool
     fileprivate var protectsLeftLeg: Bool
-    fileprivate var protectsChestRightLeg: Bool
+    fileprivate var protectsRightLeg: Bool
 
     init?(type: ItemType = .armor, json: [String: Any]) {
         self.json = json
@@ -73,7 +73,7 @@ class Armor: BaseItem, Armored {
                 protectsLeftArm = false
                 protectsRightArm = false
                 protectsLeftLeg = false
-                protectsChestRightLeg = false
+                protectsRightLeg = false
                 bluntThroughput = 0.0
                 movementSpeedPenalty = 0
                 ergoPenalty = 0
@@ -100,7 +100,7 @@ class Armor: BaseItem, Armored {
         protectsLeftArm = rawZones.contains("leftarm")
         protectsRightArm = rawZones.contains("rightarm")
         protectsLeftLeg = rawZones.contains("leftleg")
-        protectsChestRightLeg = rawZones.contains("rightleg")
+        protectsRightLeg = rawZones.contains("rightleg")
         bluntThroughput = rawBluntTp.floatValue
 
         if let speedPen = penalties["speed"] as? NSNumber {
@@ -151,7 +151,7 @@ class Armor: BaseItem, Armored {
         if protectsLeftArm { components.append("armor_zone_left_arm".local()) }
         if protectsRightArm { components.append("armor_zone_right_arm".local()) }
         if protectsLeftLeg { components.append("armor_zone_left_leg".local()) }
-        if protectsChestRightLeg { components.append("armor_zone_right_leg".local()) }
+        if protectsRightLeg { components.append("armor_zone_right_leg".local()) }
 
         return components.joined(separator: ", ")
     }
@@ -194,7 +194,7 @@ extension SimulationArmor: CalculableArmor {
         if protectsLeftArm { zones.append(.leftArm) }
         if protectsRightArm { zones.append(.rightArm) }
         if protectsLeftLeg { zones.append(.leftLeg) }
-        if protectsChestRightLeg { zones.append(.rightLeg) }
+        if protectsRightLeg { zones.append(.rightLeg) }
 
         return zones
     }
