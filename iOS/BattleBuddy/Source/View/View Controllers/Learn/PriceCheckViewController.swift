@@ -84,6 +84,14 @@ extension PriceCheckViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: - UIScrollViewDelegate
+
+extension PriceCheckViewController {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        searchBar.resignFirstResponder()
+    }
+}
+
 extension PriceCheckViewController: PriceCheckControllerDelegate {
     func resultsDidChange() {
         tableView.reloadData()
