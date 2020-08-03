@@ -19,7 +19,6 @@ class DependencyManagerImpl: DependencyManager {
     var prefsMngr: PreferencesManager?
     var twitchMngr: TwitchManager?
     var feedbackMngr: FeedbackManager?
-    var adMngr: AdManager?
     var metadataMngr: GlobalMetadataManager?
     var ammoUtilitiesMngr: AmmoUtilitiesManager?
     var deviceMngr: DeviceManager?
@@ -42,7 +41,6 @@ class DependencyManagerImpl: DependencyManager {
         ammoUtilitiesMngr = AmmoUtilitiesManagerImpl()
         deviceMngr = DeviceManagerImpl()
         localeMngr = LocaleManagerImpl()
-        adMngr = InmobiManager()
     }
 
     func pushNotificationManager() -> PushNotificationManager { return pushNotificationMngr! }
@@ -53,7 +51,6 @@ class DependencyManagerImpl: DependencyManager {
     func prefsManager() -> PreferencesManager { return prefsMngr! }
     func twitchManager() -> TwitchManager { return twitchMngr! }
     func feedbackManager() -> FeedbackManager { return feedbackMngr! }
-    func adManager() -> AdManager { return adMngr! }
     func metadataManager() -> GlobalMetadataManager { return metadataMngr! }
     func ammoUtilitiesManager() -> AmmoUtilitiesManager { return ammoUtilitiesMngr! }
     func deviceManager() -> DeviceManager { return deviceMngr! }

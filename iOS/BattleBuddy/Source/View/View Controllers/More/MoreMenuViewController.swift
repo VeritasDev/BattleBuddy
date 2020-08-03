@@ -10,7 +10,6 @@ import UIKit
 
 class MoreMenuViewController: BaseTableViewController {
     static let iconHeight: CGFloat = 40.0
-    var adManager = dm().adManager()
     let feedbackManager = dm().feedbackManager()
     let accountManager = dm().accountManager()
     let globalMetadataManager: GlobalMetadataManager = DependencyManagerImpl.shared.metadataManager()
@@ -187,15 +186,12 @@ class MoreMenuViewController: BaseTableViewController {
 
     init() {
         super.init(style: .grouped)
-
-        adManager.adDelegate = self
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "more".local()
-        adManager.loadVideoAd()
 
         startUpdateTimer()
     }
@@ -253,7 +249,6 @@ class MoreMenuViewController: BaseTableViewController {
             budScoreCell.detailTextLabel?.text = currentUserData.loyalty.stringValue
         }
 
-        watchAdCell.videoAdState = adManager.currentVideoAdState
 
         let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, githubCell, theTeamCell, attributionsCell] : [feedbackCell, githubCell, theTeamCell, attributionsCell]
         let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), cells: supportCells)
@@ -269,13 +264,6 @@ class MoreMenuViewController: BaseTableViewController {
             self.updateCells()
             self.showAlert(title: "bud_reward_title".local(), message: "bud_reward_message".local())
         }
-    }
-}
-
-// MARK: - Ad delegate
-extension MoreMenuViewController: AdDelegate {
-    func adManager(_ adManager: AdManager, didUpdate videoAdState: VideoAdState) {
-        watchAdCell.videoAdState = videoAdState
     }
 }
 
@@ -317,7 +305,6 @@ extension MoreMenuViewController {
         case githubCell: handleLink(VeritasSocial.github)
         case attributionsCell: navigationController?.pushViewController(AttributionsViewController(), animated: true)
         case feedbackCell: handleLink(VeritasSocial.discord)
-        case watchAdCell: adManager.watchAdVideo(from: self)
         case theTeamCell: navigationController?.pushViewController(TeamViewController(), animated: true)
         case rateCell: feedbackManager.askForReview()
         case leaderboardCell: navigationController?.pushViewController(LeaderboardViewController(globalMetadata!.loyaltyLeaderboard), animated: true)

@@ -141,7 +141,6 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.2.2)
-  - inmobi-ios-sdk (8.2.0)
   - JGProgressHUD (2.0.4)
   - leveldb-library (1.22)
   - nanopb (0.3.901):
@@ -167,15 +166,12 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - FirebaseUI/Storage
-  - inmobi-ios-sdk
   - JGProgressHUD
   - SDWebImage (~> 5.0)
   - YoutubePlayer-in-WKWebView (~> 0.3.0)
 
 SPEC REPOS:
-  https://bitbucket.org/aerservllc/inmobi-ios-sdk-pod.git:
-    - inmobi-ios-sdk
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - BoringSSL-GRPC
     - Crashlytics
@@ -234,7 +230,6 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
-  inmobi-ios-sdk: 8d967db61692680675d86104bf5111c9a9520738
   JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
@@ -242,6 +237,6 @@ SPEC CHECKSUMS:
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
   YoutubePlayer-in-WKWebView: f9c20a456c5d99e5f5248e4d2079a5d3b6950d13
 
-PODFILE CHECKSUM: d26419a9955b0a9ce3ac923bb9feb41ff673f506
+PODFILE CHECKSUM: 2a1a1bb9323cfcc2df93630a749109aa521a46e0
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.3

@@ -21,7 +21,6 @@ protocol DependencyManager {
     func prefsManager() -> PreferencesManager
     func twitchManager() -> TwitchManager
     func feedbackManager() -> FeedbackManager
-    func adManager() -> AdManager
     func metadataManager() -> GlobalMetadataManager
     func ammoUtilitiesManager() -> AmmoUtilitiesManager
     func deviceManager() -> DeviceManager
@@ -106,20 +105,6 @@ enum VideoAdState {
     case idle
     case loading
     case ready
-}
-
-protocol AdDelegate {
-    func adManager(_ adManager: AdManager, didUpdate videoAdState: VideoAdState)
-}
-
-protocol AdManager {
-    var adDelegate: AdDelegate? { get set }
-    var currentVideoAdState: VideoAdState { get }
-    func loadVideoAd()
-    func bannerAdsEnabled() -> Bool
-    func updateBannerAdsSetting(_ enabled: Bool)
-    func watchAdVideo(from rootVC: UIViewController)
-    func addBannerToView(_ view: UIView)
 }
 
 protocol GlobalMetadataManager {

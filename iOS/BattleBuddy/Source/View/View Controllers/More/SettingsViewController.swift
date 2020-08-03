@@ -15,7 +15,6 @@ import UIKit
 // - Interstitials
 class SettingsViewController: BaseTableViewController {
     let accountManager = dm().accountManager()
-    let adManager = dm().adManager()
     let prefsManager = dm().prefsManager()
     let localeManager = dm().localeManager()
     let pushManager = dm().pushNotificationManager()
@@ -58,26 +57,6 @@ class SettingsViewController: BaseTableViewController {
 //        cell.height = 70.0
 //        return cell
 //    }()
-    lazy var enableBannerAdsCell: BaseTableViewCell = {
-        let cell = BaseTableViewCell()
-        cell.textLabel?.text = "enable_banner_ads".local()
-        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-        cell.accessoryView = {
-            let toggle = UISwitch()
-            toggle.setOn(adManager.bannerAdsEnabled(), animated: false)
-            toggle.addTarget(self, action: #selector(toggleBannerAds(sender:)), for: .valueChanged)
-            return toggle
-        }()
-        cell.selectionStyle = .none
-        cell.height = 70.0
-        return cell
-    }()
-
-
-    @objc func toggleBannerAds(sender: UISwitch) {
-        let adsEnabled = sender.isOn
-        adManager.updateBannerAdsSetting(adsEnabled)
-    }
 
     @objc func togglePushNotifications(sender: UISwitch) {
         let enabled = sender.isOn

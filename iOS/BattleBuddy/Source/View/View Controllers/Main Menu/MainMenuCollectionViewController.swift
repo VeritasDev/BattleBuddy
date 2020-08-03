@@ -12,7 +12,6 @@ import JGProgressHUD
 class MainMenuCollectionViewController: BaseCollectionViewController {
     let cellId = "MainMenuCell"
     let menuItems: [MainMenuItem]
-    let adManager = dm().adManager()
 
     required init?(coder aDecoder: NSCoder) { fatalError("NIMP") }
 
