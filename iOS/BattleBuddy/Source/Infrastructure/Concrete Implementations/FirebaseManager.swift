@@ -74,6 +74,7 @@ class FirebaseManager: NSObject {
         return BudPointsReward(nextAvailableDate: nextRewardDate, pointValue: nextRewardPoints)
     }()
     private lazy var prefsManager = DependencyManagerImpl.shared.prefsManager()
+    private lazy var iapManager = DependencyManagerImpl.shared.iapManager()
     var globalMetadata: GlobalMetadata?
 
     private var cachedCharacters: [Character]?
@@ -175,6 +176,9 @@ extension FirebaseManager: AccountManager {
 
             self.updateAccountProperties([AccountProperty.lastLogin: Timestamp(date: Date())]) { _ in }
             self.updateGlobalMetadata(handler: { _ in self.sessionDelegate.sessionDidFinishLoading() })
+            self.iapManager.preloadProducts { (_) in
+
+            }
         }
     }
 

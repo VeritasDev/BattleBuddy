@@ -97,6 +97,14 @@ class BodyZoneHealthButton: UIButton {
         return label
     }()
     let hpBarXInset: CGFloat = 2.0
+    let damageLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .red
+        label.font = UIFont.systemFont(ofSize: 12.0, weight: .bold)
+        label.textAlignment = .center
+        label.isUserInteractionEnabled = false
+        return label
+    }()
 
     required init(coder: NSCoder) { fatalError() }
 

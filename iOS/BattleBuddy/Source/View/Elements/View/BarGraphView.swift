@@ -9,6 +9,7 @@
 import UIKit
 
 class BarGraphView: UIView {
+    public var widthMultiplier: CGFloat = 0.9
     private let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(white: 0.15, alpha: 0.6)
@@ -33,7 +34,7 @@ class BarGraphView: UIView {
     }()
 
     var filledColor: UIColor = UIColor.Theme.primary { didSet { filledView.backgroundColor = filledColor } }
-    var progress: Float = 0.0 { didSet { layoutIfNeeded() } }
+    var progress: Float = 0.0 { didSet { setNeedsLayout() } }
     var name: String? { didSet { nameLabel.text = name } }
     var valueText: String? { didSet { valueLabel.text = valueText } }
 
@@ -43,6 +44,7 @@ class BarGraphView: UIView {
         super.init(frame: .zero)
 
         backgroundColor = .clear
+        filledView.backgroundColor = filledColor
 
         addSubview(containerView)
         containerView.addSubview(filledView)
@@ -55,14 +57,20 @@ class BarGraphView: UIView {
 
         let height: CGFloat = self.frame.height
 
-        containerView.frame = CGRect(x: 0, y: 0, width: self.frame.width * 0.9, height: height)
+        containerView.frame = CGRect(x: 0, y: 0, width: self.frame.width * widthMultiplier, height: height)
         filledView.frame = CGRect(x: 0, y: 0, width: containerView.frame.width * CGFloat(progress), height: containerView.frame.height)
 
         let pad: CGFloat = 10
         let totalWidth = containerView.frame.width - (4 * pad)
-        let halfWidth = totalWidth / 2.0
-        nameLabel.frame = CGRect(x: pad, y: 0, width: halfWidth, height: containerView.frame.height)
-        valueLabel.frame = CGRect(x: nameLabel.frame.maxX + pad, y: 0, width: halfWidth, height: containerView.frame.height)
+        if let name = name, !name.isEmpty {
+            let halfWidth = totalWidth / 2.0
+            nameLabel.frame = CGRect(x: pad, y: 0, width: halfWidth, height: containerView.frame.height)
+            valueLabel.frame = CGRect(x: nameLabel.frame.maxX + pad, y: 0, width: halfWidth, height: containerView.frame.height)
+            valueLabel.textAlignment = .invNatural
+        } else {
+            valueLabel.frame = containerView.frame
+            valueLabel.textAlignment = .center
+        }
     }
 
 }

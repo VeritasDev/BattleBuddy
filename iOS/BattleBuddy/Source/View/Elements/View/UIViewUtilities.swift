@@ -62,6 +62,16 @@ extension UIView {
             ])
     }
 
+    func pinToCenter() {
+        guard let superview = superview else { fatalError() }
+
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor),
+            centerYAnchor.constraint(equalTo: superview.centerYAnchor)
+            ])
+    }
+
     func pinToTopLeft(xInset: CGFloat = 0.0, yInset: CGFloat = 0.0, width: CGFloat, height: CGFloat) {
         guard let superview = superview else { fatalError() }
 

@@ -21,9 +21,12 @@ class BaseImageView: UIImageView {
     let firebaseManager = DependencyManagerImpl.shared.firebaseManager()
     var displayableItem: Displayable? {
         didSet {
-            guard let displayable = displayableItem else { fatalError() }
-            tintColor = displayable.tint?.withAlphaComponent(0.45)
-            sd_setImage(with: firebaseManager.itemImageReference(itemId: displayable.identifier, itemType: displayable.type, size: imageSize), placeholderImage: displayable.placeholderImage)
+            if let displayable = displayableItem {
+                tintColor = displayable.tint?.withAlphaComponent(0.45)
+                sd_setImage(with: firebaseManager.itemImageReference(itemId: displayable.identifier, itemType: displayable.type, size: imageSize), placeholderImage: displayable.placeholderImage)
+            } else {
+                image = nil
+            }
         }
     }
     let imageSize: ImageSize

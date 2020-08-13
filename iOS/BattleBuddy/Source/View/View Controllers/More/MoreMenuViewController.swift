@@ -12,7 +12,8 @@ class MoreMenuViewController: BaseTableViewController {
     static let iconHeight: CGFloat = 40.0
     let feedbackManager = dm().feedbackManager()
     let accountManager = dm().accountManager()
-    let globalMetadataManager: GlobalMetadataManager = DependencyManagerImpl.shared.metadataManager()
+    let globalMetadataManager: GlobalMetadataManager = dm().metadataManager()
+    let iapManager: IAPManager = dm().iapManager()
     var globalMetadata: GlobalMetadata?
     var currentUserMetadata: BBUser?
     var userCount = 0
@@ -160,6 +161,16 @@ class MoreMenuViewController: BaseTableViewController {
         cell.height = 70.0
         return cell
     }()
+    let supportCell: BaseTableViewCell = {
+        let cell = BaseTableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.imageView?.image = UIImage(named: "supporter")?.imageScaled(toFit: CGSize(width: iconHeight, height: iconHeight))
+        cell.textLabel?.text = "supporter_title".local()
+        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        cell.textLabel?.numberOfLines = 0
+        cell.selectionStyle = .gray
+        cell.accessoryType = .disclosureIndicator
+        return cell
+    }()
     var sections: [GroupedTableViewSection] = []
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -250,7 +261,7 @@ class MoreMenuViewController: BaseTableViewController {
         }
 
 
-        let supportCells = feedbackManager.canAskForReview() ? [rateCell, feedbackCell, githubCell, theTeamCell, attributionsCell] : [feedbackCell, githubCell, theTeamCell, attributionsCell]
+        let supportCells = feedbackManager.canAskForReview() ? [supportCell, rateCell, feedbackCell, githubCell, theTeamCell, attributionsCell] : [supportCell, feedbackCell, githubCell, theTeamCell, attributionsCell]
         let supportSection = GroupedTableViewSection(headerTitle: "dev_support".local(), cells: supportCells)
         sections.append(supportSection)
         tableView.reloadData()
@@ -311,6 +322,7 @@ extension MoreMenuViewController {
         case budScoreCell: navigationController?.pushViewController(PostViewController(BudPost()), animated: true)
         case rewardCell: earnReward()
         case bsgTwitterCell: navigationController?.pushViewController(BattlestateTwitterViewController(), animated: true)
+        case supportCell: navigationController?.pushViewController(SupportViewController(), animated: true)
         default: break
         }
     }

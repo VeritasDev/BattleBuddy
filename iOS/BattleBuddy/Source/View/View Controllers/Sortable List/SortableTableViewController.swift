@@ -10,6 +10,7 @@ import UIKit
 
 protocol SortableItemSelectionDelegate {
     func itemSelected(_ selection: Sortable)
+    func itemCleared(clearedSelection: Sortable)
     func selectionCancelled()
 }
 
@@ -61,6 +62,10 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
 
         navigationItem.titleView = searchBar
 
+        if currentSelection != nil {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(handleClear))
+        }
+
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50.0
         tableView.tableFooterView = UIView()
@@ -74,6 +79,15 @@ class SortableTableViewController: BaseTableViewController, SortableHeaderViewDe
 
     @objc func handleCancel() {
         selectionDelegate.selectionCancelled()
+    }
+
+    @objc func handleClear() {
+        guard let selection = currentSelection else {
+            handleCancel()
+            return
+        }
+        selectionDelegate.itemCleared(clearedSelection: selection)
+        currentSelection = nil
     }
 
     func toggleSort(param: SortableParam) {

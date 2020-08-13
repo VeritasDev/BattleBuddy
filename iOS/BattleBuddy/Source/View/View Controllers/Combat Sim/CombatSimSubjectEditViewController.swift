@@ -231,6 +231,27 @@ extension CombatSimSubjectEditViewController: SortableItemSelectionDelegate {
         navigationController?.popViewController(animated: true)
     }
 
+    func itemCleared(clearedSelection: Sortable) {
+        switch clearedSelection {
+        case _ as Firearm:
+            character.ammo = nil
+            character.firearm = nil
+        case _ as Ammo:
+            character.ammo = nil
+        case let armorSelection as Armor:
+            if armorSelection.armorType == .body {
+                character.bodyArmor = nil
+            } else {
+                character.headArmor = nil
+            }
+        default:
+            fatalError()
+        }
+
+        updateCells()
+        navigationController?.popViewController(animated: true)
+    }
+
     func selectionCancelled() {
         navigationController?.popViewController(animated: true)
     }

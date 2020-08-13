@@ -247,6 +247,21 @@ extension PenChanceCalcViewController: SortableItemSelectionDelegate {
         dismiss(animated: true, completion: nil)
     }
 
+    func itemCleared(clearedSelection: Sortable) {
+        switch clearedSelection {
+        case _ as SimulationArmor: armor = nil
+        case _ as SimulationAmmo: ammo = nil
+        default: fatalError()
+        }
+
+        if let _ = armor, let _ = ammo {
+            penButton.enable(true)
+            noPenButton.enable(true)
+        }
+
+        dismiss(animated: true, completion: nil)
+    }
+
     func selectionCancelled() {
         dismiss(animated: true, completion: nil)
     }

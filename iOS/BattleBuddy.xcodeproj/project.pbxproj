@@ -93,11 +93,11 @@
 		27F09AE822E3875600552C35 /* PenChanceCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F09AE722E3875600552C35 /* PenChanceCalcViewController.swift */; };
 		27F2DDC722C245DA00BD9779 /* ItemsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2DDC622C245DA00BD9779 /* ItemsMenuViewController.swift */; };
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
-		601822AF24A39F8900A624A4 /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601822AD24A39F8600A624A4 /* BallisticsEngine.framework */; };
-		601822B024A39F8900A624A4 /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 601822AD24A39F8600A624A4 /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		601822B324A3B92700A624A4 /* ShootingRangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601822B224A3B92700A624A4 /* ShootingRangeViewController.swift */; };
 		601BACF02375ADF20080493F /* RigDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */; };
 		602F41F124AF792C00403E87 /* PriceCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602F41F024AF792C00403E87 /* PriceCheckController.swift */; };
+		6074A4FE24DF0C1C00F58014 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6074A4FD24DF0C1C00F58014 /* SupportViewController.swift */; };
+		6074A50024DF1EB200F58014 /* AdvancedBallisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6074A4FF24DF1EB200F58014 /* AdvancedBallisticsViewController.swift */; };
 		6083741D232BBA5F00AA9D29 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */; };
 		6083741F232BBAAE00AA9D29 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */; };
 		60837425232BC24B00AA9D29 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837424232BC24B00AA9D29 /* Global.swift */; };
@@ -108,6 +108,8 @@
 		60837432232E564F00AA9D29 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60837431232E564F00AA9D29 /* LocaleManager.swift */; };
 		60A2E9D0235FD157007B53D1 /* BattlestateTwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A2E9CF235FD157007B53D1 /* BattlestateTwitterViewController.swift */; };
 		60AA9E1C24AC4D6C007872A7 /* PriceCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AA9E1B24AC4D6C007872A7 /* PriceCheckCell.swift */; };
+		60B7AE8824D9037B00941C7C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B7AE8724D9037B00941C7C /* StoreKit.framework */; };
+		60B7AE8C24D90B9A00941C7C /* IAPManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7AE8B24D90B9A00941C7C /* IAPManagerImpl.swift */; };
 		60BB44AC24A9CF950052F836 /* MarketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BB44AB24A9CF950052F836 /* MarketItem.swift */; };
 		60BB44AF24AA5E3E0052F836 /* CurrencyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BB44AE24AA5E3E0052F836 /* CurrencyUtils.swift */; };
 		60BB44B124AA605D0052F836 /* PriceCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BB44B024AA605D0052F836 /* PriceCheckViewController.swift */; };
@@ -122,6 +124,10 @@
 		60EA7D37233BAF7C00EAD566 /* FirearmBuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D36233BAF7C00EAD566 /* FirearmBuildViewController.swift */; };
 		60EA7D3C23472F0900EAD566 /* CombatSimSubjectEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D3B23472F0900EAD566 /* CombatSimSubjectEditViewController.swift */; };
 		60EA7D3E23494A0700EAD566 /* CombatSimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D3D23494A0700EAD566 /* CombatSimViewController.swift */; };
+		60EEDB7724E1812D009ED72F /* TargetDamageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EEDB7624E1812D009ED72F /* TargetDamageView.swift */; };
+		60EEDB7924E1924F009ED72F /* ItemPreviewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EEDB7824E1924F009ED72F /* ItemPreviewButton.swift */; };
+		60EEDB8824E32E30009ED72F /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EEDB8624E32E2B009ED72F /* BallisticsEngine.framework */; };
+		60EEDB8924E32E30009ED72F /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60EEDB8624E32E2B009ED72F /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
 		EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */; };
 		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
@@ -212,7 +218,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				601822B024A39F8900A624A4 /* BallisticsEngine.framework in Embed Frameworks */,
+				60EEDB8924E32E30009ED72F /* BallisticsEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,10 +347,11 @@
 		27F2DDC622C245DA00BD9779 /* ItemsMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsMenuViewController.swift; sourceTree = "<group>"; };
 		27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionsViewController.swift; sourceTree = "<group>"; };
 		55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.release.xcconfig"; sourceTree = "<group>"; };
-		601822AD24A39F8600A624A4 /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		601822B224A3B92700A624A4 /* ShootingRangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingRangeViewController.swift; sourceTree = "<group>"; };
 		601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RigDetailsConfiguration.swift; sourceTree = "<group>"; };
 		602F41F024AF792C00403E87 /* PriceCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCheckController.swift; sourceTree = "<group>"; };
+		6074A4FD24DF0C1C00F58014 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		6074A4FF24DF1EB200F58014 /* AdvancedBallisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedBallisticsViewController.swift; sourceTree = "<group>"; };
 		6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		6083741E232BBAAE00AA9D29 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		60837424232BC24B00AA9D29 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -357,6 +364,8 @@
 		60837431232E564F00AA9D29 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
 		60A2E9CF235FD157007B53D1 /* BattlestateTwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlestateTwitterViewController.swift; sourceTree = "<group>"; };
 		60AA9E1B24AC4D6C007872A7 /* PriceCheckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCheckCell.swift; sourceTree = "<group>"; };
+		60B7AE8724D9037B00941C7C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		60B7AE8B24D90B9A00941C7C /* IAPManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManagerImpl.swift; sourceTree = "<group>"; };
 		60BB44AB24A9CF950052F836 /* MarketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketItem.swift; sourceTree = "<group>"; };
 		60BB44AE24AA5E3E0052F836 /* CurrencyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyUtils.swift; sourceTree = "<group>"; };
 		60BB44B024AA605D0052F836 /* PriceCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCheckViewController.swift; sourceTree = "<group>"; };
@@ -377,6 +386,9 @@
 		60EA7D392344C9ED00EAD566 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		60EA7D3B23472F0900EAD566 /* CombatSimSubjectEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimSubjectEditViewController.swift; sourceTree = "<group>"; };
 		60EA7D3D23494A0700EAD566 /* CombatSimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimViewController.swift; sourceTree = "<group>"; };
+		60EEDB7624E1812D009ED72F /* TargetDamageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDamageView.swift; sourceTree = "<group>"; };
+		60EEDB7824E1924F009ED72F /* ItemPreviewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewButton.swift; sourceTree = "<group>"; };
+		60EEDB8624E32E2B009ED72F /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
@@ -479,7 +491,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				601822AF24A39F8900A624A4 /* BallisticsEngine.framework in Frameworks */,
+				60B7AE8824D9037B00941C7C /* StoreKit.framework in Frameworks */,
+				60EEDB8824E32E30009ED72F /* BallisticsEngine.framework in Frameworks */,
 				AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,7 +503,8 @@
 		16562AA740BE87B8AB0FCB7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				601822AD24A39F8600A624A4 /* BallisticsEngine.framework */,
+				60EEDB8624E32E2B009ED72F /* BallisticsEngine.framework */,
+				60B7AE8724D9037B00941C7C /* StoreKit.framework */,
 				DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */,
 			);
 			name = Frameworks;
@@ -541,6 +555,7 @@
 				27C0B177231384EE004BCE14 /* AmmoUtilitiesManagerImpl.swift */,
 				EF4F20062326A99800F20CF0 /* DeviceManagerImpl.swift */,
 				60837431232E564F00AA9D29 /* LocaleManager.swift */,
+				60B7AE8B24D90B9A00941C7C /* IAPManagerImpl.swift */,
 			);
 			path = "Concrete Implementations";
 			sourceTree = "<group>";
@@ -574,6 +589,7 @@
 				6083742F232E546F00AA9D29 /* LanguageSelectionViewController.swift */,
 				6083741C232BBA5F00AA9D29 /* LeaderboardViewController.swift */,
 				60A2E9CF235FD157007B53D1 /* BattlestateTwitterViewController.swift */,
+				6074A4FD24DF0C1C00F58014 /* SupportViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -599,6 +615,7 @@
 				EFACDBD12304832C00E3F30B /* ProblemSolvingViewController.swift */,
 				27F09AE022E11F6200552C35 /* TraderMenuViewController.swift */,
 				EF10CCE0232A9D5700E95A45 /* SoundTrainingViewController.swift */,
+				6074A4FF24DF1EB200F58014 /* AdvancedBallisticsViewController.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -980,6 +997,7 @@
 				EF1945AF235646F9007D8242 /* CombatSimIndividualResultView.swift */,
 				EF1945B323565A3B007D8242 /* CombatSimLabels.swift */,
 				EF1945AD2356465C007D8242 /* TestSubjectAvatar.swift */,
+				60EEDB7624E1812D009ED72F /* TargetDamageView.swift */,
 			);
 			path = "Combat Sim";
 			sourceTree = "<group>";
@@ -1097,6 +1115,7 @@
 			isa = PBXGroup;
 			children = (
 				27C0B17923140061004BCE14 /* BodyZoneHealthButton.swift */,
+				60EEDB7824E1924F009ED72F /* ItemPreviewButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1452,6 +1471,7 @@
 				EF831FE822DF8D9300C6C138 /* Comparable.swift in Sources */,
 				27D2103A2315D046005A538F /* FoundationUtils.swift in Sources */,
 				27A4A90122E730F700C5618E /* ItemPreviewCollectionView.swift in Sources */,
+				60B7AE8C24D90B9A00941C7C /* IAPManagerImpl.swift in Sources */,
 				27781CDE22F727BF007134E2 /* AmmoSort.swift in Sources */,
 				EF831FE622DF78A300C6C138 /* Medical.swift in Sources */,
 				27BF992822C8F1EA003F01C5 /* MainMenu.swift in Sources */,
@@ -1514,6 +1534,7 @@
 				27781CE422F733D9007134E2 /* SortableTableViewCell.swift in Sources */,
 				27F09AE822E3875600552C35 /* PenChanceCalcViewController.swift in Sources */,
 				EF10CCE1232A9D5700E95A45 /* SoundTrainingViewController.swift in Sources */,
+				60EEDB7724E1812D009ED72F /* TargetDamageView.swift in Sources */,
 				27F09ADB22DE97CD00552C35 /* BarGraphView.swift in Sources */,
 				60EA7D2623331D5000EAD566 /* BaseTextfieldCell.swift in Sources */,
 				EF1945B0235646F9007D8242 /* CombatSimIndividualResultView.swift in Sources */,
@@ -1533,6 +1554,7 @@
 				EFACFCA023453776003A3624 /* ModificationDetailsConfiguration.swift in Sources */,
 				278A76AF2307355E00E0C745 /* InAppPurchaseController.swift in Sources */,
 				27781CE222F72C34007134E2 /* SortableHeaderView.swift in Sources */,
+				6074A4FE24DF0C1C00F58014 /* SupportViewController.swift in Sources */,
 				EFACDBD5230488D400E3F30B /* WizardFlow.swift in Sources */,
 				60AA9E1C24AC4D6C007872A7 /* PriceCheckCell.swift in Sources */,
 				EF7AF36322C2A8D300DA1A18 /* Ammo.swift in Sources */,
@@ -1555,6 +1577,7 @@
 				EF4F20072326A99800F20CF0 /* DeviceManagerImpl.swift in Sources */,
 				276D917E231033C200CD61E0 /* MedicalEnums.swift in Sources */,
 				27F09ADD22DF50A100552C35 /* MathUtils.swift in Sources */,
+				6074A50024DF1EB200F58014 /* AdvancedBallisticsViewController.swift in Sources */,
 				EFFB10C522F1FC3600EE6B6F /* WebKitUtils.swift in Sources */,
 				27BB49C022FC710B00070427 /* FeedbackManager.swift in Sources */,
 				EF1945B223565388007D8242 /* CombatSimSubjectSummaryView.swift in Sources */,
@@ -1608,6 +1631,7 @@
 				EF831FE122DCECB900C6C138 /* Displayable.swift in Sources */,
 				EF831FF822E8D29900C6C138 /* FirearmComparison.swift in Sources */,
 				60EA7D35233ABD9800EAD566 /* Slot.swift in Sources */,
+				60EEDB7924E1924F009ED72F /* ItemPreviewButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1906,7 +1930,7 @@
 				CODE_SIGN_ENTITLEMENTS = BattleBuddy/BattleBuddy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = 63LNS64VMY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2042,7 +2066,7 @@
 				CODE_SIGN_ENTITLEMENTS = BattleBuddy/BattleBuddy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = 63LNS64VMY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

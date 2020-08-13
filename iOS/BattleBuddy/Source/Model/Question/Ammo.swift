@@ -14,7 +14,7 @@ class Ammo: BaseItem {
     let type: ItemType
     let caliber: String
     var damage: Int
-    var totalDamage: Int
+    var totalDamage: Int { get { return damage * projectileCount } }
     var armorDamage: Int
     var totalArmorDamage: Int
     var penetration: Int
@@ -58,7 +58,6 @@ class Ammo: BaseItem {
             projectileCount = 1
         }
 
-        totalDamage = damage * projectileCount
         totalArmorDamage = armorDamage * projectileCount
     }
 }

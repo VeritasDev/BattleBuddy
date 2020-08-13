@@ -121,7 +121,6 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
 
         edgesForExtendedLayout = []
         view.backgroundColor = UIColor(white: 0.07, alpha: 1.0)
-        view.backgroundColor = UIColor(white: 0.07, alpha: 1.0)
 
         view.addSubview(skeletonBackgroundImage)
         view.addSubview(avatar)
@@ -281,6 +280,11 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         default: fatalError()
         }
 
+        dismiss(animated: true, completion: nil)
+    }
+
+    func itemCleared(clearedSelection: Sortable) {
+        ammo = nil
         dismiss(animated: true, completion: nil)
     }
 

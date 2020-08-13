@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 // Mark:- Dependency Manager
 
@@ -25,6 +26,7 @@ protocol DependencyManager {
     func ammoUtilitiesManager() -> AmmoUtilitiesManager
     func deviceManager() -> DeviceManager
     func localeManager() -> LocaleManager
+    func iapManager() -> IAPManager
 }
 
 // MARK:- Networking
@@ -147,4 +149,12 @@ protocol LocaleManager {
 protocol PushNotificationManager {
     func enablePushNotifications(enabled: Bool)
     func pushNotificationsEnabled(handler: @escaping (_ : Bool) -> Void)
+}
+
+// MARK:- IAP
+
+protocol IAPManager {
+    func getProducts() -> [SKProduct]
+    func preloadProducts(withHandler productsReceiveHandler: @escaping (_ result: [SKProduct]) -> Void);
+    func purchaseProduct(_ product: SKProduct)
 }

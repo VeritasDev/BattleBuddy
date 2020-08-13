@@ -112,7 +112,7 @@ struct MainMenuItem {
             return
         case .healthCalc:
             DependencyManagerImpl.shared.databaseManager().getCharacters { characters in
-                handler(HealthCalcViewController(characterOptions: characters))
+                handler(AdvancedBallisticsViewController(characterOptions: characters))
                 return
             }
         case .penChanceCalc:

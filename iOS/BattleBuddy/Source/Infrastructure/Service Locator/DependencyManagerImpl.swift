@@ -23,6 +23,7 @@ class DependencyManagerImpl: DependencyManager {
     var ammoUtilitiesMngr: AmmoUtilitiesManager?
     var deviceMngr: DeviceManager?
     var localeMngr: LocaleManager?
+    var iapMngr: IAPManager?
 
     func assembleDependencies(_ appDelegate: AppDelegate) {
         // Firebase handles sessions, accounts, storage, and metadata
@@ -41,6 +42,7 @@ class DependencyManagerImpl: DependencyManager {
         ammoUtilitiesMngr = AmmoUtilitiesManagerImpl()
         deviceMngr = DeviceManagerImpl()
         localeMngr = LocaleManagerImpl()
+        iapMngr = IAPManagerImpl()
     }
 
     func pushNotificationManager() -> PushNotificationManager { return pushNotificationMngr! }
@@ -55,4 +57,5 @@ class DependencyManagerImpl: DependencyManager {
     func ammoUtilitiesManager() -> AmmoUtilitiesManager { return ammoUtilitiesMngr! }
     func deviceManager() -> DeviceManager { return deviceMngr! }
     func localeManager() -> LocaleManager { return localeMngr! }
+    func iapManager() -> IAPManager { return iapMngr! }
 }

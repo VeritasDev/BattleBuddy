@@ -516,3 +516,30 @@
 
 "attributions_market_api" = "Tarkov Market";
 "attributions_market_api_descr" = "Flea market price data courtesy of the Tarkov Market API.";
+
+"supporter_title" = "Support Battle Buddy";
+"supporter_subtitle" = "I made Battle Buddy available for free and without ads to benefit everyone in the Tarkov community. If you feel like you've gotten any value from Battle Buddy, want to say thank you, support the development, help me cover server costs and development time, and are financially able to, please consider a totally optional premium subscription. With enough support I could make the development of this app and content creation my full-time job!";
+
+"advanced_ballistics_test" = "Advanced Ballistics Test";
+"choose_ammo" = "Ammo";
+"choose_head_armor" = "Head Armor";
+"choose_body_armor" = "Body Armor";
+
+"chance_setting_realistic" = "Realistic";
+"chance_setting_always" = "Always";
+"chance_setting_never" = "Never";
+
+"ammo_config" = "Ammo Configuration";
+"armor_config" = "Armor Configuration";
+"health_status" = "Health Status";
+"simulation_data" = "Simulation Data";
+"durability_current" = "Current";
+"durability_max" = "Max";
+
+"sim_damage" = "Dmg";
+"sim_pen" = "Pen";
+"sim_armor_damage" = "Armor Dmg";
+"sim_frag" = "Frag";
+
+"common_customize" = "Customize";
+"common_reset" = "Reset";

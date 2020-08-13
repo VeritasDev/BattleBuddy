@@ -17,15 +17,26 @@
     - [x] Favorite / unfavorite
     - [x] Style results
 
-## <u>v1.2.1</u>
+
+## <u>v1.3.0</u>
+
+- [ ] Premium supporter mode
+    - [ ] Initial prompt
+        - Yes
+        - No
+        - Remind me later (remind in one week)
+    - [ ] IAP implementation
 - [ ] Currency Converter
-- [ ] First iteration of Customs map
 - [ ] STK/TTK Calculator
+- [ ] New scav boss character
+- [ ] Siri flea market price check search
+
+## <u>Backlog</u>
+- [ ] First iteration of Customs map
 - [ ] Update translations process
 - [ ] Push notifications
 - [ ] News / announcements (translated server side?)
 - [ ] Community Poll
-- [ ] Implement Banner Ads (if setting enabled)
 - [ ] Combat Simulation Randomizer
 - [ ] Guess that sound mini-game
 - [ ] Armor - compatible attachments
@@ -43,14 +54,6 @@
     - [ ] Other
     - [ ] Mods Detail Screen
     - [ ] Mods Comparison
-- [ ] Real-time community stats updates
-- [ ] Loyalty points
-    - [ ] Random bonus loyalty points % chance
-    - [ ] Points for launching app
-    - [ ] Points for opening up each day
-    - [ ] Points for enabling push notifications
-    - [ ] Interstitial
-- [ ] In app purchase
 - [ ] Skills and how to level them
 - [ ] Favoriting Items
 - [ ] Reduce image sizes in Firebase storage
@@ -79,8 +82,6 @@
     - See all attachments that fits on it
     - See all mods it can attach to
     - See all mods it conflicts with 
-    
-## <u>Backlog</u>
 - Logging / tags / debugging / etc
 - Related items feed on existing Items:
 - Nuke UIKit to the ground; Foundation FTW
@@ -88,7 +89,6 @@
 - Crowdsourced images + gallery for items + fullscreen images
 - Profile
     - Supporter type
-    - Ads watched
     - Join date
     - Choose username
 - New player interactive survival troubleshooting flowchart
