@@ -29,17 +29,28 @@ class Character {
         name = rawName
         healthMap = health
     }
+
+    func convertedHealthMap() -> [BEZoneType: Double] {
+        var convertedMap: [BEZoneType : Double]  = [:]
+        for zone in BEZoneType.allCases {
+            let zoneString = zone.getStringValue()
+            if let healthNumber = healthMap[zoneString] {
+                convertedMap[zone] = healthNumber.doubleValue
+            } else {
+                convertedMap[zone] = 0.0
+            }
+        }
+        return convertedMap
+    }
 }
 
-class SimulationCharacter: Character {
+class SimulationCharacter: Character, CalculableCharacter {
     var aim: AimSetting = .upperBody
     var firearm: SimulationFirearm?
     var ammo: SimulationAmmo?
     var headArmor: SimulationArmor?
     var bodyArmor: SimulationArmor?
-}
 
-extension SimulationCharacter: CalculableCharacter {
     func copy(with zone: NSZone? = nil) -> Any {
         let copy = SimulationCharacter(json: json)!
         copy.aim = aim

@@ -31,13 +31,13 @@ class HealthCalcViewController: BaseViewController, SortableItemSelectionDelegat
         didSet {
             guard let newTarget = target else { return }
 
-            headButton.zone = newTarget.head
-            thoraxButton.zone = newTarget.thorax
-            stomachButton.zone = newTarget.stomach
-            rightArmButton.zone = newTarget.rightArm
-            leftArmButton.zone = newTarget.leftArm
-            rightLegButton.zone = newTarget.rightLeg
-            leftLegButton.zone = newTarget.leftLeg
+//            headButton.zone = newTarget.head
+//            thoraxButton.zone = newTarget.thorax
+//            stomachButton.zone = newTarget.stomach
+//            rightArmButton.zone = newTarget.rightArm
+//            leftArmButton.zone = newTarget.leftArm
+//            rightLegButton.zone = newTarget.rightLeg
+//            leftLegButton.zone = newTarget.leftLeg
             currentHealthLabel.text = String(Int(newTarget.totalCurrentHp))
             maxHealthLabel.text = "/ \(Int(newTarget.totalOriginalHp))"
             avatar.alpha = (newTarget.totalCurrentHp == 0) ? 0.5 : 1.0

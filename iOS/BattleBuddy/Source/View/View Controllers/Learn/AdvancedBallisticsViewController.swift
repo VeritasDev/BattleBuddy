@@ -11,51 +11,9 @@ import BallisticsEngine
 import JGProgressHUD
 
 class AdvancedBallisticsViewController: BaseStackViewController {
-    let combatCalc = CombatCalculator()
+    let ballisticsTest: BallisticsTest
     let dbManager = DependencyManagerImpl.shared.databaseManager()
-    var result: BallisticsResult? {
-        didSet {
-            guard let result = result else { return }
 
-            self.target = result.target
-
-            if let armor = result.target.config.resolvedBodyArmor as? SimulationArmor {
-                bodyArmor = armor
-                var info: [String] = []
-                let damage = armor.resolvedPriorDamage
-                if damage > 0 {
-                    info.append("-\(Int(damage))")
-                }
-                bodyArmorButton.setInfo(info)
-            } else {
-                bodyArmorButton.setInfo([])
-            }
-
-            if let armor = result.target.config.resolvedHeadArmor as? SimulationArmor {
-                self.headArmor = armor
-                var info: [String] = []
-                let damage = armor.resolvedPriorDamage
-                if damage > 0 {
-                    info.append("-\(Int(damage))")
-                }
-                headArmorButton.setInfo(info)
-            } else {
-                headArmorButton.setInfo([])
-            }
-
-            let didPen = result.metadata.didPenetrateToFlesh ? "Penetrated" : "Stopped"
-            if result.metadata.fragmentationOccurred {
-                ammoButton.setInfo([didPen, "Fragmented"])
-            } else {
-                ammoButton.setInfo([didPen])
-            }
-        }
-    }
-    var target: Person? {
-        didSet {
-            damageView.target = target
-        }
-    }
     var ammo: SimulationAmmo? {
         didSet {
             ammoButton.item = ammo
@@ -71,40 +29,48 @@ class AdvancedBallisticsViewController: BaseStackViewController {
                 armorDamageValueLabel.text = "-"
                 damageValueLabel.text = "-"
                 fragmentationValueLabel.text = "-"
+                headArmorPenChanceValueLabel.text = "-"
+                bodyArmorPenChanceValueLabel.text = "-"
                 damageView.enabled = false
             }
+
+            updatePenetrationChances()
         }
     }
     var headArmor: SimulationArmor? {
         didSet {
             headArmorButton.item = headArmor
-            target?.config.resolvedHeadArmor = headArmor
 
             if let armor = headArmor {
                 headArmorGraph.valueText = "\(armor.currentDurability) / \(armor.maxDurability)"
                 headArmorGraph.progress = (Float(armor.currentDurability) / Float(armor.maxDurability))
-                headArmorCustomDurabilityButton.enable(true)
+
+                let simArmor = BEArmor.create(armor: armor)
+                ballisticsTest.person.equipArmor(simArmor)
             } else {
                 headArmorGraph.valueText = "- / -"
                 headArmorGraph.progress = 0.0
-                headArmorCustomDurabilityButton.enable(false)
             }
+
+            updatePenetrationChances()
         }
     }
     var bodyArmor: SimulationArmor? {
         didSet {
             bodyArmorButton.item = bodyArmor
-            target?.config.resolvedBodyArmor = bodyArmor
 
             if let armor = bodyArmor {
                 bodyArmorGraph.progress = (Float(armor.currentDurability) / Float(armor.maxDurability))
                 bodyArmorGraph.valueText = "\(armor.currentDurability) / \(armor.maxDurability)"
-                bodyArmorCustomDurabilityButton.enable(true)
+
+                let simArmor = BEArmor.create(armor: armor)
+                ballisticsTest.person.equipArmor(simArmor)
             } else {
                 bodyArmorGraph.valueText = "- / -"
                 bodyArmorGraph.progress = 0.0
-                bodyArmorCustomDurabilityButton.enable(false)
             }
+
+            updatePenetrationChances()
         }
     }
     var ammoOptions: [Ammo]?
@@ -113,110 +79,46 @@ class AdvancedBallisticsViewController: BaseStackViewController {
 
     let selectionCellId = "ItemSelectionCell"
     let characterOptions: [Character]
-    let damageView = TargetDamageView()
-    let ammoConfigHeader: UILabel = {
-        let label = UILabel()
-        label.text = "ammo_config".local()
-        label.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
-        label.textColor = .white
-        return label
+    var currentCharacterSelection: Character
+    lazy var subjectTypeSelectionViewController: SelectionViewController = {
+        return SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characterOptions)
     }()
-    let armorConfigHeader: UILabel = {
-        let label = UILabel()
-        label.text = "armor_config".local()
-        label.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
-        label.textColor = .white
-        return label
-    }()
-    let healthStatusHeader: UILabel = {
-        let label = UILabel()
-        label.text = "health_status".local()
-        label.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
-        label.textColor = .white
-        return label
-    }()
-    let simDataHeader: UILabel = {
-        let label = UILabel()
-        label.text = "simulation_data".local()
-        label.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
-        label.textColor = .white
-        return label
+    lazy var damageView: TargetDamageView = {
+        let damageView = TargetDamageView(currentCharacterSelection)
+        return damageView
     }()
 
-    let ammoStackView = BaseStackView(axis: .horizontal, distribution: .fillEqually, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
-    let damageStackView = BaseStackView(axis: .horizontal, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
-    let fragStackView = BaseStackView(axis: .horizontal, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
-    let armorDamageStackView = BaseStackView(axis: .horizontal, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
-    let penStackView = BaseStackView(axis: .horizontal, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
-    let ammoPropertiesStackView = BaseStackView(axis: .vertical, distribution: .equalSpacing)
+    let penetrationKeyLabel = createKeyLabel("sim_pen".local())
+    let damageKeyLabel = createKeyLabel("sim_damage".local())
+    let armorDamageKeyLabel = createKeyLabel("sim_armor_damage".local())
+    let fragmentationKeyLabel = createKeyLabel("sim_frag".local())
+    let headArmorPenChanceKeyLabel = createKeyLabel("sim_pen_chance".local())
+    let bodyArmorPenChanceKeyLabel = createKeyLabel("sim_pen_chance".local())
 
-    let penetrationKeyLabel: UILabel = {
+    let penetrationValueLabel = createValueLabel("-")
+    let damageValueLabel = createValueLabel("-")
+    let armorDamageValueLabel = createValueLabel("-")
+    let fragmentationValueLabel = createValueLabel("-")
+    let headArmorPenChanceValueLabel = createValueLabel("-")
+    let bodyArmorPenChanceValueLabel = createValueLabel("-")
+
+    static func createKeyLabel(_ text: String) -> UILabel {
         let label = UILabel()
-        label.text = "sim_pen".local()
+        label.text = text
         label.font = UIFont.systemFont(ofSize: 14.0)
         label.textColor = .white
         return label
-    }()
-    let penetrationValueLabel: UILabel = {
+    }
+
+    static func createValueLabel(_ text: String) -> UILabel {
         let label = UILabel()
-        label.text = "-"
+        label.text = text
         label.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
         label.textColor = UIColor.Theme.primary
         label.textAlignment = .invNatural
         return label
-    }()
-    let damageKeyLabel: UILabel = {
-        let label = UILabel()
-        label.text = "sim_damage".local()
-        label.font = UIFont.systemFont(ofSize: 14.0)
-        label.textColor = .white
-        return label
-    }()
-    let damageValueLabel: UILabel = {
-        let label = UILabel()
-        label.text = "-"
-        label.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
-        label.textColor = UIColor.Theme.primary
-        label.textAlignment = .invNatural
-        return label
-    }()
-    let armorDamageKeyLabel: UILabel = {
-        let label = UILabel()
-        label.text = "sim_armor_damage".local()
-        label.font = UIFont.systemFont(ofSize: 14.0)
-        label.textColor = .white
-        return label
-    }()
-    let armorDamageValueLabel: UILabel = {
-        let label = UILabel()
-        label.text = "-"
-        label.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
-        label.textColor = UIColor.Theme.primary
-        label.textAlignment = .invNatural
-        return label
-    }()
-    let fragmentationKeyLabel: UILabel = {
-        let label = UILabel()
-        label.text = "sim_frag".local()
-        label.font = UIFont.systemFont(ofSize: 14.0)
-        label.textColor = .white
-        return label
-    }()
-    let fragmentationValueLabel: UILabel = {
-        let label = UILabel()
-        label.text = "-"
-        label.font = UIFont.systemFont(ofSize: 14.0, weight: .bold)
-        label.textColor = UIColor.Theme.primary
-        label.textAlignment = .invNatural
-        return label
-    }()
-    let penChanceTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "pen_chance".local()
-        label.font = UIFont.systemFont(ofSize: 18.0)
-        label.textColor = .white
-        return label
-    }()
+    }
+
     let penChanceSettingSwitch: UISegmentedControl = {
         let items = ["chance_setting_realistic".local(), "chance_setting_always".local(), "chance_setting_never".local()]
         let segmentedControl = UISegmentedControl(items: items)
@@ -228,6 +130,13 @@ class AdvancedBallisticsViewController: BaseStackViewController {
         segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
         segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
         return segmentedControl
+    }()
+    let penChanceTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "pen_chance".local()
+        label.font = UIFont.systemFont(ofSize: 18.0)
+        label.textColor = .white
+        return label
     }()
     let fragChanceTitleLabel: UILabel = {
         let label = UILabel()
@@ -267,60 +176,37 @@ class AdvancedBallisticsViewController: BaseStackViewController {
         return button
     }()
 
-    let divider1 = createDividerLine()
-    let divider2 = createDividerLine()
-    let divider3 = createDividerLine()
-    let divider4 = createDividerLine()
+    let itemStackView = BaseStackView(axis: .horizontal, distribution: .fillEqually, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
 
-    let spacer1 = UIView()
-    let spacer2 = UIView()
+    let ammoStackView = BaseStackView(axis: .vertical, distribution: .equalSpacing, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
+    let headArmorStackView = BaseStackView(axis: .vertical, distribution: .equalSpacing, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
+    let bodyArmorStackView = BaseStackView(axis: .vertical, distribution: .equalSpacing, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
 
-    let armorStackView = BaseStackView(axis: .horizontal, distribution: .fillEqually, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
-    let headArmorStackView = BaseStackView(axis: .vertical, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
-    let bodyArmorStackView = BaseStackView(axis: .vertical, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
+    let damageStackView = BaseStackView(axis: .horizontal, distribution: .fillProportionally, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
+    let fragStackView = BaseStackView(axis: .horizontal, distribution: .fillProportionally, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
+    let armorDamageStackView = BaseStackView(axis: .horizontal, distribution: .fillProportionally, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
+    let penStackView = BaseStackView(axis: .horizontal, distribution: .fillProportionally, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
+
+    let headArmorPenChanceStackView = BaseStackView(axis: .horizontal, distribution: .fillProportionally, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
+    let bodyArmorPenChanceStackView = BaseStackView(axis: .horizontal, distribution: .fillProportionally, xPaddingCompact: 0.0, xPaddingRegular: 0.0, yPadding: 0.0)
 
     let headArmorGraph = BarGraphView()
     let bodyArmorGraph = BarGraphView()
-
-    let headArmorCustomDurabilityButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("common_customize".local(), for: .normal)
-        button.setTitleColor(UIColor.Theme.primary, for: .normal)
-        button.tintColor = UIColor.Theme.primary
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 12.0, weight: .semibold)
-        button.addTarget(self, action: #selector(customizeHeadArmor), for: .touchUpInside)
-        button.alpha = 0.2
-        return button
-    }()
-    let bodyArmorCustomDurabilityButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("common_customize".local(), for: .normal)
-        button.setTitleColor(UIColor.Theme.primary, for: .normal)
-        button.tintColor = UIColor.Theme.primary
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 12.0, weight: .semibold)
-        button.isEnabled = false
-        button.addTarget(self, action: #selector(customizeBodyArmor), for: .touchUpInside)
-        button.alpha = 0.2
-        return button
-    }()
-
-    static func createDividerLine() -> UIView {
-        let view = UIView()
-        view.backgroundColor = UIColor.gray
-        return view
-    }
 
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
     init(characterOptions: [Character]) {
         self.characterOptions = characterOptions
 
-        guard let defaultChar = characterOptions.first, let simChar = SimulationCharacter(json: defaultChar.json) else { fatalError() }
-        target = Person(simChar)
+        guard let defaultChar = characterOptions.first else { fatalError() }
+        currentCharacterSelection = defaultChar
+        ballisticsTest = BallisticsTest(initialHealthMap: defaultChar.convertedHealthMap())
 
         super.init(BaseStackView(axis: .vertical, spacing: 15.0))
 
         configureDamageView()
+        updatePenetrationChances()
+        reloadData()
     }
 
     override func viewDidLoad() {
@@ -330,31 +216,43 @@ class AdvancedBallisticsViewController: BaseStackViewController {
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "common_reset".local(), style: .plain, target: self, action: #selector(reset))
 
-        stackView.addArrangedSubview(healthStatusHeader)
-        stackView.addArrangedSubview(divider1)
         stackView.addArrangedSubview(damageView)
 
-        stackView.addArrangedSubview(armorConfigHeader)
-        stackView.addArrangedSubview(divider3)
         stackView.addArrangedSubview(headArmorButton)
-        stackView.addArrangedSubview(armorStackView)
+        stackView.addArrangedSubview(itemStackView)
 
-        stackView.addArrangedSubview(spacer2)
-        stackView.addArrangedSubview(ammoConfigHeader)
-        stackView.addArrangedSubview(divider2)
-        stackView.addArrangedSubview(ammoStackView)
         stackView.addArrangedSubview(penChanceTitleLabel)
         stackView.addArrangedSubview(penChanceSettingSwitch)
         stackView.addArrangedSubview(fragChanceTitleLabel)
         stackView.addArrangedSubview(fragChanceSettingSwitch)
 
-        ammoStackView.addArrangedSubview(ammoButton)
-        ammoStackView.addArrangedSubview(ammoPropertiesStackView)
+        itemStackView.addArrangedSubview(ammoStackView)
+        itemStackView.addArrangedSubview(headArmorStackView)
+        itemStackView.addArrangedSubview(bodyArmorStackView)
 
-        ammoPropertiesStackView.addArrangedSubview(damageStackView)
-        ammoPropertiesStackView.addArrangedSubview(penStackView)
-        ammoPropertiesStackView.addArrangedSubview(armorDamageStackView)
-        ammoPropertiesStackView.addArrangedSubview(fragStackView)
+        headArmorStackView.addArrangedSubview(headArmorButton)
+        headArmorStackView.addArrangedSubview(headArmorGraph)
+        headArmorStackView.addArrangedSubview(headArmorPenChanceStackView)
+        headArmorStackView.addArrangedSubview(UIView())
+        headArmorStackView.addArrangedSubview(UIView())
+
+        bodyArmorStackView.addArrangedSubview(bodyArmorButton)
+        bodyArmorStackView.addArrangedSubview(bodyArmorGraph)
+        bodyArmorStackView.addArrangedSubview(bodyArmorPenChanceStackView)
+        bodyArmorStackView.addArrangedSubview(UIView())
+        bodyArmorStackView.addArrangedSubview(UIView())
+
+        ammoStackView.addArrangedSubview(ammoButton)
+        ammoStackView.addArrangedSubview(damageStackView)
+        ammoStackView.addArrangedSubview(penStackView)
+        ammoStackView.addArrangedSubview(armorDamageStackView)
+        ammoStackView.addArrangedSubview(fragStackView)
+
+        headArmorPenChanceStackView.addArrangedSubview(headArmorPenChanceKeyLabel)
+        headArmorPenChanceStackView.addArrangedSubview(headArmorPenChanceValueLabel)
+
+        bodyArmorPenChanceStackView.addArrangedSubview(bodyArmorPenChanceKeyLabel)
+        bodyArmorPenChanceStackView.addArrangedSubview(bodyArmorPenChanceValueLabel)
 
         damageStackView.addArrangedSubview(damageKeyLabel)
         damageStackView.addArrangedSubview(damageValueLabel)
@@ -365,29 +263,12 @@ class AdvancedBallisticsViewController: BaseStackViewController {
         fragStackView.addArrangedSubview(fragmentationKeyLabel)
         fragStackView.addArrangedSubview(fragmentationValueLabel)
 
-        armorStackView.addArrangedSubview(headArmorStackView)
-        armorStackView.addArrangedSubview(bodyArmorStackView)
-
-        headArmorStackView.addArrangedSubview(headArmorButton)
-        headArmorStackView.addArrangedSubview(headArmorGraph)
-//        headArmorStackView.addArrangedSubview(headArmorCustomDurabilityButton)
-
-        bodyArmorStackView.addArrangedSubview(bodyArmorButton)
-        bodyArmorStackView.addArrangedSubview(bodyArmorGraph)
-//        bodyArmorStackView.addArrangedSubview(bodyArmorCustomDurabilityButton)
-
-        ammoButton.constrainHeight(130.0)
-        headArmorButton.constrainHeight(130.0)
-        bodyArmorButton.constrainHeight(130.0)
+        ammoButton.constrainHeight(110.0)
+        headArmorButton.constrainHeight(110.0)
+        bodyArmorButton.constrainHeight(110.0)
         damageView.constrainHeight(view.frame.height * 0.5)
         penChanceSettingSwitch.constrainHeight(40.0)
         fragChanceSettingSwitch.constrainHeight(40.0)
-        divider1.constrainHeight(1.0)
-        divider2.constrainHeight(1.0)
-        divider3.constrainHeight(1.0)
-        divider4.constrainHeight(1.0)
-        spacer1.constrainHeight(4.0)
-        spacer2.constrainHeight(4.0)
 
         headArmorGraph.widthMultiplier = 1.0
         headArmorGraph.constrainHeight(30.0)
@@ -395,10 +276,26 @@ class AdvancedBallisticsViewController: BaseStackViewController {
         bodyArmorGraph.constrainHeight(30.0)
     }
 
-    private func configureDamageView() {
-        guard let target = target else { fatalError() }
-        damageView.target = target
+    private func updateGraphs() {
+        if let _ = bodyArmor {
+            if let armor = ballisticsTest.person.armor.first(where: { (a) -> Bool in return a.protectedZoneTypes.contains(.thorax) }) {
+                bodyArmorGraph.progress = (Float(armor.currentDurability) / Float(armor.originalMaxDurability))
+                bodyArmorGraph.valueText = "\(armor.currentDurability) / \(armor.originalMaxDurability)"
+            }
+        }
 
+        if let _ = headArmor {
+            if let armor = ballisticsTest.person.armor.first(where: { (a) -> Bool in return !a.protectedZoneTypes.contains(.thorax) }) {
+                headArmorGraph.progress = (Float(armor.currentDurability) / Float(armor.originalMaxDurability))
+                headArmorGraph.valueText = "\(armor.currentDurability) / \(armor.originalMaxDurability)"
+            }
+        }
+    }
+
+    private func configureDamageView() {
+        damageView.characterType = currentCharacterSelection
+
+        damageView.avatar.addTarget(self, action: #selector(showCharacterOptions), for: .touchUpInside)
         damageView.headButton.addTarget(self, action: #selector(processHeadShot), for: .touchUpInside)
         damageView.thoraxButton.addTarget(self, action: #selector(processChestShot), for: .touchUpInside)
         damageView.rightArmButton.addTarget(self, action: #selector(processRArmShot), for: .touchUpInside)
@@ -408,55 +305,90 @@ class AdvancedBallisticsViewController: BaseStackViewController {
         damageView.rightLegButton.addTarget(self, action: #selector(processRLegShot), for: .touchUpInside)
     }
 
+    private func reloadData() {
+        damageView.target = ballisticsTest.person
+        updateGraphs()
+    }
+
+    private func updatePenetrationChances() {
+        let penCalc = PenetrationCalculator()
+        let pen = getCurrenPenChanceSetting()
+
+        if let ammo = ammo {
+            if let headArmor = headArmor {
+                let chance = penCalc.penetrationChance(armor: headArmor, ammo: ammo, penSetting: pen)
+                headArmorPenChanceValueLabel.text = String(format: "%.1f", chance) + "%"
+            } else {
+                headArmorPenChanceValueLabel.text = "100%"
+            }
+
+            if let bodyArmor = bodyArmor {
+                let chance = penCalc.penetrationChance(armor: bodyArmor, ammo: ammo, penSetting: pen)
+                bodyArmorPenChanceValueLabel.text = String(format: "%.1f", chance) + "%"
+            } else {
+                bodyArmorPenChanceValueLabel.text = "100%"
+            }
+        } else {
+            headArmorPenChanceValueLabel.text = "-"
+        }
+    }
+
+    @objc func showCharacterOptions() {
+        subjectTypeSelectionViewController.currentSelection = currentCharacterSelection
+        navigationController?.pushViewController(subjectTypeSelectionViewController, animated: true)
+    }
+
     @objc func processHeadShot() {
-        processShotToZone(.head)
+        processShotToZone(ballisticsTest.person.head)
     }
 
     @objc func processChestShot() {
-        processShotToZone(.thorax)
+        processShotToZone(ballisticsTest.person.thorax)
     }
 
     @objc func processRArmShot() {
-        processShotToZone(.rightArm)
+        processShotToZone(ballisticsTest.person.armR)
     }
 
     @objc func processLArmShot() {
-        processShotToZone(.leftArm)
+        processShotToZone(ballisticsTest.person.armL)
     }
 
     @objc func processStomachShot() {
-        processShotToZone(.stomach)
+        processShotToZone(ballisticsTest.person.stomach)
     }
 
     @objc func processLLegShot() {
-        processShotToZone(.leftLeg)
+        processShotToZone(ballisticsTest.person.legL)
     }
 
     @objc func processRLegShot() {
-        processShotToZone(.rightLeg)
+        processShotToZone(ballisticsTest.person.legR)
     }
 
-    private func processShotToZone(_ zone: BodyZoneType) {
-        guard let ammo = ammo, let person = target else { fatalError() }
-
-        let pen: ChanceSetting
-        let frag: ChanceSetting
-
+    private func getCurrenPenChanceSetting() -> ChanceSetting {
         switch penChanceSettingSwitch.selectedSegmentIndex {
-        case 0: pen = .realistic
-        case 1: pen = .always
-        case 2: pen = .never
+        case 0: return .realistic
+        case 1: return .always
+        case 2: return .never
         default: fatalError()
         }
+    }
 
+    private func getCurrenFragChanceSetting() -> ChanceSetting {
         switch fragChanceSettingSwitch.selectedSegmentIndex {
-        case 0: frag = .realistic
-        case 1: frag = .always
-        case 2: frag = .never
+        case 0: return .realistic
+        case 1: return .always
+        case 2: return .never
         default: fatalError()
         }
+    }
 
-        self.result = combatCalc.processImpact(to: person, zoneType: zone, with: ammo, penSetting: pen, fragSetting: frag)
+    private func processShotToZone(_ zone: BEZone) {
+        guard let ammo = ammo else { fatalError() }
+        let testAmmo = BEAmmo(damage: ammo.resolvedDamage, penetration: ammo.resolvedPenetration, fragmentation: ammo.resolvedFragmentationChance, armorDamage: ammo.resolvedArmorDamage, hasFragmented: ammo.fragmented)
+        ballisticsTest.processImpact(zone: zone, with: testAmmo, penSetting: getCurrenPenChanceSetting(), fragSetting: getCurrenFragChanceSetting())
+        reloadData()
     }
 
     @objc func showAmmoOptions() {
@@ -513,16 +445,9 @@ class AdvancedBallisticsViewController: BaseStackViewController {
         }
     }
 
-    @objc func customizeHeadArmor() {
-        guard let armor = headArmor else { return }
-    }
-
-    @objc func customizeBodyArmor() {
-        guard let armor = bodyArmor else { return }
-    }
-
     @objc func reset() {
-//        target = Person(character)
+        ballisticsTest.reset()
+        reloadData()
     }
 }
 
@@ -561,5 +486,16 @@ extension AdvancedBallisticsViewController: SortableItemSelectionDelegate {
 
     func selectionCancelled() {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AdvancedBallisticsViewController: SelectionDelegate {
+    func selectionViewController(_ selectionViewController: SelectionViewController, didMakeSelection selection: SelectionOption) {
+        guard let selection = selection as? Character, let newCharacter = SimulationCharacter(json: selection.json) else { return }
+
+        currentCharacterSelection = newCharacter
+        ballisticsTest.healthMap = selection.convertedHealthMap()
+
+        navigationController?.popViewController(animated: true)
     }
 }

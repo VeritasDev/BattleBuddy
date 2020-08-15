@@ -12,19 +12,12 @@ import BallisticsEngine
 class Armor: BaseItem, Armored {
     let json: [String : Any]
     let type: ItemType
-    let originalMaxDurability: Int
     var maxDurability: Int {
         didSet {
-            if maxDurability < 1 {
-                maxDurability = 1
-            }
-
-            if maxDurability > originalMaxDurability {
-                maxDurability = originalMaxDurability
-            }
-
             if currentDurability > maxDurability {
                 currentDurability = maxDurability
+            } else if maxDurability < 1 {
+                maxDurability = 1
             }
         }
     }
@@ -32,10 +25,6 @@ class Armor: BaseItem, Armored {
         didSet {
             if currentDurability < 0 {
                 currentDurability = 0
-            }
-
-            if currentDurability > maxDurability {
-                currentDurability = maxDurability
             }
         }
     }
@@ -45,7 +34,6 @@ class Armor: BaseItem, Armored {
     var richochetParams: RichochetParams { get { return RichochetParams(x: richochetX, y: richochetY, z: richochetZ) } }
     var penalties: Penalties { get { return Penalties(ergonomics: ergoPenalty, turnSpeed: turnSpeedPenalty, movementSpeed:  movementSpeedPenalty, hearing: hearingPenalty) } }
     var armorZoneConfig: ArmorZonesConfig { get { return ArmorZonesConfig(topHead: protectsTopHead, eyes: protectsEyes, jaws: protectsJaws, ears: protectsEars, nape: protectsNape, chest: protectsChest, stomach: protectsStomach, leftArm: protectsLeftArm, rightArm: protectsRightArm, leftLeg: protectsLeftLeg, rightLeg: protectsRightLeg) } }
-    var priorDamage: Double = 0
 
     fileprivate var bluntThroughput: Float
     fileprivate var ergoPenalty: Int
@@ -84,13 +72,36 @@ class Armor: BaseItem, Armored {
             let rawZones = armorProperties["zones"] as? [String],
             let rawBluntTp = armorProperties["bluntThroughput"] as? NSNumber,
             let penalties = json["penalties"] as? [String: Any] else {
-                return nil
+                armorType = .body
+                material = .aluminium
+                armorClass = .none
+                maxDurability = 0
+                currentDurability = 0
+                protectsTopHead = false
+                protectsEyes = false
+                protectsJaws = false
+                protectsEars = false
+                protectsNape = false
+                protectsChest = false
+                protectsStomach = false
+                protectsLeftArm = false
+                protectsRightArm = false
+                protectsLeftLeg = false
+                protectsRightLeg = false
+                bluntThroughput = 0.0
+                movementSpeedPenalty = 0
+                ergoPenalty = 0
+                turnSpeedPenalty = 0
+                hearingPenalty = HearingPenalty.none
+                richochetX = 0
+                richochetY = 0
+                richochetZ = 0
+                return
         }
 
         armorType = resolvedType
         material = resolvedMaterial
         armorClass = resolvedArmorClass
-        originalMaxDurability = rawDurability.intValue
         maxDurability = rawDurability.intValue
         currentDurability = maxDurability
         protectsTopHead = rawZones.contains("top")
@@ -168,6 +179,15 @@ class SimulationArmor: Armor {
 
 // MARK: Calculable Armor
 extension SimulationArmor: CalculableArmor {
+    var resolvedPriorDamage: Double {
+        get {
+            return 0
+        }
+        set(newValue) {
+
+        }
+    }
+
     func copy(with zone: NSZone? = nil) -> Any {
         return SimulationArmor(json: json)!
     }
@@ -200,9 +220,5 @@ extension SimulationArmor: CalculableArmor {
         if protectsRightLeg { zones.append(.rightLeg) }
 
         return zones
-    }
-    var resolvedPriorDamage: Double {
-        get { return priorDamage }
-        set { priorDamage = newValue }
     }
 }

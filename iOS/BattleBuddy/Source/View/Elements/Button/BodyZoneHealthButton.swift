@@ -19,7 +19,7 @@ class BodyZoneHealthButton: UIButton {
             }, completion: nil)
         }
     }
-    var zone: BodyZone? {
+    var zone: BEZone? {
         didSet {
             guard let newZone = zone else { return }
             zoneLabel.text = newZone.type.local().uppercased()

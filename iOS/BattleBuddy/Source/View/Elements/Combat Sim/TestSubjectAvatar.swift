@@ -39,6 +39,15 @@ class TestSubjectAvatar: UIButton {
             }
         }
     }
+    override var isHighlighted: Bool {
+        didSet {
+            guard oldValue != self.isHighlighted else { return }
+
+            UIView.animate(withDuration: 0.25, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: {
+                self.alpha = self.isHighlighted ? 0.5 : 1
+            }, completion: nil)
+        }
+    }
 
     required init?(coder: NSCoder) { fatalError() }
 

@@ -101,3 +101,47 @@ extension BodyZoneType {
         }
     }
 }
+
+extension BEZoneType: Localizable {
+    func local(short: Bool = false) -> String {
+        switch self {
+        case .head: return "body_zone_head".local()
+        case .thorax: return "body_zone_thorax".local()
+        case .stomach: return "body_zone_stomach".local()
+        case .arm: return "body_zone_arm".local()
+        case .leg: return "body_zone_leg".local()
+        }
+    }
+
+    func getStringValue() -> String {
+        switch self {
+        case .head: return "head"
+        case .thorax: return "thorax"
+        case .stomach: return "stomach"
+        case .arm: return "arm"
+        case .leg: return "leg"
+        }
+    }
+}
+
+extension BEArmor {
+    static func create(armor: SimulationArmor) -> BEArmor {
+        let zoneMap = [
+            BodyZoneType.head: BEZoneType.head,
+            BodyZoneType.thorax: BEZoneType.thorax,
+            BodyZoneType.stomach: BEZoneType.stomach,
+            BodyZoneType.leftArm: BEZoneType.arm,
+            BodyZoneType.rightArm: BEZoneType.arm,
+            BodyZoneType.leftLeg: BEZoneType.leg,
+            BodyZoneType.rightLeg: BEZoneType.leg,
+        ]
+        let zones = armor.resolvedProtectionZones.compactMap { zoneMap[$0] }
+        return BEArmor(armorClass: armor.resolvedArmorClass, maxDurability: armor.resolvedMaxDurability, destructibility: armor.resolvedDestructibility, bluntThroughput: armor.resolvedBluntThroughput, protectedZoneTypes: zones)
+    }
+}
+
+extension BEAmmo {
+    static func create(ammo: SimulationAmmo) -> BEAmmo {
+        return BEAmmo(damage: ammo.resolvedDamage, penetration: ammo.resolvedPenetration, fragmentation: ammo.resolvedFragmentationChance, armorDamage: ammo.resolvedArmorDamage, hasFragmented: ammo.fragmented)
+    }
+}

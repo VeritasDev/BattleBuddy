@@ -520,7 +520,7 @@
 "supporter_title" = "Support Battle Buddy";
 "supporter_subtitle" = "I made Battle Buddy available for free and without ads to benefit everyone in the Tarkov community. If you feel like you've gotten any value from Battle Buddy, want to say thank you, support the development, help me cover server costs and development time, and are financially able to, please consider a totally optional premium subscription. With enough support I could make the development of this app and content creation my full-time job!";
 
-"advanced_ballistics_test" = "Advanced Ballistics Test";
+"advanced_ballistics_test" = "Ballistics Testing";
 "choose_ammo" = "Ammo";
 "choose_head_armor" = "Head Armor";
 "choose_body_armor" = "Body Armor";
@@ -539,7 +539,11 @@
 "sim_damage" = "Dmg";
 "sim_pen" = "Pen";
 "sim_armor_damage" = "Armor Dmg";
-"sim_frag" = "Frag";
+"sim_frag" = "Frag %";
+"sim_pen_chance" = "Pen %";
 
 "common_customize" = "Customize";
 "common_reset" = "Reset";
+
+"body_zone_leg" = "Leg";
+"body_zone_arm" = "Arm";

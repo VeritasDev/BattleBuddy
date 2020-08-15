@@ -42,14 +42,14 @@ class CombatSimViewController: StaticGroupedTableViewController {
         self.simCharacter1 = char1
         self.simCharacter1.firearm = initialFirearm
         self.simCharacter1.ammo = initialAmmo
-        self.simCharacter1.headArmor = initialHeadArmor
-        self.simCharacter1.bodyArmor = initialBodyArmor
+//        self.simCharacter1.headArmor = initialHeadArmor
+//        self.simCharacter1.bodyArmor = initialBodyArmor
 
         self.simCharacter2 = char2
         self.simCharacter2.firearm = initialFirearm
         self.simCharacter2.ammo = initialAmmo
-        self.simCharacter2.headArmor = initialHeadArmor
-        self.simCharacter2.bodyArmor = initialBodyArmor
+//        self.simCharacter2.headArmor = initialHeadArmor
+//        self.simCharacter2.bodyArmor = initialBodyArmor
 
         self.simulation = CombatSimulation(subject1Config: char1, subject2Config: char2)
 

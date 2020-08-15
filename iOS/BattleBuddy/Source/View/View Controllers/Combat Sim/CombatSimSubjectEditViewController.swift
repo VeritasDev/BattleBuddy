@@ -104,8 +104,8 @@ class CombatSimSubjectEditViewController: StaticGroupedTableViewController {
         aimCell.detailTextLabel?.text = character.aim.local()
         firearmCell.detailTextLabel?.text = character.firearm?.displayNameShort
         ammoCell.detailTextLabel?.text = character.ammo?.displayName
-        headArmorCell.detailTextLabel?.text = character.headArmor?.displayName
-        bodyArmorCell.detailTextLabel?.text = character.bodyArmor?.displayName
+//        headArmorCell.detailTextLabel?.text = character.headArmor?.displayName
+//        bodyArmorCell.detailTextLabel?.text = character.bodyArmor?.displayName
     }
 
     func showFirearmOptions() {

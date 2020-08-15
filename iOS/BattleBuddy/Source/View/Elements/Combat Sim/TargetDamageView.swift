@@ -15,23 +15,40 @@ class TargetDamageView: UIView {
             enableButtons(enabled)
         }
     }
-    var target: Person? {
+    var characterType: Character {
+        didSet {
+            avatar.characterId = characterType.id
+            characterNameLabel.text = characterType.name
+            setNeedsLayout()
+        }
+    }
+    var target: BEPerson? {
         didSet {
             guard let newTarget = target else { return }
 
+            avatar.result = newTarget.isAlive ? .none : .loss
             headButton.zone = newTarget.head
             thoraxButton.zone = newTarget.thorax
             stomachButton.zone = newTarget.stomach
-            rightArmButton.zone = newTarget.rightArm
-            leftArmButton.zone = newTarget.leftArm
-            rightLegButton.zone = newTarget.rightLeg
-            leftLegButton.zone = newTarget.leftLeg
+            rightArmButton.zone = newTarget.armR
+            leftArmButton.zone = newTarget.armL
+            rightLegButton.zone = newTarget.legR
+            leftLegButton.zone = newTarget.legL
             currentHealthLabel.text = String(Int(newTarget.totalCurrentHp))
             maxHealthLabel.text = "/ \(Int(newTarget.totalOriginalHp))"
+            setNeedsLayout()
         }
     }
 
     let avatar = TestSubjectAvatar()
+    let characterNameLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
+        label.textColor = .white
+        return label
+    }()
     let skeletonBackgroundImage: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "health_calc_skeleton")!)
         imageView.contentMode = .scaleAspectFit
@@ -77,7 +94,9 @@ class TargetDamageView: UIView {
 
     required init?(coder: NSCoder) { fatalError() }
 
-    init() {
+    init(_ characterType: Character) {
+        self.characterType = characterType
+        
         super.init(frame: .zero)
 
         addSubview(skeletonBackgroundImage)
@@ -91,6 +110,8 @@ class TargetDamageView: UIView {
         addSubview(hpIconImageView)
         addSubview(currentHealthLabel)
         addSubview(maxHealthLabel)
+        addSubview(avatar)
+        addSubview(characterNameLabel)
 
         enableButtons(false)
     }
@@ -103,6 +124,12 @@ class TargetDamageView: UIView {
         let buttonWidth = min(superWidth * 0.28, 150.0)
         let buttonHeight = buttonWidth * 0.37
         let centerX = superWidth / 2.0
+
+        avatar.frame = CGRect(x: 20, y: 5, width: 60, height: 60)
+        characterNameLabel.frame = CGRect(x: 10, y: avatar.frame.maxY + 7, width: 70, height: 0)
+        characterNameLabel.sizeToFit()
+        characterNameLabel.frame = CGRect(x: avatar.frame.midX - (characterNameLabel.frame.width / 2.0), y: avatar.frame.maxY + 7, width: characterNameLabel.frame.width, height: characterNameLabel.frame.height)
+
 
         skeletonBackgroundImage.frame = CGRect(x: 0, y: 10.0, width: superWidth, height: superHeight - 20.0)
         headButton.frame = CGRect(x: superWidth * 0.65, y: skeletonBackgroundImage.frame.size.height * 0.04, width: buttonWidth, height: buttonHeight)

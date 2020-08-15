@@ -20,8 +20,8 @@ class CombatSimSubjectSummaryView: BaseStackView {
             nameLabel.text = character.name
             firearmLabel.text = character.firearm?.displayNameShort ?? none
             ammoLabel.text = character.ammo?.displayNameShort ?? none
-            headArmorLabel.text = character.headArmor?.displayNameShort ?? none
-            bodyArmorLabel.text = character.bodyArmor?.displayNameShort ?? none
+//            headArmorLabel.text = character.headArmor?.displayNameShort ?? none
+//            bodyArmorLabel.text = character.bodyArmor?.displayNameShort ?? none
             aimLabel.text = character.aim.local()
         }
     }

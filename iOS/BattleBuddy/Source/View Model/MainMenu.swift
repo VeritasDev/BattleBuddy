@@ -42,7 +42,7 @@ enum MenuItemType: CaseIterable, Localizable {
         case .helmets: return Localized("main_menu_helmets")
         case .visors: return Localized("main_menu_visors")
         case .ballistics: return Localized("main_menu_ballistics")
-        case .healthCalc: return Localized("main_menu_health_calc")
+        case .healthCalc: return Localized("advanced_ballistics_test")
         case .firearms: return Localized("main_menu_firearms")
         case .mods: return Localized("main_menu_mods")
         case .melee: return Localized("main_menu_melee")
