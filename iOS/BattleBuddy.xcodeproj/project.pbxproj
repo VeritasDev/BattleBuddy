@@ -93,6 +93,8 @@
 		27F09AE822E3875600552C35 /* PenChanceCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F09AE722E3875600552C35 /* PenChanceCalcViewController.swift */; };
 		27F2DDC722C245DA00BD9779 /* ItemsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2DDC622C245DA00BD9779 /* ItemsMenuViewController.swift */; };
 		27FF55BF22E9F49E00D5FA58 /* AttributionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */; };
+		600E6E0E253D39CB0070CED2 /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600E6E0C253D39650070CED2 /* BallisticsEngine.framework */; };
+		600E6E0F253D39CB0070CED2 /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 600E6E0C253D39650070CED2 /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		601822B324A3B92700A624A4 /* ShootingRangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601822B224A3B92700A624A4 /* ShootingRangeViewController.swift */; };
 		601BACF02375ADF20080493F /* RigDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */; };
 		602F41F124AF792C00403E87 /* PriceCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602F41F024AF792C00403E87 /* PriceCheckController.swift */; };
@@ -126,8 +128,6 @@
 		60EA7D3E23494A0700EAD566 /* CombatSimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA7D3D23494A0700EAD566 /* CombatSimViewController.swift */; };
 		60EEDB7724E1812D009ED72F /* TargetDamageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EEDB7624E1812D009ED72F /* TargetDamageView.swift */; };
 		60EEDB7924E1924F009ED72F /* ItemPreviewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EEDB7824E1924F009ED72F /* ItemPreviewButton.swift */; };
-		60EEDBA324E6E7AB009ED72F /* BallisticsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EEDBA124E6E7A4009ED72F /* BallisticsEngine.framework */; };
-		60EEDBA424E6E7AB009ED72F /* BallisticsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60EEDBA124E6E7A4009ED72F /* BallisticsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */; };
 		EF10CCDC232A992900E95A45 /* LocalizationTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */; };
 		EF10CCDF232A9BE800E95A45 /* c6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF10CCDE232A9BE800E95A45 /* c6.mp3 */; };
@@ -218,7 +218,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				60EEDBA424E6E7AB009ED72F /* BallisticsEngine.framework in Embed Frameworks */,
+				600E6E0F253D39CB0070CED2 /* BallisticsEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +347,7 @@
 		27F2DDC622C245DA00BD9779 /* ItemsMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsMenuViewController.swift; sourceTree = "<group>"; };
 		27FF55BE22E9F49E00D5FA58 /* AttributionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributionsViewController.swift; sourceTree = "<group>"; };
 		55701117B852B2719CB10BBC /* Pods-BattleBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		600E6E0C253D39650070CED2 /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		601822B224A3B92700A624A4 /* ShootingRangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingRangeViewController.swift; sourceTree = "<group>"; };
 		601BACEF2375ADF10080493F /* RigDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RigDetailsConfiguration.swift; sourceTree = "<group>"; };
 		602F41F024AF792C00403E87 /* PriceCheckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCheckController.swift; sourceTree = "<group>"; };
@@ -388,7 +389,6 @@
 		60EA7D3D23494A0700EAD566 /* CombatSimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatSimViewController.swift; sourceTree = "<group>"; };
 		60EEDB7624E1812D009ED72F /* TargetDamageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDamageView.swift; sourceTree = "<group>"; };
 		60EEDB7824E1924F009ED72F /* ItemPreviewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPreviewButton.swift; sourceTree = "<group>"; };
-		60EEDBA124E6E7A4009ED72F /* BallisticsEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BallisticsEngine.framework; sourceTree = "<group>"; };
 		9BD13713D82E5C1D5B92F6F1 /* Pods-BattleBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleBuddy/Pods-BattleBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF10CCDB232A992900E95A45 /* LocalizationTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTrainer.swift; sourceTree = "<group>"; };
@@ -492,7 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60B7AE8824D9037B00941C7C /* StoreKit.framework in Frameworks */,
-				60EEDBA324E6E7AB009ED72F /* BallisticsEngine.framework in Frameworks */,
+				600E6E0E253D39CB0070CED2 /* BallisticsEngine.framework in Frameworks */,
 				AB5161F666EE1E007D48360B /* Pods_BattleBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,7 +503,7 @@
 		16562AA740BE87B8AB0FCB7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60EEDBA124E6E7A4009ED72F /* BallisticsEngine.framework */,
+				600E6E0C253D39650070CED2 /* BallisticsEngine.framework */,
 				60B7AE8724D9037B00941C7C /* StoreKit.framework */,
 				DBB084560C8EA26FF4218501 /* Pods_BattleBuddy.framework */,
 			);

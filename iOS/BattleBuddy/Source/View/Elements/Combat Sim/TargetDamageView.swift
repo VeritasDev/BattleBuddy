@@ -10,11 +10,7 @@ import UIKit
 import BallisticsEngine
 
 class TargetDamageView: UIView {
-    var enabled: Bool = false {
-        didSet {
-            enableButtons(enabled)
-        }
-    }
+    var enabled: Bool = false { didSet { enableButtons(enabled) } }
     var characterType: Character {
         didSet {
             avatar.characterId = characterType.id

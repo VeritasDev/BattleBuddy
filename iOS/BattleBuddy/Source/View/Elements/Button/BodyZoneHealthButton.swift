@@ -140,7 +140,7 @@ class BodyZoneHealthButton: UIButton {
         zoneLabel.frame = CGRect(x: 6.0, y: 2.0, width: backgroundImageView.frame.width - 12.0, height: backgroundImageView.frame.height - 4.0)
         hpLabel.frame = CGRect(x: 6.0, y: 1.0, width: hpBarContainerView.frame.width - 12.0, height: hpBarContainerView.frame.height - 2.0)
 
-        if let percent = percent {
+        if let percent = percent, !percent.isNaN {
             let hpBarPadding: CGFloat = 2.0
             let containerWidth = hpBarContainerView.frame.width
             let totalPossibleWidth = containerWidth - (2 * hpBarPadding)

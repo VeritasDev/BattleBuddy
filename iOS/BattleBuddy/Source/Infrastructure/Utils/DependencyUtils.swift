@@ -108,8 +108,10 @@ extension BEZoneType: Localizable {
         case .head: return "body_zone_head".local()
         case .thorax: return "body_zone_thorax".local()
         case .stomach: return "body_zone_stomach".local()
-        case .arm: return "body_zone_arm".local()
-        case .leg: return "body_zone_leg".local()
+        case .armL: return "body_zone_left_arm".local()
+        case .armR: return "body_zone_right_arm".local()
+        case .legL: return "body_zone_left_leg".local()
+        case .legR: return "body_zone_right_leg".local()
         }
     }
 
@@ -118,8 +120,10 @@ extension BEZoneType: Localizable {
         case .head: return "head"
         case .thorax: return "thorax"
         case .stomach: return "stomach"
-        case .arm: return "arm"
-        case .leg: return "leg"
+        case .armL: return "left_arm"
+        case .armR: return "right_arm"
+        case .legL: return "left_leg"
+        case .legR: return "right_leg"
         }
     }
 }
@@ -130,13 +134,13 @@ extension BEArmor {
             BodyZoneType.head: BEZoneType.head,
             BodyZoneType.thorax: BEZoneType.thorax,
             BodyZoneType.stomach: BEZoneType.stomach,
-            BodyZoneType.leftArm: BEZoneType.arm,
-            BodyZoneType.rightArm: BEZoneType.arm,
-            BodyZoneType.leftLeg: BEZoneType.leg,
-            BodyZoneType.rightLeg: BEZoneType.leg,
+            BodyZoneType.leftArm: BEZoneType.armL,
+            BodyZoneType.rightArm: BEZoneType.armR,
+            BodyZoneType.leftLeg: BEZoneType.legL,
+            BodyZoneType.rightLeg: BEZoneType.legR,
         ]
         let zones = armor.resolvedProtectionZones.compactMap { zoneMap[$0] }
-        return BEArmor(armorClass: armor.resolvedArmorClass, maxDurability: armor.resolvedMaxDurability, destructibility: armor.resolvedDestructibility, bluntThroughput: armor.resolvedBluntThroughput, protectedZoneTypes: zones)
+        return BEArmor(armorClass: armor.resolvedArmorClass, maxDurability: armor.resolvedMaxDurability, currentDurability: armor.resolvedCurrentDurability, destructibility: armor.resolvedDestructibility, bluntThroughput: armor.resolvedBluntThroughput, protectedZoneTypes: zones)
     }
 }
 

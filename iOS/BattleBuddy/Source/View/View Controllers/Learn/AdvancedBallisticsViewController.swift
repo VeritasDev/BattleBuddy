@@ -79,7 +79,14 @@ class AdvancedBallisticsViewController: BaseStackViewController {
 
     let selectionCellId = "ItemSelectionCell"
     let characterOptions: [Character]
-    var currentCharacterSelection: Character
+    var currentCharacterSelection: Character {
+        didSet {
+            reset()
+            bodyArmor = bodyArmor?.copy() as? SimulationArmor
+            headArmor = headArmor?.copy() as? SimulationArmor
+            configureDamageView()
+        }
+    }
     lazy var subjectTypeSelectionViewController: SelectionViewController = {
         return SelectionViewController(self, title: "combat_sim_subject_type".local(), options: characterOptions)
     }()
@@ -280,14 +287,14 @@ class AdvancedBallisticsViewController: BaseStackViewController {
         if let _ = bodyArmor {
             if let armor = ballisticsTest.person.armor.first(where: { (a) -> Bool in return a.protectedZoneTypes.contains(.thorax) }) {
                 bodyArmorGraph.progress = (Float(armor.currentDurability) / Float(armor.originalMaxDurability))
-                bodyArmorGraph.valueText = "\(armor.currentDurability) / \(armor.originalMaxDurability)"
+                bodyArmorGraph.valueText = String(format: "%.1f / %.1f", armor.currentDurability, armor.originalMaxDurability)
             }
         }
 
         if let _ = headArmor {
             if let armor = ballisticsTest.person.armor.first(where: { (a) -> Bool in return !a.protectedZoneTypes.contains(.thorax) }) {
                 headArmorGraph.progress = (Float(armor.currentDurability) / Float(armor.originalMaxDurability))
-                headArmorGraph.valueText = "\(armor.currentDurability) / \(armor.originalMaxDurability)"
+                headArmorGraph.valueText = String(format: "%.1f / %.1f", armor.currentDurability, armor.originalMaxDurability)
             }
         }
     }
@@ -307,23 +314,36 @@ class AdvancedBallisticsViewController: BaseStackViewController {
 
     private func reloadData() {
         damageView.target = ballisticsTest.person
+        updatePenetrationChances()
         updateGraphs()
+        updateSummary()
+    }
+
+    private func updateSummary() {
+        guard let history = ballisticsTest.history.last else { return }
+        let before = history.beforeSnapshot
+        let after = history.afterSnapshot
+
+        let fleshDamage = before.personSnapshot.totalHp - after.personSnapshot.totalHp
+        let armorDamage = before.personSnapshot.armor.reduce(0){ $0 + $1.currentDurability } - after.personSnapshot.armor.reduce(0){ $0 + $1.currentDurability }
+        let wasFatal = before.personSnapshot.isAlive && !after.personSnapshot.isAlive
+        let penetrated = after.ammoSnapshot.hasPenetrated
+        print("flesh: \(fleshDamage), armor: \(armorDamage), penetrated: \(penetrated), fatal: \(wasFatal)")
     }
 
     private func updatePenetrationChances() {
-        let penCalc = PenetrationCalculator()
-        let pen = getCurrenPenChanceSetting()
-
         if let ammo = ammo {
-            if let headArmor = headArmor {
-                let chance = penCalc.penetrationChance(armor: headArmor, ammo: ammo, penSetting: pen)
+            let testAmmo = BEAmmo(damage: ammo.resolvedDamage, penetration: ammo.resolvedPenetration, fragmentation: ammo.resolvedFragmentationChance, armorDamage: ammo.resolvedArmorDamage, hasFragmented: ammo.fragmented)
+
+            if let headArmor = ballisticsTest.person.armor.first(where: { !$0.protectedZoneTypes.contains(.thorax) }) {
+                let chance = headArmor.penetrationChanceOfAmmo(testAmmo)
                 headArmorPenChanceValueLabel.text = String(format: "%.1f", chance) + "%"
             } else {
                 headArmorPenChanceValueLabel.text = "100%"
             }
 
-            if let bodyArmor = bodyArmor {
-                let chance = penCalc.penetrationChance(armor: bodyArmor, ammo: ammo, penSetting: pen)
+            if let bodyArmor = ballisticsTest.person.armor.first(where: { $0.protectedZoneTypes.contains(.thorax) }) {
+                let chance = bodyArmor.penetrationChanceOfAmmo(testAmmo)
                 bodyArmorPenChanceValueLabel.text = String(format: "%.1f", chance) + "%"
             } else {
                 bodyArmorPenChanceValueLabel.text = "100%"
@@ -385,7 +405,7 @@ class AdvancedBallisticsViewController: BaseStackViewController {
     }
 
     private func processShotToZone(_ zone: BEZone) {
-        guard let ammo = ammo else { fatalError() }
+        guard ballisticsTest.person.isAlive, let ammo = ammo else { return }
         let testAmmo = BEAmmo(damage: ammo.resolvedDamage, penetration: ammo.resolvedPenetration, fragmentation: ammo.resolvedFragmentationChance, armorDamage: ammo.resolvedArmorDamage, hasFragmented: ammo.fragmented)
         ballisticsTest.processImpact(zone: zone, with: testAmmo, penSetting: getCurrenPenChanceSetting(), fragSetting: getCurrenFragChanceSetting())
         reloadData()

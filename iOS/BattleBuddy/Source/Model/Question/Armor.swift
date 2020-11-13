@@ -71,32 +71,12 @@ class Armor: BaseItem, Armored {
             let resolvedArmorClass = ArmorClass(rawValue: rawClass.intValue),
             let rawZones = armorProperties["zones"] as? [String],
             let rawBluntTp = armorProperties["bluntThroughput"] as? NSNumber,
-            let penalties = json["penalties"] as? [String: Any] else {
-                armorType = .body
-                material = .aluminium
-                armorClass = .none
-                maxDurability = 0
-                currentDurability = 0
-                protectsTopHead = false
-                protectsEyes = false
-                protectsJaws = false
-                protectsEars = false
-                protectsNape = false
-                protectsChest = false
-                protectsStomach = false
-                protectsLeftArm = false
-                protectsRightArm = false
-                protectsLeftLeg = false
-                protectsRightLeg = false
-                bluntThroughput = 0.0
-                movementSpeedPenalty = 0
-                ergoPenalty = 0
-                turnSpeedPenalty = 0
-                hearingPenalty = HearingPenalty.none
-                richochetX = 0
-                richochetY = 0
-                richochetZ = 0
-                return
+            let penalties = json["penalties"] as? [String: Any]
+            else {
+
+                print("ERROR: Armor missing required parameters in json: \(json)")
+
+                return nil
         }
 
         armorType = resolvedType
