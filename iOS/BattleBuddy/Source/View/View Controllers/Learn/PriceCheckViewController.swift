@@ -82,6 +82,20 @@ extension PriceCheckViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         controller.updateSearchText(searchText)
     }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+
+extension PriceCheckViewController {
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if searchBar.isFirstResponder {
+            searchBar.resignFirstResponder()
+        }
+    }
 }
 
 extension PriceCheckViewController: PriceCheckControllerDelegate {
