@@ -24,7 +24,7 @@ class DependencyManagerImpl: DependencyManager {
     var deviceMngr: DeviceManager?
     var localeMngr: LocaleManager?
 
-    func assembleDependencies(_ appDelegate: AppDelegate) {
+    func assembleDependencies(_ appDelegate: SessionDelegate) {
         // Firebase handles sessions, accounts, storage, and metadata
         let firebase = FirebaseManager(sessionDelegate: appDelegate)
         pushNotificationMngr = firebase
