@@ -12,7 +12,7 @@ import UIKit
 
 protocol DependencyManager {
     static var shared: DependencyManager { get }
-    func assembleDependencies(_ appDelegate: AppDelegate)
+    func assembleDependencies(_ appDelegate: SessionDelegate)
     func pushNotificationManager() -> PushNotificationManager
     func accountManager() -> AccountManager
     func databaseManager() -> DatabaseManager
